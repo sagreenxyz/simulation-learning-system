@@ -1,38 +1,1534 @@
 ---
-import CaseLayout from '../../../layouts/CaseLayout.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
-<CaseLayout
-  scenario="Fundamentals 2"
-  disciplineLabel="Fundamentals"
-  disciplineSlug="fundamentals"
-  category="Older Adult"
-  patient={{ name: "Bernadette Jackson", age: "85 years", gender: "Female" }}
-  scenarioTime="20 – 25 minutes"
-  debriefingTime="20 – 25 minutes"
-  concepts={[
-    "Vital signs",
-    "Assessment",
-    "Older adult",
-    "Urinary elimination",
-    "Medication administration (IV)",
-    "Patient safety",
-    "Patient education",
-    "Documentation and informatics",
-  ]}
-  skills={[
-    "Assess patient and lab results",
-    "Recognize confusion, tachycardia, discomfort, minimal urine output and positive urinalysis as abnormal findings",
-    "Report abnormal findings to provider using SBAR",
-    "Obtain sterile urine sample for culture",
-    "Administer IV antibiotics",
-    "Recognize increased fall risk",
-    "Implement fall risk prevention measures",
-    "Provide patient education and support",
-    "Access and document care in the EHR",
-  ]}
-  presentation="Older adult with polypharmacy-related dehydration and urinary retention is admitted for monitoring, rehydration, and IV antibiotics. Patient experiences acute confusion related to a urinary tract infection."
-  primaryDx="Dehydration"
-  secondaryDx="Urinary retention"
-  primaryChallenge="Learner assesses and implements care for an older adult patient experiencing acute confusion related to a urinary tract infection."
-/>
+<BaseLayout
+  title="Fundamentals 2 — Bernadette Jackson"
+  description="Unfolding case study: Confusion in Older Adult with Infection (FUN-02)"
+>
+
+  <div class="breadcrumb">
+    <a href={base}>Home</a>
+    <span>›</span>
+    <a href={`${base}cases/`}>Cases</a>
+    <span>›</span>
+    <a href={`${base}cases/fundamentals/`}>Fundamentals</a>
+    <span>›</span>
+    <span>Fundamentals 2 — Bernadette Jackson</span>
+  </div>
+
+  <!-- ── CASE HEADER ───────────────────────────────────────────────────── -->
+  <div class="case-header">
+    <span class="card-tag">Older Adult</span>
+    <h1>Fundamentals 2 — Bernadette Jackson</h1>
+    <p class="case-subtitle">Confusion in Older Adult with Infection</p>
+    <div class="case-meta">
+      <span>👤 Bernadette Jackson, 85 years, African American Female</span>
+      <span>⏱ Scenario: 20 – 25 minutes</span>
+      <span>💬 Debrief: 20 – 25 minutes</span>
+    </div>
+  </div>
+
+  <!-- ── HOW TO USE ────────────────────────────────────────────────────── -->
+  <div class="callout callout-info">
+    <strong>📖 How to Use This Unfolding Case Study</strong>
+    <p>Work through each phase in order. Information is revealed progressively — exactly as it would be in a real clinical encounter. Before reading each answer, pause and reason through the question yourself. Use the <strong>▶ Reveal Answer</strong> toggles to check your thinking.</p>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       PHASE 1 — YOU ARRIVE AT THE BEDSIDE
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card" id="phase1">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 1</span>
+      <h2>You Arrive at the Bedside</h2>
+    </div>
+
+    <p class="phase-intro">
+      You are the morning nurse on a medical-surgical unit. You receive handoff report and head to see your patient for the first time.
+    </p>
+
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>📋 Handoff Report</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Patient</th><td>Bernadette Jackson</td></tr>
+            <tr><th>Age / DOB</th><td>85 years old · May 10</td></tr>
+            <tr><th>Gender / Race</th><td>Female · African American</td></tr>
+            <tr><th>Admission Dx</th><td>Abdominal pain, UTI, urinary retention</td></tr>
+            <tr><th>Allergy</th><td><span class="badge-danger">Penicillin</span></td></tr>
+            <tr><th>Code Status</th><td>Full code</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>💊 Current Medications (on MAR)</h3>
+        <ul class="med-list">
+          <li>0.9% Normal Saline IV (rate per order)</li>
+          <li>Levofloxacin 500 mg IV q12h</li>
+          <li>Acetaminophen (dose per order)</li>
+          <li>Digoxin (dose per order)</li>
+          <li><span class="badge-warning">Oxybutynin</span> — started 1 week ago</li>
+          <li><span class="badge-warning">Loratadine</span> — OTC, self-started 5 days ago</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="scene-box">
+      <h3>🚪 Entering the Room — What You Observe</h3>
+      <p>
+        Mrs. Jackson is an 85-year-old woman lying in a hospital bed. She appears restless and somewhat confused, asking "Where am I? Where is my daughter?" Her speech is slightly slurred. The room is dimly lit. You notice the call light is on the far side of the bed, out of her reach.
+      </p>
+    </div>
+
+    <h3>🔒 SWIPE Safety Assessment</h3>
+    <p>Before touching the patient, perform your environmental safety check:</p>
+    <table class="data-table">
+      <thead><tr><th>Letter</th><th>Check</th><th>What You Find</th></tr></thead>
+      <tbody>
+        <tr><td><strong>S</strong></td><td>Siderails up</td><td>Only 1 rail up — <span class="text-danger">needs correction</span></td></tr>
+        <tr><td><strong>W</strong></td><td>Wristband on, matches chart</td><td>Present and correct</td></tr>
+        <tr><td><strong>I</strong></td><td>IV lines — site, patency, rate, label</td><td>Right forearm, no redness; NS infusing</td></tr>
+        <tr><td><strong>P</strong></td><td>Pull cord / call light within reach</td><td><span class="text-danger">Out of reach — needs correction</span></td></tr>
+        <tr><td><strong>E</strong></td><td>Equipment — bed position, socks, path clear</td><td>Bed elevated; no non-skid socks; path partly cluttered</td></tr>
+      </tbody>
+    </table>
+
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: What safety corrections do you make immediately, and how do you introduce yourself to a confused patient?</summary>
+      <div class="reveal-content">
+        <p><strong>Immediate safety corrections:</strong></p>
+        <ul>
+          <li>Raise all appropriate siderails (2–3, per facility policy)</li>
+          <li>Move call light within easy reach of Mrs. Jackson's hand</li>
+          <li>Lower the bed to its lowest position</li>
+          <li>Place non-skid socks on her feet</li>
+          <li>Post a fall-risk sign on the door</li>
+          <li>Clear any obstacles from the path to the bathroom</li>
+        </ul>
+        <p><strong>Introduction to a confused patient — therapeutic communication:</strong></p>
+        <ul>
+          <li>Approach from the front, make eye contact, speak slowly and calmly</li>
+          <li>"Hello, Mrs. Jackson. My name is ___, and I am your nurse today."</li>
+          <li>Verify two identifiers: "Can you tell me your name and your date of birth?"</li>
+          <li>Reorient gently: "You are in the hospital. You are safe. Your daughter has been notified."</li>
+          <li>Use short, simple sentences — one idea at a time</li>
+          <li>Explain every action before you do it: "I'm going to check your blood pressure now."</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <!-- connector -->
+  <div class="phase-connector">⬇ As you perform your initial assessment, more information emerges…</div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       PHASE 2 — HISTORY & MEDICATION RECONCILIATION
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card" id="phase2">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 2</span>
+      <h2>History &amp; Medication Reconciliation</h2>
+    </div>
+
+    <p class="phase-intro">
+      Mrs. Jackson's daughter arrives and provides additional history. You also complete a thorough medication reconciliation.
+    </p>
+
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>🗣 History from Daughter</h3>
+        <ul>
+          <li>Bernadette lives at home; normally alert and independent in ADLs</li>
+          <li>Her primary care doctor started <strong>oxybutynin</strong> one week ago for urinary urgency and leakage</li>
+          <li>She started taking <strong>loratadine (Claritin)</strong> over-the-counter 5 days ago for seasonal allergies — her doctor did not know</li>
+          <li>Over the past 2–3 days she has been drinking less and seemed "off" — more confused than usual</li>
+          <li>This morning she fell trying to get to the bathroom; daughter brought her to the ED</li>
+          <li>Has a history of urinary incontinence and atrial fibrillation (on digoxin)</li>
+        </ul>
+      </div>
+      <div class="info-block">
+        <h3>⚠️ Beers Criteria Flags</h3>
+        <div class="callout callout-warning">
+          <p>The <strong>AGS Beers Criteria</strong> identifies medications potentially inappropriate for adults ≥ 65 years. Two of Mrs. Jackson's medications raise immediate flags:</p>
+          <table class="data-table" style="margin-top: 0.75rem;">
+            <thead><tr><th>Medication</th><th>Beers Concern</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><strong>Oxybutynin</strong></td>
+                <td>⚠️ HIGH anticholinergic burden → urinary retention, confusion in elderly</td>
+              </tr>
+              <tr>
+                <td><strong>Digoxin</strong></td>
+                <td>⚠️ Narrow therapeutic window; toxicity risk rises with dehydration</td>
+              </tr>
+              <tr>
+                <td><strong>Loratadine</strong> (2nd-gen)</td>
+                <td>Mild anticholinergic — compounded oxybutynin's effects</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <h3>🔗 The Polypharmacy Chain — Connecting the Dots</h3>
+    <div class="chain-flow">
+      <div class="chain-step chain-step-drug">
+        <span class="chain-icon">💊</span>
+        <strong>Oxybutynin + Loratadine</strong>
+        <small>Combined anticholinergic effects</small>
+      </div>
+      <div class="chain-arrow">↓</div>
+      <div class="chain-step chain-step-problem">
+        <span class="chain-icon">🚫</span>
+        <strong>Urinary Retention</strong>
+        <small>Bladder muscle relaxed; cannot empty fully</small>
+      </div>
+      <div class="chain-arrow">↓</div>
+      <div class="chain-step chain-step-problem">
+        <span class="chain-icon">🦠</span>
+        <strong>Bacterial Growth → UTI</strong>
+        <small>Stagnant urine = breeding ground for bacteria</small>
+      </div>
+      <div class="chain-arrow">↓</div>
+      <div class="chain-step chain-step-consequence">
+        <span class="chain-icon">🧠</span>
+        <strong>Systemic Infection</strong>
+        <small>Acute confusion · Fall risk · Dehydration</small>
+      </div>
+    </div>
+
+    <details class="reveal-block">
+      <summary>▶ Pre-Sim Q1: What are risk factors for developing a UTI in the elderly?</summary>
+      <div class="reveal-content">
+        <ul>
+          <li><strong>Female sex</strong> — shorter urethra, closer to rectum; post-menopausal urethral changes</li>
+          <li><strong>Advanced age</strong> — weakened bladder muscle, decreased immune response</li>
+          <li><strong>Urinary retention</strong> — allows bacteria to multiply in stagnant urine</li>
+          <li><strong>Anticholinergic medications</strong> — oxybutynin and loratadine caused retention in Bernadette</li>
+          <li><strong>Catheter use</strong> — disrupts normal urine flushing; allows organism migration</li>
+          <li><strong>Dehydration</strong> — concentrated urine is more hospitable to bacteria</li>
+          <li><strong>Incontinence</strong> — increases perineal skin exposure to bacteria</li>
+          <li><strong>History of prior UTIs</strong> — increases recurrence susceptibility</li>
+          <li><strong>Frequent healthcare facility exposure</strong> — increases exposure to resistant organisms</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="reveal-block">
+      <summary>▶ Pre-Sim Q3: How do we prevent UTIs in the elderly population?</summary>
+      <div class="reveal-content">
+        <ol>
+          <li>Encourage adequate fluid intake — especially water, to flush bacteria</li>
+          <li>Proper perineal hygiene — wipe front to back; hand hygiene before/after peri care</li>
+          <li>Respond promptly to toileting needs — do not let the patient hold urine</li>
+          <li>Avoid unnecessary catheters — remove as soon as clinically possible</li>
+          <li><strong>Limit anticholinergic medications</strong> — apply Beers Criteria review</li>
+          <li>Avoid bladder irritants — caffeine, alcohol, carbonated beverages</li>
+          <li>Regular voiding schedule — every 2–3 hours during the day</li>
+          <li>Thorough medication reconciliation at every care transition</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+
+  <!-- connector -->
+  <div class="phase-connector">⬇ You begin your head-to-toe assessment…</div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       PHASE 3 — ASSESSMENT FINDINGS
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card" id="phase3">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 3</span>
+      <h2>Assessment Findings</h2>
+    </div>
+
+    <p class="phase-intro">
+      You perform a systematic head-to-toe assessment with a focused genitourinary component. Mrs. Jackson is restless and intermittently confused throughout.
+    </p>
+
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>🌡️ Vital Signs</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Temperature</th><td>37.9°C (100.2°F) <span class="badge-warning">Low-grade</span></td></tr>
+            <tr><th>Blood Pressure</th><td>102/68 mmHg <span class="badge-warning">Low-normal</span></td></tr>
+            <tr><th>Heart Rate</th><td>96 bpm <span class="badge-warning">Mild tachycardia</span></td></tr>
+            <tr><th>Respiratory Rate</th><td>20 breaths/min</td></tr>
+            <tr><th>SpO₂</th><td>96% on room air</td></tr>
+            <tr><th>Pain</th><td>4/10 lower abdominal discomfort</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>🧠 Neurological / Mental Status</h3>
+        <ul>
+          <li>Alert but <strong>disoriented to place and time</strong></li>
+          <li>Knows her name; does not know what hospital or what day it is</li>
+          <li>Asking repeatedly for her daughter</li>
+          <li>Restless — attempting to get out of bed without assistance</li>
+          <li>Speech intact but somewhat tangential</li>
+          <li><strong>This is NEW confusion</strong> — daughter confirms she was baseline alert at home</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>❤️ Cardiovascular</h3>
+        <ul>
+          <li>Apical pulse regular at 96 bpm</li>
+          <li>Peripheral pulses present and equal bilaterally</li>
+          <li>No peripheral edema</li>
+          <li><em>Note: Digoxin on board — apical pulse critical before administration</em></li>
+        </ul>
+      </div>
+      <div class="info-block">
+        <h3>🫁 Respiratory</h3>
+        <ul>
+          <li>Lung sounds clear bilaterally</li>
+          <li>RR 20 — at upper limit of normal</li>
+          <li>No accessory muscle use</li>
+          <li>SpO₂ 96% — adequate</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>🫃 Abdomen / GU Assessment</h3>
+        <ul>
+          <li>Abdomen soft but <strong>suprapubic tenderness</strong> noted</li>
+          <li>Mild distension present</li>
+          <li>Bowel sounds present in all quadrants</li>
+          <li>Bladder palpable above symphysis pubis → <strong>bladder distension confirmed</strong></li>
+          <li>Urinary catheter placed by ED nurse → drainage bag shows <strong>small amount of dark, cloudy, foul-smelling urine</strong></li>
+          <li>Perineal skin intact</li>
+        </ul>
+      </div>
+      <div class="info-block">
+        <h3>🦴 Musculoskeletal / Skin</h3>
+        <ul>
+          <li>Skin dry and warm; mucous membranes dry</li>
+          <li>Skin turgor slightly decreased (tenting noted)</li>
+          <li>No skin breakdown or pressure injuries</li>
+          <li>Moves all extremities but weak bilaterally</li>
+          <li>Reports feeling "too weak to stand alone"</li>
+        </ul>
+      </div>
+    </div>
+
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: Why is Mrs. Jackson confused? Why is there NO high fever despite an infection?</summary>
+      <div class="reveal-content">
+        <p><strong>Why confusion instead of typical UTI symptoms?</strong></p>
+        <p>
+          In elderly patients, the classic UTI symptoms (burning, urgency, frequency) are often <em>absent</em>. Aging causes a blunted inflammatory response — the immune system does not mount the same reaction as in younger adults. Instead, systemic infection triggers neurotransmitter and cytokine changes that impair brain function, producing <strong>acute delirium</strong>. Confusion, lethargy, agitation, and falls are often the <em>only</em> presenting signs of UTI in older adults.
+        </p>
+        <p><strong>Why no high fever?</strong></p>
+        <p>
+          Elderly patients frequently do not mount a significant febrile response to infection — a baseline temperature may actually be lower in older adults. A temperature of 37.9°C that seems only mildly elevated may represent a significant infectious process in an 85-year-old. <strong>Do not rule out serious infection based on the absence of high fever in elderly patients.</strong>
+        </p>
+      </div>
+    </details>
+
+    <details class="reveal-block">
+      <summary>▶ Pre-Sim Q2: What are the differences between upper and lower urinary tract infections?</summary>
+      <div class="reveal-content">
+        <div class="compare-grid">
+          <div>
+            <h4>Lower UTI (Cystitis — bladder/urethra)</h4>
+            <ul>
+              <li>Dysuria (painful or burning urination)</li>
+              <li>Urinary frequency and urgency</li>
+              <li>Cloudy or foul-smelling urine</li>
+              <li>Hematuria</li>
+              <li>Suprapubic discomfort or pressure</li>
+              <li><strong>In elderly: classic symptoms may be absent — confusion, lethargy, or falls may be the only sign</strong></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Upper UTI (Pyelonephritis — kidneys)</h4>
+            <ul>
+              <li>Fever above 101°F (38.3°C)</li>
+              <li>Chills and rigors</li>
+              <li>Flank or lower back pain</li>
+              <li>Nausea and vomiting</li>
+              <li>All symptoms of lower UTI may also be present</li>
+              <li><strong>More serious — can progress to urosepsis</strong></li>
+            </ul>
+          </div>
+        </div>
+        <div class="callout callout-info" style="margin-top: 1rem;">
+          <strong>Key point:</strong> Bernadette's confusion is an atypical sign of a lower UTI. Upper UTI must be ruled out. Monitor for flank pain, rigors, and worsening vital signs.
+        </div>
+      </div>
+    </details>
+
+    <details class="reveal-block">
+      <summary>▶ Pre-Sim Q8: What assessment questions do you ask a patient with a suspected UTI?</summary>
+      <div class="reveal-content">
+        <ul>
+          <li>"Which problems are you having with passing urine?"</li>
+          <li>"Do you feel like you are completely emptying your bladder?"</li>
+          <li>"Does it hurt or burn when you urinate?"</li>
+          <li>"How often are you urinating?"</li>
+          <li>"Have you noticed any blood in your urine?"</li>
+          <li>"Do you have any pain in your lower abdomen, back, or sides?"</li>
+          <li>"Have you had a UTI before?"</li>
+          <li>"What medications are you currently taking?" <em>(screen for anticholinergics)</em></li>
+          <li>"How much fluid are you drinking each day?"</li>
+          <li><em>For confused patients — direct questions to family/caregiver as needed</em></li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <!-- connector -->
+  <div class="phase-connector">⬇ The laboratory and diagnostic results are ready…</div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       PHASE 4 — DIAGNOSTIC RESULTS
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card" id="phase4">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 4</span>
+      <h2>Diagnostic Results Arrive</h2>
+    </div>
+
+    <p class="phase-intro">
+      The ED sent a urinalysis and bladder scan before the catheter was placed. Results are now available in the chart.
+    </p>
+
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>🔬 Urinalysis Results</h3>
+        <table class="data-table">
+          <thead><tr><th>Finding</th><th>Result</th><th>Significance</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>Specific gravity</td>
+              <td><strong>1.030</strong> <span class="badge-warning">High</span></td>
+              <td>Concentrated urine → dehydration</td>
+            </tr>
+            <tr>
+              <td>Color / clarity</td>
+              <td>Dark yellow, cloudy</td>
+              <td>Abnormal — infection and dehydration</td>
+            </tr>
+            <tr>
+              <td>Odor</td>
+              <td>Foul / ammonia-like</td>
+              <td>Consistent with bacterial infection</td>
+            </tr>
+            <tr>
+              <td>Bacteria</td>
+              <td><span class="badge-danger">Positive</span></td>
+              <td>Confirms UTI</td>
+            </tr>
+            <tr>
+              <td>WBCs</td>
+              <td><span class="badge-danger">Elevated</span></td>
+              <td>Inflammatory response to infection</td>
+            </tr>
+            <tr>
+              <td>Nitrites</td>
+              <td><span class="badge-danger">Positive</span></td>
+              <td>Gram-negative bacteria present</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>🏥 Bladder Scan &amp; Catheter</h3>
+        <div class="stat-highlight">
+          <span class="stat-number">620 mL</span>
+          <span class="stat-label">drained by catheter on admission</span>
+        </div>
+        <p style="margin-top: 1rem;">
+          Normal post-void residual is <strong>&lt; 50–100 mL</strong>. Bernadette had <strong>620 mL</strong> of retained urine — over 6× the acceptable limit. This stagnant urine created the ideal environment for bacterial growth.
+        </p>
+        <h3 style="margin-top: 1.25rem;">🧪 Pending Labs</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>CMP</th><td>Pending — monitor electrolytes and kidney function</td></tr>
+            <tr><th>Digoxin level</th><td><span class="badge-danger">Pending — MUST check before next dose</span></td></tr>
+            <tr><th>Urine culture &amp; sensitivity</th><td>Pending — sent before antibiotics started</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <details class="reveal-block">
+      <summary>▶ Post-Sim Q1: Specific gravity is 1.030. What does this indicate?</summary>
+      <div class="reveal-content">
+        <p>
+          A specific gravity of 1.030 indicates <strong>concentrated urine</strong>, a sign of <strong>dehydration</strong>. The normal range is 1.005–1.030. At the upper end of or above normal range, the kidneys are retaining water because the body is volume-depleted.
+        </p>
+        <p>
+          This is consistent with Bernadette's presentation — UTI, urinary retention, and inadequate fluid intake have all contributed to dehydration. Treatment with IV 0.9% Normal Saline directly addresses this by restoring circulating volume and promoting renal perfusion.
+        </p>
+      </div>
+    </details>
+
+    <details class="reveal-block">
+      <summary>▶ Post-Sim Q2: Why is confusion the presenting symptom instead of burning or urgency?</summary>
+      <div class="reveal-content">
+        <p>
+          Confusion in elderly patients is a classic — and often the <strong>only</strong> — presenting symptom of a UTI. Unlike younger adults who experience burning and urgency, older adults frequently present with sudden-onset confusion, agitation, lethargy, or falls <em>without</em> classic urinary symptoms.
+        </p>
+        <p>
+          This is because aging-related changes in the immune system produce a blunted inflammatory response. The systemic infection causes changes in cytokines and neurotransmitters that impair brain function, leading to <strong>acute delirium superimposed on baseline cognition</strong>.
+        </p>
+      </div>
+    </details>
+
+    <details class="reveal-block">
+      <summary>▶ Pre-Sim Q7: What are the common diagnostic tests of the urinary tract and nursing considerations?</summary>
+      <div class="reveal-content">
+        <table class="data-table">
+          <thead><tr><th>Test</th><th>Purpose</th><th>Nursing Considerations</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Urinalysis (UA)</strong></td>
+              <td>Analyzes chemical and physical properties of urine</td>
+              <td>Collect midstream clean-catch; send promptly; note color, clarity, odor</td>
+            </tr>
+            <tr>
+              <td><strong>Urine Culture &amp; Sensitivity</strong></td>
+              <td>Identifies organism and effective antibiotics</td>
+              <td>Use sterile technique; <strong>send before starting antibiotics if possible</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Bladder Scan (Ultrasound)</strong></td>
+              <td>Measures post-void residual urine volume</td>
+              <td>Non-invasive; no radiation; patient may need a full bladder; do not schedule within 24 hours of IVP</td>
+            </tr>
+            <tr>
+              <td><strong>CT Scan / IVP</strong></td>
+              <td>Identifies structural abnormalities</td>
+              <td>Check for contrast dye allergy; patient must lie still; encourage fluids after to flush dye</td>
+            </tr>
+            <tr>
+              <td><strong>Renal/Bladder Ultrasound</strong></td>
+              <td>Identifies masses, obstruction, hydronephrosis, calculi</td>
+              <td>Non-invasive; no radiation; verify preprocedural orders</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+
+  <!-- connector -->
+  <div class="phase-connector">⬇ The full clinical picture is now visible — time to reason and act…</div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       PHASE 5 — CLINICAL REASONING: CONNECTING THE DOTS
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card" id="phase5">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 5</span>
+      <h2>Clinical Reasoning — Connecting the Dots</h2>
+    </div>
+
+    <p class="phase-intro">
+      You now have assessment data, history, and diagnostics. Before acting, integrate everything into a clear clinical picture.
+    </p>
+
+    <h3>🗺️ Concept Map — Key Connections</h3>
+    <div class="concept-map">
+      <table class="data-table">
+        <tbody>
+          <tr>
+            <th>Patient Problem</th>
+            <td><strong>Impaired Urinary Elimination</strong> r/t UTI and urinary retention</td>
+          </tr>
+          <tr>
+            <th>Assessment Cues</th>
+            <td>Cloudy foul-smelling urine · 620 mL retained · Confusion · Lethargy · Weakness · Suprapubic tenderness · UA positive for bacteria · Specific gravity 1.030</td>
+          </tr>
+          <tr>
+            <th>Related Factors</th>
+            <td>Anticholinergic medications (oxybutynin + loratadine) · Advanced age · Female sex · Catheter use · Dehydration</td>
+          </tr>
+          <tr>
+            <th>SMART Goal</th>
+            <td>Patient will demonstrate clear, yellow urine output ≥ 30 mL/hr and decreased confusion within 24 hours of antibiotic initiation</td>
+          </tr>
+          <tr>
+            <th>Interventions</th>
+            <td>Administer Levofloxacin IV · Administer NS IV · Maintain closed catheter system · Daily catheter care · Monitor I&amp;O · Encourage oral fluids · Reorient frequently · Implement fall precautions</td>
+          </tr>
+          <tr>
+            <th>Rationale</th>
+            <td>Antibiotics treat infection · IV fluids rehydrate and flush urinary tract · Closed catheter system prevents CAUTI · Monitoring evaluates treatment effectiveness</td>
+          </tr>
+          <tr>
+            <th>Evaluation</th>
+            <td>Urine clearing · Output ≥ 30 mL/hr · Confusion resolving · Patient afebrile · Vital signs stable</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="margin-top: 1.5rem;">🏥 Priority Nursing Diagnoses (Ranked)</h3>
+    <div class="dx-rank-list">
+      <div class="dx-rank-item">
+        <span class="dx-number">1</span>
+        <div>
+          <strong>Impaired Urinary Elimination</strong> r/t UTI and urinary retention
+          <div class="dx-aeb">AEB: cloudy foul-smelling urine, 620 mL retained, positive urinalysis, urinary incontinence</div>
+        </div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">2</span>
+        <div>
+          <strong>Acute Confusion</strong> r/t systemic infection (UTI)
+          <div class="dx-aeb">AEB: disorientation, lethargy, weakness, agitation</div>
+        </div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">3</span>
+        <div>
+          <strong>Risk for Falls</strong> r/t acute confusion and advanced age
+          <div class="dx-aeb">AEB: age 85, new confusion, weakness, history of incontinence</div>
+        </div>
+      </div>
+    </div>
+
+    <details class="reveal-block">
+      <summary>▶ Post-Sim Q6: What specific risk factors does Bernadette have for UTI? Explain how each contributed.</summary>
+      <div class="reveal-content">
+        <ol>
+          <li><strong>Female sex</strong> — Women have shorter urethras (~4 cm) and the urethral meatus is closer to the rectum, making it easier for bacteria (especially E. coli) to enter the urinary tract.</li>
+          <li><strong>Advanced age (85 years)</strong> — Aging causes bladder muscle weakness, decreased immune response, and reduced ability to completely empty the bladder.</li>
+          <li><strong>Oxybutynin use</strong> — This anticholinergic medication relaxes bladder smooth muscle, causing urinary retention. Stagnant urine became a breeding ground for bacteria.</li>
+          <li><strong>Loratadine (OTC)</strong> — Though milder, it also has anticholinergic properties that compounded oxybutynin's effect, worsening retention.</li>
+          <li><strong>Urinary retention</strong> — The 620 mL confirms significant retention. The normal flushing action of voiding was lost, allowing bacteria to proliferate.</li>
+          <li><strong>Catheter use</strong> — Once placed, a urinary catheter introduces a pathway for bacteria to migrate into the bladder, increasing CAUTI risk.</li>
+        </ol>
+      </div>
+    </details>
+
+    <details class="reveal-block">
+      <summary>▶ Post-Sim Q7: Bernadette has mixed urinary incontinence. Which statement indicates accurate understanding?</summary>
+      <div class="reveal-content">
+        <p><strong>Mixed urinary incontinence</strong> combines both:</p>
+        <ul>
+          <li><strong>Stress incontinence</strong> — involuntary leakage during increased abdominal pressure (coughing, sneezing, lifting)</li>
+          <li><strong>Urge incontinence</strong> — involuntary loss of urine after a sudden, strong urge to void</li>
+        </ul>
+        <p>
+          The correct understanding: <em>"The patient's incontinence results from involuntary leakage during periods of abdominal pressure AND the involuntary loss of urine after a strong urge to void."</em>
+        </p>
+      </div>
+    </details>
+
+    <details class="reveal-block">
+      <summary>▶ Pre-Sim Q4: What other problems can occur if a UTI is not treated promptly?</summary>
+      <div class="reveal-content">
+        <ol>
+          <li><strong>Pyelonephritis</strong> — Bacteria ascend to the kidneys; causes high fever, chills, flank/back pain, nausea, vomiting; can cause permanent kidney damage</li>
+          <li><strong>Urosepsis / Sepsis</strong> — Bacteria enter the bloodstream; life-threatening; signs include HR &gt; 90, RR &gt; 20, altered mental status, decreased urine output, hypotension</li>
+          <li><strong>Chronic kidney disease</strong> — Repeated or untreated infections cause scarring and long-term impaired kidney function</li>
+          <li><strong>Worsening delirium</strong> — In elderly patients, untreated infection deepens confusion, increases fall risk, and can lead to permanent cognitive decline</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+
+  <!-- connector -->
+  <div class="phase-connector">⬇ Now implement the plan of care…</div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       PHASE 6 — NURSING ACTIONS
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card" id="phase6">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 6</span>
+      <h2>Nursing Actions</h2>
+    </div>
+
+    <p class="phase-intro">
+      You have identified the problems and priorities. Now carry out the plan: communicate with the provider, administer medications, manage the catheter, and keep Mrs. Jackson safe.
+    </p>
+
+    <!-- SBAR -->
+    <h3>📞 SBAR — Your Call to the Provider</h3>
+    <div class="sbar-block">
+      <div class="sbar-item sbar-s">
+        <span class="sbar-label">S — Situation</span>
+        <p>"I am calling about Bernadette Jackson, an 85-year-old African American female in room ___, admitted for UTI and urinary retention. She is showing increasing acute confusion and I am concerned about her condition."</p>
+      </div>
+      <div class="sbar-item sbar-b">
+        <span class="sbar-label">B — Background</span>
+        <p>"She was started on oxybutynin one week ago and has been self-administering OTC loratadine for 5 days. Both have anticholinergic effects that caused urinary retention. A catheter drained 620 mL of foul-smelling urine on admission. She is currently receiving Levofloxacin 500 mg IV q12h and 0.9% Normal Saline. Her CMP and digoxin level are still pending. She has a Penicillin allergy."</p>
+      </div>
+      <div class="sbar-item sbar-a">
+        <span class="sbar-label">A — Assessment</span>
+        <p>"I am concerned she may be developing worsening systemic infection or early sepsis. Her confusion has increased, she is at high risk for falls, and her vital signs show [current vitals]. Her urine remains cloudy and foul-smelling."</p>
+      </div>
+      <div class="sbar-item sbar-r">
+        <span class="sbar-label">R — Recommendation</span>
+        <p>"I am requesting you reassess her status, review pending CMP and digoxin level, and advise whether additional interventions or medication changes are needed. I would also like to discuss the appropriateness of continuing oxybutynin given the Beers Criteria."</p>
+      </div>
+    </div>
+
+    <!-- Delegation -->
+    <h3 style="margin-top: 1.5rem;">👥 Delegation</h3>
+    <div class="compare-grid">
+      <div>
+        <h4 class="text-success">✓ Can delegate to UAP/CNA</h4>
+        <ul>
+          <li>Measuring and recording urine output</li>
+          <li>Assisting with ADLs (bathing, feeding)</li>
+          <li>Repositioning and ambulation assistance</li>
+          <li>Emptying urinary catheter drainage bag</li>
+          <li>Recording vital signs <em>(after initial RN assessment)</em></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-danger">✗ Cannot delegate (RN only)</h4>
+        <ul>
+          <li>Assessment and clinical judgment</li>
+          <li>Medication administration</li>
+          <li>Patient/family education</li>
+          <li>IV line management</li>
+          <li>SBAR communication to provider</li>
+        </ul>
+      </div>
+    </div>
+
+    <details class="reveal-block">
+      <summary>▶ Pre-Sim Q5: What is the plan of care for a confused patient with a UTI?</summary>
+      <div class="reveal-content">
+        <ol>
+          <li><strong>Ensure patient safety</strong> — lowest bed position, siderails up, call light within reach, non-slip socks, fall precautions sign</li>
+          <li><strong>Reorient gently and frequently</strong> — use patient's name, explain location, explain every action</li>
+          <li><strong>Administer ordered medications</strong> — Levofloxacin IV (antibiotic), Acetaminophen (comfort), Normal Saline IV (rehydration)</li>
+          <li><strong>Encourage fluid intake</strong> — oral fluids if able to take them safely</li>
+          <li><strong>Maintain catheter care</strong> — closed drainage, bag below bladder, assess site</li>
+          <li><strong>Monitor urine output and characteristics</strong> — color, odor, clarity, amount</li>
+          <li><strong>Involve family</strong> — they help with reorientation and communication</li>
+          <li><strong>Monitor vital signs</strong> — watch for fever, tachycardia, hypotension (signs of worsening sepsis)</li>
+          <li><strong>Document thoroughly</strong> in EHR / SimChart</li>
+          <li><strong>Reassess regularly</strong> — evaluate response to treatment; watch for deterioration</li>
+        </ol>
+      </div>
+    </details>
+
+    <details class="reveal-block">
+      <summary>▶ Post-Sim Q3 &amp; Q4: What catheter type is most appropriate and what are the indications for each type?</summary>
+      <div class="reveal-content">
+        <p>For <strong>short-term use</strong>, an <strong>intermittent (straight) catheter</strong> is preferred because it reduces CAUTI risk, allows normal voiding to resume between catheterizations, and minimizes bacterial colonization.</p>
+        <p>However, because Bernadette has significant retention and requires continuous output monitoring, a short-term <strong>indwelling Foley catheter</strong> is appropriate initially — with the goal of early removal.</p>
+        <table class="data-table" style="margin-top: 0.75rem;">
+          <thead><tr><th>Type</th><th>Indications</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Intermittent/Straight</strong></td>
+              <td>Urinary retention (drain once) · Sterile urine specimen · Prolonged immobilization · Bladder training</td>
+            </tr>
+            <tr>
+              <td><strong>Indwelling/Foley</strong></td>
+              <td>Retention requiring continuous drainage · Surgery · Accurate output monitoring · Incontinence causing skin breakdown · Bladder outlet obstruction</td>
+            </tr>
+            <tr>
+              <td><strong>Suprapubic</strong></td>
+              <td>Urethral trauma or obstruction · Post-urological surgery · Long-term retention when urethral catheterization not feasible</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+    <details class="reveal-block">
+      <summary>▶ Post-Sim Q5: What catheter care steps prevent worsening of Bernadette's infection?</summary>
+      <div class="reveal-content">
+        <ol>
+          <li><strong>Maintain a closed drainage system</strong> at all times — never disconnect tubing unnecessarily</li>
+          <li><strong>Keep the drainage bag below bladder level</strong> — prevents backflow of urine</li>
+          <li><strong>Do not allow tubing to kink or loop</strong> — ensures unobstructed urine flow</li>
+          <li><strong>Perform perineal/catheter care</strong> with soap and water daily and after bowel movements — clean away from the meatus</li>
+          <li><strong>Secure the catheter</strong> to the thigh to prevent tugging and urethral trauma</li>
+          <li><strong>Empty the drainage bag regularly</strong> (when 2/3 full) using a separate container; avoid the spigot touching the container</li>
+          <li><strong>Monitor for signs of CAUTI</strong> — fever, new onset confusion, cloudy urine, pain at catheter site</li>
+          <li><strong>Reassess daily</strong> for need of catheter — remove as soon as clinically possible</li>
+        </ol>
+      </div>
+    </details>
+
+    <details class="reveal-block">
+      <summary>▶ Post-Sim Q8: What vital signs must be assessed before giving digoxin or a beta-blocker?</summary>
+      <div class="reveal-content">
+        <ol>
+          <li><strong>Blood pressure</strong> — hold if systolic BP &lt; 90 mmHg (or per facility policy)</li>
+          <li><strong>Heart rate (apical pulse for 1 full minute)</strong> — hold digoxin if HR &lt; 60 bpm; hold beta-blocker if HR &lt; 60 bpm</li>
+          <li><strong>Respiratory rate</strong> — hold beta-blocker if significantly abnormal</li>
+          <li><strong>Digoxin level</strong> (when available) — therapeutic range 0.5–2.0 ng/mL; toxicity occurs above 2.0 ng/mL</li>
+        </ol>
+        <div class="callout callout-warning" style="margin-top: 0.75rem;">
+          <strong>Clinical note:</strong> Dehydration increases the risk of digoxin toxicity. Bernadette's dehydration makes checking her digoxin level <em>especially critical</em> before administration.
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <!-- connector -->
+  <div class="phase-connector">⬇ Hours later — evaluating the patient's response…</div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       PHASE 7 — EVALUATION & PATIENT EDUCATION
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card" id="phase7">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 7</span>
+      <h2>Evaluation &amp; Patient Education</h2>
+    </div>
+
+    <p class="phase-intro">
+      IV antibiotics and fluids have been running for several hours. Mrs. Jackson's daughter is at the bedside and Mrs. Jackson is more alert. It is time to evaluate outcomes and begin teaching.
+    </p>
+
+    <h3>✅ Evaluating Outcomes — Is the Plan Working?</h3>
+    <table class="data-table">
+      <thead><tr><th>Expected Outcome</th><th>Signs It's Working</th><th>Signs of Deterioration</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Urine output improving</td>
+          <td>Output ≥ 30 mL/hr; urine clearing to yellow</td>
+          <td>Output &lt; 30 mL/hr; urine still dark/cloudy</td>
+        </tr>
+        <tr>
+          <td>Confusion resolving</td>
+          <td>Patient oriented to person and place; less restless</td>
+          <td>Deepening confusion; new agitation; unresponsive</td>
+        </tr>
+        <tr>
+          <td>Infection clearing</td>
+          <td>Temperature normalizing; HR decreasing toward normal</td>
+          <td>Rising temperature; HR &gt; 100; RR &gt; 20; hypotension</td>
+        </tr>
+        <tr>
+          <td>Comfort improving</td>
+          <td>Reduced suprapubic pain; patient reports feeling better</td>
+          <td>Worsening abdominal pain; new back or flank pain</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout callout-danger" style="margin-top: 1.5rem;">
+      <strong>⚠️ Sepsis — Know When to Escalate</strong>
+      <p>A UTI not treated promptly can progress: <strong>Pyelonephritis → Urosepsis → Septic Shock</strong></p>
+      <p><strong>Watch for these warning signs in Bernadette:</strong></p>
+      <ul>
+        <li>Heart rate &gt; 90 bpm</li>
+        <li>Respiratory rate &gt; 20</li>
+        <li>Temperature &gt; 38°C (100.4°F) or &lt; 36°C (96.8°F)</li>
+        <li>Worsening confusion / altered mental status</li>
+        <li>Decreased urine output despite catheter</li>
+        <li>Hypotension (SBP &lt; 90 mmHg)</li>
+      </ul>
+      <p><strong>If you see these signs — escalate immediately using SBAR.</strong></p>
+    </div>
+
+    <details class="reveal-block">
+      <summary>▶ Post-Sim Q9: Complete the ADPIE / Clinical Judgment Template</summary>
+      <div class="reveal-content">
+        <table class="data-table">
+          <tbody>
+            <tr>
+              <th>Recognition of Cues<br /><small>(Assessment)</small></th>
+              <td>
+                <strong>Subjective:</strong> Patient reports weakness, lethargy, abdominal discomfort<br />
+                <strong>Objective:</strong> Acute confusion, cloudy/foul-smelling urine, 620 mL retained, UA positive for bacteria, specific gravity 1.030<br />
+                <strong>Historical:</strong> Oxybutynin started 1 week ago; self-started loratadine 5 days ago; history of urinary incontinence; Penicillin allergy
+              </td>
+            </tr>
+            <tr>
+              <th>Priority Nursing Diagnosis</th>
+              <td>Impaired Urinary Elimination r/t UTI and urinary retention AEB cloudy/foul-smelling urine, acute confusion, 620 mL retained, weakness, and lethargy</td>
+            </tr>
+            <tr>
+              <th>SMART Goal</th>
+              <td>Patient will demonstrate clear, yellow, non-foul-smelling urine output of at least 30 mL/hour and a decrease in confusion within 24 hours of initiating antibiotic therapy</td>
+            </tr>
+            <tr>
+              <th>Interventions<br /><small>(Generate Solutions)</small></th>
+              <td>
+                <ol style="margin:0; padding-left:1.25rem;">
+                  <li>Administer Levofloxacin 500 mg IV q12h — treat underlying bacterial infection</li>
+                  <li>Administer 0.9% Normal Saline IV — rehydrate, dilute and flush bacteria from urinary tract</li>
+                  <li>Maintain closed indwelling catheter system and perform daily catheter care — promote drainage, prevent CAUTI, monitor output</li>
+                </ol>
+              </td>
+            </tr>
+            <tr>
+              <th>Rationale<br /><small>(Take Action)</small></th>
+              <td>
+                Levofloxacin is a fluoroquinolone antibiotic effective against common UTI pathogens including E. coli; IV route used for serious infection (Potter &amp; Perry, 2021). IV Normal Saline restores hydration and supports renal perfusion (Potter &amp; Perry, 2021). Closed catheter system and sterile perineal care reduce CAUTI risk (Potter &amp; Perry, 2021).
+              </td>
+            </tr>
+            <tr>
+              <th>Evaluate Outcomes</th>
+              <td>
+                <ul style="margin:0; padding-left:1.25rem;">
+                  <li>Urine output ≥ 30 mL/hr; urine becoming clear and yellow</li>
+                  <li>Patient reports decreased abdominal discomfort</li>
+                  <li>Confusion improving — more oriented to person, place, time</li>
+                  <li>Vital signs stable — no fever, no tachycardia</li>
+                  <li>No signs of sepsis progression</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+    <details class="reveal-block">
+      <summary>▶ Post-Sim Q10: What are 3 patient education points for UTI prevention?</summary>
+      <div class="reveal-content">
+        <ol>
+          <li><strong>Drink plenty of fluids</strong> — especially water (aim for 6–8 glasses/day), to flush bacteria from the urinary tract</li>
+          <li><strong>Wipe front to back</strong> after using the toilet; perform hand hygiene before and after perineal care</li>
+          <li><strong>Urinate regularly</strong> and completely empty the bladder — do not hold urine; discuss catheter removal plan with provider as early as possible</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       APPENDIX A — MEDICATION REVIEW
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card appendix-card" id="appendix-meds">
+    <div class="phase-header">
+      <span class="phase-badge phase-badge-appendix">Appendix A</span>
+      <h2>Medication Review</h2>
+    </div>
+
+    <h3>💊 Levofloxacin 500 mg IV q12h</h3>
+    <table class="data-table med-table">
+      <tbody>
+        <tr><th>Classification</th><td>Fluoroquinolone antibiotic</td></tr>
+        <tr><th>Indication</th><td>Treatment of UTI caused by susceptible bacteria</td></tr>
+        <tr><th>Mechanism</th><td>Inhibits bacterial DNA gyrase and topoisomerase IV, preventing bacterial replication</td></tr>
+        <tr><th>Dosage range</th><td>250–750 mg per dose depending on severity</td></tr>
+        <tr><th>Route</th><td>IV (intravenous) — infuse over 60–90 minutes</td></tr>
+        <tr><th>Adverse effects</th><td>Tendon rupture/tendinitis · Peripheral neuropathy · QT prolongation · Diarrhea · Nausea · Photosensitivity</td></tr>
+        <tr><th>Contraindications</th><td>Hypersensitivity to fluoroquinolones; caution with QT prolongation</td></tr>
+        <tr><th>Nursing precautions</th><td>Assess for tendon pain · Monitor renal function · Verify allergy (Penicillin allergy is NOT a contraindication — Levofloxacin is safe for Bernadette)</td></tr>
+        <tr><th>Patient teaching</th><td>Report any tendon pain or swelling immediately · Avoid sun exposure · Complete the full course even if feeling better</td></tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin-top: 1.5rem;">💊 Acetaminophen (Tylenol)</h3>
+    <table class="data-table med-table">
+      <tbody>
+        <tr><th>Classification</th><td>Analgesic / antipyretic</td></tr>
+        <tr><th>Indication</th><td>Pain relief and fever reduction related to UTI</td></tr>
+        <tr><th>Dosage range</th><td>325–1000 mg per dose; max 4 g/day (elderly: max 3 g/day)</td></tr>
+        <tr><th>Adverse effects</th><td>Hepatotoxicity (with overdose or chronic use) · Nausea</td></tr>
+        <tr><th>Contraindications</th><td>Severe hepatic impairment · Hypersensitivity</td></tr>
+        <tr><th>Nursing precautions</th><td>Assess liver function · Check for other acetaminophen-containing medications to avoid exceeding max daily dose · Assess pain before and after</td></tr>
+        <tr><th>Patient teaching</th><td>Do not exceed recommended dose · Avoid alcohol · Check OTC medications for acetaminophen content</td></tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin-top: 1.5rem;">💉 0.9% Normal Saline IV</h3>
+    <table class="data-table med-table">
+      <tbody>
+        <tr><th>Classification</th><td>Isotonic crystalloid IV fluid</td></tr>
+        <tr><th>Indication</th><td>Rehydration · Restoration of fluid volume · Flushing of urinary tract</td></tr>
+        <tr><th>Nursing precautions</th><td>Monitor for fluid overload (especially in elderly): lung sounds, edema, weight gain, increased BP · Monitor IV site for infiltration/phlebitis · Verify correct rate on pump</td></tr>
+        <tr><th>Patient teaching</th><td>Explain purpose of IV fluid · Report any pain, swelling, or redness at IV site</td></tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin-top: 1.5rem;">⚠️ Oxybutynin (held/discontinued)</h3>
+    <table class="data-table med-table">
+      <tbody>
+        <tr><th>Classification</th><td>Anticholinergic / antispasmodic</td></tr>
+        <tr><th>Indication</th><td>Overactive bladder / urge incontinence</td></tr>
+        <tr><th>Beers Criteria</th><td><span class="badge-danger">ON THE BEERS LIST</span> — potentially inappropriate for adults ≥ 65 due to high anticholinergic burden</td></tr>
+        <tr><th>Why problematic for Bernadette</th><td>Caused urinary retention by relaxing the detrusor muscle; retention led to the UTI</td></tr>
+        <tr><th>Other anticholinergic effects</th><td>Confusion · Dry mouth · Constipation · Blurred vision · Tachycardia</td></tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin-top: 1.5rem;">⚠️ Loratadine (OTC — Claritin)</h3>
+    <table class="data-table med-table">
+      <tbody>
+        <tr><th>Classification</th><td>Second-generation antihistamine</td></tr>
+        <tr><th>Indication</th><td>Seasonal allergies</td></tr>
+        <tr><th>Beers Criteria</th><td>Mild anticholinergic effects; compounded oxybutynin's effects in Bernadette</td></tr>
+        <tr><th>Adverse effects</th><td>Confusion · Drowsiness · Dry mouth · Paradoxical excitation</td></tr>
+        <tr><th>Nursing note</th><td>Assess patient awareness of OTC medication effects · Educate about anticholinergic burden · OTC use must be reported to all prescribers</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       APPENDIX B — POLYPHARMACY & BEERS CRITERIA
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card appendix-card" id="appendix-beers">
+    <div class="phase-header">
+      <span class="phase-badge phase-badge-appendix">Appendix B</span>
+      <h2>Polypharmacy &amp; Beers Criteria</h2>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>What is Polypharmacy?</h3>
+        <p>The concurrent use of <strong>5 or more medications</strong>. Bernadette exemplifies polypharmacy — she takes digoxin, oxybutynin, loratadine, and other medications simultaneously.</p>
+        <h4>Risk Factors</h4>
+        <ul>
+          <li>Multiple chronic conditions</li>
+          <li>Multiple prescribers and pharmacies</li>
+          <li>Use of OTC medications without provider knowledge</li>
+          <li>Transitions of care (hospital to home)</li>
+        </ul>
+        <h4 style="margin-top: 0.75rem;">Problems Caused</h4>
+        <ul>
+          <li>Drug–drug interactions</li>
+          <li>Increased fall risk</li>
+          <li>Cognitive impairment</li>
+          <li>Adverse drug events</li>
+          <li>Higher risk of mortality</li>
+        </ul>
+      </div>
+      <div class="info-block">
+        <h3>What is the Beers Criteria?</h3>
+        <p>The <strong>American Geriatrics Society (AGS) Beers Criteria</strong> is a list of medications considered potentially inappropriate for adults ≥ 65 years due to increased risk of harm.</p>
+        <table class="data-table" style="margin-top: 0.75rem;">
+          <thead><tr><th>Medication</th><th>Why It's on the List</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Oxybutynin</strong></td><td>High anticholinergic burden → confusion, urinary retention</td></tr>
+            <tr><td><strong>Digoxin</strong></td><td>Narrow therapeutic window; toxicity ↑ with dehydration or renal impairment</td></tr>
+            <tr><td><strong>First-gen antihistamines</strong> (e.g., diphenhydramine)</td><td>High anticholinergic burden; loratadine (2nd-gen) has milder effects</td></tr>
+            <tr><td><strong>Benzodiazepines</strong></td><td>Increased fall risk, cognitive impairment</td></tr>
+            <tr><td><strong>NSAIDs</strong></td><td>Increased GI bleeding, kidney injury risk</td></tr>
+          </tbody>
+        </table>
+        <h4 style="margin-top: 0.75rem;">How Nurses Help</h4>
+        <ul>
+          <li>Thorough medication reconciliation at all care transitions</li>
+          <li>Identify anticholinergic burden using Beers Criteria</li>
+          <li>Assess patient understanding of all medications including OTC drugs</li>
+          <li>Collaborate with the interdisciplinary team to deprescribe when appropriate</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       APPENDIX C — THERAPEUTIC COMMUNICATION REFERENCE
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card appendix-card" id="appendix-comm">
+    <div class="phase-header">
+      <span class="phase-badge phase-badge-appendix">Appendix C</span>
+      <h2>Therapeutic Communication — Quick Reference</h2>
+    </div>
+
+    <div class="compare-grid">
+      <div>
+        <h4 class="text-success">✓ Do</h4>
+        <ul>
+          <li>Use simple, short sentences</li>
+          <li>Speak slowly and calmly</li>
+          <li>Reorient gently: <em>"You are safe, you are in the hospital."</em></li>
+          <li>Use her preferred name throughout</li>
+          <li>Explain each action before doing it</li>
+          <li>Make eye contact; approach from the front</li>
+          <li>Involve family in communication and the care plan</li>
+          <li>Ask one question at a time</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-danger">✗ Don't</h4>
+        <ul>
+          <li>Use medical jargon or complex sentences</li>
+          <li>Raise your voice or rush</li>
+          <li>Argue with or correct the patient harshly</li>
+          <li>Use terms like "honey" or "sweetie" without consent</li>
+          <li>Perform procedures without warning</li>
+          <li>Approach from behind unexpectedly</li>
+          <li>Exclude family from the care plan</li>
+          <li>Ask multiple questions simultaneously</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       APPENDIX D — REFERENCES
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card appendix-card" id="appendix-refs">
+    <div class="phase-header">
+      <span class="phase-badge phase-badge-appendix">Appendix D</span>
+      <h2>References</h2>
+    </div>
+    <ol class="ref-list">
+      <li>Potter, P. A., Perry, A. G., Stockert, P. A., &amp; Hall, A. (2021). <em>Fundamentals of nursing</em> (10th ed.). Elsevier.</li>
+      <li>Jarvis, C., Eckhardt, A., &amp; Thomas, P. (2021). <em>Physical examination &amp; health assessment</em> (8th ed.). Elsevier.</li>
+      <li>Vallerand, A. H., &amp; Sanoski, C. A. (2021). <em>Davis's drug guide for nurses</em> (17th ed.). F.A. Davis.</li>
+      <li>Ackley, B., Ludwig, G., Makic, M., Martinez-Kratz, M., &amp; Zanotti, M. (2020). <em>Nursing diagnosis handbook: An evidence-based guide to planning care</em> (12th ed.). Elsevier Saunders.</li>
+      <li>Huether, S. E., &amp; McCance, K. L. (2016). <em>Understanding pathophysiology</em> (6th ed.). Mosby.</li>
+      <li>American Geriatrics Society. (2023). AGS Beers Criteria® for potentially inappropriate medication use in older adults. <em>Journal of the American Geriatrics Society.</em></li>
+    </ol>
+    <p class="ref-note">Study guide compiled from Elsevier SLS FUN-02: Bernadette Jackson — Confusion in Older Adult with Infection.</p>
+  </div>
+
+  <!-- Back button -->
+  <div style="margin-top: 2rem;">
+    <a href={`${base}cases/fundamentals/`} class="btn btn-back">← Back to Fundamentals</a>
+  </div>
+
+</BaseLayout>
+
+<style>
+  /* ── Phase structure ─────────────────────────────────────────── */
+  .case-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-top: 0.25rem;
+  }
+
+  .phase-card {
+    background: var(--color-surface);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 0;
+    box-shadow: var(--shadow);
+    border-top: 4px solid var(--color-primary);
+  }
+
+  .appendix-card {
+    border-top-color: var(--color-secondary);
+  }
+
+  .phase-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .phase-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .phase-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+
+  .phase-badge-appendix {
+    background: var(--color-secondary);
+  }
+
+  .phase-intro {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin-bottom: 1.25rem;
+    border-left: 3px solid var(--color-accent);
+    padding-left: 0.75rem;
+  }
+
+  .phase-connector {
+    text-align: center;
+    padding: 0.6rem 0;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+  }
+
+  /* ── Info grid ───────────────────────────────────────────────── */
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 720px) {
+    .info-grid { grid-template-columns: 1fr; }
+    .compare-grid { grid-template-columns: 1fr; }
+  }
+
+  .info-block h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  /* ── Tables ──────────────────────────────────────────────────── */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--color-border);
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .data-table thead th {
+    background: #f0f4ff;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+  }
+
+  .data-table tbody th {
+    background: #f8f9fa;
+    font-weight: 600;
+    width: 30%;
+    color: var(--color-text);
+  }
+
+  .med-table tbody th {
+    width: 28%;
+  }
+
+  /* ── Callouts ────────────────────────────────────────────────── */
+  .callout {
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .callout p { margin-bottom: 0.5rem; }
+  .callout p:last-child { margin-bottom: 0; }
+
+  .callout-info {
+    background: #e8f0fe;
+    border-left: 4px solid var(--color-primary);
+  }
+
+  .callout-warning {
+    background: #fff8e1;
+    border-left: 4px solid #f59e0b;
+  }
+
+  .callout-danger {
+    background: #fff0f0;
+    border-left: 4px solid #dc2626;
+  }
+
+  /* ── Badges ──────────────────────────────────────────────────── */
+  .badge-danger {
+    display: inline-block;
+    background: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fca5a5;
+    border-radius: 4px;
+    padding: 0.1rem 0.45rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .badge-warning {
+    display: inline-block;
+    background: #fffbeb;
+    color: #92400e;
+    border: 1px solid #fde68a;
+    border-radius: 4px;
+    padding: 0.1rem 0.45rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  /* ── Scene box ───────────────────────────────────────────────── */
+  .scene-box {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .scene-box h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* ── Med list ────────────────────────────────────────────────── */
+  .med-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .med-list li {
+    padding: 0.35rem 0;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 0.9rem;
+  }
+
+  .med-list li:last-child { border-bottom: none; }
+
+  /* ── Chain flow ──────────────────────────────────────────────── */
+  .chain-flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin: 1.25rem 0;
+  }
+
+  .chain-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 520px;
+    gap: 0.2rem;
+  }
+
+  .chain-step small {
+    font-size: 0.8rem;
+    opacity: 0.8;
+  }
+
+  .chain-step-drug {
+    background: #e8f0fe;
+    color: var(--color-primary-dark);
+    border: 1px solid #bfdbfe;
+  }
+
+  .chain-step-problem {
+    background: #fff8e1;
+    color: #78350f;
+    border: 1px solid #fde68a;
+  }
+
+  .chain-step-consequence {
+    background: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+  }
+
+  .chain-arrow {
+    font-size: 1.5rem;
+    color: var(--color-text-muted);
+    line-height: 1.2;
+  }
+
+  .chain-icon {
+    font-size: 1.4rem;
+  }
+
+  /* ── Stat highlight ──────────────────────────────────────────── */
+  .stat-highlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fef2f2;
+    border: 2px solid #fca5a5;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #b91c1c;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+    color: #7f1d1d;
+    margin-top: 0.25rem;
+  }
+
+  /* ── Reveal (details/summary) ────────────────────────────────── */
+  .reveal-block {
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    margin-top: 1rem;
+    overflow: hidden;
+  }
+
+  .reveal-block > summary {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--color-primary);
+    background: #f0f4ff;
+    list-style: none;
+    user-select: none;
+  }
+
+  .reveal-block > summary::-webkit-details-marker { display: none; }
+
+  .reveal-block[open] > summary {
+    background: #dbeafe;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .reveal-block > summary:hover {
+    background: #dbeafe;
+  }
+
+  .reveal-content {
+    padding: 1rem 1.25rem;
+  }
+
+  .reveal-content ul,
+  .reveal-content ol {
+    margin-bottom: 0.75rem;
+  }
+
+  /* ── SBAR block ──────────────────────────────────────────────── */
+  .sbar-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    margin-bottom: 1.5rem;
+  }
+
+  .sbar-item {
+    padding: 1rem 1.25rem;
+  }
+
+  .sbar-item p { margin: 0; font-style: italic; }
+
+  .sbar-label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.4rem;
+  }
+
+  .sbar-s { background: #eff6ff; border-left: 5px solid #3b82f6; }
+  .sbar-b { background: #f0fdf4; border-left: 5px solid #22c55e; }
+  .sbar-a { background: #fffbeb; border-left: 5px solid #f59e0b; }
+  .sbar-r { background: #fef2f2; border-left: 5px solid #ef4444; }
+
+  /* ── Priority diagnoses ──────────────────────────────────────── */
+  .dx-rank-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .dx-rank-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: #f8f9fa;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+  }
+
+  .dx-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .dx-aeb {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-top: 0.2rem;
+  }
+
+  /* ── Compare grid ────────────────────────────────────────────── */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .compare-grid h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  /* ── Concept map ─────────────────────────────────────────────── */
+  .concept-map {
+    margin-bottom: 1.25rem;
+  }
+
+  /* ── References ──────────────────────────────────────────────── */
+  .ref-list {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .ref-note {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin: 0;
+  }
+
+  /* ── Utility ─────────────────────────────────────────────────── */
+  .text-success { color: #15803d; }
+  .text-danger  { color: #b91c1c; }
+
+  .btn-back {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .btn-back:hover {
+    background: var(--color-primary-dark);
+    text-decoration: none;
+  }
+</style>

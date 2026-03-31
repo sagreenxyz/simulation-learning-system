@@ -1,37 +1,1758 @@
 ---
-import CaseLayout from '../../../layouts/CaseLayout.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
-<CaseLayout
-  scenario="Fundamentals 5"
-  disciplineLabel="Fundamentals"
-  disciplineSlug="fundamentals"
-  category="Patient Safety"
-  patient={{ name: "Lisa Rae", age: "78 years", gender: "Female" }}
-  scenarioTime="20 – 30 minutes"
-  debriefingTime="20 – 30 minutes"
-  concepts={[
-    "Vital signs",
-    "Assessment",
-    "Communication",
-    "Older adult",
-    "Patient safety",
-    "Skin integrity",
-    "Patient education",
-    "Documentation and informatics",
-  ]}
-  skills={[
-    "Assess patient",
-    "Utilize therapeutic communication",
-    "Assess fall risk using Morse Fall Scale",
-    "Assess pressure ulcer risk using Braden Scale",
-    "Implement fall prevention measures",
-    "Implement pressure ulcer prevention measures",
-    "Provide patient education and support",
-    "Access and document care in the EHR",
-  ]}
-  presentation="Patient with a history of falls is admitted with dizziness and a mechanical fall. Patient is incontinent of urine and has limited mobility."
-  primaryDx="Hypotension"
-  secondaryDx="Mechanical fall"
-  primaryChallenge="Learner assesses and implements nursing care for a patient at high risk for falls and pressure ulcer development."
-/>
+<BaseLayout
+  title="Fundamentals 5 — Lisa Rae"
+  description="Unfolding case study: Patient Safety — Falls & Pressure Injury Prevention (FUN-05)"
+>
+
+  <div class="breadcrumb">
+    <a href={base}>Home</a>
+    <span>›</span>
+    <a href={`${base}cases/`}>Cases</a>
+    <span>›</span>
+    <a href={`${base}cases/fundamentals/`}>Fundamentals</a>
+    <span>›</span>
+    <span>Fundamentals 5 — Lisa Rae</span>
+  </div>
+
+  <!-- ── CASE HEADER ───────────────────────────────────────────────────── -->
+  <div class="case-header">
+    <span class="card-tag">Patient Safety</span>
+    <h1>Fundamentals 5 — Lisa Rae</h1>
+    <p class="case-subtitle">Falls &amp; Pressure Injury Prevention in an Older Adult</p>
+    <div class="case-meta">
+      <span>👤 Lisa Rae, 78 years, White Female</span>
+      <span>⏱ Scenario: 20 – 30 minutes</span>
+      <span>💬 Debrief: 20 – 30 minutes</span>
+    </div>
+  </div>
+
+  <!-- ── HOW TO USE ────────────────────────────────────────────────────── -->
+  <div class="callout callout-info">
+    <strong>📖 How to Use This Unfolding Case Study</strong>
+    <p>Work through each phase in order. Information is revealed progressively — exactly as it would be in a real clinical encounter. Before reading each answer, pause and reason through the question yourself. Use the <strong>▶ Reveal Answer</strong> toggles to check your thinking.</p>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       PHASE 1 — YOU ARRIVE AT THE BEDSIDE
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card" id="phase1">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 1</span>
+      <h2>You Arrive at the Bedside</h2>
+    </div>
+
+    <p class="phase-intro">
+      You are the day-shift nurse on a medical-surgical unit. You receive handoff report on a patient admitted overnight and head to perform your initial assessment.
+    </p>
+
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>📋 Handoff Report</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Patient</th><td>Lisa Rae</td></tr>
+            <tr><th>Age / DOB</th><td>78 years old</td></tr>
+            <tr><th>Gender / Race</th><td>Female · White</td></tr>
+            <tr><th>Admission Dx</th><td>Mechanical fall; hypotension</td></tr>
+            <tr><th>Allergy</th><td>NKDA</td></tr>
+            <tr><th>Code Status</th><td>Full code</td></tr>
+            <tr><th>PMH</th><td>Hypertension, Type 2 DM (diet-controlled), osteoporosis, urinary incontinence, prior fall 3 months ago</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>💊 Current Medications (on MAR)</h3>
+        <ul class="med-list">
+          <li>0.9% Normal Saline IV at 75 mL/hr</li>
+          <li>Hydrochlorothiazide (HCTZ) 25 mg PO daily — <span class="badge-warning">HOLD today per order</span></li>
+          <li>Hydromorphone 0.5 mg IV q4h PRN pain (right hip)</li>
+          <li>Acetaminophen 650 mg PO q6h scheduled</li>
+          <li>Calcium carbonate 600 mg + Vitamin D 400 IU PO BID</li>
+          <li>Metformin 500 mg PO daily with evening meal</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="scene-box">
+      <h3>🚪 Entering the Room — What You Observe</h3>
+      <p>
+        Ms. Rae is a 78-year-old woman lying in a hospital bed, appearing pale and slightly uncomfortable. She is awake and alert, oriented to person, place, and time. The bed is in a semi-elevated position. You notice the call light is not within reach. A Foley catheter bag is hanging on the bed frame below the level of the mattress. The path between the bed and the bathroom is partially obstructed by a meal tray table.
+      </p>
+    </div>
+
+    <h3>🔒 SWIPE Safety Assessment</h3>
+    <p>Before touching the patient, perform your environmental safety check:</p>
+    <table class="data-table">
+      <thead><tr><th>Letter</th><th>Check</th><th>What You Find</th></tr></thead>
+      <tbody>
+        <tr><td><strong>S</strong></td><td>Siderails up</td><td>Only 1 rail up — <span class="text-danger">needs correction</span></td></tr>
+        <tr><td><strong>W</strong></td><td>Wristband on, matches chart</td><td>Present and correct — two identifiers confirmed</td></tr>
+        <tr><td><strong>I</strong></td><td>IV lines — site, patency, rate, label</td><td>Left forearm peripheral IV; site without redness; NS infusing at 75 mL/hr</td></tr>
+        <tr><td><strong>P</strong></td><td>Pull cord / call light within reach</td><td><span class="text-danger">Out of reach — needs correction</span></td></tr>
+        <tr><td><strong>E</strong></td><td>Equipment — bed position, socks, path clear</td><td>Bed elevated; no non-skid socks on patient; path partially blocked by tray table; <span class="badge-warning">FALL RISK</span> band on wrist</td></tr>
+      </tbody>
+    </table>
+
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: What safety corrections do you make immediately before beginning your assessment?</summary>
+      <div class="reveal-content">
+        <p><strong>Immediate safety corrections (before any other action):</strong></p>
+        <ul>
+          <li>Raise all appropriate siderails (2–3 rails, per facility policy)</li>
+          <li>Lower the bed to its lowest position</li>
+          <li>Place call light within easy reach — demonstrate use to Ms. Rae</li>
+          <li>Apply non-skid socks</li>
+          <li>Post fall-risk sign on door and above bed</li>
+          <li>Clear the path between bed and bathroom; reposition tray table against wall</li>
+          <li>Ensure Foley catheter tubing is not looped on the floor (trip hazard) and bag is secured below bladder level</li>
+        </ul>
+        <p><strong>Why these corrections matter:</strong> Ms. Rae is already admitted for a fall. Her hypotension and right hip pain put her at extreme risk for a second fall during hospitalization. Every environmental modification reduces that risk before any formal nursing intervention begins.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- connector -->
+  <div class="phase-connector">⬇ As you complete your safety sweep, Ms. Rae begins sharing what happened at home…</div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       PHASE 2 — HISTORY & MEDICATION CAUSE CHAIN
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card" id="phase2">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 2</span>
+      <h2>History &amp; Medication Cause Chain</h2>
+    </div>
+
+    <p class="phase-intro">
+      You sit with Ms. Rae and gather a focused history. She is alert and cooperative, though slightly anxious about being in the hospital.
+    </p>
+
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>🗣 History from Ms. Rae</h3>
+        <ul>
+          <li>Lives alone in a single-story home; uses a <strong>cane</strong> for ambulation since a fall 3 months ago</li>
+          <li>This morning she got up from bed to use the bathroom and felt <strong>"very dizzy and lightheaded"</strong></li>
+          <li>Lost her balance in the hallway and fell, landing on her right side</li>
+          <li>She denies hitting her head; denies loss of consciousness</li>
+          <li>When asked about her medications, she pauses: <em>"Oh no — I think I took my water pill twice this morning. I forgot I'd already taken it."</em></li>
+          <li>Has been on HCTZ for 3 years; this is the first time she has doubled the dose</li>
+          <li>Reports her urine has been "very pale and a lot" since the double dose this morning</li>
+          <li>Prior fall 3 months ago was also related to dizziness when getting up quickly</li>
+        </ul>
+      </div>
+      <div class="info-block">
+        <h3>⚠️ Medication Alert — HCTZ Double Dose</h3>
+        <div class="callout callout-danger">
+          <p><strong>Hydrochlorothiazide (HCTZ) 25 mg</strong> is a thiazide diuretic used to treat hypertension. A double dose causes:</p>
+          <ul style="margin-top: 0.5rem;">
+            <li>Excessive urinary output → rapid volume depletion</li>
+            <li>Decreased intravascular volume → low blood pressure</li>
+            <li>Orthostatic hypotension — worst when changing position (lying → sitting → standing)</li>
+            <li>Electrolyte losses: hypokalemia (low K⁺), hyponatremia (low Na⁺)</li>
+            <li>Risk of falls, syncope, and acute kidney injury in the elderly</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h3>🔗 The Cause Chain — Connecting the Dots</h3>
+    <div class="chain-flow">
+      <div class="chain-step chain-step-drug">
+        <span class="chain-icon">💊</span>
+        <strong>HCTZ 25 mg × 2 (double dose)</strong>
+        <small>Thiazide diuretic — accidentally doubled this morning</small>
+      </div>
+      <div class="chain-arrow">↓</div>
+      <div class="chain-step chain-step-problem">
+        <span class="chain-icon">💧</span>
+        <strong>Excessive Diuresis → Volume Depletion</strong>
+        <small>More urine than normal → circulating blood volume drops</small>
+      </div>
+      <div class="chain-arrow">↓</div>
+      <div class="chain-step chain-step-problem">
+        <span class="chain-icon">📉</span>
+        <strong>Orthostatic Hypotension</strong>
+        <small>BP drops sharply when rising from bed → dizziness</small>
+      </div>
+      <div class="chain-arrow">↓</div>
+      <div class="chain-step chain-step-consequence">
+        <span class="chain-icon">🚨</span>
+        <strong>Mechanical Fall → Injury + Hospitalization</strong>
+        <small>Right hip bruising · forearm laceration · skin integrity at risk</small>
+      </div>
+    </div>
+
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: What is orthostatic hypotension, and why are older adults especially vulnerable?</summary>
+      <div class="reveal-content">
+        <p><strong>Orthostatic (postural) hypotension</strong> is defined as a drop in systolic BP ≥ 20 mmHg or diastolic BP ≥ 10 mmHg within 3 minutes of standing from a sitting or lying position.</p>
+        <p><strong>Why elderly patients are at increased risk:</strong></p>
+        <ul>
+          <li><strong>Blunted baroreceptor reflex</strong> — aging impairs the body's ability to quickly compensate for positional BP changes</li>
+          <li><strong>Reduced arterial elasticity</strong> — vessels are stiffer and cannot dilate/constrict as rapidly</li>
+          <li><strong>Polypharmacy</strong> — diuretics, antihypertensives, and sedatives all compound the effect</li>
+          <li><strong>Dehydration</strong> — baseline fluid intake is often lower in the elderly; kidneys are less efficient</li>
+          <li><strong>Prolonged bed rest</strong> — even short periods reduce cardiovascular conditioning</li>
+        </ul>
+        <p><strong>Nursing implication:</strong> Always check orthostatic vital signs before assisting Ms. Rae out of bed. Teach "dangle before standing" — sit at edge of bed for 1–2 minutes before rising.</p>
+      </div>
+    </details>
+
+    <details class="reveal-block">
+      <summary>▶ Pre-Sim Q: What intrinsic and extrinsic risk factors for falls does Ms. Rae have?</summary>
+      <div class="reveal-content">
+        <div class="compare-grid">
+          <div>
+            <h4>Intrinsic (Patient-Related) Risk Factors</h4>
+            <ul>
+              <li>Advanced age (78 years)</li>
+              <li>History of falls (fall 3 months ago)</li>
+              <li>Orthostatic hypotension from medication error</li>
+              <li>Urinary incontinence — urgency to reach bathroom quickly</li>
+              <li>Osteoporosis — increased injury severity if fall occurs</li>
+              <li>Gait and balance changes of aging</li>
+              <li>Diuretic use (HCTZ) — increases urgency and nighttime toileting</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Extrinsic (Environmental) Risk Factors</h4>
+            <ul>
+              <li>Getting up alone at night without assistance</li>
+              <li>Hospital environment — unfamiliar layout</li>
+              <li>IV tubing, Foley catheter tubing on floor</li>
+              <li>Meal tray table blocking bathroom path</li>
+              <li>Call light out of reach</li>
+              <li>Bed in elevated position</li>
+              <li>Absence of non-skid footwear</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <!-- connector -->
+  <div class="phase-connector">⬇ You begin your head-to-toe assessment…</div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       PHASE 3 — ASSESSMENT FINDINGS
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card" id="phase3">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 3</span>
+      <h2>Assessment Findings</h2>
+    </div>
+
+    <p class="phase-intro">
+      You perform a systematic head-to-toe assessment. Ms. Rae is alert and cooperative but anxious; she rates her right hip pain at 5/10.
+    </p>
+
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>🌡️ Vital Signs</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Temperature</th><td>36.8°C (98.2°F) — normal</td></tr>
+            <tr><th>Blood Pressure (lying)</th><td>100/66 mmHg <span class="badge-warning">Low — post-bolus</span></td></tr>
+            <tr><th>BP (sitting, 1 min)</th><td>78/56 mmHg <span class="badge-danger">Orthostatic drop 22/10 mmHg ✓</span></td></tr>
+            <tr><th>Heart Rate</th><td>104 bpm <span class="badge-warning">Mild tachycardia</span></td></tr>
+            <tr><th>Respiratory Rate</th><td>18 breaths/min — normal</td></tr>
+            <tr><th>SpO₂</th><td>97% on room air — adequate</td></tr>
+            <tr><th>Pain</th><td>5/10 — right hip; dull, constant</td></tr>
+          </tbody>
+        </table>
+        <div class="callout callout-warning" style="margin-top: 0.75rem;">
+          <strong>Orthostatic hypotension confirmed:</strong> Systolic dropped 22 mmHg sitting up (definition: ≥ 20 mmHg systolic or ≥ 10 mmHg diastolic drop). Ms. Rae reports dizziness and lightheadedness when sitting — do NOT assist to standing until BP stabilizes.
+        </div>
+      </div>
+      <div class="info-block">
+        <h3>🧠 Neurological / Mental Status</h3>
+        <ul>
+          <li>Alert and oriented × 4 (person, place, time, situation)</li>
+          <li>GCS 15 — no neurological deficits</li>
+          <li>PERRLA — pupils equal, round, reactive to light</li>
+          <li>Denies headache, visual changes, neck pain, loss of consciousness</li>
+          <li>Anxious about hospitalization; asking about going home</li>
+          <li>Slightly embarrassed discussing incontinence — requires sensitive communication</li>
+        </ul>
+
+        <h3 style="margin-top: 1rem;">❤️ Cardiovascular</h3>
+        <ul>
+          <li>S1 S2 regular; no murmurs</li>
+          <li>Peripheral pulses 2+ bilaterally</li>
+          <li>No peripheral edema</li>
+          <li>Capillary refill &lt; 3 seconds</li>
+          <li>Skin slightly pale and cool — consistent with volume depletion</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>🦴 Musculoskeletal / Mobility</h3>
+        <ul>
+          <li>Right hip: <strong>tenderness and ecchymosis</strong> over greater trochanter; no visible deformity</li>
+          <li>X-ray ordered — ruling out fracture (result pending)</li>
+          <li>Right forearm: 3 cm laceration — sutured in ED, dressing intact, no bleeding</li>
+          <li>Moves all extremities; strength 4/5 bilateral lower extremities</li>
+          <li>Uses cane at home — cane is not with her in hospital</li>
+          <li>Unable to bear full weight on right leg at this time due to pain</li>
+          <li>Requires two-person assist to transfer</li>
+        </ul>
+      </div>
+      <div class="info-block">
+        <h3>🩺 Skin &amp; Integumentary</h3>
+        <ul>
+          <li>Skin is dry, thin, and fragile — consistent with aging</li>
+          <li>Mild skin tenting noted — consistent with mild dehydration</li>
+          <li>Mucous membranes slightly dry</li>
+          <li>
+            <strong>Coccyx:</strong> <span class="badge-danger">Stage I Pressure Injury</span> — 3 × 3 cm area of non-blanchable redness; skin intact; warm to touch; Ms. Rae reports "mild soreness" in that area
+          </li>
+          <li>No other skin breakdown identified</li>
+          <li>Bilateral heels: intact; bony prominence noted; at risk</li>
+        </ul>
+
+        <h3 style="margin-top: 1rem;">🚽 Genitourinary</h3>
+        <ul>
+          <li>Urinary incontinence (stress + urge) — chronic; reports leakage with urgency</li>
+          <li>Foley catheter inserted on admission for accurate output monitoring</li>
+          <li>Current urine output: 180 mL/hr for first 2 hours (diuretic effect)</li>
+          <li>Urine pale yellow, clear — no signs of infection</li>
+          <li>Intake: 0.9% NS at 75 mL/hr IV</li>
+        </ul>
+      </div>
+    </div>
+
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: Why does Ms. Rae have a Stage I pressure injury on her coccyx?</summary>
+      <div class="reveal-content">
+        <p><strong>Contributing factors to the Stage I pressure injury:</strong></p>
+        <ul>
+          <li><strong>Age-related skin changes</strong> — elderly skin is thinner, less elastic, and has reduced subcutaneous padding over bony prominences</li>
+          <li><strong>Reduced mobility</strong> — Ms. Rae's limited activity and right hip pain reduce spontaneous repositioning</li>
+          <li><strong>Urinary incontinence</strong> — moisture from urine softens and weakens the skin, dramatically increasing breakdown risk (moisture = friction + maceration)</li>
+          <li><strong>Dehydration</strong> — reduces skin turgor and tissue perfusion to capillaries under the skin</li>
+          <li><strong>Pressure on coccyx</strong> — prolonged sitting or lying supine concentrates pressure on this bony prominence</li>
+        </ul>
+        <p><strong>Key concept:</strong> Pressure + Moisture + Shear = Pressure Injury. All three are present for Ms. Rae. Early identification at Stage I allows intervention before irreversible tissue damage occurs.</p>
+      </div>
+    </details>
+
+    <details class="reveal-block">
+      <summary>▶ Pre-Sim Q: What age-related changes increase fall risk in older adults?</summary>
+      <div class="reveal-content">
+        <table class="data-table">
+          <thead><tr><th>System</th><th>Age-Related Change</th><th>Fall Risk Impact</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>Musculoskeletal</td>
+              <td>Loss of muscle mass (sarcopenia); decreased bone density (osteoporosis)</td>
+              <td>Weaker muscles reduce balance and reaction time; fractures more likely if fall occurs</td>
+            </tr>
+            <tr>
+              <td>Neurological</td>
+              <td>Slowed nerve conduction; reduced proprioception; altered vestibular function</td>
+              <td>Impaired balance and depth perception; slower protective reflexes</td>
+            </tr>
+            <tr>
+              <td>Cardiovascular</td>
+              <td>Impaired baroreceptor response; reduced cardiac output reserve</td>
+              <td>Orthostatic hypotension; dizziness with position changes</td>
+            </tr>
+            <tr>
+              <td>Vision</td>
+              <td>Reduced acuity; decreased contrast sensitivity; slower dark adaptation</td>
+              <td>Misjudging distances; not seeing floor obstacles or step edges</td>
+            </tr>
+            <tr>
+              <td>Renal</td>
+              <td>Decreased GFR; reduced ability to concentrate urine</td>
+              <td>Urinary urgency and nocturia → rushing to bathroom = fall risk</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+
+  <!-- connector -->
+  <div class="phase-connector">⬇ You complete your assessment and prepare to score fall and pressure injury risk…</div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       PHASE 4 — RISK ASSESSMENTS
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card" id="phase4">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 4</span>
+      <h2>Risk Assessments</h2>
+    </div>
+
+    <p class="phase-intro">
+      Using your assessment data, you complete two standardized risk assessments required by your facility's policy for every patient on admission.
+    </p>
+
+    <!-- ── MORSE FALL SCALE ── -->
+    <h3>⚠️ Morse Fall Scale</h3>
+    <p>The Morse Fall Scale (MFS) is a rapid, standardized method of assessing a patient's likelihood of falling. Score each item and total.</p>
+
+    <table class="data-table" style="margin-bottom: 1rem;">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Finding for Ms. Rae</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1. History of falling within 3 months</strong></td>
+          <td>Yes — fall 3 months ago; today's fall</td>
+          <td><strong>25</strong></td>
+        </tr>
+        <tr>
+          <td><strong>2. Secondary diagnosis</strong> (≥ 2 medical diagnoses)</td>
+          <td>Yes — HTN, Type 2 DM, osteoporosis</td>
+          <td><strong>15</strong></td>
+        </tr>
+        <tr>
+          <td><strong>3. Ambulatory aid</strong></td>
+          <td>Uses cane at home</td>
+          <td><strong>15</strong></td>
+        </tr>
+        <tr>
+          <td><strong>4. IV therapy / heparin lock</strong></td>
+          <td>Yes — peripheral IV in left forearm</td>
+          <td><strong>20</strong></td>
+        </tr>
+        <tr>
+          <td><strong>5. Gait</strong></td>
+          <td>Weak/impaired — right hip pain; limited weight-bearing</td>
+          <td><strong>10</strong></td>
+        </tr>
+        <tr>
+          <td><strong>6. Mental status</strong></td>
+          <td>Oriented to own ability — alert and oriented × 4</td>
+          <td><strong>0</strong></td>
+        </tr>
+        <tr style="background: #fef2f2;">
+          <td colspan="2"><strong>TOTAL MORSE FALL SCORE</strong></td>
+          <td><strong>85</strong> <span class="badge-danger">HIGH RISK (≥ 45)</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout callout-danger">
+      <strong>MFS Score 85 = HIGH RISK for falls.</strong> Scores ≥ 45 require immediate implementation of a full fall prevention protocol. Document in the chart and activate fall precautions.
+    </div>
+
+    <details class="reveal-block">
+      <summary>▶ What fall prevention interventions are required for a HIGH-RISK Morse score?</summary>
+      <div class="reveal-content">
+        <ul>
+          <li>Fall-risk identification band on patient's wrist (yellow/orange per policy)</li>
+          <li>Fall-risk signage on door and above bed</li>
+          <li>Bed in lowest position; wheels locked at all times</li>
+          <li>All appropriate siderails raised</li>
+          <li>Call light within reach at all times — instruct patient to call before getting up</li>
+          <li>Non-skid footwear applied</li>
+          <li>Hourly rounding protocol — check pain, positioning, toileting, personal items</li>
+          <li>Toilet/commode within easy reach; offer scheduled toileting q2h</li>
+          <li>Educate patient and family on fall prevention measures</li>
+          <li>Orthostatic vital signs before any assisted ambulation</li>
+          <li>Physical therapy consult for strength/balance assessment</li>
+          <li>Review and reconcile all medications with fall-risk profile (diuretics, analgesics)</li>
+        </ul>
+      </div>
+    </details>
+
+    <!-- ── BRADEN SCALE ── -->
+    <h3 style="margin-top: 1.75rem;">🩹 Braden Scale for Predicting Pressure Sore Risk</h3>
+    <p>The Braden Scale assesses six risk factors for pressure injury development. Lower scores indicate higher risk. Total ≤ 18 = at risk.</p>
+
+    <table class="data-table" style="margin-bottom: 1rem;">
+      <thead>
+        <tr>
+          <th>Subscale</th>
+          <th>Finding for Ms. Rae</th>
+          <th>Score (1–4)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1. Sensory Perception</strong> — ability to respond meaningfully to pressure-related discomfort</td>
+          <td>Slightly limited — reports coccyx soreness only when asked; may not reposition spontaneously</td>
+          <td><strong>3</strong></td>
+        </tr>
+        <tr>
+          <td><strong>2. Moisture</strong> — degree skin is exposed to moisture</td>
+          <td>Occasionally moist — urinary incontinence requiring peri care; Foley present but prior episodes</td>
+          <td><strong>3</strong></td>
+        </tr>
+        <tr>
+          <td><strong>3. Activity</strong> — degree of physical activity</td>
+          <td>Bedrest — cannot stand independently; requires two-person assist</td>
+          <td><strong>2</strong></td>
+        </tr>
+        <tr>
+          <td><strong>4. Mobility</strong> — ability to change and control body position</td>
+          <td>Slightly limited — can make minor adjustments but right hip pain limits repositioning</td>
+          <td><strong>3</strong></td>
+        </tr>
+        <tr>
+          <td><strong>5. Nutrition</strong> — usual food intake pattern</td>
+          <td>Probably adequate — reports eating well; diet-controlled DM; dehydrated</td>
+          <td><strong>3</strong></td>
+        </tr>
+        <tr>
+          <td><strong>6. Friction &amp; Shear</strong> — movement requires assistance; may slide in bed</td>
+          <td>Potential problem — requires repositioning assistance; limited ability to self-lift off sheets</td>
+          <td><strong>2</strong></td>
+        </tr>
+        <tr style="background: #fff8e1;">
+          <td colspan="2"><strong>TOTAL BRADEN SCORE</strong></td>
+          <td><strong>16</strong> <span class="badge-warning">AT RISK (15–18)</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout callout-warning">
+      <strong>Braden Score 16 = AT RISK for pressure injury.</strong> Ms. Rae also already has a <strong>Stage I pressure injury on her coccyx</strong> — this elevates urgency significantly. Pressure injury prevention protocol must begin immediately.
+    </div>
+
+    <details class="reveal-block">
+      <summary>▶ What pressure injury prevention interventions are required for this patient?</summary>
+      <div class="reveal-content">
+        <ul>
+          <li><strong>Reposition every 2 hours</strong> — document each turn (side-lying, semi-Fowler's, etc.); use a turn clock/schedule</li>
+          <li><strong>Offload coccyx</strong> — use foam or gel positioning wedges; avoid HOB &gt; 30° for prolonged periods</li>
+          <li><strong>Heel protection</strong> — elevate heels off bed using pillows (calf supported, heels floating); consider heel protectors</li>
+          <li><strong>Keep skin clean and dry</strong> — cleanse perineum after each episode of incontinence; apply moisture barrier cream/ointment</li>
+          <li><strong>Specialized mattress/surface</strong> — request pressure-redistribution mattress if available per facility protocol</li>
+          <li><strong>Nutrition support</strong> — ensure adequate protein and calorie intake; consider dietitian consult</li>
+          <li><strong>Hydration</strong> — IV fluids currently running; monitor intake and output; encourage oral fluids when tolerated</li>
+          <li><strong>Skin inspection</strong> — assess skin at every turn and each shift; document Stage I finding and monitor for progression</li>
+          <li><strong>Minimize shear and friction</strong> — use lift sheets for repositioning; never drag patient across sheets</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <!-- connector -->
+  <div class="phase-connector">⬇ Armed with your assessment and risk scores, you develop your clinical reasoning plan…</div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       PHASE 5 — CLINICAL REASONING & PRIORITY NURSING DIAGNOSES
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card" id="phase5">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 5</span>
+      <h2>Clinical Reasoning &amp; Priority Nursing Diagnoses</h2>
+    </div>
+
+    <p class="phase-intro">
+      Using your assessment data, Morse score, and Braden score, you synthesize a clinical picture and identify the priority nursing diagnoses to guide Ms. Rae's plan of care.
+    </p>
+
+    <h3>🗺️ Concept Map — Lisa Rae</h3>
+    <div class="concept-map">
+      <table class="data-table">
+        <thead><tr><th>Clinical Problem</th><th>Supporting Data</th><th>Related Nursing Concept</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Hypotension / orthostatic hypotension</td>
+            <td>BP 100/66 lying → 88/58 sitting; HR 104; HCTZ double dose; pale, cool skin</td>
+            <td>Fluid &amp; Electrolyte Balance; Perfusion</td>
+          </tr>
+          <tr>
+            <td>Mechanical fall with injury</td>
+            <td>Fall at home → right hip bruise + forearm laceration; Morse 85 (HIGH)</td>
+            <td>Patient Safety; Mobility</td>
+          </tr>
+          <tr>
+            <td>Stage I pressure injury (coccyx)</td>
+            <td>Non-blanchable redness 3×3 cm; Braden 16 (AT RISK); incontinence; limited mobility</td>
+            <td>Skin Integrity; Patient Safety</td>
+          </tr>
+          <tr>
+            <td>Pain — right hip</td>
+            <td>5/10 dull, constant; ecchymosis and tenderness over greater trochanter</td>
+            <td>Comfort; Mobility</td>
+          </tr>
+          <tr>
+            <td>Urinary incontinence</td>
+            <td>Stress + urge incontinence (chronic); Foley catheter in place; skin moisture concern</td>
+            <td>Elimination; Skin Integrity</td>
+          </tr>
+          <tr>
+            <td>Medication management deficit</td>
+            <td>Accidental double dose of HCTZ; admits she "forgot she already took it"</td>
+            <td>Patient Education; Safety</td>
+          </tr>
+          <tr>
+            <td>Knowledge deficit</td>
+            <td>Does not know how HCTZ affects BP; unaware of fall prevention strategies at home</td>
+            <td>Patient Education; Health Promotion</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>🏆 Priority Nursing Diagnoses (Ranked)</h3>
+    <div class="dx-rank-list">
+      <div class="dx-rank-item">
+        <span class="dx-number">1</span>
+        <div>
+          <strong>Risk for Falls</strong> related to orthostatic hypotension, history of falls, use of ambulatory aid, IV therapy, impaired gait, and diuretic use
+          <div class="dx-aeb">Morse score 85 (HIGH); orthostatic BP drop confirmed; limited weight-bearing; IV in place</div>
+        </div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">2</span>
+        <div>
+          <strong>Impaired Tissue Integrity</strong> related to pressure, moisture, and reduced mobility as evidenced by Stage I pressure injury on coccyx
+          <div class="dx-aeb">3×3 cm non-blanchable redness; Braden 16; incontinence; patient reports soreness</div>
+        </div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">3</span>
+        <div>
+          <strong>Deficient Fluid Volume</strong> related to excessive diuresis from HCTZ double dose as evidenced by hypotension, tachycardia, dry mucous membranes, and elevated urine output
+          <div class="dx-aeb">BP 100/66 → 88/58 postural; HR 104; urine output 180 mL/hr; mild skin tenting</div>
+        </div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">4</span>
+        <div>
+          <strong>Acute Pain</strong> related to soft tissue injury (right hip and forearm) as evidenced by patient report of 5/10 pain, guarding, and limited mobility
+          <div class="dx-aeb">Ecchymosis right hip; laceration right forearm; pain on movement; analgesics ordered</div>
+        </div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">5</span>
+        <div>
+          <strong>Deficient Knowledge</strong> regarding medication safety, fall prevention, and pressure injury prevention
+          <div class="dx-aeb">Accidental double dose of HCTZ; unable to verbalize BP effects of diuretics; lives alone without a safety plan</div>
+        </div>
+      </div>
+    </div>
+
+    <details class="reveal-block">
+      <summary>▶ Why is "Risk for Falls" ranked #1 ahead of the existing pressure injury?</summary>
+      <div class="reveal-content">
+        <p>
+          In nursing care prioritization, <strong>potential life-threatening events take priority over existing, stable problems</strong>. Although the Stage I pressure injury is present, it is early and reversible with intervention. A second fall could result in a hip fracture (given Ms. Rae's osteoporosis), head injury, or death.
+        </p>
+        <p>
+          Applying <strong>Maslow's Hierarchy</strong>: safety needs (fall prevention) are ranked just above physiological needs. Applying <strong>ABCs</strong> and the <strong>acute vs. chronic</strong> principle: the fall risk is an acute, high-severity threat requiring immediate environmental and clinical action to prevent patient harm before anything else.
+        </p>
+        <p>Both diagnoses are addressed simultaneously — they are not mutually exclusive — but fall prevention takes first priority.</p>
+      </div>
+    </details>
+
+    <details class="reveal-block">
+      <summary>▶ What does "Deficient Fluid Volume" look like vs. "Fluid Volume Excess"? How do you tell them apart?</summary>
+      <div class="reveal-content">
+        <div class="compare-grid">
+          <div>
+            <h4>Deficient Fluid Volume (Ms. Rae)</h4>
+            <ul>
+              <li>Low blood pressure / orthostatic hypotension</li>
+              <li>Tachycardia (compensatory)</li>
+              <li>Dry mucous membranes</li>
+              <li>Decreased skin turgor (tenting)</li>
+              <li>Concentrated urine initially; then large output (diuretic)</li>
+              <li>Weight loss if prolonged</li>
+              <li>Flat neck veins</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Fluid Volume Excess (contrast)</h4>
+            <ul>
+              <li>Hypertension / bounding pulse</li>
+              <li>Edema — peripheral, sacral, periorbital</li>
+              <li>Crackles (rales) in lung bases</li>
+              <li>Distended neck veins (JVD)</li>
+              <li>Weight gain</li>
+              <li>Diluted urine (low specific gravity)</li>
+              <li>Shortness of breath</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <!-- connector -->
+  <div class="phase-connector">⬇ You have your priorities identified — now you act…</div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       PHASE 6 — NURSING ACTIONS
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card" id="phase6">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 6</span>
+      <h2>Nursing Actions</h2>
+    </div>
+
+    <p class="phase-intro">
+      Based on your assessment and prioritized nursing diagnoses, you implement nursing interventions and communicate with the healthcare team.
+    </p>
+
+    <!-- SBAR -->
+    <h3>📞 SBAR — Communication to Physician</h3>
+    <p>You call the provider to report your assessment findings and request updated orders.</p>
+    <div class="sbar-block">
+      <div class="sbar-item sbar-s">
+        <span class="sbar-label">S — Situation</span>
+        <p>This is [your name], RN on [unit]. I am calling about Ms. Lisa Rae, room [X], 78-year-old female admitted overnight for a mechanical fall and hypotension.</p>
+      </div>
+      <div class="sbar-item sbar-b">
+        <span class="sbar-label">B — Background</span>
+        <p>Ms. Rae has a history of hypertension, Type 2 DM (diet-controlled), osteoporosis, and urinary incontinence. She accidentally took a double dose of HCTZ 25 mg this morning. She was admitted with a BP of 88/54, received a 500 mL NS bolus in the ED, and IV NS 75 mL/hr is running. She has a right hip bruise and right forearm laceration (sutured). On exam I found a Stage I pressure injury on her coccyx. Morse Fall Score is 85 — HIGH RISK. Braden Score is 16 — AT RISK for pressure injury.</p>
+      </div>
+      <div class="sbar-item sbar-a">
+        <span class="sbar-label">A — Assessment</span>
+        <p>Current BP is 100/66 lying, dropping to 88/58 sitting — orthostatic hypotension confirmed. HR 104, afebrile, SpO₂ 97%. Urine output has been 180 mL/hr for 2 hours — likely ongoing diuretic effect. She is alert and oriented but anxious. Pain is 5/10 right hip. She has not voided naturally — Foley is in place. Electrolytes pending.</p>
+      </div>
+      <div class="sbar-item sbar-r">
+        <span class="sbar-label">R — Recommendation</span>
+        <p>Requesting: (1) Confirm HCTZ is held today. (2) Review IV fluid rate — continue or increase NS. (3) Order for orthostatic vital signs q4h. (4) Physical therapy consult for fall/gait assessment. (5) Wound care order for Stage I pressure injury. (6) Clarify weight-bearing status for right hip. (7) Electrolyte results — please review when available and order replacements PRN.</p>
+      </div>
+    </div>
+
+    <!-- Medication Administration -->
+    <h3>💊 Medication Administration</h3>
+    <table class="data-table" style="margin-bottom: 1rem;">
+      <thead>
+        <tr>
+          <th>Medication</th>
+          <th>Action Before Giving</th>
+          <th>Key Nursing Consideration</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0.9% Normal Saline IV 75 mL/hr</td>
+          <td>Check IV site for infiltration; verify rate on pump; check lung sounds</td>
+          <td>Monitor for fluid overload — crackles, edema, JVD; monitor I&amp;O hourly</td>
+        </tr>
+        <tr>
+          <td>Hydromorphone 0.5 mg IV PRN pain</td>
+          <td>Assess pain score, resp rate (&gt; 12/min), sedation level; BP (hold if systolic &lt; 90)</td>
+          <td><span class="badge-danger">CAUTION</span> — opioid + hypotension = compounded fall risk; call light reinforced; monitor after administration</td>
+        </tr>
+        <tr>
+          <td>Acetaminophen 650 mg PO q6h</td>
+          <td>Verify no hepatic disease; check that scheduled dose is due</td>
+          <td>Preferred baseline analgesia — reduces need for opioid; give with a small amount of fluid</td>
+        </tr>
+        <tr>
+          <td>HCTZ 25 mg PO daily</td>
+          <td>Check current order — held today per physician order</td>
+          <td><span class="badge-warning">HOLD</span> — resume when BP stabilized and patient safely ambulating</td>
+        </tr>
+        <tr>
+          <td>Metformin 500 mg PO daily</td>
+          <td>Check BMP for renal function (Cr); hold if creatinine elevated or patient NPO/contrast study planned</td>
+          <td>Given with evening meal; monitor blood glucose; assess renal function given volume depletion</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Fall Prevention Nursing Actions -->
+    <h3>🛡️ Fall Prevention — Implementation</h3>
+    <div class="info-grid">
+      <div class="info-block">
+        <h4>Environmental Modifications</h4>
+        <ul>
+          <li>✅ Bed locked in lowest position</li>
+          <li>✅ All appropriate siderails raised</li>
+          <li>✅ Call light within reach — demonstrated use</li>
+          <li>✅ Non-skid socks applied bilaterally</li>
+          <li>✅ Fall risk arm band confirmed</li>
+          <li>✅ Fall risk sign on door and above bed</li>
+          <li>✅ Pathway to bathroom cleared</li>
+          <li>✅ Foley tubing secured; no floor loops</li>
+          <li>✅ IV tubing organized and secured</li>
+          <li>✅ Nightlight turned on</li>
+        </ul>
+      </div>
+      <div class="info-block">
+        <h4>Patient Monitoring &amp; Nursing Response</h4>
+        <ul>
+          <li>Hourly rounding: pain, positioning, toileting needs, personal items within reach</li>
+          <li>Orthostatic BP check before any transfer out of bed</li>
+          <li>Two-person assist for all transfers until BP stabilizes</li>
+          <li>Anticipate toileting needs — offer bedpan / commode every 2 hours</li>
+          <li>Reassess pain before any ambulation attempt</li>
+          <li>Physical therapy consult placed for gait training</li>
+          <li>If pain medication given: wait 30 min and re-evaluate before ambulation</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Delegation -->
+    <details class="reveal-block">
+      <summary>▶ What can you safely delegate to a nursing assistant (CNA/PCT) for Ms. Rae?</summary>
+      <div class="reveal-content">
+        <p><strong>Safe to delegate to CNA/PCT (within their scope of practice):</strong></p>
+        <ul>
+          <li>Apply non-skid socks and assist with positioning</li>
+          <li>Perform routine vital signs (after RN verifies orthostatic measurement technique)</li>
+          <li>Record intake and output from IV bag and Foley bag</li>
+          <li>Assist with personal hygiene and pericare (with RN instruction on moisture barrier cream)</li>
+          <li>Assist with meals and encourage oral fluids as tolerated</li>
+          <li>Report any changes in patient condition, complaints, or call-light activations immediately to RN</li>
+        </ul>
+        <p><strong>NOT appropriate to delegate (requires RN judgment):</strong></p>
+        <ul>
+          <li>Initial or ongoing nursing assessment</li>
+          <li>Medication administration</li>
+          <li>Orthostatic vital sign interpretation</li>
+          <li>Decision to assist patient out of bed</li>
+          <li>Wound assessment of Stage I pressure injury</li>
+          <li>Patient or family education</li>
+          <li>SBAR communication with provider</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <!-- connector -->
+  <div class="phase-connector">⬇ Later in your shift, you reassess Ms. Rae and begin discharge planning…</div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       PHASE 7 — EVALUATION & PATIENT EDUCATION
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card" id="phase7">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 7</span>
+      <h2>Evaluation &amp; Patient Education</h2>
+    </div>
+
+    <p class="phase-intro">
+      Four hours into your shift, you reassess Ms. Rae. Her IV fluids have been running, and the physician has reviewed labs. You review outcomes against expected goals and begin discharge education.
+    </p>
+
+    <!-- Outcome Evaluation Table -->
+    <h3>📊 Outcome Evaluation</h3>
+    <table class="data-table" style="margin-bottom: 1.5rem;">
+      <thead>
+        <tr>
+          <th>Nursing Diagnosis</th>
+          <th>Expected Outcome</th>
+          <th>4-Hour Evaluation</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Risk for Falls</td>
+          <td>Patient will remain free from falls during hospitalization; will verbalize understanding of fall prevention measures</td>
+          <td>No falls occurred. Environmental modifications in place. Ms. Rae calls for assistance before attempting to move. States "I know I need to ring the bell now."</td>
+          <td><span class="badge-success">Goal Met — Continue</span></td>
+        </tr>
+        <tr>
+          <td>Impaired Tissue Integrity</td>
+          <td>Stage I injury will not progress; new injuries will not develop; skin will be clean and dry</td>
+          <td>Repositioned q2h per turn schedule. Moisture barrier cream applied after pericare. Stage I unchanged — no progression. Heels off bed with pillow support.</td>
+          <td><span class="badge-success">Goal Met — Continue</span></td>
+        </tr>
+        <tr>
+          <td>Deficient Fluid Volume</td>
+          <td>BP will stabilize ≥ 100/60; HR will decrease toward 80s; mucous membranes moist; urine output 30–60 mL/hr</td>
+          <td>BP 112/72 lying; HR 88. Mucous membranes moist. Urine output now 55 mL/hr (diuretic effect resolved). Labs: Na 138, K 3.3 (mild hypokalemia — provider notified).</td>
+          <td><span class="badge-warning">Improving — Monitor K⁺</span></td>
+        </tr>
+        <tr>
+          <td>Acute Pain</td>
+          <td>Pain will decrease to ≤ 3/10 with analgesics; patient will be able to tolerate assisted transfer</td>
+          <td>Pain 3/10 after acetaminophen. X-ray: no fracture confirmed. Physical therapy visited — recommends walker; will begin assisted ambulation tomorrow.</td>
+          <td><span class="badge-success">Goal Met — Continue</span></td>
+        </tr>
+        <tr>
+          <td>Deficient Knowledge</td>
+          <td>Patient will verbalize correct HCTZ dosing, fall prevention strategies at home, and when to call the doctor</td>
+          <td>Education session completed (see below). Ms. Rae able to demonstrate 3 of 5 teaching points without prompting. Daughter present and engaged.</td>
+          <td><span class="badge-warning">Partially Met — Reinforce</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Patient Education -->
+    <h3>📚 Discharge Education — Lisa Rae &amp; Family</h3>
+    <div class="info-grid">
+      <div class="info-block">
+        <h4>💊 Medication Safety at Home</h4>
+        <ul>
+          <li>Take HCTZ <strong>only once daily in the morning</strong> — do not double up if a dose is missed</li>
+          <li>Use a <strong>weekly pill organizer</strong> — check each compartment before taking medications</li>
+          <li>Keep a written medication list — share with every healthcare provider</li>
+          <li>Never stop or change medications without calling your doctor</li>
+          <li>Know: HCTZ increases urination — do not rush to the bathroom without calling for help</li>
+          <li>Tell every provider about ALL medications, including vitamins and supplements</li>
+        </ul>
+      </div>
+      <div class="info-block">
+        <h4>🚶 Fall Prevention at Home</h4>
+        <ul>
+          <li><strong>Rise slowly</strong> — sit on the edge of the bed for 1–2 minutes before standing; grip the bed rail or bedside table for support</li>
+          <li>Always use your <strong>cane or walker</strong> — every time, every room</li>
+          <li>Ensure <strong>nightlight is on</strong> before getting up at night</li>
+          <li>Wear <strong>non-skid footwear</strong> — no socks only, no loose slippers</li>
+          <li>Remove throw rugs and clutter from hallways and bathroom floors</li>
+          <li>Consider <strong>grab bars</strong> near toilet and shower — ask provider for occupational therapy referral</li>
+          <li>Call for help or use a <strong>medical alert device</strong> if you feel dizzy</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-block">
+        <h4>🩹 Skin Care at Home</h4>
+        <ul>
+          <li>Change positions at least every 2 hours when sitting or lying — do not stay in one position for long periods</li>
+          <li>Keep skin clean and <strong>dry after incontinence episodes</strong> — use a moisture barrier cream</li>
+          <li>Inspect your skin daily, especially the coccyx, heels, and hips — use a mirror if needed</li>
+          <li>Report any new redness, open areas, or skin changes to your doctor or home health nurse immediately</li>
+          <li>Maintain good nutrition and hydration — protein helps skin heal and resist breakdown</li>
+        </ul>
+      </div>
+      <div class="info-block">
+        <h4>📞 When to Call Your Doctor</h4>
+        <ul>
+          <li>Dizziness or lightheadedness, especially when standing up</li>
+          <li>Another fall — even if no visible injury</li>
+          <li>New or worsening pain</li>
+          <li>Redness or skin breakdown that does not improve within 24 hours</li>
+          <li>Decreased urination, dark urine, or signs of dehydration</li>
+          <li>Confusion, weakness, or unusual fatigue</li>
+          <li>Any medication question — <strong>never change or double up on doses without calling first</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <details class="reveal-block">
+      <summary>▶ Post-Sim Q: What complications can arise from physical restraints — and when are they appropriate?</summary>
+      <div class="reveal-content">
+        <p><strong>Physical restraints are a last resort</strong> — not a fall prevention strategy. Their use is heavily regulated (Joint Commission, CMS, facility policy) and requires a physician order with ongoing reassessment every 2 hours.</p>
+        <p><strong>Complications of restraints:</strong></p>
+        <ul>
+          <li>Pressure injuries — restraint straps or vests create constant pressure points</li>
+          <li>Increased agitation and combativeness — patients fight against restraints</li>
+          <li>Deconditioning — immobilization causes muscle weakness</li>
+          <li>Aspiration — especially with vest/chest restraints limiting position changes</li>
+          <li>Death — strangulation, asphyxia have been reported with vest restraints</li>
+          <li>Psychological harm — fear, humiliation, loss of dignity</li>
+          <li>Deep vein thrombosis — immobility increases clot risk</li>
+        </ul>
+        <p><strong>Appropriate only when:</strong> all less-restrictive alternatives have been exhausted, patient is at immediate risk of injury to self or others, and a physician order is obtained with time limit, regular reassessment, and documentation.</p>
+      </div>
+    </details>
+
+    <details class="reveal-block">
+      <summary>▶ Post-Sim Q: How do you document the fall risk assessment and interventions in the EHR?</summary>
+      <div class="reveal-content">
+        <ul>
+          <li><strong>Document the Morse Fall Scale score</strong> with date, time, and each individual item score — many EHRs have a structured tool for this</li>
+          <li>Document fall risk level: <em>"Morse Fall Score 85 — High Risk. Fall prevention protocol initiated."</em></li>
+          <li>Document each fall prevention intervention as implemented and time completed</li>
+          <li>Document patient education provided: topics covered, patient response, ability to verbalize understanding, family present</li>
+          <li>Document hourly rounding: time, patient response, interventions performed</li>
+          <li>If patient declines any safety measure, document refusal and education provided</li>
+          <li>Document any falls that occur: time, witnesses, patient status before and after, injury assessment, provider notification, family notification, interventions taken</li>
+          <li>Document Braden Scale separately with subscale scores and wound care orders for the Stage I pressure injury</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <!-- connector -->
+  <div class="phase-connector">⬇ Review the appendices for detailed medication information and reference tools…</div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       APPENDIX A — MEDICATIONS
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card appendix-card" id="appendix-meds">
+    <div class="phase-header">
+      <span class="phase-badge phase-badge-appendix">Appendix A</span>
+      <h2>Medication Reference</h2>
+    </div>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Medication</th>
+          <th>Class / Action</th>
+          <th>Indication (this patient)</th>
+          <th>Key Nursing Considerations</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Hydrochlorothiazide (HCTZ) 25 mg PO daily</strong></td>
+          <td>Thiazide diuretic — inhibits sodium reabsorption in the distal convoluted tubule → increased urinary excretion of Na⁺, K⁺, and water</td>
+          <td>Hypertension management</td>
+          <td>
+            <ul style="margin: 0; padding-left: 1rem;">
+              <li>Monitor BP before each dose; hold if systolic &lt; 90</li>
+              <li>Monitor K⁺ — hypokalemia is common</li>
+              <li>Assess for dehydration — dry mucous membranes, tachycardia, orthostatic hypotension</li>
+              <li>Teach patient to take in morning to avoid nocturia</li>
+              <li><strong>HOLD today</strong> — accidental double dose caused this admission</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Hydromorphone 0.5 mg IV q4h PRN</strong></td>
+          <td>Opioid analgesic — mu-receptor agonist; 5–10× more potent than morphine by weight</td>
+          <td>Acute pain management — right hip and forearm injury</td>
+          <td>
+            <ul style="margin: 0; padding-left: 1rem;">
+              <li>Assess respirations before giving (hold if RR &lt; 12)</li>
+              <li>Assess BP before giving (caution if BP already low)</li>
+              <li>Assess pain score before and 30–60 minutes after administration</li>
+              <li>Monitor sedation level; have naloxone available</li>
+              <li>Compound fall risk — reinforce call-light use after administration</li>
+              <li>Use lowest effective dose; schedule acetaminophen to reduce opioid need</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Acetaminophen 650 mg PO q6h</strong></td>
+          <td>Non-opioid analgesic / antipyretic — inhibits central prostaglandin synthesis</td>
+          <td>Scheduled baseline pain management — allows opioid dose reduction</td>
+          <td>
+            <ul style="margin: 0; padding-left: 1rem;">
+              <li>Maximum dose: 4,000 mg/24h (elderly: often limited to 3,000 mg/24h)</li>
+              <li>Do not exceed daily maximum when combining with other acetaminophen-containing products</li>
+              <li>Monitor hepatic function if long-term use; avoid in hepatic failure</li>
+              <li>Preferred agent for older adults — fewer GI/renal side effects than NSAIDs</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>0.9% Normal Saline IV 75 mL/hr</strong></td>
+          <td>Isotonic crystalloid fluid — expands intravascular volume without shifting fluid to intracellular space</td>
+          <td>Volume replacement for dehydration from diuretic double dose</td>
+          <td>
+            <ul style="margin: 0; padding-left: 1rem;">
+              <li>Monitor IV site q2h: infiltration, phlebitis, redness, swelling</li>
+              <li>Monitor lung sounds each shift — risk of fluid overload in elderly</li>
+              <li>Track I&amp;O: goal urine output 30–60 mL/hr</li>
+              <li>Verify pump rate matches ordered rate at start of shift and after any line disconnection</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Metformin 500 mg PO daily with evening meal</strong></td>
+          <td>Biguanide — decreases hepatic glucose production; does not cause hypoglycemia alone</td>
+          <td>Type 2 DM — diet-controlled; metformin as adjunct</td>
+          <td>
+            <ul style="margin: 0; padding-left: 1rem;">
+              <li>Hold if creatinine elevated (GFR &lt; 30) — volume depletion can reduce GFR</li>
+              <li>Hold before any IV contrast procedure (risk of lactic acidosis)</li>
+              <li>Monitor blood glucose once daily (diet-controlled; low hypoglycemia risk)</li>
+              <li>Give with evening meal to reduce GI side effects</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       APPENDIX B — ASSESSMENT TOOLS REFERENCE
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card appendix-card" id="appendix-tools">
+    <div class="phase-header">
+      <span class="phase-badge phase-badge-appendix">Appendix B</span>
+      <h2>Assessment Tools Reference</h2>
+    </div>
+
+    <h3>⚠️ Morse Fall Scale — Complete Scoring Guide</h3>
+    <table class="data-table" style="margin-bottom: 1.5rem;">
+      <thead>
+        <tr><th>Item</th><th>Score Options</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1. History of falling</strong></td>
+          <td>No = 0 · Yes = 25</td>
+        </tr>
+        <tr>
+          <td><strong>2. Secondary diagnosis</strong> (≥ 2 medical diagnoses in chart)</td>
+          <td>No = 0 · Yes = 15</td>
+        </tr>
+        <tr>
+          <td><strong>3. Ambulatory aid</strong></td>
+          <td>None / bedrest / nurse assist = 0 · Crutches / cane / walker = 15 · Furniture / wall = 30</td>
+        </tr>
+        <tr>
+          <td><strong>4. IV therapy / heparin lock</strong></td>
+          <td>No = 0 · Yes = 20</td>
+        </tr>
+        <tr>
+          <td><strong>5. Gait</strong></td>
+          <td>Normal / bedrest / wheelchair = 0 · Weak = 10 · Impaired = 20</td>
+        </tr>
+        <tr>
+          <td><strong>6. Mental status</strong></td>
+          <td>Oriented to own ability = 0 · Overestimates / forgets limitations = 15</td>
+        </tr>
+        <tr style="background: #f0f4ff;">
+          <td colspan="2">
+            <strong>Scoring:</strong> &nbsp;
+            0–24 = <span class="badge-success">No Risk</span> &nbsp;
+            25–44 = <span class="badge-warning">Low Risk</span> &nbsp;
+            ≥ 45 = <span class="badge-danger">High Risk</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>🩹 Braden Scale — Complete Scoring Guide</h3>
+    <table class="data-table">
+      <thead>
+        <tr><th>Subscale</th><th>1</th><th>2</th><th>3</th><th>4</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Sensory Perception</strong></td>
+          <td>Completely limited</td>
+          <td>Very limited</td>
+          <td>Slightly limited</td>
+          <td>No impairment</td>
+        </tr>
+        <tr>
+          <td><strong>Moisture</strong></td>
+          <td>Constantly moist</td>
+          <td>Often moist</td>
+          <td>Occasionally moist</td>
+          <td>Rarely moist</td>
+        </tr>
+        <tr>
+          <td><strong>Activity</strong></td>
+          <td>Bedfast</td>
+          <td>Chairfast</td>
+          <td>Walks occasionally</td>
+          <td>Walks frequently</td>
+        </tr>
+        <tr>
+          <td><strong>Mobility</strong></td>
+          <td>Completely immobile</td>
+          <td>Very limited</td>
+          <td>Slightly limited</td>
+          <td>No limitations</td>
+        </tr>
+        <tr>
+          <td><strong>Nutrition</strong></td>
+          <td>Very poor</td>
+          <td>Probably inadequate</td>
+          <td>Adequate</td>
+          <td>Excellent</td>
+        </tr>
+        <tr>
+          <td><strong>Friction &amp; Shear</strong></td>
+          <td>Problem</td>
+          <td>Potential problem</td>
+          <td>No apparent problem</td>
+          <td>—</td>
+        </tr>
+        <tr style="background: #f0f4ff;">
+          <td colspan="5">
+            <strong>Scoring:</strong> &nbsp;
+            ≤ 9 = <span class="badge-danger">Very High Risk</span> &nbsp;
+            10–12 = <span class="badge-danger">High Risk</span> &nbsp;
+            13–14 = <span class="badge-warning">Moderate Risk</span> &nbsp;
+            15–18 = <span class="badge-warning">At Risk</span> &nbsp;
+            ≥ 19 = <span class="badge-success">No Risk</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       APPENDIX C — PRESSURE INJURY STAGING
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card appendix-card" id="appendix-staging">
+    <div class="phase-header">
+      <span class="phase-badge phase-badge-appendix">Appendix C</span>
+      <h2>Pressure Injury Staging (NPUAP/EPUAP)</h2>
+    </div>
+
+    <table class="data-table">
+      <thead>
+        <tr><th>Stage</th><th>Description</th><th>Clinical Appearance</th><th>Nursing Action</th></tr>
+      </thead>
+      <tbody>
+        <tr style="background: #fff8e1;">
+          <td><strong>Stage I</strong> <span class="badge-warning">Ms. Rae</span></td>
+          <td>Non-blanchable erythema of intact skin</td>
+          <td>Localized redness that does NOT turn white when pressed; may be warmer, firmer, or tender than surrounding skin</td>
+          <td>Reposition q2h; offload bony prominence; apply moisture barrier; document size and description; increase assessment frequency</td>
+        </tr>
+        <tr>
+          <td><strong>Stage II</strong></td>
+          <td>Partial-thickness skin loss with exposed dermis</td>
+          <td>Shallow open wound with a red-pink wound bed; may appear as intact or ruptured serum-filled blister; no slough or eschar</td>
+          <td>All Stage I measures plus: cleanse wound; apply appropriate wound dressing; wound care order required</td>
+        </tr>
+        <tr>
+          <td><strong>Stage III</strong></td>
+          <td>Full-thickness skin loss; subcutaneous fat visible</td>
+          <td>Wound extends through dermis into subcutaneous tissue; may have slough, undermining, or tunneling; no exposed bone/muscle/tendon</td>
+          <td>All above plus: wound culture if infected; specialist consult; advanced wound care products; nutritional support</td>
+        </tr>
+        <tr>
+          <td><strong>Stage IV</strong></td>
+          <td>Full-thickness skin and tissue loss; exposed bone, tendon, or muscle</td>
+          <td>Bone, muscle, or tendon visible; often has slough or eschar; undermining and tunneling common; can lead to osteomyelitis</td>
+          <td>All above plus: urgent wound care specialist or surgeon referral; bone scan/MRI may be ordered; systemic infection management</td>
+        </tr>
+        <tr>
+          <td><strong>Unstageable</strong></td>
+          <td>Full-thickness loss; base obscured by slough or eschar</td>
+          <td>Cannot determine depth because wound bed is covered; actual stage unknown until debridement</td>
+          <td>Do not remove stable dry eschar on heels — this can protect the wound; consult wound care specialist</td>
+        </tr>
+        <tr>
+          <td><strong>Deep Tissue Injury (DTI)</strong></td>
+          <td>Persistent non-blanchable deep red, maroon, or purple discoloration</td>
+          <td>Intact or non-intact skin; may appear as blood-filled blister; may evolve rapidly into Stage III/IV</td>
+          <td>Offload immediately; monitor closely for rapid evolution; do not massage; document and notify provider</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       APPENDIX D — THERAPEUTIC COMMUNICATION
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card appendix-card" id="appendix-comm">
+    <div class="phase-header">
+      <span class="phase-badge phase-badge-appendix">Appendix D</span>
+      <h2>Therapeutic Communication Reference</h2>
+    </div>
+
+    <p>Ms. Rae is anxious about her hospitalization and embarrassed about her incontinence. Use these evidence-based communication techniques:</p>
+
+    <div class="compare-grid">
+      <div>
+        <h4>✅ Therapeutic Techniques</h4>
+        <table class="data-table">
+          <thead><tr><th>Technique</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td>Active listening</td><td>"Tell me more about what happened at home this morning."</td></tr>
+            <tr><td>Open-ended questions</td><td>"How have you been managing your medications?"</td></tr>
+            <tr><td>Empathy &amp; validation</td><td>"It makes sense you feel embarrassed — incontinence is very common and nothing to be ashamed of."</td></tr>
+            <tr><td>Therapeutic silence</td><td>Allow pause after a question; resist filling silence immediately</td></tr>
+            <tr><td>Summarizing</td><td>"So if I understand correctly, you took your water pill twice because you forgot you'd already taken it."</td></tr>
+            <tr><td>Teach-back</td><td>"Can you show me how you will use your pill organizer when you get home?"</td></tr>
+            <tr><td>Reassurance (honest)</td><td>"We are going to make sure you are safe while you are here — that is my top priority."</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <h4>🚫 Non-Therapeutic Responses to Avoid</h4>
+        <table class="data-table">
+          <thead><tr><th>Response</th><th>Why It Is Harmful</th></tr></thead>
+          <tbody>
+            <tr><td>"Don't worry, you'll be fine."</td><td>False reassurance — dismisses patient's real concerns</td></tr>
+            <tr><td>"Why would you take it twice?"</td><td>Judgmental; causes shame; shuts down communication</td></tr>
+            <tr><td>"You need to be more careful."</td><td>Blaming; does not help patient learn or problem-solve</td></tr>
+            <tr><td>Yes/no closed questions only</td><td>Limits information gathering and patient engagement</td></tr>
+            <tr><td>Giving unsolicited advice early</td><td>Start with assessment and listening before education</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       APPENDIX E — REFERENCES
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card appendix-card" id="appendix-refs">
+    <div class="phase-header">
+      <span class="phase-badge phase-badge-appendix">Appendix E</span>
+      <h2>References</h2>
+    </div>
+    <ol class="ref-list">
+      <li>Potter, P. A., Perry, A. G., Stockert, P. A., &amp; Hall, A. (2021). <em>Fundamentals of nursing</em> (10th ed.). Elsevier.</li>
+      <li>Jarvis, C., Eckhardt, A., &amp; Thomas, P. (2021). <em>Physical examination &amp; health assessment</em> (8th ed.). Elsevier.</li>
+      <li>Vallerand, A. H., &amp; Sanoski, C. A. (2021). <em>Davis's drug guide for nurses</em> (17th ed.). F.A. Davis.</li>
+      <li>Ackley, B., Ludwig, G., Makic, M., Martinez-Kratz, M., &amp; Zanotti, M. (2020). <em>Nursing diagnosis handbook: An evidence-based guide to planning care</em> (12th ed.). Elsevier Saunders.</li>
+      <li>Morse, J. M. (1997). <em>Preventing patient falls</em>. Sage Publications.</li>
+      <li>Braden, B., &amp; Bergstrom, N. (1987). A conceptual schema for the study of the etiology of pressure sores. <em>Rehabilitation Nursing, 12</em>(1), 8–12.</li>
+      <li>National Pressure Injury Advisory Panel (NPIAP). (2019). <em>Pressure injury stages.</em> NPIAP.</li>
+      <li>Centers for Medicare &amp; Medicaid Services. (2023). <em>Hospital-acquired conditions (HAC) reduction program.</em> CMS.gov.</li>
+    </ol>
+    <p class="ref-note">Study guide compiled from Elsevier SLS FUN-05: Lisa Rae — Patient Safety: Falls &amp; Pressure Injury Prevention.</p>
+  </div>
+
+  <!-- Back button -->
+  <div style="margin-top: 2rem;">
+    <a href={`${base}cases/fundamentals/`} class="btn btn-back">← Back to Fundamentals</a>
+  </div>
+
+</BaseLayout>
+
+<style>
+  /* ── Phase structure ─────────────────────────────────────────── */
+  .case-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-top: 0.25rem;
+  }
+
+  .phase-card {
+    background: var(--color-surface);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 0;
+    box-shadow: var(--shadow);
+    border-top: 4px solid var(--color-primary);
+  }
+
+  .appendix-card {
+    border-top-color: var(--color-secondary);
+  }
+
+  .phase-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .phase-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .phase-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+
+  .phase-badge-appendix {
+    background: var(--color-secondary);
+  }
+
+  .phase-intro {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin-bottom: 1.25rem;
+    border-left: 3px solid var(--color-accent);
+    padding-left: 0.75rem;
+  }
+
+  .phase-connector {
+    text-align: center;
+    padding: 0.6rem 0;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+  }
+
+  /* ── Info grid ───────────────────────────────────────────────── */
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 720px) {
+    .info-grid { grid-template-columns: 1fr; }
+    .compare-grid { grid-template-columns: 1fr; }
+  }
+
+  .info-block h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  /* ── Tables ──────────────────────────────────────────────────── */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--color-border);
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .data-table thead th {
+    background: #f0f4ff;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+  }
+
+  .data-table tbody th {
+    background: #f8f9fa;
+    font-weight: 600;
+    width: 30%;
+    color: var(--color-text);
+  }
+
+  /* ── Callouts ────────────────────────────────────────────────── */
+  .callout {
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .callout p { margin-bottom: 0.5rem; }
+  .callout p:last-child { margin-bottom: 0; }
+
+  .callout-info {
+    background: #e8f0fe;
+    border-left: 4px solid var(--color-primary);
+  }
+
+  .callout-warning {
+    background: #fff8e1;
+    border-left: 4px solid #f59e0b;
+  }
+
+  .callout-danger {
+    background: #fff0f0;
+    border-left: 4px solid #dc2626;
+  }
+
+  .callout-success {
+    background: #f0fdf4;
+    border-left: 4px solid #16a34a;
+  }
+
+  /* ── Badges ──────────────────────────────────────────────────── */
+  .badge-danger {
+    display: inline-block;
+    background: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fca5a5;
+    border-radius: 4px;
+    padding: 0.1rem 0.45rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .badge-warning {
+    display: inline-block;
+    background: #fffbeb;
+    color: #92400e;
+    border: 1px solid #fde68a;
+    border-radius: 4px;
+    padding: 0.1rem 0.45rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .badge-success {
+    display: inline-block;
+    background: #f0fdf4;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+    border-radius: 4px;
+    padding: 0.1rem 0.45rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  /* ── Scene box ───────────────────────────────────────────────── */
+  .scene-box {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .scene-box h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* ── Med list ────────────────────────────────────────────────── */
+  .med-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .med-list li {
+    padding: 0.35rem 0;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 0.9rem;
+  }
+
+  .med-list li:last-child { border-bottom: none; }
+
+  /* ── Chain flow ──────────────────────────────────────────────── */
+  .chain-flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin: 1.25rem 0;
+  }
+
+  .chain-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 520px;
+    gap: 0.2rem;
+  }
+
+  .chain-step small {
+    font-size: 0.8rem;
+    opacity: 0.8;
+  }
+
+  .chain-step-drug {
+    background: #e8f0fe;
+    color: var(--color-primary-dark);
+    border: 1px solid #bfdbfe;
+  }
+
+  .chain-step-problem {
+    background: #fff8e1;
+    color: #78350f;
+    border: 1px solid #fde68a;
+  }
+
+  .chain-step-consequence {
+    background: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+  }
+
+  .chain-arrow {
+    font-size: 1.5rem;
+    color: var(--color-text-muted);
+    line-height: 1.2;
+  }
+
+  .chain-icon {
+    font-size: 1.4rem;
+  }
+
+  /* ── Stat highlight ──────────────────────────────────────────── */
+  .stat-highlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fef2f2;
+    border: 2px solid #fca5a5;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #b91c1c;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+    color: #7f1d1d;
+    margin-top: 0.25rem;
+  }
+
+  /* ── Reveal (details/summary) ────────────────────────────────── */
+  .reveal-block {
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    margin-top: 1rem;
+    overflow: hidden;
+  }
+
+  .reveal-block > summary {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--color-primary);
+    background: #f0f4ff;
+    list-style: none;
+    user-select: none;
+  }
+
+  .reveal-block > summary::-webkit-details-marker { display: none; }
+
+  .reveal-block[open] > summary {
+    background: #dbeafe;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .reveal-block > summary:hover {
+    background: #dbeafe;
+  }
+
+  .reveal-content {
+    padding: 1rem 1.25rem;
+  }
+
+  .reveal-content ul,
+  .reveal-content ol {
+    margin-bottom: 0.75rem;
+  }
+
+  /* ── SBAR block ──────────────────────────────────────────────── */
+  .sbar-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    margin-bottom: 1.5rem;
+  }
+
+  .sbar-item {
+    padding: 1rem 1.25rem;
+  }
+
+  .sbar-item p { margin: 0; font-style: italic; }
+
+  .sbar-label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.4rem;
+  }
+
+  .sbar-s { background: #eff6ff; border-left: 5px solid #3b82f6; }
+  .sbar-b { background: #f0fdf4; border-left: 5px solid #22c55e; }
+  .sbar-a { background: #fffbeb; border-left: 5px solid #f59e0b; }
+  .sbar-r { background: #fef2f2; border-left: 5px solid #ef4444; }
+
+  /* ── Priority diagnoses ──────────────────────────────────────── */
+  .dx-rank-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .dx-rank-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: #f8f9fa;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+  }
+
+  .dx-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .dx-aeb {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-top: 0.2rem;
+  }
+
+  /* ── Compare grid ────────────────────────────────────────────── */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .compare-grid h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  /* ── Concept map ─────────────────────────────────────────────── */
+  .concept-map {
+    margin-bottom: 1.25rem;
+  }
+
+  /* ── References ──────────────────────────────────────────────── */
+  .ref-list {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .ref-note {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin: 0;
+  }
+
+  /* ── Utility ─────────────────────────────────────────────────── */
+  .text-success { color: #15803d; }
+  .text-danger  { color: #b91c1c; }
+
+  .btn-back {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .btn-back:hover {
+    background: var(--color-primary-dark);
+    text-decoration: none;
+  }
+</style>
