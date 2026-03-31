@@ -1,0 +1,36 @@
+---
+import CaseLayout from '../../../layouts/CaseLayout.astro';
+---
+
+<CaseLayout
+  scenario="Fundamentals 11"
+  disciplineLabel="Fundamentals"
+  disciplineSlug="fundamentals"
+  category="Infection / Discharge"
+  patient={{ name: "Kyle Miller", age: "41 years", gender: "Male" }}
+  scenarioTime="20 – 25 minutes"
+  debriefingTime="20 – 25 minutes"
+  concepts={[
+    "Assessment",
+    "Infection management",
+    "Prioritization of care",
+    "Delegation",
+    "Patient education",
+    "Documentation and informatics",
+  ]}
+  skills={[
+    "Perform systematic head-to-toe assessment",
+    "Perform focused wound assessment for cellulitis",
+    "Manage and respond to unit distractions",
+    "Delegate tasks appropriately to UAP",
+    "Review and reconcile medications (MAR)",
+    "Provide comprehensive discharge teaching",
+    "Use teach-back method to verify patient understanding",
+    "Discontinue IV access before discharge",
+    "Document care and discharge instructions in the EHR",
+  ]}
+  presentation="A 41-year-old male admitted for right forearm cellulitis from a puncture wound. His temperature has returned to baseline and he is cleared for discharge home."
+  primaryDx="Cellulitis of the right forearm secondary to puncture wound"
+  secondaryDx="None (NKA; no significant comorbidities)"
+  primaryChallenge="Learner completes a systematic nursing assessment while managing unit distractions and preparing comprehensive discharge education for a patient with resolving cellulitis."
+/>

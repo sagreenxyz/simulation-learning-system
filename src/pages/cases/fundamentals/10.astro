@@ -1,0 +1,36 @@
+---
+import CaseLayout from '../../../layouts/CaseLayout.astro';
+---
+
+<CaseLayout
+  scenario="Fundamentals 10"
+  disciplineLabel="Fundamentals"
+  disciplineSlug="fundamentals"
+  category="Postoperative / Musculoskeletal"
+  patient={{ name: "Boyd Dubois", age: "older adult", gender: "Male" }}
+  scenarioTime="20 – 25 minutes"
+  debriefingTime="20 – 25 minutes"
+  concepts={[
+    "Pain assessment",
+    "Postoperative care",
+    "Oxygenation and atelectasis prevention",
+    "Medication administration (SQ)",
+    "Patient education",
+    "Documentation and informatics",
+  ]}
+  skills={[
+    "Perform comprehensive postoperative pain assessment (OPQRST)",
+    "Administer analgesics using multimodal approach",
+    "Teach and supervise incentive spirometry",
+    "Administer enoxaparin subcutaneous injection",
+    "Perform neurovascular assessment of operative extremity",
+    "Teach total hip arthroplasty precautions",
+    "Apply non-pharmacologic pain management measures",
+    "Monitor for postoperative complications (DVT, atelectasis)",
+    "Document care in the EHR",
+  ]}
+  presentation="An older adult male is postoperative following a total right hip arthroplasty. He is experiencing pain and has not been performing incentive spirometry due to inadequate pain control."
+  primaryDx="Total right hip arthroplasty — postoperative"
+  secondaryDx="Osteoarthritis; hypothyroidism; GERD/peptic ulcer history"
+  primaryChallenge="Learner assesses and manages postoperative pain while preventing respiratory complications and educating the patient on total hip replacement precautions."
+/>

@@ -1,0 +1,37 @@
+---
+import CaseLayout from '../../../layouts/CaseLayout.astro';
+---
+
+<CaseLayout
+  scenario="Fundamentals 8"
+  disciplineLabel="Fundamentals"
+  disciplineSlug="fundamentals"
+  category="Respiratory / Cultural Care"
+  patient={{ name: "Maurice Arviso", age: "60 years", gender: "Male" }}
+  scenarioTime="20 – 25 minutes"
+  debriefingTime="20 – 25 minutes"
+  concepts={[
+    "Oxygenation",
+    "Hygiene care",
+    "Cultural competence",
+    "Therapeutic communication",
+    "Patient safety",
+    "Documentation and informatics",
+  ]}
+  skills={[
+    "Assess oxygenation status and SpO2",
+    "Apply and titrate supplemental oxygen",
+    "Auscultate lung sounds",
+    "Provide bed bath and occupied linen change",
+    "Maintain patient dignity and privacy",
+    "Deliver culturally sensitive care for a Native American patient",
+    "Use therapeutic communication to address patient anxiety",
+    "Position patient for maximum lung expansion",
+    "Delegate hygiene tasks appropriately",
+    "Document care in the EHR",
+  ]}
+  presentation="A 60-year-old Native American male with community-acquired pneumonia who accidentally spilled urine on his bed. His son stepped out of the room prior to the incident."
+  primaryDx="Community-acquired pneumonia"
+  secondaryDx="Anxiety related to hospital admission (history of family members dying in hospital)"
+  primaryChallenge="Learner assesses and manages oxygenation while providing culturally sensitive hygiene care for a patient who is anxious about asking for help."
+/>
