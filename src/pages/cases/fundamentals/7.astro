@@ -1,33 +1,915 @@
 ---
-import CaseLayout from '../../../layouts/CaseLayout.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
-<CaseLayout
-  scenario="Fundamentals 7"
-  disciplineLabel="Fundamentals"
-  disciplineSlug="fundamentals"
-  category="Diabetes / Wound Care"
-  patient={{ name: "Carl Rogers", age: "67 years", gender: "Male" }}
-  scenarioTime="20 – 25 minutes"
-  debriefingTime="20 – 25 minutes"
-  concepts={[
-    "Assessment",
-    "Skin and wound care",
-    "Diabetes management",
-    "Medication administration (SQ)",
-    "Patient education",
-    "Documentation and informatics",
-  ]}
-  skills={[
-    "Receive report including current blood glucose level",
-    "Assess patient",
-    "Administer SQ insulin according to scheduled dose plus correction scale order",
-    "Conduct wound care per order",
-    "Provide patient education and support",
-    "Access and document care in the EHR",
-  ]}
-  presentation="Patient with a history of type I diabetes mellitus and a stage II non-healing foot ulcer is admitted for diabetic management and wound care."
-  primaryDx="Stage II non-healing ulcer on right heel"
-  secondaryDx="Diabetes mellitus type I"
-  primaryChallenge="Learner assesses, prioritizes, and manages care for a patient with a non-healing foot ulcer and elevated blood glucose level."
-/>
+<BaseLayout
+  title="Fundamentals 7 — Carl Rogers"
+  description="Unfolding case study: Diabetic Wound Care and Insulin Administration (FUN-07)"
+>
+
+  <div class="breadcrumb">
+    <a href={base}>Home</a>
+    <span>›</span>
+    <a href={`${base}cases/`}>Cases</a>
+    <span>›</span>
+    <a href={`${base}cases/fundamentals/`}>Fundamentals</a>
+    <span>›</span>
+    <span>Fundamentals 7 — Carl Rogers</span>
+  </div>
+
+  <div class="case-header">
+    <span class="card-tag">Diabetes / Wound Care</span>
+    <h1>Fundamentals 7 — Carl Rogers</h1>
+    <p class="case-subtitle">Diabetic Wound Care and Insulin Administration</p>
+    <div class="case-meta">
+      <span>👤 Carl Rogers, 67 years, African American Male</span>
+      <span>⏱ Scenario: 20 – 25 minutes</span>
+      <span>💬 Debrief: 20 – 25 minutes</span>
+    </div>
+  </div>
+
+  <div class="callout callout-info">
+    <strong>📖 How to Use This Unfolding Case Study</strong>
+    <p>Work through each phase in order. Information is revealed progressively — exactly as it would be in a real clinical encounter. Before reading each answer, pause and reason through the question yourself. Use the <strong>▶ Reveal Answer</strong> toggles to check your thinking.</p>
+  </div>
+
+  <!-- PHASE 1 -->
+  <div class="phase-card" id="phase1">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 1</span>
+      <h2>You Arrive at the Bedside</h2>
+    </div>
+    <p class="phase-intro">You are the evening nurse on a medical-surgical unit. Carl Rogers was admitted directly from his provider's office this afternoon. His wife Sarah is at the bedside. The provider has written orders for wound care and insulin, but neither has been implemented yet.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>📋 Handoff Report</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Patient</th><td>Carl Rogers</td></tr>
+            <tr><th>Age / Gender</th><td>67 years · Male · African American</td></tr>
+            <tr><th>Primary Dx</th><td>Stage II non-healing ulcer, right heel; hyperglycemia</td></tr>
+            <tr><th>Secondary Dx</th><td>Type I/II diabetes mellitus — 20-year history</td></tr>
+            <tr><th>Allergies</th><td>Review MAR</td></tr>
+            <tr><th>Code Status</th><td>Full code</td></tr>
+            <tr><th>Admitted</th><td>Tuesday at 1530 from provider's office</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>💊 Medications on MAR</h3>
+        <ul class="med-list">
+          <li><strong>Insulin NPH 20 units</strong> — SQ twice daily (basal)</li>
+          <li><strong>Insulin Lispro (Humalog)</strong> — SQ before meals (mealtime)</li>
+          <li>Simvastatin 20 mg PO daily</li>
+          <li>Lisinopril/HCTZ 10/12.5 mg PO daily</li>
+          <li>Gabapentin 600 mg PO three times daily</li>
+          <li>Wound care supplies per order</li>
+        </ul>
+      </div>
+    </div>
+    <div class="scene-box">
+      <h3>🚪 Entering the Room — What You Observe</h3>
+      <p>Carl is sitting up in bed. He looks anxious. His wife Sarah is seated beside him. He says, "I've been worried sick about this foot — my blood sugar has been in the 300s for five days straight. My doctor says if it doesn't heal I could lose my foot." A dressing is visible on his right heel.</p>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: What are your initial priorities for Carl? What is the connection between hyperglycemia and wound healing?</summary>
+      <div class="reveal-content">
+        <p><strong>Initial priorities:</strong></p>
+        <ol>
+          <li>Establish therapeutic rapport — acknowledge Carl's anxiety before starting assessment</li>
+          <li>Perform head-to-toe assessment with focused foot/wound assessment</li>
+          <li>Check blood glucose before any insulin administration</li>
+          <li>Implement wound care and insulin orders as prescribed</li>
+        </ol>
+        <p><strong>Hyperglycemia and wound healing:</strong></p>
+        <ul>
+          <li>Elevated blood glucose impairs neutrophil function → weakened immune response → infection risk</li>
+          <li>Glycosylation of blood vessel walls → reduced perfusion to wound bed → impaired oxygen/nutrient delivery</li>
+          <li>Diabetic peripheral neuropathy → Carl may not feel wounds developing or worsening</li>
+          <li><strong>Bottom line:</strong> Getting blood glucose under control is directly part of wound treatment — they cannot be separated</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ After your initial assessment, you prepare for blood glucose check and insulin administration…</div>
+
+  <!-- PHASE 2 -->
+  <div class="phase-card" id="phase2">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 2</span>
+      <h2>Blood Glucose Check and Insulin Administration</h2>
+    </div>
+    <p class="phase-intro">You check Carl's blood glucose before administering his scheduled insulin. His point-of-care blood glucose reads <strong>312 mg/dL</strong>. You have orders for Insulin NPH 20 units SQ and Insulin Lispro per sliding scale.</p>
+    <div class="callout callout-warning">
+      <strong>⚠️ HIGH ALERT: Insulin is a High-Alert Medication</strong>
+      <p>Insulin errors are a leading cause of medication harm. Always obtain an independent double-check with a second nurse before administration. Verify: right patient · right insulin type · right dose · right time · right route.</p>
+    </div>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>💉 Insulin Types for Carl</h3>
+        <table class="data-table">
+          <thead><tr><th>Insulin</th><th>Type</th><th>Onset</th><th>Peak</th><th>Duration</th></tr></thead>
+          <tbody>
+            <tr><td><strong>NPH (Humulin N)</strong></td><td>Intermediate-acting</td><td>1–2 hrs</td><td>4–12 hrs</td><td>14–24 hrs</td></tr>
+            <tr><td><strong>Lispro (Humalog)</strong></td><td>Rapid-acting</td><td>15–30 min</td><td>30–90 min</td><td>3–5 hrs</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>🔑 Mixing Insulin Rules</h3>
+        <div class="callout callout-info">
+          <p><strong>"Clear before cloudy"</strong></p>
+          <ul>
+            <li>Draw up <em>Regular/Lispro (clear)</em> insulin FIRST</li>
+            <li>Then draw up <em>NPH (cloudy)</em> insulin</li>
+            <li>Roll NPH gently to resuspend — NEVER shake</li>
+            <li>Prevents contaminating clear vial with NPH</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: Walk through the steps for safe subcutaneous insulin administration.</summary>
+      <div class="reveal-content">
+        <ol>
+          <li>Verify order; perform blood glucose check — document result (312 mg/dL)</li>
+          <li>Obtain independent double-check with second nurse (HIGH ALERT medication)</li>
+          <li>Check insulin vials: correct name, expiration date, appearance</li>
+          <li>Gently roll NPH to resuspend; do NOT shake</li>
+          <li>Draw up clear (Lispro) first, then cloudy (NPH)</li>
+          <li>Select injection site: <strong>abdomen</strong> is preferred (fastest/most consistent absorption)</li>
+          <li>Rotate sites — document previous sites to avoid lipohypertrophy</li>
+          <li>Clean site with alcohol swab; allow to dry completely</li>
+          <li>Pinch skin; insert needle at 90° (45° for thin patients)</li>
+          <li>Inject slowly; wait several seconds before withdrawing</li>
+          <li>Do NOT massage site — alters absorption</li>
+          <li>Dispose of needle in sharps container immediately</li>
+          <li>Document: type, dose, site, time, pre-administration blood glucose</li>
+          <li>Monitor for hypoglycemia 30–60 minutes after Lispro administration</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ With insulin administered, you turn your attention to the wound…</div>
+
+  <!-- PHASE 3 -->
+  <div class="phase-card" id="phase3">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 3</span>
+      <h2>Wound Assessment</h2>
+    </div>
+    <p class="phase-intro">You carefully remove the old dressing from Carl's right heel. The wound has been present for approximately 3 weeks; Carl initially didn't notice it due to peripheral neuropathy.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>🩹 Wound Findings</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Location</th><td>Right heel, posterior surface</td></tr>
+            <tr><th>Stage</th><td>Stage II (partial-thickness skin loss)</td></tr>
+            <tr><th>Size</th><td>2.5 cm × 2.0 cm × 0.2 cm (L × W × D)</td></tr>
+            <tr><th>Wound bed</th><td>Pink/red, moist; no slough or eschar</td></tr>
+            <tr><th>Exudate</th><td>Small amount of serosanguineous drainage</td></tr>
+            <tr><th>Surrounding skin</th><td>Mildly erythematous; no significant warmth or induration</td></tr>
+            <tr><th>Odor</th><td>None noted</td></tr>
+            <tr><th>Pedal pulses</th><td>Pedal pulse diminished right; posterior tibial faint</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>⚠️ Pressure Ulcer Staging Reference</h3>
+        <table class="data-table">
+          <thead><tr><th>Stage</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Stage I</strong></td><td>Non-blanchable redness; skin intact</td></tr>
+            <tr><td><strong>Stage II</strong></td><td>Partial-thickness skin loss; shallow open wound or blister</td></tr>
+            <tr><td><strong>Stage III</strong></td><td>Full-thickness skin loss; subcutaneous fat visible</td></tr>
+            <tr><td><strong>Stage IV</strong></td><td>Full-thickness; bone/tendon/muscle exposed</td></tr>
+            <tr><td><strong>Unstageable</strong></td><td>Covered by slough/eschar; cannot stage</td></tr>
+            <tr><td><strong>Deep tissue</strong></td><td>Maroon/purple discoloration; intact or non-intact</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: What does the diminished pedal pulse tell you? What additional assessment is needed?</summary>
+      <div class="reveal-content">
+        <p><strong>Diminished pedal pulse significance:</strong></p>
+        <ul>
+          <li>Indicates possible <strong>peripheral arterial disease (PAD)</strong> — a common complication of long-standing diabetes</li>
+          <li>Reduced blood flow = reduced oxygen and nutrient delivery to wound bed = impaired healing</li>
+          <li>PAD significantly increases risk of amputation in diabetic foot wounds</li>
+        </ul>
+        <p><strong>Additional assessments:</strong></p>
+        <ul>
+          <li>Ankle-Brachial Index (ABI) — ordered by provider to quantify arterial perfusion</li>
+          <li>Capillary refill time in right toes</li>
+          <li>Skin temperature comparison between feet</li>
+          <li>Assess for signs of infection: warmth, purulence, fever, elevated WBC</li>
+          <li>Neurovascular check — sensation testing (10-gram monofilament)</li>
+        </ul>
+        <p><strong>Report to provider:</strong> Diminished pedal pulses; wound measurements; blood glucose 312 — vascular surgery or wound care specialist consult may be warranted.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ You prepare to perform the wound dressing change…</div>
+
+  <!-- PHASE 4 -->
+  <div class="phase-card" id="phase4">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 4</span>
+      <h2>Wound Care Procedure</h2>
+    </div>
+    <p class="phase-intro">You pre-medicate Carl with acetaminophen 10 minutes before wound care. Carl says, "My doctor tried soaking it at home first but that didn't help." You prepare your sterile wound care supplies.</p>
+    <div class="callout callout-warning">
+      <strong>⚠️ Important: Do NOT soak a diabetic foot wound</strong>
+      <p>Soaking softens surrounding skin, increases maceration, and significantly raises infection risk in diabetic wounds. Educate Carl that his home soaking was harmful.</p>
+    </div>
+    <div class="scene-box">
+      <h3>🧹 Wound Care Steps — Stage II Diabetic Foot Ulcer</h3>
+      <table class="data-table">
+        <thead><tr><th>Step</th><th>Action</th><th>Rationale</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Pre-medicate (acetaminophen or ordered analgesic) 10 min before procedure</td><td>Patient comfort; promotes cooperation</td></tr>
+          <tr><td>2</td><td>Perform hand hygiene; set up sterile field</td><td>Infection prevention</td></tr>
+          <tr><td>3</td><td>Remove old dressing inside out; assess drainage</td><td>Contain contamination</td></tr>
+          <tr><td>4</td><td>Irrigate wound with room-temp normal saline using syringe</td><td>Removes debris; does not damage tissue</td></tr>
+          <tr><td>5</td><td>Gently blot wound bed with sterile gauze</td><td>Remove excess moisture without trauma</td></tr>
+          <tr><td>6</td><td>Measure wound: L × W × D; photograph per policy</td><td>Tracks healing progress over time</td></tr>
+          <tr><td>7</td><td>Apply ordered dressing (moist wound environment)</td><td>Moist environment promotes epithelialization</td></tr>
+          <tr><td>8</td><td>Secure dressing; do not constrict</td><td>Maintains circulation</td></tr>
+          <tr><td>9</td><td>Ensure no pressure on wound — offload heel</td><td><strong>Offloading = most critical intervention</strong> for diabetic foot ulcers</td></tr>
+          <tr><td>10</td><td>Document wound assessment, care, and patient response</td><td>Legal record; continuity of care</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: Why is offloading pressure the most critical intervention for a diabetic foot ulcer?</summary>
+      <div class="reveal-content">
+        <p><strong>Why offloading is #1:</strong></p>
+        <ul>
+          <li>Continued pressure on a wound with already-compromised circulation prevents healing entirely</li>
+          <li>Diabetic peripheral neuropathy means Carl does not <em>feel</em> the pressure — he will not naturally avoid it</li>
+          <li>Even small amounts of repeated pressure prevent tissue oxygenation in the wound bed</li>
+          <li>No dressing, medication, or blood glucose control can compensate for continued mechanical pressure on the wound</li>
+        </ul>
+        <p><strong>Offloading methods:</strong></p>
+        <ul>
+          <li>Heel protector boots / foam positioning wedges</li>
+          <li>Total contact casting (gold standard for neuropathic ulcers)</li>
+          <li>Wheelchair or crutches — non-weight-bearing if possible</li>
+          <li>Teach Carl: keep foot elevated when sitting; do not walk on bare wound</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ With wound care complete, you sit down with Carl and Sarah to provide education…</div>
+
+  <!-- PHASE 5 -->
+  <div class="phase-card" id="phase5">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 5</span>
+      <h2>Diabetes and Wound Care Education</h2>
+    </div>
+    <p class="phase-intro">Carl says, "No one's ever really explained to me why this wound won't heal. My wife Sarah wants to help me take care of this at home." You include Sarah in the teaching session.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>👣 Daily Foot Inspection Teaching</h3>
+        <ul>
+          <li>Inspect BOTH feet every single day — top, bottom, between toes</li>
+          <li>Use a mirror or have Sarah check areas Carl cannot see</li>
+          <li>Look for: blisters, cuts, redness, swelling, cracks, open areas</li>
+          <li><strong>Do NOT soak feet</strong> — softens skin, increases infection risk</li>
+          <li>Dry carefully between toes after washing</li>
+          <li>Apply moisturizer to heels and soles (not between toes)</li>
+          <li>Trim nails straight across — see podiatrist for thick/difficult nails</li>
+          <li>Wear well-fitting, protective shoes — no open-toed or thin-soled footwear</li>
+        </ul>
+      </div>
+      <div class="info-block">
+        <h3>📊 Blood Glucose Goals</h3>
+        <table class="data-table">
+          <thead><tr><th>Measure</th><th>Target</th></tr></thead>
+          <tbody>
+            <tr><td>Fasting BG</td><td>80–130 mg/dL</td></tr>
+            <tr><td>2-hr post-meal BG</td><td>&lt; 180 mg/dL</td></tr>
+            <tr><td>A1C goal</td><td>&lt; 7% (most patients)</td></tr>
+            <tr><td>Blood pressure</td><td>&lt; 130/80 mmHg</td></tr>
+            <tr><td>LDL cholesterol</td><td>&lt; 100 mg/dL</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: Carl has a high school education and limited health literacy. How do you structure effective diabetes teaching?</summary>
+      <div class="reveal-content">
+        <p><strong>Principles for health-literacy-appropriate teaching:</strong></p>
+        <ul>
+          <li>Use plain language — avoid medical jargon (say "blood sugar" not "blood glucose level")</li>
+          <li>Focus on 2–3 key teaching points per session — do not overwhelm</li>
+          <li>Use the <strong>teach-back method</strong>: "Can you show me how you would check your foot at home?"</li>
+          <li>Provide written materials at a 6th-grade reading level</li>
+          <li>Include Sarah — she will reinforce teaching at home</li>
+          <li>Use visual aids: pictures of wound stages, diagrams of insulin injection sites</li>
+        </ul>
+        <p><strong>Priority teaching topics for Carl:</strong></p>
+        <ol>
+          <li>Why blood sugar control = wound healing</li>
+          <li>Daily foot inspection (with mirror demonstration)</li>
+          <li>Signs of infection to report immediately</li>
+          <li>Insulin self-administration technique</li>
+          <li>When to call the provider vs. go to the ER</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ You complete your documentation and plan for ongoing care…</div>
+
+  <!-- PHASE 6 -->
+  <div class="phase-card" id="phase6">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 6</span>
+      <h2>Documentation, Nursing Diagnoses, and Discharge Planning</h2>
+    </div>
+    <h3>📋 Priority Nursing Diagnoses</h3>
+    <div class="dx-rank-list">
+      <div class="dx-rank-item">
+        <span class="dx-number">1</span>
+        <div><strong>Impaired Tissue Integrity</strong><div class="dx-aeb">AEB: Stage II non-healing right heel ulcer × 3 weeks; compromised wound bed circulation</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">2</span>
+        <div><strong>Unstable Blood Glucose Level</strong><div class="dx-aeb">AEB: BG 312 mg/dL; A1C elevated; 5 days of hyperglycemia prior to admission</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">3</span>
+        <div><strong>Deficient Knowledge</strong><div class="dx-aeb">AEB: Soaking wound at home; not performing daily foot inspections; missed signs of wound development</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">4</span>
+        <div><strong>Ineffective Peripheral Tissue Perfusion</strong><div class="dx-aeb">AEB: Diminished pedal pulses right foot; peripheral neuropathy × 20-year diabetes history</div></div>
+      </div>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ SBAR — Calling the Provider About Carl's Wound and Blood Glucose</summary>
+      <div class="reveal-content">
+        <div class="sbar-block">
+          <div class="sbar-item sbar-s"><span class="sbar-label">S — Situation</span><p>Calling about Carl Rogers, 67-year-old African American male admitted this evening with a Stage II non-healing right heel ulcer and hyperglycemia.</p></div>
+          <div class="sbar-item sbar-b"><span class="sbar-label">B — Background</span><p>20-year history of diabetes mellitus. Blood glucose has been in the 300s for 5 days. On NPH and Lispro insulin. Wound present for approximately 3 weeks; patient did not initially notice due to peripheral neuropathy.</p></div>
+          <div class="sbar-item sbar-a"><span class="sbar-label">A — Assessment</span><p>Blood glucose tonight: 312 mg/dL. Wound assessment: Stage II, 2.5 × 2.0 × 0.2 cm; serosanguineous drainage; surrounding mild erythema. Pedal pulse diminished right; posterior tibial faint. I have performed wound care and administered ordered insulin.</p></div>
+          <div class="sbar-item sbar-r"><span class="sbar-label">R — Recommendation</span><p>Requesting: wound culture order; vascular surgery or wound care specialist consult; ABI measurement; social work referral to address social determinants of health affecting diabetes management.</p></div>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <!-- APPENDIX A: Medications -->
+  <div class="phase-card" id="appendix-a">
+    <div class="phase-header">
+      <span class="phase-badge">Appendix A</span>
+      <h2>Medication Review</h2>
+    </div>
+    <table class="data-table">
+      <thead><tr><th>Medication</th><th>Class</th><th>Key Nursing Points</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Insulin NPH (Humulin N)</strong></td>
+          <td>Intermediate-acting insulin</td>
+          <td>Cloudy; roll to mix, never shake; draw up LAST when mixing; peaks 4–12 hrs — monitor for delayed hypoglycemia; HIGH ALERT medication</td>
+        </tr>
+        <tr>
+          <td><strong>Insulin Lispro (Humalog)</strong></td>
+          <td>Rapid-acting insulin</td>
+          <td>Clear; give within 15 min of meal; onset 15–30 min; HIGH ALERT; never mix with long-acting insulins</td>
+        </tr>
+        <tr>
+          <td><strong>Gabapentin 600 mg</strong></td>
+          <td>Anticonvulsant / neuropathic pain</td>
+          <td>For diabetic peripheral neuropathy; causes drowsiness/dizziness; fall risk; do not abruptly discontinue</td>
+        </tr>
+        <tr>
+          <td><strong>Lisinopril/HCTZ</strong></td>
+          <td>ACE inhibitor + thiazide diuretic</td>
+          <td>Renal protection in diabetes; monitor K⁺ (lisinopril can elevate, HCTZ depletes); monitor for hypotension; ACE inhibitor cough</td>
+        </tr>
+        <tr>
+          <td><strong>Simvastatin 20 mg</strong></td>
+          <td>HMG-CoA reductase inhibitor (statin)</td>
+          <td>Give in evening for optimal effect; monitor LFTs; watch for myopathy (muscle pain/weakness)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- APPENDIX B: Q&A -->
+  <div class="phase-card" id="appendix-b">
+    <div class="phase-header">
+      <span class="phase-badge">Appendix B</span>
+      <h2>Post-Simulation Questions &amp; Answers</h2>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Q1: What accurately describes a Stage II pressure ulcer?</summary>
+      <div class="reveal-content"><p><strong>Partial-thickness skin loss involving the dermis, epidermis, or both.</strong> The wound bed is viable and pink or red. It may present as a shallow open ulcer or an intact or ruptured serum-filled blister. There is no slough or bruising present.</p></div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q2: When mixing NPH and regular insulin, why is regular drawn first?</summary>
+      <div class="reveal-content"><p>To <strong>prevent contamination</strong> of the regular insulin vial with NPH (cloudy) insulin. If NPH enters the regular insulin vial, it permanently alters the action time of that vial. Mnemonic: <strong>"Clear before cloudy."</strong></p></div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q3: When should analgesic be given before wound care?</summary>
+      <div class="reveal-content"><p><strong>5–10 minutes before</strong> beginning the wound care procedure. This ensures the medication has reached peak effectiveness when the painful procedure begins, improving patient cooperation and reducing trauma.</p></div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q4: What are signs of hypoglycemia and how is it treated?</summary>
+      <div class="reveal-content">
+        <p><strong>Signs of hypoglycemia (BG &lt; 70 mg/dL):</strong> shakiness, diaphoresis, confusion, dizziness, tachycardia, headache, pale skin.</p>
+        <p><strong>Treatment — the 15/15 Rule:</strong></p>
+        <ol>
+          <li>Give <strong>15 grams</strong> of fast-acting carbohydrates (4 oz juice, 3–4 glucose tablets)</li>
+          <li>Wait <strong>15 minutes</strong></li>
+          <li>Recheck blood glucose</li>
+          <li>If still &lt; 70 mg/dL — repeat</li>
+          <li>If unconscious: glucagon IM or IV D50W per order</li>
+        </ol>
+      </div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q5: What discharge teaching topics should the nurse address for Carl's wound?</summary>
+      <div class="reveal-content">
+        <ul>
+          <li>Signs/symptoms of infection to report (redness spreading, pus, fever, increased pain)</li>
+          <li>Daily foot inspection — use a mirror; include Sarah</li>
+          <li><strong>Do NOT soak feet</strong></li>
+          <li>Appropriate protective footwear</li>
+          <li>Keep blood glucose in target range — directly affects healing</li>
+          <li>Wound cleaning and dressing procedure at home</li>
+          <li>Nutrient-rich diet promotes healing: protein, vitamin C, zinc</li>
+          <li>Follow-up appointment with wound care specialist and diabetes educator</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <!-- APPENDIX C: References -->
+  <div class="phase-card" id="appendix-c">
+    <div class="phase-header">
+      <span class="phase-badge">Appendix C</span>
+      <h2>References</h2>
+    </div>
+    <ol class="ref-list">
+      <li>Potter, P. A., Perry, A. G., Stockert, P. A., &amp; Hall, A. (2021). <em>Fundamentals of nursing</em> (10th ed.). Elsevier.</li>
+      <li>American Diabetes Association. (2024). <em>Standards of care in diabetes — 2024</em>. Diabetes Care.</li>
+      <li>Vallerand, A. H., &amp; Sanoski, C. A. (2021). <em>Davis's drug guide for nurses</em> (17th ed.). F.A. Davis.</li>
+    </ol>
+    <div style="margin-top: 2rem;">
+      <a href={`${base}cases/fundamentals/`} class="btn-back">← Back to Fundamentals</a>
+    </div>
+  </div>
+
+</BaseLayout>
+
+<style>
+  /* ── Phase structure ─────────────────────────────────────────── */
+  .case-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-top: 0.25rem;
+  }
+
+  .phase-card {
+    background: var(--color-surface);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 0;
+    box-shadow: var(--shadow);
+    border-top: 4px solid var(--color-primary);
+  }
+
+  .appendix-card {
+    border-top-color: var(--color-secondary);
+  }
+
+  .phase-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .phase-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .phase-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+
+  .phase-badge-appendix {
+    background: var(--color-secondary);
+  }
+
+  .phase-intro {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin-bottom: 1.25rem;
+    border-left: 3px solid var(--color-accent);
+    padding-left: 0.75rem;
+  }
+
+  .phase-connector {
+    text-align: center;
+    padding: 0.6rem 0;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+  }
+
+  /* ── Info grid ───────────────────────────────────────────────── */
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 720px) {
+    .info-grid { grid-template-columns: 1fr; }
+    .compare-grid { grid-template-columns: 1fr; }
+  }
+
+  .info-block h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  /* ── Tables ──────────────────────────────────────────────────── */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--color-border);
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .data-table thead th {
+    background: #f0f4ff;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+  }
+
+  .data-table tbody th {
+    background: #f8f9fa;
+    font-weight: 600;
+    width: 30%;
+    color: var(--color-text);
+  }
+
+  .med-table tbody th {
+    width: 28%;
+  }
+
+  /* ── Callouts ────────────────────────────────────────────────── */
+  .callout {
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .callout p { margin-bottom: 0.5rem; }
+  .callout p:last-child { margin-bottom: 0; }
+
+  .callout-info {
+    background: #e8f0fe;
+    border-left: 4px solid var(--color-primary);
+  }
+
+  .callout-warning {
+    background: #fff8e1;
+    border-left: 4px solid #f59e0b;
+  }
+
+  .callout-danger {
+    background: #fff0f0;
+    border-left: 4px solid #dc2626;
+  }
+
+  /* ── Badges ──────────────────────────────────────────────────── */
+  .badge-danger {
+    display: inline-block;
+    background: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fca5a5;
+    border-radius: 4px;
+    padding: 0.1rem 0.45rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .badge-warning {
+    display: inline-block;
+    background: #fffbeb;
+    color: #92400e;
+    border: 1px solid #fde68a;
+    border-radius: 4px;
+    padding: 0.1rem 0.45rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  /* ── Scene box ───────────────────────────────────────────────── */
+  .scene-box {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .scene-box h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* ── Med list ────────────────────────────────────────────────── */
+  .med-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .med-list li {
+    padding: 0.35rem 0;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 0.9rem;
+  }
+
+  .med-list li:last-child { border-bottom: none; }
+
+  /* ── Chain flow ──────────────────────────────────────────────── */
+  .chain-flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin: 1.25rem 0;
+  }
+
+  .chain-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 520px;
+    gap: 0.2rem;
+  }
+
+  .chain-step small {
+    font-size: 0.8rem;
+    opacity: 0.8;
+  }
+
+  .chain-step-drug {
+    background: #e8f0fe;
+    color: var(--color-primary-dark);
+    border: 1px solid #bfdbfe;
+  }
+
+  .chain-step-problem {
+    background: #fff8e1;
+    color: #78350f;
+    border: 1px solid #fde68a;
+  }
+
+  .chain-step-consequence {
+    background: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+  }
+
+  .chain-arrow {
+    font-size: 1.5rem;
+    color: var(--color-text-muted);
+    line-height: 1.2;
+  }
+
+  .chain-icon {
+    font-size: 1.4rem;
+  }
+
+  /* ── Stat highlight ──────────────────────────────────────────── */
+  .stat-highlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fef2f2;
+    border: 2px solid #fca5a5;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #b91c1c;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+    color: #7f1d1d;
+    margin-top: 0.25rem;
+  }
+
+  /* ── Reveal (details/summary) ────────────────────────────────── */
+  .reveal-block {
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    margin-top: 1rem;
+    overflow: hidden;
+  }
+
+  .reveal-block > summary {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--color-primary);
+    background: #f0f4ff;
+    list-style: none;
+    user-select: none;
+  }
+
+  .reveal-block > summary::-webkit-details-marker { display: none; }
+
+  .reveal-block[open] > summary {
+    background: #dbeafe;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .reveal-block > summary:hover {
+    background: #dbeafe;
+  }
+
+  .reveal-content {
+    padding: 1rem 1.25rem;
+  }
+
+  .reveal-content ul,
+  .reveal-content ol {
+    margin-bottom: 0.75rem;
+  }
+
+  /* ── SBAR block ──────────────────────────────────────────────── */
+  .sbar-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    margin-bottom: 1.5rem;
+  }
+
+  .sbar-item {
+    padding: 1rem 1.25rem;
+  }
+
+  .sbar-item p { margin: 0; font-style: italic; }
+
+  .sbar-label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.4rem;
+  }
+
+  .sbar-s { background: #eff6ff; border-left: 5px solid #3b82f6; }
+  .sbar-b { background: #f0fdf4; border-left: 5px solid #22c55e; }
+  .sbar-a { background: #fffbeb; border-left: 5px solid #f59e0b; }
+  .sbar-r { background: #fef2f2; border-left: 5px solid #ef4444; }
+
+  /* ── Priority diagnoses ──────────────────────────────────────── */
+  .dx-rank-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .dx-rank-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: #f8f9fa;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+  }
+
+  .dx-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .dx-aeb {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-top: 0.2rem;
+  }
+
+  /* ── Compare grid ────────────────────────────────────────────── */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .compare-grid h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  /* ── Concept map ─────────────────────────────────────────────── */
+  .concept-map {
+    margin-bottom: 1.25rem;
+  }
+
+  /* ── References ──────────────────────────────────────────────── */
+  .ref-list {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .ref-note {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin: 0;
+  }
+
+  /* ── Utility ─────────────────────────────────────────────────── */
+  .text-success { color: #15803d; }
+  .text-danger  { color: #b91c1c; }
+
+  .btn-back {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .btn-back:hover {
+    background: var(--color-primary-dark);
+    text-decoration: none;
+  }
+</style>

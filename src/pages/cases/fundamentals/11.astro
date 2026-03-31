@@ -1,36 +1,871 @@
 ---
-import CaseLayout from '../../../layouts/CaseLayout.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
-<CaseLayout
-  scenario="Fundamentals 11"
-  disciplineLabel="Fundamentals"
-  disciplineSlug="fundamentals"
-  category="Infection / Discharge"
-  patient={{ name: "Kyle Miller", age: "41 years", gender: "Male" }}
-  scenarioTime="20 – 25 minutes"
-  debriefingTime="20 – 25 minutes"
-  concepts={[
-    "Assessment",
-    "Infection management",
-    "Prioritization of care",
-    "Delegation",
-    "Patient education",
-    "Documentation and informatics",
-  ]}
-  skills={[
-    "Perform systematic head-to-toe assessment",
-    "Perform focused wound assessment for cellulitis",
-    "Manage and respond to unit distractions",
-    "Delegate tasks appropriately to UAP",
-    "Review and reconcile medications (MAR)",
-    "Provide comprehensive discharge teaching",
-    "Use teach-back method to verify patient understanding",
-    "Discontinue IV access before discharge",
-    "Document care and discharge instructions in the EHR",
-  ]}
-  presentation="A 41-year-old male admitted for right forearm cellulitis from a puncture wound. His temperature has returned to baseline and he is cleared for discharge home."
-  primaryDx="Cellulitis of the right forearm secondary to puncture wound"
-  secondaryDx="None (NKA; no significant comorbidities)"
-  primaryChallenge="Learner completes a systematic nursing assessment while managing unit distractions and preparing comprehensive discharge education for a patient with resolving cellulitis."
-/>
+<BaseLayout
+  title="Fundamentals 11 — Kyle Miller"
+  description="Unfolding case study: Basic Assessment and Care Management (FUN-11)"
+>
+
+  <div class="breadcrumb">
+    <a href={base}>Home</a>
+    <span>›</span>
+    <a href={`${base}cases/`}>Cases</a>
+    <span>›</span>
+    <a href={`${base}cases/fundamentals/`}>Fundamentals</a>
+    <span>›</span>
+    <span>Fundamentals 11 — Kyle Miller</span>
+  </div>
+
+  <div class="case-header">
+    <span class="card-tag">Infection / Discharge</span>
+    <h1>Fundamentals 11 — Kyle Miller</h1>
+    <p class="case-subtitle">Basic Assessment, Prioritization, and Discharge Teaching</p>
+    <div class="case-meta">
+      <span>👤 Kyle Miller, 41 years, Male · Room 522</span>
+      <span>⏱ Scenario: 20 – 25 minutes</span>
+      <span>💬 Debrief: 20 – 25 minutes</span>
+    </div>
+  </div>
+
+  <div class="callout callout-info">
+    <strong>📖 How to Use This Unfolding Case Study</strong>
+    <p>Work through each phase in order. Information is revealed progressively — exactly as it would be in a real clinical encounter. Before reading each answer, pause and reason through the question yourself. Use the <strong>▶ Reveal Answer</strong> toggles to check your thinking.</p>
+  </div>
+
+  <!-- PHASE 1 -->
+  <div class="phase-card" id="phase1">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 1</span>
+      <h2>You Arrive at the Bedside</h2>
+    </div>
+    <p class="phase-intro">You are the morning nurse on a medical-surgical unit. Kyle Miller is a 41-year-old male in Room 522 admitted for right forearm cellulitis. His temperature has returned to baseline and he has been cleared for discharge today.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>📋 Handoff Report</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Patient</th><td>Kyle Miller</td></tr>
+            <tr><th>Age / Gender</th><td>41 years · Male · Caucasian</td></tr>
+            <tr><th>MRN / Room</th><td>7729387 · Room 522</td></tr>
+            <tr><th>Primary Dx</th><td>Cellulitis, right forearm — secondary to puncture wound</td></tr>
+            <tr><th>Allergies</th><td>NKA (No Known Allergies)</td></tr>
+            <tr><th>Isolation</th><td>Standard precautions only</td></tr>
+            <tr><th>Code Status</th><td>Full code</td></tr>
+            <tr><th>Status</th><td>Temperature normalized; cleared for discharge</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>💊 Current Medications</h3>
+        <ul class="med-list">
+          <li>IV antibiotics (cephalexin/clindamycin per order) — transitioning to oral at discharge</li>
+          <li>Acetaminophen PO PRN — pain management</li>
+        </ul>
+        <h3 style="margin-top:1rem;">📊 Height / Weight / BMI</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Height</th><td>6 ft (183 cm)</td></tr>
+            <tr><th>Weight</th><td>175 lbs (79.5 kg)</td></tr>
+            <tr><th>BMI</th><td>23 (Normal)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="scene-box">
+      <h3>🚪 Entering the Room — What You Observe</h3>
+      <p>Kyle is sitting up in bed, dressed in his own clothes. He looks well. He says, "Good morning — am I getting out of here today? My boss is expecting me back." He holds up his right forearm, which has a visible dressing.</p>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: Kyle wants to leave quickly. Why is a full assessment still required before discharge can proceed?</summary>
+      <div class="reveal-content">
+        <p><strong>Assessment is non-negotiable before discharge:</strong></p>
+        <ul>
+          <li>Discharge clearance by the provider does not replace the nurse's assessment — the nurse must verify that the patient is clinically safe to leave</li>
+          <li>Wound may have changed since the provider's last visit</li>
+          <li>Vital signs must be stable</li>
+          <li>IV antibiotics must be confirmed complete or transitioned to oral</li>
+          <li>Patient must demonstrate understanding of discharge instructions — or readmission risk is high</li>
+          <li>The nurse is the last safety checkpoint before a patient leaves</li>
+        </ul>
+        <p><strong>Communication tip:</strong> "I'm going to help get you home today, Mr. Miller. Before discharge, I just need to check you over and go through your instructions — that way you know exactly what to do to make sure this doesn't come back."</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ You begin your systematic head-to-toe assessment…</div>
+
+  <!-- PHASE 2 -->
+  <div class="phase-card" id="phase2">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 2</span>
+      <h2>Head-to-Toe Assessment</h2>
+    </div>
+    <p class="phase-intro">You perform your systematic assessment while managing multiple distractions — a phone rings, a colleague asks for help with a non-urgent supply, and another patient's call light is on down the hall.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>📊 Current Vital Signs</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Temperature</th><td>37.0°C (98.6°F) — normalized ✓</td></tr>
+            <tr><th>Blood Pressure</th><td>122/78 mmHg — normal ✓</td></tr>
+            <tr><th>Heart Rate</th><td>72 bpm — normal ✓</td></tr>
+            <tr><th>Respiratory Rate</th><td>16 breaths/min — normal ✓</td></tr>
+            <tr><th>SpO₂</th><td>98% on room air ✓</td></tr>
+            <tr><th>Pain</th><td>2/10 at right forearm — mild ✓</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>🩹 Wound Assessment — Right Forearm</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Location</th><td>Right forearm; puncture wound site</td></tr>
+            <tr><th>Borders</th><td>Marked borders from previous shift — NOT spreading ✓</td></tr>
+            <tr><th>Redness</th><td>Fading compared to yesterday ✓</td></tr>
+            <tr><th>Warmth</th><td>Decreasing warmth ✓</td></tr>
+            <tr><th>Swelling</th><td>Mild residual swelling; improving ✓</td></tr>
+            <tr><th>Drainage</th><td>Scant serous drainage — no purulence ✓</td></tr>
+            <tr><th>Red streaks</th><td>None — <span class="text-success">no lymphangitis</span> ✓</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: How do you handle distractions during Kyle's assessment without compromising care?</summary>
+      <div class="reveal-content">
+        <p><strong>Principles for managing distractions:</strong></p>
+        <ul>
+          <li><strong>Brief acknowledgment:</strong> "I'll be right with you" — then immediately return to Kyle</li>
+          <li><strong>Delegate when appropriate:</strong> Non-urgent requests (supply runs, routine tasks) can go to UAP</li>
+          <li><strong>Safety-first interruption rule:</strong> Only leave Kyle's bedside if another patient has a safety emergency</li>
+          <li><strong>HIPAA:</strong> Do NOT discuss other patients in Kyle's room — redirect conversations outside</li>
+          <li><strong>Communication with Kyle:</strong> "I'm sorry about the interruption, Mr. Miller — where were we?"</li>
+        </ul>
+        <p><strong>What constitutes a priority interruption requiring you to leave:</strong></p>
+        <ul>
+          <li>A patient fall</li>
+          <li>A patient having a medical emergency (cardiac arrest, severe respiratory distress)</li>
+          <li>A safety alert requiring immediate response</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ Assessment complete; you prepare discharge teaching…</div>
+
+  <!-- PHASE 3 -->
+  <div class="phase-card" id="phase3">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 3</span>
+      <h2>Discharge Teaching — Wound Care at Home</h2>
+    </div>
+    <p class="phase-intro">Kyle's assessment is reassuring. You sit down with Kyle to go over his discharge instructions. He says, "What do I actually need to do at home? And what should I worry about?"</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>🏠 Wound Care at Home</h3>
+        <ul>
+          <li>Wash hands before and after wound care</li>
+          <li>Keep wound clean and dry — change dressing daily or as directed</li>
+          <li>No immersing in water (no pools, soaking, or hot tubs)</li>
+          <li>Shower is okay — let water run over dressing; pat dry</li>
+          <li>Keep arm elevated above heart level when possible to reduce swelling</li>
+          <li>Do NOT use hydrogen peroxide or iodine — they delay healing</li>
+          <li>Use only normal saline or clean running water to clean wound</li>
+        </ul>
+      </div>
+      <div class="info-block">
+        <h3>⚠️ Return Precautions — Go to the ER Immediately If:</h3>
+        <ul>
+          <li><span class="text-danger">Red streaks spreading from the wound</span> (lymphangitis)</li>
+          <li>Fever &gt; 101°F (38.3°C)</li>
+          <li>Rapidly increasing redness, warmth, swelling, or pain</li>
+          <li>Pus or foul-smelling drainage</li>
+          <li>Flu-like symptoms, chills, or feeling very unwell</li>
+          <li>Wound edges opening or separating</li>
+        </ul>
+      </div>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: What is lymphangitis and why is it a red flag?</summary>
+      <div class="reveal-content">
+        <p><strong>Lymphangitis</strong> is infection of the lymphatic vessels, appearing as red streaks extending from a wound toward the trunk or lymph nodes. It indicates that the infection is spreading systemically via the lymphatic system — a precursor to bacteremia (bacteria in the bloodstream) and sepsis.</p>
+        <p><strong>Why it is an emergency:</strong></p>
+        <ul>
+          <li>Rapid systemic spread possible</li>
+          <li>Can progress to septic shock within hours</li>
+          <li>Requires IV antibiotics and hospital admission</li>
+        </ul>
+        <p><strong>Teaching Kyle:</strong> "If you ever see red lines coming from your wound — even if you feel okay — go to the emergency room immediately. Don't wait."</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ You cover medication instructions and the antibiotic course…</div>
+
+  <!-- PHASE 4 -->
+  <div class="phase-card" id="phase4">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 4</span>
+      <h2>Medication Teaching and Antibiotic Adherence</h2>
+    </div>
+    <p class="phase-intro">Kyle is being discharged with a prescription for oral antibiotics to complete at home. He asks, "How long do I have to take these? Can I stop when I feel better?"</p>
+    <div class="callout callout-warning">
+      <strong>⚠️ Key Teaching Point: Complete the Full Antibiotic Course</strong>
+      <p>Stopping antibiotics early — even when feeling better — leaves surviving bacteria behind. Remaining bacteria can re-infect and may now be more resistant to the antibiotic.</p>
+    </div>
+    <div class="scene-box">
+      <h3>💊 Antibiotic Discharge Teaching</h3>
+      <table class="data-table">
+        <thead><tr><th>Teaching Point</th><th>What to Tell Kyle</th></tr></thead>
+        <tbody>
+          <tr><td>Complete the full course</td><td>"Take every dose until the prescription is gone — even if your arm feels completely normal."</td></tr>
+          <tr><td>Take at even intervals</td><td>"Space doses evenly to keep antibiotic levels consistent in your blood."</td></tr>
+          <tr><td>Do not share</td><td>"Do not give any to family members — this prescription is specifically for your infection."</td></tr>
+          <tr><td>GI upset</td><td>"If your stomach is bothered, take it with food — unless the instructions say otherwise."</td></tr>
+          <tr><td>Allergic reaction</td><td>"If you develop hives, difficulty breathing, or swelling of the face — stop the medication and go to the ER immediately."</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: Why is antibiotic adherence especially important with cellulitis?</summary>
+      <div class="reveal-content">
+        <ul>
+          <li>Cellulitis can appear to improve quickly — swelling goes down, redness fades — but bacteria may still be present in deeper tissues</li>
+          <li>Incomplete treatment leads to relapse — often a worse, more resistant recurrence</li>
+          <li>MRSA (methicillin-resistant Staph aureus) can develop from repeated antibiotic courses that are not completed properly</li>
+          <li>Use teach-back: "You mentioned wanting to stop once you feel better. Can you tell me again why that's actually risky?"</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ You verify all discharge requirements and prepare final documentation…</div>
+
+  <!-- PHASE 5 -->
+  <div class="phase-card" id="phase5">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 5</span>
+      <h2>Discharge Verification and Communication</h2>
+    </div>
+    <p class="phase-intro">Before Kyle leaves, you confirm that all discharge requirements are in place. He has a ride home and a follow-up appointment in 3 days with his provider.</p>
+    <div class="scene-box">
+      <h3>✅ Pre-Discharge Checklist</h3>
+      <table class="data-table">
+        <thead><tr><th>Item</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>Vital signs stable</td><td><span class="text-success">✓ All within normal limits</span></td></tr>
+          <tr><td>Wound improving — not spreading</td><td><span class="text-success">✓ Borders not expanding; no lymphangitis</span></td></tr>
+          <tr><td>IV antibiotics complete or oral transition confirmed</td><td><span class="text-success">✓ Oral prescription ready</span></td></tr>
+          <tr><td>Discharge instructions reviewed</td><td><span class="text-success">✓ Wound care, medications, return precautions</span></td></tr>
+          <tr><td>Teach-back completed</td><td><span class="text-success">✓ Patient verbalized understanding</span></td></tr>
+          <tr><td>Written instructions provided</td><td><span class="text-success">✓ Given to patient</span></td></tr>
+          <tr><td>Follow-up appointment confirmed</td><td><span class="text-success">✓ In 3 days with primary provider</span></td></tr>
+          <tr><td>Transportation arranged</td><td><span class="text-success">✓ Ride confirmed</span></td></tr>
+          <tr><td>Provider discharge order in chart</td><td><span class="text-success">✓ Confirmed</span></td></tr>
+          <tr><td>IV discontinued (if applicable)</td><td><span class="text-success">✓ Site discontinued per order</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: You use teach-back with Kyle. He cannot repeat back the return precautions correctly. What do you do?</summary>
+      <div class="reveal-content">
+        <p><strong>Teach-back failure means teaching has not been completed — not that the patient is at fault.</strong></p>
+        <ul>
+          <li>Do not say "You weren't listening" or show frustration</li>
+          <li>Reframe: "I must not have explained that part well enough. Let me go over it again."</li>
+          <li>Simplify the information — use plain language, shorter sentences</li>
+          <li>Use a visual aid if available — pictures of red streaks, fever thermometer graphic</li>
+          <li>Try teach-back again — ask Kyle to tell you in his own words what he should do</li>
+          <li>Document the teaching, the teach-back attempt, and the repeat teaching — all are required for legal protection and continuity of care</li>
+          <li>Kyle cannot be discharged until he demonstrates understanding of critical return precautions</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ You complete your nursing documentation…</div>
+
+  <!-- PHASE 6 -->
+  <div class="phase-card" id="phase6">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 6</span>
+      <h2>Priority Nursing Diagnoses and Final Documentation</h2>
+    </div>
+    <h3>📋 Priority Nursing Diagnoses</h3>
+    <div class="dx-rank-list">
+      <div class="dx-rank-item">
+        <span class="dx-number">1</span>
+        <div><strong>Impaired Skin Integrity</strong><div class="dx-aeb">AEB: Puncture wound with cellulitis — redness, warmth, swelling at right forearm (improving)</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">2</span>
+        <div><strong>Deficient Knowledge</strong><div class="dx-aeb">AEB: New diagnosis; first episode of cellulitis; needs education on wound care, antibiotics, and return precautions</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">3</span>
+        <div><strong>Acute Pain</strong><div class="dx-aeb">AEB: Pain 2/10 at wound site; improving with antibiotics and acetaminophen</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">4</span>
+        <div><strong>Risk for Infection Spread</strong><div class="dx-aeb">AEB: Incomplete antibiotic course at discharge; need for adherence education</div></div>
+      </div>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ SBAR — Calling Provider to Confirm Final Discharge Orders</summary>
+      <div class="reveal-content">
+        <div class="sbar-block">
+          <div class="sbar-item sbar-s"><span class="sbar-label">S — Situation</span><p>Calling about Kyle Miller, Room 522, 41-year-old male admitted for right forearm cellulitis from a puncture wound. He is ready for discharge today.</p></div>
+          <div class="sbar-item sbar-b"><span class="sbar-label">B — Background</span><p>No known allergies; normal BMI; no significant past medical history. Admitted for IV antibiotics; temperature normalized; wound borders stable and not spreading. No lymphangitis noted.</p></div>
+          <div class="sbar-item sbar-a"><span class="sbar-label">A — Assessment</span><p>Vital signs stable; pain 2/10; wound improving with fading redness and decreasing warmth. Patient has completed IV antibiotic course. Oral antibiotic prescription ready. Discharge teaching completed and teach-back successful. Transportation arranged; follow-up in 3 days confirmed.</p></div>
+          <div class="sbar-item sbar-r"><span class="sbar-label">R — Recommendation</span><p>Requesting confirmation of final discharge order, oral antibiotic prescription, and any additional discharge instructions from the provider.</p></div>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <!-- APPENDIX A: Cellulitis Overview -->
+  <div class="phase-card" id="appendix-a">
+    <div class="phase-header">
+      <span class="phase-badge">Appendix A</span>
+      <h2>Cellulitis — Clinical Overview</h2>
+    </div>
+    <table class="data-table">
+      <thead><tr><th>Feature</th><th>Details</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Definition</strong></td><td>Bacterial infection of skin and subcutaneous soft tissue (dermis and below)</td></tr>
+        <tr><td><strong>Common organisms</strong></td><td>Staphylococcus aureus (including MRSA), Streptococcus pyogenes</td></tr>
+        <tr><td><strong>Entry point</strong></td><td>Break in skin — cut, puncture, bite, abrasion, chronic wound</td></tr>
+        <tr><td><strong>Classic signs</strong></td><td>Redness (erythema), warmth, swelling, tenderness, low-grade fever</td></tr>
+        <tr><td><strong>Serious progression</strong></td><td>Lymphangitis (red streaks) → bacteremia → sepsis</td></tr>
+        <tr><td><strong>Treatment</strong></td><td>Antibiotics (oral for mild; IV for severe); elevation; wound care</td></tr>
+        <tr><td><strong>Prevention</strong></td><td>Prompt cleaning of all skin breaks; moisturizing skin; hand hygiene</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- APPENDIX B: Q&A -->
+  <div class="phase-card" id="appendix-b">
+    <div class="phase-header">
+      <span class="phase-badge">Appendix B</span>
+      <h2>Post-Simulation Questions &amp; Answers</h2>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Q1: What are signs that cellulitis is spreading and requires emergency care?</summary>
+      <div class="reveal-content">
+        <ul>
+          <li><strong>Red streaks (lymphangitis)</strong> extending from wound — URGENT/ER immediately</li>
+          <li>Fever &gt; 103°F; chills, rigors</li>
+          <li>Rapid spread of redness beyond marked borders</li>
+          <li>Bullae (fluid-filled blisters) — indicates deep infection</li>
+          <li>Signs of sepsis: altered mental status, hypotension, tachycardia</li>
+          <li>Numbness or weakness in affected limb</li>
+        </ul>
+      </div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q2: What is the teach-back method and why is it the gold standard for patient education?</summary>
+      <div class="reveal-content">
+        <p><strong>Teach-back method:</strong> After teaching, ask the patient to explain or demonstrate the key information in their own words.</p>
+        <p>Example: "I want to make sure I explained that clearly. Can you tell me what signs would mean you need to go to the ER?"</p>
+        <p><strong>Why it is the gold standard:</strong></p>
+        <ul>
+          <li>Verifies understanding — not just that the patient heard the information</li>
+          <li>Identifies gaps in understanding before discharge</li>
+          <li>Reduces readmission rates and medication errors at home</li>
+          <li>Required for safe discharge documentation</li>
+          <li>Puts responsibility on the nurse to explain clearly — not on the patient to memorize</li>
+        </ul>
+      </div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q3: What is HIPAA and what are the nurse's responsibilities?</summary>
+      <div class="reveal-content">
+        <p><strong>HIPAA</strong> (Health Insurance Portability and Accountability Act) protects patient Protected Health Information (PHI) from unauthorized disclosure.</p>
+        <p><strong>Nursing responsibilities:</strong></p>
+        <ul>
+          <li>Never discuss patient information in public areas (hallways, elevators, nurses' station within earshot of others)</li>
+          <li>Do not discuss one patient in another patient's room</li>
+          <li>Never post patient information on social media — even without names</li>
+          <li>Access only records of patients under your care</li>
+          <li>Violations can result in termination, loss of nursing license, and legal prosecution</li>
+        </ul>
+      </div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q4: What must be documented before Kyle leaves?</summary>
+      <div class="reveal-content">
+        <ul>
+          <li>Final vital signs and assessment findings</li>
+          <li>Wound assessment at time of discharge</li>
+          <li>Medications reviewed with patient; prescriptions given</li>
+          <li>Discharge teaching topics covered</li>
+          <li>Teach-back method used and patient response</li>
+          <li>Written discharge instructions given</li>
+          <li>Follow-up appointment confirmed</li>
+          <li>Mode of transportation</li>
+          <li>Condition at time of discharge (stable, ambulatory, pain well-controlled)</li>
+          <li>Provider discharge order confirmed in chart</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <!-- APPENDIX C: References -->
+  <div class="phase-card" id="appendix-c">
+    <div class="phase-header">
+      <span class="phase-badge">Appendix C</span>
+      <h2>References</h2>
+    </div>
+    <ol class="ref-list">
+      <li>Potter, P. A., Perry, A. G., Stockert, P. A., &amp; Hall, A. (2021). <em>Fundamentals of nursing</em> (10th ed.). Elsevier.</li>
+      <li>Vallerand, A. H., &amp; Sanoski, C. A. (2021). <em>Davis's drug guide for nurses</em> (17th ed.). F.A. Davis.</li>
+    </ol>
+    <div style="margin-top: 2rem;">
+      <a href={`${base}cases/fundamentals/`} class="btn-back">← Back to Fundamentals</a>
+    </div>
+  </div>
+
+</BaseLayout>
+
+<style>
+  /* ── Phase structure ─────────────────────────────────────────── */
+  .case-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-top: 0.25rem;
+  }
+
+  .phase-card {
+    background: var(--color-surface);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 0;
+    box-shadow: var(--shadow);
+    border-top: 4px solid var(--color-primary);
+  }
+
+  .appendix-card {
+    border-top-color: var(--color-secondary);
+  }
+
+  .phase-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .phase-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .phase-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+
+  .phase-badge-appendix {
+    background: var(--color-secondary);
+  }
+
+  .phase-intro {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin-bottom: 1.25rem;
+    border-left: 3px solid var(--color-accent);
+    padding-left: 0.75rem;
+  }
+
+  .phase-connector {
+    text-align: center;
+    padding: 0.6rem 0;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+  }
+
+  /* ── Info grid ───────────────────────────────────────────────── */
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 720px) {
+    .info-grid { grid-template-columns: 1fr; }
+    .compare-grid { grid-template-columns: 1fr; }
+  }
+
+  .info-block h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  /* ── Tables ──────────────────────────────────────────────────── */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--color-border);
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .data-table thead th {
+    background: #f0f4ff;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+  }
+
+  .data-table tbody th {
+    background: #f8f9fa;
+    font-weight: 600;
+    width: 30%;
+    color: var(--color-text);
+  }
+
+  .med-table tbody th {
+    width: 28%;
+  }
+
+  /* ── Callouts ────────────────────────────────────────────────── */
+  .callout {
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .callout p { margin-bottom: 0.5rem; }
+  .callout p:last-child { margin-bottom: 0; }
+
+  .callout-info {
+    background: #e8f0fe;
+    border-left: 4px solid var(--color-primary);
+  }
+
+  .callout-warning {
+    background: #fff8e1;
+    border-left: 4px solid #f59e0b;
+  }
+
+  .callout-danger {
+    background: #fff0f0;
+    border-left: 4px solid #dc2626;
+  }
+
+  /* ── Badges ──────────────────────────────────────────────────── */
+  .badge-danger {
+    display: inline-block;
+    background: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fca5a5;
+    border-radius: 4px;
+    padding: 0.1rem 0.45rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .badge-warning {
+    display: inline-block;
+    background: #fffbeb;
+    color: #92400e;
+    border: 1px solid #fde68a;
+    border-radius: 4px;
+    padding: 0.1rem 0.45rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  /* ── Scene box ───────────────────────────────────────────────── */
+  .scene-box {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .scene-box h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* ── Med list ────────────────────────────────────────────────── */
+  .med-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .med-list li {
+    padding: 0.35rem 0;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 0.9rem;
+  }
+
+  .med-list li:last-child { border-bottom: none; }
+
+  /* ── Chain flow ──────────────────────────────────────────────── */
+  .chain-flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin: 1.25rem 0;
+  }
+
+  .chain-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 520px;
+    gap: 0.2rem;
+  }
+
+  .chain-step small {
+    font-size: 0.8rem;
+    opacity: 0.8;
+  }
+
+  .chain-step-drug {
+    background: #e8f0fe;
+    color: var(--color-primary-dark);
+    border: 1px solid #bfdbfe;
+  }
+
+  .chain-step-problem {
+    background: #fff8e1;
+    color: #78350f;
+    border: 1px solid #fde68a;
+  }
+
+  .chain-step-consequence {
+    background: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+  }
+
+  .chain-arrow {
+    font-size: 1.5rem;
+    color: var(--color-text-muted);
+    line-height: 1.2;
+  }
+
+  .chain-icon {
+    font-size: 1.4rem;
+  }
+
+  /* ── Stat highlight ──────────────────────────────────────────── */
+  .stat-highlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fef2f2;
+    border: 2px solid #fca5a5;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #b91c1c;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+    color: #7f1d1d;
+    margin-top: 0.25rem;
+  }
+
+  /* ── Reveal (details/summary) ────────────────────────────────── */
+  .reveal-block {
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    margin-top: 1rem;
+    overflow: hidden;
+  }
+
+  .reveal-block > summary {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--color-primary);
+    background: #f0f4ff;
+    list-style: none;
+    user-select: none;
+  }
+
+  .reveal-block > summary::-webkit-details-marker { display: none; }
+
+  .reveal-block[open] > summary {
+    background: #dbeafe;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .reveal-block > summary:hover {
+    background: #dbeafe;
+  }
+
+  .reveal-content {
+    padding: 1rem 1.25rem;
+  }
+
+  .reveal-content ul,
+  .reveal-content ol {
+    margin-bottom: 0.75rem;
+  }
+
+  /* ── SBAR block ──────────────────────────────────────────────── */
+  .sbar-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    margin-bottom: 1.5rem;
+  }
+
+  .sbar-item {
+    padding: 1rem 1.25rem;
+  }
+
+  .sbar-item p { margin: 0; font-style: italic; }
+
+  .sbar-label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.4rem;
+  }
+
+  .sbar-s { background: #eff6ff; border-left: 5px solid #3b82f6; }
+  .sbar-b { background: #f0fdf4; border-left: 5px solid #22c55e; }
+  .sbar-a { background: #fffbeb; border-left: 5px solid #f59e0b; }
+  .sbar-r { background: #fef2f2; border-left: 5px solid #ef4444; }
+
+  /* ── Priority diagnoses ──────────────────────────────────────── */
+  .dx-rank-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .dx-rank-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: #f8f9fa;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+  }
+
+  .dx-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .dx-aeb {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-top: 0.2rem;
+  }
+
+  /* ── Compare grid ────────────────────────────────────────────── */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .compare-grid h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  /* ── Concept map ─────────────────────────────────────────────── */
+  .concept-map {
+    margin-bottom: 1.25rem;
+  }
+
+  /* ── References ──────────────────────────────────────────────── */
+  .ref-list {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .ref-note {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin: 0;
+  }
+
+  /* ── Utility ─────────────────────────────────────────────────── */
+  .text-success { color: #15803d; }
+  .text-danger  { color: #b91c1c; }
+
+  .btn-back {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .btn-back:hover {
+    background: var(--color-primary-dark);
+    text-decoration: none;
+  }
+</style>
