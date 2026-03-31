@@ -977,14 +977,105 @@ const base = import.meta.env.BASE_URL;
   <div class="phase-connector">⬇ Review the appendices for detailed medication information and reference tools…</div>
 
   <!-- ══════════════════════════════════════════════════════════════════════
-       APPENDIX A — MEDICATIONS (placeholder)
+       APPENDIX A — MEDICATIONS
   ══════════════════════════════════════════════════════════════════════ -->
   <div class="phase-card appendix-card" id="appendix-meds">
     <div class="phase-header">
       <span class="phase-badge phase-badge-appendix">Appendix A</span>
       <h2>Medication Reference</h2>
     </div>
-    <p class="phase-intro"><em>Coming soon — Appendix A content will appear here.</em></p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Medication</th>
+          <th>Class / Action</th>
+          <th>Indication (this patient)</th>
+          <th>Key Nursing Considerations</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Hydrochlorothiazide (HCTZ) 25 mg PO daily</strong></td>
+          <td>Thiazide diuretic — inhibits sodium reabsorption in the distal convoluted tubule → increased urinary excretion of Na⁺, K⁺, and water</td>
+          <td>Hypertension management</td>
+          <td>
+            <ul style="margin: 0; padding-left: 1rem;">
+              <li>Monitor BP before each dose; hold if systolic &lt; 90</li>
+              <li>Monitor K⁺ — hypokalemia is common</li>
+              <li>Assess for dehydration — dry mucous membranes, tachycardia, orthostatic hypotension</li>
+              <li>Teach patient to take in morning to avoid nocturia</li>
+              <li><strong>HOLD today</strong> — accidental double dose caused this admission</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Hydromorphone 0.5 mg IV q4h PRN</strong></td>
+          <td>Opioid analgesic — mu-receptor agonist; 5–10× more potent than morphine by weight</td>
+          <td>Acute pain management — right hip and forearm injury</td>
+          <td>
+            <ul style="margin: 0; padding-left: 1rem;">
+              <li>Assess respirations before giving (hold if RR &lt; 12)</li>
+              <li>Assess BP before giving (caution if BP already low)</li>
+              <li>Assess pain score before and 30–60 minutes after administration</li>
+              <li>Monitor sedation level; have naloxone available</li>
+              <li>Compound fall risk — reinforce call-light use after administration</li>
+              <li>Use lowest effective dose; schedule acetaminophen to reduce opioid need</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Acetaminophen 650 mg PO q6h</strong></td>
+          <td>Non-opioid analgesic / antipyretic — inhibits central prostaglandin synthesis</td>
+          <td>Scheduled baseline pain management — allows opioid dose reduction</td>
+          <td>
+            <ul style="margin: 0; padding-left: 1rem;">
+              <li>Maximum dose: 4,000 mg/24h (elderly: often limited to 3,000 mg/24h)</li>
+              <li>Do not exceed daily maximum when combining with other acetaminophen-containing products</li>
+              <li>Monitor hepatic function if long-term use; avoid in hepatic failure</li>
+              <li>Preferred agent for older adults — fewer GI/renal side effects than NSAIDs</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>0.9% Normal Saline IV 75 mL/hr</strong></td>
+          <td>Isotonic crystalloid fluid — expands intravascular volume without shifting fluid to intracellular space</td>
+          <td>Volume replacement for dehydration from diuretic double dose</td>
+          <td>
+            <ul style="margin: 0; padding-left: 1rem;">
+              <li>Monitor IV site q2h: infiltration, phlebitis, redness, swelling</li>
+              <li>Monitor lung sounds each shift — risk of fluid overload in elderly</li>
+              <li>Track I&amp;O: goal urine output 30–60 mL/hr</li>
+              <li>Verify pump rate matches ordered rate at start of shift and after any line disconnection</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Metformin 500 mg PO daily with evening meal</strong></td>
+          <td>Biguanide — decreases hepatic glucose production; does not cause hypoglycemia alone</td>
+          <td>Type 2 DM — diet-controlled; metformin as adjunct</td>
+          <td>
+            <ul style="margin: 0; padding-left: 1rem;">
+              <li>Hold if creatinine elevated (GFR &lt; 30) — volume depletion can reduce GFR</li>
+              <li>Hold before any IV contrast procedure (risk of lactic acidosis)</li>
+              <li>Monitor blood glucose once daily (diet-controlled; low hypoglycemia risk)</li>
+              <li>Give with evening meal to reduce GI side effects</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       APPENDIX B — ASSESSMENT TOOLS (placeholder)
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card appendix-card" id="appendix-tools">
+    <div class="phase-header">
+      <span class="phase-badge phase-badge-appendix">Appendix B</span>
+      <h2>Assessment Tools Reference</h2>
+    </div>
+    <p class="phase-intro"><em>Coming soon — Appendix B content will appear here.</em></p>
   </div>
 
   <!-- Back button -->
