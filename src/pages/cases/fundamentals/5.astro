@@ -828,14 +828,163 @@ const base = import.meta.env.BASE_URL;
   <div class="phase-connector">⬇ Later in your shift, you reassess Ms. Rae and begin discharge planning…</div>
 
   <!-- ══════════════════════════════════════════════════════════════════════
-       PHASE 7 — EVALUATION & EDUCATION (placeholder)
+       PHASE 7 — EVALUATION & PATIENT EDUCATION
   ══════════════════════════════════════════════════════════════════════ -->
   <div class="phase-card" id="phase7">
     <div class="phase-header">
       <span class="phase-badge">Phase 7</span>
       <h2>Evaluation &amp; Patient Education</h2>
     </div>
-    <p class="phase-intro"><em>Coming soon — Phase 7 content will appear here.</em></p>
+
+    <p class="phase-intro">
+      Four hours into your shift, you reassess Ms. Rae. Her IV fluids have been running, and the physician has reviewed labs. You review outcomes against expected goals and begin discharge education.
+    </p>
+
+    <!-- Outcome Evaluation Table -->
+    <h3>📊 Outcome Evaluation</h3>
+    <table class="data-table" style="margin-bottom: 1.5rem;">
+      <thead>
+        <tr>
+          <th>Nursing Diagnosis</th>
+          <th>Expected Outcome</th>
+          <th>4-Hour Evaluation</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Risk for Falls</td>
+          <td>Patient will remain free from falls during hospitalization; will verbalize understanding of fall prevention measures</td>
+          <td>No falls occurred. Environmental modifications in place. Ms. Rae calls for assistance before attempting to move. States "I know I need to ring the bell now."</td>
+          <td><span class="badge-success">Goal Met — Continue</span></td>
+        </tr>
+        <tr>
+          <td>Impaired Tissue Integrity</td>
+          <td>Stage I injury will not progress; new injuries will not develop; skin will be clean and dry</td>
+          <td>Repositioned q2h per turn schedule. Moisture barrier cream applied after pericare. Stage I unchanged — no progression. Heels off bed with pillow support.</td>
+          <td><span class="badge-success">Goal Met — Continue</span></td>
+        </tr>
+        <tr>
+          <td>Deficient Fluid Volume</td>
+          <td>BP will stabilize ≥ 100/60; HR will decrease toward 80s; mucous membranes moist; urine output 30–60 mL/hr</td>
+          <td>BP 112/72 lying; HR 88. Mucous membranes moist. Urine output now 55 mL/hr (diuretic effect resolved). Labs: Na 138, K 3.3 (mild hypokalemia — provider notified).</td>
+          <td><span class="badge-warning">Improving — Monitor K⁺</span></td>
+        </tr>
+        <tr>
+          <td>Acute Pain</td>
+          <td>Pain will decrease to ≤ 3/10 with analgesics; patient will be able to tolerate assisted transfer</td>
+          <td>Pain 3/10 after acetaminophen. X-ray: no fracture confirmed. Physical therapy visited — recommends walker; will begin assisted ambulation tomorrow.</td>
+          <td><span class="badge-success">Goal Met — Continue</span></td>
+        </tr>
+        <tr>
+          <td>Deficient Knowledge</td>
+          <td>Patient will verbalize correct HCTZ dosing, fall prevention strategies at home, and when to call the doctor</td>
+          <td>Education session completed (see below). Ms. Rae able to demonstrate 3 of 5 teaching points without prompting. Daughter present and engaged.</td>
+          <td><span class="badge-warning">Partially Met — Reinforce</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Patient Education -->
+    <h3>📚 Discharge Education — Lisa Rae &amp; Family</h3>
+    <div class="info-grid">
+      <div class="info-block">
+        <h4>💊 Medication Safety at Home</h4>
+        <ul>
+          <li>Take HCTZ <strong>only once daily in the morning</strong> — do not double up if a dose is missed</li>
+          <li>Use a <strong>weekly pill organizer</strong> — check each compartment before taking medications</li>
+          <li>Keep a written medication list — share with every healthcare provider</li>
+          <li>Never stop or change medications without calling your doctor</li>
+          <li>Know: HCTZ increases urination — do not rush to the bathroom without calling for help</li>
+          <li>Tell every provider about ALL medications, including vitamins and supplements</li>
+        </ul>
+      </div>
+      <div class="info-block">
+        <h4>🚶 Fall Prevention at Home</h4>
+        <ul>
+          <li><strong>Rise slowly</strong> — sit on the edge of the bed for 1–2 minutes before standing; grip the bed rail or bedside table for support</li>
+          <li>Always use your <strong>cane or walker</strong> — every time, every room</li>
+          <li>Ensure <strong>nightlight is on</strong> before getting up at night</li>
+          <li>Wear <strong>non-skid footwear</strong> — no socks only, no loose slippers</li>
+          <li>Remove throw rugs and clutter from hallways and bathroom floors</li>
+          <li>Consider <strong>grab bars</strong> near toilet and shower — ask provider for occupational therapy referral</li>
+          <li>Call for help or use a <strong>medical alert device</strong> if you feel dizzy</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-block">
+        <h4>🩹 Skin Care at Home</h4>
+        <ul>
+          <li>Change positions at least every 2 hours when sitting or lying — do not stay in one position for long periods</li>
+          <li>Keep skin clean and <strong>dry after incontinence episodes</strong> — use a moisture barrier cream</li>
+          <li>Inspect your skin daily, especially the coccyx, heels, and hips — use a mirror if needed</li>
+          <li>Report any new redness, open areas, or skin changes to your doctor or home health nurse immediately</li>
+          <li>Maintain good nutrition and hydration — protein helps skin heal and resist breakdown</li>
+        </ul>
+      </div>
+      <div class="info-block">
+        <h4>📞 When to Call Your Doctor</h4>
+        <ul>
+          <li>Dizziness or lightheadedness, especially when standing up</li>
+          <li>Another fall — even if no visible injury</li>
+          <li>New or worsening pain</li>
+          <li>Redness or skin breakdown that does not improve within 24 hours</li>
+          <li>Decreased urination, dark urine, or signs of dehydration</li>
+          <li>Confusion, weakness, or unusual fatigue</li>
+          <li>Any medication question — <strong>never change or double up on doses without calling first</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <details class="reveal-block">
+      <summary>▶ Post-Sim Q: What complications can arise from physical restraints — and when are they appropriate?</summary>
+      <div class="reveal-content">
+        <p><strong>Physical restraints are a last resort</strong> — not a fall prevention strategy. Their use is heavily regulated (Joint Commission, CMS, facility policy) and requires a physician order with ongoing reassessment every 2 hours.</p>
+        <p><strong>Complications of restraints:</strong></p>
+        <ul>
+          <li>Pressure injuries — restraint straps or vests create constant pressure points</li>
+          <li>Increased agitation and combativeness — patients fight against restraints</li>
+          <li>Deconditioning — immobilization causes muscle weakness</li>
+          <li>Aspiration — especially with vest/chest restraints limiting position changes</li>
+          <li>Death — strangulation, asphyxia have been reported with vest restraints</li>
+          <li>Psychological harm — fear, humiliation, loss of dignity</li>
+          <li>Deep vein thrombosis — immobility increases clot risk</li>
+        </ul>
+        <p><strong>Appropriate only when:</strong> all less-restrictive alternatives have been exhausted, patient is at immediate risk of injury to self or others, and a physician order is obtained with time limit, regular reassessment, and documentation.</p>
+      </div>
+    </details>
+
+    <details class="reveal-block">
+      <summary>▶ Post-Sim Q: How do you document the fall risk assessment and interventions in the EHR?</summary>
+      <div class="reveal-content">
+        <ul>
+          <li><strong>Document the Morse Fall Scale score</strong> with date, time, and each individual item score — many EHRs have a structured tool for this</li>
+          <li>Document fall risk level: <em>"Morse Fall Score 85 — High Risk. Fall prevention protocol initiated."</em></li>
+          <li>Document each fall prevention intervention as implemented and time completed</li>
+          <li>Document patient education provided: topics covered, patient response, ability to verbalize understanding, family present</li>
+          <li>Document hourly rounding: time, patient response, interventions performed</li>
+          <li>If patient declines any safety measure, document refusal and education provided</li>
+          <li>Document any falls that occur: time, witnesses, patient status before and after, injury assessment, provider notification, family notification, interventions taken</li>
+          <li>Document Braden Scale separately with subscale scores and wound care orders for the Stage I pressure injury</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <!-- connector -->
+  <div class="phase-connector">⬇ Review the appendices for detailed medication information and reference tools…</div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       APPENDIX A — MEDICATIONS (placeholder)
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card appendix-card" id="appendix-meds">
+    <div class="phase-header">
+      <span class="phase-badge phase-badge-appendix">Appendix A</span>
+      <h2>Medication Reference</h2>
+    </div>
+    <p class="phase-intro"><em>Coming soon — Appendix A content will appear here.</em></p>
   </div>
 
   <!-- Back button -->
