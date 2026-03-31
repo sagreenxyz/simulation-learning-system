@@ -259,7 +259,7 @@ const base = import.meta.env.BASE_URL;
           <tbody>
             <tr><th>Temperature</th><td>36.8°C (98.2°F) — normal</td></tr>
             <tr><th>Blood Pressure (lying)</th><td>100/66 mmHg <span class="badge-warning">Low — post-bolus</span></td></tr>
-            <tr><th>BP (sitting, 1 min)</th><td>88/58 mmHg <span class="badge-danger">Orthostatic drop ≥ 20 mmHg</span></td></tr>
+            <tr><th>BP (sitting, 1 min)</th><td>78/56 mmHg <span class="badge-danger">Orthostatic drop 22/10 mmHg ✓</span></td></tr>
             <tr><th>Heart Rate</th><td>104 bpm <span class="badge-warning">Mild tachycardia</span></td></tr>
             <tr><th>Respiratory Rate</th><td>18 breaths/min — normal</td></tr>
             <tr><th>SpO₂</th><td>97% on room air — adequate</td></tr>
@@ -267,7 +267,7 @@ const base = import.meta.env.BASE_URL;
           </tbody>
         </table>
         <div class="callout callout-warning" style="margin-top: 0.75rem;">
-          <strong>Orthostatic hypotension confirmed:</strong> Systolic dropped 12 mmHg sitting up. Ms. Rae reports dizziness and lightheadedness when sitting — do NOT assist to standing until BP stabilizes.
+          <strong>Orthostatic hypotension confirmed:</strong> Systolic dropped 22 mmHg sitting up (definition: ≥ 20 mmHg systolic or ≥ 10 mmHg diastolic drop). Ms. Rae reports dizziness and lightheadedness when sitting — do NOT assist to standing until BP stabilizes.
         </div>
       </div>
       <div class="info-block">
@@ -1068,14 +1068,233 @@ const base = import.meta.env.BASE_URL;
   </div>
 
   <!-- ══════════════════════════════════════════════════════════════════════
-       APPENDIX B — ASSESSMENT TOOLS (placeholder)
+       APPENDIX B — ASSESSMENT TOOLS REFERENCE
   ══════════════════════════════════════════════════════════════════════ -->
   <div class="phase-card appendix-card" id="appendix-tools">
     <div class="phase-header">
       <span class="phase-badge phase-badge-appendix">Appendix B</span>
       <h2>Assessment Tools Reference</h2>
     </div>
-    <p class="phase-intro"><em>Coming soon — Appendix B content will appear here.</em></p>
+
+    <h3>⚠️ Morse Fall Scale — Complete Scoring Guide</h3>
+    <table class="data-table" style="margin-bottom: 1.5rem;">
+      <thead>
+        <tr><th>Item</th><th>Score Options</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1. History of falling</strong></td>
+          <td>No = 0 · Yes = 25</td>
+        </tr>
+        <tr>
+          <td><strong>2. Secondary diagnosis</strong> (≥ 2 medical diagnoses in chart)</td>
+          <td>No = 0 · Yes = 15</td>
+        </tr>
+        <tr>
+          <td><strong>3. Ambulatory aid</strong></td>
+          <td>None / bedrest / nurse assist = 0 · Crutches / cane / walker = 15 · Furniture / wall = 30</td>
+        </tr>
+        <tr>
+          <td><strong>4. IV therapy / heparin lock</strong></td>
+          <td>No = 0 · Yes = 20</td>
+        </tr>
+        <tr>
+          <td><strong>5. Gait</strong></td>
+          <td>Normal / bedrest / wheelchair = 0 · Weak = 10 · Impaired = 20</td>
+        </tr>
+        <tr>
+          <td><strong>6. Mental status</strong></td>
+          <td>Oriented to own ability = 0 · Overestimates / forgets limitations = 15</td>
+        </tr>
+        <tr style="background: #f0f4ff;">
+          <td colspan="2">
+            <strong>Scoring:</strong> &nbsp;
+            0–24 = <span class="badge-success">No Risk</span> &nbsp;
+            25–44 = <span class="badge-warning">Low Risk</span> &nbsp;
+            ≥ 45 = <span class="badge-danger">High Risk</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>🩹 Braden Scale — Complete Scoring Guide</h3>
+    <table class="data-table">
+      <thead>
+        <tr><th>Subscale</th><th>1</th><th>2</th><th>3</th><th>4</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Sensory Perception</strong></td>
+          <td>Completely limited</td>
+          <td>Very limited</td>
+          <td>Slightly limited</td>
+          <td>No impairment</td>
+        </tr>
+        <tr>
+          <td><strong>Moisture</strong></td>
+          <td>Constantly moist</td>
+          <td>Often moist</td>
+          <td>Occasionally moist</td>
+          <td>Rarely moist</td>
+        </tr>
+        <tr>
+          <td><strong>Activity</strong></td>
+          <td>Bedfast</td>
+          <td>Chairfast</td>
+          <td>Walks occasionally</td>
+          <td>Walks frequently</td>
+        </tr>
+        <tr>
+          <td><strong>Mobility</strong></td>
+          <td>Completely immobile</td>
+          <td>Very limited</td>
+          <td>Slightly limited</td>
+          <td>No limitations</td>
+        </tr>
+        <tr>
+          <td><strong>Nutrition</strong></td>
+          <td>Very poor</td>
+          <td>Probably inadequate</td>
+          <td>Adequate</td>
+          <td>Excellent</td>
+        </tr>
+        <tr>
+          <td><strong>Friction &amp; Shear</strong></td>
+          <td>Problem</td>
+          <td>Potential problem</td>
+          <td>No apparent problem</td>
+          <td>—</td>
+        </tr>
+        <tr style="background: #f0f4ff;">
+          <td colspan="5">
+            <strong>Scoring:</strong> &nbsp;
+            ≤ 9 = <span class="badge-danger">Very High Risk</span> &nbsp;
+            10–12 = <span class="badge-danger">High Risk</span> &nbsp;
+            13–14 = <span class="badge-warning">Moderate Risk</span> &nbsp;
+            15–18 = <span class="badge-warning">At Risk</span> &nbsp;
+            ≥ 19 = <span class="badge-success">No Risk</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       APPENDIX C — PRESSURE INJURY STAGING
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card appendix-card" id="appendix-staging">
+    <div class="phase-header">
+      <span class="phase-badge phase-badge-appendix">Appendix C</span>
+      <h2>Pressure Injury Staging (NPUAP/EPUAP)</h2>
+    </div>
+
+    <table class="data-table">
+      <thead>
+        <tr><th>Stage</th><th>Description</th><th>Clinical Appearance</th><th>Nursing Action</th></tr>
+      </thead>
+      <tbody>
+        <tr style="background: #fff8e1;">
+          <td><strong>Stage I</strong> <span class="badge-warning">Ms. Rae</span></td>
+          <td>Non-blanchable erythema of intact skin</td>
+          <td>Localized redness that does NOT turn white when pressed; may be warmer, firmer, or tender than surrounding skin</td>
+          <td>Reposition q2h; offload bony prominence; apply moisture barrier; document size and description; increase assessment frequency</td>
+        </tr>
+        <tr>
+          <td><strong>Stage II</strong></td>
+          <td>Partial-thickness skin loss with exposed dermis</td>
+          <td>Shallow open wound with a red-pink wound bed; may appear as intact or ruptured serum-filled blister; no slough or eschar</td>
+          <td>All Stage I measures plus: cleanse wound; apply appropriate wound dressing; wound care order required</td>
+        </tr>
+        <tr>
+          <td><strong>Stage III</strong></td>
+          <td>Full-thickness skin loss; subcutaneous fat visible</td>
+          <td>Wound extends through dermis into subcutaneous tissue; may have slough, undermining, or tunneling; no exposed bone/muscle/tendon</td>
+          <td>All above plus: wound culture if infected; specialist consult; advanced wound care products; nutritional support</td>
+        </tr>
+        <tr>
+          <td><strong>Stage IV</strong></td>
+          <td>Full-thickness skin and tissue loss; exposed bone, tendon, or muscle</td>
+          <td>Bone, muscle, or tendon visible; often has slough or eschar; undermining and tunneling common; can lead to osteomyelitis</td>
+          <td>All above plus: urgent wound care specialist or surgeon referral; bone scan/MRI may be ordered; systemic infection management</td>
+        </tr>
+        <tr>
+          <td><strong>Unstageable</strong></td>
+          <td>Full-thickness loss; base obscured by slough or eschar</td>
+          <td>Cannot determine depth because wound bed is covered; actual stage unknown until debridement</td>
+          <td>Do not remove stable dry eschar on heels — this can protect the wound; consult wound care specialist</td>
+        </tr>
+        <tr>
+          <td><strong>Deep Tissue Injury (DTI)</strong></td>
+          <td>Persistent non-blanchable deep red, maroon, or purple discoloration</td>
+          <td>Intact or non-intact skin; may appear as blood-filled blister; may evolve rapidly into Stage III/IV</td>
+          <td>Offload immediately; monitor closely for rapid evolution; do not massage; document and notify provider</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       APPENDIX D — THERAPEUTIC COMMUNICATION
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card appendix-card" id="appendix-comm">
+    <div class="phase-header">
+      <span class="phase-badge phase-badge-appendix">Appendix D</span>
+      <h2>Therapeutic Communication Reference</h2>
+    </div>
+
+    <p>Ms. Rae is anxious about her hospitalization and embarrassed about her incontinence. Use these evidence-based communication techniques:</p>
+
+    <div class="compare-grid">
+      <div>
+        <h4>✅ Therapeutic Techniques</h4>
+        <table class="data-table">
+          <thead><tr><th>Technique</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td>Active listening</td><td>"Tell me more about what happened at home this morning."</td></tr>
+            <tr><td>Open-ended questions</td><td>"How have you been managing your medications?"</td></tr>
+            <tr><td>Empathy &amp; validation</td><td>"It makes sense you feel embarrassed — incontinence is very common and nothing to be ashamed of."</td></tr>
+            <tr><td>Therapeutic silence</td><td>Allow pause after a question; resist filling silence immediately</td></tr>
+            <tr><td>Summarizing</td><td>"So if I understand correctly, you took your water pill twice because you forgot you'd already taken it."</td></tr>
+            <tr><td>Teach-back</td><td>"Can you show me how you will use your pill organizer when you get home?"</td></tr>
+            <tr><td>Reassurance (honest)</td><td>"We are going to make sure you are safe while you are here — that is my top priority."</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <h4>🚫 Non-Therapeutic Responses to Avoid</h4>
+        <table class="data-table">
+          <thead><tr><th>Response</th><th>Why It Is Harmful</th></tr></thead>
+          <tbody>
+            <tr><td>"Don't worry, you'll be fine."</td><td>False reassurance — dismisses patient's real concerns</td></tr>
+            <tr><td>"Why would you take it twice?"</td><td>Judgmental; causes shame; shuts down communication</td></tr>
+            <tr><td>"You need to be more careful."</td><td>Blaming; does not help patient learn or problem-solve</td></tr>
+            <tr><td>Yes/no closed questions only</td><td>Limits information gathering and patient engagement</td></tr>
+            <tr><td>Giving unsolicited advice early</td><td>Start with assessment and listening before education</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       APPENDIX E — REFERENCES
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card appendix-card" id="appendix-refs">
+    <div class="phase-header">
+      <span class="phase-badge phase-badge-appendix">Appendix E</span>
+      <h2>References</h2>
+    </div>
+    <ol class="ref-list">
+      <li>Potter, P. A., Perry, A. G., Stockert, P. A., &amp; Hall, A. (2021). <em>Fundamentals of nursing</em> (10th ed.). Elsevier.</li>
+      <li>Jarvis, C., Eckhardt, A., &amp; Thomas, P. (2021). <em>Physical examination &amp; health assessment</em> (8th ed.). Elsevier.</li>
+      <li>Vallerand, A. H., &amp; Sanoski, C. A. (2021). <em>Davis's drug guide for nurses</em> (17th ed.). F.A. Davis.</li>
+      <li>Ackley, B., Ludwig, G., Makic, M., Martinez-Kratz, M., &amp; Zanotti, M. (2020). <em>Nursing diagnosis handbook: An evidence-based guide to planning care</em> (12th ed.). Elsevier Saunders.</li>
+      <li>Morse, J. M. (1997). <em>Preventing patient falls</em>. Sage Publications.</li>
+      <li>Braden, B., &amp; Bergstrom, N. (1987). A conceptual schema for the study of the etiology of pressure sores. <em>Rehabilitation Nursing, 12</em>(1), 8–12.</li>
+      <li>National Pressure Injury Advisory Panel (NPIAP). (2019). <em>Pressure injury stages.</em> NPIAP.</li>
+      <li>Centers for Medicare &amp; Medicaid Services. (2023). <em>Hospital-acquired conditions (HAC) reduction program.</em> CMS.gov.</li>
+    </ol>
+    <p class="ref-note">Study guide compiled from Elsevier SLS FUN-05: Lisa Rae — Patient Safety: Falls &amp; Pressure Injury Prevention.</p>
   </div>
 
   <!-- Back button -->
