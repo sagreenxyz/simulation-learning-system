@@ -547,14 +547,159 @@ const base = import.meta.env.BASE_URL;
   <div class="phase-connector">⬇ Armed with your assessment and risk scores, you develop your clinical reasoning plan…</div>
 
   <!-- ══════════════════════════════════════════════════════════════════════
-       PHASE 5 — CLINICAL REASONING (placeholder)
+       PHASE 5 — CLINICAL REASONING & PRIORITY NURSING DIAGNOSES
   ══════════════════════════════════════════════════════════════════════ -->
   <div class="phase-card" id="phase5">
     <div class="phase-header">
       <span class="phase-badge">Phase 5</span>
       <h2>Clinical Reasoning &amp; Priority Nursing Diagnoses</h2>
     </div>
-    <p class="phase-intro"><em>Coming soon — Phase 5 content will appear here.</em></p>
+
+    <p class="phase-intro">
+      Using your assessment data, Morse score, and Braden score, you synthesize a clinical picture and identify the priority nursing diagnoses to guide Ms. Rae's plan of care.
+    </p>
+
+    <h3>🗺️ Concept Map — Lisa Rae</h3>
+    <div class="concept-map">
+      <table class="data-table">
+        <thead><tr><th>Clinical Problem</th><th>Supporting Data</th><th>Related Nursing Concept</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Hypotension / orthostatic hypotension</td>
+            <td>BP 100/66 lying → 88/58 sitting; HR 104; HCTZ double dose; pale, cool skin</td>
+            <td>Fluid &amp; Electrolyte Balance; Perfusion</td>
+          </tr>
+          <tr>
+            <td>Mechanical fall with injury</td>
+            <td>Fall at home → right hip bruise + forearm laceration; Morse 85 (HIGH)</td>
+            <td>Patient Safety; Mobility</td>
+          </tr>
+          <tr>
+            <td>Stage I pressure injury (coccyx)</td>
+            <td>Non-blanchable redness 3×3 cm; Braden 16 (AT RISK); incontinence; limited mobility</td>
+            <td>Skin Integrity; Patient Safety</td>
+          </tr>
+          <tr>
+            <td>Pain — right hip</td>
+            <td>5/10 dull, constant; ecchymosis and tenderness over greater trochanter</td>
+            <td>Comfort; Mobility</td>
+          </tr>
+          <tr>
+            <td>Urinary incontinence</td>
+            <td>Stress + urge incontinence (chronic); Foley catheter in place; skin moisture concern</td>
+            <td>Elimination; Skin Integrity</td>
+          </tr>
+          <tr>
+            <td>Medication management deficit</td>
+            <td>Accidental double dose of HCTZ; admits she "forgot she already took it"</td>
+            <td>Patient Education; Safety</td>
+          </tr>
+          <tr>
+            <td>Knowledge deficit</td>
+            <td>Does not know how HCTZ affects BP; unaware of fall prevention strategies at home</td>
+            <td>Patient Education; Health Promotion</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>🏆 Priority Nursing Diagnoses (Ranked)</h3>
+    <div class="dx-rank-list">
+      <div class="dx-rank-item">
+        <span class="dx-number">1</span>
+        <div>
+          <strong>Risk for Falls</strong> related to orthostatic hypotension, history of falls, use of ambulatory aid, IV therapy, impaired gait, and diuretic use
+          <div class="dx-aeb">Morse score 85 (HIGH); orthostatic BP drop confirmed; limited weight-bearing; IV in place</div>
+        </div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">2</span>
+        <div>
+          <strong>Impaired Tissue Integrity</strong> related to pressure, moisture, and reduced mobility as evidenced by Stage I pressure injury on coccyx
+          <div class="dx-aeb">3×3 cm non-blanchable redness; Braden 16; incontinence; patient reports soreness</div>
+        </div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">3</span>
+        <div>
+          <strong>Deficient Fluid Volume</strong> related to excessive diuresis from HCTZ double dose as evidenced by hypotension, tachycardia, dry mucous membranes, and elevated urine output
+          <div class="dx-aeb">BP 100/66 → 88/58 postural; HR 104; urine output 180 mL/hr; mild skin tenting</div>
+        </div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">4</span>
+        <div>
+          <strong>Acute Pain</strong> related to soft tissue injury (right hip and forearm) as evidenced by patient report of 5/10 pain, guarding, and limited mobility
+          <div class="dx-aeb">Ecchymosis right hip; laceration right forearm; pain on movement; analgesics ordered</div>
+        </div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">5</span>
+        <div>
+          <strong>Deficient Knowledge</strong> regarding medication safety, fall prevention, and pressure injury prevention
+          <div class="dx-aeb">Accidental double dose of HCTZ; unable to verbalize BP effects of diuretics; lives alone without a safety plan</div>
+        </div>
+      </div>
+    </div>
+
+    <details class="reveal-block">
+      <summary>▶ Why is "Risk for Falls" ranked #1 ahead of the existing pressure injury?</summary>
+      <div class="reveal-content">
+        <p>
+          In nursing care prioritization, <strong>potential life-threatening events take priority over existing, stable problems</strong>. Although the Stage I pressure injury is present, it is early and reversible with intervention. A second fall could result in a hip fracture (given Ms. Rae's osteoporosis), head injury, or death.
+        </p>
+        <p>
+          Applying <strong>Maslow's Hierarchy</strong>: safety needs (fall prevention) are ranked just above physiological needs. Applying <strong>ABCs</strong> and the <strong>acute vs. chronic</strong> principle: the fall risk is an acute, high-severity threat requiring immediate environmental and clinical action to prevent patient harm before anything else.
+        </p>
+        <p>Both diagnoses are addressed simultaneously — they are not mutually exclusive — but fall prevention takes first priority.</p>
+      </div>
+    </details>
+
+    <details class="reveal-block">
+      <summary>▶ What does "Deficient Fluid Volume" look like vs. "Fluid Volume Excess"? How do you tell them apart?</summary>
+      <div class="reveal-content">
+        <div class="compare-grid">
+          <div>
+            <h4>Deficient Fluid Volume (Ms. Rae)</h4>
+            <ul>
+              <li>Low blood pressure / orthostatic hypotension</li>
+              <li>Tachycardia (compensatory)</li>
+              <li>Dry mucous membranes</li>
+              <li>Decreased skin turgor (tenting)</li>
+              <li>Concentrated urine initially; then large output (diuretic)</li>
+              <li>Weight loss if prolonged</li>
+              <li>Flat neck veins</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Fluid Volume Excess (contrast)</h4>
+            <ul>
+              <li>Hypertension / bounding pulse</li>
+              <li>Edema — peripheral, sacral, periorbital</li>
+              <li>Crackles (rales) in lung bases</li>
+              <li>Distended neck veins (JVD)</li>
+              <li>Weight gain</li>
+              <li>Diluted urine (low specific gravity)</li>
+              <li>Shortness of breath</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <!-- connector -->
+  <div class="phase-connector">⬇ You have your priorities identified — now you act…</div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       PHASE 6 — NURSING ACTIONS (placeholder)
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card" id="phase6">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 6</span>
+      <h2>Nursing Actions</h2>
+    </div>
+    <p class="phase-intro"><em>Coming soon — Phase 6 content will appear here.</em></p>
   </div>
 
   <!-- Back button -->
