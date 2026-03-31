@@ -1,0 +1,35 @@
+---
+import CaseLayout from '../../../layouts/CaseLayout.astro';
+---
+
+<CaseLayout
+  scenario="Fundamentals 3"
+  disciplineLabel="Fundamentals"
+  disciplineSlug="fundamentals"
+  category="End-of-Life"
+  patient={{ name: "Samuel Green", age: "75 years", gender: "Male" }}
+  scenarioTime="20 – 25 minutes"
+  debriefingTime="20 – 25 minutes"
+  concepts={[
+    "Assessment",
+    "Older adult",
+    "End-of-life care",
+    "Communication",
+    "Culture and ethnicity",
+    "Documentation and informatics",
+  ]}
+  skills={[
+    "Assess patient",
+    "Recognize cessation of cardiovascular and respiratory function",
+    "Notify provider of patient's death using SBAR",
+    "Follow postmortem care policy and procedure",
+    "Utilize therapeutic communication with the family",
+    "Elicit the patient and family's preferences related to death rituals and postmortem care",
+    "Respect the patient and family's spiritual beliefs and cultural values throughout the dying process",
+    "Access and document care in the EHR",
+  ]}
+  presentation="Patient with inoperable pulmonary adenocarcinoma and a documented code status of do not resuscitate (DNR) is admitted for palliative care."
+  primaryDx="Adenocarcinoma bilateral lungs"
+  secondaryDx="Bone and lymph metastasis"
+  primaryChallenge="Learner provides end-of-life and postmortem care while supporting a grieving family in a manner consistent with the patient and family's spiritual beliefs and cultural values."
+/>

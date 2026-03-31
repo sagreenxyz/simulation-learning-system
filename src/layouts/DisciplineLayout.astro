@@ -1,0 +1,69 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+export interface Props {
+  disciplineLabel: string;
+  disciplineSlug: string;
+  description: string;
+  gradientFrom: string;
+  gradientTo: string;
+  icon: string;
+}
+
+const { disciplineLabel, disciplineSlug, description, gradientFrom, gradientTo, icon } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title={`${disciplineLabel} Cases`} description={`${disciplineLabel} simulation cases.`}>
+  <div class="breadcrumb">
+    <a href={base}>Home</a>
+    <span>›</span>
+    <a href={`${base}cases/`}>Cases</a>
+    <span>›</span>
+    <span>{disciplineLabel}</span>
+  </div>
+
+  <div class="discipline-header" style={`background: linear-gradient(135deg, ${gradientFrom} 0%, ${gradientTo} 100%);`}>
+    <div class="disc-icon">{icon}</div>
+    <h1>{disciplineLabel}</h1>
+    <p>{description}</p>
+  </div>
+
+  <div class="coming-soon-card">
+    <div class="coming-soon-icon">🚧</div>
+    <h2>Cases Coming Soon</h2>
+    <p>
+      {disciplineLabel} simulation cases are being developed and will be published here.
+      Check back for updates, or <a href={`${base}cases/`}>browse other disciplines</a>.
+    </p>
+  </div>
+</BaseLayout>
+
+<style>
+  .discipline-header {
+    border-radius: var(--border-radius);
+    padding: 2.5rem 2rem;
+    margin-bottom: 2rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .disc-icon { font-size: 2.5rem; line-height: 1; margin-bottom: 0.25rem; }
+  .discipline-header h1 { margin-bottom: 0.25rem; }
+  .discipline-header p { opacity: 0.92; max-width: 620px; margin: 0; }
+
+  .coming-soon-card {
+    background: var(--color-surface);
+    border-radius: var(--border-radius);
+    border: 2px dashed var(--color-border);
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+  }
+
+  .coming-soon-icon { font-size: 3rem; margin-bottom: 1rem; }
+  .coming-soon-card h2 { color: var(--color-text-muted); margin-bottom: 0.75rem; }
+  .coming-soon-card p { color: var(--color-text-muted); max-width: 480px; margin: 0 auto; }
+</style>

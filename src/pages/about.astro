@@ -1,0 +1,114 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title="About" description="About the Simulation Learning System.">
+  <div class="breadcrumb">
+    <a href={base}>Home</a>
+    <span>›</span>
+    <span>About</span>
+  </div>
+
+  <h1>About the Simulation Learning System</h1>
+  <p style="color: var(--color-text-muted); margin-bottom: 2.5rem; font-size: 1.1rem;">
+    A clinical education platform designed to advance healthcare provider competency through
+    high-fidelity simulation experiences.
+  </p>
+
+  <div class="content-section">
+    <h2>Our Mission</h2>
+    <p>
+      The Simulation Learning System exists to bridge the gap between theoretical knowledge and
+      real-world clinical performance. By immersing learners in realistic, high-stakes patient
+      scenarios, we foster the development of critical thinking, clinical judgment, and
+      interprofessional teamwork skills that save lives.
+    </p>
+    <p>
+      Our cases are built upon current evidence-based guidelines, peer-reviewed literature,
+      and best practices from leading medical and nursing education bodies.
+    </p>
+  </div>
+
+  <div class="content-section">
+    <h2>How Cases Are Structured</h2>
+    <p>Every case in the Simulation Learning System follows a consistent structure:</p>
+    <ul class="objective-list">
+      <li><strong>Case Overview</strong> — Patient story and clinical scenario context</li>
+      <li><strong>Patient Information</strong> — Demographics, medical history, medications, allergies</li>
+      <li><strong>Initial Vital Signs</strong> — Baseline patient state with abnormalities to identify</li>
+      <li><strong>Learning Objectives</strong> — Specific, measurable clinical competency goals</li>
+      <li><strong>Scenario Progression</strong> — Phased timeline of events and expected interventions</li>
+      <li><strong>Debriefing Guide</strong> — Facilitated reflection questions for post-simulation discussion</li>
+    </ul>
+  </div>
+
+  <div class="content-section">
+    <h2>Difficulty Levels</h2>
+    <div class="card-grid" style="margin-top: 1rem;">
+      <div class="card">
+        <h3>🟢 Beginner</h3>
+        <p>
+          Designed for early learners or orientation settings. Cases focus on recognition of
+          common conditions and application of straightforward clinical protocols.
+        </p>
+      </div>
+      <div class="card">
+        <h3>🟡 Intermediate</h3>
+        <p>
+          Suitable for learners with foundational clinical knowledge. Cases introduce complexity
+          through comorbidities, time pressure, and team communication challenges.
+        </p>
+      </div>
+      <div class="card">
+        <h3>🔴 Advanced</h3>
+        <p>
+          For experienced clinicians and inter-professional teams. Cases feature multi-system
+          involvement, competing priorities, ethical dilemmas, and rapid deterioration.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>Target Learners</h2>
+    <ul>
+      <li>Medical students and residents</li>
+      <li>Nursing students and registered nurses</li>
+      <li>Paramedics and EMS providers</li>
+      <li>Respiratory therapists</li>
+      <li>Advanced practice providers (NPs, PAs)</li>
+      <li>Inter-professional healthcare teams</li>
+    </ul>
+  </div>
+
+  <div class="content-section">
+    <h2>Curriculum Alignment</h2>
+    <p>
+      Cases within the Simulation Learning System are aligned with widely recognized educational
+      standards and clinical guidelines, including:
+    </p>
+    <ul>
+      <li>ACLS / BLS / PALS (American Heart Association)</li>
+      <li>ATLS (American College of Surgeons)</li>
+      <li>Surviving Sepsis Campaign Guidelines</li>
+      <li>ASA and ACC/AHA Clinical Practice Guidelines</li>
+      <li>INACSL Standards of Best Practice: Simulation℠</li>
+      <li>NLN Jeffries Simulation Theory</li>
+    </ul>
+  </div>
+
+  <div class="content-section">
+    <h2>Using This Repository</h2>
+    <p>
+      Each case page contains everything a simulation facilitator needs to run a complete
+      educational scenario. Facilitators are encouraged to:
+    </p>
+    <ul>
+      <li>Review the learning objectives before the session</li>
+      <li>Adapt the scenario progression to learner level and institutional context</li>
+      <li>Use the debriefing guide to structure the post-simulation reflection</li>
+      <li>Supplement with moulage, standardized patients, or high-fidelity mannequins as appropriate</li>
+    </ul>
+  </div>
+</BaseLayout>

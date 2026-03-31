@@ -1,0 +1,37 @@
+---
+import CaseLayout from '../../../layouts/CaseLayout.astro';
+---
+
+<CaseLayout
+  scenario="Fundamentals 1"
+  disciplineLabel="Fundamentals"
+  disciplineSlug="fundamentals"
+  category="Pediatric"
+  patient={{ name: "Alice Morrison", age: "7 years", gender: "Female" }}
+  scenarioTime="20 – 25 minutes"
+  debriefingTime="20 – 25 minutes"
+  concepts={[
+    "Assessment",
+    "Pediatric patient",
+    "Nutrition",
+    "Skin integrity and wound care",
+    "Medication administration (G-tube)",
+    "Documentation and informatics",
+  ]}
+  skills={[
+    "Assess patient",
+    "Recognize elevated temperature",
+    "Recognize disconnected G-tube feeding, saturated dressing, and wet bed pad",
+    "Utilize age-appropriate communication",
+    "Respect mother's role as primary caregiver",
+    "Change G-tube dressing and provide hygiene",
+    "Delegate tasks appropriately",
+    "Administer antipyretic via G-tube",
+    "Restart G-tube feeding",
+    "Access and document care in the EHR",
+  ]}
+  presentation="Pediatric patient with g-tube is admitted with acute bronchitis. Patient's G-tube feeding becomes disconnected just prior to start of scenario."
+  primaryDx="Acute bronchitis"
+  secondaryDx="Esophageal atresia with gastrostomy"
+  primaryChallenge="Learner assesses and implements care for a pediatric patient whose G-tube feeding has become disconnected while respecting the mother as the expert on the child's care."
+/>

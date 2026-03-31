@@ -1,0 +1,138 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+
+const disciplines = [
+  { slug: 'fundamentals', label: 'Fundamentals', icon: '📖', caseCount: 7, gradientFrom: '#1a56a4', gradientTo: '#2c8a6e', available: true },
+  { slug: 'med-surgical', label: 'Med-Surgical', icon: '🏥', caseCount: null, gradientFrom: '#1565c0', gradientTo: '#0288d1', available: false },
+  { slug: 'maternity', label: 'Maternity', icon: '🤰', caseCount: null, gradientFrom: '#ad1457', gradientTo: '#e91e8c', available: false },
+  { slug: 'pediatric', label: 'Pediatric', icon: '👶', caseCount: null, gradientFrom: '#2e7d32', gradientTo: '#66bb6a', available: false },
+  { slug: 'psychiatric', label: 'Psychiatric', icon: '🧠', caseCount: null, gradientFrom: '#4527a0', gradientTo: '#7b1fa2', available: false },
+  { slug: 'community', label: 'Community', icon: '🏘️', caseCount: null, gradientFrom: '#e65100', gradientTo: '#f57c00', available: false },
+  { slug: 'leadership', label: 'Leadership', icon: '👩‍⚕️', caseCount: null, gradientFrom: '#37474f', gradientTo: '#546e7a', available: false },
+];
+---
+
+<BaseLayout title="Home">
+  <section class="hero">
+    <h1>Simulation Learning System</h1>
+    <p>
+      A clinical education platform providing structured simulation cases across seven
+      nursing disciplines — building assessment skills, clinical reasoning, and professional
+      communication competencies.
+    </p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href={`${base}cases/`} class="btn btn-primary">Browse Disciplines</a>
+      <a href={`${base}about/`} class="btn btn-outline">About the System</a>
+    </div>
+  </section>
+
+  <h2 class="section-title">Disciplines</h2>
+  <div class="discipline-grid">
+    {disciplines.map((d) => (
+      <a href={`${base}cases/${d.slug}/`} class={`disc-chip ${d.available ? 'available' : 'soon'}`}>
+        <div class="chip-bar" style={`background: linear-gradient(135deg, ${d.gradientFrom} 0%, ${d.gradientTo} 100%);`}>
+          <span class="chip-icon">{d.icon}</span>
+          {d.available && d.caseCount && <span class="chip-badge">{d.caseCount} cases</span>}
+          {!d.available && <span class="chip-badge soon-badge">Soon</span>}
+        </div>
+        <span class="chip-label">{d.label}</span>
+      </a>
+    ))}
+  </div>
+
+  <h2 class="section-title" style="margin-top:2.5rem;">Fundamentals Cases</h2>
+  <div class="card-grid">
+    {[
+      { num:'1', patient:'Alice Morrison', age:'7 yr · F', category:'Pediatric',
+        challenge:"G-tube feeding disconnected; respect mother as primary caregiver." },
+      { num:'2', patient:'Bernadette Jackson', age:'85 yr · F', category:'Older Adult',
+        challenge:"Acute confusion in older adult related to urinary tract infection." },
+      { num:'3', patient:'Samuel Green', age:'75 yr · M', category:'End-of-Life',
+        challenge:"End-of-life and postmortem care respecting spiritual and cultural values." },
+      { num:'4', patient:'Jesus Garcia', age:'28 yr · M', category:'GI / Ostomy',
+        challenge:"Colostomy care while addressing body image and sexuality concerns." },
+      { num:'5', patient:'Lisa Rae', age:'78 yr · F', category:'Patient Safety',
+        challenge:"High fall risk and pressure ulcer prevention in older adult." },
+      { num:'6', patient:'Nancy Gilbert', age:'65 yr · F', category:'Respiratory',
+        challenge:"Sterile tracheostomy suctioning with contact isolation precautions." },
+      { num:'7', patient:'Carl Rogers', age:'67 yr · M', category:'Diabetes / Wound Care',
+        challenge:"Non-healing foot ulcer management with elevated blood glucose." },
+    ].map((c) => (
+      <div class="card">
+        <span class="card-tag">{c.category}</span>
+        <h3><a href={`${base}cases/fundamentals/${c.num}/`}>Fundamentals {c.num}</a></h3>
+        <p class="patient-meta">{c.patient} · {c.age}</p>
+        <p>{c.challenge}</p>
+      </div>
+    ))}
+  </div>
+</BaseLayout>
+
+<style>
+  .discipline-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .disc-chip {
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    text-decoration: none;
+    color: var(--color-text);
+    box-shadow: var(--shadow);
+    transition: transform 0.2s, box-shadow 0.2s;
+    background: var(--color-surface);
+  }
+
+  .disc-chip:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    text-decoration: none;
+  }
+
+  .disc-chip.soon { opacity: 0.78; }
+  .disc-chip.soon:hover { opacity: 1; }
+
+  .chip-bar {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.75rem;
+  }
+
+  .chip-icon { font-size: 1.75rem; }
+
+  .chip-badge {
+    font-size: 0.68rem;
+    font-weight: 700;
+    background: rgba(255,255,255,0.25);
+    color: #fff;
+    padding: 0.15rem 0.45rem;
+    border-radius: 20px;
+    letter-spacing: 0.03em;
+  }
+
+  .soon-badge { background: rgba(255,255,255,0.15); }
+
+  .chip-label {
+    padding: 0.6rem 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-primary-dark);
+    text-align: center;
+  }
+
+  .patient-meta {
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
+    margin-bottom: 0.4rem;
+    font-style: italic;
+  }
+</style>

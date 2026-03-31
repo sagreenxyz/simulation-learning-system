@@ -1,0 +1,37 @@
+---
+import CaseLayout from '../../../layouts/CaseLayout.astro';
+---
+
+<CaseLayout
+  scenario="Fundamentals 4"
+  disciplineLabel="Fundamentals"
+  disciplineSlug="fundamentals"
+  category="GI / Ostomy"
+  patient={{ name: "Jesus Garcia", age: "28 years", gender: "Male" }}
+  scenarioTime="20 – 25 minutes"
+  debriefingTime="20 – 25 minutes"
+  concepts={[
+    "Assessment",
+    "Stress and coping",
+    "Sexuality",
+    "Bowel elimination",
+    "Skin integrity and wound care",
+    "Patient education",
+    "Documentation and informatics",
+  ]}
+  skills={[
+    "Assess patient",
+    "Recognize leaking colostomy bag",
+    "Recognize knowledge deficit regarding colostomy care",
+    "Recognize ineffective coping, disturbed body image, and low sexual self-esteem",
+    "Utilize therapeutic communication",
+    "Ensure patient privacy",
+    "Assist patient with colostomy care and hygiene",
+    "Provide patient education and support",
+    "Access and document care in the EHR",
+  ]}
+  presentation="Patient with history of ulcerative colitis and transverse colostomy is admitted with dehydration."
+  primaryDx="Dehydration"
+  secondaryDx="Ulcerative colitis; status postpartial colectomy with transverse colostomy"
+  primaryChallenge="Learner assesses and manages colostomy care while addressing a patient's issues with body image and sexuality."
+/>

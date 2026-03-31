@@ -1,0 +1,201 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+
+const disciplines = [
+  {
+    slug: 'fundamentals',
+    label: 'Fundamentals',
+    icon: '📖',
+    caseCount: 7,
+    description: 'Core nursing skills: assessment, medication administration, wound care, patient safety, and therapeutic communication.',
+    gradientFrom: '#1a56a4',
+    gradientTo: '#2c8a6e',
+    status: 'available',
+  },
+  {
+    slug: 'med-surgical',
+    label: 'Med-Surgical',
+    icon: '🏥',
+    caseCount: null,
+    description: 'Adult health conditions across body systems including post-operative care, chronic disease management, and acute illness.',
+    gradientFrom: '#1565c0',
+    gradientTo: '#0288d1',
+    status: 'coming-soon',
+  },
+  {
+    slug: 'maternity',
+    label: 'Maternity',
+    icon: '🤰',
+    caseCount: null,
+    description: 'Antepartum, intrapartum, and postpartum care including normal labor, obstetric emergencies, and newborn assessment.',
+    gradientFrom: '#ad1457',
+    gradientTo: '#e91e8c',
+    status: 'coming-soon',
+  },
+  {
+    slug: 'pediatric',
+    label: 'Pediatric',
+    icon: '👶',
+    caseCount: null,
+    description: 'Age-appropriate assessment, family-centered care, and management of pediatric illness and injury.',
+    gradientFrom: '#2e7d32',
+    gradientTo: '#66bb6a',
+    status: 'coming-soon',
+  },
+  {
+    slug: 'psychiatric',
+    label: 'Psychiatric',
+    icon: '🧠',
+    caseCount: null,
+    description: 'Mental health assessment, therapeutic communication, safety planning, and crisis intervention.',
+    gradientFrom: '#4527a0',
+    gradientTo: '#7b1fa2',
+    status: 'coming-soon',
+  },
+  {
+    slug: 'community',
+    label: 'Community',
+    icon: '🏘️',
+    caseCount: null,
+    description: 'Population-based care, home visits, public health interventions, and social determinants of health.',
+    gradientFrom: '#e65100',
+    gradientTo: '#f57c00',
+    status: 'coming-soon',
+  },
+  {
+    slug: 'leadership',
+    label: 'Leadership',
+    icon: '👩‍⚕️',
+    caseCount: null,
+    description: 'Delegation, priority-setting, conflict resolution, quality improvement, and inter-professional collaboration.',
+    gradientFrom: '#37474f',
+    gradientTo: '#546e7a',
+    status: 'coming-soon',
+  },
+];
+---
+
+<BaseLayout title="Cases" description="Browse simulation cases by discipline.">
+  <div class="breadcrumb">
+    <a href={base}>Home</a>
+    <span>›</span>
+    <span>Cases</span>
+  </div>
+
+  <h1>Simulation Cases by Discipline</h1>
+  <p class="intro-text">
+    The Simulation Learning System organizes clinical cases across seven nursing disciplines.
+    Select a discipline to view its cases.
+  </p>
+
+  <div class="discipline-grid">
+    {disciplines.map((d) => (
+      <a href={`${base}cases/${d.slug}/`} class={`disc-card ${d.status}`}>
+        <div class="disc-card-gradient" style={`background: linear-gradient(135deg, ${d.gradientFrom} 0%, ${d.gradientTo} 100%);`}>
+          <span class="disc-icon">{d.icon}</span>
+          {d.status === 'coming-soon' && <span class="badge-soon">Coming Soon</span>}
+          {d.status === 'available' && d.caseCount && <span class="badge-count">{d.caseCount} cases</span>}
+        </div>
+        <div class="disc-card-body">
+          <h2>{d.label}</h2>
+          <p>{d.description}</p>
+        </div>
+      </a>
+    ))}
+  </div>
+</BaseLayout>
+
+<style>
+  .intro-text {
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+  }
+
+  .discipline-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .disc-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--color-border);
+    text-decoration: none;
+    color: var(--color-text);
+    transition: box-shadow 0.2s, transform 0.2s;
+    background: var(--color-surface);
+  }
+
+  .disc-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-3px);
+    text-decoration: none;
+  }
+
+  .disc-card.coming-soon {
+    opacity: 0.82;
+  }
+
+  .disc-card.coming-soon:hover {
+    opacity: 1;
+  }
+
+  .disc-card-gradient {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+  }
+
+  .disc-icon { font-size: 2.2rem; }
+
+  .badge-count {
+    font-size: 0.78rem;
+    font-weight: 700;
+    background: rgba(255,255,255,0.25);
+    color: #fff;
+    padding: 0.25rem 0.65rem;
+    border-radius: 20px;
+    letter-spacing: 0.04em;
+  }
+
+  .badge-soon {
+    font-size: 0.75rem;
+    font-weight: 700;
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    padding: 0.25rem 0.65rem;
+    border-radius: 20px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .disc-card-body {
+    padding: 1.25rem 1.5rem 1.5rem;
+  }
+
+  .disc-card-body h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    color: var(--color-primary);
+  }
+
+  .disc-card-body p {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 640px) {
+    .discipline-grid { grid-template-columns: 1fr; }
+  }
+</style>

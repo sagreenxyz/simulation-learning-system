@@ -1,0 +1,38 @@
+---
+import CaseLayout from '../../../layouts/CaseLayout.astro';
+---
+
+<CaseLayout
+  scenario="Fundamentals 2"
+  disciplineLabel="Fundamentals"
+  disciplineSlug="fundamentals"
+  category="Older Adult"
+  patient={{ name: "Bernadette Jackson", age: "85 years", gender: "Female" }}
+  scenarioTime="20 – 25 minutes"
+  debriefingTime="20 – 25 minutes"
+  concepts={[
+    "Vital signs",
+    "Assessment",
+    "Older adult",
+    "Urinary elimination",
+    "Medication administration (IV)",
+    "Patient safety",
+    "Patient education",
+    "Documentation and informatics",
+  ]}
+  skills={[
+    "Assess patient and lab results",
+    "Recognize confusion, tachycardia, discomfort, minimal urine output and positive urinalysis as abnormal findings",
+    "Report abnormal findings to provider using SBAR",
+    "Obtain sterile urine sample for culture",
+    "Administer IV antibiotics",
+    "Recognize increased fall risk",
+    "Implement fall risk prevention measures",
+    "Provide patient education and support",
+    "Access and document care in the EHR",
+  ]}
+  presentation="Older adult with polypharmacy-related dehydration and urinary retention is admitted for monitoring, rehydration, and IV antibiotics. Patient experiences acute confusion related to a urinary tract infection."
+  primaryDx="Dehydration"
+  secondaryDx="Urinary retention"
+  primaryChallenge="Learner assesses and implements care for an older adult patient experiencing acute confusion related to a urinary tract infection."
+/>
