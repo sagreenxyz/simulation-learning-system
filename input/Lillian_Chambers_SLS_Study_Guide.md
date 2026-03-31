@@ -1,5 +1,4 @@
 # Lillian Chambers — SLS Nursing Fundamentals Study Guide
-
 ## FUN-12: Postoperative Assessment and Surgical Site Care
 
 ---
