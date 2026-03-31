@@ -1,0 +1,195 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+
+const cases = [
+  {
+    num: '1',
+    patient: 'Alice Morrison',
+    age: '7 yr', gender: 'F',
+    category: 'Pediatric',
+    primaryDx: 'Acute bronchitis',
+    secondaryDx: 'Esophageal atresia with gastrostomy',
+    time: '20 – 25 min',
+    challenge: "Assesses and implements care for a pediatric patient whose G-tube feeding has become disconnected while respecting the mother as the expert on the child's care.",
+  },
+  {
+    num: '2',
+    patient: 'Bernadette Jackson',
+    age: '85 yr', gender: 'F',
+    category: 'Older Adult',
+    primaryDx: 'Dehydration',
+    secondaryDx: 'Urinary retention',
+    time: '20 – 25 min',
+    challenge: 'Assesses and implements care for an older adult patient experiencing acute confusion related to a urinary tract infection.',
+  },
+  {
+    num: '3',
+    patient: 'Samuel Green',
+    age: '75 yr', gender: 'M',
+    category: 'End-of-Life',
+    primaryDx: 'Adenocarcinoma bilateral lungs',
+    secondaryDx: 'Bone and lymph metastasis',
+    time: '20 – 25 min',
+    challenge: "Provides end-of-life and postmortem care while supporting a grieving family in a manner consistent with the patient and family's spiritual beliefs and cultural values.",
+  },
+  {
+    num: '4',
+    patient: 'Jesus Garcia',
+    age: '28 yr', gender: 'M',
+    category: 'GI / Ostomy',
+    primaryDx: 'Dehydration',
+    secondaryDx: 'Ulcerative colitis; status postpartial colectomy with transverse colostomy',
+    time: '20 – 25 min',
+    challenge: "Assesses and manages colostomy care while addressing a patient's issues with body image and sexuality.",
+  },
+  {
+    num: '5',
+    patient: 'Lisa Rae',
+    age: '78 yr', gender: 'F',
+    category: 'Patient Safety',
+    primaryDx: 'Hypotension',
+    secondaryDx: 'Mechanical fall',
+    time: '20 – 30 min',
+    challenge: 'Assesses and implements nursing care for a patient at high risk for falls and pressure ulcer development.',
+  },
+  {
+    num: '6',
+    patient: 'Nancy Gilbert',
+    age: '65 yr', gender: 'F',
+    category: 'Respiratory',
+    primaryDx: 'Pneumonia',
+    secondaryDx: 'Laryngeal cancer, tracheostomy',
+    time: '20 – 25 min',
+    challenge: 'Assesses a patient with moderate respiratory distress and conducts sterile tracheostomy suctioning while maintaining contact isolation precautions.',
+  },
+  {
+    num: '7',
+    patient: 'Carl Rogers',
+    age: '67 yr', gender: 'M',
+    category: 'Diabetes / Wound Care',
+    primaryDx: 'Stage II non-healing ulcer on right heel',
+    secondaryDx: 'Diabetes mellitus type I',
+    time: '20 – 25 min',
+    challenge: 'Assesses, prioritizes, and manages care for a patient with a non-healing foot ulcer and elevated blood glucose level.',
+  },
+];
+---
+
+<BaseLayout title="Fundamentals Cases" description="Fundamentals simulation cases covering core nursing competencies.">
+  <div class="breadcrumb">
+    <a href={base}>Home</a>
+    <span>›</span>
+    <a href={`${base}cases/`}>Cases</a>
+    <span>›</span>
+    <span>Fundamentals</span>
+  </div>
+
+  <div class="discipline-header fundamentals-header">
+    <h1>Fundamentals</h1>
+    <p>Core nursing simulation cases covering foundational clinical skills including assessment,
+    medication administration, wound care, patient safety, and therapeutic communication.</p>
+    <div class="discipline-stats">
+      <span>📋 {cases.length} cases</span>
+      <span>⏱ 20 – 30 min scenarios</span>
+    </div>
+  </div>
+
+  <div class="cases-table-wrap">
+    <table class="cases-table">
+      <thead>
+        <tr>
+          <th>Scenario</th>
+          <th>Patient</th>
+          <th>Focus Area</th>
+          <th>Time</th>
+          <th>Primary Dx</th>
+          <th>Secondary Dx</th>
+          <th>Primary Challenge</th>
+        </tr>
+      </thead>
+      <tbody>
+        {cases.map((c) => (
+          <tr>
+            <td><a href={`${base}cases/fundamentals/${c.num}/`} class="scenario-link">Fundamentals {c.num}</a></td>
+            <td class="patient-cell">{c.patient}<br/><span class="meta-sub">{c.age} · {c.gender}</span></td>
+            <td><span class="card-tag">{c.category}</span></td>
+            <td class="time-cell">⏱ {c.time}</td>
+            <td>{c.primaryDx}</td>
+            <td>{c.secondaryDx}</td>
+            <td class="challenge-cell">{c.challenge}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</BaseLayout>
+
+<style>
+  .discipline-header {
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    color: #fff;
+  }
+
+  .fundamentals-header {
+    background: linear-gradient(135deg, #1a56a4 0%, #2c8a6e 100%);
+  }
+
+  .discipline-header h1 { margin-bottom: 0.5rem; }
+  .discipline-header p { opacity: 0.92; max-width: 640px; margin-bottom: 1rem; }
+
+  .discipline-stats {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    opacity: 0.9;
+  }
+
+  .cases-table-wrap {
+    overflow-x: auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--color-border);
+  }
+
+  .cases-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--color-surface);
+    font-size: 0.9rem;
+  }
+
+  .cases-table thead tr {
+    background: var(--color-primary);
+    color: #fff;
+  }
+
+  .cases-table th {
+    padding: 0.85rem 1rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+  }
+
+  .cases-table td {
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid var(--color-border);
+    vertical-align: top;
+  }
+
+  .cases-table tbody tr:last-child td { border-bottom: none; }
+  .cases-table tbody tr:hover { background: #f0f4ff; }
+
+  .scenario-link { font-weight: 700; color: var(--color-primary); white-space: nowrap; }
+
+  .patient-cell { white-space: nowrap; }
+  .meta-sub { font-size: 0.8rem; color: var(--color-text-muted); }
+  .time-cell { white-space: nowrap; color: var(--color-text-muted); font-size: 0.85rem; }
+  .challenge-cell { max-width: 280px; font-size: 0.85rem; color: var(--color-text-muted); }
+</style>

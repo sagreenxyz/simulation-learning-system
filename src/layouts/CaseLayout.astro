@@ -2,7 +2,9 @@
 import BaseLayout from './BaseLayout.astro';
 
 export interface Props {
-  scenario: string;       // e.g. "Fundamentals 1"
+  scenario: string;
+  disciplineLabel: string;  // e.g. "Fundamentals"
+  disciplineSlug: string;   // e.g. "fundamentals"
   patient: {
     name: string;
     age: string;
@@ -16,11 +18,12 @@ export interface Props {
   primaryDx: string;
   secondaryDx: string;
   primaryChallenge: string;
-  category: string;       // used for the tag pill
+  category: string;
 }
 
 const {
-  scenario, patient, scenarioTime, debriefingTime,
+  scenario, disciplineLabel, disciplineSlug,
+  patient, scenarioTime, debriefingTime,
   concepts, skills, presentation,
   primaryDx, secondaryDx, primaryChallenge, category,
 } = Astro.props;
@@ -33,6 +36,8 @@ const base = import.meta.env.BASE_URL;
     <a href={base}>Home</a>
     <span>›</span>
     <a href={`${base}cases/`}>Cases</a>
+    <span>›</span>
+    <a href={`${base}cases/${disciplineSlug}/`}>{disciplineLabel}</a>
     <span>›</span>
     <span>{scenario}</span>
   </div>
@@ -90,7 +95,7 @@ const base = import.meta.env.BASE_URL;
   </div>
 
   <div style="margin-top: 2rem;">
-    <a href={`${base}cases/`} class="btn btn-back">← Back to Cases</a>
+    <a href={`${base}cases/${disciplineSlug}/`} class="btn btn-back">← Back to {disciplineLabel}</a>
   </div>
 </BaseLayout>
 
