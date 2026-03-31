@@ -3,6 +3,6 @@ import { defineConfig } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://sagreenxyz.github.io',
-  base: '/simulation-learning-system',
+  base: '/simulation-learning-system/',
   output: 'static',
 });

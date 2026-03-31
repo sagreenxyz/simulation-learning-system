@@ -1,0 +1,34 @@
+---
+import CaseLayout from '../../layouts/CaseLayout.astro';
+---
+
+<CaseLayout
+  scenario="Fundamentals 6"
+  category="Respiratory"
+  patient={{ name: "Nancy Gilbert", age: "65 years", gender: "Female" }}
+  scenarioTime="20 – 25 minutes"
+  debriefingTime="20 – 25 minutes"
+  concepts={[
+    "Vital signs",
+    "Assessment",
+    "Infection control",
+    "Oxygenation",
+    "Skin integrity and wound care",
+    "Communication",
+    "Patient education",
+    "Documentation and informatics",
+  ]}
+  skills={[
+    "Assess patient",
+    "Recognize moderate respiratory distress",
+    "Conduct sterile tracheostomy suctioning and dressing care",
+    "Maintain contact isolation precautions",
+    "Utilize therapeutic communication",
+    "Provide patient and family education",
+    "Access and document care in the EHR",
+  ]}
+  presentation="Patient with a history of laryngeal cancer, a permanent tracheostomy, and continuous supplemental oxygen is admitted with pneumonia. Patient is in contact isolation for MRSA in her sputum."
+  primaryDx="Pneumonia"
+  secondaryDx="Laryngeal cancer, tracheostomy"
+  primaryChallenge="Learner assesses a patient with moderate respiratory distress and conducts sterile tracheostomy suctioning while maintaining contact isolation precautions."
+/>

@@ -4,90 +4,79 @@ const base = import.meta.env.BASE_URL;
 
 const cases = [
   {
-    slug: 'acute-myocardial-infarction',
-    title: 'Acute Myocardial Infarction',
-    category: 'Cardiac',
-    difficulty: 'Intermediate',
-    duration: '45 min',
-    description: 'A 58-year-old male presents with crushing chest pain radiating to the left arm. Practice rapid assessment, 12-lead ECG interpretation, and STEMI management protocols.',
-    tags: ['Emergency', 'ACLS', 'ECG'],
-  },
-  {
-    slug: 'respiratory-distress',
-    title: 'Acute Respiratory Distress',
-    category: 'Respiratory',
-    difficulty: 'Advanced',
-    duration: '40 min',
-    description: 'A 72-year-old female with known COPD experiences sudden deterioration in respiratory status. Focus on assessment, oxygen therapy, and airway management.',
-    tags: ['Critical Care', 'Airway', 'COPD'],
-  },
-  {
-    slug: 'polytrauma',
-    title: 'Polytrauma Assessment',
-    category: 'Trauma',
-    difficulty: 'Advanced',
-    duration: '60 min',
-    description: 'Multi-system trauma following a high-speed motor vehicle collision. Practice primary and secondary survey, hemorrhage control, and team communication.',
-    tags: ['Trauma', 'ATLS', 'Hemorrhage'],
-  },
-  {
-    slug: 'pediatric-sepsis',
-    title: 'Pediatric Sepsis',
+    slug: 'fundamentals-1',
+    scenario: 'Fundamentals 1',
+    patient: 'Alice Morrison · 7 yr · F',
     category: 'Pediatric',
-    difficulty: 'Intermediate',
-    duration: '45 min',
-    description: 'A 4-year-old presents with fever, tachycardia, and altered mental status. Apply sepsis recognition and surviving sepsis bundle care in a pediatric patient.',
-    tags: ['Pediatrics', 'Sepsis', 'Critical Care'],
+    scenarioTime: '20 – 25 min',
+    primaryDx: 'Acute bronchitis',
+    secondaryDx: 'Esophageal atresia with gastrostomy',
+    challenge: 'Learner assesses and implements care for a pediatric patient whose G-tube feeding has become disconnected while respecting the mother as the expert on the child\'s care.',
   },
   {
-    slug: 'acute-stroke',
-    title: 'Acute Ischemic Stroke',
-    category: 'Neurological',
-    difficulty: 'Intermediate',
-    duration: '45 min',
-    description: 'A 65-year-old presents with sudden onset facial droop and arm weakness. Time-critical decision-making for tPA candidacy and stroke team activation.',
-    tags: ['Emergency', 'Neurology', 'tPA'],
+    slug: 'fundamentals-2',
+    scenario: 'Fundamentals 2',
+    patient: 'Bernadette Jackson · 85 yr · F',
+    category: 'Older Adult',
+    scenarioTime: '20 – 25 min',
+    primaryDx: 'Dehydration',
+    secondaryDx: 'Urinary retention',
+    challenge: 'Learner assesses and implements care for an older adult patient experiencing acute confusion related to a urinary tract infection.',
   },
   {
-    slug: 'postpartum-hemorrhage',
-    title: 'Postpartum Hemorrhage',
-    category: 'Obstetric',
-    difficulty: 'Advanced',
-    duration: '50 min',
-    description: 'A 28-year-old G2P2 patient with excessive bleeding following vaginal delivery. Manage obstetric emergency with a multidisciplinary team approach.',
-    tags: ['OB/GYN', 'Hemorrhage', 'Teamwork'],
+    slug: 'fundamentals-3',
+    scenario: 'Fundamentals 3',
+    patient: 'Samuel Green · 75 yr · M',
+    category: 'End-of-Life',
+    scenarioTime: '20 – 25 min',
+    primaryDx: 'Adenocarcinoma bilateral lungs',
+    secondaryDx: 'Bone and lymph metastasis',
+    challenge: 'Learner provides end-of-life and postmortem care while supporting a grieving family in a manner consistent with the patient and family\'s spiritual beliefs and cultural values.',
   },
   {
-    slug: 'anaphylaxis',
-    title: 'Anaphylaxis Management',
-    category: 'Allergy/Immunology',
-    difficulty: 'Beginner',
-    duration: '30 min',
-    description: 'A 32-year-old patient develops urticaria, angioedema, and hypotension following antibiotic administration. Recognize and treat anaphylaxis promptly.',
-    tags: ['Emergency', 'Allergy', 'Epinephrine'],
+    slug: 'fundamentals-4',
+    scenario: 'Fundamentals 4',
+    patient: 'Jesus Garcia · 28 yr · M',
+    category: 'GI / Ostomy',
+    scenarioTime: '20 – 25 min',
+    primaryDx: 'Dehydration',
+    secondaryDx: 'Ulcerative colitis; status postpartial colectomy with transverse colostomy',
+    challenge: 'Learner assesses and manages colostomy care while addressing a patient\'s issues with body image and sexuality.',
   },
   {
-    slug: 'diabetic-ketoacidosis',
-    title: 'Diabetic Ketoacidosis',
-    category: 'Endocrine',
-    difficulty: 'Intermediate',
-    duration: '45 min',
-    description: 'A 22-year-old with Type 1 diabetes presents with nausea, vomiting, and confusion. Manage DKA including fluid resuscitation and insulin therapy.',
-    tags: ['Endocrine', 'Fluids', 'Insulin'],
+    slug: 'fundamentals-5',
+    scenario: 'Fundamentals 5',
+    patient: 'Lisa Rae · 78 yr · F',
+    category: 'Patient Safety',
+    scenarioTime: '20 – 30 min',
+    primaryDx: 'Hypotension',
+    secondaryDx: 'Mechanical fall',
+    challenge: 'Learner assesses and implements nursing care for a patient at high risk for falls and pressure ulcer development.',
   },
   {
-    slug: 'acute-liver-failure',
-    title: 'Acute Liver Failure',
-    category: 'Gastrointestinal',
-    difficulty: 'Advanced',
-    duration: '55 min',
-    description: 'A 45-year-old presents with jaundice, coagulopathy, and encephalopathy following acetaminophen overdose. Manage acute liver failure and multiorgan complications.',
-    tags: ['GI', 'Toxicology', 'Critical Care'],
+    slug: 'fundamentals-6',
+    scenario: 'Fundamentals 6',
+    patient: 'Nancy Gilbert · 65 yr · F',
+    category: 'Respiratory',
+    scenarioTime: '20 – 25 min',
+    primaryDx: 'Pneumonia',
+    secondaryDx: 'Laryngeal cancer, tracheostomy',
+    challenge: 'Learner assesses a patient with moderate respiratory distress and conducts sterile tracheostomy suctioning while maintaining contact isolation precautions.',
+  },
+  {
+    slug: 'fundamentals-7',
+    scenario: 'Fundamentals 7',
+    patient: 'Carl Rogers · 67 yr · M',
+    category: 'Diabetes / Wound Care',
+    scenarioTime: '20 – 25 min',
+    primaryDx: 'Stage II non-healing ulcer on right heel',
+    secondaryDx: 'Diabetes mellitus type I',
+    challenge: 'Learner assesses, prioritizes, and manages care for a patient with a non-healing foot ulcer and elevated blood glucose level.',
   },
 ];
 ---
 
-<BaseLayout title="Cases" description="Browse all simulation learning cases.">
+<BaseLayout title="Cases" description="Browse all Fundamentals simulation learning cases.">
   <div class="breadcrumb">
     <a href={base}>Home</a>
     <span>›</span>
@@ -96,23 +85,105 @@ const cases = [
 
   <h1>Simulation Cases</h1>
   <p style="color: var(--color-text-muted); margin-bottom: 2rem;">
-    Browse our library of clinical simulation cases across multiple specialties and difficulty levels.
+    Browse the Fundamentals series of clinical simulation cases covering a range of essential
+    nursing competencies across multiple patient populations.
   </p>
 
-  <div class="card-grid">
-    {cases.map((c) => (
-      <div class="card">
-        <span class="card-tag">{c.category}</span>
-        <h3><a href={`${base}cases/${c.slug}/`}>{c.title}</a></h3>
-        <p>{c.description}</p>
-        <div class="case-meta" style="margin-top: 1rem;">
-          <span>⏱ {c.duration}</span>
-          <span>📊 {c.difficulty}</span>
-        </div>
-        <div class="tags">
-          {c.tags.map((t) => <span class="tag">{t}</span>)}
-        </div>
-      </div>
-    ))}
+  <div class="cases-table-wrap">
+    <table class="cases-table">
+      <thead>
+        <tr>
+          <th>Scenario</th>
+          <th>Patient</th>
+          <th>Category</th>
+          <th>Time</th>
+          <th>Primary Dx</th>
+          <th>Secondary Dx</th>
+          <th>Primary Challenge</th>
+        </tr>
+      </thead>
+      <tbody>
+        {cases.map((c) => (
+          <tr>
+            <td><a href={`${base}cases/${c.slug}/`} class="scenario-link">{c.scenario}</a></td>
+            <td class="patient-cell">{c.patient}</td>
+            <td><span class="card-tag">{c.category}</span></td>
+            <td class="time-cell">⏱ {c.scenarioTime}</td>
+            <td>{c.primaryDx}</td>
+            <td>{c.secondaryDx}</td>
+            <td class="challenge-cell">{c.challenge}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
   </div>
 </BaseLayout>
+
+<style>
+  .cases-table-wrap {
+    overflow-x: auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--color-border);
+  }
+
+  .cases-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--color-surface);
+    font-size: 0.9rem;
+  }
+
+  .cases-table thead tr {
+    background: var(--color-primary);
+    color: #fff;
+  }
+
+  .cases-table th {
+    padding: 0.85rem 1rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+  }
+
+  .cases-table td {
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid var(--color-border);
+    vertical-align: top;
+  }
+
+  .cases-table tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  .cases-table tbody tr:hover {
+    background: #f0f4ff;
+  }
+
+  .scenario-link {
+    font-weight: 700;
+    color: var(--color-primary);
+    white-space: nowrap;
+  }
+
+  .patient-cell {
+    white-space: nowrap;
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+  }
+
+  .time-cell {
+    white-space: nowrap;
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+  }
+
+  .challenge-cell {
+    max-width: 280px;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+  }
+</style>

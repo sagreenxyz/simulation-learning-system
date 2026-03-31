@@ -1,0 +1,31 @@
+---
+import CaseLayout from '../../layouts/CaseLayout.astro';
+---
+
+<CaseLayout
+  scenario="Fundamentals 7"
+  category="Diabetes / Wound Care"
+  patient={{ name: "Carl Rogers", age: "67 years", gender: "Male" }}
+  scenarioTime="20 – 25 minutes"
+  debriefingTime="20 – 25 minutes"
+  concepts={[
+    "Assessment",
+    "Skin and wound care",
+    "Diabetes management",
+    "Medication administration (SQ)",
+    "Patient education",
+    "Documentation and informatics",
+  ]}
+  skills={[
+    "Receive report including current blood glucose level",
+    "Assess patient",
+    "Administer SQ insulin according to scheduled dose plus correction scale order",
+    "Conduct wound care per order",
+    "Provide patient education and support",
+    "Access and document care in the EHR",
+  ]}
+  presentation="Patient with a history of type I diabetes mellitus and a stage II non-healing foot ulcer is admitted for diabetic management and wound care."
+  primaryDx="Stage II non-healing ulcer on right heel"
+  secondaryDx="Diabetes mellitus type I"
+  primaryChallenge="Learner assesses, prioritizes, and manages care for a patient with a non-healing foot ulcer and elevated blood glucose level."
+/>

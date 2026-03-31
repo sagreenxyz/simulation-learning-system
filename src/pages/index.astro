@@ -1,93 +1,108 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 const base = import.meta.env.BASE_URL;
+
+const featuredCases = [
+  {
+    slug: 'fundamentals-1',
+    scenario: 'Fundamentals 1',
+    patient: 'Alice Morrison · 7 yr · F',
+    category: 'Pediatric',
+    challenge: 'Assesses and implements care for a pediatric patient whose G-tube feeding has become disconnected while respecting the mother as the expert on the child\'s care.',
+  },
+  {
+    slug: 'fundamentals-2',
+    scenario: 'Fundamentals 2',
+    patient: 'Bernadette Jackson · 85 yr · F',
+    category: 'Older Adult',
+    challenge: 'Assesses and implements care for an older adult patient experiencing acute confusion related to a urinary tract infection.',
+  },
+  {
+    slug: 'fundamentals-3',
+    scenario: 'Fundamentals 3',
+    patient: 'Samuel Green · 75 yr · M',
+    category: 'End-of-Life',
+    challenge: 'Provides end-of-life and postmortem care while supporting a grieving family consistent with the patient and family\'s spiritual beliefs and cultural values.',
+  },
+  {
+    slug: 'fundamentals-4',
+    scenario: 'Fundamentals 4',
+    patient: 'Jesus Garcia · 28 yr · M',
+    category: 'GI / Ostomy',
+    challenge: 'Assesses and manages colostomy care while addressing a patient\'s issues with body image and sexuality.',
+  },
+  {
+    slug: 'fundamentals-5',
+    scenario: 'Fundamentals 5',
+    patient: 'Lisa Rae · 78 yr · F',
+    category: 'Patient Safety',
+    challenge: 'Assesses and implements nursing care for a patient at high risk for falls and pressure ulcer development.',
+  },
+  {
+    slug: 'fundamentals-6',
+    scenario: 'Fundamentals 6',
+    patient: 'Nancy Gilbert · 65 yr · F',
+    category: 'Respiratory',
+    challenge: 'Assesses a patient with moderate respiratory distress and conducts sterile tracheostomy suctioning while maintaining contact isolation precautions.',
+  },
+  {
+    slug: 'fundamentals-7',
+    scenario: 'Fundamentals 7',
+    patient: 'Carl Rogers · 67 yr · M',
+    category: 'Diabetes / Wound Care',
+    challenge: 'Assesses, prioritizes, and manages care for a patient with a non-healing foot ulcer and elevated blood glucose level.',
+  },
+];
 ---
 
 <BaseLayout title="Home">
   <section class="hero">
     <h1>Simulation Learning System</h1>
     <p>
-      A comprehensive repository of cases designed to build clinical reasoning,
-      critical thinking, and decision-making skills through realistic simulation
-      scenarios.
+      A comprehensive repository of clinical simulation cases designed to build assessment
+      skills, clinical reasoning, and professional communication across essential nursing
+      competencies.
     </p>
     <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-      <a href={`${base}cases/`} class="btn btn-primary">Browse Cases</a>
+      <a href={`${base}cases/`} class="btn btn-primary">Browse All Cases</a>
       <a href={`${base}about/`} class="btn btn-outline">About the System</a>
     </div>
   </section>
 
-  <h2 class="section-title">Featured Cases</h2>
+  <h2 class="section-title">Fundamentals Series</h2>
   <div class="card-grid">
-    <div class="card">
-      <span class="card-tag">Cardiac</span>
-      <h3><a href={`${base}cases/acute-myocardial-infarction/`}>Acute Myocardial Infarction</a></h3>
-      <p>A 58-year-old male presents with crushing chest pain. Practice rapid assessment and STEMI management protocols.</p>
-      <div class="tags">
-        <span class="tag">Intermediate</span>
-        <span class="tag">Emergency</span>
+    {featuredCases.map((c) => (
+      <div class="card">
+        <span class="card-tag">{c.category}</span>
+        <h3><a href={`${base}cases/${c.slug}/`}>{c.scenario}</a></h3>
+        <p class="patient-meta">{c.patient}</p>
+        <p>{c.challenge}</p>
       </div>
-    </div>
-    <div class="card">
-      <span class="card-tag">Respiratory</span>
-      <h3><a href={`${base}cases/respiratory-distress/`}>Acute Respiratory Distress</a></h3>
-      <p>A 72-year-old female with COPD experiences sudden deterioration in respiratory status. Focus on airway management.</p>
-      <div class="tags">
-        <span class="tag">Advanced</span>
-        <span class="tag">Critical Care</span>
-      </div>
-    </div>
-    <div class="card">
-      <span class="card-tag">Trauma</span>
-      <h3><a href={`${base}cases/polytrauma/`}>Polytrauma Assessment</a></h3>
-      <p>Multi-system trauma following a motor vehicle collision. Practice primary and secondary survey techniques.</p>
-      <div class="tags">
-        <span class="tag">Advanced</span>
-        <span class="tag">Trauma</span>
-      </div>
-    </div>
-    <div class="card">
-      <span class="card-tag">Pediatric</span>
-      <h3><a href={`${base}cases/pediatric-sepsis/`}>Pediatric Sepsis</a></h3>
-      <p>A 4-year-old presents with fever, tachycardia, and altered mental status. Apply sepsis recognition and bundle care.</p>
-      <div class="tags">
-        <span class="tag">Intermediate</span>
-        <span class="tag">Pediatrics</span>
-      </div>
-    </div>
-    <div class="card">
-      <span class="card-tag">Neurological</span>
-      <h3><a href={`${base}cases/acute-stroke/`}>Acute Ischemic Stroke</a></h3>
-      <p>A 65-year-old with sudden onset facial droop and arm weakness. Time-critical decision-making for thrombolytic therapy.</p>
-      <div class="tags">
-        <span class="tag">Intermediate</span>
-        <span class="tag">Emergency</span>
-      </div>
-    </div>
-    <div class="card">
-      <span class="card-tag">Obstetric</span>
-      <h3><a href={`${base}cases/postpartum-hemorrhage/`}>Postpartum Hemorrhage</a></h3>
-      <p>A 28-year-old G2P2 patient with excessive bleeding following delivery. Manage obstetric emergency with a team-based approach.</p>
-      <div class="tags">
-        <span class="tag">Advanced</span>
-        <span class="tag">OB/GYN</span>
-      </div>
-    </div>
+    ))}
   </div>
 
-  <h2 class="section-title">System Overview</h2>
+  <h2 class="section-title">About This System</h2>
   <div class="card-grid">
     <div class="card">
-      <h3>🎯 Learning Objectives</h3>
-      <p>Each case is structured around defined learning objectives aligned with clinical competency frameworks.</p>
+      <h3>🎯 Clear Learning Objectives</h3>
+      <p>Each case is anchored to specific scenario concepts and measurable clinical skills.</p>
     </div>
     <div class="card">
-      <h3>📋 Structured Debriefs</h3>
-      <p>Post-simulation debriefing guides help facilitators lead evidence-based reflective discussions.</p>
+      <h3>📋 Structured Scenarios</h3>
+      <p>Consistent case format covering patient data, concepts, skills, diagnoses, and primary challenge.</p>
     </div>
     <div class="card">
-      <h3>📊 Performance Metrics</h3>
-      <p>Embedded assessment tools measure key clinical and communication competencies during each scenario.</p>
+      <h3>💬 Debriefing Support</h3>
+      <p>Each case includes scenario and debriefing time allocations to support post-simulation reflection.</p>
     </div>
   </div>
 </BaseLayout>
+
+<style>
+  .patient-meta {
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
+    margin-bottom: 0.5rem;
+    font-style: italic;
+  }
+</style>
