@@ -119,14 +119,135 @@ const base = import.meta.env.BASE_URL;
   <div class="phase-connector">⬇ As you complete your safety sweep, Ms. Rae begins sharing what happened at home…</div>
 
   <!-- ══════════════════════════════════════════════════════════════════════
-       PHASE 2 — HISTORY & CAUSE CHAIN (placeholder — next commit)
+       PHASE 2 — HISTORY & MEDICATION CAUSE CHAIN
   ══════════════════════════════════════════════════════════════════════ -->
   <div class="phase-card" id="phase2">
     <div class="phase-header">
       <span class="phase-badge">Phase 2</span>
       <h2>History &amp; Medication Cause Chain</h2>
     </div>
-    <p class="phase-intro"><em>Coming soon — Phase 2 content will appear here.</em></p>
+
+    <p class="phase-intro">
+      You sit with Ms. Rae and gather a focused history. She is alert and cooperative, though slightly anxious about being in the hospital.
+    </p>
+
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>🗣 History from Ms. Rae</h3>
+        <ul>
+          <li>Lives alone in a single-story home; uses a <strong>cane</strong> for ambulation since a fall 3 months ago</li>
+          <li>This morning she got up from bed to use the bathroom and felt <strong>"very dizzy and lightheaded"</strong></li>
+          <li>Lost her balance in the hallway and fell, landing on her right side</li>
+          <li>She denies hitting her head; denies loss of consciousness</li>
+          <li>When asked about her medications, she pauses: <em>"Oh no — I think I took my water pill twice this morning. I forgot I'd already taken it."</em></li>
+          <li>Has been on HCTZ for 3 years; this is the first time she has doubled the dose</li>
+          <li>Reports her urine has been "very pale and a lot" since the double dose this morning</li>
+          <li>Prior fall 3 months ago was also related to dizziness when getting up quickly</li>
+        </ul>
+      </div>
+      <div class="info-block">
+        <h3>⚠️ Medication Alert — HCTZ Double Dose</h3>
+        <div class="callout callout-danger">
+          <p><strong>Hydrochlorothiazide (HCTZ) 25 mg</strong> is a thiazide diuretic used to treat hypertension. A double dose causes:</p>
+          <ul style="margin-top: 0.5rem;">
+            <li>Excessive urinary output → rapid volume depletion</li>
+            <li>Decreased intravascular volume → low blood pressure</li>
+            <li>Orthostatic hypotension — worst when changing position (lying → sitting → standing)</li>
+            <li>Electrolyte losses: hypokalemia (low K⁺), hyponatremia (low Na⁺)</li>
+            <li>Risk of falls, syncope, and acute kidney injury in the elderly</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h3>🔗 The Cause Chain — Connecting the Dots</h3>
+    <div class="chain-flow">
+      <div class="chain-step chain-step-drug">
+        <span class="chain-icon">💊</span>
+        <strong>HCTZ 25 mg × 2 (double dose)</strong>
+        <small>Thiazide diuretic — accidentally doubled this morning</small>
+      </div>
+      <div class="chain-arrow">↓</div>
+      <div class="chain-step chain-step-problem">
+        <span class="chain-icon">💧</span>
+        <strong>Excessive Diuresis → Volume Depletion</strong>
+        <small>More urine than normal → circulating blood volume drops</small>
+      </div>
+      <div class="chain-arrow">↓</div>
+      <div class="chain-step chain-step-problem">
+        <span class="chain-icon">📉</span>
+        <strong>Orthostatic Hypotension</strong>
+        <small>BP drops sharply when rising from bed → dizziness</small>
+      </div>
+      <div class="chain-arrow">↓</div>
+      <div class="chain-step chain-step-consequence">
+        <span class="chain-icon">🚨</span>
+        <strong>Mechanical Fall → Injury + Hospitalization</strong>
+        <small>Right hip bruising · forearm laceration · skin integrity at risk</small>
+      </div>
+    </div>
+
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: What is orthostatic hypotension, and why are older adults especially vulnerable?</summary>
+      <div class="reveal-content">
+        <p><strong>Orthostatic (postural) hypotension</strong> is defined as a drop in systolic BP ≥ 20 mmHg or diastolic BP ≥ 10 mmHg within 3 minutes of standing from a sitting or lying position.</p>
+        <p><strong>Why elderly patients are at increased risk:</strong></p>
+        <ul>
+          <li><strong>Blunted baroreceptor reflex</strong> — aging impairs the body's ability to quickly compensate for positional BP changes</li>
+          <li><strong>Reduced arterial elasticity</strong> — vessels are stiffer and cannot dilate/constrict as rapidly</li>
+          <li><strong>Polypharmacy</strong> — diuretics, antihypertensives, and sedatives all compound the effect</li>
+          <li><strong>Dehydration</strong> — baseline fluid intake is often lower in the elderly; kidneys are less efficient</li>
+          <li><strong>Prolonged bed rest</strong> — even short periods reduce cardiovascular conditioning</li>
+        </ul>
+        <p><strong>Nursing implication:</strong> Always check orthostatic vital signs before assisting Ms. Rae out of bed. Teach "dangle before standing" — sit at edge of bed for 1–2 minutes before rising.</p>
+      </div>
+    </details>
+
+    <details class="reveal-block">
+      <summary>▶ Pre-Sim Q: What intrinsic and extrinsic risk factors for falls does Ms. Rae have?</summary>
+      <div class="reveal-content">
+        <div class="compare-grid">
+          <div>
+            <h4>Intrinsic (Patient-Related) Risk Factors</h4>
+            <ul>
+              <li>Advanced age (78 years)</li>
+              <li>History of falls (fall 3 months ago)</li>
+              <li>Orthostatic hypotension from medication error</li>
+              <li>Urinary incontinence — urgency to reach bathroom quickly</li>
+              <li>Osteoporosis — increased injury severity if fall occurs</li>
+              <li>Gait and balance changes of aging</li>
+              <li>Diuretic use (HCTZ) — increases urgency and nighttime toileting</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Extrinsic (Environmental) Risk Factors</h4>
+            <ul>
+              <li>Getting up alone at night without assistance</li>
+              <li>Hospital environment — unfamiliar layout</li>
+              <li>IV tubing, Foley catheter tubing on floor</li>
+              <li>Meal tray table blocking bathroom path</li>
+              <li>Call light out of reach</li>
+              <li>Bed in elevated position</li>
+              <li>Absence of non-skid footwear</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <!-- connector -->
+  <div class="phase-connector">⬇ You begin your head-to-toe assessment…</div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       PHASE 3 — ASSESSMENT FINDINGS (placeholder)
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card" id="phase3">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 3</span>
+      <h2>Assessment Findings</h2>
+    </div>
+    <p class="phase-intro"><em>Coming soon — Phase 3 content will appear here.</em></p>
   </div>
 
   <!-- Back button -->
