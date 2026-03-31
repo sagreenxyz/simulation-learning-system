@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title="Home">
+  <section class="hero">
+    <h1>Simulation Learning System</h1>
+    <p>
+      A comprehensive repository of cases designed to build clinical reasoning,
+      critical thinking, and decision-making skills through realistic simulation
+      scenarios.
+    </p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <a href={`${base}cases/`} class="btn btn-primary">Browse Cases</a>
+      <a href={`${base}about/`} class="btn btn-outline">About the System</a>
+    </div>
+  </section>
+
+  <h2 class="section-title">Featured Cases</h2>
+  <div class="card-grid">
+    <div class="card">
+      <span class="card-tag">Cardiac</span>
+      <h3><a href={`${base}cases/acute-myocardial-infarction/`}>Acute Myocardial Infarction</a></h3>
+      <p>A 58-year-old male presents with crushing chest pain. Practice rapid assessment and STEMI management protocols.</p>
+      <div class="tags">
+        <span class="tag">Intermediate</span>
+        <span class="tag">Emergency</span>
+      </div>
+    </div>
+    <div class="card">
+      <span class="card-tag">Respiratory</span>
+      <h3><a href={`${base}cases/respiratory-distress/`}>Acute Respiratory Distress</a></h3>
+      <p>A 72-year-old female with COPD experiences sudden deterioration in respiratory status. Focus on airway management.</p>
+      <div class="tags">
+        <span class="tag">Advanced</span>
+        <span class="tag">Critical Care</span>
+      </div>
+    </div>
+    <div class="card">
+      <span class="card-tag">Trauma</span>
+      <h3><a href={`${base}cases/polytrauma/`}>Polytrauma Assessment</a></h3>
+      <p>Multi-system trauma following a motor vehicle collision. Practice primary and secondary survey techniques.</p>
+      <div class="tags">
+        <span class="tag">Advanced</span>
+        <span class="tag">Trauma</span>
+      </div>
+    </div>
+    <div class="card">
+      <span class="card-tag">Pediatric</span>
+      <h3><a href={`${base}cases/pediatric-sepsis/`}>Pediatric Sepsis</a></h3>
+      <p>A 4-year-old presents with fever, tachycardia, and altered mental status. Apply sepsis recognition and bundle care.</p>
+      <div class="tags">
+        <span class="tag">Intermediate</span>
+        <span class="tag">Pediatrics</span>
+      </div>
+    </div>
+    <div class="card">
+      <span class="card-tag">Neurological</span>
+      <h3><a href={`${base}cases/acute-stroke/`}>Acute Ischemic Stroke</a></h3>
+      <p>A 65-year-old with sudden onset facial droop and arm weakness. Time-critical decision-making for thrombolytic therapy.</p>
+      <div class="tags">
+        <span class="tag">Intermediate</span>
+        <span class="tag">Emergency</span>
+      </div>
+    </div>
+    <div class="card">
+      <span class="card-tag">Obstetric</span>
+      <h3><a href={`${base}cases/postpartum-hemorrhage/`}>Postpartum Hemorrhage</a></h3>
+      <p>A 28-year-old G2P2 patient with excessive bleeding following delivery. Manage obstetric emergency with a team-based approach.</p>
+      <div class="tags">
+        <span class="tag">Advanced</span>
+        <span class="tag">OB/GYN</span>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="section-title">System Overview</h2>
+  <div class="card-grid">
+    <div class="card">
+      <h3>🎯 Learning Objectives</h3>
+      <p>Each case is structured around defined learning objectives aligned with clinical competency frameworks.</p>
+    </div>
+    <div class="card">
+      <h3>📋 Structured Debriefs</h3>
+      <p>Post-simulation debriefing guides help facilitators lead evidence-based reflective discussions.</p>
+    </div>
+    <div class="card">
+      <h3>📊 Performance Metrics</h3>
+      <p>Embedded assessment tools measure key clinical and communication competencies during each scenario.</p>
+    </div>
+  </div>
+</BaseLayout>

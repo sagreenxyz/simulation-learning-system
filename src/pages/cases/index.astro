@@ -1,0 +1,118 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+
+const cases = [
+  {
+    slug: 'acute-myocardial-infarction',
+    title: 'Acute Myocardial Infarction',
+    category: 'Cardiac',
+    difficulty: 'Intermediate',
+    duration: '45 min',
+    description: 'A 58-year-old male presents with crushing chest pain radiating to the left arm. Practice rapid assessment, 12-lead ECG interpretation, and STEMI management protocols.',
+    tags: ['Emergency', 'ACLS', 'ECG'],
+  },
+  {
+    slug: 'respiratory-distress',
+    title: 'Acute Respiratory Distress',
+    category: 'Respiratory',
+    difficulty: 'Advanced',
+    duration: '40 min',
+    description: 'A 72-year-old female with known COPD experiences sudden deterioration in respiratory status. Focus on assessment, oxygen therapy, and airway management.',
+    tags: ['Critical Care', 'Airway', 'COPD'],
+  },
+  {
+    slug: 'polytrauma',
+    title: 'Polytrauma Assessment',
+    category: 'Trauma',
+    difficulty: 'Advanced',
+    duration: '60 min',
+    description: 'Multi-system trauma following a high-speed motor vehicle collision. Practice primary and secondary survey, hemorrhage control, and team communication.',
+    tags: ['Trauma', 'ATLS', 'Hemorrhage'],
+  },
+  {
+    slug: 'pediatric-sepsis',
+    title: 'Pediatric Sepsis',
+    category: 'Pediatric',
+    difficulty: 'Intermediate',
+    duration: '45 min',
+    description: 'A 4-year-old presents with fever, tachycardia, and altered mental status. Apply sepsis recognition and surviving sepsis bundle care in a pediatric patient.',
+    tags: ['Pediatrics', 'Sepsis', 'Critical Care'],
+  },
+  {
+    slug: 'acute-stroke',
+    title: 'Acute Ischemic Stroke',
+    category: 'Neurological',
+    difficulty: 'Intermediate',
+    duration: '45 min',
+    description: 'A 65-year-old presents with sudden onset facial droop and arm weakness. Time-critical decision-making for tPA candidacy and stroke team activation.',
+    tags: ['Emergency', 'Neurology', 'tPA'],
+  },
+  {
+    slug: 'postpartum-hemorrhage',
+    title: 'Postpartum Hemorrhage',
+    category: 'Obstetric',
+    difficulty: 'Advanced',
+    duration: '50 min',
+    description: 'A 28-year-old G2P2 patient with excessive bleeding following vaginal delivery. Manage obstetric emergency with a multidisciplinary team approach.',
+    tags: ['OB/GYN', 'Hemorrhage', 'Teamwork'],
+  },
+  {
+    slug: 'anaphylaxis',
+    title: 'Anaphylaxis Management',
+    category: 'Allergy/Immunology',
+    difficulty: 'Beginner',
+    duration: '30 min',
+    description: 'A 32-year-old patient develops urticaria, angioedema, and hypotension following antibiotic administration. Recognize and treat anaphylaxis promptly.',
+    tags: ['Emergency', 'Allergy', 'Epinephrine'],
+  },
+  {
+    slug: 'diabetic-ketoacidosis',
+    title: 'Diabetic Ketoacidosis',
+    category: 'Endocrine',
+    difficulty: 'Intermediate',
+    duration: '45 min',
+    description: 'A 22-year-old with Type 1 diabetes presents with nausea, vomiting, and confusion. Manage DKA including fluid resuscitation and insulin therapy.',
+    tags: ['Endocrine', 'Fluids', 'Insulin'],
+  },
+  {
+    slug: 'acute-liver-failure',
+    title: 'Acute Liver Failure',
+    category: 'Gastrointestinal',
+    difficulty: 'Advanced',
+    duration: '55 min',
+    description: 'A 45-year-old presents with jaundice, coagulopathy, and encephalopathy following acetaminophen overdose. Manage acute liver failure and multiorgan complications.',
+    tags: ['GI', 'Toxicology', 'Critical Care'],
+  },
+];
+---
+
+<BaseLayout title="Cases" description="Browse all simulation learning cases.">
+  <div class="breadcrumb">
+    <a href={base}>Home</a>
+    <span>›</span>
+    <span>Cases</span>
+  </div>
+
+  <h1>Simulation Cases</h1>
+  <p style="color: var(--color-text-muted); margin-bottom: 2rem;">
+    Browse our library of clinical simulation cases across multiple specialties and difficulty levels.
+  </p>
+
+  <div class="card-grid">
+    {cases.map((c) => (
+      <div class="card">
+        <span class="card-tag">{c.category}</span>
+        <h3><a href={`${base}cases/${c.slug}/`}>{c.title}</a></h3>
+        <p>{c.description}</p>
+        <div class="case-meta" style="margin-top: 1rem;">
+          <span>⏱ {c.duration}</span>
+          <span>📊 {c.difficulty}</span>
+        </div>
+        <div class="tags">
+          {c.tags.map((t) => <span class="tag">{t}</span>)}
+        </div>
+      </div>
+    ))}
+  </div>
+</BaseLayout>

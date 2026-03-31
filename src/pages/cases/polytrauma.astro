@@ -1,0 +1,115 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title="Polytrauma Assessment" description="Simulation case for polytrauma assessment and management.">
+  <div class="breadcrumb">
+    <a href={base}>Home</a>
+    <span>›</span>
+    <a href={`${base}cases/`}>Cases</a>
+    <span>›</span>
+    <span>Polytrauma Assessment</span>
+  </div>
+
+  <div class="case-header">
+    <span class="card-tag">Trauma</span>
+    <h1>Polytrauma Assessment</h1>
+    <div class="case-meta">
+      <span>⏱ Duration: 60 minutes</span>
+      <span>📊 Difficulty: Advanced</span>
+      <span>👥 Team Size: 4–6</span>
+      <span>🏥 Setting: Trauma Bay / ED</span>
+    </div>
+    <div class="tags" style="margin-top:1rem;">
+      <span class="tag">Trauma</span>
+      <span class="tag">ATLS</span>
+      <span class="tag">Hemorrhage</span>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>Case Overview</h2>
+    <p>
+      A 35-year-old male, Mr. Derek Owens, is brought in by EMS following a high-speed motor
+      vehicle collision. He was the unrestrained driver. EMS reports the vehicle sustained
+      significant front-end damage with airbag deployment.
+    </p>
+    <p>
+      Learners must apply ATLS principles to perform a rapid primary survey using the ABCDE
+      approach, identify and manage life-threatening injuries (tension pneumothorax, hemorrhagic
+      shock), and complete a thorough secondary survey.
+    </p>
+  </div>
+
+  <div class="content-section">
+    <h2>Patient Information</h2>
+    <ul>
+      <li><strong>Name:</strong> Derek Owens</li>
+      <li><strong>Age:</strong> 35 years</li>
+      <li><strong>Gender:</strong> Male</li>
+      <li><strong>Weight:</strong> 80 kg</li>
+      <li><strong>PMH:</strong> None known</li>
+      <li><strong>Medications:</strong> None</li>
+      <li><strong>Allergies:</strong> Unknown</li>
+    </ul>
+  </div>
+
+  <div class="content-section">
+    <h2>Initial Vital Signs</h2>
+    <ul>
+      <li><strong>BP:</strong> 88/60 mmHg</li>
+      <li><strong>HR:</strong> 132 bpm (weak, thready)</li>
+      <li><strong>RR:</strong> 28 breaths/min (labored)</li>
+      <li><strong>SpO₂:</strong> 88% on high-flow O₂</li>
+      <li><strong>Temp:</strong> 35.8°C</li>
+      <li><strong>GCS:</strong> 10 (E3V3M4)</li>
+    </ul>
+  </div>
+
+  <div class="content-section">
+    <h2>Learning Objectives</h2>
+    <ul class="objective-list">
+      <li>Apply ATLS primary survey (ABCDE) in a systematic and time-efficient manner</li>
+      <li>Recognize and emergently manage tension pneumothorax with needle decompression</li>
+      <li>Initiate massive transfusion protocol for Class III/IV hemorrhagic shock</li>
+      <li>Complete a head-to-toe secondary survey identifying all injuries</li>
+      <li>Communicate effectively as trauma team leader using CUS and SBAR</li>
+      <li>Determine need for emergency surgical intervention and activate OR team</li>
+    </ul>
+  </div>
+
+  <div class="content-section">
+    <h2>Scenario Progression</h2>
+    <h4>Phase 1 – Primary Survey (0–15 min)</h4>
+    <p>
+      Patient arrives with diminished left-sided breath sounds and absent JVD (tension
+      pneumothorax). Needle decompression followed by chest tube insertion required.
+    </p>
+    <h4>Phase 2 – Hemorrhage Control (15–35 min)</h4>
+    <p>
+      Ongoing hypotension despite resuscitation. Focused assessment with sonography for
+      trauma (FAST) shows free fluid in abdomen. Massive transfusion protocol activated.
+    </p>
+    <h4>Phase 3 – Secondary Survey &amp; Disposition (35–60 min)</h4>
+    <p>
+      Full secondary survey reveals open femur fracture and depressed skull fracture.
+      Patient stabilized for CT and OR handoff.
+    </p>
+  </div>
+
+  <div class="content-section">
+    <h2>Debriefing Guide</h2>
+    <ul>
+      <li>Was the primary survey completed before secondary survey?</li>
+      <li>Was the tension pneumothorax identified and treated quickly?</li>
+      <li>Were blood products given in a 1:1:1 ratio per MTP guidelines?</li>
+      <li>How was team communication managed in a high-stress environment?</li>
+      <li>What was the disposition plan and was it communicated clearly?</li>
+    </ul>
+  </div>
+
+  <div style="margin-top: 2rem;">
+    <a href={`${base}cases/`} class="btn btn-primary" style="background: var(--color-primary); color: #fff;">← Back to Cases</a>
+  </div>
+</BaseLayout>

@@ -1,0 +1,114 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title="Anaphylaxis Management" description="Simulation case for anaphylaxis recognition and management.">
+  <div class="breadcrumb">
+    <a href={base}>Home</a>
+    <span>›</span>
+    <a href={`${base}cases/`}>Cases</a>
+    <span>›</span>
+    <span>Anaphylaxis Management</span>
+  </div>
+
+  <div class="case-header">
+    <span class="card-tag">Allergy/Immunology</span>
+    <h1>Anaphylaxis Management</h1>
+    <div class="case-meta">
+      <span>⏱ Duration: 30 minutes</span>
+      <span>📊 Difficulty: Beginner</span>
+      <span>👥 Team Size: 2–4</span>
+      <span>🏥 Setting: Medical Ward</span>
+    </div>
+    <div class="tags" style="margin-top:1rem;">
+      <span class="tag">Emergency</span>
+      <span class="tag">Allergy</span>
+      <span class="tag">Epinephrine</span>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>Case Overview</h2>
+    <p>
+      A 32-year-old female, Ms. Lauren Chen, is 20 minutes into receiving IV piperacillin-tazobactam
+      for a UTI when she develops sudden onset facial swelling, generalized urticaria, throat tightness,
+      and feels faint.
+    </p>
+    <p>
+      Learners must rapidly recognize anaphylaxis, stop the offending agent, administer epinephrine as
+      the first-line treatment, and manage the evolving systemic allergic reaction including airway
+      support and fluid resuscitation.
+    </p>
+  </div>
+
+  <div class="content-section">
+    <h2>Patient Information</h2>
+    <ul>
+      <li><strong>Name:</strong> Lauren Chen</li>
+      <li><strong>Age:</strong> 32 years</li>
+      <li><strong>Gender:</strong> Female</li>
+      <li><strong>Weight:</strong> 58 kg</li>
+      <li><strong>PMH:</strong> Recurrent UTIs, Seasonal allergies</li>
+      <li><strong>Medications:</strong> Cetirizine PRN</li>
+      <li><strong>Allergies:</strong> Previously "no known drug allergies" (allergy not documented in chart)</li>
+    </ul>
+  </div>
+
+  <div class="content-section">
+    <h2>Initial Vital Signs</h2>
+    <ul>
+      <li><strong>BP:</strong> 84/52 mmHg (↓)</li>
+      <li><strong>HR:</strong> 128 bpm</li>
+      <li><strong>RR:</strong> 26 breaths/min (wheezing audible)</li>
+      <li><strong>SpO₂:</strong> 91% on room air</span></li>
+      <li><strong>Skin:</strong> Widespread urticaria, facial angioedema</li>
+    </ul>
+  </div>
+
+  <div class="content-section">
+    <h2>Learning Objectives</h2>
+    <ul class="objective-list">
+      <li>Recognize the clinical signs and symptoms of anaphylaxis using WHO diagnostic criteria</li>
+      <li>Immediately discontinue the causative agent</li>
+      <li>Administer intramuscular epinephrine 0.3–0.5 mg to the anterolateral thigh as first-line treatment</li>
+      <li>Position the patient supine and initiate IV fluid resuscitation</li>
+      <li>Administer adjunctive therapies (antihistamines, corticosteroids, bronchodilators)</li>
+      <li>Monitor for biphasic reaction and determine appropriate disposition and observation period</li>
+    </ul>
+  </div>
+
+  <div class="content-section">
+    <h2>Scenario Progression</h2>
+    <h4>Phase 1 – Recognition (0–5 min)</h4>
+    <p>
+      Nurse responds to call bell. Patient in distress with urticaria and angioedema.
+      Anaphylaxis recognized; antibiotic discontinued.
+    </p>
+    <h4>Phase 2 – Treatment (5–20 min)</h4>
+    <p>
+      Epinephrine IM given, patient positioned supine, IV NS bolus started.
+      Diphenhydramine and methylprednisolone administered. SpO₂ improves to 97%.
+    </p>
+    <h4>Phase 3 – Monitoring &amp; Disposition (20–30 min)</h4>
+    <p>
+      Vital signs stabilize. Decision made for 4-hour observation for biphasic reaction.
+      Allergy consult placed. Patient educated on EpiPen prescription.
+    </p>
+  </div>
+
+  <div class="content-section">
+    <h2>Debriefing Guide</h2>
+    <ul>
+      <li>Was anaphylaxis recognized promptly using diagnostic criteria?</li>
+      <li>Was epinephrine given as the first treatment (not antihistamines)?</li>
+      <li>Was the correct dose and route of epinephrine used?</li>
+      <li>Was the patient monitored for biphasic anaphylaxis?</li>
+      <li>Was the allergy properly documented and follow-up arranged?</li>
+    </ul>
+  </div>
+
+  <div style="margin-top: 2rem;">
+    <a href={`${base}cases/`} class="btn btn-primary" style="background: var(--color-primary); color: #fff;">← Back to Cases</a>
+  </div>
+</BaseLayout>
