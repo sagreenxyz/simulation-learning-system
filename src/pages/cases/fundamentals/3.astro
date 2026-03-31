@@ -1,35 +1,1424 @@
 ---
-import CaseLayout from '../../../layouts/CaseLayout.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
-<CaseLayout
-  scenario="Fundamentals 3"
-  disciplineLabel="Fundamentals"
-  disciplineSlug="fundamentals"
-  category="End-of-Life"
-  patient={{ name: "Samuel Green", age: "75 years", gender: "Male" }}
-  scenarioTime="20 – 25 minutes"
-  debriefingTime="20 – 25 minutes"
-  concepts={[
-    "Assessment",
-    "Older adult",
-    "End-of-life care",
-    "Communication",
-    "Culture and ethnicity",
-    "Documentation and informatics",
-  ]}
-  skills={[
-    "Assess patient",
-    "Recognize cessation of cardiovascular and respiratory function",
-    "Notify provider of patient's death using SBAR",
-    "Follow postmortem care policy and procedure",
-    "Utilize therapeutic communication with the family",
-    "Elicit the patient and family's preferences related to death rituals and postmortem care",
-    "Respect the patient and family's spiritual beliefs and cultural values throughout the dying process",
-    "Access and document care in the EHR",
-  ]}
-  presentation="Patient with inoperable pulmonary adenocarcinoma and a documented code status of do not resuscitate (DNR) is admitted for palliative care."
-  primaryDx="Adenocarcinoma bilateral lungs"
-  secondaryDx="Bone and lymph metastasis"
-  primaryChallenge="Learner provides end-of-life and postmortem care while supporting a grieving family in a manner consistent with the patient and family's spiritual beliefs and cultural values."
-/>
+<BaseLayout
+  title="Fundamentals 3 — Samuel Green"
+  description="Unfolding case study: End-of-Life Care (FUN-03)"
+>
+
+  <div class="breadcrumb">
+    <a href={base}>Home</a>
+    <span>›</span>
+    <a href={`${base}cases/`}>Cases</a>
+    <span>›</span>
+    <a href={`${base}cases/fundamentals/`}>Fundamentals</a>
+    <span>›</span>
+    <span>Fundamentals 3 — Samuel Green</span>
+  </div>
+
+  <!-- ── CASE HEADER ───────────────────────────────────────────────────── -->
+  <div class="case-header">
+    <span class="card-tag">End-of-Life</span>
+    <h1>Fundamentals 3 — Samuel Green</h1>
+    <p class="case-subtitle">End-of-Life Care in Inpatient Hospice</p>
+    <div class="case-meta">
+      <span>👤 Samuel Green, 75 years, Jewish Male</span>
+      <span>⏱ Scenario: 20 – 25 minutes</span>
+      <span>💬 Debrief: 20 – 25 minutes</span>
+    </div>
+  </div>
+
+  <!-- ── HOW TO USE ────────────────────────────────────────────────────── -->
+  <div class="callout callout-info">
+    <strong>📖 How to Use This Unfolding Case Study</strong>
+    <p>Work through each phase in order. Information is revealed progressively — exactly as it would be in a real clinical encounter. Before reading each answer, pause and reason through the question yourself. Use the <strong>▶ Reveal Answer</strong> toggles to check your thinking.</p>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       PHASE 1 — YOU ARRIVE AT THE BEDSIDE
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card" id="phase1">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 1</span>
+      <h2>You Arrive at the Bedside</h2>
+    </div>
+
+    <p class="phase-intro">
+      You are the evening nurse on an inpatient hospice unit. During handoff, you learn that Samuel Green, a 75-year-old Jewish male with inoperable pulmonary adenocarcinoma, has had a significant decline over the past several hours. His wife and adult son are at the bedside.
+    </p>
+
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>📋 Handoff Report</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Patient</th><td>Samuel Green</td></tr>
+            <tr><th>Age / Gender</th><td>75 years · Male</td></tr>
+            <tr><th>Religion / Culture</th><td>Jewish</td></tr>
+            <tr><th>Primary Diagnosis</th><td>Inoperable pulmonary adenocarcinoma</td></tr>
+            <tr><th>Secondary Diagnoses</th><td>Bone and lymph metastasis</td></tr>
+            <tr><th>Code Status</th><td><span class="badge-danger">DNR — Do Not Resuscitate</span></td></tr>
+            <tr><th>Setting</th><td>Inpatient hospice</td></tr>
+            <tr><th>Admission Reason</th><td>Acute decline after last round of chemotherapy; admitted for pain control and comfort care only</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>💊 Current Medications (on MAR)</h3>
+        <ul class="med-list">
+          <li><strong>Morphine Sulfate 1 mg/mL</strong> IV/SQ — pain &amp; dyspnea relief</li>
+          <li><strong>Metoclopramide</strong> IV/PO — nausea and vomiting management</li>
+          <li><strong>Glycopyrrolate</strong> IV/SQ — reduce oral/respiratory secretions</li>
+        </ul>
+        <div class="callout callout-warning" style="margin-top: 1rem;">
+          <strong>⚠️ DNR Reminder</strong>
+          <p>Samuel has a documented DNR. No CPR, defibrillation, or resuscitation measures are to be initiated. Comfort care continues fully — DNR does <em>not</em> mean "do not treat."</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="scene-box">
+      <h3>🚪 Entering the Room — What You Observe</h3>
+      <p>
+        You approach Mr. Green's room and gently knock. Through the partially open door, you see Mrs. Green and her son standing at the bedside with their heads bowed, quietly reciting a prayer together in Hebrew. The room is dim and peaceful. Samuel is lying still in the bed, eyes partially closed. His breathing is slow and irregular.
+      </p>
+    </div>
+
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: What do you do when you arrive and find the family praying?</summary>
+      <div class="reveal-content">
+        <p><strong>Wait quietly and respectfully.</strong> Prayer is a sacred act and must never be interrupted by routine nursing care.</p>
+        <ul>
+          <li><strong>Stop at the doorway</strong> — do not walk to the bedside or interrupt</li>
+          <li>Wait quietly until the family has finished their prayer</li>
+          <li>When they finish, acknowledge their practice: <em>"I didn't want to interrupt — please take all the time you need."</em></li>
+          <li>Introduce yourself gently: <em>"I'm [name], Mr. Green's evening nurse. I want you to know I'm here for all of you."</em></li>
+          <li>Hearing is believed to be the <strong>last sense to diminish</strong> — always speak gently in the room, assuming Samuel can hear</li>
+          <li>Ask about spiritual preferences: <em>"Are there any religious or cultural practices that are important to you right now?"</em></li>
+        </ul>
+        <p><strong>The correct action is: Wait quietly outside the room until they are done praying.</strong> This respects the family's spiritual practices without abandoning the patient.</p>
+      </div>
+    </details>
+
+    <details class="reveal-block">
+      <summary>▶ Pre-Sim Q3: What legal and ethical considerations apply to Samuel's care?</summary>
+      <div class="reveal-content">
+        <ol>
+          <li><strong>Advance Directive / Living Will:</strong> A legal document stating the patient's wishes for end-of-life care. It must be honored. Samuel's DNR is an expression of his autonomous choice and must be documented, accessible, and communicated to all team members.</li>
+          <li><strong>DNR Order:</strong> A physician's written order to withhold CPR and resuscitation. It does NOT mean "do not treat" — comfort care continues fully. Verbal-only DNR orders are insufficient; it must be a documented order.</li>
+          <li><strong>Durable Power of Attorney for Healthcare (Healthcare Proxy):</strong> A designated person who makes medical decisions if the patient loses capacity. Identify the proxy and include them in all care decisions. In this case, Mrs. Green may be Samuel's designated proxy.</li>
+          <li><strong>Principle of Double Effect:</strong> Administering morphine to relieve pain may secondarily hasten death — this is ethically acceptable because the <em>intent</em> is comfort, not euthanasia. The ethical weight lies on the primary intent.</li>
+          <li><strong>Withholding vs. Withdrawing treatment:</strong> Both are ethically permissible when consistent with the patient's wishes and documented appropriately.</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+
+  <!-- connector -->
+  <div class="phase-connector">⬇ After the family finishes praying, you approach the bedside to perform your initial assessment…</div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       PHASE 2 — INITIAL ASSESSMENT OF AN ACTIVELY DYING PATIENT
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card" id="phase2">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 2</span>
+      <h2>Initial Assessment of an Actively Dying Patient</h2>
+    </div>
+
+    <p class="phase-intro">
+      You gently approach Samuel's bedside. Mrs. Green squeezes her husband's hand and steps aside to give you room. You perform a systematic comfort-focused assessment.
+    </p>
+
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>🌡️ Vital Signs</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Temperature</th><td>37.1°C — extremities cool to touch</td></tr>
+            <tr><th>Blood Pressure</th><td>88/54 mmHg <span class="badge-danger">Hypotensive</span></td></tr>
+            <tr><th>Heart Rate</th><td>52 bpm, weak and thready <span class="badge-warning">Bradycardic</span></td></tr>
+            <tr><th>Respiratory Rate</th><td>5–8 breaths/min, irregular <span class="badge-danger">Severely abnormal</span></td></tr>
+            <tr><th>SpO₂</th><td>82% — not a meaningful target in hospice</td></tr>
+            <tr><th>Pain</th><td>Non-verbal cues: mild grimacing, furrowed brow</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>🧠 Level of Consciousness</h3>
+        <ul>
+          <li>Samuel is <strong>unresponsive to verbal stimuli</strong></li>
+          <li>Minimal response to tactile stimulation</li>
+          <li>Eyes <strong>partially open</strong> with absent blink reflex</li>
+          <li>Jaw relaxed; mouth slightly open</li>
+          <li>No purposeful movement observed</li>
+          <li><strong>Hearing may still be intact</strong> — continue speaking with dignity</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>🫁 Respiratory Assessment</h3>
+        <ul>
+          <li><strong>Cheyne-Stokes respirations</strong> — periods of apnea (10–20 seconds) alternating with shallow breaths</li>
+          <li>Audible, wet, gurgling sounds with each breath — <strong>"death rattle"</strong> caused by secretion pooling in the throat</li>
+          <li>Mouth breathing; jaw relaxed</li>
+          <li>No accessory muscle use (no respiratory effort)</li>
+          <li>Periods of apnea lasting 15–20 seconds</li>
+        </ul>
+      </div>
+      <div class="info-block">
+        <h3>❤️ Cardiovascular / Skin Assessment</h3>
+        <ul>
+          <li><strong>Mottling</strong> (bluish-purple discoloration) present on knees, feet, and hands</li>
+          <li><strong>Peripheral cyanosis</strong> — cool, bluish extremities</li>
+          <li>Radial pulse absent bilaterally; apical pulse weak and slow</li>
+          <li>Skin pallor with yellowish, waxy appearance</li>
+          <li>Extremities cool to the touch; trunk warm</li>
+          <li>Capillary refill &gt; 5 seconds in fingers</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>⚠️ Signs of Imminent Death — Recognition Summary</h3>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>System</th>
+          <th>Sign Observed in Samuel</th>
+          <th>Clinical Significance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Respiratory</strong></td>
+          <td>Cheyne-Stokes; death rattle; apnea &gt; 15 sec</td>
+          <td>Brainstem respiratory control failing; secretions pooling</td>
+        </tr>
+        <tr>
+          <td><strong>Cardiovascular</strong></td>
+          <td>BP 88/54; HR 52, thready; absent radial pulse</td>
+          <td>Cardiac output severely reduced; perfusion failing</td>
+        </tr>
+        <tr>
+          <td><strong>Skin</strong></td>
+          <td>Mottling, cyanosis, pallor, waxy appearance</td>
+          <td>Poor peripheral perfusion; circulatory shutdown</td>
+        </tr>
+        <tr>
+          <td><strong>Neurological</strong></td>
+          <td>Unresponsive; eyes partially open; no blink reflex</td>
+          <td>CNS depression; loss of protective reflexes</td>
+        </tr>
+        <tr>
+          <td><strong>Renal/GI</strong></td>
+          <td>No urine output for 6 hours; abdomen distended</td>
+          <td>Renal shutdown; cessation of GI motility</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <details class="reveal-block">
+      <summary>▶ Pre-Sim Q1: What are the physical manifestations of approaching death?</summary>
+      <div class="reveal-content">
+        <p><strong>Cardiovascular / Circulatory:</strong></p>
+        <ul>
+          <li>Mottling (bluish-purple discoloration) of skin — knees, feet, and hands are first affected</li>
+          <li>Peripheral cyanosis — cool, bluish extremities</li>
+          <li>Weak, thready, irregular pulse progressing to absent radial pulse</li>
+          <li>Blood pressure drops progressively and continuously</li>
+          <li>Extremities become cool and clammy; central body may remain warm</li>
+        </ul>
+        <p><strong>Respiratory:</strong></p>
+        <ul>
+          <li><strong>Cheyne-Stokes respirations</strong> — irregular breathing with periods of apnea</li>
+          <li>Kussmaul breathing — deep, labored breaths</li>
+          <li><strong>"Death rattle"</strong> — noisy, wet breathing caused by secretion pooling; managed with glycopyrrolate</li>
+          <li>Increasing periods of apnea; mouth breathing; jaw relaxation</li>
+        </ul>
+        <p><strong>Neurological / Consciousness:</strong></p>
+        <ul>
+          <li>Decreased level of consciousness progressing to unresponsiveness</li>
+          <li>Confusion, delirium, terminal restlessness may precede coma</li>
+          <li>Eyes may remain partially open; absent blink reflex</li>
+          <li><strong>Hearing is the LAST sense to diminish</strong> — always assume the patient can hear</li>
+        </ul>
+        <p><strong>Gastrointestinal / Renal:</strong></p>
+        <ul>
+          <li>Loss of bowel and bladder control; urine output ceases or becomes dark and minimal</li>
+          <li>Cessation of oral intake; no hunger or thirst</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: What is appropriate pain assessment for an unresponsive patient?</summary>
+      <div class="reveal-content">
+        <p>When a patient cannot self-report pain, use <strong>behavioral pain indicators</strong>:</p>
+        <ul>
+          <li><strong>Facial expressions:</strong> grimacing, furrowing of the brow, clenched jaw</li>
+          <li><strong>Body language:</strong> rigid posture, guarding, restlessness, slow movements</li>
+          <li><strong>Vocalizations:</strong> moaning, groaning, calling out (even in unresponsive patients, sounds may occur)</li>
+          <li><strong>Physiological indicators:</strong> tachycardia, diaphoresis (though these are unreliable in the dying patient)</li>
+        </ul>
+        <p>Use a validated behavioral pain tool such as the <strong>CPOT (Critical Care Pain Observation Tool)</strong> or <strong>PAINAD (Pain Assessment in Advanced Dementia)</strong>.</p>
+        <p><em>In hospice, the goal is proactive comfort — do not wait for overt pain signs before administering analgesics.</em></p>
+      </div>
+    </details>
+  </div>
+
+  <!-- connector -->
+  <div class="phase-connector">⬇ You have identified signs of distress — it is time to intervene with comfort measures…</div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       PHASE 3 — PAIN AND SYMPTOM MANAGEMENT
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card" id="phase3">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 3</span>
+      <h2>Pain and Symptom Management</h2>
+    </div>
+
+    <p class="phase-intro">
+      Samuel shows facial grimacing and the family reports he has been moaning intermittently. You also note the prominent death rattle, which is distressing to the family. It is time to administer comfort medications and implement non-pharmacological comfort measures.
+    </p>
+
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>💊 Pharmacological Interventions</h3>
+        <ul class="med-list">
+          <li>
+            <strong>Morphine Sulfate 1 mg/mL IV/SQ</strong><br/>
+            <small>For pain and dyspnea relief. Assess pain behavioral cues before administration. Reassess within 30–60 minutes. Document response.</small>
+          </li>
+          <li>
+            <strong>Glycopyrrolate IV/SQ</strong><br/>
+            <small>For death rattle (excessive secretions). Does not sedate; does not eliminate existing secretions — works by reducing new secretion production. Educate family that gurgling does not indicate pain.</small>
+          </li>
+          <li>
+            <strong>Metoclopramide IV/PO</strong><br/>
+            <small>For nausea/vomiting if present. Monitor for extrapyramidal effects. Avoid if bowel obstruction suspected.</small>
+          </li>
+        </ul>
+      </div>
+      <div class="info-block">
+        <h3>🤲 Non-Pharmacological Comfort Measures</h3>
+        <ul>
+          <li><strong>Positioning:</strong> Semi-Fowler's or lateral position to facilitate breathing and reduce secretion pooling</li>
+          <li><strong>Mouth care:</strong> Keep lips and mucous membranes moist with glycerin swabs; do not force oral fluids</li>
+          <li><strong>Skin care:</strong> Reposition every 2 hours as tolerated; keep skin clean and dry</li>
+          <li><strong>Environment:</strong> Dim lighting, reduce noise, allow family to stay at the bedside</li>
+          <li><strong>Minimize interventions:</strong> Do not wake patient for routine vital signs; eliminate unnecessary procedures</li>
+          <li><strong>Therapeutic touch:</strong> Gentle hand-holding if acceptable to the family</li>
+          <li><strong>Music/prayer:</strong> Allow family to play soft music or pray at the bedside</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>🔗 The Comfort Care Pathway — Connecting Symptoms to Interventions</h3>
+    <div class="chain-flow">
+      <div class="chain-step chain-step-problem">
+        <span class="chain-icon">😣</span>
+        <strong>Pain / Dyspnea</strong>
+        <small>Facial grimacing · moaning · restlessness</small>
+      </div>
+      <div class="chain-arrow">↓</div>
+      <div class="chain-step chain-step-drug">
+        <span class="chain-icon">💊</span>
+        <strong>Morphine Sulfate</strong>
+        <small>Binds opioid receptors → reduces pain perception and respiratory distress</small>
+      </div>
+      <div class="chain-arrow">↓</div>
+      <div class="chain-step chain-step-problem">
+        <span class="chain-icon">🌊</span>
+        <strong>Death Rattle (Secretion Pooling)</strong>
+        <small>Gurgling, wet respirations — distressing to family</small>
+      </div>
+      <div class="chain-arrow">↓</div>
+      <div class="chain-step chain-step-drug">
+        <span class="chain-icon">💊</span>
+        <strong>Glycopyrrolate</strong>
+        <small>Blocks muscarinic receptors → reduces secretion production</small>
+      </div>
+      <div class="chain-arrow">↓</div>
+      <div class="chain-step chain-step-consequence">
+        <span class="chain-icon">🕊️</span>
+        <strong>Comfort Achieved</strong>
+        <small>Peaceful appearance · reduced family distress · dignified dying</small>
+      </div>
+    </div>
+
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: What is the Principle of Double Effect in administering morphine at end of life?</summary>
+      <div class="reveal-content">
+        <p>The <strong>Principle of Double Effect</strong> states that an action with both a good and a harmful effect is ethically permissible when:</p>
+        <ol>
+          <li>The action itself is not intrinsically wrong</li>
+          <li>The <em>intent</em> is the beneficial effect (pain relief), not the harmful one (possible respiratory depression)</li>
+          <li>The harmful effect is not the means to achieve the good effect</li>
+          <li>There is proportionate reason to allow the harmful effect</li>
+        </ol>
+        <p><strong>Applied to Samuel:</strong> Administering morphine to relieve pain and dyspnea is ethically correct even if it may secondarily hasten death. The intent is <em>comfort</em>, not euthanasia. This principle is widely accepted in palliative and hospice nursing ethics.</p>
+        <div class="callout callout-warning">
+          <strong>⚠️ Important Nursing Note:</strong>
+          <p>In hospice care, the goal is comfort — not prolongation of life. Respiratory depression is an <em>acceptable secondary effect</em> when the primary goal is pain and dyspnea relief. Do not withhold adequate analgesia out of fear.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="reveal-block">
+      <summary>▶ Pre-Sim Q4: What are goals for end-of-life care?</summary>
+      <div class="reveal-content">
+        <ol>
+          <li><strong>Comfort and pain management:</strong> Eliminate or minimize pain, dyspnea, nausea, and other distressing symptoms through appropriate pharmacological and non-pharmacological methods</li>
+          <li><strong>Dignity and respect:</strong> Honor the patient's wishes, autonomy, cultural and spiritual values, and sense of identity throughout the dying process</li>
+          <li><strong>Family support and communication:</strong> Provide emotional support, honest communication, and grief counseling to family members during and after the patient's death</li>
+          <li><strong>Peaceful and meaningful death:</strong> Create an environment that allows the patient to die in a manner consistent with their values — surrounded by loved ones, free from unnecessary interventions</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+
+  <!-- connector -->
+  <div class="phase-connector">⬇ Comfort medications have been administered. You turn your attention to the family…</div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       PHASE 4 — SUPPORTING THE GRIEVING FAMILY
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card" id="phase4">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 4</span>
+      <h2>Supporting the Grieving Family</h2>
+    </div>
+
+    <p class="phase-intro">
+      Mrs. Green is crying softly. Her son stands rigidly beside her, arms crossed, jaw tight. He turns to you and says, "Is he suffering? Why is he making that sound? Are you doing enough?" You recognize the grief, fear, and helplessness they are experiencing.
+    </p>
+
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>🗣️ Therapeutic Communication — What to Say</h3>
+        <ul>
+          <li><em>"That sound you're hearing — the gurgling — is caused by secretions in his throat, not by pain. We've given him medication to help reduce it. It does not mean he is suffering."</em></li>
+          <li><em>"Samuel can still hear you. It's okay to talk to him and say what's in your heart."</em></li>
+          <li><em>"This is such a difficult time. I want you to know that we are here for all of you."</em></li>
+          <li><em>"Is there anything I can do for you right now?"</em></li>
+          <li><em>"Would you like me to call someone — a chaplain, a rabbi, or someone from your family?"</em></li>
+          <li><em>"You are doing exactly the right thing by being here with him."</em></li>
+        </ul>
+      </div>
+      <div class="info-block">
+        <h3>✗ What NOT to Say</h3>
+        <ul>
+          <li>❌ <em>"I know how you feel"</em> — you cannot know; say <em>"I can only imagine how difficult this is."</em></li>
+          <li>❌ <em>"He's in a better place"</em> — presumptuous; not all families share this belief</li>
+          <li>❌ <em>"At least he's not suffering anymore"</em> — minimizes their grief</li>
+          <li>❌ <em>"You need to be strong"</em> — invalidates their emotional response</li>
+          <li>❌ <em>"Everything happens for a reason"</em> — dismissive and potentially harmful</li>
+          <li>❌ Rushing the family — allow as much time as they need</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>✡️ Jewish Cultural and Spiritual Considerations</h3>
+    <div class="callout callout-info">
+      <strong>📌 Nurse's Responsibility:</strong>
+      <p>Ask, do not assume. Use respectful, open-ended questions: <em>"Are there any religious or cultural traditions that are important to you for Mr. Green right now or after his passing?"</em></p>
+    </div>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Practice</th>
+          <th>Significance</th>
+          <th>Nursing Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Do not leave the dying person alone</strong></td>
+          <td>In Jewish tradition, a dying person (Goses) should have someone present at all times</td>
+          <td>Facilitate family presence; offer to arrange a Shomer (watcher) if needed</td>
+        </tr>
+        <tr>
+          <td><strong>Prayer at the bedside</strong></td>
+          <td>Vidui (confessional prayer) and Shema ("Hear O Israel…") may be recited</td>
+          <td>Never interrupt prayer; create a quiet, respectful environment</td>
+        </tr>
+        <tr>
+          <td><strong>Facing Jerusalem</strong></td>
+          <td>Some patients request to face east toward Jerusalem as death approaches</td>
+          <td>Reposition bed or patient if requested and physically feasible</td>
+        </tr>
+        <tr>
+          <td><strong>Rabbi / Chaplain</strong></td>
+          <td>Family may want a rabbi present at the time of death</td>
+          <td>Offer to contact hospital chaplain who can facilitate reaching a rabbi</td>
+        </tr>
+        <tr>
+          <td><strong>Organ donation</strong></td>
+          <td>Views vary among Jewish denominations — consult family</td>
+          <td>Ask respectfully; do not assume yes or no</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <details class="reveal-block">
+      <summary>▶ Pre-Sim Q5: What is the difference between hospice and palliative care?</summary>
+      <div class="reveal-content">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Palliative Care</th>
+              <th>Hospice Care</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Goal</strong></td>
+              <td>Relieve suffering alongside curative treatment</td>
+              <td>Comfort-focused; cure is no longer the goal</td>
+            </tr>
+            <tr>
+              <td><strong>When used</strong></td>
+              <td>Any stage of serious illness</td>
+              <td>Terminal illness with prognosis ≤ 6 months</td>
+            </tr>
+            <tr>
+              <td><strong>Curative treatment</strong></td>
+              <td>May continue</td>
+              <td>Discontinued</td>
+            </tr>
+            <tr>
+              <td><strong>Setting</strong></td>
+              <td>Hospital, clinic, home</td>
+              <td>Home, inpatient hospice, nursing home</td>
+            </tr>
+            <tr>
+              <td><strong>Medicare benefit</strong></td>
+              <td>May be covered separately</td>
+              <td>Covered under Medicare Hospice Benefit</td>
+            </tr>
+          </tbody>
+        </table>
+        <p><strong>Samuel Green is in inpatient hospice</strong> — curative treatment has stopped; all care is comfort-focused. The entire interdisciplinary team (RN, physician, social worker, chaplain, bereavement counselor) is oriented toward comfort and dignity.</p>
+      </div>
+    </details>
+
+    <details class="reveal-block">
+      <summary>▶ Post-Sim Q1: How do cultural differences affect end-of-life care?</summary>
+      <div class="reveal-content">
+        <p>Culturally competent end-of-life care requires the nurse to:</p>
+        <ul>
+          <li><strong>Ask, do not assume:</strong> <em>"What is most important to you right now?"</em> and <em>"What are your beliefs about death and dying?"</em></li>
+          <li>Recognize that expressions of grief vary widely — weeping, silence, prayer, and ritualistic behaviors are all valid</li>
+          <li>Understand that faith may alter responses to illness, treatment decisions, DNR status, organ donation, and postmortem practices</li>
+          <li>Address language barriers — use certified medical interpreters, never family members as medical interpreters</li>
+          <li>Be present — active listening, therapeutic silence, and culturally appropriate touch are among the most valuable tools</li>
+          <li>Consult chaplaincy and culturally competent resources proactively</li>
+          <li>Ask: <em>"Who provides the most support for you?"</em> and <em>"Which rituals or practices are important to you?"</em></li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <!-- connector -->
+  <div class="phase-connector">⬇ Samuel's breathing becomes slower and more irregular. The family gathers at the bedside…</div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       PHASE 5 — AFTER DEATH — POSTMORTEM CARE
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card" id="phase5">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 5</span>
+      <h2>After Death — Postmortem Care</h2>
+    </div>
+
+    <p class="phase-intro">
+      At 19:42, Samuel's breathing ceases. The room is silent. Mrs. Green is weeping quietly. Her son places his hand on his father's chest. You observe cessation of respirations and verify absent pulse. The provider has been called to certify the death. You now guide postmortem care with cultural sensitivity and dignity.
+    </p>
+
+    <h3>✅ Postmortem Care — Step-by-Step Protocol</h3>
+    <div class="dx-rank-list">
+      <div class="dx-rank-item">
+        <span class="dx-number">1</span>
+        <div>
+          <strong>Notify the provider</strong>
+          <div class="dx-aeb">Call the attending physician or provider to certify the death. Document the time you called and the provider's name. The provider must issue a death pronouncement.</div>
+        </div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">2</span>
+        <div>
+          <strong>Allow family time with the body</strong>
+          <div class="dx-aeb">Do NOT rush postmortem care. Allow the family as much time as they need. Mrs. Green and her son should be able to remain with Samuel for as long as they wish. Ask: <em>"Would you like some private time with him?"</em></div>
+        </div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">3</span>
+        <div>
+          <strong>Ask about cultural and religious wishes BEFORE preparing the body</strong>
+          <div class="dx-aeb"><em>"Are there any religious or cultural traditions you would like us to follow for Mr. Green?"</em> In Jewish tradition, the body may need to be prepared by the Chevra Kadisha (Jewish burial society); non-Jewish staff should not wash the body without family permission.</div>
+        </div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">4</span>
+        <div>
+          <strong>Prepare the body with dignity (per family's permission)</strong>
+          <div class="dx-aeb">Don gloves. Gently close eyes — ideally by a family member if possible. Remove IV lines, tubes, and catheters per facility policy (unless a coroner case). Position supine with hands at sides or folded. Provide hygiene care. Place identification tags per facility protocol.</div>
+        </div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">5</span>
+        <div>
+          <strong>A Shomer (body watcher) may be requested</strong>
+          <div class="dx-aeb">In traditional Judaism, the body must not be left alone after death. A Shomer remains with the body until burial. Coordinate with the family and chaplain to arrange this if requested.</div>
+        </div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">6</span>
+        <div>
+          <strong>Facilitate prompt burial arrangements</strong>
+          <div class="dx-aeb">Jewish law (Halacha) calls for burial as soon as possible, ideally within 24 hours. Notify the family's designated funeral home and facilitate transfer of the body promptly. Document disposition.</div>
+        </div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">7</span>
+        <div>
+          <strong>Support the family and offer resources</strong>
+          <div class="dx-aeb">Offer chaplaincy, social work referral, and bereavement counseling. Provide written information about bereavement support services. Document all offerings and referrals made.</div>
+        </div>
+      </div>
+    </div>
+
+    <h3>✡️ Jewish Postmortem Practices — Summary</h3>
+    <table class="data-table">
+      <thead>
+        <tr><th>Practice</th><th>Traditional Significance</th><th>Nursing Implication</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Do not leave the body alone</strong></td>
+          <td>Shomer (watcher) accompanies the body until burial</td>
+          <td>Coordinate with family; accommodate Shomer in facility</td>
+        </tr>
+        <tr>
+          <td><strong>Eyes closed by family member</strong></td>
+          <td>Traditionally the oldest child or family member closes the eyes</td>
+          <td>Ask before performing this act yourself</td>
+        </tr>
+        <tr>
+          <td><strong>Body not washed by non-Jewish staff</strong></td>
+          <td>Tahara (ritual washing) is performed by the Chevra Kadisha (Jewish burial society)</td>
+          <td>Do NOT wash the body without explicit family permission; ask first</td>
+        </tr>
+        <tr>
+          <td><strong>Autopsy avoided</strong></td>
+          <td>Jewish law discourages desecration of the body; autopsy may be refused unless legally required</td>
+          <td>Clarify with family; consult provider and chaplain if coroner involvement is uncertain</td>
+        </tr>
+        <tr>
+          <td><strong>Prompt burial</strong></td>
+          <td>Burial within 24 hours when possible, honoring the dignity of the deceased</td>
+          <td>Facilitate timely transfer to funeral home; minimize delay</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <details class="reveal-block">
+      <summary>▶ Pre-Sim Q6: What Jewish end-of-life and postmortem practices should the nurse know?</summary>
+      <div class="reveal-content">
+        <p><strong>During the dying process:</strong></p>
+        <ul>
+          <li>A dying person (Goses) should not be left alone — family or a Shomer should be present</li>
+          <li>Prayers may be recited: Vidui (confessional prayer) and Shema ("Hear O Israel…")</li>
+          <li>The patient may request to face east toward Jerusalem</li>
+        </ul>
+        <p><strong>Immediately after death:</strong></p>
+        <ul>
+          <li>Do not remove the body immediately — allow family time with the deceased</li>
+          <li>Eyes are ideally closed by a family member, not nursing staff</li>
+          <li>A Shomer may remain with the body until burial</li>
+          <li>The body should NOT be washed by non-Jewish staff without explicit family permission</li>
+          <li>Tahara (ritual body washing) is performed by the Chevra Kadisha (Jewish burial society)</li>
+          <li>Autopsy is generally avoided unless legally required</li>
+          <li>Organ donation — views vary; consult the family</li>
+          <li>Burial should occur as soon as possible, ideally within 24 hours</li>
+        </ul>
+        <p><strong>The nurse's role:</strong> Always ask respectfully — do not assume. Coordinate with chaplaincy and respect the family's expressed wishes at every step.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- connector -->
+  <div class="phase-connector">⬇ Postmortem care is complete. Now you must complete your documentation and make the necessary notifications…</div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       PHASE 6 — DOCUMENTATION AND REFERRALS
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card" id="phase6">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 6</span>
+      <h2>Documentation and Referrals</h2>
+    </div>
+
+    <p class="phase-intro">
+      Death has been certified. Postmortem care has been completed according to the family's cultural and religious wishes. Now you must complete thorough, accurate, and timely documentation and arrange appropriate follow-up resources for the family.
+    </p>
+
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>📝 Required Documentation After Death</h3>
+        <ul>
+          <li><strong>Time and date of death</strong> — exact time observed and certified</li>
+          <li><strong>Provider who certified the death</strong> — name and time of notification</li>
+          <li><strong>Persons notified</strong> — family, charge nurse, attending physician, chaplain, social worker, coroner (if applicable)</li>
+          <li><strong>Condition of the body</strong> at time of death and after postmortem care</li>
+          <li><strong>Postmortem care performed</strong> — what was done, by whom</li>
+          <li><strong>Cultural/religious accommodations</strong> provided (e.g., Shomer arranged, Chevra Kadisha contacted)</li>
+          <li><strong>Disposition of the body</strong> — transferred to funeral home, morgue, etc.</li>
+          <li><strong>Personal belongings and valuables</strong> — documented and transferred to family with signature</li>
+          <li><strong>Bereavement resources offered</strong> — chaplain, social work, bereavement counselor referrals</li>
+        </ul>
+      </div>
+      <div class="info-block">
+        <h3>📞 Notifications Required</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Attending Physician</th><td>Certify death; complete death certificate</td></tr>
+            <tr><th>Charge Nurse / Supervisor</th><td>Required notification per facility policy</td></tr>
+            <tr><th>Next of Kin</th><td>Mrs. Green and son are present; document that they were with the patient at the time of death</td></tr>
+            <tr><th>Chaplain / Rabbi</th><td>Offer and document if requested or provided</td></tr>
+            <tr><th>Social Worker</th><td>Bereavement resources and family support</td></tr>
+            <tr><th>Funeral Home</th><td>Family's designated funeral home for body transfer</td></tr>
+            <tr><th>Coroner / Medical Examiner</th><td>Only if suspicious circumstances, unexpected death, or per state law — not applicable here</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <h3>📋 SBAR — Calling the Provider to Report Death</h3>
+    <div class="sbar-block">
+      <div class="sbar-item sbar-s">
+        <span class="sbar-label">S — Situation</span>
+        <p>"I am calling to report the death of Samuel Green, a 75-year-old male in inpatient hospice with inoperable pulmonary adenocarcinoma. He passed at 19:42 this evening."</p>
+      </div>
+      <div class="sbar-item sbar-b">
+        <span class="sbar-label">B — Background</span>
+        <p>"His code status is DNR — documented at the patient's request. He was on morphine, metoclopramide, and glycopyrrolate for comfort. His wife and son were present at the bedside at the time of death. He is Jewish and the family has requested specific postmortem accommodations."</p>
+      </div>
+      <div class="sbar-item sbar-a">
+        <span class="sbar-label">A — Assessment</span>
+        <p>"Respirations ceased at 19:42. Apical pulse is absent. No response to stimulation. Pupils fixed and dilated. I have performed an initial assessment confirming cessation of cardiopulmonary function."</p>
+      </div>
+      <div class="sbar-item sbar-r">
+        <span class="sbar-label">R — Recommendation</span>
+        <p>"I am requesting that you come to the unit to certify the death and complete the required death certificate documentation. The family is requesting a rabbi and has asked about contacting the Chevra Kadisha for postmortem preparation."</p>
+      </div>
+    </div>
+
+    <details class="reveal-block">
+      <summary>▶ Post-Sim Q2: What does the nurse document after a patient's death?</summary>
+      <div class="reveal-content">
+        <p>Complete documentation after death includes:</p>
+        <ul>
+          <li><strong>Time and date of death</strong> and all actions taken in response to the death</li>
+          <li><strong>Name of the provider certifying the death</strong> and time of notification</li>
+          <li>People notified — family, provider, charge nurse, chaplain, coroner if applicable</li>
+          <li><strong>Condition of the body</strong> at time of death</li>
+          <li><strong>Postmortem care performed</strong> and who performed it</li>
+          <li><strong>Disposition of the body</strong> — transferred to funeral home, morgue, etc.</li>
+          <li><strong>Personal belongings and valuables</strong> — documented and transferred to family with their signature</li>
+          <li><strong>Family notification</strong> — who was notified and at what time (even if family was present)</li>
+          <li>Any <strong>cultural or religious accommodations</strong> provided</li>
+          <li>All <strong>bereavement resources offered</strong> — chaplain, social work, bereavement counselor</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="reveal-block">
+      <summary>▶ Post-Sim Q3: What is an appropriate goal statement for the plan of care addressing grief?</summary>
+      <div class="reveal-content">
+        <p>Goal statements must be <strong>patient/family-focused, realistic, and measurable</strong>. For Samuel Green's family:</p>
+        <ul>
+          <li><em>"Family will verbalize understanding of what to expect during the dying process by end of shift."</em></li>
+          <li><em>"Family will identify at least one available support resource (chaplain, social worker, bereavement counselor) before the end of shift."</em></li>
+          <li><em>"Mrs. Green will express her feelings and concerns to the nurse within this interaction."</em></li>
+          <li><em>"Family's cultural and religious wishes for postmortem care will be identified and honored before body is prepared."</em></li>
+        </ul>
+        <p>The goal statement must have a <strong>subject</strong> (family/patient), <strong>action verb</strong> (verbalize, identify, express), <strong>criteria</strong> (at least one resource), and a <strong>time frame</strong> (by end of shift).</p>
+      </div>
+    </details>
+
+    <!-- Back button -->
+    <div style="margin-top: 2rem;">
+      <a href={`${base}cases/fundamentals/`} class="btn btn-back">← Back to Fundamentals</a>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       APPENDIX A — MEDICATION REVIEW
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card appendix-card" id="appendix-meds">
+    <div class="phase-header">
+      <span class="phase-badge phase-badge-appendix">Appendix A</span>
+      <h2>Medication Review</h2>
+    </div>
+
+    <h3>💊 Morphine Sulfate 1 mg/mL — IV/SQ</h3>
+    <table class="data-table med-table">
+      <tbody>
+        <tr><th>Classification</th><td>Opioid analgesic (Schedule II controlled substance)</td></tr>
+        <tr><th>Indication (Samuel)</th><td>Pain control and dyspnea relief in terminal pulmonary cancer</td></tr>
+        <tr><th>Mechanism</th><td>Binds mu-opioid receptors in the CNS; alters pain perception and reduces respiratory distress sensation</td></tr>
+        <tr><th>Principle of Double Effect</th><td>Adequate doses to control pain are <em>ethically justified</em> even if they may secondarily hasten death — the intent is comfort, not euthanasia</td></tr>
+        <tr><th>Adverse effects</th><td>Respiratory depression · Sedation · Constipation · Nausea · Hypotension · Pruritus</td></tr>
+        <tr><th>Contraindications</th><td>Hypersensitivity to opioids; severe respiratory depression (note: in hospice, respiratory depression may be an acceptable secondary effect of comfort dosing)</td></tr>
+        <tr><th>Nursing precautions</th><td>Assess behavioral pain cues and respiratory status before each dose · Have naloxone available per facility policy · In hospice, the goal is comfort — document response · Do not withhold adequate analgesia out of fear of respiratory depression</td></tr>
+        <tr><th>Reversal agent</th><td>Naloxone (Narcan) — available; use is uncommon in hospice and must align with DNR/goals of care</td></tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin-top: 1.5rem;">💊 Metoclopramide</h3>
+    <table class="data-table med-table">
+      <tbody>
+        <tr><th>Classification</th><td>Antiemetic / Dopamine antagonist / Prokinetic agent</td></tr>
+        <tr><th>Indication (Samuel)</th><td>Nausea and vomiting management; gastroparesis secondary to cancer or opioid use</td></tr>
+        <tr><th>Mechanism</th><td>Blocks dopamine D2 receptors in the chemoreceptor trigger zone (CTZ) and enhances GI motility</td></tr>
+        <tr><th>Adverse effects</th><td>Extrapyramidal symptoms (restlessness, involuntary movements, tardive dyskinesia with long-term use) · Drowsiness · Diarrhea · Akathisia</td></tr>
+        <tr><th>Contraindications</th><td>Bowel obstruction or perforation · History of tardive dyskinesia · Pheochromocytoma</td></tr>
+        <tr><th>Nursing precautions</th><td>Monitor for extrapyramidal effects — especially restlessness or involuntary facial movements · Avoid in bowel obstruction · Assess for nausea before administration and document response</td></tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin-top: 1.5rem;">💊 Glycopyrrolate</h3>
+    <table class="data-table med-table">
+      <tbody>
+        <tr><th>Classification</th><td>Anticholinergic agent</td></tr>
+        <tr><th>Indication (Samuel)</th><td>Reduce excessive oral and respiratory secretions causing "death rattle"</td></tr>
+        <tr><th>Mechanism</th><td>Blocks muscarinic acetylcholine receptors → reduces production of oral, bronchial, and pharyngeal secretions</td></tr>
+        <tr><th>Key distinction</th><td>Does NOT cross the blood–brain barrier → no sedation; does NOT dry up <em>existing</em> secretions — repositioning helps mobilize pooled secretions</td></tr>
+        <tr><th>Why it matters for the family</th><td>The death rattle is distressing to families; glycopyrrolate reduces new secretion production and lessens the sound, reducing family distress</td></tr>
+        <tr><th>Adverse effects</th><td>Dry mouth · Urinary retention · Constipation · Tachycardia · Blurred vision · Anhidrosis (reduced sweating)</td></tr>
+        <tr><th>Nursing precautions</th><td>Educate family that the gurgling sound does not indicate pain · Reposition patient to lateral position to help drain secretions · Monitor for urinary retention · Document family response to the intervention</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       APPENDIX B — HOSPICE PRINCIPLES
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card appendix-card" id="appendix-hospice">
+    <div class="phase-header">
+      <span class="phase-badge phase-badge-appendix">Appendix B</span>
+      <h2>Hospice Principles — Key Concepts</h2>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>What Hospice Provides</h3>
+        <ul>
+          <li>Pain and symptom management (comfort-focused)</li>
+          <li>Spiritual care and chaplaincy services</li>
+          <li>Emotional support for patient <em>and</em> family</li>
+          <li>Caregiver support and respite care</li>
+          <li>Social work services</li>
+          <li>Bereavement support after death (typically 13 months)</li>
+          <li>24-hour availability of care coordination</li>
+        </ul>
+        <h3 style="margin-top: 1rem;">What Hospice Does NOT Provide</h3>
+        <ul>
+          <li>Curative or aggressive life-prolonging treatments</li>
+          <li>Resuscitation (per DNR — aligned with patient's goals)</li>
+          <li>Diagnostic testing aimed at cure</li>
+          <li>Chemotherapy or radiation (unless for symptom palliation)</li>
+        </ul>
+      </div>
+      <div class="info-block">
+        <h3>The Interdisciplinary Hospice Team</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>RN / Hospice Nurse</th><td>Coordinates care, manages symptoms, supports family</td></tr>
+            <tr><th>Physician / Medical Director</th><td>Certifies terminal diagnosis; manages medication orders</td></tr>
+            <tr><th>Social Worker</th><td>Psychosocial support, financial resources, family dynamics</td></tr>
+            <tr><th>Chaplain / Spiritual Care</th><td>Spiritual assessment, prayer, connecting to clergy</td></tr>
+            <tr><th>Bereavement Counselor</th><td>Pre- and post-death grief support for family</td></tr>
+            <tr><th>Home Health Aide</th><td>Personal care, hygiene, ADL assistance</td></tr>
+            <tr><th>Volunteers</th><td>Companionship, respite, practical support for families</td></tr>
+          </tbody>
+        </table>
+        <div class="callout callout-info" style="margin-top: 1rem;">
+          <strong>Medicare Hospice Benefit:</strong>
+          <p>Patients are eligible when two physicians certify a prognosis of ≤ 6 months if the disease runs its normal course. Patients must elect hospice and agree to forgo curative treatment.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       APPENDIX C — KÜBLER-ROSS STAGES OF GRIEF
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card appendix-card" id="appendix-grief">
+    <div class="phase-header">
+      <span class="phase-badge phase-badge-appendix">Appendix C</span>
+      <h2>Kübler-Ross Stages of Grief</h2>
+    </div>
+
+    <p>Dr. Elisabeth Kübler-Ross identified five stages of grief in her 1969 work <em>On Death and Dying</em>. Remember with the mnemonic <strong>DABDA</strong>.</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Stage</th>
+          <th>What the Person May Say or Do</th>
+          <th>Nursing Response</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1. Denial</strong></td>
+          <td><em>"This can't be happening."</em> Refusal to accept the diagnosis; seeking second opinions; minimizing the severity</td>
+          <td>Be present; do not argue or force acceptance; provide honest, gentle information</td>
+        </tr>
+        <tr>
+          <td><strong>2. Anger</strong></td>
+          <td><em>"Why me? Why us? This isn't fair."</em> Directing anger at God, providers, family, or the healthcare system</td>
+          <td>Allow and validate the anger; do not take it personally; maintain therapeutic presence; avoid defensiveness</td>
+        </tr>
+        <tr>
+          <td><strong>3. Bargaining</strong></td>
+          <td><em>"If I can just make it to my granddaughter's wedding…"</em> Attempting to negotiate more time with God, providers, or fate</td>
+          <td>Listen empathetically; support the patient's goals for meaningful time; involve chaplaincy if desired</td>
+        </tr>
+        <tr>
+          <td><strong>4. Depression</strong></td>
+          <td>Withdrawal, crying, silence, mourning the upcoming loss and what will be left behind</td>
+          <td>Provide a quiet, supportive presence; do not force conversation; offer social work and chaplain support</td>
+        </tr>
+        <tr>
+          <td><strong>5. Acceptance</strong></td>
+          <td><em>"I'm ready."</em> Coming to terms with the reality of death; focusing on saying goodbye and completing unfinished business</td>
+          <td>Support the patient's and family's peaceful process; facilitate final wishes; honor spiritual practices</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout callout-warning">
+      <strong>⚠️ Critical Nursing Point:</strong>
+      <p>People do <strong>not</strong> move through these stages in a set linear order. They may move back and forth between stages, skip stages, or experience several simultaneously. <strong>A nurse must meet the patient and family where they are</strong> — not where you think they should be. Never rush or judge a person's grieving process.</p>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       APPENDIX D — POST-SIM QUESTIONS & ANSWERS
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card appendix-card" id="appendix-postsim">
+    <div class="phase-header">
+      <span class="phase-badge phase-badge-appendix">Appendix D</span>
+      <h2>Post-Simulation Questions &amp; Answers</h2>
+    </div>
+
+    <details class="reveal-block">
+      <summary>▶ Q4: Upon entering the room, the nurse hears Mrs. Green praying. What should the nurse do?</summary>
+      <div class="reveal-content">
+        <p><strong>B. Wait quietly outside the room until they are done praying.</strong></p>
+        <p>Prayer is a sacred act and should never be interrupted by routine nursing care. Standing quietly outside until prayer is finished demonstrates respect for the family's spiritual practices without abandoning the patient. Walking up to the bedside during prayer without an invitation would be intrusive and disrespectful.</p>
+        <p>Once prayer has concluded, approach gently: <em>"I didn't want to interrupt. I'm here whenever you are ready."</em></p>
+      </div>
+    </details>
+
+    <details class="reveal-block">
+      <summary>▶ Q5: What are Kübler-Ross's five stages of grief? (See Appendix C for full details)</summary>
+      <div class="reveal-content">
+        <ol>
+          <li><strong>Denial</strong> — "This can't be happening."</li>
+          <li><strong>Anger</strong> — "Why me? Why us?"</li>
+          <li><strong>Bargaining</strong> — "If I can just make it to my granddaughter's wedding…"</li>
+          <li><strong>Depression</strong> — Withdrawal, crying, mourning the upcoming loss</li>
+          <li><strong>Acceptance</strong> — "I'm ready." Coming to terms with death</li>
+        </ol>
+        <p>People do not move through these stages in order. Nurses must meet each person where they are in the grieving process.</p>
+      </div>
+    </details>
+
+    <details class="reveal-block">
+      <summary>▶ Q1: You are caring for a terminally ill patient from a different culture. Discuss culturally competent care.</summary>
+      <div class="reveal-content">
+        <p>Culturally competent end-of-life care requires the nurse to:</p>
+        <ul>
+          <li><strong>Ask, don't assume:</strong> <em>"What is most important to you right now?"</em> and <em>"What are your beliefs about death and dying?"</em></li>
+          <li>Recognize that grief expressions vary — weeping, silence, prayer, and ritual behaviors are all valid</li>
+          <li>Understand that faith may alter responses to illness, treatment, DNR, organ donation, and postmortem care</li>
+          <li>Use certified medical interpreters for language barriers — <em>never</em> use family as medical interpreters</li>
+          <li>Practice active listening, therapeutic silence, and culturally appropriate touch</li>
+          <li>Proactively consult chaplaincy and culturally competent resources</li>
+          <li>Ask: <em>"Who provides the most support for you?"</em> and <em>"Which rituals or practices are important to you?"</em></li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="reveal-block">
+      <summary>▶ Q2: After completing postmortem care, what does the nurse document?</summary>
+      <div class="reveal-content">
+        <ul>
+          <li>Time and date of death and all nursing actions taken</li>
+          <li>Name of the provider certifying the death and time of notification</li>
+          <li>All persons notified — family, provider, charge nurse, chaplain, social worker, coroner if applicable</li>
+          <li>Condition of the body at time of death</li>
+          <li>Postmortem care performed and who performed it</li>
+          <li>Cultural or religious accommodations provided</li>
+          <li>Disposition of the body — transferred to funeral home or morgue</li>
+          <li>Personal belongings and valuables — documented and transferred to family with signature</li>
+          <li>Bereavement resources offered</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="reveal-block">
+      <summary>▶ Q3: What is the most appropriate plan of care goal when addressing grief?</summary>
+      <div class="reveal-content">
+        <p>The most appropriate goal statement is <strong>patient/family-focused, realistic, and measurable</strong>. Good examples:</p>
+        <ul>
+          <li><em>"Family will verbalize understanding of what to expect during the dying process by end of shift."</em></li>
+          <li><em>"Patient will demonstrate signs of comfort (relaxed facial expression, absence of moaning) within 30 minutes of analgesic administration."</em></li>
+          <li><em>"Family will identify at least one available support resource (chaplain, social worker) before the end of shift."</em></li>
+        </ul>
+        <p>Goal statements must include a <strong>subject, action verb, criteria, and time frame</strong>. Avoid vague goals like "patient will be comfortable" without measurable indicators.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       APPENDIX E — REFERENCES
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card appendix-card" id="appendix-refs">
+    <div class="phase-header">
+      <span class="phase-badge phase-badge-appendix">Appendix E</span>
+      <h2>References</h2>
+    </div>
+    <ol class="ref-list">
+      <li>Potter, P. A., Perry, A. G., Stockert, P. A., &amp; Hall, A. (2021). <em>Fundamentals of nursing</em> (10th ed.). Elsevier.</li>
+      <li>Kübler-Ross, E. (1969). <em>On death and dying</em>. Macmillan.</li>
+      <li>National Hospice and Palliative Care Organization. (2021). <em>NHPCO's facts and figures: Hospice care in America</em>. NHPCO.</li>
+      <li>Vallerand, A. H., &amp; Sanoski, C. A. (2021). <em>Davis's drug guide for nurses</em> (17th ed.). F.A. Davis.</li>
+      <li>Ackley, B., Ludwig, G., Makic, M., Martinez-Kratz, M., &amp; Zanotti, M. (2020). <em>Nursing diagnosis handbook: An evidence-based guide to planning care</em> (12th ed.). Elsevier Saunders.</li>
+      <li>National Consensus Project for Quality Palliative Care. (2018). <em>Clinical practice guidelines for quality palliative care</em> (4th ed.). National Coalition for Hospice and Palliative Care.</li>
+    </ol>
+    <p class="ref-note">Study guide compiled from Elsevier SLS FUN-03: Samuel Green — End-of-Life Care.</p>
+  </div>
+
+</BaseLayout>
+
+<style>
+  /* ── Phase structure ─────────────────────────────────────────── */
+  .case-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-top: 0.25rem;
+  }
+
+  .phase-card {
+    background: var(--color-surface);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 0;
+    box-shadow: var(--shadow);
+    border-top: 4px solid var(--color-primary);
+  }
+
+  .appendix-card {
+    border-top-color: var(--color-secondary);
+  }
+
+  .phase-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .phase-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .phase-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+
+  .phase-badge-appendix {
+    background: var(--color-secondary);
+  }
+
+  .phase-intro {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin-bottom: 1.25rem;
+    border-left: 3px solid var(--color-accent);
+    padding-left: 0.75rem;
+  }
+
+  .phase-connector {
+    text-align: center;
+    padding: 0.6rem 0;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+  }
+
+  /* ── Info grid ───────────────────────────────────────────────── */
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 720px) {
+    .info-grid { grid-template-columns: 1fr; }
+    .compare-grid { grid-template-columns: 1fr; }
+  }
+
+  .info-block h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  /* ── Tables ──────────────────────────────────────────────────── */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--color-border);
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .data-table thead th {
+    background: #f0f4ff;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+  }
+
+  .data-table tbody th {
+    background: #f8f9fa;
+    font-weight: 600;
+    width: 30%;
+    color: var(--color-text);
+  }
+
+  .med-table tbody th {
+    width: 28%;
+  }
+
+  /* ── Callouts ────────────────────────────────────────────────── */
+  .callout {
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .callout p { margin-bottom: 0.5rem; }
+  .callout p:last-child { margin-bottom: 0; }
+
+  .callout-info {
+    background: #e8f0fe;
+    border-left: 4px solid var(--color-primary);
+  }
+
+  .callout-warning {
+    background: #fff8e1;
+    border-left: 4px solid #f59e0b;
+  }
+
+  .callout-danger {
+    background: #fff0f0;
+    border-left: 4px solid #dc2626;
+  }
+
+  /* ── Badges ──────────────────────────────────────────────────── */
+  .badge-danger {
+    display: inline-block;
+    background: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fca5a5;
+    border-radius: 4px;
+    padding: 0.1rem 0.45rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .badge-warning {
+    display: inline-block;
+    background: #fffbeb;
+    color: #92400e;
+    border: 1px solid #fde68a;
+    border-radius: 4px;
+    padding: 0.1rem 0.45rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  /* ── Scene box ───────────────────────────────────────────────── */
+  .scene-box {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .scene-box h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* ── Med list ────────────────────────────────────────────────── */
+  .med-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .med-list li {
+    padding: 0.35rem 0;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 0.9rem;
+  }
+
+  .med-list li:last-child { border-bottom: none; }
+
+  /* ── Chain flow ──────────────────────────────────────────────── */
+  .chain-flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin: 1.25rem 0;
+  }
+
+  .chain-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 520px;
+    gap: 0.2rem;
+  }
+
+  .chain-step small {
+    font-size: 0.8rem;
+    opacity: 0.8;
+  }
+
+  .chain-step-drug {
+    background: #e8f0fe;
+    color: var(--color-primary-dark);
+    border: 1px solid #bfdbfe;
+  }
+
+  .chain-step-problem {
+    background: #fff8e1;
+    color: #78350f;
+    border: 1px solid #fde68a;
+  }
+
+  .chain-step-consequence {
+    background: #f0fdf4;
+    color: #14532d;
+    border: 1px solid #bbf7d0;
+  }
+
+  .chain-arrow {
+    font-size: 1.5rem;
+    color: var(--color-text-muted);
+    line-height: 1.2;
+  }
+
+  .chain-icon {
+    font-size: 1.4rem;
+  }
+
+  /* ── Reveal (details/summary) ────────────────────────────────── */
+  .reveal-block {
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    margin-top: 1rem;
+    overflow: hidden;
+  }
+
+  .reveal-block > summary {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--color-primary);
+    background: #f0f4ff;
+    list-style: none;
+    user-select: none;
+  }
+
+  .reveal-block > summary::-webkit-details-marker { display: none; }
+
+  .reveal-block[open] > summary {
+    background: #dbeafe;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .reveal-block > summary:hover {
+    background: #dbeafe;
+  }
+
+  .reveal-content {
+    padding: 1rem 1.25rem;
+  }
+
+  .reveal-content ul,
+  .reveal-content ol {
+    margin-bottom: 0.75rem;
+  }
+
+  /* ── SBAR block ──────────────────────────────────────────────── */
+  .sbar-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    margin-bottom: 1.5rem;
+  }
+
+  .sbar-item {
+    padding: 1rem 1.25rem;
+  }
+
+  .sbar-item p { margin: 0; font-style: italic; }
+
+  .sbar-label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.4rem;
+  }
+
+  .sbar-s { background: #eff6ff; border-left: 5px solid #3b82f6; }
+  .sbar-b { background: #f0fdf4; border-left: 5px solid #22c55e; }
+  .sbar-a { background: #fffbeb; border-left: 5px solid #f59e0b; }
+  .sbar-r { background: #fef2f2; border-left: 5px solid #ef4444; }
+
+  /* ── Priority diagnoses ──────────────────────────────────────── */
+  .dx-rank-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .dx-rank-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: #f8f9fa;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+  }
+
+  .dx-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .dx-aeb {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-top: 0.2rem;
+  }
+
+  /* ── Compare grid ────────────────────────────────────────────── */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .compare-grid h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  /* ── References ──────────────────────────────────────────────── */
+  .ref-list {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .ref-note {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin: 0;
+  }
+
+  /* ── Utility ─────────────────────────────────────────────────── */
+  .text-success { color: #15803d; }
+  .text-danger  { color: #b91c1c; }
+
+  .btn-back {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .btn-back:hover {
+    background: var(--color-primary-dark);
+    text-decoration: none;
+  }
+</style>

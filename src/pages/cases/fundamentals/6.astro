@@ -1,36 +1,836 @@
 ---
-import CaseLayout from '../../../layouts/CaseLayout.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
-<CaseLayout
-  scenario="Fundamentals 6"
-  disciplineLabel="Fundamentals"
-  disciplineSlug="fundamentals"
-  category="Respiratory"
-  patient={{ name: "Nancy Gilbert", age: "65 years", gender: "Female" }}
-  scenarioTime="20 – 25 minutes"
-  debriefingTime="20 – 25 minutes"
-  concepts={[
-    "Vital signs",
-    "Assessment",
-    "Infection control",
-    "Oxygenation",
-    "Skin integrity and wound care",
-    "Communication",
-    "Patient education",
-    "Documentation and informatics",
-  ]}
-  skills={[
-    "Assess patient",
-    "Recognize moderate respiratory distress",
-    "Conduct sterile tracheostomy suctioning and dressing care",
-    "Maintain contact isolation precautions",
-    "Utilize therapeutic communication",
-    "Provide patient and family education",
-    "Access and document care in the EHR",
-  ]}
-  presentation="Patient with a history of laryngeal cancer, a permanent tracheostomy, and continuous supplemental oxygen is admitted with pneumonia. Patient is in contact isolation for MRSA in her sputum."
-  primaryDx="Pneumonia"
-  secondaryDx="Laryngeal cancer, tracheostomy"
-  primaryChallenge="Learner assesses a patient with moderate respiratory distress and conducts sterile tracheostomy suctioning while maintaining contact isolation precautions."
-/>
+<BaseLayout
+  title="Fundamentals 6 — Nancy Gilbert"
+  description="Unfolding case study: Tracheostomy Care (FUN-06)"
+>
+
+  <div class="breadcrumb">
+    <a href={base}>Home</a>
+    <span>›</span>
+    <a href={`${base}cases/`}>Cases</a>
+    <span>›</span>
+    <a href={`${base}cases/fundamentals/`}>Fundamentals</a>
+    <span>›</span>
+    <span>Fundamentals 6 — Nancy Gilbert</span>
+  </div>
+
+  <div class="case-header">
+    <span class="card-tag">Respiratory</span>
+    <h1>Fundamentals 6 — Nancy Gilbert</h1>
+    <p class="case-subtitle">Tracheostomy Care and Contact Isolation</p>
+    <div class="case-meta">
+      <span>👤 Nancy Gilbert, 65 years, Female</span>
+      <span>⏱ Scenario: 20 – 25 minutes</span>
+      <span>💬 Debrief: 20 – 25 minutes</span>
+    </div>
+  </div>
+
+  <div class="callout callout-info">
+    <strong>📖 How to Use This Unfolding Case Study</strong>
+    <p>Work through each phase in order. Information is revealed progressively — exactly as it would be in a real clinical encounter. Before reading each answer, pause and reason through the question yourself.</p>
+  </div>
+
+  <!-- PHASE 1 -->
+  <div class="phase-card" id="phase1">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 1</span>
+      <h2>You Arrive at the Bedside</h2>
+    </div>
+    <p class="phase-intro">You are the morning nurse on a medical-surgical unit. Before entering the room, you note a <strong>Contact Isolation</strong> sign on the door.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>📋 Handoff Report</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Patient</th><td>Nancy Gilbert</td></tr>
+            <tr><th>Age</th><td>65 years old</td></tr>
+            <tr><th>Gender</th><td>Female</td></tr>
+            <tr><th>Primary Dx</th><td>Pneumonia</td></tr>
+            <tr><th>Secondary Dx</th><td>Laryngeal cancer; permanent tracheostomy</td></tr>
+            <tr><th>Isolation</th><td><span class="badge-danger">Contact Isolation (MRSA)</span></td></tr>
+            <tr><th>Allergies</th><td>Review MAR</td></tr>
+            <tr><th>Code Status</th><td>Full code</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>💊 Current Medications</h3>
+        <ul class="med-list">
+          <li>Vancomycin IV (MRSA-targeted antibiotic)</li>
+          <li>Albuterol nebulization PRN</li>
+          <li>Acetylcysteine (Mucomyst) nebulization</li>
+          <li>Supplemental O₂ via trach collar</li>
+          <li>Normal saline for trach humidification</li>
+        </ul>
+      </div>
+    </div>
+    <div class="scene-box">
+      <h3>🚪 Donning PPE Before Entry — Contact Precautions</h3>
+      <p>Before entering Nancy's room you must don appropriate PPE for contact isolation. The patient has <strong>MRSA pneumonia</strong> with a tracheostomy — you will also be performing a sterile suctioning procedure, requiring additional sterile technique.</p>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: What PPE is required for contact isolation? What additional precautions apply for tracheostomy suctioning?</summary>
+      <div class="reveal-content">
+        <p><strong>Contact isolation PPE (minimum):</strong></p>
+        <ul>
+          <li>Gloves — don before entering</li>
+          <li>Gown — don before entering</li>
+          <li>Mask — required when anticipating splash/spray (trach suctioning = YES)</li>
+          <li>Eye protection — goggles or face shield during suctioning</li>
+          <li>Hand hygiene before donning and after doffing PPE</li>
+        </ul>
+        <p><strong>For sterile tracheostomy suctioning, additionally:</strong></p>
+        <ul>
+          <li>Sterile gloves (one for dominant hand holding catheter)</li>
+          <li>Sterile suction catheter and basin with sterile saline</li>
+          <li>Maintain sterile field throughout the procedure</li>
+        </ul>
+        <p><strong>Doffing order (to prevent self-contamination):</strong> gloves → gown → eye protection → mask → hand hygiene</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ After donning PPE and entering, you perform your initial assessment…</div>
+
+  <!-- PHASE 2 -->
+  <div class="phase-card" id="phase2">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 2</span>
+      <h2>Respiratory Assessment</h2>
+    </div>
+    <p class="phase-intro">You enter the room and find Mrs. Gilbert sitting up in bed, appearing anxious. She points to her tracheostomy and then to a whiteboard with "hard to breathe" written on it.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>📊 Vital Signs</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Temperature</th><td>38.8°C (101.8°F)</td></tr>
+            <tr><th>Blood Pressure</th><td>142/88 mmHg</td></tr>
+            <tr><th>Heart Rate</th><td>102 bpm</td></tr>
+            <tr><th>Respiratory Rate</th><td>24 breaths/min</td></tr>
+            <tr><th>SpO₂</th><td><span class="text-danger">89% on 2L via trach collar</span></td></tr>
+            <tr><th>Pain</th><td>4/10 (points to chest)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>🫁 Respiratory Findings</h3>
+        <ul>
+          <li>Visible secretions at trach stoma — thick, yellow-green</li>
+          <li>Audible gurgling with respirations</li>
+          <li>Lung sounds: coarse crackles bilateral bases, diminished right lower lobe</li>
+          <li>Use of accessory muscles noted</li>
+          <li>Trach ties intact; stoma site reddened with crusting</li>
+          <li>Inner cannula has not been cleaned this shift</li>
+        </ul>
+      </div>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: What is your priority intervention? What does SpO₂ of 89% indicate?</summary>
+      <div class="reveal-content">
+        <p><strong>Priority: Tracheostomy suctioning — airway clearance is the immediate need.</strong></p>
+        <ul>
+          <li>SpO₂ 89% = hypoxemia (normal ≥ 95%); this requires immediate action</li>
+          <li>Gurgling secretions at the trach stoma indicate the airway is partially obstructed by secretions</li>
+          <li>Increase O₂ to maintain SpO₂ ≥ 95% while preparing for suctioning</li>
+          <li>Notify provider if SpO₂ does not improve after suctioning</li>
+          <li>Position: Semi-Fowler's (30–45°) to optimize lung expansion</li>
+        </ul>
+        <p><strong>SBAR to provider after assessment:</strong></p>
+        <ul>
+          <li>S: "Mrs. Gilbert is in moderate respiratory distress with SpO₂ of 89%"</li>
+          <li>B: "She has laryngeal cancer with permanent trach and MRSA pneumonia"</li>
+          <li>A: "Visible thick secretions, RR 24, coarse crackles; needs suctioning now"</li>
+          <li>R: "Requesting order confirmation for suctioning and O₂ titration"</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ You gather your sterile suctioning supplies…</div>
+
+  <!-- PHASE 3 -->
+  <div class="phase-card" id="phase3">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 3</span>
+      <h2>Sterile Tracheostomy Suctioning</h2>
+    </div>
+    <p class="phase-intro">You gather a sterile suction kit and prepare to perform tracheostomy suctioning. Mrs. Gilbert watches you carefully and holds up the whiteboard: "Be gentle."</p>
+    <div class="scene-box">
+      <h3>⚙️ Sterile Suctioning — Step-by-Step</h3>
+      <table class="data-table">
+        <thead><tr><th>Step</th><th>Action</th><th>Rationale</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Explain procedure; obtain consent</td><td>Therapeutic communication; patient rights</td></tr>
+          <tr><td>2</td><td>Hyperoxygenate: increase O₂ to 100% for 30–60 sec before suctioning</td><td>Prevents hypoxemia during suction</td></tr>
+          <tr><td>3</td><td>Open sterile kit; set up sterile field; pour sterile saline in basin</td><td>Maintain sterility</td></tr>
+          <tr><td>4</td><td>Don sterile gloves (dominant hand sterile; non-dominant clean)</td><td>Sterile technique</td></tr>
+          <tr><td>5</td><td>Connect catheter to suction tubing without contaminating tip</td><td>Maintain sterility</td></tr>
+          <tr><td>6</td><td>Set suction pressure: 80–120 mmHg (adult)</td><td>Effective suctioning without trauma</td></tr>
+          <tr><td>7</td><td>Insert catheter WITHOUT suction; advance until resistance felt, then pull back 1 cm</td><td>Prevents tracheal wall trauma</td></tr>
+          <tr><td>8</td><td>Apply intermittent suction while withdrawing in rotating motion</td><td>Clears secretions efficiently</td></tr>
+          <tr><td>9</td><td>Limit suction to ≤ 10–15 seconds per pass</td><td>Prevents hypoxemia and trauma</td></tr>
+          <tr><td>10</td><td>Allow patient to rest and recover SpO₂ between passes (≥ 30 sec)</td><td>Restore oxygenation</td></tr>
+          <tr><td>11</td><td>Rinse catheter with sterile saline between passes</td><td>Clear catheter lumen</td></tr>
+          <tr><td>12</td><td>Reassess SpO₂ and breath sounds after suctioning</td><td>Evaluate effectiveness</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: After two passes, SpO₂ rises to 94%. Secretions are thick and yellow-green. What do you document and report?</summary>
+      <div class="reveal-content">
+        <p><strong>Document:</strong></p>
+        <ul>
+          <li>Time of procedure; number of suction passes</li>
+          <li>Secretion characteristics: amount, color, consistency, odor</li>
+          <li>Pre- and post-suction SpO₂ values</li>
+          <li>Patient tolerance and any adverse responses</li>
+          <li>Lung sounds before and after</li>
+        </ul>
+        <p><strong>Report to provider:</strong></p>
+        <ul>
+          <li>Thick yellow-green secretions consistent with active infection</li>
+          <li>SpO₂ improved to 94% post-suctioning — monitor for further changes</li>
+          <li>Confirm sputum culture order is in place</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ After suctioning, you proceed to tracheostomy site care…</div>
+
+  <!-- PHASE 4 -->
+  <div class="phase-card" id="phase4">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 4</span>
+      <h2>Tracheostomy Site Care</h2>
+    </div>
+    <p class="phase-intro">Following suctioning, you assess the tracheostomy stoma and inner cannula. The stoma is reddened with crusted secretions. The inner cannula requires cleaning.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>🔧 Inner Cannula Care</h3>
+        <ol>
+          <li>Unlock and remove inner cannula with non-dominant hand</li>
+          <li>Inspect for secretion buildup — thick brown crust noted</li>
+          <li>If disposable: discard and replace with new sterile cannula</li>
+          <li>If reusable: clean with sterile brush and sterile normal saline; rinse and reinsert</li>
+          <li>Lock inner cannula back in place; confirm secure</li>
+        </ol>
+      </div>
+      <div class="info-block">
+        <h3>🩹 Stoma Care</h3>
+        <ol>
+          <li>Use sterile 4×4 gauze dampened with sterile normal saline</li>
+          <li>Clean around stoma in circular motion moving outward</li>
+          <li>Use new gauze for each wipe — never reuse</li>
+          <li>Dry stoma area thoroughly</li>
+          <li>Apply split-drain tracheostomy dressing (never cut standard gauze — lint risk)</li>
+          <li>Change trach ties if soiled; maintain 1 finger-width of slack</li>
+        </ol>
+      </div>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: Why is moisture control at the stoma site so important? What complications can result from poor stoma care?</summary>
+      <div class="reveal-content">
+        <ul>
+          <li><strong>Skin breakdown:</strong> Moisture from secretions + friction = pressure injury/breakdown at stoma edges</li>
+          <li><strong>Infection:</strong> Warm, moist environment is ideal for bacterial growth — especially important with existing MRSA</li>
+          <li><strong>Granulation tissue:</strong> Chronic irritation can cause excessive granulation tissue growth, narrowing the stoma</li>
+          <li><strong>Trach displacement:</strong> Ties that are too loose risk accidental decannulation — a life-threatening emergency</li>
+          <li><strong>Tie too tight:</strong> Can cause pressure necrosis of skin — always maintain 1 finger-width slack</li>
+        </ul>
+        <p><strong>Emergency: Accidental decannulation:</strong></p>
+        <ul>
+          <li>Call for help IMMEDIATELY</li>
+          <li>If fresh trach (&lt; 72 hrs): do NOT attempt to replace — cover stoma, call rapid response</li>
+          <li>If established trach: attempt to replace with same size; have obturator at bedside always</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ With airway care complete, you address communication…</div>
+
+  <!-- PHASE 5 -->
+  <div class="phase-card" id="phase5">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 5</span>
+      <h2>Communication with a Tracheostomy Patient</h2>
+    </div>
+    <p class="phase-intro">Nancy cannot speak due to her permanent tracheostomy. She has a whiteboard and marker. She writes: "Am I getting better?" Her eyes are tearful.</p>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: How do you respond therapeutically? What communication tools are available for tracheostomy patients?</summary>
+      <div class="reveal-content">
+        <p><strong>Therapeutic response to "Am I getting better?":</strong></p>
+        <ul>
+          <li>Acknowledge her feelings first: "I can see this is weighing on you. It's okay to feel worried."</li>
+          <li>Be honest and compassionate: "Your body is fighting a significant infection. We are giving you antibiotics and supporting your breathing."</li>
+          <li>Give her control: "What questions can I help answer for you right now?"</li>
+          <li>Offer presence: "I'm here with you — you are not alone."</li>
+        </ul>
+        <p><strong>Alternative communication methods:</strong></p>
+        <ul>
+          <li>Whiteboard and dry-erase markers</li>
+          <li>Alphabet/picture communication boards</li>
+          <li>Smart phone / text-to-speech apps</li>
+          <li>Lip reading (for experienced patients)</li>
+          <li>Speaking valve (Passy-Muir) — only for appropriate trach types with physician order</li>
+        </ul>
+        <p><strong>Key nursing principles:</strong></p>
+        <ul>
+          <li>Face the patient when speaking — allow lip reading</li>
+          <li>Ask yes/no questions when possible</li>
+          <li>Never rush; allow adequate time for responses</li>
+          <li>Ensure call light is always within reach</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ You complete your care and prepare your documentation…</div>
+
+  <!-- PHASE 6 -->
+  <div class="phase-card" id="phase6">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 6</span>
+      <h2>Documentation and Isolation Precautions Review</h2>
+    </div>
+    <h3>📋 Priority Nursing Diagnoses</h3>
+    <div class="dx-rank-list">
+      <div class="dx-rank-item">
+        <span class="dx-number">1</span>
+        <div><strong>Ineffective Airway Clearance</strong><div class="dx-aeb">AEB: SpO₂ 89%, RR 24, thick secretions, diminished breath sounds</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">2</span>
+        <div><strong>Impaired Verbal Communication</strong><div class="dx-aeb">AEB: Permanent tracheostomy — unable to produce voice</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">3</span>
+        <div><strong>Risk for Infection (MRSA Transmission)</strong><div class="dx-aeb">AEB: Contact isolation; MRSA-positive sputum culture</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">4</span>
+        <div><strong>Anxiety</strong><div class="dx-aeb">AEB: Tearful; written question about prognosis; new diagnosis of laryngeal cancer</div></div>
+      </div>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ SBAR — Calling the Provider to Report Status Change</summary>
+      <div class="reveal-content">
+        <div class="sbar-block">
+          <div class="sbar-item sbar-s"><span class="sbar-label">S — Situation</span><p>Mrs. Gilbert, 65-year-old female with MRSA pneumonia and permanent tracheostomy, presented with SpO₂ of 89% and moderate respiratory distress this morning.</p></div>
+          <div class="sbar-item sbar-b"><span class="sbar-label">B — Background</span><p>Laryngeal cancer with permanent trach; on vancomycin for MRSA; contact isolation in place.</p></div>
+          <div class="sbar-item sbar-a"><span class="sbar-label">A — Assessment</span><p>After two passes of sterile suctioning, SpO₂ improved to 94%. Thick yellow-green secretions obtained. Stoma care and inner cannula cleaning completed. She is anxious and requesting information about prognosis.</p></div>
+          <div class="sbar-item sbar-r"><span class="sbar-label">R — Recommendation</span><p>Requesting provider review, confirmation of current vancomycin orders, and order for speech therapy consult for augmentative communication evaluation.</p></div>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <!-- APPENDIX A -->
+  <div class="phase-card" id="appendix-a">
+    <div class="phase-header">
+      <span class="phase-badge">Appendix A</span>
+      <h2>Medication Review</h2>
+    </div>
+    <table class="data-table">
+      <thead><tr><th>Medication</th><th>Class</th><th>Indication</th><th>Key Nursing Points</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Vancomycin</strong></td><td>Glycopeptide antibiotic</td><td>MRSA infection</td><td>Monitor trough levels; assess renal function (nephrotoxic); infuse over ≥ 60 min (Red Man Syndrome if too fast)</td></tr>
+        <tr><td><strong>Albuterol (neb)</strong></td><td>Beta-2 agonist bronchodilator</td><td>Bronchospasm / wheeze</td><td>Monitor HR (tachycardia); reassess breath sounds before/after; shake inhaler if MDI</td></tr>
+        <tr><td><strong>Acetylcysteine (Mucomyst)</strong></td><td>Mucolytic</td><td>Thin/loosen secretions</td><td>Unpleasant odor (sulfur); deliver via nebulizer; often given before suctioning</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- APPENDIX B -->
+  <div class="phase-card" id="appendix-b">
+    <div class="phase-header">
+      <span class="phase-badge">Appendix B</span>
+      <h2>Post-Simulation Questions &amp; Answers</h2>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Q1: What are the indications for tracheostomy suctioning?</summary>
+      <div class="reveal-content"><ul><li>Visible secretions at stoma</li><li>Audible gurgling/secretions in airway</li><li>SpO₂ dropping without other cause</li><li>Increased work of breathing or respiratory distress</li><li>Coarse crackles or rhonchi on auscultation</li><li>Coughing that is ineffective at clearing airway</li></ul></div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q2: What is the maximum recommended suction duration per pass, and why?</summary>
+      <div class="reveal-content"><p><strong>10–15 seconds per pass.</strong> Prolonged suctioning removes oxygen from the airway along with secretions, causing hypoxemia, vagal stimulation (bradycardia), and mucosal trauma. Limiting each pass and allowing recovery between passes prevents these complications.</p></div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q3: How do you assess the effectiveness of tracheostomy suctioning?</summary>
+      <div class="reveal-content"><ul><li>Improved SpO₂ (goal ≥ 95%)</li><li>Decreased work of breathing</li><li>Clearer breath sounds</li><li>Reduced visible secretions at stoma</li><li>Patient reports feeling more comfortable</li></ul></div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q4: What is accidental decannulation and how is it managed?</summary>
+      <div class="reveal-content"><p><strong>Accidental decannulation</strong> = unplanned removal of the tracheostomy tube. Management:</p><ul><li>Call for help immediately</li><li>Maintain patent airway — cover stoma with sterile gauze, use BVM if needed</li><li>Keep obturator and spare trach tube at bedside at all times</li><li>If established trach (&gt; 72 hrs): attempt to replace with same or smaller size</li><li>If fresh trach (&lt; 72 hrs): do NOT attempt replacement — risk of false passage; activate rapid response</li></ul></div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q5: Describe the correct technique for changing tracheostomy ties.</summary>
+      <div class="reveal-content"><ul><li>Two-nurse procedure preferred (one holds trach, one changes ties)</li><li>If working alone: apply new tie before removing old tie to prevent accidental decannulation</li><li>Maintain 1 finger-width of slack between ties and neck — too loose risks decannulation; too tight causes pressure injury</li><li>Assess skin under ties at each dressing change</li></ul></div>
+    </details>
+  </div>
+
+  <!-- APPENDIX C -->
+  <div class="phase-card" id="appendix-c">
+    <div class="phase-header">
+      <span class="phase-badge">Appendix C</span>
+      <h2>References</h2>
+    </div>
+    <ol class="ref-list">
+      <li>Potter, P. A., Perry, A. G., Stockert, P. A., &amp; Hall, A. (2021). <em>Fundamentals of nursing</em> (10th ed.). Elsevier.</li>
+      <li>American Association of Critical-Care Nurses. (2021). <em>AACN practice alert: Care of the patient with a tracheostomy</em>.</li>
+      <li>Vallerand, A. H., &amp; Sanoski, C. A. (2021). <em>Davis's drug guide for nurses</em> (17th ed.). F.A. Davis.</li>
+      <li>Centers for Disease Control and Prevention. (2022). <em>Guidelines for isolation precautions: Preventing transmission of infectious agents in healthcare settings</em>.</li>
+    </ol>
+    <div style="margin-top: 2rem;">
+      <a href={`${base}cases/fundamentals/`} class="btn-back">← Back to Fundamentals</a>
+    </div>
+  </div>
+
+</BaseLayout>
+
+<style>
+  /* ── Phase structure ─────────────────────────────────────────── */
+  .case-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-top: 0.25rem;
+  }
+
+  .phase-card {
+    background: var(--color-surface);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 0;
+    box-shadow: var(--shadow);
+    border-top: 4px solid var(--color-primary);
+  }
+
+  .appendix-card {
+    border-top-color: var(--color-secondary);
+  }
+
+  .phase-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .phase-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .phase-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+
+  .phase-badge-appendix {
+    background: var(--color-secondary);
+  }
+
+  .phase-intro {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin-bottom: 1.25rem;
+    border-left: 3px solid var(--color-accent);
+    padding-left: 0.75rem;
+  }
+
+  .phase-connector {
+    text-align: center;
+    padding: 0.6rem 0;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+  }
+
+  /* ── Info grid ───────────────────────────────────────────────── */
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 720px) {
+    .info-grid { grid-template-columns: 1fr; }
+    .compare-grid { grid-template-columns: 1fr; }
+  }
+
+  .info-block h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  /* ── Tables ──────────────────────────────────────────────────── */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--color-border);
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .data-table thead th {
+    background: #f0f4ff;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+  }
+
+  .data-table tbody th {
+    background: #f8f9fa;
+    font-weight: 600;
+    width: 30%;
+    color: var(--color-text);
+  }
+
+  .med-table tbody th {
+    width: 28%;
+  }
+
+  /* ── Callouts ────────────────────────────────────────────────── */
+  .callout {
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .callout p { margin-bottom: 0.5rem; }
+  .callout p:last-child { margin-bottom: 0; }
+
+  .callout-info {
+    background: #e8f0fe;
+    border-left: 4px solid var(--color-primary);
+  }
+
+  .callout-warning {
+    background: #fff8e1;
+    border-left: 4px solid #f59e0b;
+  }
+
+  .callout-danger {
+    background: #fff0f0;
+    border-left: 4px solid #dc2626;
+  }
+
+  /* ── Badges ──────────────────────────────────────────────────── */
+  .badge-danger {
+    display: inline-block;
+    background: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fca5a5;
+    border-radius: 4px;
+    padding: 0.1rem 0.45rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .badge-warning {
+    display: inline-block;
+    background: #fffbeb;
+    color: #92400e;
+    border: 1px solid #fde68a;
+    border-radius: 4px;
+    padding: 0.1rem 0.45rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  /* ── Scene box ───────────────────────────────────────────────── */
+  .scene-box {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .scene-box h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* ── Med list ────────────────────────────────────────────────── */
+  .med-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .med-list li {
+    padding: 0.35rem 0;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 0.9rem;
+  }
+
+  .med-list li:last-child { border-bottom: none; }
+
+  /* ── Chain flow ──────────────────────────────────────────────── */
+  .chain-flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin: 1.25rem 0;
+  }
+
+  .chain-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 520px;
+    gap: 0.2rem;
+  }
+
+  .chain-step small {
+    font-size: 0.8rem;
+    opacity: 0.8;
+  }
+
+  .chain-step-drug {
+    background: #e8f0fe;
+    color: var(--color-primary-dark);
+    border: 1px solid #bfdbfe;
+  }
+
+  .chain-step-problem {
+    background: #fff8e1;
+    color: #78350f;
+    border: 1px solid #fde68a;
+  }
+
+  .chain-step-consequence {
+    background: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+  }
+
+  .chain-arrow {
+    font-size: 1.5rem;
+    color: var(--color-text-muted);
+    line-height: 1.2;
+  }
+
+  .chain-icon {
+    font-size: 1.4rem;
+  }
+
+  /* ── Stat highlight ──────────────────────────────────────────── */
+  .stat-highlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fef2f2;
+    border: 2px solid #fca5a5;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #b91c1c;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+    color: #7f1d1d;
+    margin-top: 0.25rem;
+  }
+
+  /* ── Reveal (details/summary) ────────────────────────────────── */
+  .reveal-block {
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    margin-top: 1rem;
+    overflow: hidden;
+  }
+
+  .reveal-block > summary {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--color-primary);
+    background: #f0f4ff;
+    list-style: none;
+    user-select: none;
+  }
+
+  .reveal-block > summary::-webkit-details-marker { display: none; }
+
+  .reveal-block[open] > summary {
+    background: #dbeafe;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .reveal-block > summary:hover {
+    background: #dbeafe;
+  }
+
+  .reveal-content {
+    padding: 1rem 1.25rem;
+  }
+
+  .reveal-content ul,
+  .reveal-content ol {
+    margin-bottom: 0.75rem;
+  }
+
+  /* ── SBAR block ──────────────────────────────────────────────── */
+  .sbar-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    margin-bottom: 1.5rem;
+  }
+
+  .sbar-item {
+    padding: 1rem 1.25rem;
+  }
+
+  .sbar-item p { margin: 0; font-style: italic; }
+
+  .sbar-label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.4rem;
+  }
+
+  .sbar-s { background: #eff6ff; border-left: 5px solid #3b82f6; }
+  .sbar-b { background: #f0fdf4; border-left: 5px solid #22c55e; }
+  .sbar-a { background: #fffbeb; border-left: 5px solid #f59e0b; }
+  .sbar-r { background: #fef2f2; border-left: 5px solid #ef4444; }
+
+  /* ── Priority diagnoses ──────────────────────────────────────── */
+  .dx-rank-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .dx-rank-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: #f8f9fa;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+  }
+
+  .dx-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .dx-aeb {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-top: 0.2rem;
+  }
+
+  /* ── Compare grid ────────────────────────────────────────────── */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .compare-grid h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  /* ── Concept map ─────────────────────────────────────────────── */
+  .concept-map {
+    margin-bottom: 1.25rem;
+  }
+
+  /* ── References ──────────────────────────────────────────────── */
+  .ref-list {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .ref-note {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin: 0;
+  }
+
+  /* ── Utility ─────────────────────────────────────────────────── */
+  .text-success { color: #15803d; }
+  .text-danger  { color: #b91c1c; }
+
+  .btn-back {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .btn-back:hover {
+    background: var(--color-primary-dark);
+    text-decoration: none;
+  }
+</style>
