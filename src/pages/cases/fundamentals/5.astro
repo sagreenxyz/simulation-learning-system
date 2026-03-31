@@ -240,14 +240,159 @@ const base = import.meta.env.BASE_URL;
   <div class="phase-connector">⬇ You begin your head-to-toe assessment…</div>
 
   <!-- ══════════════════════════════════════════════════════════════════════
-       PHASE 3 — ASSESSMENT FINDINGS (placeholder)
+       PHASE 3 — ASSESSMENT FINDINGS
   ══════════════════════════════════════════════════════════════════════ -->
   <div class="phase-card" id="phase3">
     <div class="phase-header">
       <span class="phase-badge">Phase 3</span>
       <h2>Assessment Findings</h2>
     </div>
-    <p class="phase-intro"><em>Coming soon — Phase 3 content will appear here.</em></p>
+
+    <p class="phase-intro">
+      You perform a systematic head-to-toe assessment. Ms. Rae is alert and cooperative but anxious; she rates her right hip pain at 5/10.
+    </p>
+
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>🌡️ Vital Signs</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Temperature</th><td>36.8°C (98.2°F) — normal</td></tr>
+            <tr><th>Blood Pressure (lying)</th><td>100/66 mmHg <span class="badge-warning">Low — post-bolus</span></td></tr>
+            <tr><th>BP (sitting, 1 min)</th><td>88/58 mmHg <span class="badge-danger">Orthostatic drop ≥ 20 mmHg</span></td></tr>
+            <tr><th>Heart Rate</th><td>104 bpm <span class="badge-warning">Mild tachycardia</span></td></tr>
+            <tr><th>Respiratory Rate</th><td>18 breaths/min — normal</td></tr>
+            <tr><th>SpO₂</th><td>97% on room air — adequate</td></tr>
+            <tr><th>Pain</th><td>5/10 — right hip; dull, constant</td></tr>
+          </tbody>
+        </table>
+        <div class="callout callout-warning" style="margin-top: 0.75rem;">
+          <strong>Orthostatic hypotension confirmed:</strong> Systolic dropped 12 mmHg sitting up. Ms. Rae reports dizziness and lightheadedness when sitting — do NOT assist to standing until BP stabilizes.
+        </div>
+      </div>
+      <div class="info-block">
+        <h3>🧠 Neurological / Mental Status</h3>
+        <ul>
+          <li>Alert and oriented × 4 (person, place, time, situation)</li>
+          <li>GCS 15 — no neurological deficits</li>
+          <li>PERRLA — pupils equal, round, reactive to light</li>
+          <li>Denies headache, visual changes, neck pain, loss of consciousness</li>
+          <li>Anxious about hospitalization; asking about going home</li>
+          <li>Slightly embarrassed discussing incontinence — requires sensitive communication</li>
+        </ul>
+
+        <h3 style="margin-top: 1rem;">❤️ Cardiovascular</h3>
+        <ul>
+          <li>S1 S2 regular; no murmurs</li>
+          <li>Peripheral pulses 2+ bilaterally</li>
+          <li>No peripheral edema</li>
+          <li>Capillary refill &lt; 3 seconds</li>
+          <li>Skin slightly pale and cool — consistent with volume depletion</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>🦴 Musculoskeletal / Mobility</h3>
+        <ul>
+          <li>Right hip: <strong>tenderness and ecchymosis</strong> over greater trochanter; no visible deformity</li>
+          <li>X-ray ordered — ruling out fracture (result pending)</li>
+          <li>Right forearm: 3 cm laceration — sutured in ED, dressing intact, no bleeding</li>
+          <li>Moves all extremities; strength 4/5 bilateral lower extremities</li>
+          <li>Uses cane at home — cane is not with her in hospital</li>
+          <li>Unable to bear full weight on right leg at this time due to pain</li>
+          <li>Requires two-person assist to transfer</li>
+        </ul>
+      </div>
+      <div class="info-block">
+        <h3>🩺 Skin &amp; Integumentary</h3>
+        <ul>
+          <li>Skin is dry, thin, and fragile — consistent with aging</li>
+          <li>Mild skin tenting noted — consistent with mild dehydration</li>
+          <li>Mucous membranes slightly dry</li>
+          <li>
+            <strong>Coccyx:</strong> <span class="badge-danger">Stage I Pressure Injury</span> — 3 × 3 cm area of non-blanchable redness; skin intact; warm to touch; Ms. Rae reports "mild soreness" in that area
+          </li>
+          <li>No other skin breakdown identified</li>
+          <li>Bilateral heels: intact; bony prominence noted; at risk</li>
+        </ul>
+
+        <h3 style="margin-top: 1rem;">🚽 Genitourinary</h3>
+        <ul>
+          <li>Urinary incontinence (stress + urge) — chronic; reports leakage with urgency</li>
+          <li>Foley catheter inserted on admission for accurate output monitoring</li>
+          <li>Current urine output: 180 mL/hr for first 2 hours (diuretic effect)</li>
+          <li>Urine pale yellow, clear — no signs of infection</li>
+          <li>Intake: 0.9% NS at 75 mL/hr IV</li>
+        </ul>
+      </div>
+    </div>
+
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: Why does Ms. Rae have a Stage I pressure injury on her coccyx?</summary>
+      <div class="reveal-content">
+        <p><strong>Contributing factors to the Stage I pressure injury:</strong></p>
+        <ul>
+          <li><strong>Age-related skin changes</strong> — elderly skin is thinner, less elastic, and has reduced subcutaneous padding over bony prominences</li>
+          <li><strong>Reduced mobility</strong> — Ms. Rae's limited activity and right hip pain reduce spontaneous repositioning</li>
+          <li><strong>Urinary incontinence</strong> — moisture from urine softens and weakens the skin, dramatically increasing breakdown risk (moisture = friction + maceration)</li>
+          <li><strong>Dehydration</strong> — reduces skin turgor and tissue perfusion to capillaries under the skin</li>
+          <li><strong>Pressure on coccyx</strong> — prolonged sitting or lying supine concentrates pressure on this bony prominence</li>
+        </ul>
+        <p><strong>Key concept:</strong> Pressure + Moisture + Shear = Pressure Injury. All three are present for Ms. Rae. Early identification at Stage I allows intervention before irreversible tissue damage occurs.</p>
+      </div>
+    </details>
+
+    <details class="reveal-block">
+      <summary>▶ Pre-Sim Q: What age-related changes increase fall risk in older adults?</summary>
+      <div class="reveal-content">
+        <table class="data-table">
+          <thead><tr><th>System</th><th>Age-Related Change</th><th>Fall Risk Impact</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>Musculoskeletal</td>
+              <td>Loss of muscle mass (sarcopenia); decreased bone density (osteoporosis)</td>
+              <td>Weaker muscles reduce balance and reaction time; fractures more likely if fall occurs</td>
+            </tr>
+            <tr>
+              <td>Neurological</td>
+              <td>Slowed nerve conduction; reduced proprioception; altered vestibular function</td>
+              <td>Impaired balance and depth perception; slower protective reflexes</td>
+            </tr>
+            <tr>
+              <td>Cardiovascular</td>
+              <td>Impaired baroreceptor response; reduced cardiac output reserve</td>
+              <td>Orthostatic hypotension; dizziness with position changes</td>
+            </tr>
+            <tr>
+              <td>Vision</td>
+              <td>Reduced acuity; decreased contrast sensitivity; slower dark adaptation</td>
+              <td>Misjudging distances; not seeing floor obstacles or step edges</td>
+            </tr>
+            <tr>
+              <td>Renal</td>
+              <td>Decreased GFR; reduced ability to concentrate urine</td>
+              <td>Urinary urgency and nocturia → rushing to bathroom = fall risk</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+
+  <!-- connector -->
+  <div class="phase-connector">⬇ You complete your assessment and prepare to score fall and pressure injury risk…</div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       PHASE 4 — RISK ASSESSMENTS (placeholder)
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card" id="phase4">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 4</span>
+      <h2>Risk Assessments</h2>
+    </div>
+    <p class="phase-intro"><em>Coming soon — Phase 4 content will appear here.</em></p>
   </div>
 
   <!-- Back button -->
