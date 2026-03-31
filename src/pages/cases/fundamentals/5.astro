@@ -692,14 +692,150 @@ const base = import.meta.env.BASE_URL;
   <div class="phase-connector">⬇ You have your priorities identified — now you act…</div>
 
   <!-- ══════════════════════════════════════════════════════════════════════
-       PHASE 6 — NURSING ACTIONS (placeholder)
+       PHASE 6 — NURSING ACTIONS
   ══════════════════════════════════════════════════════════════════════ -->
   <div class="phase-card" id="phase6">
     <div class="phase-header">
       <span class="phase-badge">Phase 6</span>
       <h2>Nursing Actions</h2>
     </div>
-    <p class="phase-intro"><em>Coming soon — Phase 6 content will appear here.</em></p>
+
+    <p class="phase-intro">
+      Based on your assessment and prioritized nursing diagnoses, you implement nursing interventions and communicate with the healthcare team.
+    </p>
+
+    <!-- SBAR -->
+    <h3>📞 SBAR — Communication to Physician</h3>
+    <p>You call the provider to report your assessment findings and request updated orders.</p>
+    <div class="sbar-block">
+      <div class="sbar-item sbar-s">
+        <span class="sbar-label">S — Situation</span>
+        <p>This is [your name], RN on [unit]. I am calling about Ms. Lisa Rae, room [X], 78-year-old female admitted overnight for a mechanical fall and hypotension.</p>
+      </div>
+      <div class="sbar-item sbar-b">
+        <span class="sbar-label">B — Background</span>
+        <p>Ms. Rae has a history of hypertension, Type 2 DM (diet-controlled), osteoporosis, and urinary incontinence. She accidentally took a double dose of HCTZ 25 mg this morning. She was admitted with a BP of 88/54, received a 500 mL NS bolus in the ED, and IV NS 75 mL/hr is running. She has a right hip bruise and right forearm laceration (sutured). On exam I found a Stage I pressure injury on her coccyx. Morse Fall Score is 85 — HIGH RISK. Braden Score is 16 — AT RISK for pressure injury.</p>
+      </div>
+      <div class="sbar-item sbar-a">
+        <span class="sbar-label">A — Assessment</span>
+        <p>Current BP is 100/66 lying, dropping to 88/58 sitting — orthostatic hypotension confirmed. HR 104, afebrile, SpO₂ 97%. Urine output has been 180 mL/hr for 2 hours — likely ongoing diuretic effect. She is alert and oriented but anxious. Pain is 5/10 right hip. She has not voided naturally — Foley is in place. Electrolytes pending.</p>
+      </div>
+      <div class="sbar-item sbar-r">
+        <span class="sbar-label">R — Recommendation</span>
+        <p>Requesting: (1) Confirm HCTZ is held today. (2) Review IV fluid rate — continue or increase NS. (3) Order for orthostatic vital signs q4h. (4) Physical therapy consult for fall/gait assessment. (5) Wound care order for Stage I pressure injury. (6) Clarify weight-bearing status for right hip. (7) Electrolyte results — please review when available and order replacements PRN.</p>
+      </div>
+    </div>
+
+    <!-- Medication Administration -->
+    <h3>💊 Medication Administration</h3>
+    <table class="data-table" style="margin-bottom: 1rem;">
+      <thead>
+        <tr>
+          <th>Medication</th>
+          <th>Action Before Giving</th>
+          <th>Key Nursing Consideration</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0.9% Normal Saline IV 75 mL/hr</td>
+          <td>Check IV site for infiltration; verify rate on pump; check lung sounds</td>
+          <td>Monitor for fluid overload — crackles, edema, JVD; monitor I&amp;O hourly</td>
+        </tr>
+        <tr>
+          <td>Hydromorphone 0.5 mg IV PRN pain</td>
+          <td>Assess pain score, resp rate (&gt; 12/min), sedation level; BP (hold if systolic &lt; 90)</td>
+          <td><span class="badge-danger">CAUTION</span> — opioid + hypotension = compounded fall risk; call light reinforced; monitor after administration</td>
+        </tr>
+        <tr>
+          <td>Acetaminophen 650 mg PO q6h</td>
+          <td>Verify no hepatic disease; check that scheduled dose is due</td>
+          <td>Preferred baseline analgesia — reduces need for opioid; give with a small amount of fluid</td>
+        </tr>
+        <tr>
+          <td>HCTZ 25 mg PO daily</td>
+          <td>Check current order — held today per physician order</td>
+          <td><span class="badge-warning">HOLD</span> — resume when BP stabilized and patient safely ambulating</td>
+        </tr>
+        <tr>
+          <td>Metformin 500 mg PO daily</td>
+          <td>Check BMP for renal function (Cr); hold if creatinine elevated or patient NPO/contrast study planned</td>
+          <td>Given with evening meal; monitor blood glucose; assess renal function given volume depletion</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Fall Prevention Nursing Actions -->
+    <h3>🛡️ Fall Prevention — Implementation</h3>
+    <div class="info-grid">
+      <div class="info-block">
+        <h4>Environmental Modifications</h4>
+        <ul>
+          <li>✅ Bed locked in lowest position</li>
+          <li>✅ All appropriate siderails raised</li>
+          <li>✅ Call light within reach — demonstrated use</li>
+          <li>✅ Non-skid socks applied bilaterally</li>
+          <li>✅ Fall risk arm band confirmed</li>
+          <li>✅ Fall risk sign on door and above bed</li>
+          <li>✅ Pathway to bathroom cleared</li>
+          <li>✅ Foley tubing secured; no floor loops</li>
+          <li>✅ IV tubing organized and secured</li>
+          <li>✅ Nightlight turned on</li>
+        </ul>
+      </div>
+      <div class="info-block">
+        <h4>Patient Monitoring &amp; Nursing Response</h4>
+        <ul>
+          <li>Hourly rounding: pain, positioning, toileting needs, personal items within reach</li>
+          <li>Orthostatic BP check before any transfer out of bed</li>
+          <li>Two-person assist for all transfers until BP stabilizes</li>
+          <li>Anticipate toileting needs — offer bedpan / commode every 2 hours</li>
+          <li>Reassess pain before any ambulation attempt</li>
+          <li>Physical therapy consult placed for gait training</li>
+          <li>If pain medication given: wait 30 min and re-evaluate before ambulation</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Delegation -->
+    <details class="reveal-block">
+      <summary>▶ What can you safely delegate to a nursing assistant (CNA/PCT) for Ms. Rae?</summary>
+      <div class="reveal-content">
+        <p><strong>Safe to delegate to CNA/PCT (within their scope of practice):</strong></p>
+        <ul>
+          <li>Apply non-skid socks and assist with positioning</li>
+          <li>Perform routine vital signs (after RN verifies orthostatic measurement technique)</li>
+          <li>Record intake and output from IV bag and Foley bag</li>
+          <li>Assist with personal hygiene and pericare (with RN instruction on moisture barrier cream)</li>
+          <li>Assist with meals and encourage oral fluids as tolerated</li>
+          <li>Report any changes in patient condition, complaints, or call-light activations immediately to RN</li>
+        </ul>
+        <p><strong>NOT appropriate to delegate (requires RN judgment):</strong></p>
+        <ul>
+          <li>Initial or ongoing nursing assessment</li>
+          <li>Medication administration</li>
+          <li>Orthostatic vital sign interpretation</li>
+          <li>Decision to assist patient out of bed</li>
+          <li>Wound assessment of Stage I pressure injury</li>
+          <li>Patient or family education</li>
+          <li>SBAR communication with provider</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <!-- connector -->
+  <div class="phase-connector">⬇ Later in your shift, you reassess Ms. Rae and begin discharge planning…</div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       PHASE 7 — EVALUATION & EDUCATION (placeholder)
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card" id="phase7">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 7</span>
+      <h2>Evaluation &amp; Patient Education</h2>
+    </div>
+    <p class="phase-intro"><em>Coming soon — Phase 7 content will appear here.</em></p>
   </div>
 
   <!-- Back button -->
