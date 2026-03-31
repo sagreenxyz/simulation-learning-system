@@ -1,37 +1,1397 @@
 ---
-import CaseLayout from '../../../layouts/CaseLayout.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
-<CaseLayout
-  scenario="Fundamentals 1"
-  disciplineLabel="Fundamentals"
-  disciplineSlug="fundamentals"
-  category="Pediatric"
-  patient={{ name: "Alice Morrison", age: "7 years", gender: "Female" }}
-  scenarioTime="20 – 25 minutes"
-  debriefingTime="20 – 25 minutes"
-  concepts={[
-    "Assessment",
-    "Pediatric patient",
-    "Nutrition",
-    "Skin integrity and wound care",
-    "Medication administration (G-tube)",
-    "Documentation and informatics",
-  ]}
-  skills={[
-    "Assess patient",
-    "Recognize elevated temperature",
-    "Recognize disconnected G-tube feeding, saturated dressing, and wet bed pad",
-    "Utilize age-appropriate communication",
-    "Respect mother's role as primary caregiver",
-    "Change G-tube dressing and provide hygiene",
-    "Delegate tasks appropriately",
-    "Administer antipyretic via G-tube",
-    "Restart G-tube feeding",
-    "Access and document care in the EHR",
-  ]}
-  presentation="Pediatric patient with g-tube is admitted with acute bronchitis. Patient's G-tube feeding becomes disconnected just prior to start of scenario."
-  primaryDx="Acute bronchitis"
-  secondaryDx="Esophageal atresia with gastrostomy"
-  primaryChallenge="Learner assesses and implements care for a pediatric patient whose G-tube feeding has become disconnected while respecting the mother as the expert on the child's care."
-/>
+<BaseLayout
+  title="Fundamentals 1 — Alice Morrison"
+  description="Unfolding case study: G-Tube Care in a Pediatric Patient (FUN-01)"
+>
+
+  <div class="breadcrumb">
+    <a href={base}>Home</a>
+    <span>›</span>
+    <a href={`${base}cases/`}>Cases</a>
+    <span>›</span>
+    <a href={`${base}cases/fundamentals/`}>Fundamentals</a>
+    <span>›</span>
+    <span>Fundamentals 1 — Alice Morrison</span>
+  </div>
+
+  <!-- ── CASE HEADER ───────────────────────────────────────────────────── -->
+  <div class="case-header">
+    <span class="card-tag">Pediatric</span>
+    <h1>Fundamentals 1 — Alice Morrison</h1>
+    <p class="case-subtitle">G-Tube Care in a Pediatric Patient</p>
+    <div class="case-meta">
+      <span>👤 Alice Morrison, 7 years old, Female</span>
+      <span>⏱ Scenario: 20 – 25 minutes</span>
+      <span>💬 Debrief: 20 – 25 minutes</span>
+    </div>
+  </div>
+
+  <!-- ── HOW TO USE ────────────────────────────────────────────────────── -->
+  <div class="callout callout-info">
+    <strong>📖 How to Use This Unfolding Case Study</strong>
+    <p>Work through each phase in order. Information is revealed progressively — exactly as it would be in a real clinical encounter. Before reading each answer, pause and reason through the question yourself. Use the <strong>▶ Reveal Answer</strong> toggles to check your thinking.</p>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       PHASE 1 — YOU ARRIVE AT THE BEDSIDE
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card" id="phase1">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 1</span>
+      <h2>You Arrive at the Bedside</h2>
+    </div>
+
+    <p class="phase-intro">
+      You are the morning nurse on the pediatric inpatient unit. You receive handoff report and head to see your patient for the first time.
+    </p>
+
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>📋 Handoff Report</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Patient</th><td>Alice Morrison</td></tr>
+            <tr><th>Age / DOB</th><td>7 years old</td></tr>
+            <tr><th>Gender</th><td>Female</td></tr>
+            <tr><th>Setting</th><td>Pediatric inpatient unit</td></tr>
+            <tr><th>Primary Dx</th><td>Acute bronchitis</td></tr>
+            <tr><th>Secondary Dx</th><td>Esophageal atresia with gastrostomy tube (G-tube)</td></tr>
+            <tr><th>Allergy</th><td>Review MAR</td></tr>
+            <tr><th>Code Status</th><td>Full code</td></tr>
+            <tr><th>Family</th><td>Mother present — primary caregiver and G-tube expert</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>💊 Current Medications (on MAR)</h3>
+        <ul class="med-list">
+          <li>Gentamicin (Garamycin) 48 mg IV Piggyback Q8HRS</li>
+          <li>Ampicillin IV (per order)</li>
+          <li>Ranitidine (Zantac Syrup) 47 mg PO/G-tube Q12HRS</li>
+          <li>Acetaminophen Suspension 100 mg/mL <span class="badge-warning">PRN</span> via G-tube (10–15 mg/kg/dose)</li>
+          <li>Ibuprofen Suspension 20 mg/mL (Motrin) <span class="badge-warning">PRN</span> via G-tube (5–10 mg/kg/dose)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="scene-box">
+      <h3>🚪 Entering the Room — What You Observe</h3>
+      <p>
+        Alice is a 7-year-old girl lying in a hospital bed. Her mother is seated at the bedside. Alice appears mildly flushed and restless. Her G-tube feeding is connected and running when you walk in, but on closer inspection you notice the dressing around the G-tube appears wet. Mother greets you anxiously.
+      </p>
+    </div>
+
+    <h3>🔒 SWIPE Safety Assessment</h3>
+    <p>Before touching the patient, perform your environmental safety check:</p>
+    <table class="data-table">
+      <thead><tr><th>Letter</th><th>Check</th><th>What You Find</th></tr></thead>
+      <tbody>
+        <tr><td><strong>S</strong></td><td>Siderails up</td><td>Both rails up — <span class="text-success">appropriate for pediatric patient ✓</span></td></tr>
+        <tr><td><strong>W</strong></td><td>Wristband on, matches chart</td><td>Present and correct — verify with 2 identifiers (name + DOB) ✓</td></tr>
+        <tr><td><strong>I</strong></td><td>IV lines — site, patency, rate, label</td><td>Right hand IV access; Gentamicin IVPB infusing; assess site for redness/swelling</td></tr>
+        <tr><td><strong>P</strong></td><td>Pull cord / call light within reach</td><td>Within mother's reach — child may not operate call light alone ✓</td></tr>
+        <tr><td><strong>E</strong></td><td>Equipment — bed position, path clear</td><td>Bed in lowest position; G-tube feeding pump present; ensure room path is clear</td></tr>
+      </tbody>
+    </table>
+
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: What initial observations concern you, and how do you introduce yourself to a 7-year-old child and her anxious mother?</summary>
+      <div class="reveal-content">
+        <p><strong>Concerns on arrival:</strong></p>
+        <ul>
+          <li>Mildly flushed appearance — possible fever</li>
+          <li>Wet dressing around G-tube — formula leakage, skin breakdown risk</li>
+          <li>Mother appears anxious — she is the G-tube expert; engage her immediately</li>
+        </ul>
+        <p><strong>Introducing yourself to a 7-year-old — developmental considerations:</strong></p>
+        <ul>
+          <li>Get down to Alice's eye level — do not stand over her</li>
+          <li>"Hi Alice! My name is ___ and I'm going to be your nurse today. Is it okay if I check on you?"</li>
+          <li>Verify two identifiers: name + date of birth</li>
+          <li>Use simple, age-appropriate language: "I'm going to check your tummy tube"</li>
+          <li>Address mother: "Hello, Mrs. Morrison. I want to make sure I understand everything about Alice's care. You clearly know her best — can you walk me through her usual routine?"</li>
+          <li>Allow Alice to hold a familiar comfort object; involve her in age-appropriate choices</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <!-- connector -->
+  <div class="phase-connector">⬇ As you perform your initial assessment, a critical finding emerges…</div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       PHASE 2 — DISCOVERING THE DISCONNECTED G-TUBE
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card" id="phase2">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 2</span>
+      <h2>Discovering the Disconnected G-Tube</h2>
+    </div>
+
+    <p class="phase-intro">
+      As you perform your assessment you discover a critical finding that requires immediate attention.
+    </p>
+
+    <div class="scene-box">
+      <h3>🔍 Critical Finding</h3>
+      <p>
+        The G-tube feeding tubing has <strong>disconnected from the G-tube</strong>. Formula has leaked onto the dressing and bed pad, saturating both. The stoma site shows formula residue and moisture. Alice's mother notices you examining the site and becomes more anxious.
+      </p>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>🌡️ Vital Signs</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Temperature</th><td>38.4°C (101.1°F) <span class="badge-danger">FEVER</span></td></tr>
+            <tr><th>Heart Rate</th><td>104 bpm <span class="badge-warning">Mild tachycardia</span></td></tr>
+            <tr><th>Respiratory Rate</th><td>22 breaths/min — within normal for age</td></tr>
+            <tr><th>SpO₂</th><td>96% on room air — adequate</td></tr>
+            <tr><th>Blood Pressure</th><td>98/62 mmHg — normal for 7-year-old</td></tr>
+            <tr><th>Pain</th><td>3/10 using Wong-Baker FACES scale</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>🔎 Head-to-Toe Assessment Findings</h3>
+        <ul>
+          <li><strong>General:</strong> Mildly flushed, restless, appears uncomfortable</li>
+          <li><strong>Respiratory:</strong> RR 22, mild rhonchi bilaterally, occasional productive cough, no retractions</li>
+          <li><strong>Abdomen / G-tube:</strong> <span class="badge-danger">DISCONNECTED</span> feeding tubing; saturated dressing; wet bed pad; stoma site moist with formula residue; skin around stoma appears intact but moist</li>
+          <li><strong>IV site:</strong> Right hand; no redness or swelling; Gentamicin IVPB infusing</li>
+        </ul>
+      </div>
+    </div>
+
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: What are your priority problems and what do you do first?</summary>
+      <div class="reveal-content">
+        <p><strong>Priority problems (ranked):</strong></p>
+        <ol>
+          <li><strong>Disconnected G-tube feeding</strong> — nutrition interrupted + immediate skin breakdown risk from formula moisture</li>
+          <li><strong>Fever 38.4°C</strong> — requires assessment and antipyretic administration via G-tube</li>
+          <li><strong>Respiratory assessment</strong> — ongoing bronchitis requires monitoring</li>
+        </ol>
+        <p><strong>Immediate action sequence:</strong></p>
+        <ol>
+          <li>Stop the feeding pump; clamp the G-tube tubing</li>
+          <li>Assess the stoma site fully — check for skin breakdown, drainage, erythema</li>
+          <li>Change the saturated dressing using clean technique</li>
+          <li>Reconnect tubing securely; restart feeding after confirming placement</li>
+          <li>Administer acetaminophen via G-tube for fever</li>
+          <li>Continue respiratory assessment; auscultate lung sounds</li>
+        </ol>
+        <p><strong>Communicate calmly to mother:</strong> "Mrs. Morrison, I can see Alice's tube feeding has disconnected. I'm going to clean up the area and reconnect it. Can you tell me how long this might have been like this? And I'd love to watch your usual technique — you know Alice's care better than anyone."</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- connector -->
+  <div class="phase-connector">⬇ You prepare to perform a G-tube dressing change…</div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       PHASE 3 — G-TUBE DRESSING CHANGE AND HYGIENE CARE
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card" id="phase3">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 3</span>
+      <h2>G-Tube Dressing Change and Hygiene Care</h2>
+    </div>
+
+    <p class="phase-intro">
+      You proceed with a complete G-tube site assessment and dressing change. Alice's mother is watching and ready to help.
+    </p>
+
+    <h3>🩹 Step-by-Step G-Tube Dressing Change Procedure</h3>
+    <table class="data-table">
+      <thead><tr><th>Step</th><th>Action</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Perform hand hygiene; don clean gloves</td><td>Infection prevention — standard precautions</td></tr>
+        <tr><td>2</td><td>Explain to Alice and mother: "Alice, I'm going to clean around your tube and put on a clean dry bandage. It might feel a little cold. Is that okay?"</td><td>Age-appropriate preparation reduces anxiety; builds trust</td></tr>
+        <tr><td>3</td><td>Stop the feeding pump; clamp the G-tube</td><td>Prevents additional formula leakage during dressing change</td></tr>
+        <tr><td>4</td><td>Remove the saturated dressing; assess stoma site immediately</td><td>Wet dressings harbor bacteria and cause skin maceration</td></tr>
+        <tr><td>5</td><td>Clean the stoma site with warm water or saline per protocol; use gentle circular motion outward from tube</td><td>Removes formula residue; reduces infection and skin irritation risk</td></tr>
+        <tr><td>6</td><td>Assess stoma skin: intact but moist; no erythema, no breakdown, no granulation tissue noted</td><td>Early identification of complications prevents worsening</td></tr>
+        <tr><td>7</td><td>Apply fresh, dry gauze or foam dressing split around the stoma base</td><td>Absorbs moisture; protects skin from formula contact</td></tr>
+        <tr><td>8</td><td>Ensure the external bumper has 1–2 finger-width clearance</td><td>Too tight = pressure injury; too loose = tube migration risk</td></tr>
+        <tr><td>9</td><td>Change wet bed pad; assist with hygiene as needed</td><td>Restores comfort; promotes dignity</td></tr>
+        <tr><td>10</td><td>Reconnect feeding tubing securely to G-tube port</td><td>Prevents future disconnection</td></tr>
+        <tr><td>11</td><td>Check gastric residual before restarting (aspirate gently; hold if &gt; facility policy limit)</td><td>Verifies gastric emptying; prevents aspiration</td></tr>
+        <tr><td>12</td><td>Restart G-tube feeding at ordered rate</td><td>Resumes nutrition delivery</td></tr>
+        <tr><td>13</td><td>Position HOB at 30–45 degrees</td><td>Reduces aspiration risk during enteral feeding</td></tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin-top: 1.5rem;">🔍 Stoma Site Assessment</h3>
+    <table class="data-table">
+      <thead><tr><th>Assessment Parameter</th><th>Finding</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td>Redness / Erythema</td><td>None currently present</td><td>Continue monitoring; document baseline</td></tr>
+        <tr><td>Swelling</td><td>None</td><td>No action needed</td></tr>
+        <tr><td>Drainage</td><td>Formula residue (clear/milky) — from leakage</td><td>Clean thoroughly; apply dry dressing</td></tr>
+        <tr><td>Granulation tissue</td><td>None noted</td><td>Document; report if develops</td></tr>
+        <tr><td>Tube position</td><td>Intact; external bumper in place</td><td>Verify 1–2 finger-width clearance</td></tr>
+        <tr><td>Skin condition</td><td>Moist but intact; no breakdown</td><td>Dry thoroughly; apply moisture-barrier if ordered</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout callout-info" style="margin-top: 1.25rem;">
+      <strong>👩‍👧 Family-Centered Care — Involve the Expert</strong>
+      <p>Alice's mother manages this G-tube at home every single day. Ask her to demonstrate her usual care technique — this gives you important assessment data (is her technique safe?), respects her expertise, and strengthens the therapeutic relationship. Teach as you go: "I notice you do it this way — that's exactly right. One thing we can add is checking the bumper clearance each time."</p>
+    </div>
+
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: Why does moisture from leaked formula threaten Alice's skin? What scale measures her pressure injury risk?</summary>
+      <div class="reveal-content">
+        <p><strong>Why formula leakage threatens skin integrity:</strong></p>
+        <ul>
+          <li>Prolonged moisture exposure → <strong>skin maceration</strong> — softening and breakdown of skin tissue</li>
+          <li>Macerated skin is fragile and highly susceptible to fungal infections (especially <em>Candida</em>) and pressure injury</li>
+          <li>Formula contains proteins and acids that further irritate compromised skin</li>
+          <li>Moist skin at the stoma site has reduced barrier function and increased friction coefficient</li>
+        </ul>
+        <p><strong>Braden Q Scale (pediatric pressure injury risk assessment):</strong></p>
+        <p>The <strong>Braden Q Scale</strong> is used in pediatric patients and assesses 7 subscales:</p>
+        <ol>
+          <li>Mobility</li>
+          <li>Activity</li>
+          <li>Sensory perception</li>
+          <li><strong>Moisture</strong> — Alice scores HIGH RISK here due to the saturated dressing</li>
+          <li>Friction and shear</li>
+          <li>Nutrition</li>
+          <li>Tissue perfusion and oxygenation</li>
+        </ol>
+        <p><strong>Interventions for moisture management:</strong> keep site clean and dry; apply moisture-barrier products (zinc oxide, petrolatum-based) if ordered; change dressings when wet; reposition to reduce pressure on stoma site; assess with every dressing change.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- connector -->
+  <div class="phase-connector">⬇ The stoma is clean and the dressing is changed — now address the fever…</div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       PHASE 4 — FEVER MANAGEMENT VIA G-TUBE
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card" id="phase4">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 4</span>
+      <h2>Fever Management via G-Tube</h2>
+    </div>
+
+    <p class="phase-intro">
+      Alice's temperature is confirmed at 38.4°C (101.1°F). The acetaminophen PRN order requires weight-based dosing calculation before administration via the G-tube.
+    </p>
+
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>⚖️ Weight-Based Dose Calculation</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Patient weight</th><td>22 kg</td></tr>
+            <tr><th>Ordered medication</th><td>Acetaminophen Suspension 100 mg/mL</td></tr>
+            <tr><th>Dose range</th><td>10–15 mg/kg/dose</td></tr>
+            <tr><th>Minimum dose</th><td>10 mg/kg × 22 kg = <strong>220 mg</strong></td></tr>
+            <tr><th>Maximum dose</th><td>15 mg/kg × 22 kg = <strong>330 mg</strong></td></tr>
+            <tr><th>Dose to give</th><td><strong>300 mg</strong> (within safe range)</td></tr>
+            <tr><th>Volume to draw up</th><td>300 mg ÷ 100 mg/mL = <strong>3 mL</strong></td></tr>
+            <tr><th>Route</th><td>Via G-tube (oral syringe)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>📋 G-Tube Medication Administration Steps</h3>
+        <ol style="font-size: 0.9rem; padding-left: 1.25rem;">
+          <li>Verify the medication order in the MAR</li>
+          <li>Perform the 5+ rights: right patient, drug, dose, route, time</li>
+          <li>Verify patient identity with two identifiers (name + DOB)</li>
+          <li>Confirm G-tube placement: aspirate for gastric contents</li>
+          <li>Flush G-tube with 5–10 mL water — confirm patency</li>
+          <li>Draw up <strong>3 mL</strong> of acetaminophen 100 mg/mL in oral syringe</li>
+          <li>Connect syringe to G-tube port; administer slowly</li>
+          <li>Flush again with 5–10 mL water to deliver full dose</li>
+          <li>Clamp tube briefly; reconnect to feeding per protocol</li>
+          <li>Document: medication, dose, volume, route, time, response</li>
+          <li>Reassess temperature in 30–60 minutes</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="callout callout-info">
+      <strong>💬 Therapeutic Communication with Alice During Medication Administration</strong>
+      <p>"Alice, I'm going to give your tube some medicine to help bring your fever down and make you feel better. Your tube won't hurt — you'll just feel me working near your tummy for a minute. Can you hold Mr. Bear while I do this?" <em>(Use a comfort object to reduce anxiety.)</em></p>
+    </div>
+
+    <details class="reveal-block">
+      <summary>▶ Pre-Sim Q9: What are weight-based dosing principles for pediatric medications?</summary>
+      <div class="reveal-content">
+        <p><strong>Core principle:</strong> Pediatric medications are dosed by weight (mg/kg). Using adult doses causes serious harm — overdose, toxicity, organ damage.</p>
+        <div class="compare-grid">
+          <div>
+            <h4>Acetaminophen (Tylenol)</h4>
+            <ul>
+              <li>Dose: 10–15 mg/kg/dose q4–6h PRN</li>
+              <li>Max: 5 doses/24 hours</li>
+              <li>Max single dose: 1000 mg</li>
+              <li>For Alice (22 kg): 220–330 mg → give 300 mg (3 mL of 100 mg/mL)</li>
+              <li>Watch for: hepatotoxicity with overdose</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Ibuprofen (Motrin)</h4>
+            <ul>
+              <li>Dose: 5–10 mg/kg q6–8h PRN</li>
+              <li>For Alice (22 kg): 110–220 mg → give 200 mg (10 mL of 20 mg/mL)</li>
+              <li>Watch for: GI irritation, renal effects</li>
+              <li>Do NOT give to infants under 6 months</li>
+            </ul>
+          </div>
+        </div>
+        <div class="callout callout-warning" style="margin-top: 0.75rem;">
+          <strong>Critical G-tube medication rule:</strong> Always use <em>liquid</em> formulations for G-tube administration. Never crush adult tablets as a substitute — concentrations differ. Verify the available concentration before calculating volume.
+        </div>
+      </div>
+    </details>
+
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: When can you give ibuprofen instead of acetaminophen, and when should you alternate?</summary>
+      <div class="reveal-content">
+        <p><strong>Alternating antipyretics in pediatrics:</strong></p>
+        <ul>
+          <li>Acetaminophen and ibuprofen act on different pathways — they can be alternated safely when fever is persistent and not controlled by one agent alone</li>
+          <li>Acetaminophen: q4–6h; Ibuprofen: q6–8h — stagger timing to provide more continuous coverage</li>
+          <li>Example: Acetaminophen at 8 AM → Ibuprofen at 11 AM → Acetaminophen at 2 PM</li>
+          <li>Always document both medications to avoid accidental double-dosing</li>
+          <li>Check for contraindications: ibuprofen is avoided in dehydration, GI bleeding, or renal compromise</li>
+          <li>For Alice: acetaminophen is first choice given her G-tube and bronchitis; ibuprofen is available PRN per order if needed</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <!-- connector -->
+  <div class="phase-connector">⬇ Medication given — now restart the G-tube feeding and plan care…</div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       PHASE 5 — RESTARTING THE G-TUBE FEEDING
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card" id="phase5">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 5</span>
+      <h2>Restarting the G-Tube Feeding</h2>
+    </div>
+
+    <p class="phase-intro">
+      The dressing is changed, acetaminophen is given, and the G-tube is reconnected. Before restarting the enteral feeding, you perform a systematic safety check.
+    </p>
+
+    <h3>✅ Before Restarting Feeding — Safety Checklist</h3>
+    <table class="data-table">
+      <thead><tr><th>Check</th><th>How to Verify</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Tube placement confirmed</td><td>Aspirate for gastric contents; confirm pH ≤ 5.5 if policy requires; check external markings</td><td>Confirm ✓</td></tr>
+        <tr><td>Gastric residual assessed</td><td>Gently aspirate; re-infuse contents per protocol; hold if &gt; facility policy limit</td><td>Assess and document</td></tr>
+        <tr><td>Tubing securely connected</td><td>Visually inspect connection; tug gently to ensure lock</td><td>Confirm ✓</td></tr>
+        <tr><td>Correct formula verified</td><td>Check label against MAR — formula type, concentration</td><td>Verify ✓</td></tr>
+        <tr><td>Correct rate confirmed</td><td>Check rate ordered against pump setting</td><td>Verify ✓</td></tr>
+        <tr><td>HOB elevated 30–45 degrees</td><td>Measure or visually confirm head elevation</td><td>Position ✓</td></tr>
+        <tr><td>Pump programmed correctly</td><td>Verify rate, volume limit, and alarm settings</td><td>Set and confirm ✓</td></tr>
+      </tbody>
+    </table>
+
+    <div class="info-grid" style="margin-top: 1.5rem;">
+      <div class="info-block">
+        <h3>📊 Post-Restart Assessment</h3>
+        <ul>
+          <li>Confirm formula flowing at ordered rate</li>
+          <li>No signs of abdominal distension, discomfort, or nausea</li>
+          <li>Patient tolerating feeding — no vomiting</li>
+          <li>Stoma site dry; new dressing intact</li>
+          <li>Monitor feeding tolerance over next 30–60 minutes</li>
+        </ul>
+      </div>
+      <div class="info-block">
+        <h3>👥 Delegation Guidelines</h3>
+        <h4 class="text-success" style="margin-top: 0;">✓ Can delegate to UAP/CNA</h4>
+        <ul style="font-size: 0.9rem;">
+          <li>Vital signs recording <em>(after initial RN assessment)</em></li>
+          <li>Bed linen change</li>
+          <li>Hygiene assistance</li>
+          <li>Reporting changes in patient condition to RN</li>
+        </ul>
+        <h4 class="text-danger">✗ Cannot delegate (RN only)</h4>
+        <ul style="font-size: 0.9rem;">
+          <li>G-tube site assessment</li>
+          <li>Medication administration</li>
+          <li>Tube placement verification</li>
+          <li>Patient and family teaching</li>
+          <li>Documentation of clinical findings</li>
+        </ul>
+      </div>
+    </div>
+
+    <details class="reveal-block">
+      <summary>▶ Pre-Sim Q4: What are the complete steps to reconnect and restart a G-tube feeding after disconnection?</summary>
+      <div class="reveal-content">
+        <ol>
+          <li><strong>Identify what happened</strong> — assess extent of disconnection; was formula lost? How long was it disconnected?</li>
+          <li><strong>Stop the pump</strong> — prevent further uncontrolled formula flow</li>
+          <li><strong>Assess and clean the site</strong> — remove formula residue; assess stoma skin integrity</li>
+          <li><strong>Change the saturated dressing</strong> — apply clean, dry gauze or foam dressing</li>
+          <li><strong>Check gastric residual</strong> before restarting — aspirate; re-infuse per policy; hold if excessive</li>
+          <li><strong>Reconnect tubing securely</strong> — confirm the locking connection</li>
+          <li><strong>Verify correct formula at correct rate</strong> — confirm with MAR</li>
+          <li><strong>Restart the pump</strong> at the ordered rate</li>
+          <li><strong>Elevate HOB 30–45 degrees</strong></li>
+          <li><strong>Document thoroughly</strong>: disconnection time (estimated), site assessment findings, amount of formula lost (if estimable), dressing change, gastric residual, restart time, rate, and patient response</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+
+  <!-- connector -->
+  <div class="phase-connector">⬇ Document findings and plan discharge teaching…</div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       PHASE 6 — DOCUMENTATION AND DELEGATION
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card" id="phase6">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 6</span>
+      <h2>Documentation, SBAR &amp; Clinical Reasoning</h2>
+    </div>
+
+    <p class="phase-intro">
+      You have completed your priority interventions. Now document your findings in the EHR, formulate your nursing diagnoses, and prepare to communicate with the provider.
+    </p>
+
+    <!-- SBAR -->
+    <h3>📞 SBAR — Your Call to the Provider</h3>
+    <div class="sbar-block">
+      <div class="sbar-item sbar-s">
+        <span class="sbar-label">S — Situation</span>
+        <p>"I am calling about Alice Morrison, a 7-year-old female in room ___, admitted for acute bronchitis with a history of esophageal atresia and G-tube dependence. I am calling to report a fever and a G-tube feeding disconnection that I have addressed."</p>
+      </div>
+      <div class="sbar-item sbar-b">
+        <span class="sbar-label">B — Background</span>
+        <p>"Alice has esophageal atresia and has been G-tube dependent since birth. She is admitted for acute bronchitis and is receiving Gentamicin IV and Ampicillin IV. When I arrived this morning, her G-tube feeding was disconnected — formula had saturated the dressing and bed pad. I performed a dressing change and reconnected the feeding. She is currently receiving Gentamicin IVPB infusing."</p>
+      </div>
+      <div class="sbar-item sbar-a">
+        <span class="sbar-label">A — Assessment</span>
+        <p>"Alice has a temperature of 38.4°C (101.1°F), heart rate 104, SpO₂ 96% on room air. She has mild rhonchi bilaterally with occasional productive cough. I administered acetaminophen 300 mg via G-tube as ordered. Stoma site is clean and intact after dressing change. Her mother is present and reports no change in Alice's baseline respiratory status."</p>
+      </div>
+      <div class="sbar-item sbar-r">
+        <span class="sbar-label">R — Recommendation</span>
+        <p>"I am requesting you assess Alice's current status and determine whether any additional interventions are needed for her fever or respiratory status. I would also like to discuss whether the G-tube disconnection protocol has been followed correctly and whether a repeat temperature check in 60 minutes is the correct plan."</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top: 1.5rem;">🏥 Priority Nursing Diagnoses (Ranked)</h3>
+    <div class="dx-rank-list">
+      <div class="dx-rank-item">
+        <span class="dx-number">1</span>
+        <div>
+          <strong>Risk for Impaired Skin Integrity</strong> r/t moisture from formula leakage at G-tube stoma site
+          <div class="dx-aeb">AEB: saturated dressing, moist stoma skin, formula residue at site, G-tube disconnection</div>
+        </div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">2</span>
+        <div>
+          <strong>Hyperthermia</strong> r/t infectious process (acute bronchitis)
+          <div class="dx-aeb">AEB: temperature 38.4°C (101.1°F), heart rate 104 bpm, flushed appearance, restlessness</div>
+        </div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">3</span>
+        <div>
+          <strong>Ineffective Airway Clearance</strong> r/t acute bronchitis
+          <div class="dx-aeb">AEB: RR 22, mild bilateral rhonchi, productive cough, SpO₂ 96%</div>
+        </div>
+      </div>
+    </div>
+
+    <h3>📝 EHR Documentation Checklist</h3>
+    <table class="data-table">
+      <thead><tr><th>What to Document</th><th>Key Details</th></tr></thead>
+      <tbody>
+        <tr><td>Assessment findings</td><td>Vital signs, respiratory assessment, G-tube site condition, skin integrity</td></tr>
+        <tr><td>G-tube event</td><td>Disconnection found; time discovered (estimated); amount of formula lost (estimated)</td></tr>
+        <tr><td>Dressing change</td><td>Site appearance before and after; type of dressing applied; skin integrity status</td></tr>
+        <tr><td>Gastric residual</td><td>Amount aspirated before restarting; action taken</td></tr>
+        <tr><td>Feeding restart</td><td>Time restarted; rate; formula type; patient tolerance</td></tr>
+        <tr><td>Medication administered</td><td>Acetaminophen 300 mg via G-tube; time; patient response; reassessment temperature</td></tr>
+        <tr><td>Family involvement</td><td>Mother present; demonstrated technique; education provided; response to teaching</td></tr>
+        <tr><td>SBAR communication</td><td>Provider notified; time; orders received</td></tr>
+      </tbody>
+    </table>
+
+    <details class="reveal-block">
+      <summary>▶ Post-Sim Q: Complete the ADPIE Clinical Judgment Template for Alice</summary>
+      <div class="reveal-content">
+        <table class="data-table">
+          <tbody>
+            <tr>
+              <th>Recognition of Cues<br /><small>(Assessment)</small></th>
+              <td>
+                <strong>Subjective:</strong> Mother reports G-tube feeding appeared connected when she last checked; Alice reports 3/10 pain on FACES scale<br />
+                <strong>Objective:</strong> Temp 38.4°C, HR 104, RR 22, SpO₂ 96%; disconnected G-tube feeding; saturated dressing; formula residue at stoma; moist but intact stoma skin; bilateral rhonchi; productive cough<br />
+                <strong>Historical:</strong> Esophageal atresia since birth; G-tube dependent; mother is primary caregiver and G-tube expert; admitted for acute bronchitis
+              </td>
+            </tr>
+            <tr>
+              <th>Priority Nursing Diagnosis</th>
+              <td>Risk for Impaired Skin Integrity r/t formula moisture at G-tube stoma site AEB: saturated dressing, moist stoma skin, formula residue, disconnected feeding</td>
+            </tr>
+            <tr>
+              <th>SMART Goal</th>
+              <td>Alice will maintain intact, dry stoma skin without erythema, breakdown, or formula leakage for the remainder of the shift and through discharge</td>
+            </tr>
+            <tr>
+              <th>Interventions<br /><small>(Generate Solutions)</small></th>
+              <td>
+                <ol style="margin:0; padding-left:1.25rem;">
+                  <li>Perform G-tube dressing change using clean technique; apply dry gauze/foam split dressing</li>
+                  <li>Verify secure reconnection of feeding tubing; check bumper clearance (1–2 finger-widths)</li>
+                  <li>Administer acetaminophen 300 mg via G-tube per weight-based PRN order for fever</li>
+                </ol>
+              </td>
+            </tr>
+            <tr>
+              <th>Rationale<br /><small>(Take Action)</small></th>
+              <td>
+                Dry dressing prevents moisture-associated skin damage and maceration at the stoma site (Potter &amp; Perry, 2021). Secure reconnection prevents recurrence of formula leakage. Weight-based acetaminophen via G-tube provides safe, route-appropriate fever management in a child who cannot take oral medications (Wong's Nursing Care, 2019).
+              </td>
+            </tr>
+            <tr>
+              <th>Evaluate Outcomes</th>
+              <td>
+                <ul style="margin:0; padding-left:1.25rem;">
+                  <li>Stoma site dry and intact at each reassessment; no erythema or breakdown</li>
+                  <li>Dressing remains clean and dry between scheduled changes</li>
+                  <li>Temperature decreasing toward normal within 60 minutes of acetaminophen</li>
+                  <li>G-tube feeding reconnected and running at ordered rate without interruption</li>
+                  <li>Mother verbalized understanding of disconnection prevention and skin care</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+    <details class="reveal-block">
+      <summary>▶ Discharge Education: What does Alice's mother need to know about G-tube care at home?</summary>
+      <div class="reveal-content">
+        <ol>
+          <li><strong>Check connection every 2–4 hours</strong> — ensure the feeding tubing is securely locked to the G-tube port; check for leakage at each check</li>
+          <li><strong>Daily stoma site care</strong> — clean around tube with warm water; pat dry thoroughly; apply split gauze or foam dressing; assess skin for redness, breakdown, or unusual drainage</li>
+          <li><strong>Signs to call the doctor</strong> — redness, swelling, foul odor, increased drainage, granulation tissue, fever, tube falls out (go to ED immediately if tube falls out)</li>
+          <li><strong>Formula tolerance</strong> — watch for vomiting, distension, gagging; check gastric residual per provider instructions before each feeding</li>
+          <li><strong>Keep HOB elevated</strong> during and after feeds to prevent aspiration</li>
+          <li><strong>Medication administration</strong> — always flush before and after medications; use liquid formulations only; flush between different medications</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       APPENDIX A — MEDICATION REVIEW
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card appendix-card" id="appendix-meds">
+    <div class="phase-header">
+      <span class="phase-badge phase-badge-appendix">Appendix A</span>
+      <h2>Medication Review</h2>
+    </div>
+
+    <h3>💊 Gentamicin (Garamycin) 48 mg IV Piggyback Q8HRS</h3>
+    <table class="data-table med-table">
+      <tbody>
+        <tr><th>Classification</th><td>Aminoglycoside antibiotic</td></tr>
+        <tr><th>Indication</th><td>Treatment of serious gram-negative bacterial infections</td></tr>
+        <tr><th>Mechanism</th><td>Inhibits bacterial protein synthesis by binding to 30S ribosomal subunit</td></tr>
+        <tr><th>Dose (this patient)</th><td>48 mg IV Q8HRS — weight-based pediatric dosing</td></tr>
+        <tr><th>Adverse effects</th><td><span class="badge-danger">Nephrotoxicity</span> · <span class="badge-danger">Ototoxicity</span> (hearing loss, vestibular damage) · Neuromuscular blockade</td></tr>
+        <tr><th>Monitoring</th><td>Peak and trough serum levels; BUN and creatinine; urine output; hearing assessment; IV site</td></tr>
+        <tr><th>Nursing precautions</th><td>Infuse over 30–60 minutes (never IV push); check levels per protocol; assess for early ototoxicity (tinnitus, vertigo, hearing changes); adequate hydration required</td></tr>
+        <tr><th>Patient/family teaching</th><td>Report any hearing changes, ringing in ears, or dizziness immediately; importance of completing full course</td></tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin-top: 1.5rem;">💊 Ampicillin IV (per order)</h3>
+    <table class="data-table med-table">
+      <tbody>
+        <tr><th>Classification</th><td>Aminopenicillin (broad-spectrum penicillin antibiotic)</td></tr>
+        <tr><th>Indication</th><td>Treatment of respiratory tract infections; broad-spectrum coverage</td></tr>
+        <tr><th>Adverse effects</th><td>Allergic reactions (including anaphylaxis) · Rash · Diarrhea · GI upset</td></tr>
+        <tr><th>Nursing precautions</th><td>Assess penicillin/cephalosporin allergy BEFORE administration; have epinephrine available; monitor infusion site; monitor for rash</td></tr>
+        <tr><th>Patient/family teaching</th><td>Report any rash, hives, difficulty breathing, or swelling immediately — signs of allergic reaction</td></tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin-top: 1.5rem;">💊 Ranitidine (Zantac Syrup) 47 mg PO/G-tube Q12HRS</h3>
+    <table class="data-table med-table">
+      <tbody>
+        <tr><th>Classification</th><td>H2-receptor antagonist (H2-blocker)</td></tr>
+        <tr><th>Indication</th><td>GERD, gastric acid suppression — common in esophageal atresia patients</td></tr>
+        <tr><th>Mechanism</th><td>Blocks H2 receptors in stomach parietal cells → reduces gastric acid secretion</td></tr>
+        <tr><th>Route</th><td>Via G-tube using liquid formulation; flush before and after</td></tr>
+        <tr><th>Adverse effects</th><td>Headache · Dizziness · Constipation or diarrhea · Rare: confusion (high doses)</td></tr>
+        <tr><th>Nursing precautions</th><td>Give as liquid via G-tube; never crush tablets; flush tube before and after; administer at scheduled times Q12H</td></tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin-top: 1.5rem;">💊 Acetaminophen Suspension 100 mg/mL PRN (via G-tube)</h3>
+    <table class="data-table med-table">
+      <tbody>
+        <tr><th>Classification</th><td>Analgesic / antipyretic</td></tr>
+        <tr><th>Indication</th><td>Fever and/or pain management</td></tr>
+        <tr><th>Pediatric dose</th><td>10–15 mg/kg/dose q4–6h PRN; max 5 doses/24 hours</td></tr>
+        <tr><th>For Alice (22 kg)</th><td>220–330 mg/dose → give 300 mg (3 mL of 100 mg/mL suspension)</td></tr>
+        <tr><th>Adverse effects</th><td>Hepatotoxicity (with overdose or cumulative overdose)</td></tr>
+        <tr><th>Nursing precautions</th><td>Always calculate dose by weight; check max dose per 24h; check for other acetaminophen-containing products; flush G-tube before and after; use liquid formulation only for G-tube</td></tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin-top: 1.5rem;">💊 Ibuprofen Suspension 20 mg/mL (Motrin) PRN (via G-tube)</h3>
+    <table class="data-table med-table">
+      <tbody>
+        <tr><th>Classification</th><td>NSAID (nonsteroidal anti-inflammatory drug) / antipyretic / analgesic</td></tr>
+        <tr><th>Indication</th><td>Fever, mild-to-moderate pain management (not first-line if GI concerns)</td></tr>
+        <tr><th>Pediatric dose</th><td>5–10 mg/kg q6–8h PRN</td></tr>
+        <tr><th>For Alice (22 kg)</th><td>110–220 mg/dose → give 200 mg (10 mL of 20 mg/mL suspension)</td></tr>
+        <tr><th>Adverse effects</th><td>GI irritation · Renal effects · Platelet aggregation inhibition</td></tr>
+        <tr><th>Nursing precautions</th><td>Avoid in dehydration, GI bleeding, or renal compromise; always use liquid for G-tube; give with feeding when possible to reduce GI irritation; calculate by weight</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       APPENDIX B — CLINICAL SKILLS REVIEW: G-TUBE CARE
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card appendix-card" id="appendix-gtube">
+    <div class="phase-header">
+      <span class="phase-badge phase-badge-appendix">Appendix B</span>
+      <h2>Clinical Skills Review — G-Tube Care</h2>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>🏥 Esophageal Atresia — Background</h3>
+        <p>Esophageal atresia is a congenital anomaly in which the esophagus does not form a continuous passage to the stomach. Surgical repair is performed in infancy, but many children require ongoing G-tube support for nutrition, medications, and hydration.</p>
+        <ul>
+          <li>G-tube (gastrostomy tube) is surgically placed through the abdominal wall directly into the stomach</li>
+          <li>Allows enteral feeding and medication delivery when oral route is impaired or unsafe</li>
+          <li>Alice has had her G-tube since infancy — her mother is an expert in its management</li>
+          <li>Esophageal atresia patients often also have GERD (hence ranitidine)</li>
+        </ul>
+      </div>
+      <div class="info-block">
+        <h3>⚠️ G-Tube Complications to Watch For</h3>
+        <table class="data-table">
+          <thead><tr><th>Complication</th><th>Signs</th><th>Action</th></tr></thead>
+          <tbody>
+            <tr><td>Tube dislodgement</td><td>Tube out of stomach; no gastric residual; formula not infusing</td><td>Do NOT reinsert without provider order; cover with gauze; call provider immediately</td></tr>
+            <tr><td>Stoma infection</td><td>Redness, warmth, swelling, purulent drainage, fever</td><td>Notify provider; obtain culture; increase frequency of site care</td></tr>
+            <tr><td>Granulation tissue</td><td>Pink/red fleshy overgrowth around tube</td><td>Notify provider; treatment may include silver nitrate application</td></tr>
+            <tr><td>Skin breakdown</td><td>Maceration, erosion, ulceration around stoma</td><td>Keep dry; apply moisture barrier; increase dressing frequency; notify provider</td></tr>
+            <tr><td>Tube obstruction</td><td>Formula won't infuse; resistance on flushing</td><td>Do NOT force; try warm water gentle irrigation; notify provider if unable to clear</td></tr>
+            <tr><td>Aspiration</td><td>Coughing, choking during feeding; respiratory distress</td><td>Stop feeding immediately; elevate HOB; suction if needed; notify provider</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <h3 style="margin-top: 1.25rem;">💊 Medication Administration via G-Tube — Key Rules</h3>
+    <div class="callout callout-warning">
+      <p><strong>Never do these with a G-tube:</strong></p>
+      <ul>
+        <li>❌ Crush solid adult tablets — use liquid formulations only or crushed immediate-release tablets verified as safe to crush</li>
+        <li>❌ Mix medications together in the syringe — administer each separately; flush between each</li>
+        <li>❌ Administer without flushing before and after</li>
+        <li>❌ Restart feeding after medication without re-checking tube position and residual</li>
+        <li>❌ Use IV syringes for enteral medication — use <strong>oral/enteral syringes only</strong> (cannot connect to IV lines)</li>
+      </ul>
+    </div>
+
+    <h3>📐 Bumper Clearance Check</h3>
+    <p>The external disc/bumper that sits against the skin should have <strong>1–2 finger-widths of clearance</strong>:</p>
+    <div class="compare-grid">
+      <div>
+        <h4 class="text-danger">Too Tight (0 finger-width)</h4>
+        <ul>
+          <li>Pressure injury at stoma site</li>
+          <li>Impaired healing</li>
+          <li>Tissue necrosis over time</li>
+          <li>Increased infection risk</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-danger">Too Loose (&gt;2 finger-widths)</h4>
+        <ul>
+          <li>Tube migration (moving in and out)</li>
+          <li>Increased formula leakage</li>
+          <li>Skin irritation from movement</li>
+          <li>Risk of tube falling out</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       APPENDIX C — SBAR TEMPLATE
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card appendix-card" id="appendix-sbar">
+    <div class="phase-header">
+      <span class="phase-badge phase-badge-appendix">Appendix C</span>
+      <h2>SBAR Reference — Alice Morrison</h2>
+    </div>
+
+    <p>Use this SBAR template when communicating about Alice with the provider, charge nurse, or during handoff.</p>
+
+    <div class="sbar-block">
+      <div class="sbar-item sbar-s">
+        <span class="sbar-label">S — Situation</span>
+        <p>"I am [name], the nurse caring for Alice Morrison, a 7-year-old female in room ___ admitted for acute bronchitis with a G-tube. I am calling because [reason — e.g., her G-tube feeding became disconnected / her fever is not responding / I have concerns about her respiratory status]."</p>
+      </div>
+      <div class="sbar-item sbar-b">
+        <span class="sbar-label">B — Background</span>
+        <p>"Alice has esophageal atresia and has been G-tube dependent since birth. She is receiving Gentamicin 48 mg IV Q8H and Ampicillin IV for her bronchitis. Current vital signs: Temp 38.4°C, HR 104, RR 22, SpO₂ 96% on room air, BP 98/62. I administered acetaminophen 300 mg via G-tube at [time] for fever. Her mother is present and is Alice's primary caregiver."</p>
+      </div>
+      <div class="sbar-item sbar-a">
+        <span class="sbar-label">A — Assessment</span>
+        <p>"I am concerned about [specific concern — e.g., Alice's persistent fever despite acetaminophen / worsening respiratory symptoms with RR increasing / stoma skin integrity after formula leakage]. Her stoma site is currently clean and intact following dressing change. She is tolerating G-tube feeding at the ordered rate."</p>
+      </div>
+      <div class="sbar-item sbar-r">
+        <span class="sbar-label">R — Recommendation</span>
+        <p>"I am requesting [e.g., you reassess Alice / order a repeat temperature check / consider ibuprofen as second antipyretic / provide guidance on the G-tube disconnection event / evaluate her respiratory status for possible bronchodilator]. Do you have any new orders at this time?"</p>
+      </div>
+    </div>
+
+    <div class="callout callout-info" style="margin-top: 1.25rem;">
+      <strong>📌 Pediatric SBAR Tips</strong>
+      <p>Always include the child's age and weight when communicating about pediatric patients — providers need weight for dosing decisions. Include the parent/caregiver's observations — they know the child's baseline and their input is clinically valuable.</p>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       APPENDIX D — POST-SIMULATION QUESTIONS AND ANSWERS
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card appendix-card" id="appendix-postsim">
+    <div class="phase-header">
+      <span class="phase-badge phase-badge-appendix">Appendix D</span>
+      <h2>Post-Simulation Questions &amp; Answers</h2>
+    </div>
+
+    <details class="reveal-block">
+      <summary>▶ Post-Sim Q1: Why is a wet G-tube dressing a high-priority nursing concern?</summary>
+      <div class="reveal-content">
+        <p>A wet dressing represents a <strong>moisture-associated skin damage (MASD)</strong> risk. Prolonged skin contact with formula or gastric contents causes maceration — the skin softens, becomes fragile, and loses its barrier function. Macerated skin at the stoma site is susceptible to:</p>
+        <ul>
+          <li>Fungal infection (especially <em>Candida albicans</em>)</li>
+          <li>Bacterial superinfection</li>
+          <li>Pressure injury progression</li>
+          <li>Painful erosion that impairs G-tube tolerance</li>
+        </ul>
+        <p>Additionally, a wet dressing may indicate formula leakage — meaning the patient is not receiving their full nutritional intake, which is also a safety concern, especially in a child already ill with bronchitis.</p>
+      </div>
+    </details>
+
+    <details class="reveal-block">
+      <summary>▶ Post-Sim Q2: What does esophageal atresia mean, and why does Alice need a G-tube long-term?</summary>
+      <div class="reveal-content">
+        <p><strong>Esophageal atresia</strong> is a congenital defect in which the esophagus does not form a complete, continuous tube from the throat to the stomach. Often associated with a tracheoesophageal fistula (abnormal connection between esophagus and airway).</p>
+        <p>While surgical repair is performed in infancy, many children have:</p>
+        <ul>
+          <li>Persistent swallowing difficulties (dysphagia)</li>
+          <li>Gastroesophageal reflux (GERD) — hence ranitidine</li>
+          <li>Aspiration risk — unsafe oral intake</li>
+          <li>Esophageal strictures requiring ongoing dilation</li>
+        </ul>
+        <p>The G-tube provides a reliable, safe route for nutrition and medications that bypasses the esophagus entirely. It allows Alice to grow and develop normally while her swallowing function is managed. Her mother has become an expert in G-tube management — this family-centered expertise must be respected and incorporated into all care planning.</p>
+      </div>
+    </details>
+
+    <details class="reveal-block">
+      <summary>▶ Post-Sim Q3: What is the Braden Q Scale and how does it apply to Alice?</summary>
+      <div class="reveal-content">
+        <p>The <strong>Braden Q Scale</strong> is the pediatric-specific version of the Braden Scale for pressure injury risk assessment. It contains 7 subscales (vs. 6 in the adult Braden):</p>
+        <table class="data-table">
+          <thead><tr><th>Subscale</th><th>Alice's Status</th></tr></thead>
+          <tbody>
+            <tr><td>Mobility</td><td>Moderate risk — restless but can reposition</td></tr>
+            <tr><td>Activity</td><td>Moderate risk — confined to bed during acute illness</td></tr>
+            <tr><td>Sensory perception</td><td>Normal — Alice can communicate discomfort</td></tr>
+            <tr><td><strong>Moisture</strong></td><td><span class="badge-danger">HIGH RISK</span> — saturated dressing, formula leakage at stoma</td></tr>
+            <tr><td>Friction and shear</td><td>Low risk — assisted movement in bed</td></tr>
+            <tr><td>Nutrition</td><td>At risk — feeding interrupted by disconnection</td></tr>
+            <tr><td>Tissue perfusion/oxygenation</td><td>Adequate — SpO₂ 96%, no cardiovascular compromise</td></tr>
+          </tbody>
+        </table>
+        <p>Alice's highest risk factor is the Moisture subscale. Interventions must focus on keeping the stoma site clean and dry, using moisture-barrier products, and increasing dressing change frequency when leakage occurs.</p>
+      </div>
+    </details>
+
+    <details class="reveal-block">
+      <summary>▶ Post-Sim Q4: What are the 5 rights of medication administration plus the additional rights?</summary>
+      <div class="reveal-content">
+        <p><strong>Traditional 5 Rights:</strong></p>
+        <ol>
+          <li>Right <strong>Patient</strong> — verify with 2 identifiers (name + DOB)</li>
+          <li>Right <strong>Drug</strong> — check against MAR; know the medication</li>
+          <li>Right <strong>Dose</strong> — calculate weight-based dose; verify with second nurse if required by policy</li>
+          <li>Right <strong>Route</strong> — G-tube requires liquid formulation; use oral/enteral syringe</li>
+          <li>Right <strong>Time</strong> — administer within the scheduled window</li>
+        </ol>
+        <p><strong>Additional Rights (expanded version):</strong></p>
+        <ul>
+          <li>Right <strong>Documentation</strong> — document immediately after administration</li>
+          <li>Right <strong>Reason</strong> — understand why the patient needs this medication</li>
+          <li>Right <strong>Response</strong> — assess and document the patient's response</li>
+          <li>Right <strong>Education</strong> — explain the medication to patient and family in age-appropriate terms</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="reveal-block">
+      <summary>▶ Post-Sim Q5: How does family-centered care apply to a pediatric patient with a G-tube?</summary>
+      <div class="reveal-content">
+        <p><strong>Family-centered care</strong> recognizes that the family is the constant in a child's life and that nurses must partner with families in all aspects of care. For Alice:</p>
+        <ul>
+          <li>Alice's mother manages the G-tube daily at home — she is an expert and her knowledge must be respected and utilized, not dismissed</li>
+          <li>Ask the mother to demonstrate her routine — this serves as an assessment AND respects her expertise</li>
+          <li>Teach collaboratively: "Is there anything different about how we do it here vs. at home? Let me show you what we observe and why."</li>
+          <li>Include Alice in decisions that are age-appropriate: choosing when to do the dressing change, holding a comfort object, choosing music during the procedure</li>
+          <li>A 7-year-old is in Erikson's Industry vs. Inferiority stage — she needs to feel capable and involved; giving her small choices maintains her sense of control</li>
+          <li>Never exclude the parent from bedside care unless absolutely clinically required</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="reveal-block">
+      <summary>▶ Post-Sim Q6: What are the developmental considerations for working with a 7-year-old?</summary>
+      <div class="reveal-content">
+        <p><strong>Erik Erikson — Industry vs. Inferiority (ages 6–12):</strong> Children this age need to feel competent and productive. Involve Alice in her care; praise her cooperation.</p>
+        <p><strong>Piaget — Concrete Operational Stage (ages 7–11):</strong> Alice thinks logically about concrete objects and events. Use simple, literal explanations — avoid medical jargon. Visual aids and demonstrations are effective.</p>
+        <p><strong>Pain assessment:</strong> Use the Wong-Baker FACES Pain Scale — Alice can reliably point to the face that matches how she feels.</p>
+        <p><strong>Communication strategies:</strong></p>
+        <ul>
+          <li>Ask Alice directly — do not speak only to her mother</li>
+          <li>Use her name; treat her with respect; knock before entering</li>
+          <li>Let her know exactly what will happen: "First I'll clean it, then I'll put on a new bandage — it won't hurt"</li>
+          <li>Allow therapeutic play if available</li>
+          <li>Praise cooperation: "You did a great job holding still, Alice!"</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="reveal-block">
+      <summary>▶ Post-Sim Q7: What monitoring is required for gentamicin (aminoglycoside) therapy?</summary>
+      <div class="reveal-content">
+        <p>Gentamicin requires careful monitoring due to its <strong>narrow therapeutic index</strong> and risk of serious adverse effects:</p>
+        <table class="data-table">
+          <thead><tr><th>Monitoring Parameter</th><th>Action</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Peak and trough serum levels</strong></td><td>Draw per protocol (trough before dose; peak 30 min after infusion ends); report abnormal levels to provider</td></tr>
+            <tr><td><strong>Renal function</strong> (BUN, creatinine, urine output)</td><td>Monitor daily; hold and notify if creatinine rising — nephrotoxicity</td></tr>
+            <tr><td><strong>Ototoxicity</strong></td><td>Ask child/parents about hearing changes, tinnitus (ringing), or vertigo; report any concerns immediately</td></tr>
+            <tr><td><strong>IV site</strong></td><td>Assess before each infusion for redness, swelling, or pain — phlebitis risk</td></tr>
+            <tr><td><strong>Infusion rate</strong></td><td>Infuse over 30–60 minutes — never IV push</td></tr>
+            <tr><td><strong>Hydration</strong></td><td>Adequate hydration reduces nephrotoxicity risk</td></tr>
+          </tbody>
+        </table>
+        <div class="callout callout-warning" style="margin-top: 0.75rem;">
+          <strong>Pediatric consideration:</strong> Ototoxicity can be permanent. In children, early hearing loss may impact speech and language development. Teach parents to watch for signs of hearing changes and report immediately.
+        </div>
+      </div>
+    </details>
+
+    <details class="reveal-block">
+      <summary>▶ Post-Sim Q8: Describe the SWIPE safety check and why it is important in pediatric nursing.</summary>
+      <div class="reveal-content">
+        <p>The SWIPE safety check is a systematic environmental safety assessment performed before touching any patient:</p>
+        <table class="data-table">
+          <thead><tr><th>Letter</th><th>Component</th><th>Pediatric Considerations</th></tr></thead>
+          <tbody>
+            <tr><td><strong>S</strong></td><td>Siderails</td><td>Both rails up at all times for pediatric patients — children can roll out of bed; parents should not lower rails without notifying nursing</td></tr>
+            <tr><td><strong>W</strong></td><td>Wristband</td><td>Verify with 2 identifiers; in pediatrics — name + DOB (not room number); compare with parent/guardian ID as appropriate</td></tr>
+            <tr><td><strong>I</strong></td><td>IV lines</td><td>Assess site for infiltration, phlebitis; verify rate on pump; check label and expiration; pediatric veins are fragile — check frequently</td></tr>
+            <tr><td><strong>P</strong></td><td>Pull cord / call light</td><td>Place within parent/guardian reach — a 7-year-old may not understand or be able to operate independently; ensure parent knows how to use it</td></tr>
+            <tr><td><strong>E</strong></td><td>Equipment</td><td>Bed in lowest position; ensure G-tube pump alarming appropriately; clear path to bathroom; age-appropriate safety measures (crib vs. bed)</td></tr>
+          </tbody>
+        </table>
+        <p>In pediatric nursing, the SWIPE check must include parental involvement — parents are an additional safety layer and must be briefed on what they can and cannot do at the bedside.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       APPENDIX E — REFERENCES
+  ══════════════════════════════════════════════════════════════════════ -->
+  <div class="phase-card appendix-card" id="appendix-refs">
+    <div class="phase-header">
+      <span class="phase-badge phase-badge-appendix">Appendix E</span>
+      <h2>References</h2>
+    </div>
+    <ol class="ref-list">
+      <li>Potter, P. A., Perry, A. G., Stockert, P. A., &amp; Hall, A. (2021). <em>Fundamentals of nursing</em> (10th ed.). Elsevier.</li>
+      <li>Hockenberry, M. J., Wilson, D., &amp; Rodgers, C. C. (2019). <em>Wong's nursing care of infants and children</em> (11th ed.). Elsevier Mosby.</li>
+      <li>Vallerand, A. H., &amp; Sanoski, C. A. (2021). <em>Davis's drug guide for nurses</em> (17th ed.). F.A. Davis.</li>
+      <li>Ackley, B., Ludwig, G., Makic, M., Martinez-Kratz, M., &amp; Zanotti, M. (2020). <em>Nursing diagnosis handbook: An evidence-based guide to planning care</em> (12th ed.). Elsevier Saunders.</li>
+      <li>Wong-Baker FACES Foundation. (2016). <em>Wong-Baker FACES® Pain Rating Scale</em>. Retrieved from <a href="https://www.WongBakerFACES.org" target="_blank" rel="noopener">www.WongBakerFACES.org</a></li>
+      <li>American Academy of Pediatrics. (2020). Pediatric nursing practice guidelines — enteral nutrition and G-tube management. <em>Pediatrics.</em></li>
+    </ol>
+    <p class="ref-note">Study guide compiled from Elsevier SLS FUN-01: Alice Morrison — G-Tube Care in a Pediatric Patient.</p>
+  </div>
+
+  <!-- Back button -->
+  <div style="margin-top: 2rem;">
+    <a href={`${base}cases/fundamentals/`} class="btn btn-back">← Back to Fundamentals</a>
+  </div>
+
+</BaseLayout>
+
+<style>
+  /* ── Phase structure ─────────────────────────────────────────── */
+  .case-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-top: 0.25rem;
+  }
+
+  .phase-card {
+    background: var(--color-surface);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 0;
+    box-shadow: var(--shadow);
+    border-top: 4px solid var(--color-primary);
+  }
+
+  .appendix-card {
+    border-top-color: var(--color-secondary);
+  }
+
+  .phase-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .phase-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .phase-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+
+  .phase-badge-appendix {
+    background: var(--color-secondary);
+  }
+
+  .phase-intro {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin-bottom: 1.25rem;
+    border-left: 3px solid var(--color-accent);
+    padding-left: 0.75rem;
+  }
+
+  .phase-connector {
+    text-align: center;
+    padding: 0.6rem 0;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+  }
+
+  /* ── Info grid ───────────────────────────────────────────────── */
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 720px) {
+    .info-grid { grid-template-columns: 1fr; }
+    .compare-grid { grid-template-columns: 1fr; }
+  }
+
+  .info-block h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  /* ── Tables ──────────────────────────────────────────────────── */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--color-border);
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .data-table thead th {
+    background: #f0f4ff;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+  }
+
+  .data-table tbody th {
+    background: #f8f9fa;
+    font-weight: 600;
+    width: 30%;
+    color: var(--color-text);
+  }
+
+  .med-table tbody th {
+    width: 28%;
+  }
+
+  /* ── Callouts ────────────────────────────────────────────────── */
+  .callout {
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .callout p { margin-bottom: 0.5rem; }
+  .callout p:last-child { margin-bottom: 0; }
+
+  .callout-info {
+    background: #e8f0fe;
+    border-left: 4px solid var(--color-primary);
+  }
+
+  .callout-warning {
+    background: #fff8e1;
+    border-left: 4px solid #f59e0b;
+  }
+
+  .callout-danger {
+    background: #fff0f0;
+    border-left: 4px solid #dc2626;
+  }
+
+  /* ── Badges ──────────────────────────────────────────────────── */
+  .badge-danger {
+    display: inline-block;
+    background: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fca5a5;
+    border-radius: 4px;
+    padding: 0.1rem 0.45rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .badge-warning {
+    display: inline-block;
+    background: #fffbeb;
+    color: #92400e;
+    border: 1px solid #fde68a;
+    border-radius: 4px;
+    padding: 0.1rem 0.45rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  /* ── Scene box ───────────────────────────────────────────────── */
+  .scene-box {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .scene-box h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* ── Med list ────────────────────────────────────────────────── */
+  .med-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .med-list li {
+    padding: 0.35rem 0;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 0.9rem;
+  }
+
+  .med-list li:last-child { border-bottom: none; }
+
+  /* ── Chain flow ──────────────────────────────────────────────── */
+  .chain-flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin: 1.25rem 0;
+  }
+
+  .chain-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 520px;
+    gap: 0.2rem;
+  }
+
+  .chain-step small {
+    font-size: 0.8rem;
+    opacity: 0.8;
+  }
+
+  .chain-step-drug {
+    background: #e8f0fe;
+    color: var(--color-primary-dark);
+    border: 1px solid #bfdbfe;
+  }
+
+  .chain-step-problem {
+    background: #fff8e1;
+    color: #78350f;
+    border: 1px solid #fde68a;
+  }
+
+  .chain-step-consequence {
+    background: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+  }
+
+  .chain-arrow {
+    font-size: 1.5rem;
+    color: var(--color-text-muted);
+    line-height: 1.2;
+  }
+
+  .chain-icon {
+    font-size: 1.4rem;
+  }
+
+  /* ── Stat highlight ──────────────────────────────────────────── */
+  .stat-highlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fef2f2;
+    border: 2px solid #fca5a5;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #b91c1c;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+    color: #7f1d1d;
+    margin-top: 0.25rem;
+  }
+
+  /* ── Reveal (details/summary) ────────────────────────────────── */
+  .reveal-block {
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    margin-top: 1rem;
+    overflow: hidden;
+  }
+
+  .reveal-block > summary {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--color-primary);
+    background: #f0f4ff;
+    list-style: none;
+    user-select: none;
+  }
+
+  .reveal-block > summary::-webkit-details-marker { display: none; }
+
+  .reveal-block[open] > summary {
+    background: #dbeafe;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .reveal-block > summary:hover {
+    background: #dbeafe;
+  }
+
+  .reveal-content {
+    padding: 1rem 1.25rem;
+  }
+
+  .reveal-content ul,
+  .reveal-content ol {
+    margin-bottom: 0.75rem;
+  }
+
+  /* ── SBAR block ──────────────────────────────────────────────── */
+  .sbar-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    margin-bottom: 1.5rem;
+  }
+
+  .sbar-item {
+    padding: 1rem 1.25rem;
+  }
+
+  .sbar-item p { margin: 0; font-style: italic; }
+
+  .sbar-label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.4rem;
+  }
+
+  .sbar-s { background: #eff6ff; border-left: 5px solid #3b82f6; }
+  .sbar-b { background: #f0fdf4; border-left: 5px solid #22c55e; }
+  .sbar-a { background: #fffbeb; border-left: 5px solid #f59e0b; }
+  .sbar-r { background: #fef2f2; border-left: 5px solid #ef4444; }
+
+  /* ── Priority diagnoses ──────────────────────────────────────── */
+  .dx-rank-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .dx-rank-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: #f8f9fa;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+  }
+
+  .dx-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .dx-aeb {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-top: 0.2rem;
+  }
+
+  /* ── Compare grid ────────────────────────────────────────────── */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .compare-grid h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  /* ── Concept map ─────────────────────────────────────────────── */
+  .concept-map {
+    margin-bottom: 1.25rem;
+  }
+
+  /* ── References ──────────────────────────────────────────────── */
+  .ref-list {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .ref-note {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin: 0;
+  }
+
+  /* ── Utility ─────────────────────────────────────────────────── */
+  .text-success { color: #15803d; }
+  .text-danger  { color: #b91c1c; }
+
+  .btn-back {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .btn-back:hover {
+    background: var(--color-primary-dark);
+    text-decoration: none;
+  }
+</style>
