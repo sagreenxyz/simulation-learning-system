@@ -1,4 +1,4 @@
-# Macy Polenski — SLS Maternity Nursing Study Guide
+# Macy Polenski — SLS Nursing Study Guide
 ## MAT-04: Postpartum Hemorrhage / Placenta Increta
 
 ---
@@ -9,295 +9,239 @@
 |---|---|
 | **Name** | Macy Polenski |
 | **Age** | 42 years old |
-| **Gender** | Female |
-| **Gravida / Para** | Gravida 4 Para 4 |
-| **MRN** | 6674253 |
-| **Weight** | 168 lbs |
-| **Height** | 5' 5" |
-| **Scenario** | MAT-04 |
-| **Primary Diagnosis** | Pregnancy, term |
-| **Secondary Diagnosis** | Labor (postpartum hemorrhage from retained placenta) |
-| **Chief Complaint** | Heavy vaginal bleeding, dizziness, and boggy uterus in the immediate postpartum period |
-| **Admission** | Admitted in active labor at 40 weeks; delivered via vacuum-assisted vaginal delivery after prolonged labor; now experiencing postpartum hemorrhage from retained placenta / placenta increta |
-| **Scenario Focus** | Conduct postpartum assessment, recognize vital sign changes/dizziness/heavy lochia/boggy uterus as signs of postpartum hemorrhage, notify team members and provider, administer oxygen, administer IM carboprost, initiate IV fluid bolus, provide emotional support and teaching, access and document care in EHR |
+| **Obstetric History** | Gravida 4, Para 4 (fourth pregnancy, fourth delivery) |
+| **Primary Diagnosis** | Postpartum hemorrhage (PPH) from retained placenta |
+| **Delivery** | Long, difficult delivery assisted by vacuum extraction |
+| **Risk Factors** | Grand multiparity (4 pregnancies), advanced maternal age, placenta increta |
+| **Setting** | Labor and delivery / Immediate postpartum |
+| **Key Challenge** | Recognize PPH → assess uterine tone → notify team → administer uterotonic → fluid resuscitation |
 
 ---
 
 ## 💊 Medications
 
-| Medication | Class | Route | Purpose |
+| Medication | Class | Route | Details |
 |---|---|---|---|
-| **Oxytocin (Pitocin) 10–40 units** | Uterotonic | IV infusion or IM | First-line uterotonic for uterine atony and PPH prevention/treatment |
-| **Carboprost tromethamine (Hemabate) 250 mcg** | Prostaglandin / uterotonic | IM (deep) | Second-line uterotonic for refractory uterine atony; causes sustained uterine contraction |
-| **Methylergonovine (Methergine) 0.2 mg** | Ergot alkaloid / uterotonic | IM or PO | Uterotonic for postpartum hemorrhage; contraindicated in hypertension |
-| **Misoprostol (Cytotec) 600–1000 mcg** | Prostaglandin E1 / uterotonic | Sublingual, rectal, or buccal | Uterotonic when IV access is not available; used in low-resource settings |
-| **Tranexamic acid 1 g** | Antifibrinolytic | IV (over 10 min) | Reduces blood loss in PPH by inhibiting fibrinolysis; give within 3 hours of birth |
-| **IV Fluids (LR or NS) 500–1000 mL bolus** | Isotonic crystalloid | IV | Volume resuscitation in hemorrhagic shock |
-| **Packed Red Blood Cells** | Blood product | IV | Transfusion for significant blood loss / hemorrhagic anemia |
-| **Oxygen 8–10 L/min** | Medical gas | Non-rebreather mask | Correct hypoxia from hemorrhagic blood loss; support maternal tissue perfusion |
+| **Oxytocin (Pitocin)** | Uterotonic | IV infusion | First-line — stimulates uterine contractions; prevents/treats atony |
+| **Carboprost (Hemabate) 0.25 mg** | Prostaglandin F2α | IM | Second-line uterotonic — stimulates strong uterine contractions |
+| **Methylergonovine (Methergine)** | Ergot alkaloid | IM | Uterotonic — sustained uterine contraction; avoid in hypertension |
+| **Misoprostol (Cytotec)** | Prostaglandin E1 | PO/SL/PR | Uterotonic — sublingual or rectal when IV access limited |
+| **IV crystalloid (NS or LR)** | Fluid resuscitation | IV | Restore intravascular volume |
+| **Blood products** | Replacement | IV | If hemorrhage severe |
+| **Oxygen** | Supportive | Face mask | Treat maternal hypoxia |
 
 ---
 
-## 🔑 The Big Picture — What This Case Is Really About
+## 🔑 The Big Picture
 
-This scenario has **four core themes**:
-
-1. **Recognition of postpartum hemorrhage (PPH)** — identifying abnormal vital signs, heavy lochia, boggy uterus, dizziness as signs of life-threatening bleeding
-2. **The 4 T's of PPH** — understanding the causes (Tone, Trauma, Tissue, Thrombin) and how they guide management
-3. **Uterotonic medications** — knowing the drugs, routes, doses, contraindications, and expected actions for treating uterine atony
-4. **Placenta accreta spectrum** — understanding placenta increta, its risk factors, and why it contributes to retained placenta and hemorrhage
-
-The clinical context:
+**Postpartum hemorrhage** is the leading cause of maternal mortality worldwide. Macy has multiple risk factors.
 
 ```
-Risk factors: grand multiparity (G4P4) + advanced maternal age + prolonged labor + vacuum extraction
+Grand multipara (G4P4) + Advanced age + Difficult delivery + Vacuum extraction
         ↓
-Postpartum: boggy uterus + heavy lochia + dizziness + vital sign changes
+Uterine atony (most common cause of PPH — uterus doesn't contract)
         ↓
-Cause identified: retained placenta (placenta increta — abnormal placentation)
+Additional cause: Retained placenta (placenta increta — abnormally adherent)
         ↓
-Nurse: fundal massage → notify provider → oxygen → IV fluid bolus → uterotonics
+HEMORRHAGE: > 500 mL vaginal delivery / > 1000 mL cesarean
         ↓
-Administer IM carboprost (Hemabate) → reassess uterine tone and blood loss
+Signs: Fundus boggy, HIGH, displaced → Heavy lochia → Tachycardia → Hypotension → Dizziness
         ↓
-Ongoing: vital sign monitoring → blood product preparation → emotional support
-        ↓
-Definitive: manual placenta removal vs. surgical intervention for placenta increta
+Nurse: Assess fundus → Uterine massage → Notify team → O2 → IV fluid bolus → Uterotonic
+       → Assist with retained placenta management → Emotional support
 ```
 
 ---
 
 ## 📝 PRE-SIMULATION QUESTIONS & ANSWERS
 
-### Q1. What is postpartum hemorrhage (PPH), and what are the 4 T's of its causes?
+### Q1. What is postpartum hemorrhage and what are the four causes (4 Ts)?
 
-**Definition of PPH:**
-- Traditional: > 500 mL blood loss after vaginal delivery; > 1000 mL after cesarean delivery
-- Current ACOG definition (2017): cumulative blood loss ≥ 1000 mL OR blood loss with signs/symptoms of hypovolemia within 24 hours after delivery — regardless of route
+**PPH Definition:**
+- Blood loss ≥ 500 mL after vaginal delivery
+- Blood loss ≥ 1,000 mL after cesarean
+- Any blood loss causing hemodynamic instability
 
-**PPH is the leading cause of maternal mortality worldwide.**
+**The Four Ts (Causes of PPH):**
 
-**Primary PPH:** Within 24 hours of delivery (most common)
-**Secondary PPH:** 24 hours to 12 weeks postpartum
-
-**The 4 T's of PPH Causes:**
-
-| T | Cause | Mechanism | Examples |
-|---|---|---|---|
-| **Tone** (80% of PPH) | Uterine atony | Uterus fails to contract after placental delivery; remains soft and boggy | Grand multiparity, overdistended uterus (twins, polyhydramnios), prolonged labor, oxytocin augmentation |
-| **Trauma** | Lacerations / hematoma | Injury to birth canal, cervix, uterus during delivery | Vacuum/forceps delivery, rapid delivery, large baby, poor perineal support |
-| **Tissue** | Retained placenta/fragments | Placenta or cotyledons not fully expelled; prevents uterine contraction | Placenta accreta spectrum, incomplete third stage, succenturiate lobe |
-| **Thrombin** | Coagulopathy | Clotting deficiency; blood does not clot normally | HELLP syndrome, DIC, pre-existing coagulopathy, Von Willebrand disease, placental abruption |
-
-**Macy Polenski's PPH is caused by multiple T's:**
-- **Tissue:** Retained placenta (placenta increta — abnormally adherent)
-- **Tone:** Uterine atony secondary to retained placenta (uterus cannot contract when placenta still in situ)
-- **Trauma:** Vacuum extraction delivery increases trauma risk
-
----
-
-### Q2. What is placenta accreta spectrum (PAS), and why does it cause postpartum hemorrhage?
-
-**Placenta accreta spectrum (PAS)** describes abnormal placental attachment where the chorionic villi invade the myometrium (uterine muscle) rather than remaining in the decidua basalis.
-
-**Three degrees of invasion:**
-
-| Type | Invasion Depth | Description |
+| Cause | Incidence | Examples |
 |---|---|---|
-| **Placenta accreta** | Superficial invasion of myometrium | Villi attach to, but do not invade, myometrium (most common, ~75%) |
-| **Placenta increta** | Deep invasion into myometrium | Villi penetrate deeply into uterine muscle (~15%) |
-| **Placenta percreta** | Through myometrium and serosa | Villi invade through entire uterine wall; may involve bladder or bowel (~5–10%) |
+| **Tone** (uterine atony) | 70–80% | Uterus fails to contract; most common cause |
+| **Trauma** | 20% | Lacerations (cervix, vagina, perineum), uterine rupture, hematoma |
+| **Tissue** | ~10% | Retained placenta or placental fragments; placenta accreta/increta/percreta |
+| **Thrombin** (coagulation) | < 1% | Coagulopathy — DIC, pre-existing clotting disorder |
 
-**Why it causes PPH:**
-- Normal placental separation occurs when the uterus contracts, shearing the placenta from the decidua
-- In PAS, the placenta is pathologically adherent — the uterus contracts but the placenta cannot separate normally
-- Result: incomplete placental separation → uterus cannot fully contract → hemorrhage
-
-**Risk factors for PAS:**
-- Prior uterine surgery (most significant: prior cesarean delivery)
-- Grand multiparity (Macy is G4P4)
-- Advanced maternal age (Macy is 42)
-- Prior uterine curettage (D&C)
-- Placenta previa (especially with prior uterine scar)
-- Prior uterine fibroid removal (myomectomy)
-- Asherman syndrome (uterine adhesions)
-
-**Key nursing implication:** Patients with known or suspected PAS should deliver at a center with blood banking, interventional radiology, and surgical capabilities.
+**Macy's causes:** **Tone** (atony after difficult delivery, grand multiparity) + **Tissue** (retained placenta, placenta increta — abnormally adherent)
 
 ---
 
-### Q3. What are the signs of postpartum hemorrhage, and how does the nurse recognize early hemorrhagic shock?
+### Q2. What are the risk factors for postpartum hemorrhage?
 
-**Clinical signs of PPH — what the nurse assesses:**
+**Macy's specific risk factors:**
+- **Grand multiparity (para 4)** — uterine muscle becomes less contractile with each pregnancy; major risk for atony
+- **Advanced maternal age (42)** — reduced uterine muscle tone
+- **Placenta increta** — placenta invades the myometrium; does not separate normally; causes significant hemorrhage
+- **Vacuum-assisted delivery** — increased risk of lacerations and atony from uterine exhaustion
+- **Prolonged/difficult labor** — uterine fatigue → atony
 
-**Uterine assessment:**
-- **Fundal height and firmness** — fundus should be firm, midline, at or below the umbilicus
-- **Boggy uterus** = soft, poorly contracted uterus → sign of uterine atony → massage immediately
-- **Uterine massage:** cup fundus in hands; apply firm, circular massage to stimulate contraction; do NOT over-massage
-
-**Lochia assessment:**
-- Normal postpartum lochia: rubra (red) days 1–3; serosa (pink-brown) days 4–10; alba (white-yellow) weeks 2–6
-- Abnormal: lochia > 1 saturated perineal pad per hour = PPH concern
-- Assess for clots: small clots (< golf ball) can be normal; large clots indicate significant bleeding
-
-**Vital sign changes — stages of hemorrhagic shock:**
-
-| Class | Blood Loss | HR | BP | RR | LOC |
-|---|---|---|---|---|---|
-| Class I (compensated) | < 15% (~750 mL) | Normal or slightly elevated | Normal | Normal | Anxious |
-| Class II | 15–30% (~750–1500 mL) | > 100 bpm | Slight decrease; pulse pressure narrows | 20–30 | Anxious, confused |
-| Class III | 30–40% (~1500–2000 mL) | > 120 bpm | Decreased systolic | 30–40 | Confused, lethargic |
-| Class IV | > 40% (> 2000 mL) | > 140 bpm | Markedly decreased | > 40 | Obtunded |
-
-**Important:** Young, healthy postpartum women are excellent compensators — blood pressure may be maintained until blood loss is severe. **Tachycardia is an early warning sign.** Do not wait for hypotension to act.
+**Other risk factors (know for exam):**
+- Overdistended uterus (multiples, macrosomia, polyhydramnios)
+- Uterine infection (chorioamnionitis)
+- Medications that reduce uterine tone (magnesium sulfate, tocolytics)
+- Prior uterine surgery
 
 ---
 
-### Q4. What are the priority nursing interventions for a patient experiencing postpartum hemorrhage?
+### Q3. How does the nurse recognize and assess postpartum hemorrhage?
 
-**Immediate interventions (in order of priority):**
-1. **Call for help** — activate emergency team; notify provider and charge nurse
-2. **Uterine fundal massage** — firm bimanual massage to stimulate uterine contraction
-3. **Increase oxytocin infusion** (if already running) or add per order
-4. **Oxygen** — 8–10 L/min via non-rebreather mask
-5. **Assess and quantify blood loss** — weigh pads/chux (1 gram = 1 mL); visual estimation consistently underestimates loss
-6. **IV access** — ensure large-bore IV (18G or larger) × 2 if not already present; initiate fluid bolus per order
-7. **Position:** Keep patient flat or Trendelenburg if hypotensive to preserve cerebral/coronary perfusion
-8. **Administer uterotonics per order** (carboprost IM, methylergonovine IM, misoprostol)
-9. **Labs:** Type and crossmatch, CBC, coagulation studies (PT/INR, fibrinogen), BMP
-10. **Monitor:** Continuous vital signs every 5–15 minutes; urine output via catheter (goal ≥ 30 mL/hr)
-11. **Prepare for transfusion** — verify consent; obtain blood products
-12. **Emotional support** — brief, clear updates to patient and family throughout
+**Signs and Symptoms:**
+- **Boggy (soft, poorly contracted) uterus** — uterus feels soft instead of firm; fails to clamp down vessels
+- **Heavy lochia** — soaking more than one pad per hour; clots > golf ball size
+- **Uterine displacement** — fundus high and deviated to one side (full bladder displacing uterus → assess and empty bladder)
+- **Tachycardia** — early compensatory response to blood loss
+- **Hypotension** — late sign; significant blood loss already occurred
+- **Dizziness, lightheadedness** — cerebral hypoperfusion
+- **Pallor, anxiety, restlessness** — signs of shock
 
-**Carboprost (Hemabate) 250 mcg IM — specific nursing considerations:**
-- Contraindicated in asthma (causes bronchospasm)
-- Side effects: nausea, vomiting, diarrhea, flushing, fever, hypertension
-- May give every 15–90 minutes; maximum 8 doses (2 mg total)
-- Give deep IM injection; document time and dose
+**Fundal Assessment (every 15 min first hour, q30 min second hour):**
+1. Have patient empty bladder (full bladder displaces fundus)
+2. Assess fundal height: firm uterus should be at or below umbilicus midline
+3. Consistency: firm (contracted) or boggy (atonic)?
+4. If boggy → **uterine fundal massage** immediately
+
+**Uterine Fundal Massage:**
+- Support lower uterine segment with non-dominant hand above pubic symphysis
+- Massage fundus firmly in circular motion with dominant hand
+- Continue until uterus firms up
+- Document response
 
 ---
 
-### Q5. What emotional support and teaching does the nurse provide to Macy and her family during and after PPH?
+### Q4. What is the nurse's role in managing postpartum hemorrhage?
 
-**During the emergency:**
-- Speak calmly and directly to Macy: *"Macy, you are losing more blood than expected. We are treating this right now and we need to move quickly. I will keep you informed."*
-- Acknowledge fear: *"I know this is very scary. You are not alone — the whole team is with you."*
-- Brief, honest updates to family — assign a staff member to remain with them if possible
-- Do not leave patient alone during active hemorrhage
+**Immediate Actions (priority order):**
+1. **Call for help** — initiate obstetric hemorrhage protocol/emergency
+2. **Assess and massage fundus** — is uterus boggy? Massage until firm
+3. **Administer oxygen** — face mask; reduces maternal and fetal hypoxia
+4. **Administer uterotonic** — oxytocin IV per order (first-line)
+5. **IV fluid bolus** — 1–2 liters NS or LR wide open
+6. **Increase IV access** — 2 large-bore IV catheters (16G or larger)
+7. **Notify provider** via SBAR
+8. **Assess vital signs** — q5 min; cardiac monitoring
+9. **Foley catheter** — monitor urine output; empty bladder
+10. **Blood draw** — type and crossmatch, CBC, coagulation studies
+11. **Prepare for blood products** — if hemorrhage severe
+12. **Emotional support** — calmly keep patient and partner informed
 
-**After stabilization:**
-- Explain what happened in plain, non-technical language
-- Explain placenta increta: *"Your placenta attached too deeply to your uterus, which made it difficult to deliver and caused the bleeding."*
-- Discuss ongoing monitoring: vital signs, fundal checks, lochia, hemoglobin/hematocrit
-- Discuss possible need for further intervention (surgical, interventional radiology) if hemorrhage is not fully controlled
-- Ensure patient and family have opportunity to ask questions
-- Address impact on future pregnancies: PAS recurrence risk, possible recommendation for hysterectomy
-- Validate patient's experience: labor was long, vacuum-assisted, and followed by hemorrhage — fatigue and emotional distress are expected
+---
 
-**Discharge teaching (when appropriate):**
-- Signs of secondary PPH: heavy bleeding (> 1 pad/hour), passing large clots, fever, foul-smelling lochia — call immediately
-- Iron-rich diet or iron supplementation if prescribed for anemia
-- Follow-up appointment timing
-- Activity restrictions: no heavy lifting; rest is essential for recovery
+### Q5. What is placenta accreta spectrum and why is it dangerous?
+
+**Placenta Accreta Spectrum:**
+- **Accreta** (most common): Placental villi attach directly to myometrium; does not separate normally
+- **Increta** (Macy's condition): Villi invade into the myometrium
+- **Percreta** (most severe): Villi penetrate through the entire myometrium and may invade adjacent organs (bladder, bowel)
+
+**Why Dangerous:**
+- Placenta does not deliver spontaneously
+- Manual removal causes massive hemorrhage from torn tissue
+- May require hysterectomy
+- Leading indication for peripartum hysterectomy in developed countries
+
+**Risk factors:** Prior cesarean sections (most common cause), placenta previa, uterine surgery, advanced maternal age, multiparity
+
+---
+
+### Q6. How does the nurse provide emotional support to Macy and her partner?
+
+- Speak calmly and with confidence — reassure without minimizing
+- "We are taking care of you. We know what to do."
+- Designate one team member to keep the partner informed
+- Avoid exclusion — unless unsafe, partner should remain present
+- After stabilization, provide full explanation of what happened and what was done
+- Assess for trauma response — unexpected complications are frightening
+- Facilitate bonding with newborn as soon as safely possible
+- Refer to social work or counseling if needed
 
 ---
 
 ## 🏥 DURING THE SIMULATION — What to Do & Say
 
-### On Entry — Postpartum Assessment
-1. Perform hand hygiene; introduce yourself to Macy and support person
-2. Verify identity (two identifiers)
-3. Begin systematic postpartum assessment: BUBBLE-LE (Breasts, Uterus, Bladder, Bowel, Lochia, Episiotomy/perineum, Lower extremities, Emotional)
-4. Assess fundal height and firmness — if boggy: begin fundal massage immediately
+### On Entry — Recognize PPH
+1. Assess fundus — is it boggy? What is the height?
+2. Assess lochia — how many pads in the last hour? Clots?
+3. Assess vital signs — tachycardia? Hypotension?
+4. Assess level of consciousness and skin (pallor, diaphoresis)
 
-### Recognizing PPH
-1. Note lochia amount — > 1 saturated pad/hour is abnormal
-2. Check vital signs: HR elevated? BP dropping? Patient reporting dizziness?
-3. Assess skin: pale, cool, clammy = compensatory vasoconstriction
-4. Announce: *"Macy is having heavier than expected bleeding. I need help in room [X]."*
-
-### Immediate Interventions
-1. Massage fundus firmly
-2. Elevate head of bed slightly (or flat if hypotensive)
-3. Apply oxygen — 8–10 L/min non-rebreather mask
-4. Increase IV oxytocin rate per order (or initiate IV access if not present)
-5. Initiate IV fluid bolus per order (LR 500–1000 mL)
-6. Notify provider — use SBAR format
-7. Administer carboprost 250 mcg IM per order — deep IM injection; document time
-8. Quantify blood loss — weigh pads; count saturated chux
-
-### Ongoing Monitoring
-1. Vital signs every 5–15 minutes — trend HR and BP; watch for tachycardia
-2. Reassess fundal firmness after massage and uterotonics
-3. Monitor urine output (Foley catheter if not already placed) — goal ≥ 30 mL/hr
-4. Reassess lochia — is bleeding decreasing?
-5. Provide calm updates to Macy and family throughout
-6. Document all interventions, medications, blood loss estimates, and patient responses in EHR
+### Immediate Response
+1. "I need help in Room X — postpartum hemorrhage"
+2. Uterine massage — firmly massage fundus until contracted
+3. Apply O2 via face mask
+4. Administer carboprost IM per order (Hemabate 0.25 mg IM)
+5. Increase IV fluid rate; initiate fluid bolus per order
+6. Notify provider via SBAR
+7. Catheterize if bladder full (full bladder displaces uterus → atony)
+8. Draw stat labs per order: CBC, type and crossmatch, coag panel
 
 ---
 
 ## 📋 POST-SIMULATION Q&A
 
-### Q1. What nursing diagnoses apply to Macy Polenski?
+### Q1. Most common cause of PPH?
+**Uterine atony (Tone)** — the uterus fails to contract, leaving uterine sinuses open and bleeding.
 
-1. **Deficient Fluid Volume (hemorrhagic)** r/t excessive blood loss from retained placenta and uterine atony — AEB tachycardia, hypotension, dizziness, heavy lochia
-2. **Decreased Cardiac Output** r/t hypovolemia secondary to postpartum hemorrhage
-3. **Risk for Shock (hypovolemic)** r/t ongoing blood loss exceeding physiologic compensation
-4. **Anxiety** r/t life-threatening hemorrhage and uncertainty about prognosis and future fertility
-5. **Risk for Ineffective Tissue Perfusion** r/t hypovolemia and decreased oxygen-carrying capacity
+### Q2. First-line uterotonic for PPH?
+**Oxytocin (Pitocin)** — IV infusion; stimulates uterine contraction. Given routinely after delivery of placenta to all patients.
 
----
+### Q3. What is the fundal assessment finding most consistent with atony?
+**Boggy (soft, poorly contracted) uterus** at or above umbilicus — indicates the uterus is not clamping down on blood vessels.
 
-### Q2. What are the contraindications for the uterotonic medications used in PPH management?
-
-| Medication | Contraindications | Cautions |
-|---|---|---|
-| **Oxytocin (Pitocin)** | Hypersensitivity; not for IM bolus (causes hypotension) | Give as diluted IV infusion; rapid IV bolus causes cardiovascular collapse |
-| **Carboprost (Hemabate)** | **Active asthma** (causes bronchoconstriction); hepatic/renal/cardiac disease | Monitor for bronchospasm, hypertension, fever, GI effects |
-| **Methylergonovine (Methergine)** | **Hypertension** (causes vasoconstriction and elevation in BP); pre-eclampsia | Check BP before administration; avoid if BP > 140/90 |
-| **Misoprostol (Cytotec)** | Hypersensitivity to prostaglandins | Shivering and fever are common side effects; monitor temperature |
-| **Tranexamic acid** | History of thromboembolic disease; active intravascular clotting | Renal dosing adjustment needed; administer slowly to prevent seizure |
-
-**For Macy:** Before administering carboprost, confirm she does not have a history of asthma. Before methylergonovine, check blood pressure — her prolonged labor and the hemorrhage make hemodynamic instability possible.
+### Q4. Why is Macy at high risk compared to a first-time mother?
+Grand multiparity (4th delivery) causes uterine muscle fatigue and reduces contractility. Each subsequent pregnancy increases risk of atony. Her placenta increta also prevents normal placental separation, causing additional bleeding.
 
 ---
 
-### Q3. How does the nurse accurately quantify blood loss in PPH, and why does it matter?
+## 💊 MEDICATION REVIEW
 
-**Why accurate quantification matters:**
-- Visual estimation of blood loss is notoriously inaccurate — studies show clinicians underestimate blood loss by 30–50%
-- Accurate cumulative blood loss guides transfusion decisions, fluid resuscitation, and escalation of care
-- The updated ACOG PPH definition (≥ 1000 mL OR signs of hypovolemia) depends on accurate measurement
-
-**Methods for quantifying blood loss:**
-- **Gravimetric method (weighing):** Weigh all blood-soaked materials (pads, chux, gowns) before and after; 1 gram difference = approximately 1 mL blood loss — most accurate bedside method
-- **Calibrated drapes:** Graduated collection drapes placed under patient at delivery capture and measure blood directly
-- **Visual estimation:** Least accurate; still used frequently but should be supplemented with weighing
-- **Hemoglobin/hematocrit:** Not reliable acutely (equilibration takes 4–6 hours); useful trend over time
-- **Vital signs and clinical signs:** Tachycardia, hypotension, and altered mentation are late signs of significant loss
-
-**Nurse's responsibility:** Use quantitative blood loss (QBL) methods at every delivery per facility protocol; document running total of blood loss in EHR; report cumulative loss to provider and team.
+### Carboprost (Hemabate) 0.25 mg IM
+| Category | Details |
+|---|---|
+| **Classification** | Prostaglandin F2α / Uterotonic |
+| **Mechanism** | Stimulates uterine smooth muscle contractions |
+| **Indication** | PPH refractory to oxytocin; uterine atony |
+| **Route** | IM (deep) — can also give directly into myometrium |
+| **Adverse effects** | Nausea, vomiting, diarrhea, fever, bronchospasm |
+| **Contraindications** | Active asthma or pulmonary disease (can cause bronchospasm) |
+| **Nursing precautions** | Assess respiratory status; have antiemetic available; report fever |
 
 ---
 
-## 📞 SBAR
+## 🏥 PRIORITY NURSING DIAGNOSES
 
-**S:** "I am calling about Macy Polenski, a 42-year-old G4P4, who delivered approximately [X] minutes ago via vacuum-assisted vaginal delivery. She is experiencing a postpartum hemorrhage. Estimated blood loss is [X] mL. Her blood pressure is [X/X] and heart rate is [X]."
+1. **Deficient Fluid Volume** r/t postpartum hemorrhage — AEB: heavy lochia, tachycardia, hypotension, boggy uterus
+2. **Decreased Cardiac Output** r/t acute blood loss — AEB: tachycardia, hypotension, dizziness
+3. **Risk for Shock** r/t ongoing hemorrhage and inadequate uterine tone — AEB: blood loss > 500 mL, boggy fundus
+4. **Anxiety** r/t unexpected postpartum complication — AEB: fear, partner distress
+5. **Risk for Infection** r/t retained placental tissue and invasive interventions
 
-**B:** "She had a prolonged labor and vacuum-assisted delivery. The placenta was retained and there is concern for placenta increta. She is on oxytocin infusion. I have given [carboprost 250 mcg IM / methylergonovine 0.2 mg IM] [X] minutes ago. She has two large-bore IVs and is receiving IV fluid bolus."
+---
 
-**A:** "Her uterus remains boggy despite massage and uterotonics. Lochia is [describe]. Temperature is [X]. She is on 10 L/min O₂ via non-rebreather mask. She is alert but dizzy and anxious. Urine output is [X] mL in the past hour."
+## 📞 SBAR TEMPLATE
 
-**R:** "I believe she needs immediate evaluation at bedside and consideration for surgical management or interventional radiology for retained placenta increta. I am preparing for blood transfusion and requesting stat CBC, coagulation panel, and type and crossmatch if not already ordered."
+**S:** "I am calling about Macy Polenski, 42-year-old G4P4, 30 minutes postpartum from vacuum-assisted delivery. She is hemorrhaging — boggy fundus, soaking 2 pads in 15 minutes, HR [value], BP [value]."
+
+**B:** "She has known placenta increta. Delivery was prolonged and vacuum-assisted. She has received oxytocin per routine. I have initiated uterine massage and applied O2."
+
+**A:** "The uterus [is/is not] firming with massage. BP is dropping from baseline. HR is elevated."
+
+**R:** "I have administered carboprost 0.25 mg IM per standing order. I am requesting you assess immediately, order blood type and crossmatch, and advise on further uterotonics or surgical management."
 
 ---
 
 ## 📚 REFERENCES
 
-- Lowdermilk, D. L., Perry, S. E., Cashion, K., & Alden, K. R. (2020). *Maternity & women's health care* (12th ed.). Elsevier.
-- American College of Obstetricians and Gynecologists (ACOG). (2017). *Postpartum hemorrhage* (Practice Bulletin No. 183). ACOG.
-- Harding, M., Kwong, J., Roberts, D., Hagler, D., & Reinisch, C. (2020). *Lewis's medical-surgical nursing* (11th ed.). Elsevier.
-- Vallerand, A. H., & Sanoski, C. A. (2021). *Davis's drug guide for nurses* (17th ed.). F.A. Davis.
+- Lowdermilk, D. L., Perry, S. E., Cashion, K., Alden, K. R., & Olshansky, E. (2020). *Maternity and women's health care* (12th ed.). Elsevier.
+- ACOG. (2019). Postpartum hemorrhage. *ACOG Practice Bulletin No. 183*.
 
 ---
 

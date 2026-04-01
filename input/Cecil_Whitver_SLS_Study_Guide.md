@@ -1,4 +1,4 @@
-# Cecil Whitver — SLS Psychiatric-Mental Health Nursing Study Guide
+# Cecil Whitver — SLS Nursing Study Guide
 ## PSYCH-01: Depression
 
 ---
@@ -10,270 +10,240 @@
 | **Name** | Cecil Whitver |
 | **Age** | 78 years old |
 | **Gender** | Male |
-| **MRN** | 4421089 |
-| **Weight** | 162 lbs |
-| **Height** | 5' 9" |
-| **Scenario** | PSYCH-01 |
-| **Primary Diagnosis** | Dehydration |
-| **Secondary Diagnosis** | Depression (history of major depression) |
-| **Chief Complaint** | Weakness, poor oral intake, low mood |
-| **Admission** | Admitted to medical-surgical unit for dehydration; history of major depressive disorder noted in chart |
-| **Scenario Focus** | Conduct assessments, recognize signs of depression, use therapeutic communication, ensure patient safety, access and document care in EHR |
+| **Primary Diagnosis (Admission)** | Dehydration |
+| **Secondary Diagnosis** | Major depressive disorder |
+| **Setting** | Medical-surgical unit |
+| **Key Challenge** | Recognize signs of depression; use therapeutic communication; ensure patient safety |
 
 ---
 
 ## 💊 Medications
 
-| Medication | Class | Route | Purpose |
+| Medication | Class | Route | Details |
 |---|---|---|---|
-| **IV Fluids (0.9% NS or LR)** | Isotonic crystalloid | IV | Rehydration for dehydration |
-| **Sertraline (Zoloft)** | SSRI antidepressant | PO | Treatment of major depressive disorder |
-| **Multivitamin** | Supplement | PO | Nutritional support |
-| **Docusate sodium** | Stool softener | PO | Prevent constipation (common in elderly + antidepressants) |
-| **Mirtazapine (Remeron)** | Tetracyclic antidepressant | PO | Depression; also stimulates appetite in low doses |
+| **IV fluids** | Supportive | IV | Treatment of dehydration |
+| **Antidepressant** (e.g., sertraline, escitalopram) | SSRI | PO | If currently prescribed |
+| **Nutritional support** | Supportive | PO | Depression often causes anorexia → dehydration |
 
 ---
 
-## 🔑 The Big Picture — What This Case Is Really About
-
-This scenario has **four core themes**:
-
-1. **Recognizing depression in an older adult** — depression in the elderly is frequently missed; it often presents as somatic complaints, fatigue, anorexia, or withdrawal rather than expressed sadness
-2. **Suicide risk assessment** — any patient with depression requires direct, compassionate questioning about suicidal ideation, plan, means, and intent
-3. **Therapeutic communication** — active listening, open-ended questions, validating feelings, and avoiding dismissive platitudes are essential
-4. **Dehydration management in an elderly patient** — poor oral intake is both a symptom of depression and a separate physiologic problem requiring IV rehydration and monitoring
-
-The clinical context:
+## 🔑 The Big Picture
 
 ```
-History of major depressive disorder
+78-year-old male with history of depression
         ↓
-Decreased motivation → poor oral intake → dehydration (presenting complaint)
+Admitted to medical-surgical unit for dehydration
         ↓
-Admitted to med-surg unit for dehydration
+Likely cause: Depression → Anorexia/Poor oral intake → Dehydration
         ↓
-Nurse recognizes depressive symptoms (SIGECAPS mnemonic)
-        ↓
-Therapeutic communication + suicide risk assessment + safety planning
-        ↓
-Collaborative care: medical (dehydration) + psychiatric (depression)
+Nurse: Treat dehydration (IV fluids) + RECOGNIZE depression signs
+       → Therapeutic communication → Ensure safety → Notify provider
+       → Referral to mental health team
 ```
 
 ---
 
 ## 📝 PRE-SIMULATION QUESTIONS & ANSWERS
 
-### Q1. What is major depressive disorder and how is it diagnosed?
+### Q1. What is major depressive disorder and what are the diagnostic signs and symptoms?
 
-**Major Depressive Disorder (MDD)** is a mood disorder characterized by persistent low mood, loss of interest, and neurovegetative symptoms that significantly impair daily functioning.
+**Major Depressive Disorder (MDD):** A mood disorder characterized by persistent depressed mood and/or loss of interest, significantly affecting daily functioning.
 
-**DSM-5 Diagnostic Criteria — SIGECAPS mnemonic:**
+**DSM-5 Criteria:** Five or more of the following during the same 2-week period (must include #1 or #2):
 
-| Letter | Symptom |
-|---|---|
-| **S** | Sleep disturbance (insomnia or hypersomnia) |
-| **I** | Interest loss (anhedonia — inability to feel pleasure) |
-| **G** | Guilt or feelings of worthlessness |
-| **E** | Energy loss (fatigue) |
-| **C** | Concentration difficulty |
-| **A** | Appetite/weight change |
-| **P** | Psychomotor agitation or retardation |
-| **S** | Suicidal ideation |
+1. **Depressed mood** most of the day, nearly every day
+2. **Markedly diminished interest or pleasure** (anhedonia) in all/almost all activities
+3. Significant **weight loss or gain** (> 5% in a month) or appetite change
+4. **Insomnia or hypersomnia**
+5. **Psychomotor agitation or retardation** (observable by others)
+6. **Fatigue** or loss of energy
+7. Feelings of **worthlessness or excessive guilt**
+8. **Difficulty concentrating** or making decisions
+9. **Recurrent thoughts of death**, suicidal ideation, suicide attempt, or plan
 
-**Diagnosis requires:** Depressed mood AND/OR anhedonia PLUS ≥4 additional SIGECAPS symptoms, present for ≥2 weeks, causing functional impairment.
-
-**Why Cecil's depression may have been missed:** In older adults, depression often presents as:
-- Somatic complaints (fatigue, pain, GI symptoms) rather than sadness
-- Social withdrawal misattributed to "normal aging"
-- Cognitive slowing mistaken for dementia
-- Poor appetite/weight loss attributed to medical illness alone
-
----
-
-### Q2. How do you perform a suicide risk assessment?
-
-Suicide risk assessment is a **mandatory component** of care for any patient with depression. The nurse must ask **directly** — research shows asking about suicide does NOT increase risk.
-
-**Columbia Suicide Severity Rating Scale (C-SSRS) — Key Questions:**
-
-1. "Have you wished you were dead or wished you could go to sleep and not wake up?"
-2. "Have you had any thoughts of killing yourself?"
-3. "Have you been thinking about how you might do this?"
-4. "Have you had any intention of acting on these thoughts?"
-5. "Have you done anything, started to do anything, or prepared to do anything to end your life?"
-
-**Risk factors for suicide in elderly males:**
-- Male gender (higher lethality of attempts)
-- Age >65 (highest suicide rates in U.S.)
-- Depression
-- Social isolation / recent loss (spouse, friends)
-- Chronic illness / pain
-- Access to lethal means (firearms especially common in elderly males)
-- History of prior attempts
-
-**Nursing actions based on risk level:**
-- **Low risk:** Continue therapeutic relationship; safety planning; notify provider
-- **Moderate/High risk:** 1:1 observation; remove sharp objects and excess medications; notify provider and psychiatry immediately; do not leave patient alone
+**Memory aid:** SIG E CAPS
+- Sleep disturbance
+- Interest (loss of)
+- Guilt (or worthlessness)
+- Energy (decreased)
+- Concentration (impaired)
+- Appetite change
+- Psychomotor changes
+- Suicidal ideation
 
 ---
 
-### Q3. What are therapeutic communication techniques for a depressed patient?
+### Q2. Why are elderly patients at high risk for depression and how can it present differently?
 
-**Effective techniques:**
+**Prevalence:** Depression affects approximately 15–20% of older adults; significantly underdiagnosed.
 
-| Technique | Example |
-|---|---|
-| **Open-ended questions** | "Can you tell me how you have been feeling lately?" |
-| **Active listening** | Maintaining eye contact, nodding, not interrupting |
-| **Reflecting** | "It sounds like you have been feeling very alone." |
-| **Validating feelings** | "It makes sense that you would feel that way given everything you have been through." |
-| **Silence** | Allow pauses — do not rush to fill silences |
-| **Asking directly** | "Sometimes when people feel this way they have thoughts of harming themselves. Are you having any thoughts like that?" |
+**Risk Factors in Elderly:**
+- Multiple losses: spouse, friends, independence, health, mobility
+- Chronic illness and pain
+- Social isolation
+- Cognitive decline
+- Polypharmacy (many medications cause or worsen depression)
+- Institutional living
+- Recent hospitalization
 
-**Avoid (non-therapeutic):**
-- "Cheer up" or "Things could be worse" — dismisses the patient's experience
-- "You have so much to live for" — minimizes feelings
-- Excessive reassurance before the patient feels heard
-- Closed yes/no questions as the primary mode of conversation
-- Sharing your own experiences (self-disclosure should be minimal and purposeful)
+**Atypical Presentation in Elderly:**
+- May present as **somatic complaints** (pain, fatigue, headaches) rather than sadness
+- **Cognitive symptoms** prominent — memory issues, confusion (pseudodementia)
+- May **deny feeling depressed** but acknowledge not enjoying things
+- **Anorexia and weight loss** as prominent features → leads to dehydration (Cecil's admission reason)
+- May be dismissed as "normal aging" — it is NOT normal
 
----
-
-### Q4. What are nursing implications for antidepressant medications?
-
-**SSRIs (e.g., sertraline, fluoxetine, citalopram):**
-- First-line for depression in older adults
-- **Key teaching:** Therapeutic effect takes **2–6 weeks** — do not stop abruptly
-- Monitor for: GI upset (nausea), sexual dysfunction, hyponatremia (especially in elderly), serotonin syndrome (fever, agitation, tremor, diaphoresis, clonus — emergency)
-- **Discontinuation syndrome:** Abrupt stopping causes flu-like symptoms, dizziness, "brain zaps" — taper under provider guidance
-
-**TCAs (e.g., amitriptyline, nortriptyline):**
-- Older antidepressants; **avoid in elderly** (Beers Criteria) — anticholinergic effects, cardiac arrhythmias, lethal in overdose
-- Monitor: orthostatic hypotension, urinary retention, constipation, sedation, QTc prolongation
-
-**MAOIs (e.g., phenelzine, tranylcypromine):**
-- Rarely used; multiple drug and food interactions
-- **Tyramine-restricted diet** (no aged cheeses, cured meats, red wine) — risk of hypertensive crisis
-- Cannot combine with SSRIs — serotonin syndrome risk
-
-**Mirtazapine (Remeron):**
-- Useful in elderly with depression + anorexia — stimulates appetite, sedating (helps with sleep)
-- Monitor: weight gain, sedation, hyperlipidemia
+**Why Cecil's Presentation Matters:**
+- He was admitted for dehydration — the underlying cause may be depression causing anorexia and poor oral intake
+- The nurse must recognize this connection and address both the physical and mental health needs
 
 ---
 
-### Q5. How do you assess and manage dehydration in an elderly patient with depression?
+### Q3. What therapeutic communication techniques are used with a depressed patient?
 
-**Assessment of dehydration:**
-- **History:** Oral intake, vomiting, diarrhea, urine output, medications (diuretics)
-- **Physical signs:** Dry mucous membranes, decreased skin turgor (poor in elderly — check sternum or forehead), sunken eyes, dark concentrated urine
-- **Vital signs:** Tachycardia, hypotension, orthostatic hypotension
-- **Labs:** BMP — elevated BUN/Creatinine ratio (>20:1), elevated hematocrit, elevated serum osmolality, hypernatremia
+**Key Principles:**
+- **Sit down** — do not stand over the patient; demonstrates you are not rushing
+- **Use open-ended questions:** "How have you been feeling lately?" not "Are you depressed?"
+- **Active listening** — give undivided attention; nod; reflect feelings
+- **Avoid platitudes:** NEVER say "Cheer up," "Things could be worse," or "You have so much to live for"
+- **Validate feelings:** "It sounds like you've been going through a really difficult time."
+- **Non-judgmental stance** — depression is an illness, not a choice or weakness
+- **Silence is therapeutic** — allow pauses; do not fill every silence
+- **Normalize help-seeking:** "Many people your age experience depression. It's a medical condition and we can help."
 
-**Why elderly are at high risk:**
-- Decreased thirst sensation with aging
-- Reduced kidney concentrating ability
-- Polypharmacy (diuretics)
-- Cognitive impairment or depression → neglect of self-care
-- Functional limitations in accessing fluids
+**What NOT to say:**
+- "You should be grateful for what you have"
+- "Just try to think positively"
+- "You don't seem depressed to me"
+- "Everyone feels that way sometimes"
 
-**Nursing management:**
-- IV fluid resuscitation (0.9% NS commonly) — per provider order and rate
-- Monitor urine output ≥30 mL/hr
-- Daily weights
-- Strict I&O
-- Encourage oral intake when tolerated
-- Address underlying cause: in Cecil's case, depression is contributing to poor intake → mental health treatment is essential to prevent recurrence
+---
+
+### Q4. How does the nurse assess for suicide risk in a depressed patient?
+
+**Suicide Risk Assessment:**
+Cecil is elderly, male, has a history of depression — all are risk factors for suicide.
+
+**Risk Factors for Suicide in Elderly:**
+- Male gender
+- Advanced age (especially 75+)
+- Social isolation, living alone
+- History of depression or prior attempts
+- Chronic pain or illness
+- Recent losses
+- Access to lethal means (firearms — assess in elderly)
+
+**Protective Factors:**
+- Religious/spiritual beliefs
+- Social support and family connection
+- Reasons for living
+- Engagement in treatment
+
+**Asking About Suicide:**
+- Asking does NOT plant the idea — it is safe and necessary
+- "Have you been having any thoughts of hurting yourself or not wanting to be here anymore?"
+- If YES: "Do you have a plan? Have you thought about how you would do it? Do you have access to [means]?"
+- Escalate immediately to provider and mental health team if any suicidal ideation expressed
+- Initiate safety precautions: 1:1 monitoring, remove access to means, document
+
+---
+
+### Q5. What collaborative care interventions are appropriate for Cecil?
+
+1. **Psychiatric/mental health consultation** — referral to psychiatrist or LCSW during hospitalization
+2. **Antidepressant review** — is he on one? Is it therapeutic? Medication adjustment?
+3. **Social work referral** — assess home situation, social support, discharge planning
+4. **Nutritional assessment** — dietitian consult; determine if anorexia is medication-related, depression-related, or both
+5. **Activity/engagement** — encourage participation in care; discuss interests
+6. **Screen for cognitive impairment** — use validated tool (MMSE or MoCA)
+7. **Fall risk assessment** — depression and medications increase fall risk
+8. **Discharge planning** — will he be safe at home? Does he live alone? Follow-up with mental health outpatient
+
+---
+
+### Q6. What is the connection between depression and dehydration in elderly patients?
+
+- Depression causes **anorexia (loss of appetite)** — Cecil stops eating and drinking
+- Depression causes **anergia (loss of energy/motivation)** — he cannot motivate himself to prepare meals or drinks
+- Depression causes **cognitive changes** — may forget to eat or drink
+- Many antidepressants and other medications cause **dry mouth, nausea** — reduces desire to drink
+- Elderly have **decreased thirst sensation** baseline — further compounded by depression
+- Result: Significant dehydration requiring IV fluid replacement
 
 ---
 
 ## 🏥 DURING THE SIMULATION — What to Do & Say
 
 ### On Entry
-1. Perform hand hygiene
-2. Introduce yourself — address him as "Mr. Whitver" unless he requests otherwise
-3. Verify identity (two identifiers)
-4. Begin with open-ended assessment — "How are you feeling today, Mr. Whitver?"
-5. Observe nonverbal cues immediately: affect (flat, tearful), eye contact (avoidant), posture (slumped)
+1. Introduce yourself warmly — unhurried demeanor
+2. Sit at eye level with Cecil — do not rush
+3. Address the immediate medical issue: IV fluids running? Patent?
+4. Assess for depression through conversation — listen to how he describes himself
 
-### Mental Status Assessment
-- **Appearance:** Grooming, hygiene (neglect may signal severity of depression)
-- **Behavior:** Psychomotor retardation (slow speech, movements), agitation
-- **Mood:** Ask patient to describe — "How would you describe your mood?"
-- **Affect:** Observed emotional expression — flat? Congruent with mood?
-- **Speech:** Rate, volume, tone
-- **Thought content:** Suicidal ideation, hopelessness, worthlessness
-- **Cognition:** Orientation, concentration
-- **Insight/Judgment:** Does he understand he needs treatment?
+### Recognizing Depression in Cecil
+Watch and listen for:
+- Flat affect (limited facial expression, monotone voice)
+- Poor eye contact
+- Minimal verbal responses; monosyllabic answers
+- Reports of not eating, not sleeping, not enjoying anything
+- Tearfulness or absence of emotion
+- Comments about death, hopelessness, being a burden
+- Slowed movements, low energy, poor hygiene
 
-### Suicide Risk Assessment — How to Ask
-- Transition naturally: "When people feel this way, sometimes they have thoughts of not wanting to be here anymore. Have you had any thoughts like that?"
-- If yes: proceed with C-SSRS structured questioning
-- Document findings; notify provider of any suicidal ideation immediately
+### Depression Safety Assessment
+"Cecil, I want to ask you something important. Sometimes when people feel very low, they have thoughts about not wanting to be here. Have you been having any thoughts like that?"
 
-### Safety Measures if Needed
-- Remove potentially harmful items from reach
-- Ensure call light is accessible
-- Communicate concerns to charge nurse and provider
-- Document thoroughly in EHR
+If YES → stay with patient → notify provider immediately → document
+
+### Therapeutic Communication Demonstration
+**Nurse:** "Cecil, you mentioned you haven't been eating much. Can you tell me more about that?"
+
+**Cecil:** "I just don't see the point anymore."
+
+**Nurse:** "It sounds like things have been feeling really hopeless for you. How long have you been feeling this way?" [validates, open-ended, deeper exploration]
 
 ---
 
 ## 📋 POST-SIMULATION Q&A
 
-### Q1. What nursing diagnoses apply to Cecil Whitver?
+### Q1. Priority nursing action when a patient expresses suicidal ideation?
+Stay with the patient — do not leave them alone. Notify the provider and mental health team immediately. Document all statements. Remove access to potential means. Initiate 1:1 observation per protocol.
 
-1. **Hopelessness** r/t history of major depressive disorder — AEB flat affect, low mood, social withdrawal, poor self-care
-2. **Risk for Suicide** r/t depressive disorder, older male gender, social isolation
-3. **Deficient Fluid Volume** r/t decreased oral intake secondary to depression — AEB dry mucous membranes, concentrated urine, tachycardia
-4. **Imbalanced Nutrition: Less Than Body Requirements** r/t anorexia and diminished interest in eating
-5. **Social Isolation** r/t depressive disorder and withdrawal from others
-6. **Deficient Knowledge** r/t depression treatment and medication adherence
+### Q2. What therapeutic communication technique is most effective with depressed patients?
+Active listening with open-ended questions and validation of feelings. Avoid advice-giving, false reassurance, or minimizing the patient's experience.
 
----
-
-### Q2. What is the nurse's role when a patient expresses hopelessness but denies active suicidal ideation?
-
-The nurse must:
-- **Take all expressions of hopelessness seriously** — "I don't see the point" or "I wouldn't care if I didn't wake up" may represent passive suicidal ideation even without a plan
-- Document the patient's exact words (use quotation marks in EHR)
-- Notify the provider and request a mental health/psychiatry consultation
-- Implement safety precautions per facility policy
-- Reassess frequently — suicidal ideation is dynamic and can escalate
-- Maintain a **non-judgmental, supportive** presence; do not minimize or argue with the patient's feelings
+### Q3. Why might depression be missed in elderly hospitalized patients?
+Symptoms overlap with physical illness (fatigue, poor appetite, cognitive changes); elderly patients may not volunteer emotional distress; nurses may attribute symptoms to "normal aging" or the medical illness; time constraints in busy medical-surgical units.
 
 ---
 
-### Q3. What discharge planning considerations are important for Cecil?
+## 🏥 PRIORITY NURSING DIAGNOSES
 
-- **Outpatient mental health referral** — psychiatrist or therapist follow-up is essential
-- **Medication reconciliation** — ensure antidepressant is prescribed and patient understands the 2–6 week onset, importance of not stopping abruptly
-- **Social support assessment** — does he live alone? Is there a family member or caregiver involved?
-- **Nutrition and hydration plan** — follow up with dietitian; encourage small frequent meals; address depression as root cause of poor intake
-- **Safety planning** — written safety plan with crisis line numbers (988 Suicide & Crisis Lifeline); means restriction counseling
-- **Follow-up appointment** — scheduled before discharge
+1. **Hopelessness** r/t chronic depression and perceived loss of meaningful life — AEB: verbal expressions of hopelessness, anhedonia, minimal participation in care
+2. **Deficient Fluid Volume** r/t inadequate oral intake secondary to depression and anorexia — AEB: dehydration requiring IV fluids
+3. **Risk for Suicide** r/t depression, advanced age, and social isolation — AEB: risk factors present; assess for ideation
+4. **Imbalanced Nutrition: Less Than Body Requirements** r/t anorexia and anergia from depression
+5. **Social Isolation** r/t depression and possible lack of social support — AEB: elderly male, possible widowed, limited visitors
 
 ---
 
-## 📞 SBAR
+## 📞 SBAR TEMPLATE
 
-**S:** "I am calling about Cecil Whitver, a 78-year-old male admitted for dehydration. I am concerned about his mental status — he is showing significant signs of depression and I want to discuss a psychiatry referral."
+**S:** "I am calling about Cecil Whitver, 78-year-old male admitted for dehydration. I have assessed him and I am concerned he is experiencing significant depression and may have suicidal ideation."
 
-**B:** "Mr. Whitver has a documented history of major depressive disorder. He was admitted for dehydration secondary to poor oral intake. His affect is flat, he reports low mood, poor appetite, and sleep disturbance. He [does/does not] endorse suicidal ideation at this time."
+**B:** "He has a history of major depression. He reports he has not been eating or drinking well for weeks. He made comments about 'not seeing the point anymore.' He appears with flat affect, poor eye contact, and minimal engagement."
 
-**A:** "I have completed a mental status assessment and suicide risk screening using the C-SSRS. His dehydration labs show elevated BUN/Creatinine ratio. He is currently receiving IV fluids. He appears to be in a depressive episode."
+**A:** "When I asked directly about suicidal thoughts, he [did/did not] express ideation. I believe his dehydration is a direct consequence of his depression. He needs psychiatric evaluation."
 
-**R:** "I am requesting a psychiatry consultation and would like clarification on suicide precaution orders. I would also like to discuss whether his current antidepressant regimen should be reviewed."
+**R:** "I am requesting a psychiatric consultation today. Should we initiate 1:1 safety precautions? I will continue monitoring and will not leave him alone until the team responds."
 
 ---
 
 ## 📚 REFERENCES
 
-- Townsend, M. C., & Morgan, K. I. (2021). *Psychiatric mental health nursing: Concepts of care in evidence-based practice* (9th ed.). F.A. Davis.
-- Harding, M., Kwong, J., Roberts, D., Hagler, D., & Reinisch, C. (2020). *Lewis's medical-surgical nursing* (11th ed.). Elsevier.
-- American Psychiatric Association. (2022). *Diagnostic and statistical manual of mental disorders* (5th ed., text rev.). APA Publishing.
-- Vallerand, A. H., & Sanoski, C. A. (2021). *Davis's drug guide for nurses* (17th ed.). F.A. Davis.
-- Columbia Lighthouse Project. (2016). *Columbia Suicide Severity Rating Scale (C-SSRS)*. https://cssrs.columbia.edu
+- Townsend, M. C., & Morgan, K. I. (2021). *Psychiatric mental health nursing* (9th ed.). F.A. Davis.
+- American Psychiatric Association. (2022). *Diagnostic and statistical manual of mental disorders* (5th ed., text revision). APA.
+- Potter, P. A., Perry, A. G., Stockert, P. A., & Hall, A. (2021). *Fundamentals of nursing* (10th ed.). Elsevier.
 
 ---
 

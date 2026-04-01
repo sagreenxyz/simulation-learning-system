@@ -1,5 +1,5 @@
-# Pedro Gomez — SLS Pediatric Nursing Study Guide
-## PED-02: Compound Fracture/Varicella
+# Pedro Gomez — SLS Nursing Study Guide
+## PED-02: Compound Fracture / Varicella
 
 ---
 
@@ -10,307 +10,197 @@
 | **Name** | Pedro Gomez |
 | **Age** | 5 years old |
 | **Gender** | Male |
-| **Race / Culture** | Hispanic/Latino-American |
-| **MRN** | 4418573 |
-| **Weight** | 42 lbs (19 kg) |
-| **Height** | 43 inches |
-| **Scenario** | PED-02 |
-| **Primary Diagnosis** | Traumatic compound fracture, left forearm |
-| **Secondary Diagnosis** | Varicella (chickenpox) |
-| **Chief Complaint** | Left forearm injury (fall from playground equipment); develops fever and rash postoperatively |
-| **Admission** | Admitted for open reduction and internal fixation (ORIF) of left forearm compound fracture; varicella signs and symptoms develop during hospitalization |
-| **Scenario Focus** | Postoperative pediatric assessment, varicella recognition, airborne isolation initiation, fever management, parent education |
+| **Primary Diagnosis** | Traumatic compound fracture, left forearm (postoperative) |
+| **Developing Complication** | Varicella (chickenpox) — exhibits signs during hospitalization |
+| **Setting** | Pediatric inpatient unit |
+| **Key Challenge** | Recognize varicella; initiate airborne isolation; educate parent |
 
 ---
 
 ## 💊 Medications
 
-| Medication | Class | Route | Purpose |
+| Medication | Class | Route | Details |
 |---|---|---|---|
-| **Acetaminophen (Tylenol)** | Non-opioid analgesic / antipyretic | PO / IV | Fever management and postoperative pain relief — safe in varicella |
-| **Ibuprofen (Motrin)** | NSAID | PO | Adjunct pain management (use with caution in varicella if provider-ordered) |
-| **Oxycodone/Acetaminophen (Percocet)** | Opioid combination | PO | Moderate-to-severe postoperative pain |
-| **IV Fluids (LR or NS)** | Isotonic crystalloid | IV | Hydration maintenance |
-| **Acyclovir (Zovirax)** | Antiviral | IV / PO | Antiviral therapy for severe varicella or immunocompromised patients |
+| **Acetaminophen (Tylenol)** | Analgesic/Antipyretic | PO/IV | Pain and fever management |
+| **Acyclovir (Zovirax)** | Antiviral | PO or IV | Antiretroviral for varicella (provider order) |
+| **Diphenhydramine (Benadryl)** | Antihistamine | PO | Reduces pruritus from rash |
 
-> ⚠️ **CRITICAL:** **Aspirin (salicylates) are CONTRAINDICATED in children with varicella** — risk of **Reye's syndrome** (acute encephalopathy + hepatic failure). NEVER administer aspirin to a child with a known or suspected viral illness.
+> **Note:** Aspirin/NSAIDs are CONTRAINDICATED in varicella (children) — risk of Reye's syndrome.
 
 ---
 
-## 🔑 The Big Picture — What This Case Is Really About
-
-This scenario has **four core themes**:
-
-1. **Compound fracture postoperative care** — surgical wound monitoring, neurovascular assessment of the affected extremity, pain management
-2. **Recognizing varicella during hospitalization** — the nurse identifies fever, red macular rash, and history of recent exposure as varicella and escalates appropriately
-3. **Airborne isolation precautions** — varicella-zoster virus (VZV) is transmitted by airborne droplet nuclei AND contact; the nurse must initiate appropriate isolation immediately
-4. **Safe fever management in a child with varicella** — acetaminophen is safe; aspirin is absolutely contraindicated (Reye's syndrome risk)
-
-The clinical context:
+## 🔑 The Big Picture
 
 ```
-Playground fall → compound (open) fracture left forearm
+5-year-old admitted postoperatively for compound forearm fracture
         ↓
-Surgical repair (ORIF) → admitted postoperatively
+Nurse performs routine postoperative assessment
         ↓
-During hospitalization: fever, red macular rash, history of varicella exposure
+RECOGNITION: Fever + macular-papular rash progressing to vesicles
+             + recent exposure to chickenpox reported
         ↓
-Nurse recognizes varicella → notifies provider
+VARICELLA IDENTIFIED
         ↓
-Initiate AIRBORNE + CONTACT isolation precautions immediately
-        ↓
-Administer acetaminophen for fever (NOT aspirin — Reye's syndrome risk)
-        ↓
-Educate parent on varicella transmission, isolation, home management
+Nurse: Notify provider → Initiate AIRBORNE isolation → Administer acetaminophen
+       → Educate parent → Document findings
 ```
 
 ---
 
 ## 📝 PRE-SIMULATION QUESTIONS & ANSWERS
 
-### Q1. What is a compound (open) fracture and what are the nursing priorities for postoperative care?
+### Q1. What is varicella and how does it present?
 
-**Definition:**
-A **compound (open) fracture** is a fracture in which the broken bone penetrates through the skin, creating an open wound and direct communication between the fracture site and the external environment.
+**Varicella-Zoster Virus (VZV):** Highly contagious herpesvirus causing chickenpox (primary infection) and later shingles (reactivation).
 
-**Why compound fractures are high-risk:**
-- Open wound = direct pathway for **infection** (osteomyelitis — bone infection)
-- Greater soft tissue damage than closed fractures
-- Higher blood loss potential
-- Requires surgical debridement and fixation (ORIF or external fixation)
+**Transmission:** Airborne (respiratory droplets) and direct contact with lesions. Highly contagious 1–2 days before rash appears until all lesions have crusted (5–7 days).
 
-**Postoperative nursing priorities (5 P's of neurovascular assessment):**
-1. **Pain** — assess pain using age-appropriate scale (FACES scale for 5-year-old); pain out of proportion to the injury is a red flag for **compartment syndrome**
-2. **Pulse** — palpate radial pulse distal to the fracture; absent or diminished pulse = vascular compromise
-3. **Paresthesia** — ask if child feels tingling or numbness in fingers; numbness = nerve compromise
-4. **Paralysis** — ask child to wiggle fingers; inability to move = motor nerve compromise
-5. **Pallor (and Poikilothermia)** — compare color and temperature of affected arm to unaffected arm; pale, cool extremity = compromised circulation
+**Classic Presentation:**
+- **Prodrome (1–2 days):** Low-grade fever, malaise, anorexia — occurs before rash
+- **Rash progression** (hallmark: lesions in different stages simultaneously):
+  1. **Macules** (flat red spots) → progress to
+  2. **Papules** (raised red bumps) → progress to
+  3. **Vesicles** (fluid-filled blisters — "dewdrops on a rose petal") → rupture → crust
+- Rash begins on trunk → spreads centrifugally to face and extremities
+- Intensely **pruritic** (itchy)
+- Multiple crops appear over 3–5 days
+- **Highly contagious until ALL lesions have crusted over**
 
-**Compartment syndrome — emergency signs:**
-- Severe, unrelenting pain NOT relieved by opioids
-- Pain with passive stretch of fingers
-- Tense, swollen extremity
-- Paresthesia, pallor, pulselessness (late signs)
-- Notify provider IMMEDIATELY — requires emergent fasciotomy
+**Incubation period:** 10–21 days after exposure
 
 ---
 
-### Q2. What is varicella (chickenpox) and how does it present?
+### Q2. What isolation precautions are required for varicella?
 
-**Pathophysiology:**
-- Caused by **Varicella-Zoster Virus (VZV)**, a member of the Herpesviridae family
-- Transmitted via: **airborne droplet nuclei** (primary route) and **direct contact** with vesicular lesions
-- Incubation period: **10–21 days** after exposure
-- Contagious: **1–2 days before rash appears** until **all lesions have crusted over** (approximately 5–7 days after rash onset)
+**AIRBORNE + CONTACT Precautions:**
 
-**Classic clinical presentation:**
-1. **Prodrome:** Low-grade fever, malaise, anorexia (1–2 days before rash)
-2. **Rash progression** — hallmark: lesions in multiple stages simultaneously
-   - Begins as **red macules** → progresses to **papules** → **vesicles** (fluid-filled, "dew drop on rose petal") → **crusted lesions**
-   - Starts on the trunk and face → spreads to extremities
-3. Intense **pruritus** (itching)
-4. Fever
+**Airborne Precautions:**
+- **Private room with negative pressure** (door closed)
+- All healthcare workers entering room must wear **N95 respirator** (not standard surgical mask)
+- Only immune (vaccinated or previously infected) staff should care for the patient
+- Limit transport; if transport necessary, patient wears surgical mask
 
-**Complications:**
-- Secondary bacterial skin infection (from scratching)
-- Pneumonia (varicella pneumonia — particularly serious)
-- Encephalitis
-- **Reye's syndrome** if aspirin administered during illness
-- Reactivation later in life as **herpes zoster (shingles)**
+**Contact Precautions:**
+- Gown and gloves when entering room
+- Dedicated equipment (stethoscope, BP cuff) remains in room
+
+**Visitor Restrictions:**
+- Only immune visitors allowed (vaccinated or previously infected)
+- Identify and notify exposed susceptible individuals (immunocompromised patients, pregnant women, unvaccinated individuals) — they may need varicella-zoster immune globulin (VZIG) prophylaxis
 
 ---
 
-### Q3. What isolation precautions are required for varicella?
-
-**Varicella requires BOTH:**
-
-| Precaution Type | Details |
-|---|---|
-| **Airborne Precautions** | Private room with **negative pressure ventilation** (air exhausted outside or HEPA filtered); door kept closed at all times; N95 respirator required for all personnel entering room (not just surgical mask) |
-| **Contact Precautions** | Gloves and gown for all contact with patient or patient environment; minimize patient transport; dedicated equipment (stethoscope, BP cuff) stays in room |
-
-**Steps to initiate isolation:**
-1. Recognize varicella signs and symptoms
-2. Notify charge nurse and provider immediately
-3. Move patient to a **negative pressure room** as soon as available
-4. Place isolation signage on door
-5. Don N95 respirator before entering room
-6. Notify infection control department
-7. Identify and monitor any exposed patients, visitors, or staff (especially immunocompromised individuals)
-
-**Who is at highest risk from exposure?**
-- Immunocompromised patients (chemotherapy, HIV, transplant)
-- Pregnant healthcare workers who are non-immune
-- Newborns/neonates
-- Non-immune adults
-
----
-
-### Q4. Why is aspirin absolutely contraindicated in children with varicella, and what should be used instead?
+### Q3. Why are aspirin and NSAIDs contraindicated in varicella?
 
 **Reye's Syndrome:**
-- A rare but **life-threatening** condition characterized by **acute non-inflammatory encephalopathy** and **hepatic failure**
-- Strongly associated with aspirin (salicylate) use in children during or after a viral illness (varicella or influenza most commonly)
-- Exact mechanism not fully understood but involves mitochondrial dysfunction in the liver and brain
-- Case fatality rate: 20–40%; survivors may have permanent neurological damage
-
-**Clinical presentation of Reye's syndrome:**
-- Persistent vomiting (3–5 days after onset of viral illness)
-- Altered mental status: irritability, confusion, combativeness
-- Hepatomegaly (enlarged liver)
-- Elevated liver enzymes (AST, ALT), elevated ammonia, coagulopathy
-- May progress to seizures, coma
-
-**Safe alternatives for fever and pain in varicella:**
-- **Acetaminophen (Tylenol)** — first-line antipyretic and analgesic — safe in varicella
-- **Ibuprofen** — may be used but use with caution in varicella (some literature suggests increased risk of secondary skin infections)
-- **Antihistamines** (diphenhydramine) — for pruritus management
-- **Calamine lotion** — topical relief for itching
-
-**Nursing responsibility:**
-- Verify ALL orders involving antipyretics — if aspirin is ordered, clarify with provider and do NOT administer
-- Educate parents to avoid all aspirin-containing products at home (including adult OTC products like Pepto-Bismol which contains bismuth subsalicylate)
+- Rare but serious condition associated with aspirin use during viral illness (especially influenza and varicella) in children
+- Causes severe liver and brain damage
+- **Key teaching:** Never give aspirin or ibuprofen (controversial — some advise avoiding NSAIDs) to children with varicella
+- **Use acetaminophen** for fever and pain management instead
+- This is a critical patient/parent education point
 
 ---
 
-### Q5. What parent education is required for varicella management?
+### Q4. What are the postoperative nursing assessments for a compound fracture?
 
-**At-home management:**
-- Give acetaminophen (Tylenol) for fever — **never aspirin**
-- Keep fingernails trimmed short to prevent secondary infection from scratching
-- Apply calamine lotion to itchy lesions
-- Cool oatmeal baths (Aveeno) can relieve pruritus
-- Light, loose clothing to reduce irritation
+**Neurovascular Assessment (5 P's) — every 1–2 hours:**
+- **Pain** — pain out of proportion = possible compartment syndrome
+- **Pulses** — radial pulse distal to fracture; compare bilateral
+- **Pallor** — capillary refill < 2 seconds; skin color
+- **Paresthesias** — tingling, numbness
+- **Paralysis** — movement of fingers
 
-**Contagion and isolation:**
-- Child is contagious **1–2 days before rash appears** until **all lesions are crusted over**
-- Keep child home from school and away from non-immune, immunocompromised, or pregnant individuals
-- Siblings who have not had varicella or the vaccine should be monitored for symptoms (incubation 10–21 days)
+**Additional assessments:**
+- Wound: monitor for drainage, bleeding, and infection
+- Cast/splint integrity (if applicable)
+- Swelling: elevate extremity above heart level
+- Compartment syndrome: increasing pain, pressure, pallor, paresthesia, pulselessness — EMERGENCY
 
-**When to return to provider/ER:**
-- Lesions become very red, warm, or swollen (secondary bacterial infection)
-- Child develops difficulty breathing (varicella pneumonia)
-- Child is inconsolable, confused, or has seizures (Reye's syndrome/encephalitis)
-- High fever that does not respond to acetaminophen
-- Child is unable to drink fluids
+---
 
-**Varicella vaccine:**
-- Two doses of varicella vaccine are recommended: at 12–15 months and 4–6 years
-- Post-exposure prophylaxis: varicella-zoster immune globulin (VariZIG) within 10 days for high-risk non-immune exposures
+### Q5. How should the nurse educate the parent about varicella?
+
+**Key Teaching Points:**
+1. **Isolation is required** — Pedro cannot be around unvaccinated or immunocompromised people
+2. **He is contagious** until all lesions have crusted — typically 5–7 days after rash onset
+3. **Do not give aspirin or ibuprofen** — use acetaminophen for fever and pain
+4. **Prevent scratching** — keeps fingernails short; use mittens or socks on hands; diphenhydramine for itching; oatmeal baths
+5. **Monitor for complications:** secondary skin infection from scratching; pneumonia; encephalitis
+6. **School exclusion** until all lesions are crusted
+7. **Vaccine:** Siblings and close contacts who are unvaccinated should receive varicella vaccine within 3–5 days if exposed
+
+**Addressing parental concern:** "It's very common for children to be exposed to chickenpox and not know it until the rash appears — you did the right thing by bringing Pedro to the hospital right away."
 
 ---
 
 ## 🏥 DURING THE SIMULATION — What to Do & Say
 
-### On Entry
-1. Perform hand hygiene
-2. Introduce yourself — address child: "Hi Pedro, I'm [name], your nurse today"
-3. Verify identity (two identifiers — name band + parent verbal confirmation)
-4. SWIPE safety assessment
-5. Begin postoperative assessment — start with neurovascular check of left arm
+### On Entry — Varicella Recognition
+1. Perform routine postoperative assessment including skin inspection
+2. Note: Fever + rash — ask parent: "Has Pedro been around anyone with chickenpox recently?"
+3. Inspect rash: location, progression, type of lesions (macular → vesicular)
+4. **Identify varicella → take action immediately**
 
-### Postoperative Neurovascular Assessment (Left Arm)
-1. Inspect cast/splint — is it intact? Any drainage through dressing?
-2. Assess capillary refill in left hand fingers (< 2 seconds = normal)
-3. Palpate radial pulse bilaterally — compare strength
-4. Ask Pedro to wiggle his fingers on left hand
-5. Ask Pedro if he has any "funny feelings" (tingling/numbness) in his fingers
-6. Assess color and warmth of left hand vs. right hand
-7. Assess pain using FACES scale — "Show me the face that matches how your arm feels"
+### Immediate Actions
+1. **Don N95 respirator** before further contact
+2. **Close the door** to Pedro's room
+3. **Notify provider** via SBAR
+4. **Initiate Airborne + Contact Precautions**
+5. **Post isolation signage** on door
+6. **Administer acetaminophen** per order for fever
+7. **Notify charge nurse** — identify potentially exposed staff and patients on unit
+8. **Educate parent** — isolation, no aspirin/ibuprofen, prevent scratching, contagion period
 
-### Recognizing Varicella
-1. Note fever (assess temperature)
-2. Inspect skin — identify red macular lesions beginning on trunk or face
-3. Ask parent: "Has Pedro been around anyone who had chickenpox recently?"
-4. Recognize the combination: **fever + red macular rash + varicella exposure history = varicella**
-
-### Notifying the Provider
-- "I am calling about Pedro Gomez, a 5-year-old male, postoperative day [X] for ORIF of left forearm compound fracture. He has developed a temperature of [value] and a red macular rash on his trunk. His parent reports he was recently exposed to varicella. I suspect chickenpox. I am requesting orders for isolation precautions, antipyretic therapy, and evaluation."
-
-### Initiating Isolation Precautions
-1. Notify charge nurse to arrange transfer to negative pressure room
-2. Place airborne + contact precaution signage on door
-3. Don N95 respirator before re-entering room
-4. Don gown and gloves for all patient contact
-5. Notify infection control
-
-### Administering Acetaminophen
-1. Verify order — confirm it is acetaminophen, NOT aspirin or salicylate-containing product
-2. Verify the 5 Rights
-3. Administer per order
-4. Educate parent on why aspirin is never given to children with varicella
-
-### Parent Education
-- "We believe Pedro may have chickenpox. We are moving him to a special room to protect other patients."
-- "He will receive Tylenol for his fever — it is very important that he does NOT receive aspirin."
-- Explain isolation procedures; reassure parent they can remain with Pedro
+### Therapeutic Communication with 5-Year-Old
+- "Pedro, this medicine will make your fever go away and help you feel better."
+- "The spots are itchy, I know. We're going to give you something to help with that."
+- "You need to stay in this special room for a little while so we can keep you and other kids safe."
+- Distraction: coloring books, tablet/phone, stuffed animals, age-appropriate videos
 
 ---
 
-## 📋 POST-SIMULATION Q&A
+## 📋 POST-SIMULATION QUESTIONS & ANSWERS
 
-### Q1. What nursing diagnoses apply to Pedro Gomez?
+### Q1. What type of isolation is required for varicella?
+**Airborne + Contact precautions.** Varicella is transmitted by airborne respiratory droplets AND direct contact. N95 respirator required; negative pressure private room; gown and gloves.
 
-1. **Acute Pain** r/t compound fracture of left forearm and surgical repair — AEB pain score on FACES scale, guarding
-2. **Risk for Infection** r/t open surgical wound (compound fracture) and varicella skin lesions
-3. **Hyperthermia** r/t varicella infection — AEB elevated temperature and macular rash
-4. **Impaired Skin Integrity** r/t varicella vesicular lesions and pruritus
-5. **Risk for Injury (Reye's Syndrome)** r/t varicella diagnosis and potential aspirin administration error
-6. **Deficient Knowledge (Parent)** r/t varicella transmission, home management, and medication safety
+### Q2. Why is acetaminophen used instead of aspirin for fever in varicella?
+**Risk of Reye's syndrome** — aspirin use during viral illnesses (especially varicella and influenza) in children is associated with this rare but life-threatening condition causing liver and brain damage.
 
----
-
-### Q2. What are the signs of compartment syndrome, and why is it a surgical emergency?
-
-Compartment syndrome occurs when pressure within a closed muscle compartment rises, compromising circulation and nerve function. It is a **time-critical emergency** — permanent nerve and muscle damage can occur within **6–8 hours** if untreated.
-
-**Signs (6 P's):**
-- **Pain** — severe, disproportionate to injury; NOT relieved by opioids
-- **Pressure** — tense, woody firmness of the compartment on palpation
-- **Paresthesia** — tingling, numbness in fingers
-- **Paralysis** — inability to move fingers (late sign)
-- **Pallor** — pale, cool extremity
-- **Pulselessness** — absent distal pulse (very late sign)
-
-**Nursing action:** Notify provider IMMEDIATELY; loosen any constrictive bandages or cast; prepare for emergency fasciotomy.
+### Q3. When is Pedro no longer contagious?
+When **all lesions have crusted over** — typically 5–7 days after the rash first appears. Not contagious based on the number of days since symptom onset, but specifically when all active lesions have crusted.
 
 ---
 
-### Q3. How does varicella-zoster virus cause chickenpox and later shingles?
+## 💊 MEDICATION REVIEW
 
-**Primary infection (varicella/chickenpox):**
-- First exposure to VZV → characteristic vesicular rash, fever, malaise
-- Immune system clears the active infection but the virus is **not eliminated**
-
-**Latency:**
-- VZV travels along sensory nerve fibers → lies **dormant in dorsal root ganglia** indefinitely
-
-**Reactivation (herpes zoster/shingles):**
-- Occurs when host immunity declines (aging, immunosuppression, stress)
-- Virus reactivates in a single dermatome → produces a painful, unilateral vesicular rash following that dermatome's distribution
-- Postherpetic neuralgia (persistent severe pain) is a common complication in older adults
+### Acetaminophen (Tylenol) — Pediatric
+| Category | Details |
+|---|---|
+| **Classification** | Analgesic/Antipyretic |
+| **Mechanism** | Inhibits prostaglandin synthesis in CNS; reduces fever and pain |
+| **Pediatric dose** | 10–15 mg/kg/dose q4–6h (max 75 mg/kg/day) |
+| **Indication** | Fever and pain in varicella; postoperative pain |
+| **Note** | Safe in varicella; NO aspirin, NO ibuprofen (Reye's risk) |
 
 ---
 
-## 📞 SBAR
+## 🏥 PRIORITY NURSING DIAGNOSES
 
-**S:** "I am calling about Pedro Gomez, a 5-year-old Hispanic male, postoperative day [X] following ORIF of a left forearm compound fracture. He has developed a fever of [temperature] and a red macular rash on his trunk. I am concerned he has varicella."
-
-**B:** "Pedro was admitted after a playground fall resulting in a compound fracture of the left forearm. He underwent surgical repair. His parent reports that he was recently exposed to a child with chickenpox approximately [X] days ago. He now has fever and a rash consistent with the early stages of varicella."
-
-**A:** "His postoperative neurovascular assessment is intact — capillary refill less than 2 seconds, radial pulse present, no paresthesia. His FACES pain score is [value]. I have not administered any aspirin-containing products. I am preparing to initiate airborne and contact isolation precautions."
-
-**R:** "I am requesting orders to confirm varicella diagnosis, initiate airborne and contact isolation, administer acetaminophen for fever, and evaluate whether antiviral therapy (acyclovir) is indicated. I am also requesting a negative pressure room assignment."
+1. **Impaired Skin Integrity** r/t varicella rash and pruritus — AEB: macular-vesicular rash, scratching behavior
+2. **Risk for Infection** r/t scratching lesions → secondary bacterial skin infection
+3. **Hyperthermia** r/t varicella infection — AEB: fever, warm skin
+4. **Acute Pain** r/t compound fracture and surgical site — AEB: pain rating, guarding
+5. **Deficient Knowledge (Parent)** r/t varicella management, isolation, and medication safety
 
 ---
 
 ## 📚 REFERENCES
 
-- Hockenberry, M. J., Rodgers, C. C., & Wilson, D. (2022). *Wong's essentials of pediatric nursing* (11th ed.). Elsevier.
-- Centers for Disease Control and Prevention. (2021). *Varicella (chickenpox): Transmission*. https://www.cdc.gov/chickenpox/transmission.html
-- American Academy of Pediatrics. (2021). *Red book: 2021–2024 report of the Committee on Infectious Diseases* (32nd ed.). American Academy of Pediatrics.
+- Hockenberry, M. J., Wilson, D., & Rodgers, C. C. (2022). *Wong's essentials of pediatric nursing* (11th ed.). Elsevier.
+- Centers for Disease Control and Prevention. (2023). *Varicella (chickenpox)*. https://www.cdc.gov/chickenpox
 - Vallerand, A. H., & Sanoski, C. A. (2021). *Davis's drug guide for nurses* (17th ed.). F.A. Davis.
 
 ---
 
-*Study guide compiled from Elsevier SLS PED-02: Pedro Gomez — Compound Fracture/Varicella*
+*Study guide compiled from Elsevier SLS PED-02: Pedro Gomez — Compound Fracture / Varicella*

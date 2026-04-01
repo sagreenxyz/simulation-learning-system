@@ -1,4 +1,4 @@
-# Johnny Parker — SLS Pediatric Nursing Study Guide
+# Johnny Parker — SLS Nursing Study Guide
 ## PED-01: Acetaminophen Poisoning
 
 ---
@@ -10,273 +10,204 @@
 | **Name** | Johnny Parker |
 | **Age** | 2 years old |
 | **Gender** | Male |
-| **Race / Culture** | Caucasian-American |
-| **MRN** | 3302891 |
-| **Weight** | 28 lbs (12.7 kg) |
-| **Height** | 34 inches |
-| **Scenario** | PED-01 |
 | **Primary Diagnosis** | Unintentional acetaminophen poisoning |
-| **Chief Complaint** | Toddler ingested unknown quantity of liquid children's acetaminophen |
-| **Admission** | Brought to ED by parent after discovering open acetaminophen bottle; admitted for monitoring and antidote therapy |
-| **Scenario Focus** | NG-tube replacement, placement verification, N-acetylcysteine administration, toddler developmental considerations |
+| **Scenario Focus** | Patient has removed his NG-tube; must be replaced and N-acetylcysteine administered |
+| **Setting** | Pediatric inpatient unit |
+| **Key Challenge** | Toddler patient pulled out NG-tube; replace and administer antidote |
 
 ---
 
 ## 💊 Medications
 
-| Medication | Class | Route | Purpose |
+| Medication | Class | Route | Details |
 |---|---|---|---|
-| **N-Acetylcysteine (Mucomyst, Acetadote)** | Antidote / mucolytic | NG tube / IV | Replenishes glutathione; prevents hepatotoxicity from acetaminophen overdose |
-| **Ondansetron (Zofran)** | Antiemetic | IV | Controls nausea and vomiting during antidote therapy |
-| **IV Fluids (D5W or NS)** | Isotonic crystalloid | IV | Hydration maintenance; used as N-acetylcysteine diluent (IV formulation) |
-| **Acetaminophen level (lab draw)** | Diagnostic | Serum | Plotted on Rumack-Matthew nomogram to determine treatment need |
+| **N-Acetylcysteine (NAC, Mucomyst)** | Antidote — acetaminophen toxicity | NG tube or IV | Replenishes glutathione → prevents hepatotoxicity |
+| **Activated charcoal** | GI decontaminant | PO/NG | May be given within 1–4 hours of ingestion; absorbs remaining drug |
+| **IV fluids** | Supportive | IV | Hydration; hepatic support |
 
 ---
 
-## 🔑 The Big Picture — What This Case Is Really About
-
-This scenario has **four core themes**:
-
-1. **Toxicological emergency in a toddler** — understanding acetaminophen metabolism and the antidote mechanism of N-acetylcysteine
-2. **NG-tube management in a pediatric patient** — insertion, verification of placement, and securing the tube in an uncooperative 2-year-old
-3. **Toddler developmental considerations** — 2-year-olds are in the autonomy vs. shame/doubt stage (Erikson); they pull at tubes, resist restraint, and require age-appropriate communication
-4. **Parent/caregiver partnership** — the nurse must educate and involve the parent while managing the acutely ill child
-
-The clinical context:
+## 🔑 The Big Picture
 
 ```
-Toddler ingests unknown amount of children's acetaminophen
+Toddler ingests unknown amount of liquid children's acetaminophen
         ↓
-Acetaminophen overwhelms normal metabolism pathways
+Admitted for monitoring and antidote treatment
         ↓
-Toxic metabolite NAPQI accumulates → depletes glutathione
+N-acetylcysteine (NAC) infusion/administration via NG tube ordered
         ↓
-Hepatocellular necrosis (if untreated) → acute liver failure
+Johnny PULLS OUT his NG tube (common toddler behavior)
         ↓
-Rumack-Matthew nomogram used to determine treatment threshold
-        ↓
-N-acetylcysteine (NAC) given via NG tube → replenishes glutathione
-        ↓
-Nurse: assess → replace NG tube → verify placement → administer NAC → document → educate parent
+Nurse: Assess patient → Replace NG tube → Verify placement → Resume NAC
 ```
+
+**Acetaminophen toxicity pathophysiology:**
+- Therapeutic doses metabolized safely by the liver
+- Toxic doses overwhelm normal pathways → production of **NAPQI** (toxic metabolite)
+- NAPQI depletes hepatic **glutathione** → oxidative damage to hepatocytes
+- Leads to **hepatic necrosis** (peaks at 72–96 hours) → liver failure
+- **NAC** replenishes glutathione and directly detoxifies NAPQI → prevents liver failure if given early
 
 ---
 
 ## 📝 PRE-SIMULATION QUESTIONS & ANSWERS
 
-### Q1. What is the mechanism by which acetaminophen causes liver toxicity, and how does N-acetylcysteine prevent it?
+### Q1. What is acetaminophen toxicity and why is it dangerous in children?
 
-**Normal acetaminophen metabolism:**
-- ~90% is metabolized via glucuronidation and sulfation (safe, non-toxic conjugates)
-- ~5–10% is metabolized via CYP2E1 into **NAPQI** (N-acetyl-p-benzoquinone imine), a highly reactive toxic metabolite
-- Under normal circumstances, NAPQI is rapidly detoxified by **glutathione** in hepatocytes → forms a safe mercapturate conjugate → excreted in urine
+- Acetaminophen (Tylenol) is the leading cause of acute liver failure in the United States
+- Toxicity occurs from a single large overdose OR repeated supratherapeutic doses
+- **Toxic dose in children:** > 150 mg/kg (single ingestion)
+- Children's liquid formulations are highly concentrated — small volumes can be toxic
+- Parents may not realize how much a toddler ingested (unsupervised access)
+- The liver's capacity to safely metabolize acetaminophen is overwhelmed → NAPQI accumulates
 
-**In overdose:**
-1. Glucuronidation and sulfation pathways become **saturated**
-2. More acetaminophen is shunted to CYP2E1 → **excessive NAPQI production**
-3. Glutathione stores are **depleted**
-4. Undetoxified NAPQI covalently binds hepatocyte proteins → **oxidative damage** → hepatocellular necrosis
+**Stages of Acetaminophen Toxicity:**
 
-**How N-acetylcysteine (NAC) works:**
-- NAC is a **precursor to glutathione** — it provides cysteine, the rate-limiting substrate for glutathione synthesis
-- Replenishes hepatic glutathione → NAPQI is again detoxified
-- NAC is most effective within **8–10 hours** of ingestion but is given up to 24 hours and beyond in severe cases
-- Oral/NG route: standard 72-hour protocol (loading dose + maintenance doses)
-- IV route: 21-hour protocol (used if oral route not tolerated)
-
----
-
-### Q2. What is the Rumack-Matthew nomogram and how is it used?
-
-The **Rumack-Matthew nomogram** is a clinical tool used to predict the risk of hepatotoxicity after a single acute acetaminophen ingestion.
-
-**How to use it:**
-1. Know the **time of ingestion** (or estimated time)
-2. Draw a **serum acetaminophen level** at 4 hours post-ingestion (earliest reliable timepoint) or later
-3. Plot the serum level against the time post-ingestion on the nomogram
-4. The nomogram has two lines:
-   - **Treatment line** (150 mcg/mL at 4 hours): if level plots above this line → treat with NAC
-   - **Possible risk line** (200 mcg/mL at 4 hours): higher risk zone
-5. If level plots **above the treatment line** → administer NAC immediately
-
-**Important limitations:**
-- Only valid for **single acute ingestions**, not chronic/repeated overdose
-- Not reliable if ingestion time is unknown (treat empirically with NAC)
-- Children metabolize acetaminophen slightly differently but the nomogram applies
-
-**In Johnny's case:**
-- Parent found the open bottle; exact amount ingested is unknown
-- Serum acetaminophen level must be drawn → compared to nomogram → NAC treatment initiated based on result
-
----
-
-### Q3. Describe NG-tube insertion and placement verification in a 2-year-old.
-
-**Purpose of NG tube in this scenario:**
-- Administer oral NAC (Mucomyst) — has extremely bitter taste that most toddlers will refuse to drink voluntarily
-- The 72-hour oral NAC protocol requires multiple doses; NG tube ensures reliable delivery
-
-**Measuring NG tube length (NEX method):**
-- Measure from **Nose → Earlobe → Xiphoid process**
-- Mark this length on the tube before insertion
-
-**Insertion technique in a toddler:**
-- Two-nurse technique: one nurse inserts, one holds and comforts child
-- Have parent present to soothe the child (if parent is able)
-- Lubricate tip with water-soluble lubricant
-- Insert through one naris, aim toward the back of the throat, advance gently
-- Ask child to swallow (if developmentally able); use a pacifier dipped in sucrose to stimulate swallowing
-- Advance to measured mark
-
-**Placement verification (gold standard = X-ray):**
-- **Radiograph** — gold standard for initial placement confirmation; visualize tube tip in stomach
-- **pH testing** — aspirate gastric contents; pH ≤ 5.5 indicates gastric placement (most reliable bedside method)
-- **CO2 detection** — colorimetric device; color change indicates respiratory placement (immediate removal required)
-- **Auscultation (air bolus)** — NOT recommended as sole verification method; unreliable
-
-**Securing the tube:**
-- Use hydrocolloid skin barrier (Duoderm) on skin before applying tape — protects delicate toddler skin
-- Secure tube firmly — a 2-year-old WILL attempt to remove it again
-
----
-
-### Q4. What are the developmental considerations for a 2-year-old hospitalized patient?
-
-**Erikson's Stage: Autonomy vs. Shame and Doubt (18 months – 3 years)**
-- Toddlers are developing a sense of control and independence
-- Hospitalization and invasive procedures threaten this autonomy → **protest, withdrawal, despair** (Robertson's stages of separation anxiety)
-- Expect: crying, biting, hitting, pulling at tubes and lines — this is developmentally NORMAL
-
-**Communication strategies:**
-- Use **simple, short sentences** — "This will help your tummy feel better"
-- Avoid giving choices that aren't real — only offer choices when both options are acceptable ("Do you want to sit up or lie down?")
-- Allow the child to hold a comfort object (stuffed animal, blanket)
-- Involve parents in ALL care — parental presence reduces distress significantly
-- Use therapeutic play when possible (let child "examine" a stuffed animal)
-
-**Pain assessment tools for a 2-year-old:**
-- **FLACC scale** (Face, Legs, Activity, Cry, Consolability) — behavioral pain scale for non-verbal children
-- Observe for behavioral cues: facial grimacing, guarding, inconsolable crying, withdrawal
-
-**Safety priorities:**
-- Keep side rails up at all times
-- Use minimum restraint necessary only when essential for safety (e.g., during tube insertion)
-- Never leave toddler unattended on the exam table
-
----
-
-### Q5. What are the four phases of acetaminophen toxicity?
-
-| Phase | Timeframe | Signs & Symptoms |
+| Stage | Timing | Signs/Symptoms |
 |---|---|---|
-| **Phase I** | 0–24 hours post-ingestion | Nausea, vomiting, malaise, pallor, diaphoresis; liver enzymes may be normal |
-| **Phase II** | 24–72 hours | Right upper quadrant pain, elevated AST/ALT, possible oliguria; clinical improvement in symptoms but labs worsen |
-| **Phase III** | 72–96 hours | Peak hepatotoxicity — jaundice, coagulopathy (elevated PT/INR), hypoglycemia, encephalopathy, acute liver failure |
-| **Phase IV** | 4 days–2 weeks | Recovery phase — complete hepatic regeneration if survived Phase III, OR death from multi-organ failure |
+| **Stage 1** | 0–24 hours | Nausea, vomiting, malaise, pallor; LFTs may be normal |
+| **Stage 2** | 24–72 hours | RUQ abdominal pain; LFTs begin rising; possible oliguria |
+| **Stage 3** | 72–96 hours | Peak hepatotoxicity; jaundice; coagulopathy; possible liver failure |
+| **Stage 4** | 4 days–2 weeks | Recovery (if treated) OR progressive liver failure → death |
 
-**Key labs to monitor:**
-- Serum acetaminophen level (for nomogram)
-- AST, ALT (liver enzymes) — rise indicates hepatocellular damage
-- PT/INR — coagulopathy = poor prognostic sign
-- Serum creatinine/BUN — renal involvement possible
-- Blood glucose — hypoglycemia with severe hepatic failure
-- Bilirubin — rises with hepatocellular necrosis
+---
+
+### Q2. What is N-Acetylcysteine (NAC) and how does it work?
+
+- **Antidote** for acetaminophen toxicity
+- **Mechanism:** Replenishes hepatic glutathione (needed to safely break down NAPQI); also directly conjugates NAPQI; has antioxidant and anti-inflammatory properties
+- **Most effective:** Given within **8–10 hours of ingestion** — 100% protective if early
+- Still beneficial up to 24 hours; may help even after 24 hours in severe toxicity
+- **Routes:** IV (Acetadote) or oral/NG (Mucomyst — has sulfur odor; may cause N/V)
+- **Dosing:** Loading dose followed by maintenance doses (Rumack protocol or per order)
+
+---
+
+### Q3. How does the nurse replace an NG tube in a toddler?
+
+**Key steps:**
+1. Gather equipment: appropriate-sized NG tube (5–8 French for toddler), lubricant, tape, pH paper or CO2 colorimetric detector, stethoscope, syringe
+2. **Explain to caregiver** using developmentally appropriate terms; involve caregiver in soothing
+3. Measure tube length: **tip of nose → earlobe → xiphoid process** (NEX measurement)
+4. Mark the measurement on the tube
+5. Lubricate tip with water-soluble lubricant
+6. Have caregiver comfort/hold child; may need second nurse to assist with positioning
+7. Insert through nostril, directing posteriorly (NOT upward)
+8. Advance while encouraging the child to swallow (older children) or during natural swallowing
+9. **Verify placement:**
+   - **Gold standard:** Chest/abdominal X-ray confirmation
+   - **Bedside:** Aspirate gastric contents; check pH (gastric pH < 5 = correct placement)
+   - **CO2 detector:** No CO2 = gastric; CO2 detected = trachea (REMOVE IMMEDIATELY)
+   - Auscultation ("whoosh" method) — NOT reliable alone
+10. Secure tube with tape at nostril and cheek
+11. Document placement verification and tube length at naris
+12. Resume NAC per order
+
+**Critical safety note:** NEVER administer anything through NG tube until placement is confirmed by X-ray or acceptable bedside method.
+
+---
+
+### Q4. What are the developmental considerations for a 2-year-old patient?
+
+**Toddler (18 months–3 years) Development:**
+- **Autonomy vs. shame and doubt** (Erikson) — toddlers assert independence; expect resistance
+- **Preoperational stage** (Piaget) — no abstract thinking; understands only concrete, simple language
+- **Separation anxiety** — parent/caregiver presence is critical for safety and comfort
+- **Pulling tubes/lines** — toddlers cannot understand the importance of medical devices; will pull them out
+
+**Nursing Strategies:**
+- Keep explanations simple and brief: "I need to put a small tube in your nose to give you medicine to help your tummy feel better"
+- Use distraction: bubbles, music, favorite toy, video on phone
+- Allow caregiver to hold and comfort
+- Work quickly and efficiently — prolonged restraint increases distress
+- Consider comfort positioning: swaddling, caregiver hold ("football hold")
+- Praise immediately after: "You were so brave!"
+- Address caregiver guilt — parents often feel guilty about accidental poisoning; provide nonjudgmental support
+
+---
+
+### Q5. What safety education should be provided to the family?
+
+1. **Medication storage:** Keep ALL medications in childproof containers, out of reach, and out of sight
+2. **Lock medications:** Use a locked cabinet; toddlers are natural climbers
+3. **Proper dosing:** Use the weight-based dose chart; NEVER guess; use provided dosing syringe
+4. **One acetaminophen product at a time:** Many combination products contain acetaminophen — risk of double-dosing
+5. **Poison Control:** Program 1-800-222-1222 into phone; call immediately if accidental ingestion suspected
+6. **Do NOT induce vomiting** without guidance from Poison Control or provider
+7. **Keep original containers** — helps identify what was ingested and how much
 
 ---
 
 ## 🏥 DURING THE SIMULATION — What to Do & Say
 
 ### On Entry
-1. Perform hand hygiene
-2. Introduce yourself — address parent by name: "Hi, I'm [name], Johnny's nurse"
-3. Verify patient identity (two identifiers — name band + verbal confirmation from parent)
-4. Perform SWIPE safety assessment
-5. Assess Johnny using FLACC scale; note that NG tube has been removed
+Johnny has pulled out his NG tube. He will likely be distressed, crying, and resistant.
 
-### Recognizing the Removed NG Tube
-1. Observe that NG tube is no longer in place (tube may be dangling or absent)
-2. Do NOT attempt to re-administer NAC orally without provider confirmation
-3. Notify the provider: "Johnny's NG tube has been removed; NAC dose is due — requesting order to replace NG tube"
-4. Gather equipment for NG tube insertion
+1. **Calm assessment first** — is he in distress? Breathing? Vomiting?
+2. **Assess abdomen** — RUQ tenderness? Distension?
+3. **Check IV access** — patent and functional
+4. **Notify provider** — NG tube was removed; need to replace to resume NAC
+5. **Gather equipment** for NG tube replacement
+6. **Involve parent/caregiver** — have them at bedside for comfort
 
-### NG Tube Insertion Steps
-1. Gather supplies: appropriate size NG tube (8–10 Fr for toddler), lubricant, pH strips or colorimetric CO2 detector, tape/hydrocolloid barrier, syringe, stethoscope
-2. Measure tube using NEX method; mark with tape
-3. Explain procedure to parent; invite parent to hold/comfort Johnny
-4. Insert tube per technique; advance to marked length
-5. Secure tube with hydrocolloid skin barrier + tape
+### Therapeutic Communication with Parent
+- "Children this age often pull at anything that bothers them — this is very common."
+- "I know this is scary to watch. Would you like to hold his hands and talk to him? Your voice will calm him."
+- "The medicine we're giving through this tube is very important to protect his liver."
+- "You made the right call coming to the hospital right away."
 
-### Placement Verification Steps
-1. Aspirate gastric contents with syringe; test pH (≤ 5.5 = gastric)
-2. Obtain X-ray confirmation per facility policy (especially for initial insertion)
-3. Confirm placement with provider or radiologist before administering medication
-4. Document: tube size, naris used, NEX measurement, verification method, confirmation result
-
-### Administering N-Acetylcysteine
-1. Verify the 5 Rights: Right patient, Right drug, Right dose, Right route, Right time
-2. Prepare NAC per order (oral Mucomyst may be diluted in juice to mask taste — per protocol)
-3. Administer slowly via NG tube
-4. Flush tube with water after administration per protocol
-5. Document administration in EHR: time, dose, route, patient response
-
-### Parent Education
-- Reassure parent: "We're treating Johnny with a medication called N-acetylcysteine that protects his liver"
-- Educate on acetaminophen safety: "All medications, including children's medicines, should be stored in a locked cabinet out of reach"
-- Encourage parent participation in comforting Johnny during procedures
+### After NG Tube Replacement
+1. Verify placement (X-ray or bedside pH confirmation)
+2. Resume NAC per order
+3. Monitor for NAC side effects: nausea, vomiting, flushing (especially with IV NAC)
+4. Monitor LFTs, INR, BUN/Cr per order
+5. Document time of tube replacement, confirmation method, and NAC restart
 
 ---
 
-## 📋 POST-SIMULATION Q&A
+## 📋 POST-SIMULATION QUESTIONS & ANSWERS
 
-### Q1. What nursing diagnoses apply to Johnny Parker?
+### Q1. Priority action when NG tube placement is in question:
+**Obtain an X-ray** — only X-ray provides definitive confirmation. Do NOT administer anything through the tube until confirmed.
 
-1. **Risk for Injury (hepatotoxicity)** r/t acetaminophen overdose and toxic NAPQI accumulation
-2. **Ineffective Health Maintenance** r/t caregiver's inability to safely store medications — AEB unsupervised toddler access to acetaminophen
-3. **Anxiety (Parent)** r/t sudden hospitalization of toddler and fear of serious harm
-4. **Risk for Aspiration** r/t NG tube displacement and administration of enteral medication
-5. **Impaired Comfort** r/t invasive procedures (NG tube insertion) and hospitalization
+### Q2. What confirms NG tube is in the trachea rather than stomach?
+CO2 detected on colorimetric detector; absent gastric aspirate; breath sounds heard when flushing tube. If tracheal placement suspected → remove immediately → patient may aspirate.
 
----
-
-### Q2. What are the signs that NAC therapy is working?
-
-- Liver enzyme levels (AST/ALT) stabilize and begin to trend downward
-- PT/INR remains within normal limits (no coagulopathy developing)
-- No progression to Phase III hepatotoxicity signs (no jaundice, encephalopathy, or coagulopathy)
-- Serum acetaminophen level falls below the treatment line on the nomogram
-- Patient's clinical status remains stable: alert, urine output adequate, no new symptoms
+### Q3. Why is early NAC administration so critical?
+NAC is most effective within 8–10 hours of ingestion. After this window, hepatic damage may be irreversible. Early administration can prevent liver failure entirely.
 
 ---
 
-### Q3. What poison prevention education should be provided to Johnny's parent before discharge?
+## 💊 MEDICATION REVIEW
 
-- Store **all medications** (including over-the-counter children's medications) in a locked cabinet or out of reach and sight of young children
-- Never refer to medication as "candy" to encourage a child to take it
-- Keep the **Poison Control Center number** accessible: **1-800-222-1222** (US)
-- Read all labels carefully; do not double-dose acetaminophen products (many combination products contain acetaminophen)
-- Discard unused medications safely through drug take-back programs
-- Know the symptoms of overdose: vomiting, pallor, lethargy — seek emergency care immediately
+### N-Acetylcysteine (NAC / Mucomyst / Acetadote)
+| Category | Details |
+|---|---|
+| **Classification** | Antidote; mucolytic |
+| **Mechanism** | Replenishes hepatic glutathione → detoxifies NAPQI (toxic acetaminophen metabolite) |
+| **Indication** | Acetaminophen toxicity |
+| **Routes** | IV (Acetadote) or NG/oral (Mucomyst — sulfur odor) |
+| **Timing** | Most effective within 8–10 hours of ingestion; still given beyond 10 hours |
+| **Adverse effects** | N/V (especially oral), flushing, bronchospasm (IV — anaphylactoid reaction) |
+| **Nursing precautions** | Confirm NG placement before administration; monitor LFTs and INR; have antihistamine available for anaphylactoid reactions (IV NAC) |
 
 ---
 
-## 📞 SBAR
+## 🏥 PRIORITY NURSING DIAGNOSES
 
-**S:** "I am calling about Johnny Parker, a 2-year-old male admitted for unintentional acetaminophen poisoning. He has pulled out his NG tube, and his next N-acetylcysteine dose is due."
-
-**B:** "Johnny was admitted after ingesting an unknown quantity of liquid children's acetaminophen. His serum acetaminophen level was above the treatment line on the Rumack-Matthew nomogram. He was started on the 72-hour oral NAC protocol via NG tube. He is currently in Phase I — he has been tolerating the treatment but has just removed his NG tube."
-
-**A:** "I have assessed his abdomen and he appears stable. The NG tube is no longer in place. His FLACC score is [value]. His last NAC dose was at [time]. His next dose is due in [time]."
-
-**R:** "I am requesting an order to reinsert the NG tube so that I can administer his next NAC dose on schedule. I will verify placement by pH testing and X-ray prior to administration."
+1. **Risk for Injury (Hepatotoxicity)** r/t acetaminophen toxicity — AEB: known ingestion; LFTs monitored
+2. **Impaired Tissue Integrity (Potential)** r/t liver cell damage from NAPQI accumulation
+3. **Risk for Aspiration** r/t NG tube replacement in combative toddler
+4. **Parental Anxiety** r/t child's accidental poisoning and hospitalization
+5. **Deficient Knowledge (Parent)** r/t medication storage safety and prevention
 
 ---
 
 ## 📚 REFERENCES
 
-- Hockenberry, M. J., Rodgers, C. C., & Wilson, D. (2022). *Wong's essentials of pediatric nursing* (11th ed.). Elsevier.
-- Burchum, J. R., & Rosenthal, L. D. (2022). *Lehne's pharmacology for nursing care* (11th ed.). Elsevier.
-- Rumack, B. H., & Matthew, H. (1975). Acetaminophen poisoning and toxicity. *Pediatrics, 55*(6), 871–876.
+- Hockenberry, M. J., Wilson, D., & Rodgers, C. C. (2022). *Wong's essentials of pediatric nursing* (11th ed.). Elsevier.
 - Vallerand, A. H., & Sanoski, C. A. (2021). *Davis's drug guide for nurses* (17th ed.). F.A. Davis.
+- American Academy of Pediatrics. (2020). Acetaminophen safety. *Pediatrics*.
 
 ---
 

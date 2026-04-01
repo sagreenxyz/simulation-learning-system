@@ -1,4 +1,4 @@
-# Emilia Garcia — SLS Pediatric Nursing Study Guide
+# Emilia Garcia — SLS Nursing Study Guide
 ## PED-03: Asthma, Impaired Gas Exchange
 
 ---
@@ -10,323 +10,222 @@
 | **Name** | Emilia Garcia |
 | **Age** | 9 years old |
 | **Gender** | Female |
-| **Race / Culture** | Hispanic/Latina-American |
-| **MRN** | 5523047 |
-| **Weight** | 65 lbs (29.5 kg) |
-| **Height** | 52 inches |
-| **Scenario** | PED-03 |
-| **Primary Diagnosis** | Acute asthma exacerbation |
-| **Chief Complaint** | Shortness of breath, wheezing, chest tightness following exposure to pet dander |
-| **Admission** | Brought to clinic/ED by parent after developing dyspnea and wheezing at a friend's home where cats were present |
-| **Scenario Focus** | Recognition of asthma exacerbation, supplemental oxygen administration, nebulizer treatment, peak flow assessment, asthma education |
+| **Primary Diagnosis** | Acute asthma exacerbation related to pet dander exposure |
+| **Setting** | Pediatric inpatient unit |
+| **Key Challenge** | Recognize asthma exacerbation; provide O2; administer nebulizer treatment |
 
 ---
 
 ## 💊 Medications
 
-| Medication | Class | Route | Purpose |
+| Medication | Class | Route | Details |
 |---|---|---|---|
-| **Albuterol (ProAir, Ventolin)** | Short-acting beta-2 agonist (SABA) / bronchodilator | Nebulizer / MDI | First-line bronchodilator — relaxes bronchial smooth muscle to relieve bronchospasm |
-| **Ipratropium bromide (Atrovent)** | Short-acting anticholinergic | Nebulizer | Adjunct bronchodilator — blocks muscarinic receptors; reduces mucus secretion and bronchoconstriction |
-| **Prednisone / Prednisolone** | Systemic corticosteroid | PO | Reduces airway inflammation; used in moderate-to-severe exacerbations |
-| **Budesonide (Pulmicort)** | Inhaled corticosteroid (ICS) | Nebulizer | Maintenance anti-inflammatory therapy (long-term control, not rescue) |
-| **Supplemental Oxygen** | Therapeutic gas | Nasal cannula / mask | Corrects hypoxemia during acute exacerbation; target SpO2 ≥ 95% |
-| **Montelukast (Singulair)** | Leukotriene receptor antagonist | PO | Long-term controller medication — reduces airway inflammation and hypersensitivity |
+| **Albuterol (Proventil, Ventolin)** | SABA bronchodilator | Nebulizer | First-line acute bronchospasm treatment |
+| **Ipratropium (Atrovent)** | Anticholinergic bronchodilator | Nebulizer (DuoNeb combined) | Adjunct bronchodilation in acute exacerbation |
+| **Prednisone/Prednisolone** | Corticosteroid | PO | Reduces airway inflammation |
+| **Oxygen** | Supportive | Nasal cannula or mask | Maintain SpO2 ≥ 94% |
+| **Magnesium sulfate** | Smooth muscle relaxant | IV | Severe exacerbation refractory to first-line treatment |
 
 ---
 
-## 🔑 The Big Picture — What This Case Is Really About
-
-This scenario has **four core themes**:
-
-1. **Asthma pathophysiology** — understanding the triad of bronchospasm, airway inflammation, and mucus hypersecretion that drives acute exacerbation
-2. **Acute exacerbation recognition** — identifying severity using clinical signs, SpO2, and peak flow measurement
-3. **Nebulizer treatment administration** — correct technique and sequence of medications; monitoring patient response
-4. **Asthma action plan and trigger education** — patient and parent education to prevent future exacerbations
-
-The clinical context:
+## 🔑 The Big Picture
 
 ```
-Pet dander exposure → allergen triggers IgE-mediated hypersensitivity response
+Emilia exposed to pet dander (allergen trigger)
         ↓
-Mast cell degranulation → release of histamine, leukotrienes, prostaglandins
+Immune response: IgE-mediated mast cell degranulation
         ↓
-Bronchial smooth muscle CONSTRICTION (bronchospasm)
-Airway INFLAMMATION and edema
-Increased MUCUS production (mucus plugging)
+Histamine + leukotrienes released → Airway inflammation + bronchospasm + mucus
         ↓
-Airway narrowing → increased airway resistance → air trapping
+Airway narrowing → Air trapping → V/Q mismatch → Hypoxemia
         ↓
-V/Q mismatch → IMPAIRED GAS EXCHANGE → hypoxemia
-        ↓
-Nurse: assess → O2 → nebulizer treatment → reassess → educate → document
+Nurse: Assess → O2 → Nebulizer albuterol → Corticosteroid → Monitor → Educate
 ```
 
 ---
 
 ## 📝 PRE-SIMULATION QUESTIONS & ANSWERS
 
-### Q1. Describe the pathophysiology of an acute asthma exacerbation.
+### Q1. What is asthma and what happens during an acute exacerbation?
 
-Asthma is a **chronic inflammatory airway disease** characterized by airway hyperresponsiveness. During an acute exacerbation, three simultaneous processes occur:
+**Asthma:** Chronic inflammatory disorder of the airways characterized by:
+- **Airway inflammation** — mast cells, eosinophils, lymphocytes
+- **Bronchospasm** — smooth muscle contraction narrows airway
+- **Mucus hypersecretion** — plugging airways
+- **Airway hyperresponsiveness** — exaggerated response to triggers
+- **Air trapping** — expiratory airflow obstruction → hyperinflation
 
-**1. Bronchospasm:**
-- Smooth muscle surrounding the bronchi contracts → **airway narrows**
-- Triggered by allergens (pet dander, dust mites, pollen), irritants (smoke, cold air), infection, or exercise
-- Produces the classic expiratory **wheeze** (turbulent airflow through narrowed airways)
-- Responsive to **bronchodilators** (albuterol)
+**Triggers (common in children):**
+- **Allergens** (pet dander, dust mites, pollen, mold) ← Emilia's trigger
+- Respiratory infections (most common trigger in children)
+- Exercise
+- Cold air
+- Cigarette smoke
+- Emotional stress
 
-**2. Airway Inflammation:**
-- IgE-mediated mast cell activation → release of histamine, leukotrienes (LTC4, LTD4), prostaglandins
-- Inflammatory mediators → vascular permeability → **mucosal edema** → further airway narrowing
-- Eosinophil infiltration → ongoing airway damage and hyperresponsiveness
-- Responds to **corticosteroids** (reduce inflammation)
+**Acute Exacerbation Severity:**
 
-**3. Mucus Hypersecretion:**
-- Goblet cell hyperplasia and submucosal gland enlargement → excessive thick mucus
-- **Mucus plugging** → air trapping distal to the plug → hyperinflation
-- Leads to the characteristic barrel chest appearance in chronic asthma
-
-**Physiological consequences:**
-- Narrowed airways → increased work of breathing → accessory muscle use, retractions
-- Air trapping → decreased tidal volume → hypercapnia (CO2 retention) in severe cases
-- V/Q mismatch → hypoxemia → tachycardia, agitation
-- In severe exacerbation: **silent chest** (no wheeze = no airflow = impending respiratory failure) is a medical emergency
+| Mild | Moderate | Severe |
+|---|---|---|
+| Some shortness of breath | Shortness of breath at rest | Severe dyspnea |
+| Speaks in sentences | Speaks in phrases | Speaks in words only |
+| SpO2 > 94% | SpO2 91–94% | SpO2 < 91% |
+| HR mild increase | Moderate tachycardia | Severe tachycardia |
+| Mild wheeze | Moderate wheeze | Loud wheeze or silent chest |
 
 ---
 
-### Q2. How is asthma exacerbation severity assessed, and what is the peak flow meter?
+### Q2. What are the signs of respiratory distress in a child?
 
-**Clinical Severity Assessment:**
+**Mild-Moderate:**
+- Increased respiratory rate
+- Nasal flaring
+- Mild intercostal retractions
+- Expiratory wheezing
+- Mild anxiety or restlessness
+- Decreased SpO2
 
-| Severity | Symptoms | SpO2 | Peak Flow | Action |
-|---|---|---|---|---|
-| **Mild** | Minor dyspnea, wheeze on exertion, speaks in sentences | ≥ 95% | ≥ 70% predicted | SABA PRN; monitor |
-| **Moderate** | Dyspnea at rest, accessory muscle use, speaks in phrases | 91–95% | 40–69% predicted | SABA q 20 min × 3; systemic corticosteroids; O2 |
-| **Severe** | Severe dyspnea, retractions, speaks in words only, cyanosis | < 91% | < 40% predicted | Continuous SABA + ipratropium; IV corticosteroids; O2; consider ICU |
-| **Impending Failure** | Silent chest, cyanosis, altered consciousness | < 88% | Unmeasurable | ICU; intubation preparation |
+**Severe (Action Required):**
+- Tripod positioning (leaning forward on hands to breathe)
+- Severe retractions (intercostal, subcostal, supraclavicular, suprasternal)
+- Accessory muscle use (sternocleidomastoid)
+- **Silent chest** — NO wheeze = air movement so poor wheezing stops = EMERGENCY
+- Cyanosis (lips, fingertips)
+- Altered level of consciousness
+- SpO2 < 90%
+
+**Pediatric Normal Respiratory Rates:**
+- Age 6–12 years: 18–30 breaths/min normal
+
+---
+
+### Q3. How is albuterol nebulizer treatment administered correctly to a child?
+
+**Nebulizer Treatment Instructions for Emilia:**
+1. Position upright — sitting or high Fowler's
+2. Place mouthpiece between lips (or mask over nose and mouth if child cannot cooperate with mouthpiece)
+3. **Breathe normally** through the mouth during treatment
+4. Continue until nebulizer stops (medication mist gone — typically 5–10 minutes)
+5. May tap nebulizer cup to ensure all medication is delivered
+
+**Key Points:**
+- Albuterol causes **tachycardia and tremor** — reassure Emilia and family this is normal
+- Wait 15–20 minutes after albuterol before giving next scheduled treatment
+- **Reassess** lung sounds and SpO2 after treatment to evaluate response
+- Document pre-treatment and post-treatment respiratory status
+
+---
+
+### Q4. What are the priorities of care for acute asthma in a child?
+
+**Priority Order:**
+1. **Assess severity** — can she speak in full sentences? Using accessory muscles? SpO2?
+2. **Position upright** — high Fowler's or tripod; maximizes lung expansion
+3. **Supplemental oxygen** — titrate to SpO2 ≥ 94%
+4. **Albuterol nebulizer** — q20 min x3 in acute phase
+5. **Notify provider** — severity assessment and medication orders
+6. **Corticosteroid** (prednisone PO or IV methylprednisolone) — reduces inflammation
+7. **Continuous monitoring** — SpO2, HR, RR, lung sounds, work of breathing
+8. **Calm and reassure** — anxiety worsens bronchoconstriction
+9. **Identify and remove trigger** — pet dander exposure; keep room free of allergens
+10. **Parent education** — action plan, trigger avoidance, inhaler technique
+
+---
+
+### Q5. What are the long-term management and prevention strategies for childhood asthma?
+
+**Daily Controller Medications (for persistent asthma):**
+- Inhaled corticosteroids (ICS) — fluticasone, budesonide — most effective daily controller
+- Long-acting beta-agonist (LABA) — salmeterol (always combined with ICS)
+- Leukotriene modifier — montelukast (Singulair) — for mild persistent
+
+**Rescue Medications:**
+- Short-acting beta-agonist (SABA) — albuterol — PRN for acute symptoms
+
+**Trigger Avoidance:**
+- Remove pets from home or bedroom (Emilia's key trigger)
+- HEPA air purifiers
+- Dust-mite proof mattress/pillow covers
+- Avoid smoke, perfumes, strong odors
+
+**Asthma Action Plan:**
+- Written plan in three zones (Green/Yellow/Red) based on symptoms or peak flow
+- Child and parent must know what to do in each zone
+- Green: daily controller meds
+- Yellow: add rescue inhaler; continue controller
+- Red: rescue inhaler + seek emergency care
 
 **Peak Flow Meter:**
-- A handheld device that measures **Peak Expiratory Flow Rate (PEFR)** — the maximum speed of forced exhalation
-- Measured in **liters per minute (L/min)**
-- Compared against the patient's **personal best** (established when asthma is well-controlled) or predicted normal for age/height
-
-**Peak Flow Zones:**
-- 🟢 **Green Zone** (≥ 80% of personal best): Good control; use maintenance medications as usual
-- 🟡 **Yellow Zone** (50–79% of personal best): Caution; use rescue inhaler; may need to contact provider
-- 🔴 **Red Zone** (< 50% of personal best): Medical alert; use rescue inhaler; contact provider or go to ER immediately
-
-**Correct peak flow technique (for Emilia at 9 years old):**
-1. Stand up straight
-2. Move the marker to zero
-3. Take a deep breath in
-4. Place mouthpiece in mouth, close lips tightly
-5. Blow out as HARD and FAST as possible (not a sustained blow — a single forceful puff)
-6. Record the number; repeat three times; use the highest reading
-
----
-
-### Q3. How is a nebulizer treatment administered, and what are the expected effects of albuterol?
-
-**Nebulizer Setup:**
-1. Gather supplies: nebulizer cup, mask (or mouthpiece), corrugated tubing, air compressor
-2. Wash hands
-3. Add medication to nebulizer cup: albuterol unit-dose vial (2.5 mg/3 mL) ± ipratropium (0.5 mg/2.5 mL) — may be combined in the same cup
-4. Attach mask or mouthpiece; connect tubing to compressor
-5. Turn on compressor — medication should mist within a few seconds
-6. Apply mask snugly over nose and mouth (or have child breathe through mouthpiece with lips sealed)
-7. Instruct child to breathe normally; deep breaths enhance deposition
-8. Treatment is complete when mist stops and cup appears dry (~10–15 minutes)
-9. Tap cup midway through to dislodge droplets on walls
-
-**Expected effects of albuterol (within 5–15 minutes):**
-- Bronchospasm relief → decreased wheezing
-- Improved airflow → decreased respiratory rate and work of breathing
-- SpO2 improvement
-- Decreased accessory muscle use and retractions
-
-**Side effects of albuterol:**
-- **Tachycardia** — beta-2 receptors also have some beta-1 activity
-- **Tremor** — skeletal muscle beta-2 receptor stimulation
-- Hypokalemia (with repeated/high doses) — monitor potassium in severe exacerbations
-- Nervousness, palpitations
-
-**Nursing monitoring during and after nebulizer treatment:**
-- SpO2 continuously
-- Respiratory rate, heart rate, work of breathing
-- Auscultate lung sounds before and after treatment (compare wheeze intensity, air entry)
-- Ask Emilia: "Does your chest feel better? Any easier to breathe?"
-
----
-
-### Q4. What are common asthma triggers and how should Emilia's asthma action plan be structured?
-
-**Common Asthma Triggers:**
-
-| Category | Examples |
-|---|---|
-| **Allergens** | Pet dander (cats, dogs), dust mites, cockroach droppings, mold, pollen |
-| **Irritants** | Cigarette smoke, wood smoke, air pollution, strong odors (perfumes, cleaning products), cold air |
-| **Infections** | Viral upper respiratory infections (most common trigger in children), rhinovirus |
-| **Exercise** | Exercise-induced bronchospasm (especially in cold, dry air) |
-| **Emotions** | Crying, laughing, stress |
-| **Medications** | Aspirin, NSAIDs, beta-blockers (rare in children) |
-
-**Emilia's trigger:** Pet dander (cat exposure at a friend's home)
-
-**Asthma Action Plan Structure (Written Action Plan — national standard):**
-Every child with asthma should have a personalized **written asthma action plan** provided by their provider. It includes:
-
-1. **Green Zone instructions:** Daily controller medications (ICS, montelukast); maintain normal activities
-2. **Yellow Zone instructions:** Add rescue albuterol; contact provider if not improving within 20–30 minutes; possible oral corticosteroid
-3. **Red Zone instructions:** Use albuterol immediately; call provider/go to ED; do NOT wait
-
-**Trigger avoidance education for Emilia:**
-- Avoid visiting homes with cats or dogs; if unavoidable, pre-treat with albuterol 15–20 minutes before exposure
-- Use allergen-proof mattress and pillow covers
-- Wash bedding weekly in hot water (≥ 130°F)
-- No smoking in the home or car
-- Keep albuterol inhaler/nebulizer accessible at home AND at school
-- Ensure school has an emergency asthma plan on file
-
----
-
-### Q5. How does pediatric respiratory assessment differ from adult assessment?
-
-**Anatomical differences in children:**
-- Airways are **smaller** → greater resistance with any narrowing (even minor edema causes proportionally more obstruction)
-- Chest wall is **more compliant** → retractions are more prominent and a better indicator of increased work of breathing
-- Children are **obligate nasal breathers** until approximately 6 months; nasal congestion significantly increases respiratory effort in infants
-- Ribs are **more horizontal** → less diaphragmatic excursion efficiency
-
-**Respiratory rate normals by age (important for Emilia at 9 years):**
-
-| Age | Normal Respiratory Rate |
-|---|---|
-| Newborn | 30–60 breaths/min |
-| 1–12 months | 25–50 breaths/min |
-| 1–3 years | 20–30 breaths/min |
-| 3–6 years | 20–25 breaths/min |
-| **6–12 years** | **18–22 breaths/min** |
-| 12+ years | 12–20 breaths/min |
-
-**Signs of respiratory distress in school-age children (9-year-old):**
-- **Nasal flaring** — widening of nares with inspiration
-- **Retractions** — visible pulling in of skin above sternum (suprasternal), below sternum (substernal), between ribs (intercostal), under ribs (subcostal)
-- **Accessory muscle use** — sternocleidomastoid, scalene muscles visibly contracting
-- **Tripod position** — child sits upright, leans forward on hands to maximize airway opening
-- **Grunting** — auto-PEEP maneuver; closing glottis on exhalation to maintain positive pressure in alveoli
-- **Tachycardia** — response to hypoxemia and respiratory distress
-- **Agitation or altered mental status** — early hypoxia causes anxiety and restlessness; late hypoxia causes lethargy (ominous sign)
+- Measures air flowing out of lungs
+- Used to monitor asthma control and detect worsening before symptoms fully develop
+- Child blows into meter three times; record highest reading
+- Personalized to patient's personal best
 
 ---
 
 ## 🏥 DURING THE SIMULATION — What to Do & Say
 
 ### On Entry
-1. Perform hand hygiene
-2. Introduce yourself — address child: "Hi Emilia, I'm [name], your nurse"
-3. Verify identity (two identifiers — name band + parent confirmation)
-4. SWIPE safety assessment
-5. Immediately assess respiratory status — this is a priority assessment
+1. Look: Is Emilia sitting upright? Leaning forward? Using accessory muscles?
+2. Listen: Audible wheezing? Grunting? Stridor?
+3. Ask: "Emilia, can you tell me what happened? Can you breathe okay?"
+4. Assess SpO2 immediately
+5. Apply O2 if SpO2 < 94%
+6. Set up nebulizer with albuterol
+7. Notify provider of severity
 
-### Initial Respiratory Assessment
-1. Count respiratory rate for 60 seconds (do not estimate)
-2. Assess SpO2 via pulse oximetry; apply probe to finger
-3. Inspect for retractions (suprasternal, intercostal, subcostal), nasal flaring, tripod position
-4. Auscultate lung sounds: note presence of wheeze, prolonged expiratory phase, decreased air entry
-5. Ask Emilia: "Can you count to ten for me?" (assesses ability to speak in full sentences)
-6. Assess peak flow if Emilia is able (baseline measurement)
+### Communicating with Emilia (9-year-old)
+- "Emilia, I'm going to give you a breathing treatment. It will help open up your airways."
+- "You might feel your heart beating fast — that's normal from the medicine. It's working."
+- "You're doing great. I need you to breathe in through the mouthpiece like this."
+- "You can hold your stuffed animal while we do this."
 
-### Providing Supplemental Oxygen
-1. Notify provider of SpO2 and respiratory status
-2. Apply oxygen per order (nasal cannula 2–4 L/min or simple mask 6–10 L/min, depending on severity)
-3. Titrate oxygen to maintain SpO2 ≥ 95%
-4. Explain to Emilia: "This little mask will help you get more air so you can breathe more easily"
-5. Reassess SpO2 after oxygen application
-
-### Setting Up and Administering Nebulizer Treatment
-1. Gather nebulizer supplies; wash hands
-2. Prepare albuterol (and ipratropium if ordered) in nebulizer cup
-3. Explain to Emilia: "We're going to give you a breathing treatment. It goes in this mask and you just breathe normally — it will make your lungs feel more open"
-4. Apply nebulizer mask; start compressor; confirm misting
-5. Remain with patient during treatment; monitor SpO2, HR, and respiratory effort continuously
-6. Reassess lung sounds after treatment; measure peak flow after treatment
-
-### Post-Treatment Assessment
-1. Compare SpO2 before and after treatment
-2. Compare respiratory rate, work of breathing before and after
-3. Auscultate lung sounds — is wheeze improved? Is air entry better?
-4. Reassess peak flow — has it moved from red/yellow to a higher zone?
-5. Report findings to provider; anticipate repeat treatment in 20 minutes if inadequate response
-
-### Patient and Parent Education
-- Explain asthma action plan using green/yellow/red zone language: "Think of it like a stoplight..."
-- Identify trigger: "It sounds like cat fur triggered Emilia's asthma today"
-- Review rescue inhaler use (demonstrate with spacer if MDI is home medication)
-- Ensure Emilia can demonstrate correct peak flow technique before discharge
-- Remind parent: "The rescue inhaler should always be available — at home, at school, and when traveling"
+### Communicating with Family
+- "The medicine we're giving helps relax the muscles around her airways."
+- "We know the trigger was the pet dander. We'll need to talk about some changes at home to help prevent this from happening again."
+- "Has she had her asthma action plan reviewed recently?"
 
 ---
 
-## 📋 POST-SIMULATION Q&A
+## 📋 POST-SIMULATION QUESTIONS & ANSWERS
 
-### Q1. What nursing diagnoses apply to Emilia Garcia?
+### Q1. What is the first nursing action for a child in acute asthma?
+Position upright (high Fowler's) and apply supplemental oxygen while preparing albuterol nebulizer and notifying provider.
 
-1. **Impaired Gas Exchange** r/t bronchospasm, airway inflammation, and mucus hypersecretion — AEB wheezing, decreased SpO2, tachypnea
-2. **Ineffective Airway Clearance** r/t bronchospasm and increased mucus production — AEB wheeze, cough, abnormal lung sounds
-3. **Activity Intolerance** r/t hypoxemia and increased work of breathing during acute exacerbation
-4. **Anxiety** r/t difficulty breathing and unfamiliar hospital environment — AEB agitation and fear
-5. **Deficient Knowledge** r/t asthma management, trigger avoidance, and correct use of rescue medications
+### Q2. What does a "silent chest" mean in asthma?
+No wheezing = so little air movement that wheezing is absent = SEVERE/LIFE-THREATENING exacerbation. Requires immediate intervention, possible intubation.
 
----
-
-### Q2. What is the difference between a quick-relief (rescue) medication and a long-term controller medication in asthma?
-
-| Category | Medications | Mechanism | When Used |
-|---|---|---|---|
-| **Quick-relief / Rescue** | Albuterol (SABA), ipratropium | Rapid bronchodilation (minutes); does NOT treat underlying inflammation | During acute symptoms; PRN as needed |
-| **Long-term Controller** | Inhaled corticosteroids (budesonide, fluticasone), montelukast, LABAs (salmeterol — in combination only) | Reduce airway inflammation over time; prevent exacerbations | Daily, regardless of symptoms |
-
-**Key teaching point for Emilia and parent:**
-- If Emilia is using her rescue inhaler **more than twice per week**, her asthma is NOT well-controlled — she needs her long-term controller therapy adjusted
-- **Never** use a LABA (long-acting beta agonist) alone without an inhaled corticosteroid in children
+### Q3. What are signs the nebulizer treatment is working?
+Decreased respiratory rate, decreased work of breathing (less retractions), improved breath sounds (less wheezing), improved SpO2, patient reports feeling better.
 
 ---
 
-### Q3. What are the warning signs that an asthma exacerbation is becoming life-threatening?
+## 💊 MEDICATION REVIEW
 
-- **Silent chest** — no wheeze heard on auscultation despite obvious respiratory distress = no airflow = impending respiratory failure → activate rapid response/code team
-- **Cyanosis** — blue discoloration of lips/fingernails → severe hypoxemia
-- **SpO2 < 90%** despite supplemental oxygen
-- **Inability to speak at all** — speaking a single word requires more breath than available
-- **Altered mental status** — agitation → lethargy → unresponsiveness = worsening hypoxia/hypercapnia
-- **Paradoxical breathing** — chest moves inward on inspiration (thoracoabdominal dissociation) — sign of impending failure
-- **Peak flow < 25% predicted** and not responding to treatment
-- **Bradycardia** — late sign of severe hypoxia (tachycardia is early; bradycardia is pre-arrest)
-
-**Nursing action:** Notify provider IMMEDIATELY; prepare for IV access, IV corticosteroids, IV magnesium sulfate (bronchodilator), and possible intubation/mechanical ventilation.
+### Albuterol (Proventil) — Pediatric Nebulizer
+| Category | Details |
+|---|---|
+| **Classification** | SABA — Short-acting beta-2 agonist |
+| **Mechanism** | Stimulates beta-2 receptors in bronchial smooth muscle → relaxation → bronchodilation |
+| **Pediatric dose** | 2.5 mg/3 mL q20 min x3 in acute phase; then q1–4h |
+| **Adverse effects** | Tachycardia, tremor, palpitations, hypokalemia (with high doses), hyperglycemia |
+| **Nursing precautions** | Monitor HR before and after; reassure child and family about expected tachycardia |
 
 ---
 
-## 📞 SBAR
+## 🏥 PRIORITY NURSING DIAGNOSES
 
-**S:** "I am calling about Emilia Garcia, a 9-year-old Latina female who presented with an acute asthma exacerbation secondary to pet dander exposure. Her SpO2 is [value] and her respiratory rate is [value]. She has audible wheeze and intercostal retractions."
-
-**B:** "Emilia has a history of asthma managed with daily inhaled corticosteroids and rescue albuterol. Today she was exposed to cats at a friend's home and developed acute dyspnea and wheezing. She presents in moderate respiratory distress. Her peak flow measurement is [value], which is in the [yellow/red] zone."
-
-**A:** "I have applied supplemental oxygen at [rate] L/min via [nasal cannula/mask]; her SpO2 has [improved to / remained at] [value]. I have administered albuterol via nebulizer per protocol. Her lung sounds [have/have not] improved. She [is/is not] able to speak in full sentences."
-
-**R:** "I am requesting orders for repeat nebulizer treatment in 20 minutes, oral corticosteroid therapy, and continued monitoring. Please advise if you would like any additional interventions or if she should be transferred to a higher level of care."
+1. **Impaired Gas Exchange** r/t bronchoconstriction and V/Q mismatch — AEB: wheezing, SpO2 < 94%, tachypnea
+2. **Ineffective Breathing Pattern** r/t bronchospasm and air trapping — AEB: use of accessory muscles, expiratory wheezing
+3. **Anxiety** r/t breathing difficulty — AEB: restlessness, crying, fear
+4. **Deficient Knowledge (Parent)** r/t asthma management, trigger avoidance, action plan
 
 ---
 
 ## 📚 REFERENCES
 
-- Hockenberry, M. J., Rodgers, C. C., & Wilson, D. (2022). *Wong's essentials of pediatric nursing* (11th ed.). Elsevier.
+- Hockenberry, M. J., Wilson, D., & Rodgers, C. C. (2022). *Wong's essentials of pediatric nursing* (11th ed.). Elsevier.
 - Global Initiative for Asthma (GINA). (2023). *Global strategy for asthma management and prevention*. https://ginasthma.org
-- National Asthma Education and Prevention Program (NAEPP). (2020). *Expert panel report 3: Guidelines for the diagnosis and management of asthma*. National Heart, Lung, and Blood Institute.
-- Vallerand, A. H., & Sanoski, C. A. (2021). *Davis's drug guide for nurses* (17th ed.). F.A. Davis.
 
 ---
 
