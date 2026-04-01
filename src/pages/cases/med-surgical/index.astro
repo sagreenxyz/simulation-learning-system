@@ -1,11 +1,235 @@
 ---
-import DisciplineLayout from '../../../layouts/DisciplineLayout.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+
+const cases = [
+  {
+    num: '2',
+    patient: 'Wallace Peterson',
+    age: '69 yr', gender: 'M',
+    category: 'Respiratory / COPD',
+    primaryDx: 'Community-acquired pneumonia',
+    secondaryDx: 'COPD (Chronic Obstructive Pulmonary Disease)',
+    time: '20 – 25 min',
+    challenge: 'Recognizes and responds to a disconnected oxygen delivery device causing hypoxia in a patient with COPD, while understanding the hypoxic drive concept and managing pneumonia.',
+  },
+  {
+    num: '4',
+    patient: 'Kimberly Dunning',
+    age: '20 yr', gender: 'F',
+    category: 'Respiratory / Asthma',
+    primaryDx: 'Acute asthma exacerbation',
+    secondaryDx: 'Community-acquired pneumonia',
+    time: '20 – 25 min',
+    challenge: 'Manages acute asthma exacerbation while addressing patient anxiety and administering high-flow oxygen via non-rebreather mask and albuterol nebulizer treatment.',
+  },
+  {
+    num: '8',
+    patient: 'Ricardo Mendoza',
+    age: '60 yr', gender: 'M',
+    category: 'Thoracic / Oncology',
+    primaryDx: 'Squamous cell carcinoma right lung — lobectomy',
+    secondaryDx: 'Tension pneumothorax (chest tube obstruction)',
+    time: '20 – 25 min',
+    challenge: 'Monitors post-lobectomy chest tube drainage and rapidly recognizes and responds to a tension pneumothorax emergency when the chest tube becomes obstructed during patient transfer.',
+  },
+  {
+    num: '9',
+    patient: 'Keola Akana',
+    age: '70 yr', gender: 'M',
+    category: 'Cardiac / Heart Failure',
+    primaryDx: 'Heart failure (chronic) — medication adjustment',
+    secondaryDx: 'Digoxin toxicity; hypokalemia secondary to furosemide',
+    time: '20 – 25 min',
+    challenge: 'Recognizes classic signs of digoxin toxicity (nausea, visual halos, bradycardia), identifies the furosemide–hypokalemia–digoxin interaction, and safely withholds medications with provider notification.',
+  },
+  {
+    num: '23',
+    patient: 'Lou Thao',
+    age: 'adult', gender: 'F',
+    category: 'GI / Postoperative',
+    primaryDx: 'Postoperative colon resection',
+    secondaryDx: 'Postoperative fluid volume deficit',
+    time: '20 – 25 min',
+    challenge: 'Manages patient-controlled analgesia (PCA) for postoperative pain while monitoring for respiratory depression, assessing GI recovery, and educating the patient and family on PCA safety.',
+  },
+  {
+    num: '26',
+    patient: 'Lucia Hoyos',
+    age: '65 yr', gender: 'F',
+    category: 'GI / Medication Safety',
+    primaryDx: 'Transverse colostomy — postoperative',
+    secondaryDx: 'Hyperkalemia secondary to medication error',
+    time: '20 – 25 min',
+    challenge: 'Identifies and manages hyperkalemia from a medication error, prioritizes safety for a confused postoperative patient, and provides colostomy care and stoma education.',
+  },
+  {
+    num: '28',
+    patient: 'Cynthia Bennet',
+    age: '34 yr', gender: 'F',
+    category: 'Allergy / Medication Safety',
+    primaryDx: 'Urinary tract infection',
+    secondaryDx: 'T1DM; ESRD/hemodialysis; penicillin allergy anaphylaxis',
+    time: '20 – 25 min',
+    challenge: 'Recognizes and manages anaphylactic shock triggered by a medication error (ampicillin given despite penicillin allergy) while providing inclusive care for a complex patient with T1DM and ESRD.',
+  },
+  {
+    num: '33',
+    patient: 'Arthur Harris',
+    age: '59 yr', gender: 'M',
+    category: 'Diabetes / Wound Care',
+    primaryDx: 'T2DM with infected sacral wound',
+    secondaryDx: 'Severe acute hypoglycemia during hospitalization',
+    time: '20 – 25 min',
+    challenge: 'Responds to severe acute hypoglycemia with IV dextrose administration while managing an infected sacral wound and safely monitoring vancomycin therapy in a hospitalized diabetic patient.',
+  },
+  {
+    num: '35',
+    patient: 'Janet Owen',
+    age: '47 yr', gender: 'F',
+    category: 'GI / Substance Use',
+    primaryDx: 'Acute pancreatitis',
+    secondaryDx: 'Alcohol abuse disorder; alcoholic cirrhosis; alcohol withdrawal',
+    time: '20 – 25 min',
+    challenge: 'Manages acute pancreatitis pain and NPO care while assessing for and responding to alcohol withdrawal using the CIWA-Ar tool and lorazepam, with non-judgmental therapeutic communication.',
+  },
+  {
+    num: '40',
+    patient: 'Agnes Taylor',
+    age: '81 yr', gender: 'F',
+    category: 'Orthopedic / Sepsis',
+    primaryDx: 'Left hip fracture — ORIF postoperative day 4',
+    secondaryDx: 'Wound infection progressing to early sepsis; malnutrition',
+    time: '20 – 25 min',
+    challenge: 'Performs neurovascular and wound assessment post-ORIF, recognizes early sepsis using qSOFA criteria, and initiates the Hour-1 Sepsis Bundle while managing a complex elderly patient.',
+  },
+  {
+    num: '41',
+    patient: 'Mathias Hedding',
+    age: '62 yr', gender: 'M',
+    category: 'Wound Care / Diabetes',
+    primaryDx: 'Wound debridement — diabetic foot/sacral pressure injury',
+    secondaryDx: 'T2DM; heart failure',
+    time: '20 – 25 min',
+    challenge: 'Performs postoperative wound assessment after debridement, monitors for hypoglycemia in a T2DM patient, and balances wound healing priorities with heart failure fluid management.',
+  },
+];
 ---
-<DisciplineLayout
-  disciplineLabel="Med-Surgical"
-  disciplineSlug="med-surgical"
-  description="Medical-surgical simulation cases covering a broad range of adult health conditions including post-operative care, chronic disease management, and acute illness across body systems."
-  gradientFrom="#1565c0"
-  gradientTo="#0288d1"
-  icon="🏥"
-/>
+
+<BaseLayout title="Med-Surgical Cases" description="Medical-surgical simulation cases covering adult health conditions including post-operative care, chronic disease management, and acute illness.">
+  <div class="breadcrumb">
+    <a href={base}>Home</a>
+    <span>›</span>
+    <a href={`${base}cases/`}>Cases</a>
+    <span>›</span>
+    <span>Med-Surgical</span>
+  </div>
+
+  <div class="discipline-header med-surgical-header">
+    <h1>Med-Surgical</h1>
+    <p>Medical-surgical simulation cases covering a broad range of adult health conditions including
+    post-operative care, chronic disease management, and acute illness across body systems.</p>
+    <div class="discipline-stats">
+      <span>📋 {cases.length} cases</span>
+      <span>⏱ 20 – 30 min scenarios</span>
+    </div>
+  </div>
+
+  <div class="cases-table-wrap">
+    <table class="cases-table">
+      <thead>
+        <tr>
+          <th>Scenario</th>
+          <th>Patient</th>
+          <th>Focus Area</th>
+          <th>Time</th>
+          <th>Primary Dx</th>
+          <th>Secondary Dx</th>
+          <th>Primary Challenge</th>
+        </tr>
+      </thead>
+      <tbody>
+        {cases.map((c) => (
+          <tr>
+            <td><a href={`${base}cases/med-surgical/${c.num}/`} class="scenario-link">Med-Surgical {c.num}</a></td>
+            <td class="patient-cell">{c.patient}<br/><span class="meta-sub">{c.age} · {c.gender}</span></td>
+            <td><span class="card-tag">{c.category}</span></td>
+            <td class="time-cell">⏱ {c.time}</td>
+            <td>{c.primaryDx}</td>
+            <td>{c.secondaryDx}</td>
+            <td class="challenge-cell">{c.challenge}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</BaseLayout>
+
+<style>
+  .discipline-header {
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    color: #fff;
+  }
+
+  .med-surgical-header {
+    background: linear-gradient(135deg, #1565c0 0%, #0288d1 100%);
+  }
+
+  .discipline-header h1 { margin-bottom: 0.5rem; }
+  .discipline-header p { opacity: 0.92; max-width: 640px; margin-bottom: 1rem; }
+
+  .discipline-stats {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    opacity: 0.9;
+  }
+
+  .cases-table-wrap {
+    overflow-x: auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--color-border);
+  }
+
+  .cases-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--color-surface);
+    font-size: 0.9rem;
+  }
+
+  .cases-table thead tr {
+    background: var(--color-primary);
+    color: #fff;
+  }
+
+  .cases-table th {
+    padding: 0.85rem 1rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+  }
+
+  .cases-table td {
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid var(--color-border);
+    vertical-align: top;
+  }
+
+  .cases-table tbody tr:last-child td { border-bottom: none; }
+  .cases-table tbody tr:hover { background: #f0f4ff; }
+
+  .scenario-link { font-weight: 700; color: var(--color-primary); white-space: nowrap; }
+
+  .patient-cell { white-space: nowrap; }
+  .meta-sub { font-size: 0.8rem; color: var(--color-text-muted); }
+  .time-cell { white-space: nowrap; color: var(--color-text-muted); font-size: 0.85rem; }
+  .challenge-cell { max-width: 280px; font-size: 0.85rem; color: var(--color-text-muted); }
+</style>
