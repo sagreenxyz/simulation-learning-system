@@ -1,0 +1,876 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout
+  title="Med-Surgical 8 — Ricardo Mendoza"
+  description="Unfolding case study: Postoperative Lung Lobectomy Care and Tension Pneumothorax Emergency (MED-08)"
+>
+
+  <div class="breadcrumb">
+    <a href={base}>Home</a>
+    <span>›</span>
+    <a href={`${base}cases/`}>Cases</a>
+    <span>›</span>
+    <a href={`${base}cases/med-surgical/`}>Med-Surgical</a>
+    <span>›</span>
+    <span>Med-Surgical 8 — Ricardo Mendoza</span>
+  </div>
+
+  <div class="case-header">
+    <span class="card-tag">Thoracic / Oncology</span>
+    <h1>Med-Surgical 8 — Ricardo Mendoza</h1>
+    <p class="case-subtitle">Postoperative Lung Lobectomy Care and Tension Pneumothorax Emergency</p>
+    <div class="case-meta">
+      <span>👤 Ricardo Mendoza, 60 years, Hispanic Male</span>
+      <span>⏱ Scenario: 20–25 minutes</span>
+      <span>💬 Debrief: 20–25 minutes</span>
+    </div>
+  </div>
+
+  <div class="callout callout-info">
+    <strong>📖 How to Use This Unfolding Case Study</strong>
+    <p>Work through each phase in order. Information is revealed progressively — exactly as it would be in a real clinical encounter. Before reading each answer, pause and reason through the question yourself. Use the <strong>▶ Reveal Answer</strong> toggles to check your thinking.</p>
+  </div>
+
+  <!-- PHASE 1 -->
+  <div class="phase-card" id="phase1">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 1</span>
+      <h2>You Arrive at the Bedside</h2>
+    </div>
+    <p class="phase-intro">It is Friday at 1800. You are the evening nurse on the thoracic surgery unit. Ricardo Mendoza was admitted this morning and underwent a right lung lobectomy for squamous cell carcinoma. He has returned from the OR several hours ago and is now in his postoperative room.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>📋 Handoff Report</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Patient</th><td>Ricardo Mendoza</td></tr>
+            <tr><th>Age / Gender</th><td>60 years · Male · Hispanic</td></tr>
+            <tr><th>Primary Dx</th><td>Squamous cell carcinoma, right lung — right lobectomy today</td></tr>
+            <tr><th>Chest Tube</th><td>Right-sided chest tube in place; draining serosanguineous fluid</td></tr>
+            <tr><th>Pain</th><td>Reports 5/10; morphine PCA running</td></tr>
+            <tr><th>Code Status</th><td>Full code</td></tr>
+            <tr><th>Allergies</th><td>Review MAR</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>💊 Medications on MAR</h3>
+        <ul class="med-list">
+          <li><strong>Morphine sulfate PCA</strong> — 1 mg IV demand, 10-min lockout (HIGH ALERT)</li>
+          <li><strong>Ketorolac (Toradol) 30 mg IV</strong> — NSAID adjunct analgesic</li>
+          <li><strong>Oxygen via nasal cannula</strong> — maintain SpO₂ ≥ 94%</li>
+        </ul>
+      </div>
+    </div>
+    <div class="scene-box">
+      <h3>🚪 Entering the Room — What You Observe</h3>
+      <p>Ricardo is in bed, appearing tired but alert. A right-sided chest tube is visible, connected to a closed drainage system on the floor. His morphine PCA pump is running. He says, "The pain is tolerable right now, but it really hurts when I try to breathe deep." His wife is seated at the bedside.</p>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: What are your initial postoperative priorities for Ricardo? Why are they in this order?</summary>
+      <div class="reveal-content">
+        <p><strong>Priority postoperative assessments (in order):</strong></p>
+        <ol>
+          <li><strong>Airway and oxygenation</strong> — after thoracic surgery, maintaining adequate SpO₂ is the first priority; check O₂, auscultate bilateral breath sounds</li>
+          <li><strong>Chest tube system</strong> — assess drainage, tidaling, water seal; a properly functioning chest tube is critical for lung re-expansion after lobectomy</li>
+          <li><strong>Pain management</strong> — pain after thoracic surgery causes splinting (shallow breathing), which leads to atelectasis and impaired oxygenation; adequate pain control is directly tied to respiratory function</li>
+          <li><strong>Bleeding surveillance</strong> — monitor chest tube output and vital signs for early signs of postoperative hemorrhage</li>
+          <li><strong>Neuro/general assessment</strong> — orientation, IV access, skin integrity, urinary output</li>
+        </ol>
+        <p><strong>Connection to squamous cell carcinoma:</strong> Lobectomy removes the tumor-containing lobe; post-op care focuses on lung re-expansion of the remaining lobes, preventing infection, and managing the pleural space via the chest tube.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ You complete your initial assessment and turn to the chest tube drainage system…</div>
+
+  <!-- PHASE 2 -->
+  <div class="phase-card" id="phase2">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 2</span>
+      <h2>Chest Tube Assessment</h2>
+    </div>
+    <p class="phase-intro">You assess Ricardo's chest tube drainage system. The system has three chambers: drainage, water seal, and suction control. You need to identify normal versus abnormal findings.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>🫁 Chest Tube System — Three Chambers</h3>
+        <table class="data-table">
+          <thead><tr><th>Chamber</th><th>Purpose</th><th>Normal Finding</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Drainage chamber</strong></td><td>Collects fluid/blood from pleural space</td><td>Serosanguineous Day 1; &lt; 100 mL/hr; mark level every shift</td></tr>
+            <tr><td><strong>Water seal chamber</strong></td><td>One-way valve — prevents air re-entry</td><td>Tidaling (fluid fluctuates with breathing); intermittent bubbling early post-op</td></tr>
+            <tr><td><strong>Suction control</strong></td><td>Regulates suction level</td><td>Gentle, continuous bubbling when suction applied (usually −20 cm H₂O)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>⚠️ Alert vs. Normal Findings</h3>
+        <table class="data-table">
+          <thead><tr><th>Finding</th><th>Interpretation</th></tr></thead>
+          <tbody>
+            <tr><td>Serosanguineous drainage</td><td class="text-success">✔ Normal Day 1</td></tr>
+            <tr><td>Bright red blood &gt; 100 mL/hr</td><td class="text-danger">⚠ Alert provider immediately</td></tr>
+            <tr><td>Tidaling in water seal</td><td class="text-success">✔ System patent</td></tr>
+            <tr><td>No tidaling</td><td class="text-danger">⚠ Possible obstruction or lung fully re-expanded</td></tr>
+            <tr><td>Intermittent bubbling</td><td class="text-success">✔ Expected early post-op</td></tr>
+            <tr><td>Continuous bubbling</td><td class="text-danger">⚠ Air leak — check connections</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="callout callout-danger">
+      <strong>🚨 NEVER Clamp a Chest Tube When an Air Leak Is Present</strong>
+      <p>Clamping traps air in the pleural space and can cause or worsen a <strong>tension pneumothorax</strong>. Clamping is only appropriate for very brief periods when ordered by a provider (e.g., preparing for removal). If chest tube disconnects from the drainage system: submerge distal end in sterile water — do <strong>NOT</strong> clamp.</p>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: What does tidaling tell you? What should you do if tidaling stops?</summary>
+      <div class="reveal-content">
+        <p><strong>Tidaling:</strong> The fluctuation of fluid in the water seal chamber that moves with breathing (rises with inspiration, falls with expiration in a spontaneously breathing patient). It indicates the chest tube is <strong>patent</strong> and the system is working.</p>
+        <p><strong>If tidaling stops:</strong></p>
+        <ul>
+          <li><strong>Possible obstruction</strong> — check the entire length of tubing for kinks, clots, or the tube being caught under the patient or equipment</li>
+          <li><strong>Possible lung re-expansion</strong> — if the lung has fully re-expanded, tidaling may stop (provider should assess and confirm with chest X-ray)</li>
+          <li>Assess patient: respiratory distress? Absent breath sounds? Tracheal deviation? These suggest obstruction causing tension pneumothorax — EMERGENCY</li>
+          <li>Notify provider if no clear cause found</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ With the chest tube confirmed functioning, you address Ricardo's pain…</div>
+
+  <!-- PHASE 3 -->
+  <div class="phase-card" id="phase3">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 3</span>
+      <h2>Pain Management</h2>
+    </div>
+    <p class="phase-intro">Ricardo's pain is 5/10 at rest and increases sharply with deep breathing. He is using his PCA button inconsistently. He tells you, "I'm afraid to push the button too much — I don't want to overdose."</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>💊 Morphine PCA Settings</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Demand dose</th><td>1 mg IV per press</td></tr>
+            <tr><th>Lockout interval</th><td>10 minutes (cannot receive another dose for 10 min)</td></tr>
+            <tr><th>Drug</th><td>Morphine sulfate — <span class="badge-danger">HIGH ALERT</span></td></tr>
+            <tr><th>Adjunct</th><td>Ketorolac 30 mg IV (NSAID — reduces opioid need)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>🛡️ PCA Safety Principles</h3>
+        <ul class="med-list">
+          <li><strong>Only Ricardo presses the button</strong> — PCA by proxy (family pressing) is unsafe</li>
+          <li>Lockout interval prevents overdose — reassure Ricardo the system protects him</li>
+          <li>Monitor sedation level (RASS or sedation scale) each assessment</li>
+          <li>Monitor respiratory rate — hold PCA if RR &lt; 10 or SpO₂ drops</li>
+          <li>Naloxone (Narcan) must be available at bedside</li>
+        </ul>
+      </div>
+    </div>
+    <div class="scene-box">
+      <h3>🫁 Splinting Technique for Post-Thoracic Surgery Patients</h3>
+      <p>Teach Ricardo to place a pillow firmly over his incision site and hold it with both arms when coughing or deep breathing. This <strong>splinting</strong> technique reduces incisional movement, decreasing pain and enabling effective deep breathing. Demonstrate and have him return-demonstrate before leaving the room.</p>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: Why is adequate pain control a respiratory priority, not just a comfort priority?</summary>
+      <div class="reveal-content">
+        <p><strong>Pain → Splinting → Atelectasis cascade:</strong></p>
+        <ul>
+          <li>Uncontrolled post-thoracic pain causes <strong>splinting</strong> — the patient guards the chest and breathes shallowly to avoid pain</li>
+          <li>Shallow breathing → alveolar collapse → <strong>atelectasis</strong> → decreased gas exchange → hypoxia</li>
+          <li>After lobectomy, the remaining lung lobes must expand to fill the space — this requires <strong>deep breathing and coughing</strong>, which are impossible with uncontrolled pain</li>
+          <li>Adequate analgesia enables: deep breathing, effective coughing, incentive spirometry, early ambulation — all of which prevent pneumonia and promote recovery</li>
+          <li><strong>Reassure Ricardo:</strong> The lockout interval on the PCA prevents overdose. Using it proactively (before deep breathing exercises) is the correct approach</li>
+        </ul>
+        <p><strong>Ketorolac rationale:</strong> As an NSAID adjunct, ketorolac reduces opioid requirements (opioid-sparing effect) and provides additional pain relief via a different mechanism. However, monitor renal function — ketorolac is contraindicated in renal impairment.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ It is now Saturday morning. Ricardo is scheduled for a follow-up chest X-ray…</div>
+
+  <!-- PHASE 4 -->
+  <div class="phase-card" id="phase4">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 4</span>
+      <h2>Saturday Transfer Crisis</h2>
+    </div>
+    <p class="phase-intro">It is Saturday at 1000. Ricardo was transported to radiology for a chest X-ray. He is now being transferred back to bed by the transport team. During the transfer, the chest tube tubing becomes caught under the side rail as it is being raised.</p>
+    <div class="callout callout-danger">
+      <strong>🚨 EMERGENCY: Chest Tube Completely Obstructed</strong>
+      <p>The chest tube tubing is pinched under the side rail, creating complete obstruction. Air can no longer escape the pleural space. A <strong>tension pneumothorax</strong> is developing rapidly.</p>
+    </div>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>🔴 Developing Signs — What You Observe</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Respiratory</th><td>Sudden severe respiratory distress; SpO₂ dropping</td></tr>
+            <tr><th>Breath sounds</th><td><strong>Absent on the RIGHT side</strong></td></tr>
+            <tr><th>Tracheal deviation</th><td>Shifting to the <strong>LEFT</strong> (away from affected side)</td></tr>
+            <tr><th>Neck veins</th><td><strong>JVD</strong> — jugular venous distension</td></tr>
+            <tr><th>Blood pressure</th><td>Dropping — hypotension developing</td></tr>
+            <tr><th>Heart rate</th><td>Rising — tachycardia</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>📚 Tension Pneumothorax Pathophysiology</h3>
+        <div class="chain-flow">
+          <div class="chain-step chain-step-drug"><span class="chain-icon">🫁</span><strong>Chest tube obstructed</strong><small>Air trapped — cannot escape pleural space</small></div>
+          <div class="chain-arrow">↓</div>
+          <div class="chain-step chain-step-problem"><span class="chain-icon">📈</span><strong>Pleural pressure rises</strong><small>Ipsilateral lung collapses</small></div>
+          <div class="chain-arrow">↓</div>
+          <div class="chain-step chain-step-consequence"><span class="chain-icon">💔</span><strong>Mediastinal shift LEFT</strong><small>Heart and great vessels compressed → hemodynamic collapse</small></div>
+        </div>
+      </div>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: How do you distinguish tension pneumothorax from a simple pneumothorax? Why is tracheal deviation toward the UNAFFECTED side?</summary>
+      <div class="reveal-content">
+        <p><strong>Simple vs. Tension Pneumothorax:</strong></p>
+        <table class="data-table">
+          <thead><tr><th>Feature</th><th>Simple Pneumothorax</th><th>Tension Pneumothorax</th></tr></thead>
+          <tbody>
+            <tr><td>Tracheal deviation</td><td>Usually absent</td><td><strong>Present — toward unaffected side</strong></td></tr>
+            <tr><td>Hemodynamics</td><td>Usually stable</td><td><strong>Hemodynamic instability</strong> (hypotension, tachycardia)</td></tr>
+            <tr><td>JVD</td><td>Absent or mild</td><td><strong>Present</strong></td></tr>
+            <tr><td>Urgency</td><td>Urgent</td><td><strong>Immediately life-threatening — minutes matter</strong></td></tr>
+          </tbody>
+        </table>
+        <p><strong>Why tracheal deviation is AWAY from affected side:</strong> Trapped air creates positive pressure that pushes the mediastinum (containing the trachea, heart, and great vessels) away from the side of the pneumothorax. The increased pressure collapses not only the ipsilateral lung but also compresses the contralateral lung and great vessels — causing obstructive shock.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ You recognize the emergency — every second counts…</div>
+
+  <!-- PHASE 5 -->
+  <div class="phase-card" id="phase5">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 5</span>
+      <h2>Emergency Response</h2>
+    </div>
+    <p class="phase-intro">You recognize the tension pneumothorax. You must act immediately. The cause is identifiable — the chest tube tubing is caught under the side rail.</p>
+    <div class="scene-box">
+      <h3>⚡ Immediate Priority Actions — In Order</h3>
+      <table class="data-table">
+        <thead><tr><th>Step</th><th>Action</th><th>Rationale</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><strong>FREE THE TUBE</strong> — lower side rail; release obstruction immediately</td><td>Removes the cause; allows trapped air to escape; may resolve tension pneumothorax</td></tr>
+          <tr><td>2</td><td>Call <strong>Rapid Response Team</strong></td><td>This is a life-threatening emergency requiring immediate medical support</td></tr>
+          <tr><td>3</td><td>Apply <strong>high-flow oxygen</strong> (non-rebreather mask)</td><td>Maximize O₂ delivery while emergency resolved</td></tr>
+          <tr><td>4</td><td>Monitor vitals every <strong>5 minutes</strong></td><td>Track response to intervention; detect deterioration</td></tr>
+          <tr><td>5</td><td>Stay with patient; reassure calmly</td><td>Anxiety increases O₂ consumption; patient must not be left alone</td></tr>
+          <tr><td>6</td><td>Document all interventions with <strong>exact timestamps</strong></td><td>Legal/safety requirement; communication continuity</td></tr>
+          <tr><td>7</td><td>Prepare for needle decompression or chest tube replacement if tube remains inadequate</td><td>Provider may need to intervene if obstruction relief is insufficient</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: Why does freeing the tube come BEFORE calling rapid response? When is needle decompression needed?</summary>
+      <div class="reveal-content">
+        <p><strong>Free the tube FIRST:</strong> The cause is mechanical and immediately reversible. A tension pneumothorax is rapidly fatal (minutes). Removing the obstruction may resolve the crisis before the rapid response team even arrives. You can call for help simultaneously — but removing the obstruction is the priority action when the cause is identified and correctable.</p>
+        <p><strong>Why NOT to clamp:</strong> Clamping would perpetuate the obstruction. Clamping a chest tube with an active air leak traps air in the pleural space and worsens a tension pneumothorax. <strong>Never clamp without a specific provider order.</strong></p>
+        <p><strong>When needle decompression is needed:</strong></p>
+        <ul>
+          <li>If freeing the tube does not resolve the tension pneumothorax</li>
+          <li>If no chest tube is in place (e.g., traumatic tension pneumothorax)</li>
+          <li>Procedure: 14-gauge needle inserted at the <strong>2nd intercostal space, midclavicular line</strong> — releases trapped air immediately</li>
+          <li>Followed by formal chest tube insertion by the provider</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ The crisis is resolved. You complete thorough documentation and nursing diagnoses…</div>
+
+  <!-- PHASE 6 -->
+  <div class="phase-card" id="phase6">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 6</span>
+      <h2>Documentation and Nursing Diagnoses</h2>
+    </div>
+    <h3>📋 Priority Nursing Diagnoses</h3>
+    <div class="dx-rank-list">
+      <div class="dx-rank-item">
+        <span class="dx-number">1</span>
+        <div><strong>Impaired Gas Exchange</strong><div class="dx-aeb">AEB: tension pneumothorax, absent right breath sounds, SpO₂ drop, tracheal deviation; s/p right lung lobectomy</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">2</span>
+        <div><strong>Acute Pain</strong><div class="dx-aeb">AEB: pain 5/10 at rest, increases with deep breathing; post-thoracotomy incision; fear of PCA use causing inadequate pain control</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">3</span>
+        <div><strong>Risk for Bleeding</strong><div class="dx-aeb">Post-lobectomy; chest tube in place; monitor drainage quantity and color</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">4</span>
+        <div><strong>Anxiety</strong><div class="dx-aeb">AEB: cancer diagnosis, major surgery, fear of pain medication, emergency event</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">5</span>
+        <div><strong>Deficient Knowledge</strong><div class="dx-aeb">AEB: Ricardo's misconceptions about PCA safety; wife present; discharge teaching needs identified</div></div>
+      </div>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ SBAR — Calling the Provider After the Tension Pneumothorax Event</summary>
+      <div class="reveal-content">
+        <div class="sbar-block">
+          <div class="sbar-item sbar-s"><span class="sbar-label">S — Situation</span><p>Calling about Ricardo Mendoza, 60-year-old Hispanic male, post-right lobectomy Day 1. He developed an acute tension pneumothorax at 1000 today during transfer back from chest X-ray when the chest tube tubing became caught under the side rail.</p></div>
+          <div class="sbar-item sbar-b"><span class="sbar-label">B — Background</span><p>Admitted Friday for right lung lobectomy for squamous cell carcinoma. Right-sided chest tube in place draining serosanguineous fluid. On morphine PCA and ketorolac for pain control. This morning was transported for post-op chest X-ray.</p></div>
+          <div class="sbar-item sbar-a"><span class="sbar-label">A — Assessment</span><p>During transfer back to bed, chest tube tubing became caught under the raised side rail causing complete obstruction. Patient developed sudden respiratory distress, absent right breath sounds, tracheal deviation to the left, JVD, hypotension, and tachycardia. I immediately freed the tubing, called rapid response, and applied high-flow O₂. Patient's condition has improved since tube obstruction relieved.</p></div>
+          <div class="sbar-item sbar-r"><span class="sbar-label">R — Recommendation</span><p>Requesting: provider assessment at bedside; repeat chest X-ray to confirm lung re-expansion; orders for ongoing monitoring; evaluation of whether chest tube is functioning adequately; review of transfer safety protocols.</p></div>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <!-- APPENDIX A: Medications -->
+  <div class="phase-card" id="appendix-a">
+    <div class="phase-header">
+      <span class="phase-badge">Appendix A</span>
+      <h2>Medication Review</h2>
+    </div>
+    <table class="data-table">
+      <thead><tr><th>Medication</th><th>Class</th><th>Key Nursing Points</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Morphine sulfate PCA</strong> <span class="badge-danger">HIGH ALERT</span></td>
+          <td>Opioid analgesic</td>
+          <td>Only patient presses button (no PCA by proxy); monitor RR, SpO₂, sedation level; lockout interval prevents overdose; naloxone must be at bedside; constipation and urinary retention are common side effects</td>
+        </tr>
+        <tr>
+          <td><strong>Ketorolac (Toradol) 30 mg IV</strong></td>
+          <td>NSAID analgesic</td>
+          <td>Non-opioid adjunct — reduces opioid requirements; avoid in renal impairment, peptic ulcer disease, or coagulation disorders; limit to 5 days of use; monitor renal function and CBC; do not give with other NSAIDs</td>
+        </tr>
+        <tr>
+          <td><strong>Oxygen via nasal cannula</strong></td>
+          <td>Supportive therapy</td>
+          <td>Maintain SpO₂ ≥ 94%; titrate per orders; escalate delivery device (simple mask → non-rebreather) as needed; reassess need continuously; document flow rate and SpO₂</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- APPENDIX B: Q&A -->
+  <div class="phase-card" id="appendix-b">
+    <div class="phase-header">
+      <span class="phase-badge">Appendix B</span>
+      <h2>Post-Simulation Questions &amp; Answers</h2>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Q1: Why is clamping a chest tube NOT advocated when an air leak is present?</summary>
+      <div class="reveal-content"><p>Clamping a chest tube when an air leak is present <strong>traps air in the pleural space</strong>. The lung continues to leak air with nowhere to go, causing rapidly increasing pleural pressure. This causes or worsens a <strong>tension pneumothorax</strong> — a life-threatening emergency. Clamping is only appropriate for brief, provider-ordered periods (e.g., checking readiness for removal). If the chest tube accidentally disconnects from the drainage system, the correct action is to <strong>submerge the tube end in sterile water</strong> (creating a water seal) — not to clamp.</p></div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q2: What are the classic signs of a tension pneumothorax? How does it differ from a simple pneumothorax?</summary>
+      <div class="reveal-content">
+        <p><strong>Classic tension pneumothorax signs (mnemonic: 5 Ts):</strong></p>
+        <ul>
+          <li><strong>Tracheal deviation</strong> away from affected side</li>
+          <li><strong>Tachycardia</strong> and hypotension (obstructive shock)</li>
+          <li><strong>Tympany</strong> to percussion on affected side</li>
+          <li><strong>Total absence</strong> of breath sounds on affected side</li>
+          <li><strong>Tension</strong> JVD (jugular venous distension)</li>
+        </ul>
+        <p>Unlike a simple pneumothorax, tension pneumothorax causes <strong>hemodynamic instability</strong> (the mediastinal shift compresses the heart and great vessels) and is <strong>immediately fatal without treatment</strong>.</p>
+      </div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q3: What are the postoperative priorities after a right lung lobectomy?</summary>
+      <div class="reveal-content">
+        <ol>
+          <li><strong>Oxygenation</strong> — continuous SpO₂ monitoring; supplemental O₂ as needed; auscultate breath sounds frequently</li>
+          <li><strong>Chest tube management</strong> — assess drainage system q1–2h; ensure patent tubing; note volume and character of drainage; confirm tidaling and appropriate water-seal chamber activity</li>
+          <li><strong>Pain control</strong> — adequate analgesia enables deep breathing, coughing, incentive spirometry, and early ambulation</li>
+          <li><strong>Incentive spirometry</strong> — promotes re-expansion of remaining lung lobes; goal 10 breaths/hour while awake</li>
+          <li><strong>Bleeding prevention</strong> — monitor vital signs, chest tube output (alert if &gt; 100 mL/hr bright red)</li>
+          <li><strong>VTE prophylaxis</strong> — early ambulation, compression stockings, anticoagulation per order</li>
+        </ol>
+      </div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q4: What does tidaling indicate about a chest tube drainage system?</summary>
+      <div class="reveal-content"><p><strong>Tidaling</strong> is the fluctuation of fluid in the water seal chamber that moves with the patient's respirations (rises with inspiration, falls with expiration in a spontaneously breathing patient — opposite in a mechanically ventilated patient). It indicates the chest tube is <strong>patent and the system is intact</strong>. The absence of tidaling suggests either <strong>tube obstruction</strong> (check for kinks, clots, tube position) or <strong>lung re-expansion</strong> (pleural space closed). Obstruction + respiratory distress = emergency. Obstruction without distress = assess and notify provider.</p></div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q5: What are the key PCA safety principles the nurse must teach Ricardo?</summary>
+      <div class="reveal-content">
+        <ul>
+          <li><strong>Only Ricardo presses the button</strong> — PCA by proxy (family pressing on behalf of patient) is unsafe and prohibited; the lockout mechanism only works if the patient self-administers based on their own pain and sedation level</li>
+          <li>The <strong>lockout interval</strong> (10 minutes) prevents overdose — reassure Ricardo the system is designed to be safe</li>
+          <li>Press the button <strong>proactively</strong> — before deep breathing exercises, coughing, or ambulation, not just when pain is severe</li>
+          <li>Adequate pain control is a <strong>respiratory necessity</strong> — not just comfort — after thoracic surgery</li>
+          <li>Report side effects: excessive drowsiness, nausea, difficulty breathing, inability to urinate</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <!-- APPENDIX C: References -->
+  <div class="phase-card" id="appendix-c">
+    <div class="phase-header">
+      <span class="phase-badge">Appendix C</span>
+      <h2>References</h2>
+    </div>
+    <ol class="ref-list">
+      <li>Ignatavicius, D. D., Workman, M. L., &amp; Rebar, C. R. (2021). <em>Medical-surgical nursing: Concepts for interprofessional collaborative care</em> (10th ed.). Elsevier.</li>
+      <li>Vallerand, A. H., &amp; Sanoski, C. A. (2021). <em>Davis's drug guide for nurses</em> (17th ed.). F.A. Davis.</li>
+      <li>American Association of Critical-Care Nurses. (2022). <em>AACN procedure manual for progressive and critical care</em> (7th ed.). Elsevier.</li>
+      <li>Hinkle, J. L., &amp; Cheever, K. H. (2022). <em>Brunner &amp; Suddarth's textbook of medical-surgical nursing</em> (15th ed.). Wolters Kluwer.</li>
+    </ol>
+    <div style="margin-top: 2rem;">
+      <a href={`${base}cases/med-surgical/`} class="btn-back">← Back to Med-Surgical</a>
+    </div>
+  </div>
+
+</BaseLayout>
+
+<style>
+  /* ── Phase structure ─────────────────────────────────────────── */
+  .case-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-top: 0.25rem;
+  }
+
+  .phase-card {
+    background: var(--color-surface);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 0;
+    box-shadow: var(--shadow);
+    border-top: 4px solid var(--color-primary);
+  }
+
+  .appendix-card {
+    border-top-color: var(--color-secondary);
+  }
+
+  .phase-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .phase-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .phase-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+
+  .phase-badge-appendix {
+    background: var(--color-secondary);
+  }
+
+  .phase-intro {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin-bottom: 1.25rem;
+    border-left: 3px solid var(--color-accent);
+    padding-left: 0.75rem;
+  }
+
+  .phase-connector {
+    text-align: center;
+    padding: 0.6rem 0;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+  }
+
+  /* ── Info grid ───────────────────────────────────────────────── */
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 720px) {
+    .info-grid { grid-template-columns: 1fr; }
+    .compare-grid { grid-template-columns: 1fr; }
+  }
+
+  .info-block h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  /* ── Tables ──────────────────────────────────────────────────── */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--color-border);
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .data-table thead th {
+    background: #f0f4ff;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+  }
+
+  .data-table tbody th {
+    background: #f8f9fa;
+    font-weight: 600;
+    width: 30%;
+    color: var(--color-text);
+  }
+
+  .med-table tbody th {
+    width: 28%;
+  }
+
+  /* ── Callouts ────────────────────────────────────────────────── */
+  .callout {
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .callout p { margin-bottom: 0.5rem; }
+  .callout p:last-child { margin-bottom: 0; }
+
+  .callout-info {
+    background: #e8f0fe;
+    border-left: 4px solid var(--color-primary);
+  }
+
+  .callout-warning {
+    background: #fff8e1;
+    border-left: 4px solid #f59e0b;
+  }
+
+  .callout-danger {
+    background: #fff0f0;
+    border-left: 4px solid #dc2626;
+  }
+
+  /* ── Badges ──────────────────────────────────────────────────── */
+  .badge-danger {
+    display: inline-block;
+    background: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fca5a5;
+    border-radius: 4px;
+    padding: 0.1rem 0.45rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .badge-warning {
+    display: inline-block;
+    background: #fffbeb;
+    color: #92400e;
+    border: 1px solid #fde68a;
+    border-radius: 4px;
+    padding: 0.1rem 0.45rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  /* ── Scene box ───────────────────────────────────────────────── */
+  .scene-box {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .scene-box h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* ── Med list ────────────────────────────────────────────────── */
+  .med-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .med-list li {
+    padding: 0.35rem 0;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 0.9rem;
+  }
+
+  .med-list li:last-child { border-bottom: none; }
+
+  /* ── Chain flow ──────────────────────────────────────────────── */
+  .chain-flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin: 1.25rem 0;
+  }
+
+  .chain-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 520px;
+    gap: 0.2rem;
+  }
+
+  .chain-step small {
+    font-size: 0.8rem;
+    opacity: 0.8;
+  }
+
+  .chain-step-drug {
+    background: #e8f0fe;
+    color: var(--color-primary-dark);
+    border: 1px solid #bfdbfe;
+  }
+
+  .chain-step-problem {
+    background: #fff8e1;
+    color: #78350f;
+    border: 1px solid #fde68a;
+  }
+
+  .chain-step-consequence {
+    background: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+  }
+
+  .chain-arrow {
+    font-size: 1.5rem;
+    color: var(--color-text-muted);
+    line-height: 1.2;
+  }
+
+  .chain-icon {
+    font-size: 1.4rem;
+  }
+
+  /* ── Stat highlight ──────────────────────────────────────────── */
+  .stat-highlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fef2f2;
+    border: 2px solid #fca5a5;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #b91c1c;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+    color: #7f1d1d;
+    margin-top: 0.25rem;
+  }
+
+  /* ── Reveal (details/summary) ────────────────────────────────── */
+  .reveal-block {
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    margin-top: 1rem;
+    overflow: hidden;
+  }
+
+  .reveal-block > summary {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--color-primary);
+    background: #f0f4ff;
+    list-style: none;
+    user-select: none;
+  }
+
+  .reveal-block > summary::-webkit-details-marker { display: none; }
+
+  .reveal-block[open] > summary {
+    background: #dbeafe;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .reveal-block > summary:hover {
+    background: #dbeafe;
+  }
+
+  .reveal-content {
+    padding: 1rem 1.25rem;
+  }
+
+  .reveal-content ul,
+  .reveal-content ol {
+    margin-bottom: 0.75rem;
+  }
+
+  /* ── SBAR block ──────────────────────────────────────────────── */
+  .sbar-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    margin-bottom: 1.5rem;
+  }
+
+  .sbar-item {
+    padding: 1rem 1.25rem;
+  }
+
+  .sbar-item p { margin: 0; font-style: italic; }
+
+  .sbar-label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.4rem;
+  }
+
+  .sbar-s { background: #eff6ff; border-left: 5px solid #3b82f6; }
+  .sbar-b { background: #f0fdf4; border-left: 5px solid #22c55e; }
+  .sbar-a { background: #fffbeb; border-left: 5px solid #f59e0b; }
+  .sbar-r { background: #fef2f2; border-left: 5px solid #ef4444; }
+
+  /* ── Priority diagnoses ──────────────────────────────────────── */
+  .dx-rank-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .dx-rank-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: #f8f9fa;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+  }
+
+  .dx-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .dx-aeb {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-top: 0.2rem;
+  }
+
+  /* ── Compare grid ────────────────────────────────────────────── */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .compare-grid h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  /* ── Concept map ─────────────────────────────────────────────── */
+  .concept-map {
+    margin-bottom: 1.25rem;
+  }
+
+  /* ── References ──────────────────────────────────────────────── */
+  .ref-list {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .ref-note {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin: 0;
+  }
+
+  /* ── Utility ─────────────────────────────────────────────────── */
+  .text-success { color: #15803d; }
+  .text-danger  { color: #b91c1c; }
+
+  .btn-back {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .btn-back:hover {
+    background: var(--color-primary-dark);
+    text-decoration: none;
+  }
+</style>

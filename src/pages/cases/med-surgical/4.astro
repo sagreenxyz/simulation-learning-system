@@ -1,0 +1,1008 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout
+  title="Med-Surgical 4 — Kimberly Dunning"
+  description="Unfolding case study: Asthma Exacerbation, Anxiety, Communication and Oxygen Delivery (MED-04)"
+>
+
+  <div class="breadcrumb">
+    <a href={base}>Home</a>
+    <span>›</span>
+    <a href={`${base}cases/`}>Cases</a>
+    <span>›</span>
+    <a href={`${base}cases/med-surgical/`}>Med-Surgical</a>
+    <span>›</span>
+    <span>Med-Surgical 4 — Kimberly Dunning</span>
+  </div>
+
+  <div class="case-header">
+    <span class="card-tag">Respiratory / Asthma</span>
+    <h1>Med-Surgical 4 — Kimberly Dunning</h1>
+    <p class="case-subtitle">Acute Asthma Exacerbation with Anxiety and Oxygen Delivery</p>
+    <div class="case-meta">
+      <span>👤 Kimberly Dunning, 20 years, Female</span>
+      <span>⏱ Scenario: 20–25 minutes</span>
+      <span>💬 Debrief: 20–25 minutes</span>
+    </div>
+  </div>
+
+  <div class="callout callout-info">
+    <strong>📖 How to Use This Unfolding Case Study</strong>
+    <p>Work through each phase in order. Information is revealed progressively — exactly as it would be in a real clinical encounter. Before reading each answer, pause and reason through the question yourself. Use the <strong>▶ Reveal Answer</strong> toggles to check your thinking.</p>
+  </div>
+
+  <!-- PHASE 1 -->
+  <div class="phase-card" id="phase1">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 1</span>
+      <h2>You Arrive at the Bedside</h2>
+    </div>
+    <p class="phase-intro">You are the nurse on a medical-surgical unit. Kimberly Dunning, a 20-year-old female, has been admitted with an acute asthma exacerbation triggered by community-acquired pneumonia. You can hear audible wheezing before you even enter the room. She appears frightened.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>📋 Handoff Report</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Patient</th><td>Kimberly Dunning</td></tr>
+            <tr><th>Age / Gender</th><td>20 years · Female</td></tr>
+            <tr><th>Primary Dx</th><td>Asthma (acute exacerbation)</td></tr>
+            <tr><th>Secondary Dx</th><td>Pneumonia (community-acquired) — exacerbation trigger</td></tr>
+            <tr><th>Allergies</th><td>Review MAR</td></tr>
+            <tr><th>Code Status</th><td>Full Code</td></tr>
+            <tr><th>Setting</th><td>Medical-surgical inpatient unit</td></tr>
+            <tr><th>Position</th><td>Tripod position — leaning forward on arms</td></tr>
+            <tr><th>Affect</th><td>Anxious, frightened, restless</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>💊 Medications on MAR</h3>
+        <ul class="med-list">
+          <li><strong>Albuterol (Proventil) 2.5 mg</strong> — Nebulizer, q20 min × 3 then q1–4h PRN (rescue bronchodilator)</li>
+          <li><strong>Prednisone (Deltasone)</strong> — PO, reduces airway inflammation</li>
+          <li><strong>Normal Saline 0.9%</strong> — IV at 125 mL/hr for hydration</li>
+          <li><strong>Oxygen</strong> — Non-rebreather mask (NRB) 10–15 LPM</li>
+          <li><strong>Blood glucose monitoring</strong> — Fingerstick (steroids increase glucose)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="scene-box">
+      <h3>🚪 Entering the Room — What You Observe</h3>
+      <p>Kimberly is sitting upright on the edge of the bed, leaning forward with her hands on her knees — the classic <strong>tripod position</strong>. Audible wheezing is present without a stethoscope. Her eyes are wide and fearful. She gasps, "I can't breathe… it's not getting better." Her lips are not cyanotic but she is visibly working to breathe.</p>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: How does anxiety worsen an asthma exacerbation, and why is therapeutic communication a priority intervention?</summary>
+      <div class="reveal-content">
+        <p><strong>Anxiety–Asthma Feedback Loop:</strong></p>
+        <ul>
+          <li>Anxiety activates the sympathetic nervous system → releases epinephrine and norepinephrine → increases respiratory rate</li>
+          <li>Increased RR causes hyperventilation → air trapping worsens in already-obstructed airways → further hypoxemia</li>
+          <li>Fear of suffocation → panic → more rapid and shallow breathing → worsens bronchospasm</li>
+          <li>This creates a <strong>self-perpetuating cycle:</strong> dyspnea → anxiety → worse dyspnea → more anxiety</li>
+        </ul>
+        <p><strong>Therapeutic Communication Strategies:</strong></p>
+        <ul>
+          <li>Stay calm — your calm presence is genuinely therapeutic; anxiety is contagious, and so is calm</li>
+          <li>Acknowledge her fear: <em>"I can see you're scared. You're in the right place and I'm here with you."</em></li>
+          <li>Give her control: <em>"I need you to try to breathe with me. Just follow my lead — in through the nose, out through the mouth."</em></li>
+          <li>One instruction at a time — don't overwhelm with multiple simultaneous requests</li>
+          <li>Never say "Just calm down" — this dismisses her experience and increases anxiety</li>
+          <li>Stay in the room — do not leave a severely anxious hypoxic patient alone</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ After your initial observation, you perform a focused asthma assessment…</div>
+
+  <!-- PHASE 2 -->
+  <div class="phase-card" id="phase2">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 2</span>
+      <h2>Asthma Assessment</h2>
+    </div>
+    <p class="phase-intro">You conduct a rapid respiratory assessment of Kimberly. She can speak in 3–4 word phrases between breaths. You auscultate her lungs and document your findings. Her NRB mask is in place but she keeps pulling at it anxiously.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>📊 Vital Signs</h3>
+        <table class="data-table">
+          <thead><tr><th>Vital Sign</th><th>Value</th><th>Significance</th></tr></thead>
+          <tbody>
+            <tr><td>Respiratory Rate</td><td>28 breaths/min</td><td class="text-danger">Tachypnea — increased work of breathing</td></tr>
+            <tr><td>Heart Rate</td><td>118 bpm</td><td class="text-danger">Tachycardia — compensation + albuterol effect</td></tr>
+            <tr><td>Blood Pressure</td><td>138/88 mmHg</td><td>Elevated — anxiety and sympathetic activation</td></tr>
+            <tr><td>SpO2</td><td>88%</td><td class="text-danger">Hypoxemia — requires high-flow O2</td></tr>
+            <tr><td>Temperature</td><td>100.8°F</td><td>Low-grade fever — concurrent pneumonia</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>🫁 Lung Assessment Findings</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Breath Sounds</th><td>Diffuse expiratory wheeze throughout all lung fields</td></tr>
+            <tr><th>Expiratory Phase</th><td>Prolonged — air trapping; I:E ratio reversed</td></tr>
+            <tr><th>Accessory Muscles</th><td>Visible use of sternocleidomastoid and scalene muscles</td></tr>
+            <tr><th>Cough</th><td>Dry, non-productive — bronchospasm</td></tr>
+            <tr><th>Speech</th><td>3–4 word sentences (moderate-severe exacerbation)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="scene-box">
+      <h3>⚠️ Asthma Pathophysiology Cascade</h3>
+      <table class="data-table">
+        <thead><tr><th>Step</th><th>Event</th><th>Clinical Finding</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Trigger (pneumonia/infection) activates mast cells</td><td>Recent illness, fever</td></tr>
+          <tr><td>2</td><td>Airway inflammation → bronchoconstriction</td><td>Wheezing, chest tightness</td></tr>
+          <tr><td>3</td><td>Mucosal edema → airway narrowing</td><td>Increased work of breathing</td></tr>
+          <tr><td>4</td><td>Mucus hypersecretion → airway plugging</td><td>Non-productive cough</td></tr>
+          <tr><td>5</td><td>Air trapping → hyperinflation</td><td>Prolonged expiration, barrel chest</td></tr>
+          <tr><td>6</td><td>V/Q mismatch → hypoxemia</td><td>SpO2 88%, tachycardia</td></tr>
+          <tr><td>7</td><td>Anxiety worsens → increased RR → further trapping</td><td>Restlessness, fear, combativeness</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: What is a "silent chest" and why is it an emergency?</summary>
+      <div class="reveal-content">
+        <p><strong>Silent Chest — Definition and Significance:</strong></p>
+        <ul>
+          <li>A silent chest occurs when wheezing <em>disappears</em> during a severe asthma exacerbation</li>
+          <li>This is NOT a sign of improvement — it is a sign that <strong>airflow has become so severely reduced</strong> that there is no longer enough air movement to generate wheeze</li>
+          <li>It indicates impending respiratory failure and the patient may require intubation imminently</li>
+          <li><strong>This is a medical emergency — call a rapid response or code immediately</strong></li>
+        </ul>
+        <p><strong>Compare — Progression of Asthma Severity:</strong></p>
+        <table class="data-table">
+          <thead><tr><th>Finding</th><th>Mild–Moderate</th><th>Severe</th><th>Impending Failure</th></tr></thead>
+          <tbody>
+            <tr><td>Speech</td><td>Full sentences</td><td>3–4 words</td><td>Cannot speak</td></tr>
+            <tr><td>Wheeze</td><td>End-expiratory</td><td>Throughout expiration</td><td>Silent chest</td></tr>
+            <tr><td>SpO2</td><td>≥95%</td><td>90–94%</td><td>&lt;90%</td></tr>
+            <tr><td>ABG</td><td>Respiratory alkalosis</td><td>Near-normal CO2</td><td>Rising CO2 = failure</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ You apply the non-rebreather mask and titrate Kimberly's oxygen…</div>
+
+  <!-- PHASE 3 -->
+  <div class="phase-card" id="phase3">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 3</span>
+      <h2>Oxygen Delivery via Non-Rebreather Mask</h2>
+    </div>
+    <p class="phase-intro">With SpO2 at 88%, Kimberly requires high-flow oxygen. You apply the non-rebreather mask (NRB) — the appropriate device for acute severe asthma exacerbation requiring FiO2 60–90%. Kimberly keeps reaching up to pull the mask off due to anxiety.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>🌬️ NRB Mask — Application Steps</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Step 1</th><td>Select the correct NRB mask size — fits over nose and mouth</td></tr>
+            <tr><th>Step 2</th><td><strong>Inflate the reservoir bag first</strong> — occlude the one-way valve and set flow to 10–15 LPM until bag fills</td></tr>
+            <tr><th>Step 3</th><td>Place mask over nose and mouth; mold metal nose clip to fit</td></tr>
+            <tr><th>Step 4</th><td>Verify the reservoir bag deflates slightly with each inspiration and re-inflates — confirms adequate flow</td></tr>
+            <tr><th>Step 5</th><td>Ensure the bag <strong>never fully collapses</strong> — if it does, increase flow rate</td></tr>
+            <tr><th>Step 6</th><td>Monitor SpO2 continuously for improvement</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>🌬️ Oxygen Delivery Devices — Comparison</h3>
+        <table class="data-table">
+          <thead><tr><th>Device</th><th>Flow Rate</th><th>FiO2</th><th>Use Case</th></tr></thead>
+          <tbody>
+            <tr><td>Nasal Cannula</td><td>1–6 L/min</td><td>24–44%</td><td>Mild hypoxemia, COPD</td></tr>
+            <tr><td>Simple Face Mask</td><td>6–10 L/min</td><td>35–50%</td><td>Moderate hypoxemia</td></tr>
+            <tr><td>Venturi Mask</td><td>4–12 L/min</td><td>24–50%</td><td>Precise FiO2 delivery</td></tr>
+            <tr><td><strong>Non-Rebreather Mask</strong></td><td><strong>10–15 L/min</strong></td><td><strong>60–90%</strong></td><td><strong>Severe hypoxemia — Kimberly</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: How does the NRB mask deliver 60–90% FiO2, and when do you escalate beyond it?</summary>
+      <div class="reveal-content">
+        <p><strong>How the NRB Achieves High FiO2:</strong></p>
+        <ul>
+          <li>The reservoir bag holds 600–1000 mL of 100% oxygen — fills between each breath</li>
+          <li>During inspiration, the patient inhales primarily from the reservoir bag (nearly 100% O2)</li>
+          <li>One-way valves on the side vents prevent exhaled air from re-entering the bag (hence "non-rebreather")</li>
+          <li>Some room air mixing at the mask edges is why FiO2 is 60–90%, not 100%</li>
+          <li>Flow must be maintained at 10–15 LPM to keep the bag inflated</li>
+        </ul>
+        <p><strong>When to Escalate Beyond NRB:</strong></p>
+        <ul>
+          <li>SpO2 remains &lt;90% despite NRB at maximum flow rate</li>
+          <li>Patient is tiring — RR slowing paradoxically (ominous sign)</li>
+          <li>Rising PaCO2 on ABG — patient can no longer compensate</li>
+          <li>Silent chest on auscultation</li>
+          <li>Altered mental status worsening despite O2</li>
+          <li><strong>Next steps:</strong> BiPAP/CPAP (non-invasive) → intubation and mechanical ventilation if non-invasive fails</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ You prepare the albuterol nebulizer treatment…</div>
+
+  <!-- PHASE 4 -->
+  <div class="phase-card" id="phase4">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 4</span>
+      <h2>Albuterol Nebulizer Treatment</h2>
+    </div>
+    <p class="phase-intro">You set up the albuterol nebulizer (2.5 mg/3 mL) as ordered. Kimberly has not received albuterol yet this admission. You temporarily switch her from the NRB mask to the nebulizer mouthpiece for treatment and coach her through the process, maintaining therapeutic communication throughout.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>💨 Albuterol Nebulizer — Administration Steps</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Step 1</th><td>Assemble nebulizer cup, tubing, and mouthpiece; verify medication and dose</td></tr>
+            <tr><th>Step 2</th><td>Pour albuterol 2.5 mg/3 mL into the nebulizer cup</td></tr>
+            <tr><th>Step 3</th><td>Connect to air compressor or O2 at 6–8 LPM to create mist</td></tr>
+            <tr><th>Step 4</th><td>Instruct Kimberly to sit upright and place mouthpiece between her lips</td></tr>
+            <tr><th>Step 5</th><td>Breathe slowly and deeply through the mouth — normal tidal breathing</td></tr>
+            <tr><th>Step 6</th><td>Continue until medication is gone (approximately 5–10 minutes)</td></tr>
+            <tr><th>Step 7</th><td>Monitor HR, SpO2, and lung sounds during and after treatment</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>📊 Expected Response to Albuterol</h3>
+        <table class="data-table">
+          <thead><tr><th>Parameter</th><th>Pre-Treatment</th><th>Goal Post-Treatment</th></tr></thead>
+          <tbody>
+            <tr><td>Wheeze</td><td>Diffuse throughout</td><td>Reduced intensity/distribution</td></tr>
+            <tr><td>RR</td><td>28 breaths/min</td><td>Decreasing toward 16–20</td></tr>
+            <tr><td>SpO2</td><td>88%</td><td>≥92% on supplemental O2</td></tr>
+            <tr><td>Speech</td><td>3–4 words</td><td>Able to speak more complete sentences</td></tr>
+            <tr><td>Anxiety</td><td>Severe</td><td>Decreasing as breathing improves</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="callout callout-warning">
+      <strong>⚠️ Albuterol Side Effects to Monitor</strong>
+      <p><strong>Tachycardia</strong> — albuterol stimulates beta-2 receptors and has some beta-1 activity; HR increase is expected but notify provider if HR &gt;130 or if palpitations are severe.<br/>
+      <strong>Tremor</strong> — skeletal muscle beta-2 stimulation; reassure Kimberly this is normal.<br/>
+      <strong>Hyperglycemia</strong> — albuterol can raise blood glucose; particularly relevant when combined with prednisone.<br/>
+      <strong>Hypokalemia</strong> — beta-2 stimulation shifts potassium intracellularly.</p>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: Explain the beta-2 mechanism of albuterol — and when would you repeat the treatment?</summary>
+      <div class="reveal-content">
+        <p><strong>Beta-2 Agonist Mechanism:</strong></p>
+        <ol>
+          <li>Albuterol binds to beta-2 adrenergic receptors on bronchial smooth muscle cells</li>
+          <li>Receptor activation → adenylyl cyclase → increased cAMP</li>
+          <li>Elevated cAMP → protein kinase A activation → smooth muscle relaxation → bronchodilation</li>
+          <li>Result: airway diameter increases → reduced airflow resistance → improved ventilation</li>
+          <li>Onset: 5–15 minutes · Peak: 60–90 minutes · Duration: 4–6 hours</li>
+        </ol>
+        <p><strong>When to Repeat:</strong></p>
+        <ul>
+          <li>Standard protocol: q20 min × 3 doses in acute exacerbation, then q1–4 hours PRN</li>
+          <li>Repeat if wheeze persists or SpO2 has not improved to ≥92% after 20 minutes</li>
+          <li>Notify provider if <strong>no response after 3 treatments</strong> — may require IV magnesium sulfate, heliox, or intubation</li>
+          <li>Monitor HR carefully with repeated doses — cumulative tachycardia risk</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ You administer prednisone and check Kimberly's blood glucose…</div>
+
+  <!-- PHASE 5 -->
+  <div class="phase-card" id="phase5">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 5</span>
+      <h2>Prednisone Administration + Blood Glucose Monitoring</h2>
+    </div>
+    <p class="phase-intro">Following the albuterol nebulizer treatment, you administer oral prednisone as ordered. You check Kimberly's blood glucose via fingerstick — her first post-steroid check. Kimberly is more alert now but still anxious. She asks, "Why do I need a blood sugar check? I don't have diabetes."</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>💊 Prednisone Oral Administration</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Action</th><td>Administer with food or a full glass of water to reduce GI irritation</td></tr>
+            <tr><th>Timing</th><td>Give in the morning when possible to mimic natural cortisol release and minimize sleep disruption</td></tr>
+            <tr><th>Duration</th><td>Short course (5–10 days) for acute asthma — typically does not require tapering</td></tr>
+            <tr><th>Monitor</th><td>Blood glucose (1–2 hours post-dose), BP, fluid retention, mood changes</td></tr>
+            <tr><th>Teaching</th><td>Do not abruptly stop if on long-term therapy; report mood changes, increased thirst/urination, swelling</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>🩸 Steroid-Induced Hyperglycemia</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Mechanism</th><td>Corticosteroids increase hepatic glucose production and decrease cellular glucose uptake (insulin resistance)</td></tr>
+            <tr><th>Onset</th><td>Blood glucose rises 4–8 hours after oral dose; peaks in afternoon/evening</td></tr>
+            <tr><th>Who is at risk</th><td>All patients — even non-diabetics can develop transient hyperglycemia on steroids</td></tr>
+            <tr><th>Monitoring</th><td>Fingerstick blood glucose before meals and at bedtime while on corticosteroids</td></tr>
+            <tr><th>Treatment</th><td>Sliding scale insulin per order if BG &gt;180 mg/dL; notify provider if persistently elevated</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="scene-box">
+      <h3>💬 Therapeutic Communication — Responding to Kimberly's Anxiety</h3>
+      <p>Kimberly says, "Every time I try to breathe slowly, it feels like I'm not getting enough air. I'm scared I'm going to stop breathing." Acknowledge her fear, explain what is happening, and reinforce that her treatment is working. Avoid dismissing her concerns. Use breathing coaching to help regulate her respiratory pattern.</p>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ SBAR — Communicating Anxiety-Driven Respiratory Worsening to the Provider</summary>
+      <div class="reveal-content">
+        <div class="sbar-block">
+          <div class="sbar-item sbar-s"><span class="sbar-label">S — Situation</span><p>I am calling about Kimberly Dunning, a 20-year-old female admitted with an acute asthma exacerbation secondary to pneumonia. She is in significant respiratory distress with severe anxiety that appears to be worsening her bronchospasm.</p></div>
+          <div class="sbar-item sbar-b"><span class="sbar-label">B — Background</span><p>She has a history of asthma and is currently on oxygen via NRB mask, NS IV at 125 mL/hr, and has received her first albuterol nebulizer treatment and oral prednisone. Her anxiety is significant and she is pulling at her NRB mask repeatedly.</p></div>
+          <div class="sbar-item sbar-a"><span class="sbar-label">A — Assessment</span><p>Post-albuterol SpO2 is [value]. RR is [value]. She can speak in [number]-word phrases. Her anxiety level is severe — she is hyperventilating at times, which is worsening her air trapping. Blood glucose post-prednisone is [value].</p></div>
+          <div class="sbar-item sbar-r"><span class="sbar-label">R — Recommendation</span><p>Requesting orders for: repeat albuterol nebulizer if SpO2 &lt;92%; guidance on anxiolytic options (noting benzodiazepines may cause respiratory depression — consider risk/benefit); and blood glucose management orders if BG &gt;180 mg/dL. I would also like you to reassess her in person given ongoing respiratory distress.</p></div>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ Kimberly stabilizes — you focus on nursing diagnoses and discharge education…</div>
+
+  <!-- PHASE 6 -->
+  <div class="phase-card" id="phase6">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 6</span>
+      <h2>Nursing Diagnoses + Education + SBAR</h2>
+    </div>
+    <h3>📋 Priority Nursing Diagnoses</h3>
+    <div class="dx-rank-list">
+      <div class="dx-rank-item">
+        <span class="dx-number">1</span>
+        <div><strong>Ineffective Airway Clearance</strong><div class="dx-aeb">AEB: diffuse expiratory wheeze, prolonged expiration, SpO2 88%, use of accessory muscles, non-productive cough — airway obstruction from bronchospasm, edema, and mucus is the primary pathology</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">2</span>
+        <div><strong>Impaired Gas Exchange</strong><div class="dx-aeb">AEB: SpO2 88%, tachycardia HR 118, tachypnea RR 28, V/Q mismatch from bronchospasm and concurrent pneumonia</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">3</span>
+        <div><strong>Anxiety</strong><div class="dx-aeb">AEB: restlessness, verbalization of fear, pulling at NRB mask, hyperventilation — anxiety is worsening bronchospasm and must be addressed as a primary intervention</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">4</span>
+        <div><strong>Deficient Knowledge</strong><div class="dx-aeb">AEB: patient on home inhalers but experiencing acute exacerbation; unfamiliarity with asthma action plan and when to escalate care</div></div>
+      </div>
+    </div>
+    <div class="scene-box">
+      <h3>📋 Asthma Action Plan — Green / Yellow / Red Zones</h3>
+      <table class="data-table">
+        <thead><tr><th>Zone</th><th>Peak Flow</th><th>Symptoms</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong class="text-success">🟢 Green</strong></td>
+            <td>80–100% personal best</td>
+            <td>No symptoms; breathing well; can do usual activities</td>
+            <td>Continue maintenance medications as prescribed</td>
+          </tr>
+          <tr>
+            <td><strong style="color:#b45309;">🟡 Yellow</strong></td>
+            <td>50–79% personal best</td>
+            <td>Coughing, wheezing, chest tightness; waking at night</td>
+            <td>Use rescue inhaler (albuterol); call provider if no improvement in 24 hours</td>
+          </tr>
+          <tr>
+            <td><strong class="text-danger">🔴 Red</strong></td>
+            <td>&lt;50% personal best</td>
+            <td>Severe shortness of breath; rescue inhaler not helping; cannot speak in sentences</td>
+            <td>Use rescue inhaler immediately; call 911 / go to ER; do not wait</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ SBAR — Calling the Provider with Kimberly's Post-Treatment Update</summary>
+      <div class="reveal-content">
+        <div class="sbar-block">
+          <div class="sbar-item sbar-s"><span class="sbar-label">S — Situation</span><p>I am calling with an update on Kimberly Dunning, a 20-year-old female admitted with acute asthma exacerbation and concurrent pneumonia. She has received her first albuterol nebulizer treatment and oral prednisone. I am reporting her post-treatment response.</p></div>
+          <div class="sbar-item sbar-b"><span class="sbar-label">B — Background</span><p>SpO2 was 88% on admission. She was placed on NRB mask at 10–15 LPM, albuterol nebulizer 2.5 mg was administered, prednisone given PO. NS IV at 125 mL/hr running. She has significant anxiety that has required ongoing therapeutic communication.</p></div>
+          <div class="sbar-item sbar-a"><span class="sbar-label">A — Assessment</span><p>Post-treatment SpO2 is now [value]. RR has [improved/not improved] to [value]. Wheeze is [decreased/persistent]. She is [able/unable] to speak in full sentences. Blood glucose is [value] — [within/above] normal range. Anxiety level is [improved/ongoing].</p></div>
+          <div class="sbar-item sbar-r"><span class="sbar-label">R — Recommendation</span><p>Requesting: continued albuterol q20 min per protocol if SpO2 &lt;92%; blood glucose management order if BG &gt;180 mg/dL; consider IV methylprednisolone if oral prednisone absorption is inadequate; and reassessment in person if condition does not improve with next treatment.</p></div>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <!-- APPENDIX A: Medications -->
+  <div class="phase-card" id="appendix-a">
+    <div class="phase-header">
+      <span class="phase-badge">Appendix A</span>
+      <h2>Medication Review</h2>
+    </div>
+    <table class="data-table">
+      <thead><tr><th>Medication</th><th>Class</th><th>Key Nursing Points</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Albuterol (Proventil, Ventolin) 2.5 mg Nebulizer</strong></td>
+          <td>Short-acting beta-2 agonist (SABA) — Rescue bronchodilator</td>
+          <td>Onset 5–15 min; stimulates beta-2 receptors → bronchodilation; monitor HR (tachycardia), tremor, hypokalemia; use for acute bronchospasm; reassess lung sounds and SpO2 after each treatment; notify provider if no response after 3 treatments</td>
+        </tr>
+        <tr>
+          <td><strong>Prednisone (Deltasone) PO</strong></td>
+          <td>Systemic corticosteroid</td>
+          <td>Inhibits inflammatory mediators; reduces airway edema and mucus production; monitor blood glucose (hyperglycemia), BP, fluid retention, mood; administer with food; short course does not require tapering; do not abruptly stop long-term corticosteroids</td>
+        </tr>
+        <tr>
+          <td><strong>Normal Saline 0.9% IV — 125 mL/hr</strong></td>
+          <td>Isotonic crystalloid IV fluid</td>
+          <td>Hydration support — thins mucus secretions; maintains vascular volume; monitor IV site, I&amp;O, lung sounds for fluid overload; ensure correct flow rate per order</td>
+        </tr>
+        <tr>
+          <td><strong>Oxygen via Non-Rebreather Mask (NRB)</strong></td>
+          <td>Supportive — O2 delivery device</td>
+          <td>Set at 10–15 LPM; inflate reservoir bag before placing on patient; bag must not fully collapse during inspiration (increase flow if it does); delivers 60–90% FiO2; monitor SpO2 continuously; target ≥92% in asthma (unlike COPD, do not restrict O2 in asthma); reassess mask fit frequently</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- APPENDIX B: Q&A -->
+  <div class="phase-card" id="appendix-b">
+    <div class="phase-header">
+      <span class="phase-badge">Appendix B</span>
+      <h2>Post-Simulation Questions &amp; Answers</h2>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Q1: Define asthma and describe its common triggers.</summary>
+      <div class="reveal-content">
+        <p><strong>Asthma</strong> is a chronic inflammatory disorder of the airways characterized by airway inflammation, bronchospasm, increased mucus production, and airway hyperresponsiveness. The resulting airflow obstruction is typically <strong>reversible</strong> — distinguishing it from COPD.</p>
+        <p><strong>Common Triggers:</strong></p>
+        <ul>
+          <li>Respiratory infections (pneumonia, URI — Kimberly's trigger)</li>
+          <li>Allergens: dust mites, pollen, pet dander, mold</li>
+          <li>Exercise (exercise-induced bronchoconstriction)</li>
+          <li>Cold air, dry air</li>
+          <li>Tobacco smoke and air pollution</li>
+          <li>NSAID/aspirin use (aspirin-exacerbated respiratory disease)</li>
+          <li>Emotional stress and anxiety</li>
+          <li>Occupational exposures (chemicals, dust, fumes)</li>
+        </ul>
+      </div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q2: How does anxiety worsen an asthma exacerbation, and what nursing interventions address it?</summary>
+      <div class="reveal-content">
+        <p><strong>Anxiety–Asthma Link:</strong></p>
+        <ul>
+          <li>Anxiety activates the sympathetic nervous system → increased RR → hyperventilation → worsens air trapping and V/Q mismatch</li>
+          <li>Anxiety-driven hyperventilation paradoxically worsens gas exchange in an already-obstructed airway</li>
+          <li>Creates a feedback loop: dyspnea → fear → worse dyspnea</li>
+        </ul>
+        <p><strong>Nursing Interventions:</strong></p>
+        <ol>
+          <li>Remain calm and present — do not leave the room</li>
+          <li>Use a therapeutic, reassuring tone — "You're in the right place. The medication is working."</li>
+          <li>Breathing coaching — "Follow my lead — breathe in slowly, breathe out slowly"</li>
+          <li>Reduce environmental stimulation — dim lights, lower noise level if possible</li>
+          <li>Give simple, one-at-a-time instructions — do not overwhelm</li>
+          <li>Administer ordered bronchodilators promptly — improving breathing reduces anxiety</li>
+        </ol>
+      </div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q3: Describe the correct application and monitoring of a non-rebreather mask.</summary>
+      <div class="reveal-content">
+        <p><strong>Correct NRB Application:</strong></p>
+        <ol>
+          <li>Set flow rate to 10–15 LPM</li>
+          <li><strong>Inflate the reservoir bag before placing on the patient</strong> — occlude the bag's valve and allow it to fill fully</li>
+          <li>Place mask over nose and mouth; mold the nose piece for a seal</li>
+          <li>Adjust elastic straps so mask fits snugly without causing pressure injury</li>
+        </ol>
+        <p><strong>Ongoing Monitoring:</strong></p>
+        <ul>
+          <li>Reservoir bag should deflate slightly during inhalation and re-inflate during exhalation</li>
+          <li>If the bag fully collapses: immediately increase flow rate — patient may be rebreathing CO2</li>
+          <li>Monitor SpO2 continuously — document response to O2 therapy</li>
+          <li>Check mask seal — if patient is mouth-breathing around the mask, adjust fit</li>
+          <li>Reassess skin under the mask for pressure injury with prolonged use</li>
+        </ul>
+      </div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q4: Why does prednisone cause hyperglycemia, and which patients are most at risk?</summary>
+      <div class="reveal-content">
+        <p><strong>Mechanism of Steroid-Induced Hyperglycemia:</strong></p>
+        <ol>
+          <li>Corticosteroids stimulate gluconeogenesis in the liver → increased glucose production</li>
+          <li>Reduce peripheral glucose uptake by decreasing insulin receptor sensitivity (insulin resistance)</li>
+          <li>May also reduce pancreatic insulin secretion in susceptible individuals</li>
+          <li>The effect is dose-dependent and peaks approximately 4–8 hours after oral administration</li>
+        </ol>
+        <p><strong>Patients Most at Risk:</strong></p>
+        <ul>
+          <li>Known diabetics (Type 1 or Type 2) — require insulin adjustments during steroid course</li>
+          <li>Prediabetics — may present with overt diabetes for the first time</li>
+          <li>Patients with strong family history of diabetes</li>
+          <li>Obese patients — already insulin resistant</li>
+          <li>Even previously normoglycemic patients like Kimberly can develop transient hyperglycemia on steroids</li>
+        </ul>
+      </div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q5: What are the key discharge education topics for Kimberly regarding asthma management?</summary>
+      <div class="reveal-content">
+        <ul>
+          <li><strong>Asthma Action Plan:</strong> Review green/yellow/red zones; know when to use rescue inhaler, call the provider, or call 911</li>
+          <li><strong>Rescue vs. Controller inhalers:</strong> Albuterol is rescue (for acute symptoms); maintenance/controller inhalers (inhaled corticosteroids) prevent exacerbations — never use rescue inhaler as a substitute for controller</li>
+          <li><strong>Inhaler technique:</strong> Shake, exhale, slow deep inhalation, hold breath 10 seconds; use a spacer for better delivery</li>
+          <li><strong>Identify and avoid triggers:</strong> Keep an asthma diary; respiratory infections are a major trigger — annual flu vaccine, pneumococcal vaccine</li>
+          <li><strong>Peak flow monitoring:</strong> Use a peak flow meter daily; recognize personal best and action zones</li>
+          <li><strong>Follow-up:</strong> Schedule appointment with primary provider or pulmonologist within 1–2 weeks; do not wait until next exacerbation</li>
+          <li><strong>When to seek emergency care:</strong> If rescue inhaler provides no relief; if unable to speak in sentences; if lips or fingertips turn blue</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <!-- APPENDIX C: References -->
+  <div class="phase-card" id="appendix-c">
+    <div class="phase-header">
+      <span class="phase-badge">Appendix C</span>
+      <h2>References</h2>
+    </div>
+    <ol class="ref-list">
+      <li>Harding, M. M., Kwong, J., Roberts, D., Reinisch, C., &amp; Hagler, D. (2020). <em>Lewis's medical-surgical nursing</em> (11th ed.). Elsevier.</li>
+      <li>Vallerand, A. H., &amp; Sanoski, C. A. (2021). <em>Davis's drug guide for nurses</em> (17th ed.). F.A. Davis.</li>
+      <li>Potter, P. A., Perry, A. G., Stockert, P. A., &amp; Hall, A. (2021). <em>Fundamentals of nursing</em> (10th ed.). Elsevier.</li>
+    </ol>
+    <div style="margin-top: 2rem;">
+      <a href={`${base}cases/med-surgical/`} class="btn-back">← Back to Med-Surgical</a>
+    </div>
+  </div>
+
+</BaseLayout>
+
+<style>
+  /* ── Phase structure ─────────────────────────────────────────── */
+  .case-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-top: 0.25rem;
+  }
+
+  .phase-card {
+    background: var(--color-surface);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 0;
+    box-shadow: var(--shadow);
+    border-top: 4px solid var(--color-primary);
+  }
+
+  .appendix-card {
+    border-top-color: var(--color-secondary);
+  }
+
+  .phase-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .phase-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .phase-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+
+  .phase-badge-appendix {
+    background: var(--color-secondary);
+  }
+
+  .phase-intro {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin-bottom: 1.25rem;
+    border-left: 3px solid var(--color-accent);
+    padding-left: 0.75rem;
+  }
+
+  .phase-connector {
+    text-align: center;
+    padding: 0.6rem 0;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+  }
+
+  /* ── Info grid ───────────────────────────────────────────────── */
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 720px) {
+    .info-grid { grid-template-columns: 1fr; }
+    .compare-grid { grid-template-columns: 1fr; }
+  }
+
+  .info-block h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  /* ── Tables ──────────────────────────────────────────────────── */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--color-border);
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .data-table thead th {
+    background: #f0f4ff;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+  }
+
+  .data-table tbody th {
+    background: #f8f9fa;
+    font-weight: 600;
+    width: 30%;
+    color: var(--color-text);
+  }
+
+  .med-table tbody th {
+    width: 28%;
+  }
+
+  /* ── Callouts ────────────────────────────────────────────────── */
+  .callout {
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .callout p { margin-bottom: 0.5rem; }
+  .callout p:last-child { margin-bottom: 0; }
+
+  .callout-info {
+    background: #e8f0fe;
+    border-left: 4px solid var(--color-primary);
+  }
+
+  .callout-warning {
+    background: #fff8e1;
+    border-left: 4px solid #f59e0b;
+  }
+
+  .callout-danger {
+    background: #fff0f0;
+    border-left: 4px solid #dc2626;
+  }
+
+  /* ── Badges ──────────────────────────────────────────────────── */
+  .badge-danger {
+    display: inline-block;
+    background: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fca5a5;
+    border-radius: 4px;
+    padding: 0.1rem 0.45rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .badge-warning {
+    display: inline-block;
+    background: #fffbeb;
+    color: #92400e;
+    border: 1px solid #fde68a;
+    border-radius: 4px;
+    padding: 0.1rem 0.45rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  /* ── Scene box ───────────────────────────────────────────────── */
+  .scene-box {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .scene-box h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* ── Med list ────────────────────────────────────────────────── */
+  .med-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .med-list li {
+    padding: 0.35rem 0;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 0.9rem;
+  }
+
+  .med-list li:last-child { border-bottom: none; }
+
+  /* ── Chain flow ──────────────────────────────────────────────── */
+  .chain-flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin: 1.25rem 0;
+  }
+
+  .chain-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 520px;
+    gap: 0.2rem;
+  }
+
+  .chain-step small {
+    font-size: 0.8rem;
+    opacity: 0.8;
+  }
+
+  .chain-step-drug {
+    background: #e8f0fe;
+    color: var(--color-primary-dark);
+    border: 1px solid #bfdbfe;
+  }
+
+  .chain-step-problem {
+    background: #fff8e1;
+    color: #78350f;
+    border: 1px solid #fde68a;
+  }
+
+  .chain-step-consequence {
+    background: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+  }
+
+  .chain-arrow {
+    font-size: 1.5rem;
+    color: var(--color-text-muted);
+    line-height: 1.2;
+  }
+
+  .chain-icon {
+    font-size: 1.4rem;
+  }
+
+  /* ── Stat highlight ──────────────────────────────────────────── */
+  .stat-highlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fef2f2;
+    border: 2px solid #fca5a5;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #b91c1c;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+    color: #7f1d1d;
+    margin-top: 0.25rem;
+  }
+
+  /* ── Reveal (details/summary) ────────────────────────────────── */
+  .reveal-block {
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    margin-top: 1rem;
+    overflow: hidden;
+  }
+
+  .reveal-block > summary {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--color-primary);
+    background: #f0f4ff;
+    list-style: none;
+    user-select: none;
+  }
+
+  .reveal-block > summary::-webkit-details-marker { display: none; }
+
+  .reveal-block[open] > summary {
+    background: #dbeafe;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .reveal-block > summary:hover {
+    background: #dbeafe;
+  }
+
+  .reveal-content {
+    padding: 1rem 1.25rem;
+  }
+
+  .reveal-content ul,
+  .reveal-content ol {
+    margin-bottom: 0.75rem;
+  }
+
+  /* ── SBAR block ──────────────────────────────────────────────── */
+  .sbar-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    margin-bottom: 1.5rem;
+  }
+
+  .sbar-item {
+    padding: 1rem 1.25rem;
+  }
+
+  .sbar-item p { margin: 0; font-style: italic; }
+
+  .sbar-label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.4rem;
+  }
+
+  .sbar-s { background: #eff6ff; border-left: 5px solid #3b82f6; }
+  .sbar-b { background: #f0fdf4; border-left: 5px solid #22c55e; }
+  .sbar-a { background: #fffbeb; border-left: 5px solid #f59e0b; }
+  .sbar-r { background: #fef2f2; border-left: 5px solid #ef4444; }
+
+  /* ── Priority diagnoses ──────────────────────────────────────── */
+  .dx-rank-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .dx-rank-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: #f8f9fa;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+  }
+
+  .dx-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .dx-aeb {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-top: 0.2rem;
+  }
+
+  /* ── Compare grid ────────────────────────────────────────────── */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .compare-grid h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  /* ── Concept map ─────────────────────────────────────────────── */
+  .concept-map {
+    margin-bottom: 1.25rem;
+  }
+
+  /* ── References ──────────────────────────────────────────────── */
+  .ref-list {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .ref-note {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin: 0;
+  }
+
+  /* ── Utility ─────────────────────────────────────────────────── */
+  .text-success { color: #15803d; }
+  .text-danger  { color: #b91c1c; }
+
+  .btn-back {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .btn-back:hover {
+    background: var(--color-primary-dark);
+    text-decoration: none;
+  }
+</style>

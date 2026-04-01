@@ -1,0 +1,987 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout
+  title="Med-Surgical 9 — Keola Akana"
+  description="Unfolding case study: Heart Failure Management, Digoxin Toxicity Recognition, and Hypokalemia (MED-09)"
+>
+
+  <div class="breadcrumb">
+    <a href={base}>Home</a>
+    <span>›</span>
+    <a href={`${base}cases/`}>Cases</a>
+    <span>›</span>
+    <a href={`${base}cases/med-surgical/`}>Med-Surgical</a>
+    <span>›</span>
+    <span>Med-Surgical 9 — Keola Akana</span>
+  </div>
+
+  <div class="case-header">
+    <span class="card-tag">Cardiac / Heart Failure</span>
+    <h1>Med-Surgical 9 — Keola Akana</h1>
+    <p class="case-subtitle">Heart Failure Management, Digoxin Toxicity Recognition, and Hypokalemia</p>
+    <div class="case-meta">
+      <span>👤 Keola Akana, 70 years, Male</span>
+      <span>⏱ Scenario: 20–25 minutes</span>
+      <span>💬 Debrief: 20–25 minutes</span>
+    </div>
+  </div>
+
+  <div class="callout callout-info">
+    <strong>📖 How to Use This Unfolding Case Study</strong>
+    <p>Work through each phase in order. Information is revealed progressively — exactly as it would be in a real clinical encounter. Before reading each answer, pause and reason through the question yourself. Use the <strong>▶ Reveal Answer</strong> toggles to check your thinking.</p>
+  </div>
+
+  <!-- PHASE 1 -->
+  <div class="phase-card" id="phase1">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 1</span>
+      <h2>You Arrive at the Bedside</h2>
+    </div>
+    <p class="phase-intro">It is Monday at 0900. You are the morning nurse on the cardiac medical-surgical unit. Keola Akana, a 70-year-old male, was admitted for heart failure medication adjustment and monitoring. His morning medications are due and you are preparing to administer them.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>📋 Handoff Report</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Patient</th><td>Keola Akana</td></tr>
+            <tr><th>Age / Gender</th><td>70 years · Male</td></tr>
+            <tr><th>Primary Dx</th><td>Heart failure (chronic) — admitted for medication adjustment and monitoring</td></tr>
+            <tr><th>Overnight</th><td>Stable overnight; morning medications due; telemetry in place</td></tr>
+            <tr><th>Reported symptoms</th><td>Nausea; reports "seeing yellow halos around lights"</td></tr>
+            <tr><th>Allergies</th><td>Review MAR</td></tr>
+            <tr><th>Code Status</th><td>Full code</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>💊 Medications on MAR</h3>
+        <ul class="med-list">
+          <li><strong>Digoxin (Lanoxin)</strong> — PO, cardiac glycoside</li>
+          <li><strong>Furosemide (Lasix)</strong> — PO, loop diuretic</li>
+          <li><strong>Spironolactone (Aldactone)</strong> — PO, potassium-sparing diuretic</li>
+          <li><strong>Potassium Chloride (KCl)</strong> — PO, electrolyte replacement</li>
+          <li><strong>Atenolol (Tenormin)</strong> — PO, beta-1 selective blocker</li>
+          <li><strong>Acetaminophen</strong> — PO, PRN pain/fever</li>
+        </ul>
+      </div>
+    </div>
+    <div class="scene-box">
+      <h3>🚪 Entering the Room — What You Observe</h3>
+      <p>Keola is sitting up in bed, appearing fatigued. He says, "I've been feeling a little nauseated since yesterday and things look a bit yellow to me — like there are halos around the lights." He appears slightly confused about the day. His telemetry leads are in place.</p>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: What is your initial clinical suspicion based on the report and what you observe at the bedside?</summary>
+      <div class="reveal-content">
+        <p><strong>Initial suspicion: Digoxin toxicity</strong></p>
+        <p>The combination of three findings is the classic triad of digoxin toxicity:</p>
+        <ul>
+          <li><strong>Nausea</strong> — GI symptoms are often the FIRST manifestation of digoxin toxicity</li>
+          <li><strong>"Yellow halos around lights"</strong> (xanthopsia) — visual color disturbances, particularly yellow-green halos, are <strong>pathognomonic</strong> (uniquely characteristic) of digoxin toxicity</li>
+          <li><strong>Fatigue and mild confusion</strong> — neurological symptoms of toxicity</li>
+        </ul>
+        <p><strong>Immediate action before ANY morning medications:</strong></p>
+        <ol>
+          <li>Check apical pulse for a full minute</li>
+          <li>Review serum digoxin level and potassium on most recent labs</li>
+          <li>Do NOT administer digoxin until assessment is complete</li>
+        </ol>
+        <p><strong>Why this matters:</strong> Digoxin has a <strong>narrow therapeutic window</strong> (0.5–2.0 ng/mL). Even a small increase above therapeutic levels — especially when potassium is low — can cause life-threatening cardiac dysrhythmias.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ You obtain a full set of vital signs before touching any medications…</div>
+
+  <!-- PHASE 2 -->
+  <div class="phase-card" id="phase2">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 2</span>
+      <h2>Vital Signs and Digoxin Toxicity Assessment</h2>
+    </div>
+    <p class="phase-intro">You obtain a complete set of vital signs and perform a focused assessment. Your findings confirm your suspicion.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>📊 Vital Signs</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Heart Rate</th><td><strong class="text-danger">54 bpm — irregular</strong> (bradycardia)</td></tr>
+            <tr><th>Blood Pressure</th><td><strong class="text-danger">102/68 mmHg</strong> (low)</td></tr>
+            <tr><th>Respiratory Rate</th><td>18 breaths/min</td></tr>
+            <tr><th>SpO₂</th><td>96% on room air</td></tr>
+            <tr><th>Temperature</th><td>37.1°C (98.8°F)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>🔍 Digoxin Toxicity — Classic Signs</h3>
+        <table class="data-table">
+          <thead><tr><th>System</th><th>Finding</th></tr></thead>
+          <tbody>
+            <tr><td>GI (first signs)</td><td>Nausea, vomiting, anorexia, diarrhea</td></tr>
+            <tr><td>Visual <strong>(pathognomonic)</strong></td><td>Yellow-green halos, xanthopsia, blurred vision</td></tr>
+            <tr><td>Cardiovascular</td><td><strong>Bradycardia</strong> (HR &lt; 60); heart block; dysrhythmias; irregular pulse</td></tr>
+            <tr><td>Neurological</td><td>Fatigue, confusion, headache, depression</td></tr>
+          </tbody>
+        </table>
+        <div class="callout callout-warning" style="margin-top: 0.75rem; margin-bottom: 0;">
+          <strong>Therapeutic range: 0.5–2.0 ng/mL</strong><br/>
+          Toxicity can occur even at "therapeutic" levels when potassium is low.
+        </div>
+      </div>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: Why are the yellow halos "pathognomonic" for digoxin toxicity? What makes visual disturbances a high-priority finding?</summary>
+      <div class="reveal-content">
+        <p><strong>Pathognomonic:</strong> A finding is pathognomonic when it is so specific to a condition that its presence alone is sufficient to diagnose that condition. Yellow-green visual halos (xanthopsia) and yellow tinting of vision are so uniquely associated with digoxin toxicity that they are taught as the classic identifier — when a patient on digoxin reports seeing yellow halos, digoxin toxicity must be assumed until proven otherwise.</p>
+        <p><strong>Why visual changes are a priority finding:</strong></p>
+        <ul>
+          <li>Visual disturbances indicate the drug has reached toxic levels in the central nervous system</li>
+          <li>At the same time, toxic levels in the cardiac conduction system are causing the bradycardia and irregular rhythm observed on telemetry</li>
+          <li>Left untreated, cardiac toxicity progresses to <strong>life-threatening dysrhythmias</strong>: ventricular tachycardia, ventricular fibrillation, complete heart block</li>
+          <li><strong>Bottom line:</strong> Visual halos on digoxin = HOLD digoxin + notify provider immediately</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ You review the morning lab results before proceeding with any medications…</div>
+
+  <!-- PHASE 3 -->
+  <div class="phase-card" id="phase3">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 3</span>
+      <h2>Lab Results Review</h2>
+    </div>
+    <p class="phase-intro">The morning lab results are now available in the chart. You review them carefully before making any medication decisions.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>🧪 Key Lab Values</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Serum Digoxin</th><td>1.9 ng/mL <span class="badge-warning">High normal</span><br/><small>Therapeutic: 0.5–2.0 ng/mL</small></td></tr>
+            <tr><th>Potassium (K⁺)</th><td><strong class="text-danger">3.1 mEq/L</strong> — LOW <span class="badge-danger">Critical</span><br/><small>Normal: 3.5–5.0 mEq/L</small></td></tr>
+            <tr><th>Sodium (Na⁺)</th><td>138 mEq/L (normal)</td></tr>
+            <tr><th>BUN</th><td>22 mg/dL (normal)</td></tr>
+            <tr><th>Creatinine</th><td>1.1 mg/dL (normal)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>🔗 The Furosemide–Hypokalemia–Digoxin Chain</h3>
+        <div class="chain-flow">
+          <div class="chain-step chain-step-drug"><span class="chain-icon">💊</span><strong>Furosemide</strong><small>Loop diuretic removes fluid — and potassium</small></div>
+          <div class="chain-arrow">↓</div>
+          <div class="chain-step chain-step-problem"><span class="chain-icon">📉</span><strong>Hypokalemia (K⁺ 3.1)</strong><small>Low potassium lowers digoxin toxicity threshold</small></div>
+          <div class="chain-arrow">↓</div>
+          <div class="chain-step chain-step-consequence"><span class="chain-icon">⚠️</span><strong>Digoxin Toxicity</strong><small>Occurs even at "therapeutic" digoxin levels</small></div>
+        </div>
+      </div>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: How does furosemide cause hypokalemia, and why does hypokalemia worsen digoxin toxicity?</summary>
+      <div class="reveal-content">
+        <p><strong>Furosemide → Hypokalemia mechanism:</strong></p>
+        <ul>
+          <li>Furosemide is a loop diuretic — it blocks the Na-K-2Cl transporter in the thick ascending limb of the loop of Henle</li>
+          <li>This prevents potassium reabsorption → potassium is lost in the urine</li>
+          <li>The more furosemide given and the longer it is used, the more potassium is depleted</li>
+          <li>This is why KCl supplementation is prescribed alongside furosemide, and why <strong>spironolactone</strong> (a potassium-sparing diuretic) is often given concurrently — to offset the potassium loss</li>
+        </ul>
+        <p><strong>Hypokalemia → Enhanced Digoxin Toxicity mechanism:</strong></p>
+        <ul>
+          <li>Digoxin works by inhibiting the Na-K-ATPase pump in cardiac cells</li>
+          <li>When extracellular potassium is low, the Na-K-ATPase pump has less substrate to work with — and digoxin competes more effectively for the same binding site</li>
+          <li>Low K⁺ effectively <strong>potentiates</strong> digoxin's binding, causing toxic effects even when the serum digoxin level appears "therapeutic" (as in Keola's case: 1.9 ng/mL is within range, but his K⁺ 3.1 makes it functionally toxic)</li>
+        </ul>
+        <p><strong>Clinical implication:</strong> Always check K⁺ BEFORE administering digoxin. Normal K⁺ is a prerequisite for safe digoxin administration.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ Armed with the lab results and your assessment, you make critical medication decisions…</div>
+
+  <!-- PHASE 4 -->
+  <div class="phase-card" id="phase4">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 4</span>
+      <h2>HOLD Digoxin Decision</h2>
+    </div>
+    <p class="phase-intro">You review the MAR. Multiple morning medications are due. Based on your assessment and lab results, you must decide which medications to give and which to hold.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>🛑 Criteria to HOLD Digoxin</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>HR &lt; 60 bpm</th><td class="text-danger">✘ HOLD — Keola's HR is 54</td></tr>
+            <tr><th>HR &gt; 100 bpm</th><td>N/A</td></tr>
+            <tr><th>K⁺ &lt; 3.5 mEq/L</th><td class="text-danger">✘ HOLD — K⁺ is 3.1</td></tr>
+            <tr><th>Signs of toxicity</th><td class="text-danger">✘ HOLD — nausea, visual halos</td></tr>
+            <tr><th>Digoxin level approaching toxic</th><td class="text-danger">✘ HOLD — 1.9 ng/mL with low K⁺</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>⚖️ Additional Medication Decisions</h3>
+        <table class="data-table">
+          <thead><tr><th>Medication</th><th>Decision</th><th>Reason</th></tr></thead>
+          <tbody>
+            <tr><td>Digoxin</td><td class="text-danger"><strong>HOLD</strong></td><td>HR 54, K⁺ 3.1, toxicity signs</td></tr>
+            <tr><td>Atenolol</td><td class="text-danger"><strong>HOLD</strong></td><td>HR already 54 — atenolol lowers HR further; giving it risks severe bradycardia or heart block</td></tr>
+            <tr><td>Furosemide</td><td class="badge-warning">Reassess</td><td>Continuing furosemide worsens hypokalemia — notify provider before giving</td></tr>
+            <tr><td>Spironolactone</td><td class="text-success">Give per order</td><td>K⁺-sparing — helps conserve potassium; does not lower HR</td></tr>
+            <tr><td>KCl</td><td class="text-success">Give per order</td><td>Replaces potassium — essential for resolving toxicity risk</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: Why is withholding medications a clinical decision, not a medication error? What is the difference between spironolactone and furosemide on potassium?</summary>
+      <div class="reveal-content">
+        <p><strong>Withholding is a clinical decision:</strong></p>
+        <ul>
+          <li>Withholding a medication based on assessment findings (HR below parameter, toxicity signs, abnormal lab) is a <strong>safe nursing practice</strong> — it is the nurse's clinical judgment preventing patient harm</li>
+          <li>It must be <strong>documented with a clear rationale</strong>: "Digoxin held — HR 54 (parameter: hold if &lt; 60), K⁺ 3.1 (supratherapeutic risk), visual halos and nausea present. Provider notified."</li>
+          <li>It is NOT a medication error — it is the professional, accountable action the nurse is expected to take</li>
+          <li>The nurse then calls the provider to report findings and receive further orders</li>
+        </ul>
+        <p><strong>Spironolactone vs. Furosemide on potassium:</strong></p>
+        <ul>
+          <li><strong>Furosemide (loop diuretic):</strong> Causes potassium <em>loss</em> → hypokalemia risk; must supplement K⁺</li>
+          <li><strong>Spironolactone (aldosterone antagonist / K⁺-sparing diuretic):</strong> Blocks aldosterone → reduces potassium excretion → <em>retains</em> potassium; risk is hyperkalemia if K⁺ is already high</li>
+          <li>In heart failure, they are often used together: furosemide for fluid removal + spironolactone to offset K⁺ loss + KCl supplement as needed</li>
+          <li>When giving spironolactone, monitor for <strong>hyperkalemia</strong> (especially if also on ACE inhibitors or ARBs)</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ With medication decisions made, you notify the provider using SBAR…</div>
+
+  <!-- PHASE 5 -->
+  <div class="phase-card" id="phase5">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 5</span>
+      <h2>Provider Notification and Medication Safety</h2>
+    </div>
+    <p class="phase-intro">You call the provider to report your findings and the medications you have withheld. You document all actions carefully and continue to monitor Keola on telemetry.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>📋 Documentation Requirements</h3>
+        <ul class="med-list">
+          <li>Document withheld medications with <strong>specific rationale</strong> for each hold</li>
+          <li>Record exact vital signs and lab values that informed the decision</li>
+          <li>Document time of provider notification and provider response</li>
+          <li>Record Keola's reported symptoms (nausea, visual halos) with direct quotes when possible</li>
+          <li>Document ongoing telemetry monitoring and rhythm findings</li>
+        </ul>
+      </div>
+      <div class="info-block">
+        <h3>💛 Ongoing Monitoring Priorities</h3>
+        <ul class="med-list">
+          <li><strong>Cardiac telemetry</strong> — continuous; document rhythm changes</li>
+          <li><strong>Apical pulse</strong> q1h — watch for further bradycardia or new dysrhythmias</li>
+          <li><strong>Repeat K⁺ level</strong> after KCl administration per provider order</li>
+          <li><strong>Repeat digoxin level</strong> per provider order (draw 6–8 hrs after last dose)</li>
+          <li>Neurological status — confusion level, orientation</li>
+          <li>GI symptoms — nausea, vomiting, anorexia</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout callout-info">
+      <strong>🥦 Potassium-Rich Foods — Daily Dietary Education</strong>
+      <p>While potassium replacement is ongoing, teach Keola to include high-potassium foods in his daily diet: bananas, oranges, baked potatoes, sweet potatoes, spinach, avocados, yogurt, beans, and tomatoes. In heart failure, coordinate with a dietitian — a low-sodium, high-potassium diet is the goal.</p>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: Why is "withholding digoxin" not the same as "missing a dose"? How does the nurse communicate this to the family?</summary>
+      <div class="reveal-content">
+        <p><strong>Withholding vs. missing a dose:</strong></p>
+        <ul>
+          <li><strong>Missing a dose</strong> = unintentional omission; represents a failure in the medication administration process; is a medication error</li>
+          <li><strong>Withholding</strong> = intentional, documented, clinical decision based on assessment parameters; is the correct nursing action; prevents patient harm</li>
+          <li>All withheld medications require: documentation of rationale, provider notification, and a plan for when/if the medication will be resumed</li>
+        </ul>
+        <p><strong>Communicating with family:</strong></p>
+        <ul>
+          <li>Use plain language: "Mr. Akana, I'm holding one of your heart medications this morning because your heart rate is slower than we want it to be, and your bloodwork shows your potassium is a little low. These are signs that your body has a little too much of the digoxin right now. I've called your doctor to let them know."</li>
+          <li>Involve family in understanding when to call the provider at home: HR &lt; 60, visual changes, nausea, confusion</li>
+          <li>Do not create alarm — frame as proactive safety action</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ You complete your care by providing comprehensive patient education…</div>
+
+  <!-- PHASE 6 -->
+  <div class="phase-card" id="phase6">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 6</span>
+      <h2>Patient Education and Nursing Diagnoses</h2>
+    </div>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>🍌 High-Potassium Foods Table</h3>
+        <table class="data-table">
+          <thead><tr><th>Food</th><th>Potassium (approx.)</th></tr></thead>
+          <tbody>
+            <tr><td>Baked potato (medium)</td><td>~900 mg</td></tr>
+            <tr><td>Avocado (½)</td><td>~487 mg</td></tr>
+            <tr><td>Spinach (cooked, ½ cup)</td><td>~419 mg</td></tr>
+            <tr><td>Banana (medium)</td><td>~422 mg</td></tr>
+            <tr><td>Orange juice (8 oz)</td><td>~496 mg</td></tr>
+            <tr><td>Yogurt (plain, 1 cup)</td><td>~380 mg</td></tr>
+            <tr><td>Beans (cooked, ½ cup)</td><td>~360–440 mg</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>📞 When to Call the Provider at Home</h3>
+        <ul class="med-list">
+          <li>Heart rate &lt; 60 or &gt; 100 bpm (check pulse daily before digoxin)</li>
+          <li>Visual changes — halos, yellow tint, blurred vision</li>
+          <li>Nausea, vomiting, or loss of appetite (may be first sign of toxicity)</li>
+          <li>New confusion or unusual fatigue</li>
+          <li>Weight gain &gt; 2 lbs overnight or 5 lbs in a week (fluid retention)</li>
+          <li>Increased leg/ankle swelling or shortness of breath</li>
+        </ul>
+      </div>
+    </div>
+    <div class="scene-box">
+      <h3>⚖️ Heart Failure Self-Monitoring — Daily Routine</h3>
+      <table class="data-table">
+        <thead><tr><th>Task</th><th>How / When</th><th>Alert if…</th></tr></thead>
+        <tbody>
+          <tr><td>Daily weight</td><td>Same scale, same time (morning, after voiding, before eating)</td><td>+2 lbs in 24 hrs or +5 lbs in 1 week → call provider</td></tr>
+          <tr><td>Check pulse</td><td>Count apical or radial pulse for 1 full minute before digoxin</td><td>HR &lt; 60 → hold digoxin; call provider</td></tr>
+          <tr><td>Check for edema</td><td>Check ankles and legs daily; note if rings or shoes feel tight</td><td>New or worsening swelling → call provider</td></tr>
+          <tr><td>Monitor breathing</td><td>Note if SOB at rest or with minimal activity; can you lie flat?</td><td>SOB at rest or orthopnea → call provider or 911</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3>📋 Priority Nursing Diagnoses</h3>
+    <div class="dx-rank-list">
+      <div class="dx-rank-item">
+        <span class="dx-number">1</span>
+        <div><strong>Decreased Cardiac Output</strong><div class="dx-aeb">AEB: HR 54 irregular, BP 102/68, fatigue, digoxin toxicity with bradycardia and dysrhythmia risk</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">2</span>
+        <div><strong>Risk for Electrolyte Imbalance</strong><div class="dx-aeb">K⁺ 3.1 mEq/L; furosemide-induced potassium loss; hypokalemia potentiating digoxin toxicity</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">3</span>
+        <div><strong>Deficient Knowledge</strong><div class="dx-aeb">AEB: patient unaware of digoxin toxicity signs; needs education on pulse monitoring, dietary potassium, and when to call provider</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">4</span>
+        <div><strong>Activity Intolerance</strong><div class="dx-aeb">AEB: fatigue, bradycardia, decreased cardiac output related to heart failure and acute toxicity</div></div>
+      </div>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ SBAR — Calling the Provider About Keola's Digoxin Toxicity</summary>
+      <div class="reveal-content">
+        <div class="sbar-block">
+          <div class="sbar-item sbar-s"><span class="sbar-label">S — Situation</span><p>Calling about Keola Akana, 70-year-old male admitted for heart failure medication adjustment. I am concerned about signs of digoxin toxicity and I have held his morning digoxin and atenolol.</p></div>
+          <div class="sbar-item sbar-b"><span class="sbar-label">B — Background</span><p>Admitted Monday for chronic heart failure medication adjustment. Current medications include digoxin, furosemide, spironolactone, KCl, atenolol, and acetaminophen PRN. Morning labs just resulted.</p></div>
+          <div class="sbar-item sbar-a"><span class="sbar-label">A — Assessment</span><p>Vital signs: HR 54 and irregular, BP 102/68, RR 18, SpO₂ 96%. Patient reports nausea and is seeing yellow halos around lights. Lab results: serum digoxin 1.9 ng/mL (high normal), potassium 3.1 mEq/L (below normal). Telemetry shows bradycardia with irregular rhythm. I have held digoxin and atenolol based on HR below 60 and toxicity signs. I administered spironolactone and KCl as ordered.</p></div>
+          <div class="sbar-item sbar-r"><span class="sbar-label">R — Recommendation</span><p>Requesting provider assessment; orders for ongoing management of digoxin toxicity and hypokalemia; clarification on furosemide dose given continued K⁺ loss; repeat K⁺ and digoxin level orders; guidance on when to resume digoxin and atenolol; and consideration of Digibind (digoxin immune Fab) if toxicity worsens.</p></div>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <!-- APPENDIX A: Medications -->
+  <div class="phase-card" id="appendix-a">
+    <div class="phase-header">
+      <span class="phase-badge">Appendix A</span>
+      <h2>Medication Review</h2>
+    </div>
+    <table class="data-table">
+      <thead><tr><th>Medication</th><th>Class</th><th>Key Nursing Points</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Digoxin (Lanoxin)</strong></td>
+          <td>Cardiac glycoside (positive inotrope)</td>
+          <td><strong>Narrow therapeutic window: 0.5–2.0 ng/mL.</strong> Check apical pulse × 1 full minute — HOLD if HR &lt; 60. Check K⁺ before giving — hypokalemia potentiates toxicity. Toxicity signs: nausea, visual halos (yellow-green), bradycardia, dysrhythmias. Antidote: <strong>Digoxin immune Fab (Digibind)</strong> for severe toxicity. Draw trough level 6–8 hrs after last dose.</td>
+        </tr>
+        <tr>
+          <td><strong>Furosemide (Lasix)</strong></td>
+          <td>Loop diuretic</td>
+          <td>Reduces fluid overload in heart failure; causes <strong>potassium loss (hypokalemia)</strong>; give in AM to prevent nocturia; monitor I&amp;O, daily weights, and potassium; hold if patient is dehydrated or renal function declining. Ototoxic at high doses.</td>
+        </tr>
+        <tr>
+          <td><strong>Spironolactone (Aldactone)</strong></td>
+          <td>Potassium-sparing diuretic / aldosterone antagonist</td>
+          <td>Offsets furosemide's K⁺ loss; <strong>monitor for hyperkalemia</strong> (especially with ACE inhibitors or ARBs); avoid high-K⁺ foods in excess; can cause gynecomastia in males with long-term use. Reduces mortality in moderate-to-severe heart failure.</td>
+        </tr>
+        <tr>
+          <td><strong>Potassium Chloride (KCl)</strong></td>
+          <td>Electrolyte supplement</td>
+          <td>Replaces potassium; <strong>NEVER give IV push</strong> — causes cardiac arrest; IV KCl must be diluted and infused slowly (10–20 mEq/hr max); give PO with food to reduce GI upset; monitor renal function before giving; recheck K⁺ after replacement.</td>
+        </tr>
+        <tr>
+          <td><strong>Atenolol (Tenormin)</strong></td>
+          <td>Beta-1 selective blocker</td>
+          <td>Reduces heart rate and blood pressure; <strong>HOLD if HR &lt; 60 or systolic BP &lt; 90</strong>; do NOT abruptly discontinue (risk of rebound tachycardia); may mask hypoglycemia in diabetic patients; assess HR and BP before each dose.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- APPENDIX B: Q&A -->
+  <div class="phase-card" id="appendix-b">
+    <div class="phase-header">
+      <span class="phase-badge">Appendix B</span>
+      <h2>Post-Simulation Questions &amp; Answers</h2>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Q1: What are the key assessment findings of hypokalemia and what nursing interventions are required?</summary>
+      <div class="reveal-content">
+        <p><strong>Normal K⁺: 3.5–5.0 mEq/L; Hypokalemia: K⁺ &lt; 3.5 mEq/L</strong></p>
+        <p><strong>Assessment findings:</strong></p>
+        <ul>
+          <li><strong>Cardiovascular:</strong> Weak/thready pulse, hypotension, dysrhythmias, <strong>flattened T waves on ECG</strong> (hallmark), U waves, prolonged QT interval</li>
+          <li><strong>Neuromuscular:</strong> Muscle weakness, fatigue, leg cramps, paresthesias (tingling/numbness)</li>
+          <li><strong>GI:</strong> Nausea, anorexia, hypoactive bowel sounds, constipation</li>
+          <li><strong>Neurological:</strong> Lethargy, confusion, irritability</li>
+        </ul>
+        <p><strong>Nursing interventions:</strong></p>
+        <ol>
+          <li>Administer prescribed K⁺ replacement — IV KCl must be diluted, NEVER IV push; monitor infusion rate and cardiac rhythm during IV replacement</li>
+          <li>Encourage high-potassium foods</li>
+          <li>Continuous telemetry monitoring</li>
+          <li>Fall precautions (muscle weakness)</li>
+          <li>Monitor for digoxin toxicity — hypokalemia potentiates digoxin</li>
+          <li>Recheck K⁺ level after replacement</li>
+        </ol>
+      </div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q2: What are the signs and symptoms of digoxin toxicity and how does the nurse assess for them?</summary>
+      <div class="reveal-content">
+        <p><strong>GI (often first signs):</strong> Anorexia, nausea, vomiting, diarrhea, abdominal pain</p>
+        <p><strong>Visual (classic — highly tested):</strong> Yellow-green tint to vision (xanthopsia), <strong>halos around lights</strong>, blurred vision, blind spots</p>
+        <p><strong>Cardiovascular (most dangerous):</strong> Bradycardia (HR &lt; 60), heart block (1st, 2nd, 3rd degree), PVCs, ventricular tachycardia/fibrillation, irregular pulse</p>
+        <p><strong>Neurological:</strong> Fatigue, weakness, confusion, headache, depression</p>
+        <p><strong>Nursing assessment protocol:</strong></p>
+        <ol>
+          <li>Check apical pulse for 1 full minute before each dose</li>
+          <li>Review serum digoxin level (draw trough: 6–8 hrs after last dose)</li>
+          <li>Check serum potassium — hypokalemia worsens toxicity</li>
+          <li>Monitor telemetry for dysrhythmias</li>
+          <li>Ask about GI and visual symptoms every assessment</li>
+          <li>Antidote: <strong>Digoxin immune Fab (Digibind)</strong> for severe toxicity</li>
+        </ol>
+      </div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q3: Explain the furosemide–hypokalemia–digoxin interaction. Why is it clinically dangerous?</summary>
+      <div class="reveal-content">
+        <p><strong>The interaction chain:</strong></p>
+        <ol>
+          <li>Furosemide (loop diuretic) blocks the Na-K-2Cl transporter → potassium is excreted in the urine → <strong>hypokalemia</strong></li>
+          <li>Digoxin works by inhibiting the Na-K-ATPase pump in cardiac myocytes to increase contractility</li>
+          <li>Low extracellular potassium causes digoxin to bind more readily to the Na-K-ATPase pump → even therapeutic digoxin levels become <strong>functionally toxic</strong></li>
+          <li>Result: cardiac conduction disturbances (bradycardia, heart block, dysrhythmias) at digoxin levels that would otherwise be safe</li>
+        </ol>
+        <p><strong>Why this is dangerous:</strong> A patient may have a digoxin level that appears "therapeutic" (0.5–2.0 ng/mL) but is experiencing toxicity because their K⁺ is low. The nurse must always check <em>both</em> values before administering digoxin — the digoxin level alone does not tell the full story.</p>
+      </div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q4: Describe the pathophysiology of heart failure. What are the compensatory mechanisms and why do they ultimately worsen the condition?</summary>
+      <div class="reveal-content">
+        <p><strong>Heart failure definition:</strong> The heart cannot pump sufficient blood to meet the body's metabolic needs, or can only do so at abnormally elevated filling pressures.</p>
+        <p><strong>Left-sided HF:</strong> Left ventricle cannot pump forward → blood backs up into pulmonary circulation → pulmonary edema → dyspnea, orthopnea, crackles, elevated BNP</p>
+        <p><strong>Right-sided HF:</strong> Right ventricle cannot pump into pulmonary circulation → blood backs up into systemic veins → peripheral edema, JVD, hepatomegaly, ascites</p>
+        <p><strong>Compensatory mechanisms (initially helpful, ultimately harmful):</strong></p>
+        <ul>
+          <li><strong>SNS activation:</strong> tachycardia, vasoconstriction → short-term: maintains BP; long-term: increases cardiac work, promotes remodeling</li>
+          <li><strong>RAAS activation:</strong> aldosterone → Na⁺ and water retention → increases preload → increases cardiac work → worsens overload</li>
+          <li><strong>Ventricular remodeling:</strong> hypertrophy and dilation → initially compensates; eventually reduces efficiency and increases arrhythmia risk</li>
+        </ul>
+        <p>These mechanisms are why HF medications target: diuresis (furosemide — reduce preload), neurohormonal blockade (ACE inhibitors, beta-blockers, spironolactone), and inotropy (digoxin).</p>
+      </div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q5: What are the highest-potassium foods Keola should include in his diet, and what dietary restriction is also important in heart failure?</summary>
+      <div class="reveal-content">
+        <p><strong>High-potassium foods (recommended for hypokalemia):</strong></p>
+        <ul>
+          <li>Baked potato (with skin) — highest potassium of common foods (~900 mg)</li>
+          <li>Avocado, spinach, sweet potato, tomato products</li>
+          <li>Bananas, oranges, orange juice, kiwi, raisins</li>
+          <li>Yogurt, beans, lentils, peanut butter</li>
+        </ul>
+        <p><strong>Sodium restriction in heart failure:</strong></p>
+        <ul>
+          <li>Goal: typically &lt; 2,000 mg sodium/day in HF to prevent fluid retention</li>
+          <li>Some potassium-rich foods (tomato products, canned beans) can be high in sodium — read labels and choose low-sodium versions</li>
+          <li>Dietitian referral is strongly recommended to help Keola meet both goals simultaneously</li>
+        </ul>
+        <p><strong>Note on spironolactone:</strong> Because spironolactone retains potassium, overly aggressive potassium supplementation while on spironolactone can cause <strong>hyperkalemia</strong>. The nurse must monitor K⁺ levels regularly and adjust dietary and supplemental potassium accordingly.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- APPENDIX C: References -->
+  <div class="phase-card" id="appendix-c">
+    <div class="phase-header">
+      <span class="phase-badge">Appendix C</span>
+      <h2>References</h2>
+    </div>
+    <ol class="ref-list">
+      <li>Ignatavicius, D. D., Workman, M. L., &amp; Rebar, C. R. (2021). <em>Medical-surgical nursing: Concepts for interprofessional collaborative care</em> (10th ed.). Elsevier.</li>
+      <li>Vallerand, A. H., &amp; Sanoski, C. A. (2021). <em>Davis's drug guide for nurses</em> (17th ed.). F.A. Davis.</li>
+      <li>Hinkle, J. L., &amp; Cheever, K. H. (2022). <em>Brunner &amp; Suddarth's textbook of medical-surgical nursing</em> (15th ed.). Wolters Kluwer.</li>
+      <li>Heart Failure Society of America. (2022). <em>2022 AHA/ACC/HFSA guideline for the management of heart failure</em>. Journal of the American College of Cardiology.</li>
+    </ol>
+    <div style="margin-top: 2rem;">
+      <a href={`${base}cases/med-surgical/`} class="btn-back">← Back to Med-Surgical</a>
+    </div>
+  </div>
+
+</BaseLayout>
+
+<style>
+  /* ── Phase structure ─────────────────────────────────────────── */
+  .case-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-top: 0.25rem;
+  }
+
+  .phase-card {
+    background: var(--color-surface);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 0;
+    box-shadow: var(--shadow);
+    border-top: 4px solid var(--color-primary);
+  }
+
+  .appendix-card {
+    border-top-color: var(--color-secondary);
+  }
+
+  .phase-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .phase-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .phase-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+
+  .phase-badge-appendix {
+    background: var(--color-secondary);
+  }
+
+  .phase-intro {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin-bottom: 1.25rem;
+    border-left: 3px solid var(--color-accent);
+    padding-left: 0.75rem;
+  }
+
+  .phase-connector {
+    text-align: center;
+    padding: 0.6rem 0;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+  }
+
+  /* ── Info grid ───────────────────────────────────────────────── */
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 720px) {
+    .info-grid { grid-template-columns: 1fr; }
+    .compare-grid { grid-template-columns: 1fr; }
+  }
+
+  .info-block h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  /* ── Tables ──────────────────────────────────────────────────── */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--color-border);
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .data-table thead th {
+    background: #f0f4ff;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+  }
+
+  .data-table tbody th {
+    background: #f8f9fa;
+    font-weight: 600;
+    width: 30%;
+    color: var(--color-text);
+  }
+
+  .med-table tbody th {
+    width: 28%;
+  }
+
+  /* ── Callouts ────────────────────────────────────────────────── */
+  .callout {
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .callout p { margin-bottom: 0.5rem; }
+  .callout p:last-child { margin-bottom: 0; }
+
+  .callout-info {
+    background: #e8f0fe;
+    border-left: 4px solid var(--color-primary);
+  }
+
+  .callout-warning {
+    background: #fff8e1;
+    border-left: 4px solid #f59e0b;
+  }
+
+  .callout-danger {
+    background: #fff0f0;
+    border-left: 4px solid #dc2626;
+  }
+
+  /* ── Badges ──────────────────────────────────────────────────── */
+  .badge-danger {
+    display: inline-block;
+    background: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fca5a5;
+    border-radius: 4px;
+    padding: 0.1rem 0.45rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .badge-warning {
+    display: inline-block;
+    background: #fffbeb;
+    color: #92400e;
+    border: 1px solid #fde68a;
+    border-radius: 4px;
+    padding: 0.1rem 0.45rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  /* ── Scene box ───────────────────────────────────────────────── */
+  .scene-box {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .scene-box h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* ── Med list ────────────────────────────────────────────────── */
+  .med-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .med-list li {
+    padding: 0.35rem 0;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 0.9rem;
+  }
+
+  .med-list li:last-child { border-bottom: none; }
+
+  /* ── Chain flow ──────────────────────────────────────────────── */
+  .chain-flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin: 1.25rem 0;
+  }
+
+  .chain-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 520px;
+    gap: 0.2rem;
+  }
+
+  .chain-step small {
+    font-size: 0.8rem;
+    opacity: 0.8;
+  }
+
+  .chain-step-drug {
+    background: #e8f0fe;
+    color: var(--color-primary-dark);
+    border: 1px solid #bfdbfe;
+  }
+
+  .chain-step-problem {
+    background: #fff8e1;
+    color: #78350f;
+    border: 1px solid #fde68a;
+  }
+
+  .chain-step-consequence {
+    background: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+  }
+
+  .chain-arrow {
+    font-size: 1.5rem;
+    color: var(--color-text-muted);
+    line-height: 1.2;
+  }
+
+  .chain-icon {
+    font-size: 1.4rem;
+  }
+
+  /* ── Stat highlight ──────────────────────────────────────────── */
+  .stat-highlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fef2f2;
+    border: 2px solid #fca5a5;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #b91c1c;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+    color: #7f1d1d;
+    margin-top: 0.25rem;
+  }
+
+  /* ── Reveal (details/summary) ────────────────────────────────── */
+  .reveal-block {
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    margin-top: 1rem;
+    overflow: hidden;
+  }
+
+  .reveal-block > summary {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--color-primary);
+    background: #f0f4ff;
+    list-style: none;
+    user-select: none;
+  }
+
+  .reveal-block > summary::-webkit-details-marker { display: none; }
+
+  .reveal-block[open] > summary {
+    background: #dbeafe;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .reveal-block > summary:hover {
+    background: #dbeafe;
+  }
+
+  .reveal-content {
+    padding: 1rem 1.25rem;
+  }
+
+  .reveal-content ul,
+  .reveal-content ol {
+    margin-bottom: 0.75rem;
+  }
+
+  /* ── SBAR block ──────────────────────────────────────────────── */
+  .sbar-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    margin-bottom: 1.5rem;
+  }
+
+  .sbar-item {
+    padding: 1rem 1.25rem;
+  }
+
+  .sbar-item p { margin: 0; font-style: italic; }
+
+  .sbar-label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.4rem;
+  }
+
+  .sbar-s { background: #eff6ff; border-left: 5px solid #3b82f6; }
+  .sbar-b { background: #f0fdf4; border-left: 5px solid #22c55e; }
+  .sbar-a { background: #fffbeb; border-left: 5px solid #f59e0b; }
+  .sbar-r { background: #fef2f2; border-left: 5px solid #ef4444; }
+
+  /* ── Priority diagnoses ──────────────────────────────────────── */
+  .dx-rank-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .dx-rank-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: #f8f9fa;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+  }
+
+  .dx-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .dx-aeb {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-top: 0.2rem;
+  }
+
+  /* ── Compare grid ────────────────────────────────────────────── */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .compare-grid h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  /* ── Concept map ─────────────────────────────────────────────── */
+  .concept-map {
+    margin-bottom: 1.25rem;
+  }
+
+  /* ── References ──────────────────────────────────────────────── */
+  .ref-list {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .ref-note {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin: 0;
+  }
+
+  /* ── Utility ─────────────────────────────────────────────────── */
+  .text-success { color: #15803d; }
+  .text-danger  { color: #b91c1c; }
+
+  .btn-back {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .btn-back:hover {
+    background: var(--color-primary-dark);
+    text-decoration: none;
+  }
+</style>
