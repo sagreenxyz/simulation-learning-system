@@ -1,11 +1,154 @@
 ---
-import DisciplineLayout from '../../../layouts/DisciplineLayout.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+
+const cases = [
+  {
+    num: '1',
+    patient: 'Cecil Whitver',
+    age: '78 yr', gender: 'M',
+    category: 'Mental Health / Depression',
+    primaryDx: 'Major depressive disorder',
+    secondaryDx: 'Dehydration (admission) secondary to depression-related anorexia',
+    time: '20 – 25 min',
+    challenge: 'Recognizes signs of major depression in an elderly hospitalized patient, uses therapeutic communication techniques, conducts a suicide risk assessment, and coordinates interdisciplinary care including psychiatric referral.',
+  },
+  {
+    num: '2',
+    patient: 'Ri Liang',
+    age: '68 yr', gender: 'M',
+    category: 'Mental Health / Dementia',
+    primaryDx: 'Dementia (Alzheimer Disease) — Stage 2',
+    secondaryDx: 'Behavioral and psychological symptoms of dementia (BPSD)',
+    time: '20 – 25 min',
+    challenge: 'Applies therapeutic communication and validation techniques to de-escalate an agitated patient with Stage 2 Alzheimer disease, initiates wandering precautions, manages dementia medications, and provides family education on caregiver support.',
+  },
+  {
+    num: '3',
+    patient: 'Gwen Harrison',
+    age: '84 yr', gender: 'F',
+    category: 'Mental Health / Abuse',
+    primaryDx: 'Older adult abuse and neglect',
+    secondaryDx: "Parkinson's disease; urinary tract infection",
+    time: '20 – 25 min',
+    challenge: "Conducts a private admission assessment to identify physical abuse and neglect in an elderly dependent adult, documents findings objectively, fulfills mandatory reporting obligations to Adult Protective Services, and manages Parkinson's disease with on-time medication administration.",
+  },
+];
 ---
-<DisciplineLayout
-  disciplineLabel="Psychiatric"
-  disciplineSlug="psychiatric"
-  description="Psychiatric simulation cases addressing mental health assessment, therapeutic communication, safety planning, psychopharmacology, and crisis intervention across care settings."
-  gradientFrom="#4527a0"
-  gradientTo="#7b1fa2"
-  icon="🧠"
-/>
+
+<BaseLayout title="Psychiatric Cases" description="Psychiatric simulation cases covering mental health assessment, therapeutic communication, safety planning, psychopharmacology, and crisis intervention across care settings.">
+  <div class="breadcrumb">
+    <a href={base}>Home</a>
+    <span>›</span>
+    <a href={`${base}cases/`}>Cases</a>
+    <span>›</span>
+    <span>Psychiatric</span>
+  </div>
+
+  <div class="discipline-header psychiatric-header">
+    <h1>Psychiatric</h1>
+    <p>Psychiatric simulation cases covering mental health assessment, therapeutic communication, safety planning, psychopharmacology, and crisis intervention across care settings.</p>
+    <div class="discipline-stats">
+      <span>📋 3 cases</span>
+      <span>⏱ 20 – 25 min scenarios</span>
+    </div>
+  </div>
+
+  <div class="cases-table-wrap">
+    <table class="cases-table">
+      <thead>
+        <tr>
+          <th>Scenario</th>
+          <th>Patient</th>
+          <th>Focus Area</th>
+          <th>Time</th>
+          <th>Primary Dx</th>
+          <th>Secondary Dx</th>
+          <th>Primary Challenge</th>
+        </tr>
+      </thead>
+      <tbody>
+        {cases.map((c) => (
+          <tr>
+            <td><a href={`${base}cases/psychiatric/${c.num}/`} class="scenario-link">Psychiatric {c.num}</a></td>
+            <td class="patient-cell">{c.patient}<br/><span class="meta-sub">{c.age} · {c.gender}</span></td>
+            <td><span class="card-tag">{c.category}</span></td>
+            <td class="time-cell">⏱ {c.time}</td>
+            <td>{c.primaryDx}</td>
+            <td>{c.secondaryDx}</td>
+            <td class="challenge-cell">{c.challenge}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</BaseLayout>
+
+<style>
+  .discipline-header {
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    color: #fff;
+  }
+
+  .psychiatric-header {
+    background: linear-gradient(135deg, #4527a0 0%, #7b1fa2 100%);
+  }
+
+  .discipline-header h1 { margin-bottom: 0.5rem; }
+  .discipline-header p { opacity: 0.92; max-width: 640px; margin-bottom: 1rem; }
+
+  .discipline-stats {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    opacity: 0.9;
+  }
+
+  .cases-table-wrap {
+    overflow-x: auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--color-border);
+  }
+
+  .cases-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--color-surface);
+    font-size: 0.9rem;
+  }
+
+  .cases-table thead tr {
+    background: var(--color-primary);
+    color: #fff;
+  }
+
+  .cases-table th {
+    padding: 0.85rem 1rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+  }
+
+  .cases-table td {
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid var(--color-border);
+    vertical-align: top;
+  }
+
+  .cases-table tbody tr:last-child td { border-bottom: none; }
+  .cases-table tbody tr:hover { background: #f0f4ff; }
+
+  .scenario-link { font-weight: 700; color: var(--color-primary); white-space: nowrap; }
+
+  .patient-cell { white-space: nowrap; }
+  .meta-sub { font-size: 0.8rem; color: var(--color-text-muted); }
+  .time-cell { white-space: nowrap; color: var(--color-text-muted); font-size: 0.85rem; }
+  .challenge-cell { max-width: 280px; font-size: 0.85rem; color: var(--color-text-muted); }
+</style>

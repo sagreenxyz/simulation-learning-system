@@ -1,0 +1,951 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout
+  title="Psychiatric 2 — Ri Liang"
+  description="Unfolding case study: Alzheimer Disease (Stage 2) — Wandering, Agitation, and Family Education (PSYCH-02)"
+>
+
+  <div class="breadcrumb">
+    <a href={base}>Home</a>
+    <span>›</span>
+    <a href={`${base}cases/`}>Cases</a>
+    <span>›</span>
+    <a href={`${base}cases/psychiatric/`}>Psychiatric</a>
+    <span>›</span>
+    <span>Psychiatric 2 — Ri Liang</span>
+  </div>
+
+  <div class="case-header">
+    <span class="card-tag">Mental Health / Dementia</span>
+    <h1>Psychiatric 2 — Ri Liang</h1>
+    <p class="case-subtitle">Alzheimer Disease — Wandering, Agitation, and Family Education</p>
+    <div class="case-meta">
+      <span>👤 Ri Liang, 68 years, Male</span>
+      <span>⏱ Scenario: 20–25 minutes</span>
+      <span>💬 Debrief: 20–25 minutes</span>
+    </div>
+  </div>
+
+  <div class="callout callout-info">
+    <strong>📖 How to Use This Unfolding Case Study</strong>
+    <p>Work through each phase in order. Information is revealed progressively — exactly as it would be in a real clinical encounter. Before reading each answer, pause and reason through the question yourself. Use the <strong>▶ Reveal Answer</strong> toggles to check your thinking.</p>
+  </div>
+
+  <!-- PHASE 1 -->
+  <div class="phase-card" id="phase1">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 1</span>
+      <h2>You Receive the Admission</h2>
+    </div>
+    <p class="phase-intro">You are a nurse on the psychiatric/mental health unit. Ri Liang is being admitted for evaluation and possible placement. He has Stage 2 Alzheimer disease. You review the handoff report and medication administration record.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>📋 Handoff Report</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Patient</th><td>Ri Liang</td></tr>
+            <tr><th>Age / Gender</th><td>68 years · Male</td></tr>
+            <tr><th>Primary Dx</th><td>Dementia — Stage 2 Alzheimer disease</td></tr>
+            <tr><th>Admission Reason</th><td>Evaluation and possible placement</td></tr>
+            <tr><th>Medical History</th><td>Alzheimer disease (diagnosed 3 years ago)</td></tr>
+            <tr><th>Family</th><td>Wife is primary caregiver — reports inability to manage safely at home</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>💊 Medications on MAR</h3>
+        <ul class="med-list">
+          <li><strong>Memantine (Namenda) 10 mg PO BID</strong> — NMDA antagonist</li>
+          <li><strong>Donepezil (Aricept) 10 mg PO at bedtime</strong> — AChE inhibitor</li>
+          <li><strong>Citalopram (Celexa) 20 mg PO daily</strong> — SSRI for behavioral symptoms</li>
+        </ul>
+      </div>
+    </div>
+    <div class="scene-box">
+      <h3>🚪 Entering the Room — What You Observe</h3>
+      <p>Ri is standing by the door, looking confused and anxious. He says: "I need to go home. My children are waiting." His wife is present in the room, appearing exhausted and tearful. Ri does not recognize you when you enter.</p>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ What are the three stages of Alzheimer disease?</summary>
+      <div class="reveal-content">
+        <table class="data-table">
+          <thead><tr><th>Stage</th><th>Characteristics</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Stage 1 (Early / Mild)</strong></td>
+              <td>Mild forgetfulness; still largely independent; may repeat questions; some word-finding difficulties; personality changes subtle; can live alone with minimal support</td>
+            </tr>
+            <tr>
+              <td><strong>Stage 2 (Middle / Moderate) — Ri's Stage</strong></td>
+              <td>Significant memory loss (especially recent); confusion about time and place; wandering behavior; behavioral and psychological symptoms (agitation, sundowning); needs assistance with ADLs; cannot safely live alone; family caregiver burden becomes severe</td>
+            </tr>
+            <tr>
+              <td><strong>Stage 3 (Late / Severe)</strong></td>
+              <td>Complete memory loss; minimal or absent verbal communication; fully dependent for all ADLs; high aspiration risk; bedbound; loss of swallowing reflex; death typically from aspiration pneumonia or infections</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ You begin a systematic assessment of Ri's cognitive and functional status…</div>
+
+  <!-- PHASE 2 -->
+  <div class="phase-card" id="phase2">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 2</span>
+      <h2>Differentiating Dementia from Normal Aging</h2>
+    </div>
+    <p class="phase-intro">You assess Ri systematically. Before initiating safety measures, you review the distinction between normal aging and dementia to ensure appropriate clinical reasoning and documentation.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>📊 Normal Aging vs. Dementia</h3>
+        <table class="data-table">
+          <thead><tr><th>Normal Aging</th><th>Dementia</th></tr></thead>
+          <tbody>
+            <tr><td>Misplacing keys occasionally</td><td>Putting keys in unusual places and forgetting them entirely</td></tr>
+            <tr><td>Forgetting a name briefly, then recalling it</td><td>Forgetting people entirely; not recognizing family members</td></tr>
+            <tr><td>Slower to learn new things</td><td>Unable to learn new information at all</td></tr>
+            <tr><td>Occasionally forgetting why you came somewhere</td><td>Forgetting what common objects are used for</td></tr>
+            <tr><td>Sometimes struggling for a word</td><td>Losing words mid-sentence frequently; substituting wrong words</td></tr>
+            <tr><td>Occasionally poor decisions</td><td>Consistently poor judgment; financial vulnerability</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>📊 Ri Liang's Current Assessment</h3>
+        <table class="data-table">
+          <thead><tr><th>Domain</th><th>Finding</th></tr></thead>
+          <tbody>
+            <tr><td>Orientation</td><td>Disoriented to place and time (knows his name)</td></tr>
+            <tr><td>Memory</td><td>Cannot recall why he is in the hospital</td></tr>
+            <tr><td>Language</td><td>Word-finding difficulties; word substitution noted</td></tr>
+            <tr><td>Behavior</td><td>Attempting to leave unit; insisting children are waiting</td></tr>
+            <tr><td>Affect</td><td>Anxious, agitated</td></tr>
+            <tr><td>ADLs</td><td>Needs assistance with dressing and bathing</td></tr>
+            <tr><td>Safety</td><td>High fall risk; wandering behavior</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="scene-box">
+      <h3>⚠️ Important Distinction: Delirium vs. Dementia</h3>
+      <table class="data-table">
+        <thead><tr><th>Feature</th><th>Delirium</th><th>Dementia</th></tr></thead>
+        <tbody>
+          <tr><td>Onset</td><td>Acute (hours to days)</td><td>Gradual (months to years)</td></tr>
+          <tr><td>Course</td><td>Fluctuating — may be better/worse hour to hour</td><td>Progressive but stable day-to-day</td></tr>
+          <tr><td>Reversibility</td><td>Potentially reversible if cause treated</td><td>Irreversible (Alzheimer type)</td></tr>
+          <tr><td>Cause</td><td>Medical: UTI, dehydration, medications, metabolic</td><td>Neurodegeneration</td></tr>
+          <tr><td>Key point</td><td colspan="2">Delirium CAN superimpose on dementia — always assess for reversible causes when confusion acutely worsens</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ What are common reversible causes of acute confusion worsening in dementia patients?</summary>
+      <div class="reveal-content">
+        <p>Always assess for superimposed delirium when a dementia patient's confusion acutely worsens. Common reversible causes:</p>
+        <ul>
+          <li><strong>UTI</strong> — most common in elderly; classic presentation is altered mental status, not urinary symptoms</li>
+          <li><strong>Dehydration</strong> — elderly have decreased thirst; dementia patients cannot verbalize thirst</li>
+          <li><strong>Medications</strong> — anticholinergics, benzodiazepines, opioids all cause or worsen confusion</li>
+          <li><strong>Unrecognized pain</strong> — dementia patients cannot adequately communicate pain; agitation may be the only sign</li>
+          <li><strong>Hypo/hyperglycemia</strong></li>
+          <li><strong>Electrolyte imbalance</strong> (sodium, calcium)</li>
+          <li><strong>Hypoxia</strong> — check O₂ saturation</li>
+          <li><strong>Infection</strong> — pneumonia, cellulitis, sepsis</li>
+          <li><strong>Constipation / fecal impaction</strong> — often overlooked; causes significant distress and behavioral changes</li>
+        </ul>
+        <p><strong>Memory aid:</strong> I WATCH DEATH (Infection, Withdrawal, Acute metabolic, Trauma, CNS pathology, Hypoxia, Deficiencies, Endocrine, Acute vascular, Toxins, Heavy metals)</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ Ri becomes increasingly agitated and attempts to exit the unit…</div>
+
+  <!-- PHASE 3 -->
+  <div class="phase-card" id="phase3">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 3</span>
+      <h2>De-escalation and Therapeutic Communication</h2>
+    </div>
+    <p class="phase-intro">Ri is increasingly agitated and attempting to exit the unit. He is saying "I have to go! Let me go!" You approach to de-escalate the situation using evidence-based techniques.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>✅ De-escalation Technique — Step by Step</h3>
+        <ol>
+          <li>Approach from the front, calmly, at eye level — do not block or corner</li>
+          <li>Speak in a low, slow, calm voice: "Mr. Liang, my name is [Name]. You're safe here."</li>
+          <li>Eliminate environmental stimulation — turn off TV, radio, reduce noise</li>
+          <li>Validate the feeling: "You look worried. I want to help you."</li>
+          <li>Redirect: "Before we go, let's sit together for a moment. I'll get you some water."</li>
+          <li>Distract: offer a familiar object, photograph, or preferred music</li>
+          <li>Do NOT argue, correct, or raise your voice — escalates agitation</li>
+        </ol>
+      </div>
+      <div class="info-block">
+        <h3>🛑 What NOT to Do</h3>
+        <ul class="med-list">
+          <li>❌ <strong>Do NOT argue:</strong> "You can't leave — you're in the hospital."</li>
+          <li>❌ <strong>Do NOT correct:</strong> "Your children are grown adults, not waiting for you."</li>
+          <li>❌ <strong>Do NOT physically restrain</strong> except in immediate safety emergency (per protocol)</li>
+          <li>❌ <strong>Do NOT raise your voice</strong> — escalates agitation rapidly</li>
+          <li>❌ <strong>Do NOT ask memory-testing questions</strong> ("What day is it? Do you know where you are?")</li>
+          <li>❌ <strong>Do NOT speak about Ri to family</strong> as if he is not in the room</li>
+        </ul>
+      </div>
+    </div>
+    <div class="scene-box">
+      <h3>💬 Validation Technique in Action</h3>
+      <p>When Ri insists he must go home to pick up his children:</p>
+      <p><strong class="text-danger">WRONG:</strong> "Mr. Liang, your children are adults and they don't need picking up."<br/>
+      <em>[Argues with the confused belief — increases agitation; makes patient feel dismissed]</em></p>
+      <p><strong class="text-success">RIGHT:</strong> "It sounds like your children are very important to you. Tell me about them."<br/>
+      <em>[Redirects to the emotional content; validates the feeling; does not argue with the confused belief; often reduces agitation within minutes]</em></p>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ What is sundowning and how is it managed?</summary>
+      <div class="reveal-content">
+        <p><strong>Sundowning:</strong> Increased confusion, agitation, and behavioral symptoms occurring in the late afternoon and early evening — common in dementia patients.</p>
+        <p><strong>Causes:</strong></p>
+        <ul>
+          <li>Fatigue accumulating throughout the day</li>
+          <li>Decreased natural lighting as evening approaches (disrupts circadian rhythm)</li>
+          <li>Disruption of routine — shift changes, increased unit activity</li>
+          <li>Hunger, thirst, pain (non-verbal patients cannot communicate these)</li>
+        </ul>
+        <p><strong>Non-pharmacological management (first-line):</strong></p>
+        <ul>
+          <li>Structured, calming activities in the afternoon</li>
+          <li>Adequate lighting — keep room well-lit until patient's normal bedtime</li>
+          <li>Calm, predictable evening routine consistent with home schedule</li>
+          <li>Minimize changes — consistent staff assignments when possible</li>
+          <li>Avoid caffeine after noon</li>
+          <li>Involve family in calm evening visits</li>
+          <li>Soft music, familiar objects, photos</li>
+        </ul>
+        <p><strong>Pharmacological (only if non-pharmacological measures fail):</strong> Low-dose antipsychotics may be prescribed — but ONLY after non-pharmacological approaches have been exhausted, and with careful monitoring for adverse effects.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ You administer morning medications and initiate safety precautions…</div>
+
+  <!-- PHASE 4 -->
+  <div class="phase-card" id="phase4">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 4</span>
+      <h2>Medication Administration and Wandering Precautions</h2>
+    </div>
+    <p class="phase-intro">You administer Ri's morning medications and initiate wandering precautions per unit protocol. Medication administration requires additional skill and patience with a confused, resistive patient.</p>
+    <div class="callout callout-warning">
+      <strong>⚠️ Medication Administration Challenge: Patient May Resist</strong>
+      <p>Dementia patients frequently refuse medications. Never force medications. Offer with a preferred food or drink. Notify the provider if the patient consistently refuses. Consider whether alternative formulations are available and appropriate per provider order.</p>
+    </div>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>🔒 Wandering Precautions — Unit Protocol</h3>
+        <ol>
+          <li>Alarmed door systems — alerts staff if patient approaches exits</li>
+          <li>Coded/locked unit doors — patient cannot exit unassisted</li>
+          <li>ID/wander-guard bracelet — current and worn at all times</li>
+          <li>Current photograph in chart and on door</li>
+          <li>All staff briefed on wandering patient during handoff</li>
+          <li>Bed alarm activated at all times</li>
+          <li>Structured activities to reduce restlessness during day</li>
+          <li>Visual barriers on door handles (stop signs, cloth covers)</li>
+          <li>Frequent safety rounds (q15–30 minutes)</li>
+          <li>Document wandering patterns and identified triggers</li>
+        </ol>
+      </div>
+      <div class="info-block">
+        <h3>💊 Dementia Medications — Key Nursing Points</h3>
+        <table class="data-table">
+          <thead><tr><th>Medication</th><th>Key Points</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Donepezil (Aricept)</strong> — AChE inhibitor</td>
+              <td>Give at <strong>bedtime</strong> to reduce GI side effects; GI upset common (nausea, diarrhea) especially with dose increases; bradycardia risk; do NOT abruptly stop</td>
+            </tr>
+            <tr>
+              <td><strong>Memantine (Namenda)</strong> — NMDA antagonist</td>
+              <td>BID dosing; dizziness and headache common; requires <strong>renal dosing adjustment</strong>; reduces glutamate excitotoxicity in moderate-severe AD</td>
+            </tr>
+            <tr>
+              <td><strong>Citalopram (Celexa)</strong> — SSRI</td>
+              <td>Fall risk (orthostatic hypotension); monitor <strong>QTc</strong> — citalopram specifically prolongs QT interval; behavioral symptom management</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="scene-box">
+      <h3>💊 Administering Medications to Ri</h3>
+      <p>"Mr. Liang, it's time for your morning pills. Here's some apple juice to help."<br/>
+      <em>[Offer a small amount of his preferred beverage; present one pill at a time]</em></p>
+      <p><strong>If he refuses:</strong> Document the refusal, notify the provider, do NOT force. Attempt an alternative approach in 15–30 minutes (different caregiver, different beverage, try after a calm activity).</p>
+      <p><strong>Consistent refusal:</strong> Discuss alternative formulations with the provider — rivastigmine (Exelon) is available as a transdermal patch, which may be preferable for patients who consistently refuse oral medications.</p>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Why is donepezil given at bedtime?</summary>
+      <div class="reveal-content">
+        <p><strong>Pharmacological rationale:</strong></p>
+        <ul>
+          <li>Donepezil has a very long half-life (~70 hours), allowing once-daily dosing.</li>
+          <li><strong>GI side effects</strong> (nausea, vomiting, diarrhea) are common, particularly with dose increases. Bedtime administration means the peak of these effects occurs while the patient is asleep, reducing impact on waking quality of life.</li>
+          <li><strong>Insomnia and vivid dreams</strong> are also known side effects — if these are problematic at bedtime, the provider may switch to morning administration.</li>
+          <li><strong>Key nursing point:</strong> Consistency and patient-specific timing matter most. If a patient has significant nighttime insomnia attributed to donepezil, communicate this to the provider for possible morning timing adjustment.</li>
+          <li>Always administer at the same time each day for consistent drug levels.</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ You meet with Ri's wife for a family education session…</div>
+
+  <!-- PHASE 5 -->
+  <div class="phase-card" id="phase5">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 5</span>
+      <h2>Family Education and Caregiver Support</h2>
+    </div>
+    <p class="phase-intro">You meet with Ri's wife in a private room. She appears exhausted and tearful. "I don't know how much longer I can do this," she says. You provide education, validation, and connect her to support resources.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>📚 Key Family Education Topics</h3>
+        <ol>
+          <li><strong>Disease trajectory</strong> — Alzheimer disease is progressive and irreversible; honest compassionate information helps families plan ahead and access resources proactively</li>
+          <li><strong>Communication strategies</strong> — validation, redirection, calm approach (do not argue with confused beliefs)</li>
+          <li><strong>Safety at home</strong> — wandering precautions, stove safety, fall prevention, driving cessation, medication management</li>
+          <li><strong>Behavioral symptoms</strong> — sundowning, agitation triggers, de-escalation techniques</li>
+          <li><strong>Personal care</strong> — ADL assistance techniques that preserve dignity and reduce resistance</li>
+          <li><strong>Caregiver support</strong> — burnout is common and serious; respite care options must be discussed</li>
+          <li><strong>Advance directives</strong> — discuss while Ri still has some decision-making capacity</li>
+          <li><strong>Placement planning</strong> — memory care facilities; criteria for when home care becomes unsafe</li>
+        </ol>
+      </div>
+      <div class="info-block">
+        <h3>❤️ Caregiver Support Resources</h3>
+        <table class="data-table">
+          <thead><tr><th>Resource</th><th>Purpose</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Alzheimer's Association</strong> (alz.org)</td><td>Education, local support groups, 24/7 helpline (1-800-272-3900)</td></tr>
+            <tr><td><strong>Respite care</strong></td><td>Temporary caregiver relief — in-home respite or day programs</td></tr>
+            <tr><td><strong>Adult day programs</strong></td><td>Structured daytime care for patient + significant respite for caregiver</td></tr>
+            <tr><td><strong>Memory care facilities</strong></td><td>Specialized long-term placement when home care is unsafe</td></tr>
+            <tr><td><strong>Social work referral</strong></td><td>Assess family resources, insurance options, placement support</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="scene-box">
+      <h3>💬 Therapeutic Response to Caregiver Exhaustion</h3>
+      <p><strong>Wife:</strong> "I don't know how much longer I can do this. I feel guilty even thinking that."</p>
+      <p><strong>Nurse:</strong> "What you're feeling is completely understandable. Caring for someone with Alzheimer's is one of the most demanding things a person can do — and you've been doing this largely alone. That takes a tremendous toll. There is absolutely no shame in needing help, and there are resources designed specifically for caregivers in your situation."</p>
+      <p><em>[Validates the caregiver's feelings; normalizes burnout; removes guilt; opens the door to support resources without judgment]</em></p>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ What is caregiver burnout and how does the nurse address it?</summary>
+      <div class="reveal-content">
+        <p><strong>Caregiver burnout:</strong> Physical, emotional, and mental exhaustion resulting from sustained, overwhelming caregiving demands — especially common in dementia caregiving due to the progressive nature of the disease and the emotional loss involved.</p>
+        <p><strong>Signs of caregiver burnout:</strong></p>
+        <ul>
+          <li>Fatigue and sleep deprivation</li>
+          <li>Social withdrawal and isolation</li>
+          <li>Resentment or anger (often followed by intense guilt)</li>
+          <li>Neglect of own health — skipping doctor appointments, not eating well</li>
+          <li>Depression and anxiety</li>
+          <li>Feeling hopeless about the situation</li>
+        </ul>
+        <p><strong>Nursing interventions:</strong></p>
+        <ul>
+          <li>Validate the burden explicitly — do not minimize it</li>
+          <li>Provide referrals to social work for concrete resource connection</li>
+          <li>Educate about respite options (in-home, adult day programs)</li>
+          <li>Connect to Alzheimer's Association support groups</li>
+          <li>Reinforce: "You must care for yourself to be able to care for him."</li>
+          <li>Assess for caregiver depression — she may need her own mental health support</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ You complete documentation and plan for discharge…</div>
+
+  <!-- PHASE 6 -->
+  <div class="phase-card" id="phase6">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 6</span>
+      <h2>Nursing Diagnoses and Discharge Planning</h2>
+    </div>
+    <p class="phase-intro">You document your complete assessment and collaborate with the interdisciplinary team on Ri's safety plan and the family's needs for discharge planning and placement evaluation.</p>
+    <h3>📋 Priority Nursing Diagnoses</h3>
+    <div class="dx-rank-list">
+      <div class="dx-rank-item">
+        <span class="dx-number">1</span>
+        <div><strong>Chronic Confusion r/t Alzheimer disease</strong><div class="dx-aeb">AEB: disorientation to place and time, memory impairment, inappropriate behavior (repeatedly attempting to exit unit), word-finding difficulties</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">2</span>
+        <div><strong>Risk for Injury (Wandering) r/t impaired judgment and spatial disorientation</strong><div class="dx-aeb">AEB: Stage 2 Alzheimer disease; active wandering behavior documented; multiple attempts to exit unit unsupervised</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">3</span>
+        <div><strong>Impaired Verbal Communication r/t neurological deterioration from Alzheimer disease</strong><div class="dx-aeb">AEB: word-finding difficulties, word substitution, difficulty following conversation, reduced verbal output</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">4</span>
+        <div><strong>Self-Care Deficit (bathing, dressing) r/t progressive cognitive and functional decline</strong><div class="dx-aeb">AEB: requires assistance with ADLs; wife reports inability to manage personal care safely at home</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">5</span>
+        <div><strong>Caregiver Role Strain r/t progressive disease and increasing care demands</strong><div class="dx-aeb">AEB: wife tearful, stating "I don't know how much longer I can do this"; caregiver exhaustion evident; admission triggered by inability to manage safely at home</div></div>
+      </div>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ SBAR — Calling the Provider About Ri's Wandering and Medication Refusal</summary>
+      <div class="reveal-content">
+        <div class="sbar-block">
+          <div class="sbar-item sbar-s"><span class="sbar-label">S — Situation</span><p>I'm calling about Ri Liang, a 68-year-old male with Stage 2 Alzheimer disease. He has demonstrated active wandering behavior on the unit this morning, attempting to exit 3 times. He is also refusing his morning oral medications.</p></div>
+          <div class="sbar-item sbar-b"><span class="sbar-label">B — Background</span><p>Mr. Liang was admitted for evaluation and possible placement — his wife is unable to manage his care safely at home. He is on donepezil 10 mg at bedtime, memantine 10 mg BID, and citalopram 20 mg daily. He is oriented only to person. He has been de-escalated with redirection and validation techniques — no physical harm has occurred. Wandering precautions have been initiated per unit protocol.</p></div>
+          <div class="sbar-item sbar-a"><span class="sbar-label">A — Assessment</span><p>Patient is agitated, disoriented to place and time, and is consistently attempting to exit the unit. He refused all morning oral medications despite multiple gentle attempts with preferred beverage. No signs of acute superimposed delirium identified at this time — behavior appears consistent with his baseline dementia stage per wife's report.</p></div>
+          <div class="sbar-item sbar-r"><span class="sbar-label">R — Recommendation</span><p>Requesting: confirmation that wandering precautions order is active; guidance on medication refusal — consider alternative formulations (rivastigmine patch); social work to proceed with placement evaluation; family meeting to review care plan and discharge options.</p></div>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <!-- APPENDIX A -->
+  <div class="phase-connector">⬇ Appendix: Reference Materials</div>
+  <div class="phase-card" id="appendix-a">
+    <div class="phase-header">
+      <span class="phase-badge phase-badge-appendix">Appendix A</span>
+      <h2>Medications</h2>
+    </div>
+    <table class="data-table med-table">
+      <thead>
+        <tr>
+          <th>Medication</th>
+          <th>Class</th>
+          <th>Key Nursing Points</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Donepezil (Aricept) 10 mg PO at bedtime</strong></td>
+          <td>AChE inhibitor (cholinesterase inhibitor)</td>
+          <td>Slows cognitive decline in mild-moderate Alzheimer disease; give at bedtime to reduce GI side effects (nausea, diarrhea, vomiting); bradycardia risk — monitor heart rate; do NOT abruptly discontinue; long half-life (~70 hours) — once daily dosing</td>
+        </tr>
+        <tr>
+          <td><strong>Memantine (Namenda) 10 mg PO BID</strong></td>
+          <td>NMDA receptor antagonist</td>
+          <td>Moderate-severe Alzheimer disease; reduces glutamate excitotoxicity; BID dosing; dizziness and headache common; requires renal dosing adjustment in renal impairment</td>
+        </tr>
+        <tr>
+          <td><strong>Citalopram (Celexa) 20 mg PO daily</strong></td>
+          <td>SSRI antidepressant</td>
+          <td>Used for behavioral symptoms and depression in dementia; important: <strong>QTc prolongation risk</strong> (more significant than other SSRIs — monitor ECG); fall risk (orthostatic hypotension); monitor BP with position changes</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- APPENDIX B -->
+  <div class="phase-card" id="appendix-b">
+    <div class="phase-header">
+      <span class="phase-badge phase-badge-appendix">Appendix B</span>
+      <h2>Post-Simulation Discussion Questions</h2>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Q1: What is the priority safety concern for Ri Liang?</summary>
+      <div class="reveal-content">
+        <p>The priority safety concern is <strong>risk for injury related to wandering</strong>. Ri has Stage 2 Alzheimer disease with active wandering behavior — he is attempting to exit the unit unsupervised. Immediate nursing priorities: verify wandering precautions are active (bed alarm, alarmed doors, wander-guard bracelet, frequent rounds), orient environment to reduce elopement risk, and use de-escalation and redirection techniques. The next priority is fall prevention — dementia patients on psychotropic medications (citalopram) are at high fall risk.</p>
+      </div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q2: What is the therapeutic response when Ri insists he needs to go home to pick up his children?</summary>
+      <div class="reveal-content">
+        <p>Use the <strong>validation technique</strong>: do NOT argue with or correct the confused belief. Instead, redirect to the emotional content. Example: "It sounds like your children are very important to you — tell me about them." This validates the feeling (love for his children) without reinforcing the confused belief or creating confrontation. Arguing ("Your children are adults") only escalates agitation. After brief redirection, offer a calm activity, a preferred object, or music to re-engage his attention.</p>
+      </div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q3: What is sundowning?</summary>
+      <div class="reveal-content">
+        <p><strong>Sundowning</strong> refers to a pattern of increased confusion, agitation, and behavioral symptoms that occurs in the late afternoon and early evening in patients with dementia. It is caused by a combination of fatigue, reduced lighting, disruption of routine, and circadian rhythm disturbances. Non-pharmacological management is first-line: structured afternoon activities, adequate lighting until the patient's usual bedtime, calm routine, and involvement of family. Pharmacological intervention (low-dose antipsychotics) is a last resort due to significant adverse effect risks in elderly dementia patients.</p>
+      </div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q4: Why is donepezil given at bedtime?</summary>
+      <div class="reveal-content">
+        <p>Donepezil has a long half-life (~70 hours) and is given once daily. Bedtime administration reduces the impact of GI side effects (nausea, vomiting, diarrhea) during waking hours because peak drug levels occur during sleep. If insomnia or vivid dreams become problematic at bedtime, the provider may switch to morning administration — the key is patient-specific timing based on the predominant side effect profile.</p>
+      </div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q5: What distinguishes delirium from dementia?</summary>
+      <div class="reveal-content">
+        <p>Key distinctions: <strong>Delirium</strong> has an acute onset (hours to days), fluctuating course, and is potentially reversible when the underlying cause is treated. <strong>Dementia</strong> has a gradual onset (months to years), progressive course, and is irreversible. The most important clinical point: delirium can superimpose on dementia — when a dementia patient's confusion acutely worsens, always assess for reversible causes (UTI, dehydration, medications, pain, metabolic disturbance) rather than attributing the change to dementia progression alone.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- APPENDIX C -->
+  <div class="phase-card" id="appendix-c">
+    <div class="phase-header">
+      <span class="phase-badge phase-badge-appendix">Appendix C</span>
+      <h2>References</h2>
+    </div>
+    <ol class="ref-list">
+      <li>Townsend, M. C., &amp; Morgan, K. I. (2021). <em>Psychiatric mental health nursing: Concepts of care in evidence-based practice</em> (9th ed.). F.A. Davis.</li>
+      <li>Alzheimer's Association. (2023). <em>2023 Alzheimer's disease facts and figures</em>. Alzheimer's &amp; Dementia, 19(4). https://doi.org/10.1002/alz.13016</li>
+      <li>Vallerand, A. H., &amp; Sanoski, C. A. (2021). <em>Davis's drug guide for nurses</em> (17th ed.). F.A. Davis.</li>
+    </ol>
+    <p class="ref-note">References follow APA 7th edition format. All clinical protocols should be verified against current institutional policy and evidence-based guidelines.</p>
+    <a href={`${base}cases/psychiatric/`} class="btn-back">← Back to Psychiatric</a>
+  </div>
+
+</BaseLayout>
+
+<style>
+  /* ── Phase structure ─────────────────────────────────────────── */
+  .case-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-top: 0.25rem;
+  }
+
+  .phase-card {
+    background: var(--color-surface);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 0;
+    box-shadow: var(--shadow);
+    border-top: 4px solid var(--color-primary);
+  }
+
+  .appendix-card {
+    border-top-color: var(--color-secondary);
+  }
+
+  .phase-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .phase-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .phase-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+
+  .phase-badge-appendix {
+    background: var(--color-secondary);
+  }
+
+  .phase-intro {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin-bottom: 1.25rem;
+    border-left: 3px solid var(--color-accent);
+    padding-left: 0.75rem;
+  }
+
+  .phase-connector {
+    text-align: center;
+    padding: 0.6rem 0;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+  }
+
+  /* ── Info grid ───────────────────────────────────────────────── */
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 720px) {
+    .info-grid { grid-template-columns: 1fr; }
+    .compare-grid { grid-template-columns: 1fr; }
+  }
+
+  .info-block h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  /* ── Tables ──────────────────────────────────────────────────── */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--color-border);
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .data-table thead th {
+    background: #f0f4ff;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+  }
+
+  .data-table tbody th {
+    background: #f8f9fa;
+    font-weight: 600;
+    width: 30%;
+    color: var(--color-text);
+  }
+
+  .med-table tbody th {
+    width: 28%;
+  }
+
+  /* ── Callouts ────────────────────────────────────────────────── */
+  .callout {
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .callout p { margin-bottom: 0.5rem; }
+  .callout p:last-child { margin-bottom: 0; }
+
+  .callout-info {
+    background: #e8f0fe;
+    border-left: 4px solid var(--color-primary);
+  }
+
+  .callout-warning {
+    background: #fff8e1;
+    border-left: 4px solid #f59e0b;
+  }
+
+  .callout-danger {
+    background: #fff0f0;
+    border-left: 4px solid #dc2626;
+  }
+
+  /* ── Badges ──────────────────────────────────────────────────── */
+  .badge-danger {
+    display: inline-block;
+    background: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fca5a5;
+    border-radius: 4px;
+    padding: 0.1rem 0.45rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .badge-warning {
+    display: inline-block;
+    background: #fffbeb;
+    color: #92400e;
+    border: 1px solid #fde68a;
+    border-radius: 4px;
+    padding: 0.1rem 0.45rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  /* ── Scene box ───────────────────────────────────────────────── */
+  .scene-box {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .scene-box h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* ── Med list ────────────────────────────────────────────────── */
+  .med-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .med-list li {
+    padding: 0.35rem 0;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 0.9rem;
+  }
+
+  .med-list li:last-child { border-bottom: none; }
+
+  /* ── Chain flow ──────────────────────────────────────────────── */
+  .chain-flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin: 1.25rem 0;
+  }
+
+  .chain-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 520px;
+    gap: 0.2rem;
+  }
+
+  .chain-step small {
+    font-size: 0.8rem;
+    opacity: 0.8;
+  }
+
+  .chain-step-drug {
+    background: #e8f0fe;
+    color: var(--color-primary-dark);
+    border: 1px solid #bfdbfe;
+  }
+
+  .chain-step-problem {
+    background: #fff8e1;
+    color: #78350f;
+    border: 1px solid #fde68a;
+  }
+
+  .chain-step-consequence {
+    background: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+  }
+
+  .chain-arrow {
+    font-size: 1.5rem;
+    color: var(--color-text-muted);
+    line-height: 1.2;
+  }
+
+  .chain-icon {
+    font-size: 1.4rem;
+  }
+
+  /* ── Stat highlight ──────────────────────────────────────────── */
+  .stat-highlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fef2f2;
+    border: 2px solid #fca5a5;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #b91c1c;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+    color: #7f1d1d;
+    margin-top: 0.25rem;
+  }
+
+  /* ── Reveal (details/summary) ────────────────────────────────── */
+  .reveal-block {
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    margin-top: 1rem;
+    overflow: hidden;
+  }
+
+  .reveal-block > summary {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--color-primary);
+    background: #f0f4ff;
+    list-style: none;
+    user-select: none;
+  }
+
+  .reveal-block > summary::-webkit-details-marker { display: none; }
+
+  .reveal-block[open] > summary {
+    background: #dbeafe;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .reveal-block > summary:hover {
+    background: #dbeafe;
+  }
+
+  .reveal-content {
+    padding: 1rem 1.25rem;
+  }
+
+  .reveal-content ul,
+  .reveal-content ol {
+    margin-bottom: 0.75rem;
+  }
+
+  /* ── SBAR block ──────────────────────────────────────────────── */
+  .sbar-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    margin-bottom: 1.5rem;
+  }
+
+  .sbar-item {
+    padding: 1rem 1.25rem;
+  }
+
+  .sbar-item p { margin: 0; font-style: italic; }
+
+  .sbar-label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.4rem;
+  }
+
+  .sbar-s { background: #eff6ff; border-left: 5px solid #3b82f6; }
+  .sbar-b { background: #f0fdf4; border-left: 5px solid #22c55e; }
+  .sbar-a { background: #fffbeb; border-left: 5px solid #f59e0b; }
+  .sbar-r { background: #fef2f2; border-left: 5px solid #ef4444; }
+
+  /* ── Priority diagnoses ──────────────────────────────────────── */
+  .dx-rank-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .dx-rank-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: #f8f9fa;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+  }
+
+  .dx-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .dx-aeb {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-top: 0.2rem;
+  }
+
+  /* ── Compare grid ────────────────────────────────────────────── */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .compare-grid h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  /* ── Concept map ─────────────────────────────────────────────── */
+  .concept-map {
+    margin-bottom: 1.25rem;
+  }
+
+  /* ── References ──────────────────────────────────────────────── */
+  .ref-list {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .ref-note {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin: 0;
+  }
+
+  /* ── Utility ─────────────────────────────────────────────────── */
+  .text-success { color: #15803d; }
+  .text-danger  { color: #b91c1c; }
+
+  .btn-back {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .btn-back:hover {
+    background: var(--color-primary-dark);
+    text-decoration: none;
+  }
+</style>
