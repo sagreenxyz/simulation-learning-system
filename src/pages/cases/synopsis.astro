@@ -1,0 +1,538 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+
+const fundamentalsCases = [
+  {
+    id: 'FUN-01',
+    num: '1',
+    patient: 'Alice Morrison',
+    age: '7 yr', gender: 'F',
+    category: 'Pediatric',
+    primaryDx: 'Acute bronchitis; esophageal atresia with gastrostomy tube',
+    status: 'complete',
+    synopsis: `Alice's G-tube feeding has become disconnected. The nurse identifies the disconnection, reconnects the tube, and performs a G-tube site dressing change. Weight-based acetaminophen is administered via the G-tube for a low-grade fever. The situation resolves with an intact, clean G-tube site, resumed feeding, and the mother engaged as an expert partner in care. The scenario ends at stabilization; discharge is not addressed.`,
+  },
+  {
+    id: 'FUN-02',
+    num: '2',
+    patient: 'Bernadette Jackson',
+    age: '85 yr', gender: 'F',
+    category: 'Older Adult',
+    primaryDx: 'Urinary retention; UTI; delirium',
+    status: 'complete',
+    synopsis: `Bernadette presents with acute confusion that is initially unexplained. Assessment reveals a post-void residual of 620 mL, urinalysis positive for bacteria and elevated WBCs, and two anticholinergic medications on her home list (oxybutynin and loratadine). The situation resolves with diagnosis of delirium secondary to UTI compounded by anticholinergic burden. IV antibiotics and IV hydration are initiated, the offending medications are flagged, and mental status begins to improve. The case ends at the point of diagnosis and early treatment, before discharge.`,
+  },
+  {
+    id: 'FUN-03',
+    num: '3',
+    patient: 'Samuel Green',
+    age: '75 yr', gender: 'M',
+    category: 'End-of-Life',
+    primaryDx: 'Inoperable pulmonary adenocarcinoma with bone and lymph metastasis',
+    status: 'complete',
+    synopsis: `Samuel is actively dying with a DNR order. Vital signs show profound hypotension, bradycardia, and respiratory rates of 5–8 breaths per minute. This situation does not reach a recovery conclusion. Instead, the nurse focuses on comfort measures (morphine for pain and dyspnea), family support (educating Mrs. Green and their son on the dying process, reassuring them that gurgling is not suffering), and Jewish spiritual and cultural considerations (Shomer, prayer, possible facing Jerusalem, contact with a rabbi). The scenario concludes with a peaceful, supported, and culturally respectful death.`,
+  },
+  {
+    id: 'FUN-04',
+    num: '4',
+    patient: 'Jesus Garcia',
+    age: '28 yr', gender: 'M',
+    category: 'GI / Ostomy',
+    primaryDx: 'Dehydration; status post partial colectomy with transverse colostomy',
+    status: 'complete',
+    synopsis: `Jesus is admitted for dehydration 15 days after colostomy creation. He is tachycardic, hypotensive, and emotionally withdrawn, refusing to look at his pouch. IV fluid resuscitation (0.9% NS at 125 mL/hr) addresses the dehydration. Colostomy teaching progresses incrementally: the nurse demonstrates pouch emptying, Jesus observes, then successfully empties the pouch with verbal guidance. By the end of the scenario his affect has improved slightly, and he agrees to participate in the next teaching session. The physical situation resolves with hemodynamic improvement; the psychosocial acceptance of the colostomy is in progress but not yet complete.`,
+  },
+  {
+    id: 'FUN-05',
+    num: '5',
+    patient: 'Lisa Rae',
+    age: '78 yr', gender: 'F',
+    category: 'Patient Safety',
+    primaryDx: 'Hypotension; mechanical fall',
+    status: 'complete',
+    synopsis: `Lisa fell at home after accidentally double-dosing her hydrochlorothiazide, causing orthostatic hypotension. Assessment reveals a Morse Fall Scale score of 85 (high risk) and a Stage I pressure injury on the coccyx. The root cause (medication duplication) is identified, HCTZ is held, IV fluids (0.9% NS at 75 mL/hr) are started, and comprehensive fall and pressure-injury prevention protocols are implemented. Pain is managed with hydromorphone. The scenario concludes with a thorough nursing care plan rather than discharge; the patient is stable, safe, and education on medication management is planned.`,
+  },
+  {
+    id: 'FUN-06',
+    num: '6',
+    patient: 'Nancy Gilbert',
+    age: '65 yr', gender: 'F',
+    category: 'Respiratory',
+    primaryDx: 'Pneumonia; permanent tracheostomy (laryngeal cancer); MRSA',
+    status: 'complete',
+    synopsis: `Nancy has a permanent tracheostomy and is on contact isolation for MRSA. The scenario focuses on proper PPE donning, pre-suctioning assessment, and sterile tracheostomy suctioning technique. After suctioning, SpO₂ improves toward the ≥95% goal, work of breathing decreases, and breath sounds clear. The situation resolves with a technically successful suctioning procedure and effective infection control. Vancomycin IV continues for MRSA coverage. The scenario ends at procedural stabilization; discharge and longer-term outcomes are not addressed.`,
+  },
+  {
+    id: 'FUN-07',
+    num: '7',
+    patient: 'Carl Rogers',
+    age: '67 yr', gender: 'M',
+    category: 'Diabetes / Wound Care',
+    primaryDx: 'Stage II non-healing right heel ulcer; hyperglycemia; Type 1 diabetes',
+    status: 'stub',
+    synopsis: `STUB — Phases 1 & 2 are present. Carl has a 20-year history of diabetes and presents with a non-healing heel ulcer and elevated blood glucose. His wife Sarah is at the bedside. Wound care orders and an insulin sliding scale are in place. The full clinical progression — wound assessment, dressing change, insulin administration, and teaching — has not yet been implemented. Resolution is not currently depicted.`,
+  },
+  {
+    id: 'FUN-08',
+    num: '8',
+    patient: 'Maurice Arviso',
+    age: '60 yr', gender: 'M',
+    category: 'Respiratory / Cultural Care',
+    primaryDx: 'Community-acquired pneumonia; anxiety related to hospital admission',
+    status: 'stub',
+    synopsis: `STUB — Phases 1 & 2 are present. Maurice, a Native American retired craftsman, is deeply embarrassed after accidentally spilling urine on his bed and is reluctant to ask for help. His anxiety is compounded by family losses in hospital settings. The scenario establishes the cultural and psychosocial context for providing sensitive hygiene care alongside respiratory assessment for pneumonia. The full respiratory management and resolution have not yet been implemented.`,
+  },
+  {
+    id: 'FUN-10',
+    num: '10',
+    patient: 'Boyd Dubois',
+    age: 'older adult', gender: 'M',
+    category: 'Postoperative / Musculoskeletal',
+    primaryDx: 'Total right hip arthroplasty — postoperative day 1',
+    status: 'stub',
+    synopsis: `STUB — Phases 1 & 2 are present. Boyd is in severe pain (8/10) on postoperative day 1 following hip replacement and is refusing to use his incentive spirometer. The scenario introduces the pain-splinting-atelectasis cycle and the rationale for balanced opioid analgesia. Full pain management, patient education on hip precautions, and respiratory complication prevention have not yet been implemented. Resolution is not currently depicted.`,
+  },
+  {
+    id: 'FUN-11',
+    num: '11',
+    patient: 'Kyle Miller',
+    age: '41 yr', gender: 'M',
+    category: 'Infection / Discharge',
+    primaryDx: 'Cellulitis of the right forearm secondary to puncture wound',
+    status: 'stub',
+    synopsis: `STUB — Phases 1 & 2 are present. Kyle is cleared for discharge after IV antibiotic treatment for forearm cellulitis but requires a final nursing assessment and comprehensive discharge teaching before leaving. The scenario frames the nurse as the last safety checkpoint. The full assessment, wound evaluation, and discharge education have not yet been implemented. Resolution is not currently depicted.`,
+  },
+  {
+    id: 'FUN-12',
+    num: '12',
+    patient: 'Lillian Chambers',
+    age: '40 yr', gender: 'F',
+    category: 'Postoperative / GI',
+    primaryDx: 'Ruptured appendix — urgent open appendectomy (postoperative day 1)',
+    status: 'stub',
+    synopsis: `STUB — Phases 1 & 2 are present. Lillian is quiet and appears uncomfortable on postoperative day 1, rating her pain as 7/10 despite her cultural tendency (Korean-American) to underreport. She has a Jackson-Pratt drain in place and is receiving IV metronidazole and cefazolin. The scenario introduces proactive pain assessment in culturally influenced patients. Full postoperative assessment and surgical site care have not yet been implemented. Resolution is not currently depicted.`,
+  },
+];
+
+const medSurgicalCases = [
+  {
+    id: 'MED-02',
+    num: '2',
+    patient: 'Wallace Peterson',
+    age: '69 yr', gender: 'M',
+    category: 'Respiratory / COPD',
+    primaryDx: 'Community-acquired pneumonia; COPD',
+    status: 'complete',
+    synopsis: `Wallace is in respiratory distress — agitated, rapidly breathing, and diaphoretic. The nurse discovers his nasal cannula oxygen tubing has become disconnected. Reconnecting the oxygen source and calibrating the flow rate to maintain SpO₂ of 88–92% (critical for COPD hypoxic drive) resolves the acute hypoxia. IV ceftriaxone and bronchodilators (ipratropium) continue for the underlying pneumonia. The scenario ends at stabilization with the patient's breathing improved; full recovery and discharge are not depicted.`,
+  },
+  {
+    id: 'MED-04',
+    num: '4',
+    patient: 'Kimberly Dunning',
+    age: '20 yr', gender: 'F',
+    category: 'Respiratory / Asthma',
+    primaryDx: 'Acute asthma exacerbation; community-acquired pneumonia',
+    status: 'complete',
+    synopsis: `Kimberly presents in tripod position with audible wheezing and visible panic. The nurse breaks the anxiety-bronchospasm feedback loop with calm therapeutic communication, guided breathing, and high-flow oxygen via non-rebreather mask. Albuterol nebulization every 20 minutes and IV prednisone are initiated. Glucose monitoring is started because steroids elevate blood glucose. Wheezing decreases, breathing improves, and anxiety settles. The situation resolves with a managed exacerbation; education about asthma triggers and controller medication adherence is provided before the scenario ends.`,
+  },
+  {
+    id: 'MED-08',
+    num: '8',
+    patient: 'Ricardo Mendoza',
+    age: '60 yr', gender: 'M',
+    category: 'Thoracic / Oncology',
+    primaryDx: 'Right lobectomy for squamous cell carcinoma; tension pneumothorax',
+    status: 'complete',
+    synopsis: `During transfer back to bed, the chest tube tubing becomes caught under a raised side rail, causing complete obstruction. Ricardo rapidly develops the classic tension pneumothorax findings: sudden respiratory distress, absent right breath sounds, tracheal deviation to the left, JVD, and deteriorating vital signs. The nurse immediately frees the obstruction, applies high-flow oxygen, and calls a rapid response. Once the obstruction is relieved, Ricardo's condition improves. The scenario resolves with avoidance of a potentially fatal emergency through prompt recognition and a clear lesson on chest tube management safety during patient transfers.`,
+  },
+  {
+    id: 'MED-09',
+    num: '9',
+    patient: 'Keola Akana',
+    age: '70 yr', gender: 'M',
+    category: 'Cardiac / Heart Failure',
+    primaryDx: 'Chronic heart failure; digoxin toxicity; hypokalemia',
+    status: 'complete',
+    synopsis: `Keola presents with the classic digoxin toxicity triad: nausea, yellow halos around lights (xanthopsia), and fatigue with bradycardia (HR 54). His digoxin level is 1.9 ng/mL and potassium is 3.1 (low — which increases toxicity risk). Both digoxin and atenolol are held. Potassium replacement and spironolactone are administered to correct the hypokalemia driving the toxicity. The provider is notified. The situation resolves with avoidance of life-threatening dysrhythmia through early recognition. The scenario ends at the point of safe medication management; longer-term heart failure management is not addressed.`,
+  },
+  {
+    id: 'MED-23',
+    num: '23',
+    patient: 'Lou Thao',
+    age: 'adult', gender: 'F',
+    category: 'GI / Postoperative',
+    primaryDx: 'Post-colon resection; PCA pain management',
+    status: 'complete',
+    synopsis: `Lou requires morphine PCA setup on return from surgery. Two nurses independently verify the pump programming (demand dose 1 mg, lockout 10 min, 4-hour maximum) to prevent a potentially fatal programming error. Lou and her family are educated that only the patient may press the PCA button — "PCA by proxy" (family pressing while patient sleeps) can cause respiratory arrest. Naloxone is placed at the bedside. The situation resolves with a correctly programmed PCA, adequate pain control, successful early ambulation, and incentive spirometry. The scenario ends before discharge.`,
+  },
+  {
+    id: 'MED-26',
+    num: '26',
+    patient: 'Lucia Hoyos',
+    age: '65 yr', gender: 'F',
+    category: 'GI / Postoperative',
+    primaryDx: 'Post-transverse colostomy; hyperkalemia from medication error',
+    status: 'complete',
+    synopsis: `Lucia arrives from the PACU confused, disoriented, and pulling at her colostomy pouch. The nurse immediately lowers the bed (fall prevention) and checks SpO₂ (rule out hypoxia). The root cause is identified as iatrogenic hyperkalemia from multiple inappropriately stacked potassium supplements. Emergency treatment is initiated: calcium gluconate (cardiac membrane stabilization), insulin with dextrose (shifts potassium into cells), Kayexalate (GI elimination), and furosemide (renal elimination). Potassium trends toward normal, and confusion resolves as electrolytes stabilize. Postoperative colostomy care then proceeds. The scenario resolves with electrolyte correction and return of baseline cognition.`,
+  },
+  {
+    id: 'MED-28',
+    num: '28',
+    patient: 'Cynthia Bennet',
+    age: '34 yr', gender: 'F',
+    category: 'Immunology / Medication Safety',
+    primaryDx: 'Anaphylaxis secondary to penicillin-class medication error; UTI; ESRD',
+    status: 'complete',
+    synopsis: `Cynthia, who has a documented penicillin allergy, is inadvertently started on ampicillin IV (a penicillin-class antibiotic) during hemodialysis. Within minutes she develops urticaria, angioedema, wheezing, and hypotension. The nurse stops the infusion immediately, administers IM epinephrine (time-critical), gives antihistamines and corticosteroids, and maintains IV access. The anaphylaxis is reversed. The root cause — failure by the dialysis unit team to cross-check drug class against the allergy list — is identified. The scenario resolves with patient survival and emphasizes that prompt epinephrine is the difference between recovery and death in anaphylaxis.`,
+  },
+  {
+    id: 'MED-33',
+    num: '33',
+    patient: 'Arthur Harris',
+    age: '59 yr', gender: 'M',
+    category: 'Endocrine / Diabetes',
+    primaryDx: 'Severe hypoglycemia (glucose 32 mg/dL); infected sacral wound; Type 2 diabetes',
+    status: 'complete',
+    synopsis: `Arthur is found unresponsive with a blood glucose of 32 mg/dL. Emergency D50 IV is administered, reversing the hypoglycemia. The cause is identified as hospitalization stress activating counter-regulatory hormones (cortisol, epinephrine, glucagon) that create unpredictable glucose swings despite his previously well-controlled home regimen. His insulin sliding scale is re-evaluated to balance stress-induced hyperglycemia against hypoglycemia risk. The situation resolves with Arthur regaining consciousness and glucose stabilizing in a safe range. Close glucose monitoring and wound care continue. The scenario ends at acute stabilization.`,
+  },
+  {
+    id: 'MED-35',
+    num: '35',
+    patient: 'Janet Owen',
+    age: '47 yr', gender: 'F',
+    category: 'GI / Addiction',
+    primaryDx: 'Acute pancreatitis; alcohol use disorder; alcoholic cirrhosis',
+    status: 'complete',
+    synopsis: `Janet faces two simultaneous life-threatening risks: acute pancreatitis and alcohol withdrawal. Thiamine is administered before any IV glucose (preventing Wernicke's encephalopathy, which is irreversible if thiamine-depleted patients receive glucose first). Morphine manages severe epigastric pain; the patient is kept NPO with IV hydration. Lorazepam is given per CIWA-Ar scoring to prevent delirium tremens. The pancreatitis is stabilized on conservative management, and acute alcohol withdrawal is successfully prevented. The scenario does not reach discharge — it ends with the patient safe, pain-controlled, and withdrawal-free on the current treatment regimen.`,
+  },
+  {
+    id: 'MED-40',
+    num: '40',
+    patient: 'Agnes Taylor',
+    age: '81 yr', gender: 'F',
+    category: 'Orthopedic / Sepsis',
+    primaryDx: 'Left hip fracture — ORIF (postoperative day 4); wound infection; early sepsis',
+    status: 'complete',
+    synopsis: `Agnes's family reports that she is "just not herself today." This new-onset confusion is recognized as the atypical — and often only — early sign of sepsis in elderly patients with a blunted immune response. A developing wound infection at the surgical site is identified as the source. Broad-spectrum antibiotics (levofloxacin and vancomycin for MRSA coverage) are already running. Early recognition enables prompt escalation before the patient progresses to septic shock. The scenario concludes at the point of early intervention and stabilization; recovery and rehabilitation are ongoing but not fully depicted.`,
+  },
+  {
+    id: 'MED-41',
+    num: '41',
+    patient: 'Mathias Hedding',
+    age: '62 yr', gender: 'M',
+    category: 'Wound Care / Multisystem',
+    primaryDx: 'Post-wound debridement (diabetic foot ulcer; sacral pressure injury); Type 2 diabetes; heart failure',
+    status: 'complete',
+    synopsis: `Mathias returns from wound debridement with two chronic wounds healing against a backdrop of profoundly impaired perfusion (Type 2 diabetes impairing neutrophil function and peripheral circulation; heart failure reducing cardiac output). The scenario establishes the complex pathophysiology driving his poor healing potential and sets a care plan addressing all drivers: glucose control, careful fluid balance (avoiding both pulmonary edema and dehydration), nutritional support, clindamycin IV (with monitoring for C. difficile), and insulin sliding scale (with D50 on standby). The situation does not fully resolve — the scenario ends with care priorities established and the patient oriented and stable, but wound healing and multi-system management are expected to continue over days to weeks.`,
+  },
+];
+---
+
+<BaseLayout title="Case Synopses" description="Aggregate synopsis and resolution summaries for all simulation cases.">
+  <div class="breadcrumb">
+    <a href={base}>Home</a>
+    <span>›</span>
+    <a href={`${base}cases/`}>Cases</a>
+    <span>›</span>
+    <span>Synopses</span>
+  </div>
+
+  <div class="synopsis-hero">
+    <h1>Case Synopses</h1>
+    <p>
+      A consolidated reference showing the clinical situation, key events, and how each scenario
+      resolves — or does not reach a conclusion — for every case in the inventory.
+      Use this page to survey the full case library and understand the range of clinical
+      outcomes represented across disciplines.
+    </p>
+    <div class="synopsis-legend">
+      <span class="legend-item"><span class="dot complete"></span>Complete case</span>
+      <span class="legend-item"><span class="dot stub"></span>Stub (partial implementation)</span>
+    </div>
+  </div>
+
+  <!-- Fundamentals -->
+  <section class="discipline-section">
+    <div class="discipline-label fundamentals-label">
+      <span class="disc-icon">📖</span>
+      <div>
+        <h2>Fundamentals</h2>
+        <p>Core nursing skills: assessment, medication administration, wound care, patient safety, and therapeutic communication.</p>
+      </div>
+    </div>
+
+    <div class="synopsis-grid">
+      {fundamentalsCases.map((c) => (
+        <div class={`synopsis-card ${c.status}`}>
+          <div class="card-header">
+            <div class="card-id-wrap">
+              <a href={`${base}cases/fundamentals/${c.num}/`} class="case-id">{c.id}</a>
+              {c.status === 'stub' && <span class="stub-badge">Stub</span>}
+            </div>
+            <div class="patient-info">
+              <span class="patient-name">{c.patient}</span>
+              <span class="patient-meta">{c.age} · {c.gender}</span>
+            </div>
+          </div>
+          <div class="card-dx">
+            <span class="category-tag">{c.category}</span>
+            <span class="dx-text">{c.primaryDx}</span>
+          </div>
+          <div class="card-synopsis">
+            <p>{c.synopsis}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Med-Surgical -->
+  <section class="discipline-section">
+    <div class="discipline-label med-surgical-label">
+      <span class="disc-icon">🏥</span>
+      <div>
+        <h2>Med-Surgical</h2>
+        <p>Adult health conditions across body systems including post-operative care, chronic disease management, and acute illness.</p>
+      </div>
+    </div>
+
+    <div class="synopsis-grid">
+      {medSurgicalCases.map((c) => (
+        <div class={`synopsis-card ${c.status}`}>
+          <div class="card-header">
+            <div class="card-id-wrap">
+              <a href={`${base}cases/med-surgical/${c.num}/`} class="case-id">{c.id}</a>
+            </div>
+            <div class="patient-info">
+              <span class="patient-name">{c.patient}</span>
+              <span class="patient-meta">{c.age} · {c.gender}</span>
+            </div>
+          </div>
+          <div class="card-dx">
+            <span class="category-tag">{c.category}</span>
+            <span class="dx-text">{c.primaryDx}</span>
+          </div>
+          <div class="card-synopsis">
+            <p>{c.synopsis}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* ── Hero ───────────────────────────────────────────────────── */
+  .synopsis-hero {
+    background: linear-gradient(135deg, #1a56a4 0%, #2c5282 100%);
+    color: #fff;
+    border-radius: var(--border-radius);
+    padding: 2rem 2.25rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .synopsis-hero h1 {
+    margin-bottom: 0.6rem;
+    font-size: 1.9rem;
+  }
+
+  .synopsis-hero p {
+    opacity: 0.92;
+    max-width: 680px;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+    font-size: 0.975rem;
+  }
+
+  .synopsis-legend {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    opacity: 0.9;
+  }
+
+  .legend-item { display: flex; align-items: center; gap: 0.45rem; }
+
+  .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  .dot.complete { background: #68d391; }
+  .dot.stub     { background: #f6ad55; }
+
+  /* ── Discipline sections ───────────────────────────────────── */
+  .discipline-section {
+    margin-bottom: 3rem;
+  }
+
+  .discipline-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    border-radius: var(--border-radius);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.25rem;
+    color: #fff;
+  }
+
+  .fundamentals-label  { background: linear-gradient(135deg, #1a56a4 0%, #2c8a6e 100%); }
+  .med-surgical-label  { background: linear-gradient(135deg, #1565c0 0%, #0288d1 100%); }
+
+  .disc-icon { font-size: 2rem; flex-shrink: 0; padding-top: 0.15rem; }
+
+  .discipline-label h2 {
+    margin: 0 0 0.3rem;
+    font-size: 1.2rem;
+  }
+
+  .discipline-label p {
+    margin: 0;
+    font-size: 0.875rem;
+    opacity: 0.9;
+    line-height: 1.5;
+    max-width: 600px;
+  }
+
+  /* ── Synopsis grid ─────────────────────────────────────────── */
+  .synopsis-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 1.25rem;
+  }
+
+  /* ── Individual card ────────────────────────────────────────── */
+  .synopsis-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .synopsis-card.stub {
+    opacity: 0.88;
+    border-left: 4px solid #f6ad55;
+  }
+
+  .synopsis-card.complete {
+    border-left: 4px solid #48bb78;
+  }
+
+  /* Card header row */
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.85rem 1rem 0.6rem;
+    border-bottom: 1px solid var(--color-border);
+    gap: 0.75rem;
+  }
+
+  .card-id-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+  }
+
+  .case-id {
+    font-weight: 800;
+    font-size: 0.95rem;
+    color: var(--color-primary);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .case-id:hover { text-decoration: underline; }
+
+  .stub-badge {
+    font-size: 0.68rem;
+    font-weight: 700;
+    background: #fef3c7;
+    color: #92400e;
+    border: 1px solid #fcd34d;
+    padding: 0.1rem 0.45rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+  }
+
+  .patient-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.1rem;
+    min-width: 0;
+  }
+
+  .patient-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--color-text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 170px;
+  }
+
+  .patient-meta {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+  }
+
+  /* Dx / category row */
+  .card-dx {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.55rem 1rem;
+    background: #f7f9fc;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .category-tag {
+    font-size: 0.72rem;
+    font-weight: 700;
+    background: var(--color-primary);
+    color: #fff;
+    padding: 0.15rem 0.55rem;
+    border-radius: 20px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .dx-text {
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
+    line-height: 1.4;
+  }
+
+  /* Synopsis body */
+  .card-synopsis {
+    padding: 0.9rem 1rem 1rem;
+    flex: 1;
+  }
+
+  .card-synopsis p {
+    font-size: 0.875rem;
+    color: var(--color-text);
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  /* ── Responsive ────────────────────────────────────────────── */
+  @media (max-width: 640px) {
+    .synopsis-grid { grid-template-columns: 1fr; }
+    .synopsis-hero { padding: 1.5rem; }
+  }
+</style>
