@@ -1,0 +1,929 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout
+  title="Med-Surgical 40 — Agnes Taylor"
+  description="Unfolding case study: Postoperative ORIF Hip Fracture with Wound Infection and Early Sepsis (MED-40)"
+>
+
+  <div class="breadcrumb">
+    <a href={base}>Home</a>
+    <span>›</span>
+    <a href={`${base}cases/`}>Cases</a>
+    <span>›</span>
+    <a href={`${base}cases/med-surgical/`}>Med-Surgical</a>
+    <span>›</span>
+    <span>Med-Surgical 40 — Agnes Taylor</span>
+  </div>
+
+  <div class="case-header">
+    <span class="card-tag">Orthopedic / Sepsis</span>
+    <h1>Med-Surgical 40 — Agnes Taylor</h1>
+    <p class="case-subtitle">Postoperative ORIF Hip Fracture with Wound Infection and Early Sepsis</p>
+    <div class="case-meta">
+      <span>👤 Agnes Taylor, 81 years, Caucasian Female</span>
+      <span>⏱ Scenario: 20–25 minutes</span>
+      <span>💬 Debrief: 20–25 minutes</span>
+    </div>
+  </div>
+
+  <div class="callout callout-info">
+    <strong>📖 How to Use This Unfolding Case Study</strong>
+    <p>Work through each phase in order. Information is revealed progressively — exactly as it would be in a real clinical encounter. Before reading each answer, pause and reason through the question yourself. Use the <strong>▶ Reveal Answer</strong> toggles to check your thinking.</p>
+  </div>
+
+  <!-- PHASE 1 -->
+  <div class="phase-card" id="phase1">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 1</span>
+      <h2>Handoff Report</h2>
+    </div>
+    <p class="phase-intro">You are the oncoming nurse on the medical-surgical unit. You receive handoff for Agnes Taylor, an 81-year-old Caucasian female who is 4 days post-ORIF for a left hip fracture. She has a history of malnutrition and is currently receiving IV antibiotics for a developing wound infection.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>📋 Handoff Report</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Patient</th><td>Agnes Taylor</td></tr>
+            <tr><th>Age / Gender</th><td>81 years · Female · Caucasian</td></tr>
+            <tr><th>Primary Dx</th><td>Left hip fracture — ORIF (postoperative day 4)</td></tr>
+            <tr><th>Secondary Dx</th><td>Malnutrition</td></tr>
+            <tr><th>Allergies</th><td>Review MAR</td></tr>
+            <tr><th>Code Status</th><td>Full code</td></tr>
+            <tr><th>SWIPE note</th><td>Abductor pillow in place; hip precautions posted</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>💊 Medications on MAR</h3>
+        <ul class="med-list">
+          <li><strong>Levofloxacin 500 mg</strong> — IV daily (broad-spectrum antibiotic)</li>
+          <li><strong>Vancomycin 1000 mg</strong> — IV q12h (MRSA coverage)</li>
+          <li><strong>Morphine 2 mg</strong> — IV q4h PRN (pain)</li>
+          <li><strong>Oxycodone/APAP 5/325 mg</strong> — PO (moderate pain) <span class="badge-warning">MAX APAP watch</span></li>
+          <li><strong>Acetaminophen</strong> — PO (adjunct; monitor cumulative dose)</li>
+          <li>Ondansetron · Famotidine · Ferrous sulfate · Calcium citrate · Docusate · Multivitamin · Ibuprofen</li>
+        </ul>
+      </div>
+    </div>
+    <div class="scene-box">
+      <h3>🚪 Entering the Room — What You Observe</h3>
+      <p>Agnes appears confused compared to yesterday's documentation. She is not oriented to place or situation. The abductor pillow is in place. She was previously alert and oriented × 3. Her family at bedside reports, "She just seems 'off' today — not herself at all."</p>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: Why is new confusion in an elderly patient often the FIRST sign of infection or sepsis?</summary>
+      <div class="reveal-content">
+        <p><strong>Atypical Presentation in the Elderly:</strong></p>
+        <ul>
+          <li>Elderly patients often do NOT present with classic signs of infection (fever, tachycardia) initially</li>
+          <li>Neuroinflammation from systemic infection preferentially affects the aging brain — altered mental status is the brain's "alarm signal"</li>
+          <li>Physiologic blunting with age: baseline lower body temperature means a "normal" temp may actually be elevated for that patient; blunted tachycardia response</li>
+          <li>Hypothermia (instead of fever) can also indicate sepsis in the elderly</li>
+          <li><strong>Clinical rule:</strong> Any new or acute change in mental status in an elderly patient must be treated as infection/sepsis until proven otherwise</li>
+        </ul>
+        <p>Agnes's confusion is a red flag — initiate full assessment immediately.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ You perform a focused postoperative assessment using the 5 Ps…</div>
+
+  <!-- PHASE 2 -->
+  <div class="phase-card" id="phase2">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 2</span>
+      <h2>ORIF Postoperative Assessment — The 5 Ps</h2>
+    </div>
+    <p class="phase-intro">You perform a neurovascular assessment of the operative extremity every 2–4 hours. Agnes's vital signs show a rising fever. You document the following 5 P assessment findings.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>🦴 5 P Neurovascular Assessment</h3>
+        <table class="data-table">
+          <thead><tr><th>5 P</th><th>Normal Finding</th><th>Agnes — Abnormal Finding</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Pain</strong></td><td>Expected post-op pain, controlled</td><td>Pain increasing beyond expected; reports 7/10 at wound site</td></tr>
+            <tr><td><strong>Pulses</strong></td><td>Distal pulses 2+ bilaterally</td><td>Left dorsalis pedis slightly diminished; compare bilaterally</td></tr>
+            <tr><td><strong>Pallor</strong></td><td>Capillary refill &lt; 2 sec; pink skin</td><td>Capillary refill 3 sec left foot; skin warm around wound</td></tr>
+            <tr><td><strong>Paresthesias</strong></td><td>No numbness or tingling</td><td>Reports mild tingling in left toes</td></tr>
+            <tr><td><strong>Paralysis / Paresis</strong></td><td>Able to wiggle toes and dorsiflex</td><td>Able to move toes; no paralysis</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>⚠️ Complication Watch</h3>
+        <div class="callout callout-danger">
+          <p><strong>Fat Embolism — 1–3 days post-fracture</strong></p>
+          <p>Signs: Sudden restlessness, dyspnea, chest pain, petechiae on chest/axillae → Notify provider STAT</p>
+        </div>
+        <div class="callout callout-warning">
+          <p><strong>DVT / PE Prevention</strong></p>
+          <ul>
+            <li>Sequential compression devices (SCDs) in place?</li>
+            <li>Anticoagulants per order</li>
+            <li>Early mobility with PT as tolerated</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: What are the ORIF hip precautions and why are they critical?</summary>
+      <div class="reveal-content">
+        <p><strong>Hip Precautions After ORIF — prevent prosthesis dislocation:</strong></p>
+        <ul>
+          <li><strong>No hip flexion &gt; 90 degrees</strong> — do not bend the hip past a right angle (no leaning far forward; chair with raised seat)</li>
+          <li><strong>No internal rotation</strong> — do not turn the operative leg inward</li>
+          <li><strong>No crossing legs or ankles</strong></li>
+          <li><strong>Abduction must be maintained</strong> — abductor pillow/wedge between legs when lying down</li>
+          <li><strong>Call for assistance before getting up</strong></li>
+        </ul>
+        <p>These precautions must be posted at the bedside, communicated to all staff, and taught to Agnes and her family before discharge.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ You turn your attention to the surgical wound, which looks different from yesterday…</div>
+
+  <!-- PHASE 3 -->
+  <div class="phase-card" id="phase3">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 3</span>
+      <h2>Wound Infection Recognition</h2>
+    </div>
+    <p class="phase-intro">You remove the dressing to assess Agnes's left hip surgical incision. Compared to yesterday's documentation, you note significant changes consistent with wound infection.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>🩹 Wound Assessment Findings</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Redness</th><td>Increasing erythema extending 2 cm beyond incision edges</td></tr>
+            <tr><th>Warmth</th><td>Incision site notably warmer than surrounding skin</td></tr>
+            <tr><th>Swelling</th><td>Edema at and around incision</td></tr>
+            <tr><th>Drainage</th><td>Purulent yellow-green thick drainage — <strong>abnormal</strong></td></tr>
+            <tr><th>Fever</th><td>Temperature rising: 38.8°C (101.8°F)</td></tr>
+            <tr><th>WBC</th><td>Elevated on morning labs</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>🔬 Normal Post-Op Inflammation vs. Infection</h3>
+        <table class="data-table">
+          <thead><tr><th>Finding</th><th>Normal (Days 1–3)</th><th>Infection (Days 3+)</th></tr></thead>
+          <tbody>
+            <tr><td>Redness</td><td>Mild at incision edges</td><td>Extending, worsening</td></tr>
+            <tr><td>Drainage</td><td>Serosanguineous (pink/clear)</td><td>Purulent (yellow/green)</td></tr>
+            <tr><td>Pain</td><td>Expected, improving</td><td>Worsening or new</td></tr>
+            <tr><td>Fever</td><td>Low-grade ≤ 38°C</td><td>Rising, persistent</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: Why must wound cultures be obtained BEFORE changing antibiotics? And why blood cultures × 2?</summary>
+      <div class="reveal-content">
+        <p><strong>Wound cultures before changing antibiotics:</strong></p>
+        <ul>
+          <li>Antibiotics will kill bacteria in the wound within minutes to hours of administration</li>
+          <li>If cultures are obtained after antibiotics, they may return false-negative — you won't identify the organism or its sensitivities</li>
+          <li>Without organism identification, targeted therapy cannot be selected — patient stays on broad-spectrum unnecessarily</li>
+        </ul>
+        <p><strong>Blood cultures × 2 from different sites:</strong></p>
+        <ul>
+          <li>Two cultures from different sites rules out skin contamination (a single culture that grows an organism could be a contaminant)</li>
+          <li>Increases sensitivity for detecting bacteremia — bacteria may be intermittently shed into bloodstream</li>
+          <li>Both sets must be obtained before any new or changed antibiotic is given</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ The picture is becoming clearer — Agnes's infection is going systemic…</div>
+
+  <!-- PHASE 4 -->
+  <div class="phase-card" id="phase4">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 4</span>
+      <h2>Early Sepsis Recognition</h2>
+    </div>
+    <p class="phase-intro">Agnes's trending vital signs and mental status changes now meet criteria for early sepsis. You apply the qSOFA screening tool and SIRS criteria to confirm your clinical suspicion and initiate the sepsis protocol.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>🔴 qSOFA Bedside Screening (2+ = Sepsis Risk)</h3>
+        <table class="data-table">
+          <thead><tr><th>Criterion</th><th>Agnes's Finding</th><th>Met?</th></tr></thead>
+          <tbody>
+            <tr><td>Altered mental status</td><td>Confused, not oriented to place</td><td class="text-danger"><strong>✓ YES</strong></td></tr>
+            <tr><td>RR ≥ 22 breaths/min</td><td>RR 24</td><td class="text-danger"><strong>✓ YES</strong></td></tr>
+            <tr><td>SBP ≤ 100 mmHg</td><td>SBP 102 (borderline)</td><td>Borderline</td></tr>
+          </tbody>
+        </table>
+        <p style="margin-top:0.5rem; font-size:0.9rem;"><strong>qSOFA score: 2 → activate sepsis protocol</strong></p>
+      </div>
+      <div class="info-block">
+        <h3>📊 SIRS Criteria (2+ = SIRS)</h3>
+        <table class="data-table">
+          <thead><tr><th>Criterion</th><th>Threshold</th><th>Agnes</th></tr></thead>
+          <tbody>
+            <tr><td>Temperature</td><td>&gt;38°C or &lt;36°C</td><td class="text-danger">38.8°C ✓</td></tr>
+            <tr><td>Heart rate</td><td>&gt;90 bpm</td><td class="text-danger">HR 106 ✓</td></tr>
+            <tr><td>Respiratory rate</td><td>&gt;20 breaths/min</td><td class="text-danger">RR 24 ✓</td></tr>
+            <tr><td>WBC</td><td>&gt;12,000 or &lt;4,000/mm³</td><td class="text-danger">Elevated ✓</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="callout callout-danger">
+      <strong>🚨 Hour-1 Sepsis Bundle — Initiate Immediately</strong>
+      <table class="data-table" style="margin-top:0.5rem;">
+        <thead><tr><th>Action</th><th>Rationale</th></tr></thead>
+        <tbody>
+          <tr><td>1. Measure lactate level</td><td>Elevated lactate (&gt;2 mmol/L) = tissue hypoperfusion</td></tr>
+          <tr><td>2. Blood cultures × 2 (different sites)</td><td>Obtain BEFORE antibiotic changes</td></tr>
+          <tr><td>3. Broad-spectrum antibiotics within 1 hour</td><td>Early antibiotics reduce mortality</td></tr>
+          <tr><td>4. 30 mL/kg crystalloid if hypotension or lactate ≥ 4</td><td>Fluid resuscitation restores perfusion</td></tr>
+          <tr><td>5. Vasopressors if hypotension persists</td><td>Norepinephrine first-line</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: Why do elderly patients present atypically in sepsis?</summary>
+      <div class="reveal-content">
+        <p><strong>Atypical Sepsis Presentation in Elderly:</strong></p>
+        <ul>
+          <li><strong>Hypothermia instead of fever</strong> — aging blunts the febrile response; subnormal temperature (&lt;36°C) in sepsis is a poor prognostic sign</li>
+          <li><strong>Confusion as the only initial sign</strong> — neuroinflammation and reduced cerebral perfusion manifest as acute delirium before other systemic signs</li>
+          <li><strong>Blunted tachycardia</strong> — elderly may be on beta-blockers; cardiac response may be muted</li>
+          <li><strong>Falls</strong> — sudden fall or functional decline may be the first presentation of sepsis</li>
+          <li><strong>Lower baseline BP</strong> — hypotension thresholds may need individualization</li>
+        </ul>
+        <p><strong>Key teaching:</strong> In elderly patients, any acute change in functional status, cognition, or vital signs from baseline warrants sepsis screening.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ You review Agnes's medications carefully for safety concerns…</div>
+
+  <!-- PHASE 5 -->
+  <div class="phase-card" id="phase5">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 5</span>
+      <h2>Medication Safety and Nutrition</h2>
+    </div>
+    <p class="phase-intro">While managing Agnes's sepsis protocol, you identify important medication safety concerns including antibiotic monitoring, cumulative acetaminophen dosing, and nutritional status affecting wound healing.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>⚠️ Levofloxacin — Elderly Safety Concerns</h3>
+        <div class="callout callout-warning">
+          <p><strong>Infuse over 60–90 minutes</strong> — rapid infusion increases adverse effects</p>
+          <p><strong>Tendon rupture risk</strong> — especially in elderly patients, those on steroids; assess for new tendon pain (Achilles most common)</p>
+          <p><strong>QT prolongation</strong> — monitor cardiac rhythm; avoid with other QT-prolonging drugs</p>
+          <p><strong>Beers Criteria</strong> — fluoroquinolones flagged for potential harms in elderly; risk-benefit must be assessed</p>
+        </div>
+      </div>
+      <div class="info-block">
+        <h3>⚠️ Acetaminophen — Cumulative Dose Risk</h3>
+        <div class="callout callout-danger">
+          <p><strong>Agnes is receiving:</strong></p>
+          <ul>
+            <li>Oxycodone/APAP 5/325 mg PO — contains 325 mg acetaminophen per dose</li>
+            <li>Acetaminophen (standing) — additional dose</li>
+          </ul>
+          <p><strong>Maximum total acetaminophen: ≤ 4 g/day</strong> (≤ 2 g/day in liver disease or elderly)</p>
+          <p>Calculate cumulative APAP from ALL sources before administering. Hepatotoxicity risk if exceeded.</p>
+        </div>
+      </div>
+    </div>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>🔬 Vancomycin Monitoring</h3>
+        <ul class="med-list">
+          <li>Obtain trough level before 4th dose (goal 15–20 mcg/mL)</li>
+          <li>Monitor BUN and creatinine — nephrotoxicity risk</li>
+          <li>Infuse over at least 60 minutes — rapid infusion causes <strong>Red Man Syndrome</strong> (flushing, rash, hypotension)</li>
+          <li>Assess hearing — ototoxicity with prolonged use</li>
+        </ul>
+      </div>
+      <div class="info-block">
+        <h3>🥗 Nutrition and Wound Healing</h3>
+        <ul class="med-list">
+          <li><strong>Protein:</strong> 1.25–1.5 g/kg/day promotes collagen synthesis and immune function</li>
+          <li><strong>Vitamin C:</strong> essential for collagen cross-linking</li>
+          <li><strong>Vitamin A:</strong> promotes epithelialization</li>
+          <li><strong>Zinc:</strong> cofactor for wound healing enzymes</li>
+          <li>Agnes's malnutrition significantly impairs both wound healing AND immune response — dietitian consult essential</li>
+        </ul>
+      </div>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: What is the Beers Criteria and why does it matter for Agnes?</summary>
+      <div class="reveal-content">
+        <p><strong>Beers Criteria (American Geriatrics Society):</strong></p>
+        <ul>
+          <li>An evidence-based list of medications that are potentially inappropriate or higher-risk for adults aged 65 and older</li>
+          <li>Criteria account for age-related pharmacokinetic changes: reduced renal clearance, decreased hepatic metabolism, altered body composition, increased CNS sensitivity</li>
+          <li>Medications on the list require careful risk-benefit assessment — they are not absolutely contraindicated but require heightened monitoring</li>
+        </ul>
+        <p><strong>Agnes's medications of concern:</strong></p>
+        <ul>
+          <li>Levofloxacin — flagged for tendon rupture and CNS effects in elderly</li>
+          <li>Ibuprofen (NSAID) — renal toxicity, GI bleeding risk; avoid if possible in elderly</li>
+          <li>Opioids — increased fall risk and cognitive effects in elderly</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ You complete your nursing diagnoses and prepare to notify the provider…</div>
+
+  <!-- PHASE 6 -->
+  <div class="phase-card" id="phase6">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 6</span>
+      <h2>Nursing Diagnoses + SBAR</h2>
+    </div>
+    <h3>📋 Priority Nursing Diagnoses</h3>
+    <div class="dx-rank-list">
+      <div class="dx-rank-item">
+        <span class="dx-number">1</span>
+        <div><strong>Risk for Septic Shock</strong><div class="dx-aeb">AEB: wound infection with purulent drainage; fever 38.8°C; tachycardia HR 106; RR 24; elevated WBC; qSOFA 2; altered mental status</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">2</span>
+        <div><strong>Impaired Skin Integrity</strong><div class="dx-aeb">AEB: surgical incision with increasing redness, swelling, and purulent drainage; malnutrition impairing healing</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">3</span>
+        <div><strong>Acute Pain</strong><div class="dx-aeb">AEB: pain 7/10 at wound site; increasing beyond expected postoperative level; guarded positioning</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">4</span>
+        <div><strong>Imbalanced Nutrition: Less Than Body Requirements</strong><div class="dx-aeb">AEB: malnutrition diagnosis; elevated infection risk; impaired wound healing; poor oral intake</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">5</span>
+        <div><strong>Risk for Deep Vein Thrombosis / Pulmonary Embolism</strong><div class="dx-aeb">AEB: post-hip surgery; limited mobility; elderly patient; infection increasing hypercoagulability risk</div></div>
+      </div>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ SBAR — Calling the Provider About Agnes's Early Sepsis</summary>
+      <div class="reveal-content">
+        <div class="sbar-block">
+          <div class="sbar-item sbar-s"><span class="sbar-label">S — Situation</span><p>I am calling about Agnes Taylor, an 81-year-old female who is 4 days post-ORIF for left hip fracture. I am concerned she is developing early sepsis from a wound infection.</p></div>
+          <div class="sbar-item sbar-b"><span class="sbar-label">B — Background</span><p>She has a history of malnutrition and is on Levofloxacin 500 mg IV daily and Vancomycin 1000 mg IV q12h. This morning her temperature is 38.8°C, HR 106, RR 24, and her wound has worsening redness, swelling, and purulent yellow-green drainage compared to yesterday. She is also newly confused — not oriented to place.</p></div>
+          <div class="sbar-item sbar-a"><span class="sbar-label">A — Assessment</span><p>Her qSOFA score is 2 (altered mental status and RR ≥ 22). SIRS criteria met on 4 of 4 indicators. WBC elevated on morning labs. I believe she is showing early signs of sepsis from the surgical wound infection.</p></div>
+          <div class="sbar-item sbar-r"><span class="sbar-label">R — Recommendation</span><p>Requesting: blood cultures × 2 before any antibiotic changes, wound culture, lactate level, and reassessment of antibiotic coverage. Should I increase IV fluid rate? I want to activate the sepsis protocol. Dietitian consult needed for malnutrition. Please advise on further orders.</p></div>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <!-- APPENDIX A: Medications -->
+  <div class="phase-card" id="appendix-a">
+    <div class="phase-header">
+      <span class="phase-badge">Appendix A</span>
+      <h2>Medication Review</h2>
+    </div>
+    <table class="data-table">
+      <thead><tr><th>Medication</th><th>Class</th><th>Key Nursing Points</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Levofloxacin 500 mg IV</strong></td>
+          <td>Fluoroquinolone antibiotic</td>
+          <td>Infuse over 60–90 min; tendon rupture risk especially in elderly — assess for Achilles pain; QT prolongation — monitor ECG; Beers Criteria concern; broad-spectrum wound coverage</td>
+        </tr>
+        <tr>
+          <td><strong>Vancomycin 1000 mg IV</strong></td>
+          <td>Glycopeptide antibiotic</td>
+          <td>Trough before 4th dose (goal 15–20 mcg/mL); infuse over ≥ 60 min — rapid infusion causes Red Man Syndrome (flushing, rash, hypotension); nephrotoxicity — monitor BUN/creatinine; ototoxicity</td>
+        </tr>
+        <tr>
+          <td><strong>Morphine 2 mg IV</strong></td>
+          <td>Opioid analgesic</td>
+          <td>Monitor RR and sedation level; fall risk in elderly; naloxone at bedside; do not administer if RR &lt; 12</td>
+        </tr>
+        <tr>
+          <td><strong>Oxycodone/APAP 5/325 mg</strong> <span class="badge-danger">MAX APAP</span></td>
+          <td>Opioid combination analgesic</td>
+          <td><strong>Each dose contains 325 mg acetaminophen.</strong> Track cumulative APAP from ALL sources — max 4 g/day (2 g/day in elderly/liver disease). Hepatotoxicity if exceeded. Calculate before each dose.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- APPENDIX B: Q&A -->
+  <div class="phase-card" id="appendix-b">
+    <div class="phase-header">
+      <span class="phase-badge">Appendix B</span>
+      <h2>Post-Simulation Questions &amp; Answers</h2>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Q1: What are the ORIF postoperative monitoring priorities (5 Ps)?</summary>
+      <div class="reveal-content">
+        <p>Neurovascular assessment q2–4h using the 5 Ps: <strong>Pain</strong> (location, character; pain out of proportion = compartment syndrome emergency), <strong>Pulses</strong> (distal; compare bilaterally), <strong>Pallor</strong> (capillary refill &lt;2 sec; skin color), <strong>Paresthesias</strong> (numbness or tingling = nerve compromise), <strong>Paralysis/Paresis</strong> (motor function — can patient move toes?).</p>
+        <p>Also: vital signs q4h; wound assessment q shift; DVT prevention (SCDs, anticoagulants, early mobility); urine output ≥30 mL/hr; fat embolism signs (restlessness, dyspnea, petechiae 1–3 days post-fracture).</p>
+      </div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q2: Describe the pathophysiological process of sepsis.</summary>
+      <div class="reveal-content">
+        <ol>
+          <li><strong>Infection</strong> — bacteria (gram-positive in surgical wounds: Staph, Strep, MRSA) enter tissue</li>
+          <li><strong>Localized inflammatory response</strong> — immune system activates locally</li>
+          <li><strong>SIRS</strong> — inflammation spills into systemic circulation; cytokines (TNF-α, IL-1, IL-6) released</li>
+          <li><strong>Endothelial damage</strong> — capillary leak → third-spacing → decreased intravascular volume</li>
+          <li><strong>Vasodilation</strong> — widespread → decreased vascular resistance → hypotension</li>
+          <li><strong>Organ ischemia</strong> — microthrombi + hypoperfusion → organ dysfunction (MODS) if unchecked</li>
+        </ol>
+      </div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q3: What are the diagnostic criteria for sepsis (qSOFA / SIRS)?</summary>
+      <div class="reveal-content">
+        <p><strong>SIRS (2+ criteria + infection source):</strong> Temp &gt;38°C or &lt;36°C; HR &gt;90; RR &gt;20; WBC &gt;12,000 or &lt;4,000/mm³.</p>
+        <p><strong>qSOFA (bedside; 2+ = sepsis risk):</strong> Altered mental status; RR ≥22; SBP ≤100 mmHg.</p>
+        <p><strong>Sepsis-3 (2016):</strong> Suspected infection + acute SOFA score increase ≥2 (organ dysfunction).</p>
+        <p><strong>Septic shock:</strong> Sepsis + vasopressor-requiring hypotension despite adequate fluid resuscitation + lactate &gt;2 mmol/L.</p>
+      </div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q4: Compare compensatory vs. progressive stages of shock.</summary>
+      <div class="reveal-content">
+        <p><strong>Compensatory Stage:</strong> Body maintains homeostasis via SNS activation (tachycardia, vasoconstriction), RAAS activation, increased RR. BP may be normal or slightly decreased. Skin cool/pale. UO decreased. <em>Aggressive intervention here is most effective.</em></p>
+        <p><strong>Progressive Stage:</strong> Compensatory mechanisms begin to fail. BP drops (systolic &lt;90), severe tachycardia (HR &gt;130), worsening confusion, cool/clammy skin, oliguria (&lt;20 mL/hr), metabolic acidosis. Urgent intervention required.</p>
+        <p><strong>Refractory Stage:</strong> Irreversible organ damage. Persistent hypotension despite vasopressors, anuria, coma. Very high mortality — prevented by early sepsis recognition.</p>
+      </div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q5: What are the initial collaborative care measures for sepsis (Hour-1 Bundle)?</summary>
+      <div class="reveal-content">
+        <ol>
+          <li>Measure lactate — elevated (&gt;2 mmol/L) = tissue hypoperfusion; ≥4 = severe</li>
+          <li>Blood cultures × 2 from different sites — BEFORE changing antibiotics</li>
+          <li>Broad-spectrum antibiotics within 1 hour of recognition</li>
+          <li>30 mL/kg IV crystalloid (NS or LR) if hypotension or lactate ≥ 4</li>
+          <li>Vasopressors (norepinephrine first-line) if hypotension persists after fluids</li>
+        </ol>
+        <p><strong>Ongoing:</strong> SpO2 ≥94%; Foley for hourly urine output; wound culture; glycemic control 140–180 mg/dL; early enteral nutrition.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- APPENDIX C: References -->
+  <div class="phase-card" id="appendix-c">
+    <div class="phase-header">
+      <span class="phase-badge">Appendix C</span>
+      <h2>References</h2>
+    </div>
+    <ol class="ref-list">
+      <li>Harding, M. M., Kwong, J., Roberts, D., Reinisch, C., &amp; Hagler, D. (2020). <em>Lewis's medical-surgical nursing</em> (11th ed.). Elsevier.</li>
+      <li>Vallerand, A. H., &amp; Sanoski, C. A. (2021). <em>Davis's drug guide for nurses</em> (17th ed.). F.A. Davis.</li>
+      <li>Rhodes, A., Evans, L. E., Alhazzani, W., et al. (2017). Surviving Sepsis Campaign: International guidelines for management of sepsis and septic shock 2016. <em>Intensive Care Medicine, 43</em>(3), 304–377.</li>
+    </ol>
+    <div style="margin-top: 2rem;">
+      <a href={`${base}cases/med-surgical/`} class="btn-back">← Back to Med-Surgical</a>
+    </div>
+  </div>
+
+</BaseLayout>
+
+<style>
+  /* ── Phase structure ─────────────────────────────────────────── */
+  .case-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-top: 0.25rem;
+  }
+
+  .phase-card {
+    background: var(--color-surface);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 0;
+    box-shadow: var(--shadow);
+    border-top: 4px solid var(--color-primary);
+  }
+
+  .appendix-card {
+    border-top-color: var(--color-secondary);
+  }
+
+  .phase-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .phase-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .phase-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+
+  .phase-badge-appendix {
+    background: var(--color-secondary);
+  }
+
+  .phase-intro {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin-bottom: 1.25rem;
+    border-left: 3px solid var(--color-accent);
+    padding-left: 0.75rem;
+  }
+
+  .phase-connector {
+    text-align: center;
+    padding: 0.6rem 0;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+  }
+
+  /* ── Info grid ───────────────────────────────────────────────── */
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 720px) {
+    .info-grid { grid-template-columns: 1fr; }
+    .compare-grid { grid-template-columns: 1fr; }
+  }
+
+  .info-block h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  /* ── Tables ──────────────────────────────────────────────────── */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--color-border);
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .data-table thead th {
+    background: #f0f4ff;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+  }
+
+  .data-table tbody th {
+    background: #f8f9fa;
+    font-weight: 600;
+    width: 30%;
+    color: var(--color-text);
+  }
+
+  .med-table tbody th {
+    width: 28%;
+  }
+
+  /* ── Callouts ────────────────────────────────────────────────── */
+  .callout {
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .callout p { margin-bottom: 0.5rem; }
+  .callout p:last-child { margin-bottom: 0; }
+
+  .callout-info {
+    background: #e8f0fe;
+    border-left: 4px solid var(--color-primary);
+  }
+
+  .callout-warning {
+    background: #fff8e1;
+    border-left: 4px solid #f59e0b;
+  }
+
+  .callout-danger {
+    background: #fff0f0;
+    border-left: 4px solid #dc2626;
+  }
+
+  /* ── Badges ──────────────────────────────────────────────────── */
+  .badge-danger {
+    display: inline-block;
+    background: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fca5a5;
+    border-radius: 4px;
+    padding: 0.1rem 0.45rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .badge-warning {
+    display: inline-block;
+    background: #fffbeb;
+    color: #92400e;
+    border: 1px solid #fde68a;
+    border-radius: 4px;
+    padding: 0.1rem 0.45rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  /* ── Scene box ───────────────────────────────────────────────── */
+  .scene-box {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .scene-box h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* ── Med list ────────────────────────────────────────────────── */
+  .med-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .med-list li {
+    padding: 0.35rem 0;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 0.9rem;
+  }
+
+  .med-list li:last-child { border-bottom: none; }
+
+  /* ── Chain flow ──────────────────────────────────────────────── */
+  .chain-flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin: 1.25rem 0;
+  }
+
+  .chain-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 520px;
+    gap: 0.2rem;
+  }
+
+  .chain-step small {
+    font-size: 0.8rem;
+    opacity: 0.8;
+  }
+
+  .chain-step-drug {
+    background: #e8f0fe;
+    color: var(--color-primary-dark);
+    border: 1px solid #bfdbfe;
+  }
+
+  .chain-step-problem {
+    background: #fff8e1;
+    color: #78350f;
+    border: 1px solid #fde68a;
+  }
+
+  .chain-step-consequence {
+    background: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+  }
+
+  .chain-arrow {
+    font-size: 1.5rem;
+    color: var(--color-text-muted);
+    line-height: 1.2;
+  }
+
+  .chain-icon {
+    font-size: 1.4rem;
+  }
+
+  /* ── Stat highlight ──────────────────────────────────────────── */
+  .stat-highlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fef2f2;
+    border: 2px solid #fca5a5;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #b91c1c;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+    color: #7f1d1d;
+    margin-top: 0.25rem;
+  }
+
+  /* ── Reveal (details/summary) ────────────────────────────────── */
+  .reveal-block {
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    margin-top: 1rem;
+    overflow: hidden;
+  }
+
+  .reveal-block > summary {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--color-primary);
+    background: #f0f4ff;
+    list-style: none;
+    user-select: none;
+  }
+
+  .reveal-block > summary::-webkit-details-marker { display: none; }
+
+  .reveal-block[open] > summary {
+    background: #dbeafe;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .reveal-block > summary:hover {
+    background: #dbeafe;
+  }
+
+  .reveal-content {
+    padding: 1rem 1.25rem;
+  }
+
+  .reveal-content ul,
+  .reveal-content ol {
+    margin-bottom: 0.75rem;
+  }
+
+  /* ── SBAR block ──────────────────────────────────────────────── */
+  .sbar-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    margin-bottom: 1.5rem;
+  }
+
+  .sbar-item {
+    padding: 1rem 1.25rem;
+  }
+
+  .sbar-item p { margin: 0; font-style: italic; }
+
+  .sbar-label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.4rem;
+  }
+
+  .sbar-s { background: #eff6ff; border-left: 5px solid #3b82f6; }
+  .sbar-b { background: #f0fdf4; border-left: 5px solid #22c55e; }
+  .sbar-a { background: #fffbeb; border-left: 5px solid #f59e0b; }
+  .sbar-r { background: #fef2f2; border-left: 5px solid #ef4444; }
+
+  /* ── Priority diagnoses ──────────────────────────────────────── */
+  .dx-rank-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .dx-rank-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: #f8f9fa;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+  }
+
+  .dx-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .dx-aeb {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-top: 0.2rem;
+  }
+
+  /* ── Compare grid ────────────────────────────────────────────── */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .compare-grid h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  /* ── Concept map ─────────────────────────────────────────────── */
+  .concept-map {
+    margin-bottom: 1.25rem;
+  }
+
+  /* ── References ──────────────────────────────────────────────── */
+  .ref-list {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .ref-note {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin: 0;
+  }
+
+  /* ── Utility ─────────────────────────────────────────────────── */
+  .text-success { color: #15803d; }
+  .text-danger  { color: #b91c1c; }
+
+  .btn-back {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .btn-back:hover {
+    background: var(--color-primary-dark);
+    text-decoration: none;
+  }
+</style>
