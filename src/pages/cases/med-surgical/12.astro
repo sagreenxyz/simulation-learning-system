@@ -1,0 +1,951 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout
+  title="Med-Surgical 12 — Agnes Taylor"
+  description="Unfolding case study: Post-Hip Surgery Wound Infection in a Malnourished Elderly Patient (MED-12)"
+>
+
+  <div class="breadcrumb">
+    <a href={base}>Home</a>
+    <span>›</span>
+    <a href={`${base}cases/`}>Cases</a>
+    <span>›</span>
+    <a href={`${base}cases/med-surgical/`}>Med-Surgical</a>
+    <span>›</span>
+    <span>Med-Surgical 12 — Agnes Taylor</span>
+  </div>
+
+  <div class="case-header">
+    <span class="card-tag">Orthopedic / Wound Care</span>
+    <h1>Med-Surgical 12 — Agnes Taylor</h1>
+    <p class="case-subtitle">Post-Hip Surgery Wound Infection in a Malnourished Elderly Patient</p>
+    <div class="case-meta">
+      <span>👤 Agnes Taylor, 81 years, Female</span>
+      <span>⏱ Scenario: 20–25 minutes</span>
+      <span>💬 Debrief: 20–25 minutes</span>
+    </div>
+  </div>
+
+  <div class="callout callout-info">
+    <strong>📖 How to Use This Unfolding Case Study</strong>
+    <p>Work through each phase in order. Information is revealed progressively — exactly as it would be in a real clinical encounter. Before reading each answer, pause and reason through the question yourself. Use the <strong>▶ Reveal Answer</strong> toggles to check your thinking.</p>
+  </div>
+
+  <!-- PHASE 1 -->
+  <div class="phase-card" id="phase1">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 1</span>
+      <h2>You Arrive at the Bedside</h2>
+    </div>
+    <p class="phase-intro">You are the nurse assigned to Agnes Taylor on the medical-surgical unit. Agnes is post-operative from a left hip open reduction and internal fixation (ORIF). You review the handoff and medication administration record before entering her room.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>📋 Handoff Report</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Patient</th><td>Agnes Taylor</td></tr>
+            <tr><th>Age / Gender</th><td>81 years · Female</td></tr>
+            <tr><th>Primary Dx</th><td>Left hip fracture — status post-ORIF</td></tr>
+            <tr><th>Complication</th><td>Surgical wound infection</td></tr>
+            <tr><th>Secondary Dx</th><td>Malnutrition</td></tr>
+            <tr><th>Setting</th><td>Medical-surgical unit, post-surgical</td></tr>
+            <tr><th>Allergies</th><td>Review MAR</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>💊 Medications on MAR</h3>
+        <ul class="med-list">
+          <li><strong>IV Antibiotic</strong> (per culture/sensitivity order) — targeted therapy based on wound culture results</li>
+          <li><strong>Wound care supplies</strong> — per wound care order; sterile technique required</li>
+          <li><strong>Pain medication</strong> (analgesic per order) — pre-medicate before wound care</li>
+          <li><strong>Nutritional supplements</strong> — protein, vitamin C, zinc to support wound healing</li>
+        </ul>
+      </div>
+    </div>
+    <div class="scene-box">
+      <h3>🚪 Entering the Room — What You Observe</h3>
+      <p>Agnes is lying in bed with an abductor pillow between her legs. She appears frail and thin. The dressing over her left hip surgical site shows visible drainage on the outer layer — a tan-yellow stain that was not present on the previous shift. Agnes winces when she moves and says, <em>"My hip hurts more than it did yesterday, and I can smell something funny."</em></p>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: Why is Agnes at High Risk for Wound Infection?</summary>
+      <div class="reveal-content">
+        <p>Agnes has multiple compounding risk factors that significantly increase her infection risk:</p>
+        <div class="chain-flow">
+          <div class="chain-step chain-step-drug"><strong>Left hip fracture → ORIF surgery</strong><small>Surgical wound; internal fixation hardware implanted</small></div>
+          <div class="chain-arrow">↓</div>
+          <div class="chain-step chain-step-drug"><strong>Malnutrition + Advanced age (81 yr)</strong><small>Impaired immune function, immune senescence, poor healing capacity</small></div>
+          <div class="chain-arrow">↓</div>
+          <div class="chain-step chain-step-problem"><strong>Wound healing compromised</strong><small>Inadequate protein, vitamin C, zinc; reduced perfusion from immobility</small></div>
+          <div class="chain-arrow">↓</div>
+          <div class="chain-step chain-step-consequence"><strong>Surgical site infection develops</strong><small>Warmth, redness, purulent drainage, odor, pain, possible systemic spread</small></div>
+        </div>
+        <p><strong>Key vulnerability factors:</strong></p>
+        <ul>
+          <li><strong>Malnutrition:</strong> Inadequate protein, vitamin C, and zinc severely impair immune function and collagen synthesis. Malnourished tissue cannot mount an effective inflammatory response or rebuild damaged tissue.</li>
+          <li><strong>Advanced age:</strong> Immune senescence impairs neutrophil function — the white blood cells responsible for killing bacteria. Skin turgor decreases, capillary fragility increases, and healing slows.</li>
+          <li><strong>ORIF hardware:</strong> Internal fixation plates and screws provide a surface for bacterial biofilm formation — organisms adhere to hardware and become protected from antibiotics and immune cells.</li>
+          <li><strong>Immobility:</strong> Reduces perfusion to the wound site, promoting bacterial colonization and impairing nutrient delivery to healing tissue.</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ You perform hand hygiene and don gloves to begin your wound assessment…</div>
+
+  <!-- PHASE 2 -->
+  <div class="phase-card" id="phase2">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 2</span>
+      <h2>Wound Assessment — REEDA Framework</h2>
+    </div>
+    <p class="phase-intro">You carefully remove Agnes's dressing using sterile technique. You document your findings using the REEDA wound assessment framework — a structured tool for evaluating surgical wound healing and identifying infection.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>🩹 REEDA Wound Assessment Findings</h3>
+        <table class="data-table">
+          <thead><tr><th>Component</th><th>Agnes's Assessment</th></tr></thead>
+          <tbody>
+            <tr><td><strong>R — Redness</strong></td><td>Erythema extending 2–3 cm beyond wound margins; periwound skin warm to touch; spreading compared to last assessment</td></tr>
+            <tr><td><strong>E — Edema</strong></td><td>Moderate induration and swelling surrounding wound edges; firm, boggy tissue palpated</td></tr>
+            <tr><td><strong>E — Ecchymosis</strong></td><td>Mild bruising noted lateral to wound — consistent with post-surgical tissue trauma</td></tr>
+            <tr><td><strong>D — Discharge (Drainage)</strong></td><td>Purulent drainage — yellow-tan, cloudy, moderate amount; foul odor present; saturated inner dressing layer</td></tr>
+            <tr><td><strong>A — Approximation</strong></td><td>Wound edges beginning to separate (early dehiscence) — inferior aspect of incision</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>📏 Wound Documentation Requirements</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Dimensions</th><td>Measure: Length × Width × Depth (cm) — use disposable ruler or wound guide</td></tr>
+            <tr><th>Wound bed</th><td>Document color: red (granulating), yellow (slough/infection), black (necrosis/eschar)</td></tr>
+            <tr><th>Drainage</th><td>Type: serous, serosanguineous, sanguineous, or purulent. Amount: scant/moderate/large. Odor: present or absent</td></tr>
+            <tr><th>Wound edges</th><td>Approximated, separating (dehiscence), undermining, tunneling</td></tr>
+            <tr><th>Periwound skin</th><td>Maceration, erythema, induration, intact or fragile</td></tr>
+            <tr><th>Frequency</th><td>Every shift — document consistently to track healing progression or deterioration</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="scene-box">
+      <h3>📊 Vital Signs — Current Assessment</h3>
+      <p>Temperature: <strong>38.4°C (101.1°F)</strong> — fever present. HR: 96 bpm — mildly tachycardic. BP: 118/74 mmHg. RR: 18 breaths/min. SpO₂: 96% on room air. Agnes reports her pain as <strong>6/10</strong> at the surgical site — she describes it as "deeper and different" from the usual postoperative pain. <em>New onset fever + tachycardia + increasing wound pain = systemic infection signs — notify provider.</em></p>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Focus: Local vs. Systemic Signs of Wound Infection</summary>
+      <div class="reveal-content">
+        <p><strong>Local signs of wound infection (assess at wound site):</strong></p>
+        <ul>
+          <li>Redness (erythema) extending beyond wound margins — especially if spreading</li>
+          <li>Edema and induration (firm swelling) surrounding wound</li>
+          <li>Purulent drainage — yellow, green, tan, or brown; cloudy; may have foul odor</li>
+          <li>Increased warmth at wound site compared to surrounding skin</li>
+          <li>Wound edge separation (dehiscence)</li>
+          <li>Pain at wound site disproportionate to or increasing beyond expected postoperative baseline</li>
+        </ul>
+        <p><strong>Systemic signs (infection spreading beyond wound):</strong></p>
+        <ul>
+          <li>Fever &gt; 38°C (100.4°F) — Agnes: 38.4°C ✓</li>
+          <li>Tachycardia — Agnes: HR 96 bpm ✓</li>
+          <li>Elevated WBC (&gt; 12,000/mm³) — obtain lab results</li>
+          <li>Elevated CRP, ESR</li>
+          <li>Positive wound culture</li>
+          <li><strong>Confusion — often the FIRST sign of infection in elderly patients</strong> — assess Agnes's baseline mental status and any changes</li>
+          <li>General malaise, fatigue, decreased appetite</li>
+        </ul>
+        <p><strong>Lab indicators to review:</strong> WBC count, CRP, ESR, wound culture and sensitivity results. If systemic signs are present → monitor for progression to sepsis (qSOFA criteria).</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ Wound infection is confirmed. You prepare to obtain a wound culture before the first antibiotic dose…</div>
+
+  <!-- PHASE 3 -->
+  <div class="phase-card" id="phase3">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 3</span>
+      <h2>Wound Culture Collection and Antibiotic Therapy</h2>
+    </div>
+    <p class="phase-intro">The provider has been notified and orders a wound culture. The first dose of IV antibiotic is pending. You understand that the wound culture <strong>must be collected before</strong> the first antibiotic dose to ensure accurate identification of the infecting organism and guide targeted therapy.</p>
+    <div class="callout callout-danger">
+      <strong>🚨 Critical Sequence: Culture BEFORE Antibiotics</strong>
+      <p>Collect the wound culture <strong>before administering any new antibiotic doses</strong>. Antibiotics alter wound bacterial flora within hours — cultures collected after antibiotic administration may yield false-negative results or miss the true causative organism, leading to inadequate targeted therapy. If antibiotics have already been given: document the timing and notify provider — culture results must be interpreted in that context.</p>
+    </div>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>🧫 Wound Culture Collection — Levine Technique</h3>
+        <ol>
+          <li>Explain procedure to Agnes; confirm she has been pre-medicated for pain if needed</li>
+          <li>Perform hand hygiene; don clean gloves</li>
+          <li><strong>Irrigate the wound with normal saline first</strong> — removes surface contaminants and skin flora that would give false-positive or misleading results</li>
+          <li>Remove irrigation fluid; blot gently with sterile gauze</li>
+          <li>Using a sterile swab, <strong>rotate the swab over a 1 cm² area of viable wound tissue</strong> using firm pressure (Levine technique) — culture the wound bed, NOT the surface exudate or surrounding skin</li>
+          <li>Place swab immediately in appropriate culture transport medium</li>
+          <li>Label specimen: patient name, DOB, wound location, date, time, provider ordering</li>
+          <li>Send to laboratory promptly (within 30 minutes)</li>
+          <li>Document: time collected, technique used, wound appearance at time of culture</li>
+        </ol>
+      </div>
+      <div class="info-block">
+        <h3>💊 Antibiotic Therapy Principles</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Empiric therapy</th><td>Broad-spectrum IV antibiotic started before culture results — covers likely organisms (Staph aureus including MRSA, gram-negative organisms) based on clinical picture and local antibiogram</td></tr>
+            <tr><th>Targeted therapy</th><td>Once culture and sensitivity results return (48–72 hours), antibiotic is narrowed to the most effective, least broad agent — reduces resistance and adverse effects</td></tr>
+            <tr><th>MRSA coverage</th><td>Vancomycin IV if MRSA suspected — monitor trough levels; infuse over ≥ 60 minutes to prevent Red Man Syndrome</td></tr>
+            <tr><th>Duration</th><td>Per provider order and culture results — ORIF wound infections may require prolonged courses due to hardware biofilm</td></tr>
+            <tr><th>Nursing monitoring</th><td>Assess for allergic reaction (especially first dose); monitor for superinfection (C. diff diarrhea); IV site patency; antibiotic-specific monitoring</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="scene-box">
+      <h3>💬 Communicating with Agnes During Wound Care</h3>
+      <p>Agnes is anxious and in pain. Before beginning wound care: <em>"Ms. Taylor, I'm going to clean your wound and take a sample to send to the lab. I've made sure you have your pain medication on board. I'll work as gently as I can. Please tell me right away if your pain increases. I'll explain everything I'm doing as I go."</em> Pre-medicating before wound care, explaining the procedure, and maintaining a calm demeanor directly improve patient comfort and cooperation.</p>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: Why Culture the Wound Bed, Not the Exudate?</summary>
+      <div class="reveal-content">
+        <p><strong>The problem with culturing surface exudate:</strong> The surface drainage of a wound contains a mixture of surface colonizers (organisms that live on the wound surface without causing infection), skin flora from surrounding tissue, and environmental contaminants. These organisms may not be the pathogens actually causing the deep tissue infection.</p>
+        <p><strong>The Levine technique targets viable wound tissue:</strong></p>
+        <ul>
+          <li>After irrigating to remove surface contaminants, the swab is pressed firmly against a 1 cm² area of viable wound bed tissue</li>
+          <li>Rotating the swab expressed tissue fluid from within the wound — this fluid reflects the organisms actively infecting the deep tissue</li>
+          <li>The result: a culture that identifies the true causative pathogen with the most clinical relevance</li>
+        </ul>
+        <p><strong>ORIF wound consideration:</strong> Hardware (plates, screws) can harbor biofilm — a matrix of organisms embedded in a protective polysaccharide layer. Biofilm organisms are dramatically harder to eradicate and may require surgical removal of hardware in severe cases. This is why early, accurate identification and aggressive treatment of ORIF wound infections is critical.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ Culture collected and sent. Antibiotics initiated. You now perform a complete dressing change…</div>
+
+  <!-- PHASE 4 -->
+  <div class="phase-card" id="phase4">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 4</span>
+      <h2>Wound Care and Dressing Change</h2>
+    </div>
+    <p class="phase-intro">Agnes has been pre-medicated for pain. You are ready to perform a complete sterile dressing change per the wound care order. This ORIF wound requires sterile technique — infection of the hardware is a serious complication that can require surgical revision.</p>
+    <div class="callout callout-warning">
+      <strong>⚠️ ORIF Wounds Require Sterile Dressing Technique</strong>
+      <p>Unlike clean-contaminated wounds that may use clean technique, ORIF surgical wounds require <strong>sterile technique</strong> for all dressing changes. Hardware contamination (infection of internal fixation plates and screws) can lead to osteomyelitis, hardware failure, and need for surgical revision. Never use clean technique for an ORIF surgical wound.</p>
+    </div>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>🩹 Sterile Dressing Change Procedure</h3>
+        <ol>
+          <li>Confirm pain medication has been given (pre-medicate 30–60 minutes before wound care)</li>
+          <li>Gather all supplies before beginning — open sterile field; don sterile gloves</li>
+          <li>Carefully remove old dressing — note drainage amount, color, odor; save outer dressing for documentation comparison</li>
+          <li>Inspect wound using REEDA framework — compare to last documented assessment</li>
+          <li>Gentle irrigation with normal saline or prescribed wound cleanser — remove debris and biofilm without damaging granulating tissue</li>
+          <li>Debridement if necrotic tissue present — per wound care nurse or provider order</li>
+          <li>Apply appropriate dressing per order:
+            <ul>
+              <li><strong>Infected, draining wound:</strong> antimicrobial dressing (silver-impregnated); wet-to-dry if ordered</li>
+              <li><strong>Heavily draining wound:</strong> absorbent foam or alginate dressing</li>
+            </ul>
+          </li>
+          <li>Secure dressing — maintain hip precautions throughout</li>
+          <li>Dispose of soiled materials per biohazard protocol</li>
+          <li>Document: wound appearance, drainage, dressing type applied, patient response</li>
+        </ol>
+      </div>
+      <div class="info-block">
+        <h3>🦴 Hip Precautions — Maintain Throughout All Care</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>No hip flexion &gt; 90°</th><td>Do not bend hip beyond a right angle — use raised toilet seat, do not lean forward deeply when sitting</td></tr>
+            <tr><th>No internal rotation</th><td>Toes and knees must point forward or slightly outward — no pigeon-toed positioning</td></tr>
+            <tr><th>No crossing legs</th><td>Adductor pillow must remain between legs at all times in bed</td></tr>
+            <tr><th>Abductor pillow</th><td>Remains between legs in bed; maintains hip in neutral alignment; prevents dislocation</td></tr>
+            <tr><th>Assistance required</th><td>Call for assistance before getting up — do not ambulate independently while hip precautions are in place</td></tr>
+            <tr><th>During dressing change</th><td>Reposition with assistance; maintain precautions while turning to access wound; log-roll as needed</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="scene-box">
+      <h3>🔁 Wound Care Nurse Consultation</h3>
+      <p>For complex or non-healing wounds, request a <strong>Wound, Ostomy, and Continence Nurse (WOCN) consultation</strong>. The WOCN specialist can: assess the wound and recommend evidence-based dressing selection; perform debridement; develop a wound care protocol; monitor healing progress; educate the patient and family on home wound care. Request a consult now given the infected ORIF wound with early dehiscence.</p>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Focus: Wound Bed Colors — Red, Yellow, Black Assessment</summary>
+      <div class="reveal-content">
+        <p>The color of the wound bed guides treatment decisions:</p>
+        <table class="data-table">
+          <thead><tr><th>Color</th><th>Wound Bed Status</th><th>Treatment Goal</th></tr></thead>
+          <tbody>
+            <tr><td><strong class="text-success">Red</strong></td><td>Healthy granulation tissue — pink-red, moist, granular appearance; actively healing</td><td>Protect: moist wound environment; avoid trauma to granulation tissue; minimize dressing changes</td></tr>
+            <tr><td><strong style="color:#b45309">Yellow</strong></td><td>Slough — necrotic debris; fibrinous exudate; may harbor bacteria; impairs healing</td><td>Remove/debride: autolytic (hydrogel, moisture-retentive dressing), enzymatic (collagenase), or surgical debridement</td></tr>
+            <tr><td><strong>Black</strong></td><td>Eschar — dry, hard necrotic tissue; acts as barrier to healing; may harbor infection beneath</td><td>Debride: sharp/surgical debridement generally required (exception: stable, dry heel eschar may be left intact per provider order — assess for vascular compromise)</td></tr>
+          </tbody>
+        </table>
+        <p><strong>Agnes's wound:</strong> Likely yellow (slough/purulent debris over wound bed) with surrounding red periwound erythema. The yellow areas need debridement; the goal is to convert the wound bed to healthy red granulation tissue through infection control, nutrition support, and appropriate wound care.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ Dressing changed. You turn your attention to Agnes's nutritional status — a critical factor in wound healing…</div>
+
+  <!-- PHASE 5 -->
+  <div class="phase-card" id="phase5">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 5</span>
+      <h2>Nutritional Support and Systemic Monitoring</h2>
+    </div>
+    <p class="phase-intro">Malnutrition is Agnes's second major diagnosis — and it is directly impairing her wound healing and immune response. You coordinate nutritional support while continuing to monitor for signs of systemic infection progression.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>🥗 Nutrition and Wound Healing — Key Nutrients</h3>
+        <table class="data-table">
+          <thead><tr><th>Nutrient</th><th>Role in Wound Healing</th><th>Deficiency Effect</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Protein</strong> (1.25–1.5 g/kg/day)</td><td>Tissue synthesis, collagen formation, immune function, neutrophil production</td><td>Impaired collagen synthesis; poor wound closure; increased infection risk; pressure injury development</td></tr>
+            <tr><td><strong>Vitamin C</strong></td><td>Essential co-factor for collagen synthesis; supports immune function and capillary integrity</td><td>Fragile, poorly healing wounds; increased bleeding; impaired leukocyte function</td></tr>
+            <tr><td><strong>Zinc</strong></td><td>Supports immune function, cell proliferation, and protein synthesis</td><td>Impaired wound healing; increased infection susceptibility; delayed epithelialization</td></tr>
+            <tr><td><strong>Vitamin A</strong></td><td>Supports epithelialization, collagen production, and immune response</td><td>Impaired epithelialization; increased infection risk</td></tr>
+            <tr><td><strong>Hydration</strong></td><td>Wound healing requires moist tissue environment; adequate perfusion for nutrient delivery</td><td>Dehydration impairs perfusion to wound bed; increases tissue fragility</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>📊 Nutritional Assessment and Interventions</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Dietitian consult</th><td>Request immediately — dietitian will calculate protein/calorie needs and recommend targeted supplementation</td></tr>
+            <tr><th>Lab markers</th><td>Albumin (chronic nutritional status — half-life 21 days); prealbumin (short-term — half-life 2–3 days, better for monitoring recent changes); total lymphocyte count</td></tr>
+            <tr><th>Oral supplements</th><td>High-protein oral nutritional supplements (e.g., Ensure High Protein, Boost Plus); protein-enriched foods; oral zinc and vitamin C supplements per order</td></tr>
+            <tr><th>Document intake</th><td>Accurate calorie counts every meal — report &lt; 50% intake to provider and dietitian</td></tr>
+            <tr><th>Enteral nutrition</th><td>Consider if oral intake severely inadequate despite interventions — NG tube nutrition may be indicated for Agnes given malnutrition severity and healing needs</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="scene-box">
+      <h3>🔍 Monitoring for Sepsis Progression</h3>
+      <p>Agnes has fever (38.4°C) and tachycardia (HR 96) — systemic signs that the infection may be spreading beyond the local wound. Monitor every shift using <strong>qSOFA criteria</strong> for early sepsis identification: (1) Altered mental status — confusion or agitation; (2) Respiratory rate ≥ 22 breaths/min; (3) Systolic BP ≤ 100 mmHg. Two or more qSOFA criteria = high risk for poor outcomes — escalate immediately. In elderly patients, <strong>new-onset confusion</strong> is often the first and most reliable early sign of sepsis — baseline mental status assessment is critical.</p>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: How Malnutrition Impairs Wound Healing — The Mechanisms</summary>
+      <div class="reveal-content">
+        <p><strong>Mechanism 1 — Impaired collagen synthesis:</strong> Collagen is the structural protein that holds wounds together. Its synthesis requires adequate protein (amino acids), vitamin C (as a co-factor for hydroxylation), and zinc. Agnes's malnutrition means she lacks the substrate for collagen production — her wound cannot build the structural scaffolding needed to close.</p>
+        <p><strong>Mechanism 2 — Immune suppression:</strong> Protein malnutrition reduces the production and function of neutrophils, lymphocytes, and macrophages — the cells that kill bacteria and coordinate the healing response. An inadequate immune cell population cannot clear the bacterial infection in Agnes's wound, allowing it to persist and deepen.</p>
+        <p><strong>Mechanism 3 — Poor tissue perfusion:</strong> Malnourished patients have reduced plasma protein (hypoalbuminemia), which decreases oncotic pressure → edema → tissue swelling → impaired microcirculation → reduced O₂ and nutrient delivery to wound bed.</p>
+        <p><strong>Mechanism 4 — Delayed epithelialization:</strong> Vitamin A deficiency (common in malnutrition) impairs keratinocyte proliferation — the cells that form the new epithelial layer covering a healing wound. Without adequate vitamin A, re-epithelialization is significantly delayed.</p>
+        <p><strong>Clinical implication:</strong> Treating Agnes's wound infection without aggressively addressing her malnutrition will result in treatment failure. Nutritional support is not a secondary concern — it is a direct component of wound treatment.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ You complete your documentation and prioritize nursing diagnoses for Agnes…</div>
+
+  <!-- PHASE 6 -->
+  <div class="phase-card" id="phase6">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 6</span>
+      <h2>Nursing Diagnoses and SBAR</h2>
+    </div>
+    <h3>📋 Priority Nursing Diagnoses</h3>
+    <div class="dx-rank-list">
+      <div class="dx-rank-item">
+        <span class="dx-number">1</span>
+        <div><strong>Impaired Skin Integrity</strong><div class="dx-aeb">r/t surgical wound infection post-ORIF — AEB: purulent drainage, spreading erythema, wound edge separation (dehiscence), elevated temperature, increasing wound pain</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">2</span>
+        <div><strong>Risk for Sepsis</strong><div class="dx-aeb">r/t wound infection in immunocompromised elderly malnourished patient — AEB: fever 38.4°C, tachycardia HR 96, malnutrition diagnosis, ORIF hardware (biofilm risk), immune senescence</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">3</span>
+        <div><strong>Acute Pain</strong><div class="dx-aeb">r/t infected surgical wound — AEB: pain rating 6/10 at surgical site, described as "deeper and different" from expected postoperative pain, increased with movement</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">4</span>
+        <div><strong>Imbalanced Nutrition: Less Than Body Requirements</strong><div class="dx-aeb">r/t malnutrition — AEB: malnutrition diagnosis; low albumin/prealbumin; frail appearance; inadequate protein, vitamin C, and zinc for wound healing demands</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">5</span>
+        <div><strong>Deficient Knowledge</strong><div class="dx-aeb">r/t wound care, infection signs, hip precautions, and nutrition — AEB: needs discharge teaching on wound monitoring, dietary requirements, activity restrictions, and when to seek care</div></div>
+      </div>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ SBAR — Notifying the Provider About Agnes's Wound Infection</summary>
+      <div class="reveal-content">
+        <div class="sbar-block">
+          <div class="sbar-item sbar-s"><span class="sbar-label">S — Situation</span><p>Calling about Agnes Taylor, 81-year-old female, postoperative day [X] from left hip ORIF. I am reporting a surgical site infection — I have noted purulent yellow-tan drainage, erythema extending 2–3 cm beyond wound margins, early wound dehiscence at the inferior incision edge, and a foul odor. A wound culture has been obtained.</p></div>
+          <div class="sbar-item sbar-b"><span class="sbar-label">B — Background</span><p>Agnes has a documented diagnosis of malnutrition. Her temperature is 38.4°C, HR 96 bpm, BP 118/74, RR 18. She is reporting her pain as 6/10 — describing it as deeper and qualitatively different from her expected postoperative pain. This morning's WBC is pending. Albumin and prealbumin are being monitored.</p></div>
+          <div class="sbar-item sbar-a"><span class="sbar-label">A — Assessment</span><p>I believe Agnes has a developing surgical site infection with early systemic signs (fever, tachycardia). The wound dehiscence is a concern given her malnutritional status impairing healing. She is not yet meeting qSOFA criteria for sepsis, but I am closely monitoring. The wound culture has been sent to the lab.</p></div>
+          <div class="sbar-item sbar-r"><span class="sbar-label">R — Recommendation</span><p>I am requesting: IV antibiotic order (empiric coverage including MRSA pending cultures); wound care order with sterile technique; wound care nurse (WOCN) consultation; dietitian consultation for nutritional optimization; and review of labs when available. Should I initiate continuous vital sign monitoring or increase assessment frequency?</p></div>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <!-- APPENDIX A: Medications -->
+  <div class="phase-card" id="appendix-a">
+    <div class="phase-header">
+      <span class="phase-badge">Appendix A</span>
+      <h2>Medication Review</h2>
+    </div>
+    <table class="data-table">
+      <thead><tr><th>Medication</th><th>Class</th><th>Key Nursing Points</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>IV Antibiotic (per culture/sensitivity)</strong></td>
+          <td>Varies — empiric broad-spectrum; targeted after culture results</td>
+          <td>Collect wound culture BEFORE first dose. Administer per order — verify rate, concentration, compatibility. Monitor IV site for infiltration or phlebitis (change peripheral IV every 72–96 hours or per policy). Assess for allergic reaction — especially first dose; monitor 15–30 minutes after initiation. If vancomycin: infuse over ≥ 60 minutes (Red Man Syndrome risk with rapid infusion); monitor trough levels; assess renal function (nephrotoxicity).</td>
+        </tr>
+        <tr>
+          <td><strong>Analgesic (per order, PRN and scheduled)</strong></td>
+          <td>Pain management (opioid and/or non-opioid per order)</td>
+          <td>Pre-medicate <strong>30–60 minutes before wound care</strong> — inadequate pain management leads to patient avoidance and non-cooperation with care. Assess pain using 0–10 scale before and after administration. Monitor for opioid adverse effects: sedation, respiratory depression, constipation, urinary retention. Elderly patients (Agnes, 81 years) are more sensitive to opioids — start low, reassess frequently.</td>
+        </tr>
+        <tr>
+          <td><strong>Nutritional Supplements (oral)</strong></td>
+          <td>High-protein oral supplements; vitamin C; zinc</td>
+          <td>Administer with meals or between meals per dietitian recommendation. Document intake accurately — report &lt; 50% consumed. Encourage high-protein foods: eggs, legumes, dairy, lean meat. Oral zinc supplement: take with food (reduces GI upset). Vitamin C supplement: supports collagen synthesis. Monitor albumin and prealbumin trends — prealbumin is the best short-term marker of nutritional repletion (half-life 2–3 days).</td>
+        </tr>
+        <tr>
+          <td><strong>Wound Care Supplies (topical)</strong></td>
+          <td>Antimicrobial dressing (silver); absorbent dressing; normal saline irrigant</td>
+          <td>Use sterile technique for all ORIF wound dressing changes. Silver-impregnated antimicrobial dressings release silver ions that inhibit bacterial growth — appropriate for infected wounds. Absorbent foam or alginate for heavily draining wounds. Change dressings per order frequency — typically every 24–48 hours for infected wounds or sooner if saturated. Always document wound appearance, drainage characteristics, and dressing type at each change.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- APPENDIX B: Q&A -->
+  <div class="phase-card" id="appendix-b">
+    <div class="phase-header">
+      <span class="phase-badge">Appendix B</span>
+      <h2>Post-Simulation Questions &amp; Answers</h2>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Q1: What is the priority action when a surgical wound infection is suspected?</summary>
+      <div class="reveal-content">
+        <p><strong>Obtain a wound culture BEFORE starting or changing antibiotics, then notify the provider.</strong> The sequence matters: (1) Perform wound assessment and document findings; (2) Collect wound culture using Levine technique after irrigating — before any new antibiotic dose; (3) Notify provider via SBAR with assessment findings; (4) Initiate ordered antibiotic therapy. Collecting the culture first ensures the sample reflects the true causative organism, allowing targeted antibiotic therapy rather than prolonged empiric broad-spectrum treatment.</p>
+      </div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q2: Why is Agnes particularly high-risk for wound infection complications?</summary>
+      <div class="reveal-content">
+        <p><strong>Agnes has four compounding risk factors:</strong></p>
+        <ol>
+          <li><strong>Malnutrition:</strong> Impairs immune function (reduced neutrophil activity), collagen synthesis (protein + vitamin C deficiency), and epithelialization (vitamin A deficiency). Without adequate nutrition, neither the immune system nor the wound repair machinery can function effectively.</li>
+          <li><strong>Advanced age (81 years):</strong> Immune senescence — reduced neutrophil chemotaxis and phagocytosis; thinner, more fragile skin; reduced inflammatory response; slower healing at the cellular level.</li>
+          <li><strong>ORIF hardware:</strong> Metal plates and screws provide a surface for bacterial biofilm formation. Biofilm-protected organisms are up to 1,000× more resistant to antibiotics and immune cells — infection may require hardware removal to eradicate.</li>
+          <li><strong>Immobility:</strong> Reduced perfusion to wound site, impaired lymphatic drainage, and increased pressure at bony prominences all promote bacterial colonization and impair healing.</li>
+        </ol>
+      </div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q3: Describe the correct wound culture technique (Levine method).</summary>
+      <div class="reveal-content">
+        <p><strong>Step-by-step Levine technique:</strong></p>
+        <ol>
+          <li>Irrigate wound with normal saline to remove surface contaminants and skin flora</li>
+          <li>Allow irrigation to drain; gently blot with sterile gauze if needed</li>
+          <li>Using a sterile swab, press firmly against a 1 cm² area of viable wound bed tissue</li>
+          <li>Rotate the swab using firm pressure — this expresses tissue fluid from within the wound bed (NOT surface exudate)</li>
+          <li>Place swab immediately in appropriate transport medium</li>
+          <li>Label correctly; send to lab within 30 minutes</li>
+          <li>Document time, technique, and wound appearance</li>
+        </ol>
+        <p><strong>Why NOT culture the exudate:</strong> Surface drainage contains colonizers and contaminants — not necessarily the organisms causing deep infection. The Levine technique samples the infecting organisms in viable tissue, providing clinically actionable culture results.</p>
+      </div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q4: What are the signs of early sepsis in an elderly patient and how do they differ from younger adults?</summary>
+      <div class="reveal-content">
+        <p><strong>Classic early sepsis signs (qSOFA):</strong> Altered mental status; RR ≥ 22; SBP ≤ 100 mmHg. Also: fever &gt; 38°C or hypothermia &lt; 36°C; tachycardia &gt; 90 bpm; WBC &gt; 12,000 or &lt; 4,000/mm³.</p>
+        <p><strong>How sepsis presents differently in elderly patients:</strong></p>
+        <ul>
+          <li><strong>Confusion is often the first sign</strong> — elderly patients may not mount a fever or their fever may be blunted; new-onset confusion or worsening agitation can be the only early indicator</li>
+          <li><strong>Hypothermia instead of fever</strong> — elderly and immunocompromised patients may have a <em>low</em> temperature despite serious infection (immune senescence impairs fever response)</li>
+          <li><strong>Subtle tachycardia</strong> — elderly patients on beta-blockers or with cardiac conduction disease may not develop classic tachycardia even in the presence of infection</li>
+          <li><strong>Falls</strong> — new or increased fall risk may signal hemodynamic compromise or altered mental status from early sepsis</li>
+        </ul>
+        <p><strong>Clinical implication for Agnes:</strong> Assess baseline mental status at every interaction. Any new confusion, restlessness, or decreased responsiveness in Agnes requires urgent reassessment and provider notification — it may be the first sign that her wound infection is progressing to sepsis.</p>
+      </div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q5: How does malnutrition impair wound healing at the cellular level?</summary>
+      <div class="reveal-content">
+        <p><strong>Four key cellular mechanisms:</strong></p>
+        <ol>
+          <li><strong>Collagen synthesis failure:</strong> Protein (amino acids), vitamin C, and zinc are all required for collagen cross-linking. Without them, fibroblasts cannot produce adequate collagen → wound cannot close → dehiscence risk increases.</li>
+          <li><strong>Immune cell suppression:</strong> Protein deficiency reduces neutrophil production and phagocytic capacity → bacteria in the wound are not cleared → infection persists and deepens.</li>
+          <li><strong>Edema and poor perfusion:</strong> Hypoalbuminemia (low serum albumin from protein malnutrition) reduces oncotic pressure → tissue edema → compressed microcirculation → inadequate O₂ delivery to healing cells.</li>
+          <li><strong>Delayed epithelialization:</strong> Vitamin A deficiency impairs keratinocyte proliferation → the new skin layer cannot form over the healing wound → prolonged healing time with ongoing infection exposure.</li>
+        </ol>
+        <p><strong>Clinical bottom line:</strong> Without correcting Agnes's malnutrition, antibiotic therapy alone is unlikely to resolve the infection — her body lacks the biological tools to heal.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- APPENDIX C: References -->
+  <div class="phase-card" id="appendix-c">
+    <div class="phase-header">
+      <span class="phase-badge">Appendix C</span>
+      <h2>References</h2>
+    </div>
+    <ol class="ref-list">
+      <li>Harding, M. M., Kwong, J., Roberts, D., Reinisch, C., &amp; Hagler, D. (2020). <em>Lewis's medical-surgical nursing</em> (11th ed.). Elsevier.</li>
+      <li>Vallerand, A. H., &amp; Sanoski, C. A. (2021). <em>Davis's drug guide for nurses</em> (17th ed.). F.A. Davis.</li>
+      <li>National Pressure Injury Advisory Panel. (2019). <em>NPIAP pressure injury stages</em>. NPIAP.</li>
+      <li>Ignatavicius, D. D., Workman, M. L., Rebar, C. R., &amp; Heimgartner, N. M. (2021). <em>Medical-surgical nursing: Concepts for interprofessional collaborative care</em> (10th ed.). Elsevier.</li>
+      <li>Doughty, D. B., &amp; McNichol, L. L. (Eds.). (2016). <em>Wound, ostomy, and continence nurses society core curriculum: Wound management</em>. Wolters Kluwer.</li>
+    </ol>
+    <div style="margin-top: 2rem;">
+      <a href={`${base}cases/med-surgical/`} class="btn-back">← Back to Med-Surgical</a>
+    </div>
+  </div>
+
+</BaseLayout>
+
+<style>
+  /* ── Phase structure ─────────────────────────────────────────── */
+  .case-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-top: 0.25rem;
+  }
+
+  .phase-card {
+    background: var(--color-surface);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 0;
+    box-shadow: var(--shadow);
+    border-top: 4px solid var(--color-primary);
+  }
+
+  .appendix-card {
+    border-top-color: var(--color-secondary);
+  }
+
+  .phase-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .phase-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .phase-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+
+  .phase-badge-appendix {
+    background: var(--color-secondary);
+  }
+
+  .phase-intro {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin-bottom: 1.25rem;
+    border-left: 3px solid var(--color-accent);
+    padding-left: 0.75rem;
+  }
+
+  .phase-connector {
+    text-align: center;
+    padding: 0.6rem 0;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+  }
+
+  /* ── Info grid ───────────────────────────────────────────────── */
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 720px) {
+    .info-grid { grid-template-columns: 1fr; }
+    .compare-grid { grid-template-columns: 1fr; }
+  }
+
+  .info-block h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  /* ── Tables ──────────────────────────────────────────────────── */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--color-border);
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .data-table thead th {
+    background: #f0f4ff;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+  }
+
+  .data-table tbody th {
+    background: #f8f9fa;
+    font-weight: 600;
+    width: 30%;
+    color: var(--color-text);
+  }
+
+  .med-table tbody th {
+    width: 28%;
+  }
+
+  /* ── Callouts ────────────────────────────────────────────────── */
+  .callout {
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .callout p { margin-bottom: 0.5rem; }
+  .callout p:last-child { margin-bottom: 0; }
+
+  .callout-info {
+    background: #e8f0fe;
+    border-left: 4px solid var(--color-primary);
+  }
+
+  .callout-warning {
+    background: #fff8e1;
+    border-left: 4px solid #f59e0b;
+  }
+
+  .callout-danger {
+    background: #fff0f0;
+    border-left: 4px solid #dc2626;
+  }
+
+  /* ── Badges ──────────────────────────────────────────────────── */
+  .badge-danger {
+    display: inline-block;
+    background: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fca5a5;
+    border-radius: 4px;
+    padding: 0.1rem 0.45rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .badge-warning {
+    display: inline-block;
+    background: #fffbeb;
+    color: #92400e;
+    border: 1px solid #fde68a;
+    border-radius: 4px;
+    padding: 0.1rem 0.45rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  /* ── Scene box ───────────────────────────────────────────────── */
+  .scene-box {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .scene-box h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* ── Med list ────────────────────────────────────────────────── */
+  .med-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .med-list li {
+    padding: 0.35rem 0;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 0.9rem;
+  }
+
+  .med-list li:last-child { border-bottom: none; }
+
+  /* ── Chain flow ──────────────────────────────────────────────── */
+  .chain-flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin: 1.25rem 0;
+  }
+
+  .chain-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 520px;
+    gap: 0.2rem;
+  }
+
+  .chain-step small {
+    font-size: 0.8rem;
+    opacity: 0.8;
+  }
+
+  .chain-step-drug {
+    background: #e8f0fe;
+    color: var(--color-primary-dark);
+    border: 1px solid #bfdbfe;
+  }
+
+  .chain-step-problem {
+    background: #fff8e1;
+    color: #78350f;
+    border: 1px solid #fde68a;
+  }
+
+  .chain-step-consequence {
+    background: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+  }
+
+  .chain-arrow {
+    font-size: 1.5rem;
+    color: var(--color-text-muted);
+    line-height: 1.2;
+  }
+
+  .chain-icon {
+    font-size: 1.4rem;
+  }
+
+  /* ── Stat highlight ──────────────────────────────────────────── */
+  .stat-highlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fef2f2;
+    border: 2px solid #fca5a5;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #b91c1c;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+    color: #7f1d1d;
+    margin-top: 0.25rem;
+  }
+
+  /* ── Reveal (details/summary) ────────────────────────────────── */
+  .reveal-block {
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    margin-top: 1rem;
+    overflow: hidden;
+  }
+
+  .reveal-block > summary {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--color-primary);
+    background: #f0f4ff;
+    list-style: none;
+    user-select: none;
+  }
+
+  .reveal-block > summary::-webkit-details-marker { display: none; }
+
+  .reveal-block[open] > summary {
+    background: #dbeafe;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .reveal-block > summary:hover {
+    background: #dbeafe;
+  }
+
+  .reveal-content {
+    padding: 1rem 1.25rem;
+  }
+
+  .reveal-content ul,
+  .reveal-content ol {
+    margin-bottom: 0.75rem;
+  }
+
+  /* ── SBAR block ──────────────────────────────────────────────── */
+  .sbar-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    margin-bottom: 1.5rem;
+  }
+
+  .sbar-item {
+    padding: 1rem 1.25rem;
+  }
+
+  .sbar-item p { margin: 0; font-style: italic; }
+
+  .sbar-label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.4rem;
+  }
+
+  .sbar-s { background: #eff6ff; border-left: 5px solid #3b82f6; }
+  .sbar-b { background: #f0fdf4; border-left: 5px solid #22c55e; }
+  .sbar-a { background: #fffbeb; border-left: 5px solid #f59e0b; }
+  .sbar-r { background: #fef2f2; border-left: 5px solid #ef4444; }
+
+  /* ── Priority diagnoses ──────────────────────────────────────── */
+  .dx-rank-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .dx-rank-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: #f8f9fa;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+  }
+
+  .dx-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .dx-aeb {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-top: 0.2rem;
+  }
+
+  /* ── Compare grid ────────────────────────────────────────────── */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .compare-grid h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  /* ── Concept map ─────────────────────────────────────────────── */
+  .concept-map {
+    margin-bottom: 1.25rem;
+  }
+
+  /* ── References ──────────────────────────────────────────────── */
+  .ref-list {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .ref-note {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin: 0;
+  }
+
+  /* ── Utility ─────────────────────────────────────────────────── */
+  .text-success { color: #15803d; }
+  .text-danger  { color: #b91c1c; }
+
+  .btn-back {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .btn-back:hover {
+    background: var(--color-primary-dark);
+    text-decoration: none;
+  }
+</style>
