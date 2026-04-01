@@ -1,0 +1,935 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout
+  title="Med-Surgical 33 — Arthur Harris"
+  description="Unfolding case study: Severe Acute Hypoglycemia in a Hospitalized Diabetic Patient (MED-33)"
+>
+
+  <div class="breadcrumb">
+    <a href={base}>Home</a>
+    <span>›</span>
+    <a href={`${base}cases/`}>Cases</a>
+    <span>›</span>
+    <a href={`${base}cases/med-surgical/`}>Med-Surgical</a>
+    <span>›</span>
+    <span>Med-Surgical 33 — Arthur Harris</span>
+  </div>
+
+  <div class="case-header">
+    <span class="card-tag">Diabetes / Wound Care</span>
+    <h1>Med-Surgical 33 — Arthur Harris</h1>
+    <p class="case-subtitle">Severe Acute Hypoglycemia in a Hospitalized Diabetic Patient</p>
+    <div class="case-meta">
+      <span>👤 Arthur Harris, 59 years, African American Male</span>
+      <span>⏱ Scenario: 20–25 minutes</span>
+      <span>💬 Debrief: 20–25 minutes</span>
+    </div>
+  </div>
+
+  <div class="callout callout-info">
+    <strong>📖 How to Use This Unfolding Case Study</strong>
+    <p>Work through each phase in order. Information is revealed progressively — exactly as it would be in a real clinical encounter. Before reading each answer, pause and reason through the question yourself. Use the <strong>▶ Reveal Answer</strong> toggles to check your thinking.</p>
+  </div>
+
+  <!-- PHASE 1 -->
+  <div class="phase-card" id="phase1">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 1</span>
+      <h2>You Arrive at the Bedside</h2>
+    </div>
+    <p class="phase-intro">You are the nurse assigned to Arthur Harris on the medical-surgical unit. Arthur was admitted directly from his provider's office with an infected sacral wound. You review the handoff and the medication administration record.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>📋 Handoff Report</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Patient</th><td>Arthur Harris</td></tr>
+            <tr><th>Age / Gender</th><td>59 years · Male · African American</td></tr>
+            <tr><th>Primary Dx</th><td>Infected sacral wound</td></tr>
+            <tr><th>Medical History</th><td>Type 2 diabetes mellitus (T2DM) — normally well-controlled on oral antihyperglycemics at home</td></tr>
+            <tr><th>Allergies</th><td>⚠️ Cephalexin (cephalosporin antibiotic)</td></tr>
+            <tr><th>Admission</th><td>Directly from provider's office</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>💊 Medications on MAR</h3>
+        <ul class="med-list">
+          <li><strong>Piperacillin-tazobactam (Pip/Tazo, Zosyn) 3g IV q6h</strong></li>
+          <li><strong>Vancomycin 1g IV q12h</strong> <span class="badge-danger">HIGH ALERT</span></li>
+          <li>0.9% Normal Saline IV at 125 mL/hr</li>
+          <li><strong>Regular Insulin SQ</strong> per sliding scale <span class="badge-danger">HIGH ALERT</span></li>
+          <li><strong>Dextrose 50% (D50) IV</strong> — available for hypoglycemia emergency <span class="badge-danger">HIGH ALERT</span></li>
+          <li>Acetaminophen PO PRN for pain/fever</li>
+        </ul>
+      </div>
+    </div>
+    <div class="scene-box">
+      <h3>🚪 Entering the Room — What You Observe</h3>
+      <p>Arthur is lying in bed. A sacral wound dressing is visible. He appears fatigued and says, "I've been managing my sugar fine at home with my pills — I don't understand why it's so high now that I'm here."</p>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: Why do T2DM patients become hyperglycemic when hospitalized?</summary>
+      <div class="reveal-content">
+        <p><strong>Reason 1 — Physiological Stress Response:</strong></p>
+        <ul>
+          <li>Hospitalization and infection activate the stress response: cortisol, epinephrine, glucagon, and growth hormone are released</li>
+          <li>These counter-regulatory hormones increase hepatic glucose production and cause insulin resistance</li>
+          <li>Result: <strong>stress hyperglycemia</strong> — elevated blood glucose even without eating, requiring insulin therapy</li>
+        </ul>
+        <p><strong>Reason 2 — Medications and Care Environment:</strong></p>
+        <ul>
+          <li>IV fluids containing dextrose (D5W, D5½NS) directly raise blood glucose</li>
+          <li>Oral antihyperglycemics are often <em>held</em> in hospitalized patients due to NPO status, hemodynamic instability, or risk of lactic acidosis (metformin)</li>
+          <li>Reduced physical activity in hospitalized patients decreases glucose utilization</li>
+          <li>Corticosteroids (if prescribed) dramatically elevate blood glucose</li>
+        </ul>
+        <p>This explains why Arthur — well-controlled at home — now requires insulin sliding scale during his hospitalization.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ After handoff, you perform a focused assessment of Arthur's sacral wound…</div>
+
+  <!-- PHASE 2 -->
+  <div class="phase-card" id="phase2">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 2</span>
+      <h2>Sacral Wound Assessment</h2>
+    </div>
+    <p class="phase-intro">You carefully assist Arthur to his side and remove the sacral wound dressing for assessment. You document your findings using a structured wound assessment framework.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>🩹 REEDA Wound Assessment</h3>
+        <table class="data-table">
+          <thead><tr><th>Component</th><th>Assessment</th></tr></thead>
+          <tbody>
+            <tr><td><strong>R — Redness</strong></td><td>Periwound erythema extending 2 cm beyond wound margin</td></tr>
+            <tr><td><strong>E — Edema</strong></td><td>Mild edema surrounding wound edges</td></tr>
+            <tr><td><strong>E — Ecchymosis</strong></td><td>None noted</td></tr>
+            <tr><td><strong>D — Discharge</strong></td><td>Moderate purulent (cloudy, yellow-green) drainage with malodor</td></tr>
+            <tr><td><strong>A — Approximation</strong></td><td>Wound edges separated; not approximated</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>⚠️ Pressure Injury Staging</h3>
+        <table class="data-table">
+          <thead><tr><th>Stage</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Stage 1</strong></td><td>Non-blanchable redness; skin intact</td></tr>
+            <tr><td><strong>Stage 2</strong></td><td>Partial-thickness skin loss; shallow open wound or blister</td></tr>
+            <tr><td><strong>Stage 3</strong></td><td>Full-thickness skin loss; subcutaneous fat visible</td></tr>
+            <tr><td><strong>Stage 4</strong></td><td>Full-thickness; bone, tendon, or muscle exposed</td></tr>
+            <tr><td><strong>Unstageable</strong></td><td>Obscured by slough/eschar; cannot determine depth</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="scene-box">
+      <h3>📏 Wound Measurements</h3>
+      <p>Document wound dimensions as <strong>Length × Width × Depth</strong> (L × W × D) in centimeters. Obtain wound culture <em>before</em> initiating or changing antibiotics — culture results guide targeted therapy. Perform q2h repositioning and use pressure-redistribution surfaces to prevent worsening.</p>
+    </div>
+    <div class="callout callout-warning">
+      <strong>⚠️ Vancomycin — HIGH ALERT Medication: Trough Monitoring</strong>
+      <p>Draw trough level <strong>30 minutes before the 4th dose</strong>. Therapeutic goal: 15–20 mcg/mL. Monitor for nephrotoxicity (rising creatinine, reduced urine output) and ototoxicity (hearing changes, tinnitus). Infuse over <strong>at least 60 minutes</strong> — rapid infusion causes <strong>Red Man Syndrome</strong> (flushing, erythema, pruritus of face/neck/upper chest — slowing the infusion resolves it).</p>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: Why does diabetes impair wound healing?</summary>
+      <div class="reveal-content">
+        <p><strong>Three mechanisms of wound healing impairment in T2DM:</strong></p>
+        <ul>
+          <li><strong>Neutrophil dysfunction:</strong> Hyperglycemia impairs neutrophil chemotaxis, phagocytosis, and killing — the immune cells that clear bacteria from wounds are weakened, increasing infection risk and severity</li>
+          <li><strong>Poor perfusion:</strong> Chronic hyperglycemia damages small blood vessels (microvascular disease) → reduced blood flow to wound bed → inadequate oxygen and nutrient delivery → impaired tissue repair</li>
+          <li><strong>Peripheral neuropathy:</strong> Diabetic neuropathy causes sensory deficits — patients may not feel pressure or pain that worsens wounds; also impairs the neurogenic inflammatory signals needed for healing</li>
+        </ul>
+        <p>Getting blood glucose under control is a direct component of wound treatment for Arthur — not a separate issue.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ You check Arthur's blood glucose before administering his scheduled insulin…</div>
+
+  <!-- PHASE 3 -->
+  <div class="phase-card" id="phase3">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 3</span>
+      <h2>Blood Glucose Management</h2>
+    </div>
+    <p class="phase-intro">Arthur's point-of-care blood glucose reads <strong>312 mg/dL</strong>. You have an order for Regular insulin per sliding scale. You prepare to administer the appropriate dose.</p>
+    <div class="callout callout-danger">
+      <strong>⚠️ HIGH ALERT: Insulin Requires Independent Double-Check</strong>
+      <p>Insulin is a HIGH ALERT medication. Before administration, obtain an <strong>independent double-check with a second nurse</strong>: verify the correct insulin type, dose calculation, route, patient identity, and timing. Sound-alike/look-alike errors (e.g., NovoLog vs. Novolin) are a leading cause of preventable medication harm.</p>
+    </div>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>💉 Sliding Scale Insulin Administration Process</h3>
+        <ol>
+          <li>Check blood glucose via fingerstick glucometer</li>
+          <li>Locate patient's blood glucose on sliding scale range</li>
+          <li>Calculate the prescribed dose for the current BG</li>
+          <li>Perform TWO-NURSE INDEPENDENT CHECK — verify type, dose, patient, route</li>
+          <li>Verify patient has eaten or will eat imminently (Regular insulin before meals)</li>
+          <li>Administer Regular insulin subcutaneously</li>
+          <li>Document: BG result, dose administered, site, time, nurse signatures</li>
+          <li>Monitor for hypoglycemia 1–2 hours after administration</li>
+        </ol>
+      </div>
+      <div class="info-block">
+        <h3>⚠️ When to Withhold Insulin</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Patient is NPO</th><td>Withhold mealtime insulin; notify provider — dose adjustment required</td></tr>
+            <tr><th>BG does not meet scale threshold</th><td>If BG is below the minimum threshold for a dose, do not administer — document and monitor</td></tr>
+            <tr><th>Patient refusing to eat</th><td>Confirm patient will eat before administering mealtime insulin; do not give and leave patient without food</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Critical Concept: Insulin Sound-Alike / Look-Alike Errors</summary>
+      <div class="reveal-content">
+        <p><strong>High-risk insulin confusion pairs:</strong></p>
+        <ul>
+          <li><strong>NovoLog (insulin aspart)</strong> — rapid-acting, clear; vs. <strong>Novolin N (NPH)</strong> — intermediate-acting, cloudy → very similar names, very different action profiles</li>
+          <li><strong>Humalog (lispro)</strong> vs. <strong>Humulin N (NPH)</strong> — similar names, different durations</li>
+          <li><strong>U-100 vs. U-500 insulin</strong> — U-500 is 5× concentrated; overdose causes profound hypoglycemia</li>
+        </ul>
+        <p>The independent double-check exists specifically to catch these errors before they reach the patient. Never skip this step for insulin administration.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ Two hours after insulin administration, you are called urgently to Arthur's room…</div>
+
+  <!-- PHASE 4 -->
+  <div class="phase-card" id="phase4">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 4</span>
+      <h2>Hypoglycemia Emergency</h2>
+    </div>
+    <p class="phase-intro">A nursing assistant alerts you: Arthur is unresponsive. You enter the room to find him diaphoretic, unresponsive to verbal stimuli. STAT fingerstick blood glucose: <strong>32 mg/dL</strong>. This is a severe hypoglycemia emergency.</p>
+    <div class="callout callout-danger">
+      <strong>🚨 Severe Hypoglycemia: BG 32 mg/dL — Unresponsive Patient</strong>
+      <p>Do NOT give oral glucose — aspiration risk with unresponsive patient. IV access is required. This requires immediate intervention.</p>
+    </div>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>📉 Classic Hypoglycemia Symptom Progression</h3>
+        <div class="chain-flow">
+          <div class="chain-step chain-step-drug"><strong>Diaphoresis (sweating)</strong><small>Early adrenergic response — sympathetic activation</small></div>
+          <div class="chain-arrow">↓</div>
+          <div class="chain-step chain-step-drug"><strong>Shakiness / trembling</strong><small>Catecholamine release — early warning</small></div>
+          <div class="chain-arrow">↓</div>
+          <div class="chain-step chain-step-problem"><strong>Confusion / disorientation</strong><small>Neuroglycopenia — brain glucose deprivation beginning</small></div>
+          <div class="chain-arrow">↓</div>
+          <div class="chain-step chain-step-consequence"><strong>Unresponsive — BG 32 mg/dL</strong><small>Severe neuroglycopenia — EMERGENCY</small></div>
+        </div>
+      </div>
+      <div class="info-block">
+        <h3>🚨 Emergency Response Sequence</h3>
+        <ol>
+          <li><strong>Confirm BG</strong> — STAT fingerstick (do not delay treatment waiting for lab draw)</li>
+          <li><strong>Verify IV patency</strong> — check for infiltration; D50 causes tissue necrosis if extravasated</li>
+          <li><strong>Administer D50 50 mL IV direct</strong> at 3 mL/min (slow IV push)</li>
+          <li><strong>Recheck BG in 15 minutes</strong> — expect BG to rise significantly</li>
+          <li><strong>When alert → give complex carbohydrate + protein</strong> (prevents rebound hypoglycemia)</li>
+          <li><strong>Notify provider via SBAR</strong></li>
+          <li><strong>Complete incident report</strong> — hypoglycemia requiring D50 is a reportable event</li>
+        </ol>
+      </div>
+    </div>
+    <div class="callout callout-warning">
+      <strong>⚠️ If No IV Access: Glucagon 1 mg IM or SQ</strong>
+      <p>Glucagon stimulates hepatic glycogenolysis → releases stored glucose into bloodstream. Takes 10–15 minutes to work. After patient is alert, oral carbohydrates must still be given — glucagon depletes hepatic glycogen stores and rebound hypoglycemia can occur.</p>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: Why Give Complex Carbohydrates AND Protein After D50?</summary>
+      <div class="reveal-content">
+        <p><strong>Mechanism:</strong></p>
+        <ul>
+          <li>D50 (concentrated dextrose) rapidly raises blood glucose — but its effect is short-lived (simple sugars are quickly metabolized)</li>
+          <li>If no further nutrition is provided, blood glucose can drop again — <strong>rebound hypoglycemia</strong></li>
+          <li><strong>Complex carbohydrates</strong> (whole grains, crackers) provide slower, sustained glucose release over 1–2 hours</li>
+          <li><strong>Protein</strong> (cheese, peanut butter) slows gastric emptying and gluconeogenesis, sustaining blood glucose further</li>
+        </ul>
+        <p><strong>Clinical application:</strong> Once Arthur is alert and can safely swallow, provide a snack of complex carbohydrate + protein (e.g., crackers with peanut butter or cheese). Do not simply give juice and walk away.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ Arthur is responsive after D50 administration. Ongoing monitoring and care continue…</div>
+
+  <!-- PHASE 5 -->
+  <div class="phase-card" id="phase5">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 5</span>
+      <h2>Post-Hypoglycemia Monitoring and Adjustment</h2>
+    </div>
+    <p class="phase-intro">Arthur is now alert and oriented. His blood glucose has risen after D50. You monitor closely and coordinate ongoing care for his wound infection and diabetes management.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>📊 Blood Glucose Monitoring Schedule</h3>
+        <table class="data-table">
+          <thead><tr><th>Time</th><th>Action</th></tr></thead>
+          <tbody>
+            <tr><td>15 minutes after D50</td><td>Recheck BG — expect significant rise</td></tr>
+            <tr><td>30 minutes</td><td>Recheck BG — confirm sustained recovery</td></tr>
+            <tr><td>60 minutes</td><td>Recheck BG — watch for rebound hypoglycemia</td></tr>
+            <tr><td>When BG ≥ 100 and alert</td><td>Provide complex carbohydrate + protein snack</td></tr>
+            <tr><td>Next scheduled dose</td><td>Review insulin scale with provider — dose may need adjustment</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>💊 Antibiotic Monitoring — Wound Infection</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Pip/Tazo (Zosyn)</th><td>Broad spectrum beta-lactam + beta-lactamase inhibitor; covers gram-negative organisms and anaerobes; monitor for superinfection (C. difficile)</td></tr>
+            <tr><th>Vancomycin</th><td>Covers MRSA and gram-positive organisms; HIGH ALERT — monitor trough levels; nephrotoxicity + ototoxicity risk; avoid rapid infusion (Red Man Syndrome)</td></tr>
+            <tr><th>Combined coverage</th><td>Pip/Tazo + Vancomycin = broad-spectrum empiric coverage for mixed wound infection including MRSA pending culture results</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Focus: Cephalexin Allergy and Cephalosporin Cross-Reactivity with Penicillin</summary>
+      <div class="reveal-content">
+        <p><strong>Arthur's allergy: Cephalexin (a first-generation cephalosporin)</strong></p>
+        <p><strong>Clinical consideration — cross-reactivity:</strong></p>
+        <ul>
+          <li>Cephalosporins and penicillins share a beta-lactam ring structure</li>
+          <li>Historical cross-reactivity rates were thought to be 10% — current evidence suggests the true rate is approximately <strong>1–2%</strong> for patients with penicillin allergy</li>
+          <li>The risk is primarily with cephalosporins that share identical R1 side chains with penicillin (e.g., cephalexin shares the side chain with ampicillin)</li>
+          <li>Piperacillin-tazobactam (Pip/Tazo) is a penicillin — in a patient with cephalosporin allergy, the prescriber has weighed the clinical benefit against the low cross-reactivity risk</li>
+        </ul>
+        <p><strong>Nursing action:</strong> Document allergy clearly. Monitor Arthur for any signs of allergic reaction during Pip/Tazo infusion — especially the first dose.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ You complete your documentation and prioritize nursing diagnoses for Arthur…</div>
+
+  <!-- PHASE 6 -->
+  <div class="phase-card" id="phase6">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 6</span>
+      <h2>Nursing Diagnoses and SBAR</h2>
+    </div>
+    <h3>📋 Priority Nursing Diagnoses</h3>
+    <div class="dx-rank-list">
+      <div class="dx-rank-item">
+        <span class="dx-number">1</span>
+        <div><strong>Risk for Unstable Blood Glucose Level</strong><div class="dx-aeb">AEB: T2DM; sliding scale insulin administered; severe hypoglycemia episode (BG 32 mg/dL) requiring D50; ongoing hospitalization stress</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">2</span>
+        <div><strong>Impaired Skin Integrity</strong><div class="dx-aeb">AEB: Infected sacral wound with purulent drainage, erythema, and edema; T2DM impairing wound healing</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">3</span>
+        <div><strong>Risk for Infection (Worsening)</strong><div class="dx-aeb">AEB: Existing wound infection with purulent drainage; T2DM-related neutrophil dysfunction; invasive IV lines</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">4</span>
+        <div><strong>Acute Pain</strong><div class="dx-aeb">AEB: Infected sacral wound; patient reports pain during wound care; requires scheduled analgesia</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">5</span>
+        <div><strong>Risk for Falls</strong><div class="dx-aeb">AEB: Post-hypoglycemia weakness and altered mental status; diphenhydramine sedation risk if ordered; hospitalization environment</div></div>
+      </div>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ SBAR — Calling the Provider About Arthur's Severe Hypoglycemia</summary>
+      <div class="reveal-content">
+        <div class="sbar-block">
+          <div class="sbar-item sbar-s"><span class="sbar-label">S — Situation</span><p>Calling about Arthur Harris, 59-year-old African American male admitted for infected sacral wound. Arthur experienced a severe hypoglycemic episode — blood glucose 32 mg/dL, unresponsive, requiring emergency D50 administration.</p></div>
+          <div class="sbar-item sbar-b"><span class="sbar-label">B — Background</span><p>Arthur has T2DM, normally managed on oral antihyperglycemics at home. He was started on insulin sliding scale for in-hospital hyperglycemia. His blood glucose was 312 mg/dL earlier today; Regular insulin was administered per the sliding scale following a two-nurse check. Approximately two hours later he was found unresponsive and diaphoretic.</p></div>
+          <div class="sbar-item sbar-a"><span class="sbar-label">A — Assessment</span><p>STAT fingerstick BG: 32 mg/dL. IV patent — D50 50 mL administered IV direct at 3 mL/min. Arthur is now alert and oriented. BG on recheck: [recheck value]. Complex carbohydrate and protein snack given. Vital signs stable. Incident report initiated.</p></div>
+          <div class="sbar-item sbar-r"><span class="sbar-label">R — Recommendation</span><p>Requesting: review and adjustment of insulin sliding scale dosing; order for BG recheck schedule (q15–60 min × 3); clarification on meal plan and NPO status going forward; and provider acknowledgment of hypoglycemia event for medication reconciliation.</p></div>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <!-- APPENDIX A: Medications -->
+  <div class="phase-card" id="appendix-a">
+    <div class="phase-header">
+      <span class="phase-badge">Appendix A</span>
+      <h2>Medication Review</h2>
+    </div>
+    <table class="data-table">
+      <thead><tr><th>Medication</th><th>Class</th><th>Key Nursing Points</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Dextrose 50% (D50)</strong> <span class="badge-danger">HIGH ALERT</span></td>
+          <td>Concentrated glucose solution</td>
+          <td>Emergency treatment of severe hypoglycemia (BG &lt; 50 or unresponsive patient). Administer 50 mL IV direct at <strong>3 mL/min</strong> (slow push). <strong>Verify IV patency before administration</strong> — D50 is hypertonic and causes severe tissue necrosis if infiltrated. Recheck BG in 15 minutes. Follow with complex carbohydrate + protein to prevent rebound hypoglycemia.</td>
+        </tr>
+        <tr>
+          <td><strong>Vancomycin 1g IV</strong> <span class="badge-danger">HIGH ALERT</span></td>
+          <td>Glycopeptide antibiotic</td>
+          <td>Covers MRSA and gram-positive organisms. Infuse over <strong>at least 60 minutes</strong> — rapid infusion causes Red Man Syndrome (flushing, erythema, pruritus — slow rate to resolve). Draw trough level 30 min before 4th dose; goal 15–20 mcg/mL. Monitor: SCr (nephrotoxicity), hearing changes (ototoxicity), urine output.</td>
+        </tr>
+        <tr>
+          <td><strong>Piperacillin-tazobactam (Pip/Tazo, Zosyn) 3g IV</strong></td>
+          <td>Beta-lactam + beta-lactamase inhibitor antibiotic</td>
+          <td>Broad-spectrum coverage of gram-negative organisms and anaerobes. Beta-lactamase inhibitor (tazobactam) extends coverage against resistant organisms. Monitor for: superinfection (C. difficile — assess for diarrhea), allergic reaction (beta-lactam — monitor closely given cephalosporin allergy). Infuse over 30 minutes.</td>
+        </tr>
+        <tr>
+          <td><strong>Regular Insulin SQ (sliding scale)</strong> <span class="badge-danger">HIGH ALERT</span></td>
+          <td>Short-acting insulin</td>
+          <td>Requires independent double-check with second nurse before administration. Verify: correct insulin type (Regular vs. rapid-acting), dose per scale, patient will eat. Onset 30–60 min; peak 2–4 hrs; duration 5–8 hrs. Monitor BG 1–2 hours after administration. Do not administer if patient is NPO or BG below scale threshold.</td>
+        </tr>
+        <tr>
+          <td><strong>0.9% Normal Saline IV at 125 mL/hr</strong></td>
+          <td>Isotonic crystalloid IV fluid</td>
+          <td>Maintenance hydration. Does not contain dextrose — appropriate for diabetic patients. Monitor: fluid balance, signs of fluid overload (edema, crackles), IV site for infiltration.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- APPENDIX B: Q&A -->
+  <div class="phase-card" id="appendix-b">
+    <div class="phase-header">
+      <span class="phase-badge">Appendix B</span>
+      <h2>Post-Simulation Questions &amp; Answers</h2>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Q1: What are two reasons hospitalized T2DM patients become hyperglycemic?</summary>
+      <div class="reveal-content">
+        <ol>
+          <li><strong>Physiological stress response:</strong> Infection and hospitalization trigger cortisol and counter-regulatory hormone release → increased hepatic glucose production and insulin resistance → stress hyperglycemia</li>
+          <li><strong>Medication and care changes:</strong> Oral antihyperglycemics often held; dextrose-containing IV fluids; reduced physical activity; corticosteroids if prescribed — all elevate blood glucose in a patient whose home regimen is no longer adequate</li>
+        </ol>
+      </div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q2: Compare the symptoms of hypoglycemia versus hyperglycemia.</summary>
+      <div class="reveal-content">
+        <div class="compare-grid">
+          <div>
+            <h4>🔴 Hypoglycemia (BG &lt; 70 mg/dL)</h4>
+            <ul>
+              <li>Diaphoresis (sweating, clammy skin)</li>
+              <li>Shakiness, trembling</li>
+              <li>Tachycardia, palpitations</li>
+              <li>Anxiety, pallor</li>
+              <li>Headache, hunger</li>
+              <li>Confusion → unresponsiveness (severe)</li>
+            </ul>
+          </div>
+          <div>
+            <h4>🟡 Hyperglycemia (BG &gt; 180 mg/dL)</h4>
+            <ul>
+              <li>Polyuria (frequent urination)</li>
+              <li>Polydipsia (excessive thirst)</li>
+              <li>Polyphagia (excessive hunger)</li>
+              <li>Fatigue, blurred vision</li>
+              <li>Slow-onset symptoms (hours to days)</li>
+              <li>Fruity breath (DKA)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q3: What is the pathophysiology of Type 2 diabetes mellitus?</summary>
+      <div class="reveal-content">
+        <p><strong>T2DM develops in two stages:</strong></p>
+        <ol>
+          <li><strong>Insulin resistance:</strong> Target cells (muscle, fat, liver) become less responsive to insulin — glucose uptake is impaired even when insulin is present. The pancreas compensates by producing more insulin.</li>
+          <li><strong>Beta cell exhaustion:</strong> Years of overproduction lead to progressive beta cell dysfunction and eventual failure. Insulin secretion decreases — blood glucose rises chronically.</li>
+        </ol>
+        <p>Result: Relative insulin deficiency (unlike T1DM, which is absolute deficiency from autoimmune destruction). T2DM can often be managed initially with oral medications, but many patients eventually require insulin — particularly during physiological stress like hospitalization.</p>
+      </div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q4: What are the classic "3 Ps" of hyperglycemia?</summary>
+      <div class="reveal-content">
+        <ul>
+          <li><strong>Polyuria</strong> — osmotic diuresis: excess glucose in the filtrate pulls water into the renal tubules → frequent urination → dehydration</li>
+          <li><strong>Polydipsia</strong> — compensatory thirst from dehydration secondary to polyuria</li>
+          <li><strong>Polyphagia</strong> — cells cannot use glucose (insulin insufficient) → cellular starvation → hunger signal persists despite high blood glucose</li>
+        </ul>
+      </div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q5: What is the morphine-to-hydromorphone equianalgesic conversion, and why does it matter?</summary>
+      <div class="reveal-content">
+        <p><strong>Equianalgesic ratio: Morphine 5 mg IV = Hydromorphone 1 mg IV (5:1 ratio)</strong></p>
+        <p>Hydromorphone (Dilaudid) is approximately 5 times more potent than morphine milligram for milligram. Errors in opioid conversion are a leading cause of medication overdose in hospitals. When converting between opioids:</p>
+        <ul>
+          <li>Calculate the equianalgesic dose carefully</li>
+          <li>Reduce by 25–50% for incomplete cross-tolerance</li>
+          <li>Obtain an independent double-check for any high-dose opioid order</li>
+          <li>Monitor respiratory rate, sedation score, and SpO₂ after opioid administration</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <!-- APPENDIX C: References -->
+  <div class="phase-card" id="appendix-c">
+    <div class="phase-header">
+      <span class="phase-badge">Appendix C</span>
+      <h2>References</h2>
+    </div>
+    <ol class="ref-list">
+      <li>Ignatavicius, D. D., Workman, M. L., Rebar, C. R., &amp; Heimgartner, N. M. (2021). <em>Medical-surgical nursing: Concepts for interprofessional collaborative care</em> (10th ed.). Elsevier.</li>
+      <li>American Diabetes Association. (2024). <em>Standards of care in diabetes — 2024</em>. Diabetes Care, 47(Suppl. 1).</li>
+      <li>Vallerand, A. H., &amp; Sanoski, C. A. (2021). <em>Davis's drug guide for nurses</em> (17th ed.). F.A. Davis.</li>
+      <li>National Pressure Injury Advisory Panel. (2019). <em>NPIAP pressure injury stages</em>. NPIAP.</li>
+      <li>Institute for Safe Medication Practices. (2023). <em>ISMP list of high-alert medications in acute care settings</em>. ISMP.</li>
+    </ol>
+    <div style="margin-top: 2rem;">
+      <a href={`${base}cases/med-surgical/`} class="btn-back">← Back to Med-Surgical</a>
+    </div>
+  </div>
+
+</BaseLayout>
+
+<style>
+  /* ── Phase structure ─────────────────────────────────────────── */
+  .case-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-top: 0.25rem;
+  }
+
+  .phase-card {
+    background: var(--color-surface);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 0;
+    box-shadow: var(--shadow);
+    border-top: 4px solid var(--color-primary);
+  }
+
+  .appendix-card {
+    border-top-color: var(--color-secondary);
+  }
+
+  .phase-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .phase-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .phase-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+
+  .phase-badge-appendix {
+    background: var(--color-secondary);
+  }
+
+  .phase-intro {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin-bottom: 1.25rem;
+    border-left: 3px solid var(--color-accent);
+    padding-left: 0.75rem;
+  }
+
+  .phase-connector {
+    text-align: center;
+    padding: 0.6rem 0;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+  }
+
+  /* ── Info grid ───────────────────────────────────────────────── */
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 720px) {
+    .info-grid { grid-template-columns: 1fr; }
+    .compare-grid { grid-template-columns: 1fr; }
+  }
+
+  .info-block h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  /* ── Tables ──────────────────────────────────────────────────── */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--color-border);
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .data-table thead th {
+    background: #f0f4ff;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+  }
+
+  .data-table tbody th {
+    background: #f8f9fa;
+    font-weight: 600;
+    width: 30%;
+    color: var(--color-text);
+  }
+
+  .med-table tbody th {
+    width: 28%;
+  }
+
+  /* ── Callouts ────────────────────────────────────────────────── */
+  .callout {
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .callout p { margin-bottom: 0.5rem; }
+  .callout p:last-child { margin-bottom: 0; }
+
+  .callout-info {
+    background: #e8f0fe;
+    border-left: 4px solid var(--color-primary);
+  }
+
+  .callout-warning {
+    background: #fff8e1;
+    border-left: 4px solid #f59e0b;
+  }
+
+  .callout-danger {
+    background: #fff0f0;
+    border-left: 4px solid #dc2626;
+  }
+
+  /* ── Badges ──────────────────────────────────────────────────── */
+  .badge-danger {
+    display: inline-block;
+    background: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fca5a5;
+    border-radius: 4px;
+    padding: 0.1rem 0.45rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .badge-warning {
+    display: inline-block;
+    background: #fffbeb;
+    color: #92400e;
+    border: 1px solid #fde68a;
+    border-radius: 4px;
+    padding: 0.1rem 0.45rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  /* ── Scene box ───────────────────────────────────────────────── */
+  .scene-box {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .scene-box h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* ── Med list ────────────────────────────────────────────────── */
+  .med-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .med-list li {
+    padding: 0.35rem 0;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 0.9rem;
+  }
+
+  .med-list li:last-child { border-bottom: none; }
+
+  /* ── Chain flow ──────────────────────────────────────────────── */
+  .chain-flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin: 1.25rem 0;
+  }
+
+  .chain-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 520px;
+    gap: 0.2rem;
+  }
+
+  .chain-step small {
+    font-size: 0.8rem;
+    opacity: 0.8;
+  }
+
+  .chain-step-drug {
+    background: #e8f0fe;
+    color: var(--color-primary-dark);
+    border: 1px solid #bfdbfe;
+  }
+
+  .chain-step-problem {
+    background: #fff8e1;
+    color: #78350f;
+    border: 1px solid #fde68a;
+  }
+
+  .chain-step-consequence {
+    background: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+  }
+
+  .chain-arrow {
+    font-size: 1.5rem;
+    color: var(--color-text-muted);
+    line-height: 1.2;
+  }
+
+  .chain-icon {
+    font-size: 1.4rem;
+  }
+
+  /* ── Stat highlight ──────────────────────────────────────────── */
+  .stat-highlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fef2f2;
+    border: 2px solid #fca5a5;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #b91c1c;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+    color: #7f1d1d;
+    margin-top: 0.25rem;
+  }
+
+  /* ── Reveal (details/summary) ────────────────────────────────── */
+  .reveal-block {
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    margin-top: 1rem;
+    overflow: hidden;
+  }
+
+  .reveal-block > summary {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--color-primary);
+    background: #f0f4ff;
+    list-style: none;
+    user-select: none;
+  }
+
+  .reveal-block > summary::-webkit-details-marker { display: none; }
+
+  .reveal-block[open] > summary {
+    background: #dbeafe;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .reveal-block > summary:hover {
+    background: #dbeafe;
+  }
+
+  .reveal-content {
+    padding: 1rem 1.25rem;
+  }
+
+  .reveal-content ul,
+  .reveal-content ol {
+    margin-bottom: 0.75rem;
+  }
+
+  /* ── SBAR block ──────────────────────────────────────────────── */
+  .sbar-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    margin-bottom: 1.5rem;
+  }
+
+  .sbar-item {
+    padding: 1rem 1.25rem;
+  }
+
+  .sbar-item p { margin: 0; font-style: italic; }
+
+  .sbar-label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.4rem;
+  }
+
+  .sbar-s { background: #eff6ff; border-left: 5px solid #3b82f6; }
+  .sbar-b { background: #f0fdf4; border-left: 5px solid #22c55e; }
+  .sbar-a { background: #fffbeb; border-left: 5px solid #f59e0b; }
+  .sbar-r { background: #fef2f2; border-left: 5px solid #ef4444; }
+
+  /* ── Priority diagnoses ──────────────────────────────────────── */
+  .dx-rank-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .dx-rank-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: #f8f9fa;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+  }
+
+  .dx-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .dx-aeb {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-top: 0.2rem;
+  }
+
+  /* ── Compare grid ────────────────────────────────────────────── */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .compare-grid h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  /* ── Concept map ─────────────────────────────────────────────── */
+  .concept-map {
+    margin-bottom: 1.25rem;
+  }
+
+  /* ── References ──────────────────────────────────────────────── */
+  .ref-list {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .ref-note {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin: 0;
+  }
+
+  /* ── Utility ─────────────────────────────────────────────────── */
+  .text-success { color: #15803d; }
+  .text-danger  { color: #b91c1c; }
+
+  .btn-back {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .btn-back:hover {
+    background: var(--color-primary-dark);
+    text-decoration: none;
+  }
+</style>
