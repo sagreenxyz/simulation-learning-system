@@ -1,0 +1,944 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout
+  title="Psychiatric 3 — Gwen Harrison"
+  description="Unfolding case study: Older Adult Abuse and Neglect in a Parkinson's Disease Patient (PSYCH-03)"
+>
+
+  <div class="breadcrumb">
+    <a href={base}>Home</a>
+    <span>›</span>
+    <a href={`${base}cases/`}>Cases</a>
+    <span>›</span>
+    <a href={`${base}cases/psychiatric/`}>Psychiatric</a>
+    <span>›</span>
+    <span>Psychiatric 3 — Gwen Harrison</span>
+  </div>
+
+  <div class="case-header">
+    <span class="card-tag">Mental Health / Abuse</span>
+    <h1>Psychiatric 3 — Gwen Harrison</h1>
+    <p class="case-subtitle">Older Adult Abuse and Neglect in a Parkinson's Disease Patient</p>
+    <div class="case-meta">
+      <span>👤 Gwen Harrison, 84 years, Female</span>
+      <span>⏱ Scenario: 20–25 minutes</span>
+      <span>💬 Debrief: 20–25 minutes</span>
+    </div>
+  </div>
+
+  <div class="callout callout-info">
+    <strong>📖 How to Use This Unfolding Case Study</strong>
+    <p>Work through each phase in order. Information is revealed progressively — exactly as it would be in a real clinical encounter. Before reading each answer, pause and reason through the question yourself. Use the <strong>▶ Reveal Answer</strong> toggles to check your thinking.</p>
+  </div>
+
+  <!-- PHASE 1 -->
+  <div class="phase-card" id="phase1">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 1</span>
+      <h2>You Receive the Admission</h2>
+    </div>
+    <p class="phase-intro">You are the admitting nurse on a medical-surgical unit. Gwen Harrison, 84 years old, is being admitted for an unresolved urinary tract infection. She has Parkinson's disease and is dependent on a caregiver for all activities of daily living.</p>
+    <div class="callout callout-danger">
+      <strong>⏰ CRITICAL: Carbidopa-Levodopa Must Be Given ON TIME — Never Held Without Specific Order</strong>
+      <p>Missing Parkinson's medications causes sudden "off" episodes: severe rigidity, tremor, immobility, dysphagia, and inability to swallow. This is a patient safety emergency. Administer at exact prescribed times. Never hold without an explicit provider order.</p>
+    </div>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>📋 Handoff Report</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Patient</th><td>Gwen Harrison</td></tr>
+            <tr><th>Age / Gender</th><td>84 years · Female</td></tr>
+            <tr><th>Primary Dx</th><td>Urinary tract infection (unresolved)</td></tr>
+            <tr><th>Secondary Dx</th><td>Parkinson's disease</td></tr>
+            <tr><th>Medical History</th><td>Parkinson's disease diagnosed 6 years ago; dependent on caregiver for all ADLs</td></tr>
+            <tr><th>Caregiver</th><td>Adult son — accompanies her today</td></tr>
+            <tr><th>Allergies</th><td>None known</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>💊 Medications on MAR</h3>
+        <ul class="med-list">
+          <li><strong>Carbidopa-levodopa (Sinemet) 25/100 mg PO TID</strong> — ⚠️ CRITICAL: must be on time!</li>
+          <li>Trimethoprim-sulfamethoxazole (Bactrim DS) PO BID — UTI treatment</li>
+          <li>Docusate sodium PO daily — constipation prevention</li>
+          <li>Acetaminophen PO PRN — pain management</li>
+        </ul>
+      </div>
+    </div>
+    <div class="scene-box">
+      <h3>🚪 Entering the Room — What You Observe</h3>
+      <p>Gwen is thin and appears malnourished. Her hair is disheveled. The caregiver (her son) is in the room and begins answering your questions before Gwen can respond. Gwen makes brief eye contact with you, then quickly looks down.</p>
+      <p>You notice <strong>bruising on her upper arms</strong>. When you ask, the son says: "She falls a lot — it's the Parkinson's."</p>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ What are the types of elder abuse?</summary>
+      <div class="reveal-content">
+        <table class="data-table">
+          <thead><tr><th>Type</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Physical abuse</strong></td><td>Non-accidental use of force causing injury — hitting, pushing, burning, improper restraint</td></tr>
+            <tr><td><strong>Sexual abuse</strong></td><td>Non-consensual sexual contact of any kind</td></tr>
+            <tr><td><strong>Emotional / psychological abuse</strong></td><td>Verbal threats, humiliation, intimidation, isolation from others</td></tr>
+            <tr><td><strong>Financial exploitation</strong></td><td>Unauthorized use of money, property, or assets</td></tr>
+            <tr><td><strong>Neglect</strong></td><td>Failure by a caregiver to provide food, medications, hygiene, shelter, or medical care</td></tr>
+            <tr><td><strong>Self-neglect</strong></td><td>Adult fails to provide for their own basic needs</td></tr>
+            <tr><td><strong>Abandonment</strong></td><td>Desertion by a caregiver of a dependent adult</td></tr>
+          </tbody>
+        </table>
+        <p><strong>In Gwen's case:</strong> The clinical picture is consistent with <strong>physical abuse</strong> (bilateral upper arm bruising inconsistent with fall pattern) <strong>and neglect</strong> (dehydration, malnutrition, poor hygiene, unresolved UTI suggesting delayed medical care).</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ You recognize the need to assess Gwen privately…</div>
+
+  <!-- PHASE 2 -->
+  <div class="phase-card" id="phase2">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 2</span>
+      <h2>Conducting a Private Assessment</h2>
+    </div>
+    <p class="phase-intro">You recognize the need to assess Gwen privately. You use a clinical, non-accusatory rationale to ask the caregiver to step out of the room.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>🔑 How to Request a Private Assessment</h3>
+        <div class="scene-box">
+          <p>"Mrs. Harrison, it's our standard policy to briefly assess all patients privately as part of the admission process. [Turn to son] Would you mind waiting in the hallway for about 10 minutes? I'll come get you as soon as we're done."</p>
+        </div>
+        <p><strong>Key principles:</strong></p>
+        <ul>
+          <li>Use a <strong>policy-based reason</strong> — not an accusatory one</li>
+          <li><strong>Never confront the caregiver</strong> in front of the patient — escalates danger</li>
+          <li>If caregiver refuses to leave: document behavior, involve charge nurse and social work immediately</li>
+          <li>A caregiver who refuses to leave the patient alone with the nurse is itself a significant red flag</li>
+        </ul>
+      </div>
+      <div class="info-block">
+        <h3>⚠️ Red Flags Already Observed</h3>
+        <ul class="med-list">
+          <li>Caregiver answering questions before patient can respond (controlling behavior)</li>
+          <li>Gwen making minimal eye contact; lowered voice in caregiver's presence</li>
+          <li>Multiple bruises on upper arms — atypical location for fall injuries</li>
+          <li>Malnourishment and poor hygiene inconsistent with stated level of care</li>
+          <li>Unresolved UTI — delayed medical care is a neglect indicator</li>
+          <li>Explanation ("she falls") inconsistent with bruise location (bilateral upper arms)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="scene-box">
+      <h3>💬 Private Assessment Dialogue</h3>
+      <p>Once alone with Gwen:</p>
+      <p><strong>Nurse:</strong> "Mrs. Harrison, I'm going to do a quick assessment. First, I just want to ask — how have things been at home lately?"<br/>
+      <em>[Pause — allow her time to respond without rushing]</em></p>
+      <p><strong>Nurse:</strong> "I notice some bruises on your arms. Can you tell me how those happened?"</p>
+      <p><strong>Nurse:</strong> "Are you safe at home? Is there anything you'd like to share with me while we have this time together?"</p>
+      <p><em>Note: She may not disclose immediately. Victims of abuse often do not disclose on the first ask — they need to feel safe first. Do not pressure her. Document what you objectively observe regardless of her verbal response.</em></p>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ What are the behavioral indicators of elder abuse?</summary>
+      <div class="reveal-content">
+        <p><strong>Patient-side behavioral indicators:</strong></p>
+        <ul>
+          <li>Fear or anxiety when caregiver enters the room</li>
+          <li>Evasive or withdrawn answers, especially when caregiver is present</li>
+          <li>Waits for caregiver's permission to speak or answer questions</li>
+          <li>Minimizes injuries ("I'm clumsy" / "I fall a lot")</li>
+          <li>Tearfulness, appearing sad or defeated</li>
+          <li>Startles easily when touched</li>
+        </ul>
+        <p><strong>Caregiver-side behavioral indicators:</strong></p>
+        <ul>
+          <li>Answers all questions for the patient, does not allow patient to speak</li>
+          <li>Appears frustrated, indifferent, or hostile toward the patient</li>
+          <li>Explanations are inconsistent with the injury severity or patient's functional ability</li>
+          <li>Overly attentive in a controlling rather than caring way</li>
+          <li>Refuses to leave patient alone with healthcare providers</li>
+          <li>Criticizes or demeans patient in front of nursing staff</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ You perform a thorough head-to-toe physical assessment…</div>
+
+  <!-- PHASE 3 -->
+  <div class="phase-card" id="phase3">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 3</span>
+      <h2>Physical Assessment and Documentation</h2>
+    </div>
+    <p class="phase-intro">You conduct a head-to-toe assessment of Gwen with the caregiver out of the room. Your findings are more concerning than the admission diagnosis suggests.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>📋 Assessment Findings</h3>
+        <table class="data-table">
+          <thead><tr><th>Area</th><th>Finding</th></tr></thead>
+          <tbody>
+            <tr><td>Nutritional status</td><td>Cachectic; marked muscle wasting; BMI estimated below normal range</td></tr>
+            <tr><td>Weight</td><td>Appears significantly underweight; confirm with scale</td></tr>
+            <tr><td>Skin / Hygiene</td><td>Unwashed hair; soiled clothing; strong odor; skin dry and flaking</td></tr>
+            <tr><td>Hydration</td><td>Dry mucous membranes; poor skin turgor; concentrated urine</td></tr>
+            <tr><td>Upper arms (bilateral)</td><td>Three circular bruises; yellowish-green coloration; 3–4 cm diameter</td></tr>
+            <tr><td>Torso</td><td>Two older bruises; fading brownish-yellow coloration</td></tr>
+            <tr><td>Lower extremities</td><td>No acute bruising</td></tr>
+            <tr><td>Parkinson's findings</td><td>Resting tremor bilateral hands; masked facies; bradykinesia noted</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>⚠️ Injury Pattern Analysis</h3>
+        <table class="data-table">
+          <thead><tr><th>Fall Injury Pattern</th><th>Abuse Injury Pattern</th></tr></thead>
+          <tbody>
+            <tr><td>Shins, knees, forearms (bony prominences)</td><td>Bilateral upper arms, torso (non-accidental contact)</td></tr>
+            <tr><td>Unilateral or asymmetric</td><td>Bilateral or symmetric (both arms grabbed)</td></tr>
+            <tr><td>Consistent with stated mechanism</td><td>Inconsistent with "she falls" explanation</td></tr>
+            <tr><td>Single episode</td><td>Multiple stages of healing = repeated trauma over time</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="scene-box">
+      <h3>📝 Correct Documentation Language</h3>
+      <p><strong class="text-success">CORRECT:</strong> "Patient presents with three circular bruises (3–4 cm diameter) on bilateral upper arms, yellowish-green coloration consistent with 5–7 day age. Two older bruises (brownish-yellow) visible on torso. Patient states 'I fell.' Patient's voice becomes quiet and she averts gaze when caregiver enters the room. Social work notified. APS report initiated per mandatory reporting protocol."</p>
+      <p><strong class="text-danger">INCORRECT:</strong> "Patient appears to have been beaten." / "Caregiver is abusing patient."</p>
+      <p><em>Nurses document <strong>objective findings</strong> and exact patient quotes. The investigation is the role of Adult Protective Services — not the nurse. Subjective conclusions can compromise legal proceedings.</em></p>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ What injury patterns are most suspicious for physical abuse in elderly patients?</summary>
+      <div class="reveal-content">
+        <ul>
+          <li><strong>Multiple bruises in different stages of healing</strong> — indicates repeated trauma over time, not a single accidental fall</li>
+          <li><strong>Atypical locations:</strong> inner arms, bilateral upper arms, torso, buttocks, back, genitalia (accidental injuries are typically on shins, knees, and forearms)</li>
+          <li><strong>Bilateral or symmetric injuries</strong> — both arms or both legs bruised simultaneously suggests being grabbed or restrained (not accidental)</li>
+          <li><strong>Explanations inconsistent with injury severity or patient's functional ability</strong> — "she fell" from a patient who can barely walk, resulting in bilateral upper arm bruising</li>
+          <li><strong>Burns with defined borders</strong> — cigarette burns, contact burns (accidental burns are typically irregular/splash patterns)</li>
+          <li><strong>Rope burns or marks on wrists/ankles</strong> — improper physical restraint</li>
+          <li><strong>Patterned bruises</strong> — bruises that match the shape of an object (belt buckle, hand print)</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ You address Gwen's Parkinson's disease and UTI management…</div>
+
+  <!-- PHASE 4 -->
+  <div class="phase-card" id="phase4">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 4</span>
+      <h2>Parkinson's Disease Management</h2>
+    </div>
+    <p class="phase-intro">While managing the abuse concern, you also address Gwen's Parkinson's disease and UTI. Safe Parkinson's medication administration is an urgent priority that cannot wait.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>🧠 Parkinson's Disease — Cardinal Signs (TRAP)</h3>
+        <table class="data-table">
+          <thead><tr><th>Letter</th><th>Sign</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td><strong>T</strong></td><td>Tremor</td><td>Resting tremor ("pill-rolling"); worse at rest, improves with intentional movement</td></tr>
+            <tr><td><strong>R</strong></td><td>Rigidity</td><td>Cogwheel or lead-pipe resistance to passive range of motion</td></tr>
+            <tr><td><strong>A</strong></td><td>Akinesia / Bradykinesia</td><td>Slowness of movement; small shuffling steps (festination); start hesitation</td></tr>
+            <tr><td><strong>P</strong></td><td>Postural Instability</td><td>Impaired balance; difficulty with turns; high fall risk; retropulsion (tendency to fall backward)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>💊 Carbidopa-Levodopa (Sinemet) — Critical Points</h3>
+        <table class="data-table">
+          <thead><tr><th>Issue</th><th>Nursing Action</th></tr></thead>
+          <tbody>
+            <tr><td>ON-TIME administration</td><td>Prevents "off" episodes — administer at exact scheduled times</td></tr>
+            <tr><td>Missed dose consequence</td><td>Sudden severe rigidity, freezing, inability to swallow — medical emergency</td></tr>
+            <tr><td>Swallowing assessment</td><td>Assess for dysphagia before each oral administration</td></tr>
+            <tr><td>Protein interaction</td><td>Separate from high-protein meals — protein reduces levodopa absorption</td></tr>
+            <tr><td>Drug interactions</td><td>Avoid antipsychotics (dopamine antagonists) — worsens Parkinson's dramatically</td></tr>
+            <tr><td>Fall prevention</td><td>Shuffling gait + orthostatic hypotension = very high fall risk</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="callout callout-danger">
+      <strong>🚨 Antipsychotics Are CONTRAINDICATED in Parkinson's Disease</strong>
+      <p>If Gwen becomes agitated, do NOT administer typical antipsychotics (haloperidol, chlorpromazine) or most atypical antipsychotics. These are <strong>dopamine antagonists</strong> and will dramatically worsen Parkinson's symptoms (rigidity, freezing, respiratory complications).</p>
+      <p>If an antipsychotic is needed: <strong>ONLY quetiapine (Seroquel) or clozapine</strong> are considered relatively safe in Parkinson's disease. Always verify with the pharmacist and provider before administering any antipsychotic to a patient with Parkinson's disease.</p>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ What is a Parkinson's "off" episode and how does the nurse recognize and respond?</summary>
+      <div class="reveal-content">
+        <p><strong>"Off" episode:</strong> A sudden return of severe Parkinson's symptoms when dopamine levels drop — most commonly caused by missed, delayed, or malabsorbed carbidopa-levodopa doses.</p>
+        <p><strong>Signs of an "off" episode:</strong></p>
+        <ul>
+          <li>Sudden freezing — patient appears unable to move</li>
+          <li>Inability to speak (hypophonia)</li>
+          <li>Severe rigidity — cogwheel resistance dramatically worsened</li>
+          <li>Tremor intensification</li>
+          <li>Patient appears "locked up" — frightening for both patient and staff</li>
+          <li>Dysphagia — inability to swallow safely</li>
+        </ul>
+        <p><strong>Nursing response:</strong></p>
+        <ol>
+          <li>Administer the missed or delayed medication <strong>immediately</strong> (if patient can swallow)</li>
+          <li>If swallowing is impaired: notify provider — alternative route may be needed</li>
+          <li>Position patient for safety — sit or lie down; fall risk is extreme during "off" episode</li>
+          <li>Stay with patient — do not leave alone</li>
+          <li>Notify provider and document</li>
+          <li>Complete a medication incident report if "off" episode was caused by a delayed hospital dose</li>
+        </ol>
+        <p><strong>This is why on-time administration is a patient safety priority</strong> — not simply a matter of medication scheduling convenience.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ You notify the charge nurse and prepare the mandatory APS report…</div>
+
+  <!-- PHASE 5 -->
+  <div class="phase-card" id="phase5">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 5</span>
+      <h2>Mandatory Reporting and Safety Planning</h2>
+    </div>
+    <p class="phase-intro">You have reasonable suspicion of elder abuse and neglect. You notify the charge nurse, contact social work, and prepare to complete a mandatory report to Adult Protective Services (APS).</p>
+    <div class="callout callout-danger">
+      <strong>⚖️ Mandatory Reporting: Healthcare Workers Are Legally Required to Report Suspected Elder Abuse</strong>
+      <p>All 50 states have mandatory reporting laws for suspected elder abuse. You do <strong>NOT need proof</strong> — you only need <strong>reasonable suspicion</strong>. Failure to report is a legal violation and an ethical breach. The investigation is conducted by Adult Protective Services — not the nurse.</p>
+    </div>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>📋 Mandatory Reporting Process</h3>
+        <ol>
+          <li>Contact <strong>Adult Protective Services (APS)</strong> — within 24–72 hours (timeframe varies by state)</li>
+          <li>Report to <strong>law enforcement</strong> if criminal abuse is suspected (varies by state)</li>
+          <li><strong>Notify provider</strong> — document medical findings in the medical record</li>
+          <li><strong>Do NOT notify the alleged abuser</strong> that a report is being made</li>
+          <li>Document ALL injuries objectively — photographs with patient consent and per protocol</li>
+          <li><strong>Social work referral</strong> — immediate</li>
+          <li><strong>Safety planning</strong> — Gwen should NOT be discharged to the same environment without APS clearance and a safety plan</li>
+        </ol>
+      </div>
+      <div class="info-block">
+        <h3>🏥 In-Hospital Safety Measures</h3>
+        <ul class="med-list">
+          <li>Limit caregiver's unsupervised access — do not leave alone with Gwen</li>
+          <li>If caregiver becomes threatening → involve security immediately</li>
+          <li>Interdisciplinary team engagement: social worker, case manager, provider, charge nurse, ethics committee if needed</li>
+          <li>Communicate the safety plan to all team members during handoff</li>
+          <li>Discharge planning: identify alternative safe environment (different family member, skilled nursing facility) before discharge</li>
+          <li>Ethics committee involvement if discharge safety is disputed</li>
+        </ul>
+      </div>
+    </div>
+    <div class="scene-box">
+      <h3>💬 Responding to the Caregiver's Questions</h3>
+      <p><strong>Son:</strong> "What's going on? Why are you keeping her away from me?"</p>
+      <p><strong>Nurse:</strong> "We're completing a thorough admission assessment — it's our standard process for all patients. I'll come get you shortly."</p>
+      <p><em>Do NOT reveal that a report is being made. Do NOT accuse the caregiver. Do NOT argue or engage in a confrontation. Involve the charge nurse immediately if the caregiver becomes aggressive. Your role is to ensure Gwen's safety — the investigation is the role of APS and law enforcement.</em></p>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ SBAR — Reporting Suspected Elder Abuse to the Provider</summary>
+      <div class="reveal-content">
+        <div class="sbar-block">
+          <div class="sbar-item sbar-s"><span class="sbar-label">S — Situation</span><p>I'm calling about Gwen Harrison, an 84-year-old female admitted for an unresolved UTI. My assessment has revealed findings consistent with physical abuse and neglect that I need to bring to your attention.</p></div>
+          <div class="sbar-item sbar-b"><span class="sbar-label">B — Background</span><p>Mrs. Harrison has Parkinson's disease and is fully dependent on her adult son for all ADLs. Assessment findings: bilateral upper arm bruising in multiple stages of healing, malnourishment, dehydration, poor hygiene, and an unresolved UTI suggesting delayed medical care. The caregiver's explanation ("she falls a lot") is inconsistent with the bruise pattern — bilateral upper arms are not a typical fall injury location. The patient becomes quiet and averts her gaze when the caregiver is present.</p></div>
+          <div class="sbar-item sbar-a"><span class="sbar-label">A — Assessment</span><p>Private assessment was conducted. Patient gave evasive answers; did not directly deny abuse but did not disclose. Findings are consistent with both physical abuse and neglect. I have notified the charge nurse, contacted social work, and am completing a mandatory APS report. The caregiver has been asked to wait in the hallway during assessment.</p></div>
+          <div class="sbar-item sbar-r"><span class="sbar-label">R — Recommendation</span><p>Requesting: provider documentation of injuries in the medical record; order to limit caregiver's unsupervised access during hospitalization; agreement that patient should not be discharged without APS clearance and a confirmed safety plan; social work to expedite evaluation.</p></div>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ You document findings and the interdisciplinary team develops a discharge safety plan…</div>
+
+  <!-- PHASE 6 -->
+  <div class="phase-card" id="phase6">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 6</span>
+      <h2>Nursing Diagnoses and Discharge Planning</h2>
+    </div>
+    <p class="phase-intro">You document your complete assessment findings. The interdisciplinary team convenes to ensure Gwen's safety during hospitalization and to develop a safe discharge plan.</p>
+    <h3>📋 Priority Nursing Diagnoses</h3>
+    <div class="dx-rank-list">
+      <div class="dx-rank-item">
+        <span class="dx-number">1</span>
+        <div><strong>Risk for Injury r/t physical abuse, neglect, and Parkinson's disease</strong><div class="dx-aeb">AEB: multiple bruises in various stages of healing, malnourishment, very high fall risk from Parkinson's disease cardinal signs</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">2</span>
+        <div><strong>Powerlessness r/t abusive relationship and complete dependence on caregiver</strong><div class="dx-aeb">AEB: evasive responses, fearful behavior and gaze aversion in caregiver's presence, limited ability to self-advocate, complete ADL dependence</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">3</span>
+        <div><strong>Deficient Fluid Volume r/t neglect</strong><div class="dx-aeb">AEB: dehydration on admission, unresolved UTI (delayed treatment is a neglect indicator), dry mucous membranes, poor skin turgor</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">4</span>
+        <div><strong>Impaired Physical Mobility r/t Parkinson's disease</strong><div class="dx-aeb">AEB: resting tremor, cogwheel rigidity, bradykinesia, shuffling gait, postural instability, high fall risk</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">5</span>
+        <div><strong>Risk for Relocation Stress Syndrome r/t potential need for placement change following abuse disclosure</strong><div class="dx-aeb">AEB: possible transition from home to skilled nursing or memory care facility if home environment is deemed unsafe</div></div>
+      </div>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Review: Key Documentation and Safety Planning Points for Suspected Elder Abuse</summary>
+      <div class="reveal-content">
+        <p><strong>Documentation essentials:</strong></p>
+        <ul>
+          <li>Use objective language — describe what you see, not your interpretation</li>
+          <li>Record exact patient quotes verbatim in quotation marks</li>
+          <li>Document injury location, size, color (indicates age of bruise), and shape</li>
+          <li>Note caregiver behavior objectively (e.g., "caregiver answered all questions before patient could respond")</li>
+          <li>Document time of APS notification and social work referral</li>
+        </ul>
+        <p><strong>Discharge safety planning:</strong></p>
+        <ul>
+          <li>Gwen must NOT be discharged to the same environment without APS clearance</li>
+          <li>Social work identifies alternative placement options: skilled nursing facility, different family member, assisted living</li>
+          <li>All team members must be informed of the safety concern and the plan</li>
+          <li>If caregiver insists on taking patient home and patient lacks capacity, ethics committee may need involvement</li>
+        </ul>
+        <p>See Phase 5 for the full SBAR communication to the provider.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- APPENDIX A -->
+  <div class="phase-connector">⬇ Appendix: Reference Materials</div>
+  <div class="phase-card" id="appendix-a">
+    <div class="phase-header">
+      <span class="phase-badge phase-badge-appendix">Appendix A</span>
+      <h2>Medications</h2>
+    </div>
+    <table class="data-table med-table">
+      <thead>
+        <tr>
+          <th>Medication</th>
+          <th>Class</th>
+          <th>Key Nursing Points</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Carbidopa-levodopa (Sinemet) 25/100 mg PO TID</strong></td>
+          <td>Dopamine precursor</td>
+          <td>⚠️ CRITICAL — on-time administration; "off" episodes if missed or delayed; assess swallowing before each dose (dysphagia common); avoid antipsychotics (dopamine antagonists — worsen Parkinson's); separate from high-protein meals (protein reduces absorption); extremely high fall risk (shuffling gait + orthostatic hypotension)</td>
+        </tr>
+        <tr>
+          <td><strong>Trimethoprim-sulfamethoxazole (Bactrim DS) PO BID</strong></td>
+          <td>Antibiotic — sulfonamide</td>
+          <td>UTI treatment; monitor for allergic reaction (rash, Stevens-Johnson syndrome — rare but serious); monitor renal function and CBC; ensure adequate hydration; verify no sulfa allergy before administration; complete full course</td>
+        </tr>
+        <tr>
+          <td><strong>Docusate sodium PO daily</strong></td>
+          <td>Stool softener</td>
+          <td>Constipation prevention — Parkinson's autonomic dysfunction significantly increases constipation risk; safe in elderly; monitor bowel function daily; encourage adequate fluid and dietary fiber intake</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- APPENDIX B -->
+  <div class="phase-card" id="appendix-b">
+    <div class="phase-header">
+      <span class="phase-badge phase-badge-appendix">Appendix B</span>
+      <h2>Post-Simulation Discussion Questions</h2>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Q1: What is the most important nursing action when elder abuse is suspected?</summary>
+      <div class="reveal-content">
+        <p>The most important nursing action is to ensure the patient's immediate safety and complete a <strong>mandatory report to Adult Protective Services (APS)</strong>. You do not need proof — only reasonable suspicion is required by law. Immediate steps: (1) ensure patient is not alone with the suspected abuser; (2) notify the charge nurse; (3) contact social work immediately; (4) notify the provider and document findings objectively; (5) complete the APS report per your state's requirements. Do not confront or accuse the caregiver — the investigation is APS's role, not the nurse's.</p>
+      </div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q2: How does the nurse assess for abuse without the caregiver present?</summary>
+      <div class="reveal-content">
+        <p>Use a <strong>policy-based rationale</strong> to request private time: "It's our standard admission policy to assess all patients privately for a few minutes." This is non-accusatory and gives the caregiver a face-saving reason to leave. Once alone, use open-ended questions: "How have things been at home?" / "How did these bruises happen?" / "Are you safe at home?" Do not pressure the patient for disclosure — she may not feel safe enough to disclose yet. Document what you observe objectively regardless of her verbal response. The physical findings themselves are reportable evidence.</p>
+      </div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q3: What injury pattern is most suspicious for physical abuse in the elderly?</summary>
+      <div class="reveal-content">
+        <p>Most suspicious patterns: (1) <strong>Multiple bruises in different stages of healing</strong> — indicates repeated trauma over time; (2) <strong>Atypical locations</strong> — bilateral upper arms, torso, buttocks, back, inner thighs (accidental injuries are on shins, knees, and forearms); (3) <strong>Bilateral symmetric injuries</strong> — both arms bruised simultaneously suggests being grabbed; (4) <strong>Pattern injuries</strong> — bruises matching an object shape; (5) <strong>Explanation inconsistent with injury</strong> — "she falls" but the bruises are on her upper arms, not her shins. In Gwen's case, bilateral upper arm bruising across multiple healing stages is highly concerning for repeated physical abuse.</p>
+      </div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q4: Why is carbidopa-levodopa administration considered a patient safety priority?</summary>
+      <div class="reveal-content">
+        <p>Carbidopa-levodopa is the primary dopamine replacement therapy for Parkinson's disease. When doses are missed or delayed, dopamine levels drop and the patient experiences a sudden "off" episode: severe rigidity, freezing, inability to move or speak, and dysphagia. These episodes can be frightening and dangerous — the patient may be unable to swallow safely, significantly increasing aspiration risk. On-time administration maintains stable dopamine levels and prevents these episodes. In the hospital setting, nursing staff must be aware that Parkinson's medications cannot be held or delayed without specific provider orders, as this constitutes a patient safety risk distinct from most other medications.</p>
+      </div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q5: What antipsychotics are relatively safe in Parkinson's disease?</summary>
+      <div class="reveal-content">
+        <p>Most antipsychotics (both typical and atypical) are dopamine antagonists and are <strong>contraindicated</strong> in Parkinson's disease because they block dopamine receptors and dramatically worsen motor symptoms (rigidity, freezing, akinesia).</p>
+        <p>The two antipsychotics considered relatively safe in Parkinson's disease:</p>
+        <ul>
+          <li><strong>Quetiapine (Seroquel)</strong> — preferred; low dopamine D2 affinity; less likely to worsen motor symptoms</li>
+          <li><strong>Clozapine</strong> — most evidence for safety in Parkinson's psychosis, but requires mandatory REMS monitoring (CBC weekly) due to agranulocytosis risk</li>
+        </ul>
+        <p>Always consult pharmacist and provider before administering any antipsychotic to a patient with Parkinson's disease. Document the rationale for use clearly.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- APPENDIX C -->
+  <div class="phase-card" id="appendix-c">
+    <div class="phase-header">
+      <span class="phase-badge phase-badge-appendix">Appendix C</span>
+      <h2>References</h2>
+    </div>
+    <ol class="ref-list">
+      <li>Townsend, M. C., &amp; Morgan, K. I. (2021). <em>Psychiatric mental health nursing: Concepts of care in evidence-based practice</em> (9th ed.). F.A. Davis.</li>
+      <li>National Center on Elder Abuse. (2023). <em>Statistics and data</em>. U.S. Administration for Community Living. https://ncea.acl.gov</li>
+      <li>Harding, M. M., Kwong, J., Roberts, D., Hagler, D., &amp; Reinisch, C. (2020). <em>Lewis's medical-surgical nursing: Assessment and management of clinical problems</em> (11th ed.). Elsevier.</li>
+    </ol>
+    <p class="ref-note">References follow APA 7th edition format. All clinical protocols should be verified against current institutional policy and evidence-based guidelines.</p>
+    <a href={`${base}cases/psychiatric/`} class="btn-back">← Back to Psychiatric</a>
+  </div>
+
+</BaseLayout>
+
+<style>
+  /* ── Phase structure ─────────────────────────────────────────── */
+  .case-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-top: 0.25rem;
+  }
+
+  .phase-card {
+    background: var(--color-surface);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 0;
+    box-shadow: var(--shadow);
+    border-top: 4px solid var(--color-primary);
+  }
+
+  .appendix-card {
+    border-top-color: var(--color-secondary);
+  }
+
+  .phase-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .phase-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .phase-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+
+  .phase-badge-appendix {
+    background: var(--color-secondary);
+  }
+
+  .phase-intro {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin-bottom: 1.25rem;
+    border-left: 3px solid var(--color-accent);
+    padding-left: 0.75rem;
+  }
+
+  .phase-connector {
+    text-align: center;
+    padding: 0.6rem 0;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+  }
+
+  /* ── Info grid ───────────────────────────────────────────────── */
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 720px) {
+    .info-grid { grid-template-columns: 1fr; }
+    .compare-grid { grid-template-columns: 1fr; }
+  }
+
+  .info-block h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  /* ── Tables ──────────────────────────────────────────────────── */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--color-border);
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .data-table thead th {
+    background: #f0f4ff;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+  }
+
+  .data-table tbody th {
+    background: #f8f9fa;
+    font-weight: 600;
+    width: 30%;
+    color: var(--color-text);
+  }
+
+  .med-table tbody th {
+    width: 28%;
+  }
+
+  /* ── Callouts ────────────────────────────────────────────────── */
+  .callout {
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .callout p { margin-bottom: 0.5rem; }
+  .callout p:last-child { margin-bottom: 0; }
+
+  .callout-info {
+    background: #e8f0fe;
+    border-left: 4px solid var(--color-primary);
+  }
+
+  .callout-warning {
+    background: #fff8e1;
+    border-left: 4px solid #f59e0b;
+  }
+
+  .callout-danger {
+    background: #fff0f0;
+    border-left: 4px solid #dc2626;
+  }
+
+  /* ── Badges ──────────────────────────────────────────────────── */
+  .badge-danger {
+    display: inline-block;
+    background: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fca5a5;
+    border-radius: 4px;
+    padding: 0.1rem 0.45rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .badge-warning {
+    display: inline-block;
+    background: #fffbeb;
+    color: #92400e;
+    border: 1px solid #fde68a;
+    border-radius: 4px;
+    padding: 0.1rem 0.45rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  /* ── Scene box ───────────────────────────────────────────────── */
+  .scene-box {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .scene-box h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* ── Med list ────────────────────────────────────────────────── */
+  .med-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .med-list li {
+    padding: 0.35rem 0;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 0.9rem;
+  }
+
+  .med-list li:last-child { border-bottom: none; }
+
+  /* ── Chain flow ──────────────────────────────────────────────── */
+  .chain-flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin: 1.25rem 0;
+  }
+
+  .chain-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 520px;
+    gap: 0.2rem;
+  }
+
+  .chain-step small {
+    font-size: 0.8rem;
+    opacity: 0.8;
+  }
+
+  .chain-step-drug {
+    background: #e8f0fe;
+    color: var(--color-primary-dark);
+    border: 1px solid #bfdbfe;
+  }
+
+  .chain-step-problem {
+    background: #fff8e1;
+    color: #78350f;
+    border: 1px solid #fde68a;
+  }
+
+  .chain-step-consequence {
+    background: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+  }
+
+  .chain-arrow {
+    font-size: 1.5rem;
+    color: var(--color-text-muted);
+    line-height: 1.2;
+  }
+
+  .chain-icon {
+    font-size: 1.4rem;
+  }
+
+  /* ── Stat highlight ──────────────────────────────────────────── */
+  .stat-highlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fef2f2;
+    border: 2px solid #fca5a5;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #b91c1c;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+    color: #7f1d1d;
+    margin-top: 0.25rem;
+  }
+
+  /* ── Reveal (details/summary) ────────────────────────────────── */
+  .reveal-block {
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    margin-top: 1rem;
+    overflow: hidden;
+  }
+
+  .reveal-block > summary {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--color-primary);
+    background: #f0f4ff;
+    list-style: none;
+    user-select: none;
+  }
+
+  .reveal-block > summary::-webkit-details-marker { display: none; }
+
+  .reveal-block[open] > summary {
+    background: #dbeafe;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .reveal-block > summary:hover {
+    background: #dbeafe;
+  }
+
+  .reveal-content {
+    padding: 1rem 1.25rem;
+  }
+
+  .reveal-content ul,
+  .reveal-content ol {
+    margin-bottom: 0.75rem;
+  }
+
+  /* ── SBAR block ──────────────────────────────────────────────── */
+  .sbar-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    margin-bottom: 1.5rem;
+  }
+
+  .sbar-item {
+    padding: 1rem 1.25rem;
+  }
+
+  .sbar-item p { margin: 0; font-style: italic; }
+
+  .sbar-label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.4rem;
+  }
+
+  .sbar-s { background: #eff6ff; border-left: 5px solid #3b82f6; }
+  .sbar-b { background: #f0fdf4; border-left: 5px solid #22c55e; }
+  .sbar-a { background: #fffbeb; border-left: 5px solid #f59e0b; }
+  .sbar-r { background: #fef2f2; border-left: 5px solid #ef4444; }
+
+  /* ── Priority diagnoses ──────────────────────────────────────── */
+  .dx-rank-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .dx-rank-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: #f8f9fa;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+  }
+
+  .dx-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .dx-aeb {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-top: 0.2rem;
+  }
+
+  /* ── Compare grid ────────────────────────────────────────────── */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .compare-grid h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  /* ── Concept map ─────────────────────────────────────────────── */
+  .concept-map {
+    margin-bottom: 1.25rem;
+  }
+
+  /* ── References ──────────────────────────────────────────────── */
+  .ref-list {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .ref-note {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin: 0;
+  }
+
+  /* ── Utility ─────────────────────────────────────────────────── */
+  .text-success { color: #15803d; }
+  .text-danger  { color: #b91c1c; }
+
+  .btn-back {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .btn-back:hover {
+    background: var(--color-primary-dark);
+    text-decoration: none;
+  }
+</style>

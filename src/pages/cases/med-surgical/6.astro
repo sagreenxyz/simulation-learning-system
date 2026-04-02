@@ -1,0 +1,974 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout
+  title="Med-Surgical 6 — Grace Carter"
+  description="Unfolding case study: Stable Angina Exacerbation After Exercise (MED-06)"
+>
+
+  <div class="breadcrumb">
+    <a href={base}>Home</a>
+    <span>›</span>
+    <a href={`${base}cases/`}>Cases</a>
+    <span>›</span>
+    <a href={`${base}cases/med-surgical/`}>Med-Surgical</a>
+    <span>›</span>
+    <span>Med-Surgical 6 — Grace Carter</span>
+  </div>
+
+  <div class="case-header">
+    <span class="card-tag">Cardiac / Angina</span>
+    <h1>Med-Surgical 6 — Grace Carter</h1>
+    <p class="case-subtitle">Stable Angina Pectoris — Exacerbation After Exercise</p>
+    <div class="case-meta">
+      <span>👤 Grace Carter, 71 years, Female</span>
+      <span>⏱ Scenario: 20–25 minutes</span>
+      <span>💬 Debrief: 20–25 minutes</span>
+    </div>
+  </div>
+
+  <div class="callout callout-info">
+    <strong>📖 How to Use This Unfolding Case Study</strong>
+    <p>Work through each phase in order. Information is revealed progressively — exactly as it would be in a real clinical encounter. Before reading each answer, pause and reason through the question yourself. Use the <strong>▶ Reveal Answer</strong> toggles to check your thinking.</p>
+  </div>
+
+  <!-- PHASE 1 -->
+  <div class="phase-card" id="phase1">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 1</span>
+      <h2>You Arrive at the Bedside</h2>
+    </div>
+    <p class="phase-intro">You are the nurse assigned to Grace Carter on the medical-surgical unit. Grace was admitted to the inpatient unit for management of symptomatic angina. You review the handoff and the medication administration record before entering her room.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>📋 Handoff Report</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Patient</th><td>Grace Carter</td></tr>
+            <tr><th>Age / Gender</th><td>71 years · Female</td></tr>
+            <tr><th>Primary Dx</th><td>Stable angina — exacerbation after exercise</td></tr>
+            <tr><th>Secondary Dx</th><td>Diabetes mellitus, hypertension, hyperlipidemia</td></tr>
+            <tr><th>Setting</th><td>Inpatient unit — symptomatic angina post-exercise</td></tr>
+            <tr><th>Allergies</th><td>Review MAR</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>💊 Medications on MAR</h3>
+        <ul class="med-list">
+          <li><strong>Nitroglycerin (NTG) 0.4 mg SL PRN</strong> — first-line angina treatment; q5 min × 3 doses</li>
+          <li><strong>Oxygen</strong> via nasal cannula — titrate to SpO₂ ≥ 94%</li>
+          <li>Aspirin PO — antiplatelet; prevents platelet aggregation</li>
+          <li>Metoprolol PO — beta-1 blocker; reduces HR and myocardial O₂ demand</li>
+          <li>Atorvastatin PO — statin; manages hyperlipidemia; stabilizes plaques</li>
+        </ul>
+      </div>
+    </div>
+    <div class="scene-box">
+      <h3>🚪 Entering the Room — What You Observe</h3>
+      <p>Grace has just returned from supervised ambulation in the hallway. She is sitting on the edge of the bed, clutching her chest. She appears pale and slightly diaphoretic. She says, <em>"I have that pressure again — it feels like something is squeezing my chest."</em> Her face shows anxiety and discomfort.</p>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: What is angina pectoris and how does exertion trigger it?</summary>
+      <div class="reveal-content">
+        <p><strong>Angina pectoris</strong> is transient myocardial ischemia — inadequate oxygen delivery to cardiac muscle — that is temporary and reversible (no cell death). It differs critically from MI:</p>
+        <div class="chain-flow">
+          <div class="chain-step chain-step-drug"><strong>Fixed coronary artery narrowing (CAD)</strong><small>Atherosclerotic plaques reduce vessel lumen diameter</small></div>
+          <div class="chain-arrow">↓</div>
+          <div class="chain-step chain-step-drug"><strong>Exercise → Increased myocardial O₂ demand</strong><small>Heart rate rises; cardiac output increases; O₂ requirement climbs</small></div>
+          <div class="chain-arrow">↓</div>
+          <div class="chain-step chain-step-problem"><strong>Supply cannot meet demand → Ischemia</strong><small>Narrowed arteries cannot deliver enough O₂ during increased demand</small></div>
+          <div class="chain-arrow">↓</div>
+          <div class="chain-step chain-step-consequence"><strong>Chest pain / pressure — Angina</strong><small>Ischemia triggers pain receptors; Grace feels the "squeezing" sensation</small></div>
+        </div>
+        <p><strong>Key distinction from MI:</strong> In stable angina, ischemia is temporary and reversible. Rest and/or nitroglycerin restore balance. In MI, prolonged ischemia causes irreversible myocardial cell death (necrosis) — troponin elevates, ST changes appear on ECG, and NTG does not fully relieve pain.</p>
+        <p><strong>Why Grace is especially vulnerable:</strong> At age 71, she is post-menopausal and has lost estrogen's cardioprotective effect. She has three additional major CAD risk factors: diabetes mellitus (accelerates atherosclerosis, doubles CAD risk, can cause silent ischemia via neuropathy), hypertension (damages arterial walls, increases cardiac workload), and hyperlipidemia (LDL deposits form atherosclerotic plaques).</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ You immediately respond to Grace's chest pain — SWIPE safety check and urgent interventions begin…</div>
+
+  <!-- PHASE 2 -->
+  <div class="phase-card" id="phase2">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 2</span>
+      <h2>Immediate Assessment and Stabilization</h2>
+    </div>
+    <p class="phase-intro">Grace is clutching her chest and appears distressed. You act immediately to stop activity, position her safely, and begin the angina response sequence while checking vital signs and assessing her pain.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>🚨 Immediate Nursing Actions — In Order</h3>
+        <ol>
+          <li><strong>"Ms. Carter, stop — sit back on the bed right now."</strong> — halt all activity immediately</li>
+          <li>Assist patient to supine or semi-Fowler's position — do NOT leave bedside</li>
+          <li>Apply <strong>O₂ via nasal cannula</strong> — titrate to SpO₂ ≥ 94%</li>
+          <li>Obtain vital signs — <strong>BP is critical before NTG administration</strong></li>
+          <li>Assess pain: location, radiation, rating (0–10), quality, onset</li>
+          <li>Apply cardiac monitor leads if not already on</li>
+          <li>Ensure IV access is patent</li>
+          <li>Check BP — <strong>HOLD NTG if SBP &lt; 90 mmHg</strong></li>
+        </ol>
+      </div>
+      <div class="info-block">
+        <h3>📊 Vital Signs — Current Assessment</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Blood Pressure</th><td>158/94 mmHg (elevated — hypertension history)</td></tr>
+            <tr><th>Heart Rate</th><td>98 bpm — sinus tachycardia (anxiety + ischemia)</td></tr>
+            <tr><th>Respiratory Rate</th><td>22 breaths/min — slightly elevated</td></tr>
+            <tr><th>SpO₂</th><td>92% on room air → apply O₂ now</td></tr>
+            <tr><th>Temperature</th><td>37.0°C (98.6°F) — afebrile</td></tr>
+            <tr><th>Pain Rating</th><td>7/10 — substernal pressure, radiating to left jaw</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="scene-box">
+      <h3>💬 Grace's Pain Description</h3>
+      <p>Grace says: <em>"It's a squeezing pressure right in the middle of my chest — and I feel it in my jaw too. It's maybe a 7 out of 10. It started as soon as I was walking in the hallway, maybe five minutes ago."</em> She is anxious and slightly short of breath. Her skin is cool and pale.</p>
+    </div>
+    <div class="callout callout-warning">
+      <strong>⚠️ SWIPE Safety Check — Perform Now</strong>
+      <p><strong>S</strong> — Siderails up once patient is positioned in bed. <strong>W</strong> — Wristband verified: two patient identifiers confirmed. <strong>I</strong> — IV access patent? Cardiac monitor leads on? <strong>P</strong> — Pull cord within reach. <strong>E</strong> — Emergency: code cart nearby; 12-lead ECG equipment available at unit.</p>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: Classic vs. Atypical Angina — Why Grace's Presentation Matters</summary>
+      <div class="reveal-content">
+        <p><strong>Classic angina presentation:</strong></p>
+        <ul>
+          <li>Substernal chest pressure, squeezing, heaviness ("elephant on chest")</li>
+          <li>May radiate to left arm, jaw, neck, shoulder, or back</li>
+          <li>Precipitated by exertion, emotional stress, cold weather, or heavy meals</li>
+          <li>Duration: 1–5 minutes (stable angina); &gt; 20 minutes suggests MI or unstable angina</li>
+          <li>Relieved by rest and/or sublingual nitroglycerin</li>
+          <li>Associated: dyspnea, diaphoresis, nausea, pallor, anxiety, fatigue</li>
+        </ul>
+        <p><strong>Atypical presentations (especially important for Grace):</strong></p>
+        <ul>
+          <li>Women, diabetics, and elderly patients often present atypically</li>
+          <li>Jaw pain, neck pain, epigastric discomfort, or fatigue WITHOUT classic chest pain</li>
+          <li>Diabetic patients may have <strong>silent ischemia</strong> — autonomic neuropathy reduces pain perception; Grace may not fully perceive the severity of her ischemia</li>
+          <li>Women more likely to report back pain, nausea, extreme fatigue as primary symptoms</li>
+          <li>Grace has all three atypical risk factors: post-menopausal woman, diabetic, elderly</li>
+        </ul>
+        <p><strong>Clinical implication:</strong> Even when Grace's symptoms seem to resolve, continued monitoring is essential. Silent ischemia means she may underreport her symptoms. The nurse must not rely solely on patient report.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ BP is 158/94 — SBP is above 90. You are cleared to administer the first sublingual nitroglycerin dose…</div>
+
+  <!-- PHASE 3 -->
+  <div class="phase-card" id="phase3">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 3</span>
+      <h2>Sublingual Nitroglycerin Administration</h2>
+    </div>
+    <p class="phase-intro">BP is 158/94 mmHg — SBP above 90, so NTG is not contraindicated. You prepare to administer sublingual nitroglycerin 0.4 mg per order and educate Grace as you proceed. You will reassess pain and BP after every dose.</p>
+    <div class="callout callout-danger">
+      <strong>⚠️ Critical Safety Check BEFORE Every NTG Dose</strong>
+      <p>Check BP before <em>each</em> sublingual nitroglycerin dose. <strong>HOLD NTG and notify provider if SBP &lt; 90 mmHg</strong> — nitroglycerin causes vasodilation and can precipitate severe hypotension, syncope, and cardiovascular collapse in a hypotensive patient. Also hold if patient has taken a phosphodiesterase-5 inhibitor (sildenafil/Viagra, tadalafil/Cialis) within 24–48 hours — life-threatening hypotension can result.</p>
+    </div>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>💊 Sublingual NTG Administration — Step by Step</h3>
+        <ol>
+          <li>Confirm patient identity — two identifiers</li>
+          <li><strong>Position: sit or lie down</strong> — NTG causes vasodilation → hypotension → fall risk</li>
+          <li><strong>Check BP</strong> — HOLD if SBP &lt; 90 mmHg</li>
+          <li>Ask about PDE-5 inhibitor use (sildenafil, tadalafil) within 24–48 hours</li>
+          <li>Place 0.4 mg tablet <strong>under the tongue</strong> — do NOT swallow; do NOT crush</li>
+          <li>Instruct patient to keep tablet under tongue until dissolved</li>
+          <li><strong>Reassess pain (0–10) and BP after 5 minutes</strong></li>
+          <li>If pain not relieved: <strong>repeat q5 min up to 3 doses total</strong></li>
+          <li><strong>After 3 doses with no relief → notify provider IMMEDIATELY</strong></li>
+        </ol>
+      </div>
+      <div class="info-block">
+        <h3>🔬 How Nitroglycerin Works</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Classification</th><td>Nitrate vasodilator</td></tr>
+            <tr><th>Mechanism</th><td>Releases nitric oxide → vasodilation → increased coronary O₂ delivery; decreased preload</td></tr>
+            <tr><th>Effect on angina</th><td>Dilates coronary arteries (increases O₂ supply) + reduces venous return (decreases O₂ demand)</td></tr>
+            <tr><th>Onset (SL)</th><td>1–3 minutes</td></tr>
+            <tr><th>Duration (SL)</th><td>30–60 minutes</td></tr>
+            <tr><th>Common adverse effects</th><td>Headache (very common — expected), hypotension, dizziness, flushing, palpitations</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="scene-box">
+      <h3>💬 Administering NTG — What to Say to Grace</h3>
+      <p><em>"Ms. Carter, I'm going to put a small tablet under your tongue. Keep it there and let it dissolve — don't swallow it. You may feel a headache coming on — that's completely normal and means the medication is working. I'll stay right here with you and recheck your blood pressure in five minutes. Please tell me right away if your chest pain gets worse or you feel dizzy."</em></p>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Focus: NTG Contraindications and Key Patient Teaching Points</summary>
+      <div class="reveal-content">
+        <p><strong>Absolute contraindications to NTG:</strong></p>
+        <ul>
+          <li><strong>SBP &lt; 90 mmHg</strong> — vasodilation will worsen hypotension → shock</li>
+          <li><strong>Recent PDE-5 inhibitor use (sildenafil/Viagra, tadalafil/Cialis)</strong> — both drugs cause vasodilation; combined effect produces severe, potentially fatal hypotension</li>
+          <li><strong>Severe aortic stenosis</strong> — fixed cardiac output cannot compensate for reduced preload</li>
+          <li><strong>Right ventricular infarction</strong> — depends on preload; NTG reduces preload → hemodynamic collapse</li>
+        </ul>
+        <p><strong>Key patient teaching for Grace:</strong></p>
+        <ul>
+          <li><em>"Always sit or lie down first before taking your nitroglycerin — it can make you dizzy."</em></li>
+          <li><em>"Take your nitroglycerin under your tongue — don't swallow it."</em></li>
+          <li><em>"You may get a headache — that's normal and means the medicine is working."</em></li>
+          <li><em>"If you take three tablets five minutes apart and the pain doesn't go away, call 911 immediately — do not drive yourself."</em></li>
+          <li><em>"Never take Viagra or Cialis if you are prescribed nitroglycerin — the combination can cause dangerous drops in blood pressure."</em></li>
+          <li><em>"Store your NTG tablets in the original amber bottle, away from heat, light, and moisture. Replace every six months."</em></li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ Five minutes after the first NTG dose, you reassess Grace's pain and vital signs…</div>
+
+  <!-- PHASE 4 -->
+  <div class="phase-card" id="phase4">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 4</span>
+      <h2>Reassessment — NTG Response and Ongoing Monitoring</h2>
+    </div>
+    <p class="phase-intro">Five minutes after the first NTG dose, you reassess Grace. Her pain has decreased slightly but persists. BP has dropped to 138/86 mmHg — SBP is still above 90 and a second NTG dose is indicated. You continue close monitoring.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>📊 Reassessment After First NTG Dose</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Blood Pressure</th><td>138/86 mmHg (dropped from 158/94 — expected vasodilation)</td></tr>
+            <tr><th>Heart Rate</th><td>92 bpm — slightly reduced</td></tr>
+            <tr><th>SpO₂</th><td>95% on 2L NC — improving with O₂ therapy</td></tr>
+            <tr><th>Pain Rating</th><td>5/10 — improved from 7/10; pressure still present</td></tr>
+            <tr><th>Radiation</th><td>Jaw pain slightly decreased; still substernal pressure</td></tr>
+            <tr><th>Disposition</th><td>SBP 138 — cleared for second NTG dose; patient position maintained</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>📋 NTG Dose Tracking Protocol</h3>
+        <table class="data-table">
+          <thead><tr><th>Dose</th><th>Time</th><th>BP Pre-Dose</th><th>Pain (0–10)</th><th>Action</th></tr></thead>
+          <tbody>
+            <tr><td>Dose 1</td><td>T+0</td><td>158/94</td><td>7/10</td><td>NTG administered ✓</td></tr>
+            <tr><td>Recheck</td><td>T+5</td><td>138/86</td><td>5/10</td><td>Pain persists → Dose 2</td></tr>
+            <tr><td>Dose 2</td><td>T+5</td><td>138/86</td><td>5/10</td><td>NTG administered ✓</td></tr>
+            <tr><td>Recheck</td><td>T+10</td><td>Pending</td><td>Pending</td><td>Reassess in 5 min</td></tr>
+            <tr><td>Dose 3 (if needed)</td><td>T+10</td><td>Must check BP</td><td>—</td><td>If no relief → NOTIFY PROVIDER</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="scene-box">
+      <h3>💬 Grace's Report After 2nd NTG Dose</h3>
+      <p>Ten minutes after the first dose (and 5 minutes after the second), Grace says: <em>"The pressure is much better — maybe a 2 out of 10 now. I still feel a little short of breath but my chest doesn't squeeze as bad."</em> BP: 128/82 mmHg. SpO₂ 96%. HR 84 bpm. Her color has improved and she appears more relaxed.</p>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Clinical Reasoning: When to Escalate — "3 Doses, No Relief" Rule</summary>
+      <div class="reveal-content">
+        <p><strong>The 3-dose NTG rule is critical:</strong> If pain is NOT relieved after 3 sublingual NTG doses given 5 minutes apart, the clinical picture has changed significantly.</p>
+        <p><strong>What unrelieved angina after 3 NTG doses may indicate:</strong></p>
+        <ul>
+          <li><strong>Unstable angina</strong> — atherosclerotic plaque rupture with partial thrombosis; new onset or changing pattern; not relieved by rest or NTG; medical emergency</li>
+          <li><strong>Acute MI (STEMI or NSTEMI)</strong> — complete or near-complete coronary occlusion; irreversible cell death beginning; requires emergent intervention</li>
+        </ul>
+        <p><strong>Immediate actions if pain persists after 3 NTG doses:</strong></p>
+        <ol>
+          <li>Notify provider STAT via SBAR</li>
+          <li>12-lead ECG (look for ST elevation — STEMI; ST depression/T-wave changes — NSTEMI)</li>
+          <li>Obtain troponin (elevated in MI — typically rises 3–4 hours after ischemia onset)</li>
+          <li>Ensure IV access; continuous cardiac monitoring</li>
+          <li>Be prepared to activate emergency response / call code if hemodynamically unstable</li>
+        </ol>
+        <p><strong>In Grace's case:</strong> Pain improved to 2/10 after 2 doses — this is consistent with stable angina responding appropriately to NTG. Continued monitoring is still required.</p>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ Grace's pain has resolved to 1/10. You continue monitoring and prepare discharge teaching…</div>
+
+  <!-- PHASE 5 -->
+  <div class="phase-card" id="phase5">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 5</span>
+      <h2>Stabilization and Patient Education</h2>
+    </div>
+    <p class="phase-intro">Grace's pain has resolved to 1/10 after two NTG doses. Vital signs are stable. You continue monitoring and use this opportunity to provide critical education about angina management, activity restrictions, and her medications. Reducing anxiety and educating Grace is directly therapeutic — it reduces sympathetic activation and myocardial O₂ demand.</p>
+    <div class="info-grid">
+      <div class="info-block">
+        <h3>📊 Post-Stabilization Vitals</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Blood Pressure</th><td>126/80 mmHg — within acceptable range</td></tr>
+            <tr><th>Heart Rate</th><td>82 bpm — returning toward baseline</td></tr>
+            <tr><th>SpO₂</th><td>97% on 2L NC</td></tr>
+            <tr><th>Pain</th><td>1/10 — near-resolved substernal discomfort</td></tr>
+            <tr><th>Cardiac Monitor</th><td>Sinus rhythm, no ST changes noted</td></tr>
+            <tr><th>Skin</th><td>Warm, dry, color improving</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="info-block">
+        <h3>📚 Why Calming Grace Is Therapeutic</h3>
+        <table class="data-table">
+          <tbody>
+            <tr><th>Anxiety effect</th><td>Sympathetic activation → tachycardia → increased myocardial O₂ demand → worsens ischemia</td></tr>
+            <tr><th>Reassurance effect</th><td>Reduces sympathetic drive → lower HR → decreased myocardial O₂ demand → reduced ischemia</td></tr>
+            <tr><th>Clinical implication</th><td>Calming the patient is a direct intervention — not just a comfort measure. Communicate calmly and stay at bedside continuously during angina episode.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="scene-box">
+      <h3>📋 Ongoing Monitoring Requirements</h3>
+      <p>Continue monitoring Grace closely following angina episode: <strong>VS every 15–30 minutes</strong> until stable; <strong>continuous cardiac monitoring</strong> for ST changes; <strong>SpO₂ monitoring</strong> — wean O₂ when SpO₂ ≥ 94% on room air; <strong>report immediately</strong> if pain recurs, HR increases, BP changes significantly, or patient develops new symptoms. Document: time pain started, rating, location, radiation, interventions given and times, patient response, and provider notification.</p>
+    </div>
+    <div class="callout callout-warning">
+      <strong>⚠️ Activity Restriction After Angina Episode</strong>
+      <p>Grace must <strong>not</strong> return to ambulation or physical activity until: pain has fully resolved, vital signs have returned to baseline, the provider has assessed her and cleared activity, and a cause for the exacerbation has been identified. Document the episode, notify provider, and obtain order for activity level going forward.</p>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Discharge and Home Management Teaching — Key Points for Grace</summary>
+      <div class="reveal-content">
+        <p><strong>Activity management:</strong></p>
+        <ul>
+          <li>Stop all activity immediately at the first sign of chest pain or pressure</li>
+          <li>Sit or lie down before taking NTG</li>
+          <li>Avoid triggers: strenuous exertion, cold weather, emotional stress, heavy meals</li>
+          <li>Participate in cardiac rehabilitation to safely build exercise tolerance under supervision</li>
+        </ul>
+        <p><strong>Medication management at home:</strong></p>
+        <ul>
+          <li>Always carry nitroglycerin — it is ineffective if not immediately accessible</li>
+          <li>Take ONE NTG tablet under tongue; wait 5 minutes; repeat if no relief — maximum 3 doses</li>
+          <li>If 3 doses do not relieve pain: <strong>Call 911 immediately — do not drive</strong></li>
+          <li>Store NTG in original amber glass bottle; away from heat, moisture, light; replace every 6 months</li>
+          <li>Take beta-blocker (metoprolol) daily as prescribed — do not stop abruptly (rebound angina/MI risk)</li>
+          <li>Take statin (atorvastatin) at night as prescribed — report muscle pain (myopathy)</li>
+          <li>Continue aspirin daily — do not stop without consulting provider</li>
+        </ul>
+        <p><strong>Risk factor management:</strong></p>
+        <ul>
+          <li>Blood glucose control is directly cardioprotective — maintain HbA1c per provider's goal</li>
+          <li>Blood pressure goal: typically &lt; 130/80 mmHg for patients with CAD + diabetes</li>
+          <li>Low-sodium, heart-healthy diet (DASH or Mediterranean)</li>
+          <li>No smoking; limit alcohol</li>
+          <li>Report new symptoms: increasing frequency of angina, angina at rest, prolonged episodes — these suggest unstable angina requiring urgent evaluation</li>
+        </ul>
+      </div>
+    </details>
+  </div>
+
+  <div class="phase-connector">⬇ You complete your documentation and prioritize nursing diagnoses for Grace…</div>
+
+  <!-- PHASE 6 -->
+  <div class="phase-card" id="phase6">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 6</span>
+      <h2>Nursing Diagnoses and SBAR</h2>
+    </div>
+    <h3>📋 Priority Nursing Diagnoses</h3>
+    <div class="dx-rank-list">
+      <div class="dx-rank-item">
+        <span class="dx-number">1</span>
+        <div><strong>Acute Pain</strong><div class="dx-aeb">r/t myocardial ischemia secondary to stable angina exacerbation — AEB: chest pressure 7/10, substernal location with jaw radiation, diaphoresis, dyspnea, post-exertional onset</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">2</span>
+        <div><strong>Decreased Cardiac Output</strong><div class="dx-aeb">r/t reduced coronary artery perfusion — AEB: chest pain, tachycardia (HR 98), pallor, diaphoresis, SpO₂ 92% on room air</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">3</span>
+        <div><strong>Activity Intolerance</strong><div class="dx-aeb">r/t angina precipitated by exertion — AEB: chest pain onset with ambulation, dyspnea with activity, need to stop exercise and rest</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">4</span>
+        <div><strong>Anxiety</strong><div class="dx-aeb">r/t acute cardiac event and fear of recurrence — AEB: restlessness, fearful facial expression, verbalized concern, sympathetic activation (tachycardia) worsening ischemia</div></div>
+      </div>
+      <div class="dx-rank-item">
+        <span class="dx-number">5</span>
+        <div><strong>Deficient Knowledge</strong><div class="dx-aeb">r/t angina management, NTG use, and risk factor modification — AEB: multiple uncontrolled risk factors (DM, HTN, hyperlipidemia); needs comprehensive discharge teaching</div></div>
+      </div>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ SBAR — Notifying the Provider After Grace's Angina Episode</summary>
+      <div class="reveal-content">
+        <div class="sbar-block">
+          <div class="sbar-item sbar-s"><span class="sbar-label">S — Situation</span><p>Calling about Grace Carter, 71-year-old female with known stable angina. She returned from supervised hallway ambulation and reported chest pressure 7/10, substernal with left jaw radiation. She appeared pale and diaphoretic.</p></div>
+          <div class="sbar-item sbar-b"><span class="sbar-label">B — Background</span><p>Grace has diabetes mellitus, hypertension, and hyperlipidemia. She is on metoprolol, atorvastatin, and aspirin. SpO₂ was 92% on room air at onset. BP was 158/94 mmHg prior to NTG. O₂ applied at 2L NC. Two doses of sublingual NTG 0.4 mg were administered 5 minutes apart.</p></div>
+          <div class="sbar-item sbar-a"><span class="sbar-label">A — Assessment</span><p>Pain has improved to 1/10 after two NTG doses. Current BP 126/80, HR 82, SpO₂ 97% on 2L NC. Cardiac monitor shows sinus rhythm without ST changes. Episode is consistent with stable angina exacerbation. No third NTG dose was required.</p></div>
+          <div class="sbar-item sbar-r"><span class="sbar-label">R — Recommendation</span><p>Requesting: provider assessment and documentation of angina episode; 12-lead ECG order for baseline; activity restriction order pending evaluation; and review of current medication regimen. Should troponin and BMP be ordered? Requesting clarification on activity level going forward.</p></div>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <!-- APPENDIX A: Medications -->
+  <div class="phase-card" id="appendix-a">
+    <div class="phase-header">
+      <span class="phase-badge">Appendix A</span>
+      <h2>Medication Review</h2>
+    </div>
+    <table class="data-table">
+      <thead><tr><th>Medication</th><th>Class</th><th>Key Nursing Points</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Nitroglycerin (Nitrostat) 0.4 mg SL PRN</strong></td>
+          <td>Nitrate vasodilator</td>
+          <td>First-line angina treatment. Onset 1–3 minutes SL. Check BP before every dose — <strong>HOLD if SBP &lt; 90 mmHg</strong>. Hold if recent PDE-5 inhibitor (sildenafil, tadalafil) use. Sit/lie patient before giving. Expect headache (very common — expected side effect). May repeat q5 min × 3 doses; if no relief after 3 doses → notify provider STAT (possible MI). Store in amber glass bottle away from heat/light/moisture.</td>
+        </tr>
+        <tr>
+          <td><strong>Oxygen via nasal cannula</strong></td>
+          <td>Supportive therapy</td>
+          <td>Titrate to SpO₂ ≥ 94%. Reduces myocardial O₂ demand by improving arterial oxygen content. Wean when SpO₂ ≥ 94% on room air. Assess nasal mucosa for dryness with prolonged use; consider humidified O₂ at higher flow rates.</td>
+        </tr>
+        <tr>
+          <td><strong>Aspirin 81–325 mg PO daily</strong></td>
+          <td>Antiplatelet agent</td>
+          <td>Prevents platelet aggregation at site of atherosclerotic plaque. Cornerstone of CAD management. Take with food to reduce GI irritation. Do not stop without provider instruction — abrupt discontinuation increases clot risk. Report unusual bleeding or GI symptoms.</td>
+        </tr>
+        <tr>
+          <td><strong>Metoprolol (beta-blocker) PO</strong></td>
+          <td>Selective beta-1 adrenergic blocker</td>
+          <td>Reduces heart rate and myocardial O₂ demand — directly therapeutic for angina. Monitor HR before administration — hold if HR &lt; 60 bpm per protocol. Monitor BP — hold if SBP &lt; 90. <strong>Do NOT stop abruptly</strong> — rebound tachycardia and angina/MI can occur. Patient teaching: change positions slowly (orthostatic hypotension risk).</td>
+        </tr>
+        <tr>
+          <td><strong>Atorvastatin (statin) PO</strong></td>
+          <td>HMG-CoA reductase inhibitor (statin)</td>
+          <td>Lowers LDL cholesterol; stabilizes atherosclerotic plaques; reduces inflammation. Take at night (hepatic cholesterol synthesis peaks at night). Monitor liver function tests. Report muscle pain, weakness, or dark urine (myopathy/rhabdomyolysis — rare but serious). Avoid grapefruit juice — inhibits statin metabolism.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- APPENDIX B: Q&A -->
+  <div class="phase-card" id="appendix-b">
+    <div class="phase-header">
+      <span class="phase-badge">Appendix B</span>
+      <h2>Post-Simulation Questions &amp; Answers</h2>
+    </div>
+    <details class="reveal-block">
+      <summary>▶ Q1: Which finding causes the nurse to HOLD sublingual NTG?</summary>
+      <div class="reveal-content">
+        <p><strong>SBP &lt; 90 mmHg.</strong> Nitroglycerin is a potent vasodilator. If administered to a hypotensive patient, vasodilation worsens hypotension → reduced coronary perfusion pressure → decreased myocardial O₂ delivery → worsening ischemia and risk of cardiovascular collapse. Check BP before every dose. Also hold for recent PDE-5 inhibitor use, severe aortic stenosis, or right ventricular infarction.</p>
+      </div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q2: What is the medication of choice for initial angina relief and how does it work?</summary>
+      <div class="reveal-content">
+        <p><strong>Sublingual nitroglycerin 0.4 mg.</strong> Onset: 1–3 minutes (fastest route for angina relief). Mechanism: releases nitric oxide → smooth muscle relaxation → vasodilation → (1) dilates coronary arteries = increases myocardial O₂ supply; (2) dilates venous capacitance vessels = decreases preload = decreases O₂ demand. The dual mechanism addresses both sides of the supply-demand imbalance simultaneously.</p>
+      </div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q3: After 3 doses of NTG with no relief, what does the nurse do?</summary>
+      <div class="reveal-content">
+        <p><strong>Notify the provider immediately via SBAR.</strong> Three doses of NTG without relief indicates possible unstable angina or acute MI — a medical emergency. Immediately: call provider, obtain 12-lead ECG (look for ST elevation = STEMI), obtain troponin (elevated in MI), ensure IV access and continuous cardiac monitoring. If STEMI on ECG, activate cardiac catheterization lab protocol. Document time of symptom onset — "door to balloon" time matters for STEMI outcomes.</p>
+      </div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q4: How does calming an anxious patient directly reduce angina?</summary>
+      <div class="reveal-content">
+        <p><strong>Anxiety → sympathetic activation → catecholamine release → tachycardia → increased myocardial O₂ demand → worsens ischemia.</strong> Reducing anxiety through calm, reassuring communication reduces sympathetic drive → lower heart rate → decreased O₂ consumption → reduced ischemia. This is a direct physiological intervention, not simply a comfort measure. Reassurance is therapeutic in angina management.</p>
+      </div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q5: Which secondary diagnosis most increases Grace's risk of silent ischemia and why?</summary>
+      <div class="reveal-content">
+        <p><strong>Diabetes mellitus.</strong> Chronic hyperglycemia causes autonomic and sensory neuropathy that impairs cardiac pain perception. Diabetic patients may experience significant myocardial ischemia — including MI — without the classic warning pain of angina. This is called <strong>silent ischemia</strong>. For Grace, this means: (1) she may underreport or not notice worsening angina; (2) the nurse must not rely solely on patient report and must monitor objective data (vital signs, ECG changes, SpO₂); (3) the actual degree of ischemia may be greater than her pain rating suggests.</p>
+      </div>
+    </details>
+    <details class="reveal-block">
+      <summary>▶ Q6: How does angina differ from unstable angina and acute MI?</summary>
+      <div class="reveal-content">
+        <div class="compare-grid">
+          <div>
+            <h4>✅ Stable Angina (Grace's diagnosis)</h4>
+            <ul>
+              <li>Predictable — triggered by exertion or stress</li>
+              <li>Temporary, reversible ischemia — no cell death</li>
+              <li>Duration: 1–5 minutes</li>
+              <li>Relieved by rest and/or NTG within 3–5 minutes</li>
+              <li>Normal troponin, normal ECG (no ST changes at rest)</li>
+            </ul>
+          </div>
+          <div>
+            <h4>🚨 Unstable Angina / NSTEMI / STEMI</h4>
+            <ul>
+              <li>Occurs at rest or with minimal exertion; new onset or worsening</li>
+              <li>NOT relieved by rest or 3 NTG doses → medical emergency</li>
+              <li>Duration: &gt; 20 minutes</li>
+              <li>NSTEMI/STEMI: elevated troponin, ECG changes (ST depression or elevation)</li>
+              <li>Requires urgent cardiac catheterization / PCI / thrombolytics</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </details>
+  </div>
+
+  <!-- APPENDIX C: References -->
+  <div class="phase-card" id="appendix-c">
+    <div class="phase-header">
+      <span class="phase-badge">Appendix C</span>
+      <h2>References</h2>
+    </div>
+    <ol class="ref-list">
+      <li>Harding, M. M., Kwong, J., Roberts, D., Reinisch, C., &amp; Hagler, D. (2020). <em>Lewis's medical-surgical nursing</em> (11th ed.). Elsevier.</li>
+      <li>Vallerand, A. H., &amp; Sanoski, C. A. (2021). <em>Davis's drug guide for nurses</em> (17th ed.). F.A. Davis.</li>
+      <li>American Heart Association. (2023). <em>Angina pectoris: Stable, unstable, and variant</em>. AHA Guidelines.</li>
+      <li>Ignatavicius, D. D., Workman, M. L., Rebar, C. R., &amp; Heimgartner, N. M. (2021). <em>Medical-surgical nursing: Concepts for interprofessional collaborative care</em> (10th ed.). Elsevier.</li>
+      <li>Institute for Safe Medication Practices. (2023). <em>ISMP list of high-alert medications in acute care settings</em>. ISMP.</li>
+    </ol>
+    <div style="margin-top: 2rem;">
+      <a href={`${base}cases/med-surgical/`} class="btn-back">← Back to Med-Surgical</a>
+    </div>
+  </div>
+
+</BaseLayout>
+
+<style>
+  /* ── Phase structure ─────────────────────────────────────────── */
+  .case-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin-top: 0.25rem;
+  }
+
+  .phase-card {
+    background: var(--color-surface);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 0;
+    box-shadow: var(--shadow);
+    border-top: 4px solid var(--color-primary);
+  }
+
+  .appendix-card {
+    border-top-color: var(--color-secondary);
+  }
+
+  .phase-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .phase-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .phase-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+
+  .phase-badge-appendix {
+    background: var(--color-secondary);
+  }
+
+  .phase-intro {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin-bottom: 1.25rem;
+    border-left: 3px solid var(--color-accent);
+    padding-left: 0.75rem;
+  }
+
+  .phase-connector {
+    text-align: center;
+    padding: 0.6rem 0;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+  }
+
+  /* ── Info grid ───────────────────────────────────────────────── */
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 720px) {
+    .info-grid { grid-template-columns: 1fr; }
+    .compare-grid { grid-template-columns: 1fr; }
+  }
+
+  .info-block h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  /* ── Tables ──────────────────────────────────────────────────── */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--color-border);
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .data-table thead th {
+    background: #f0f4ff;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+  }
+
+  .data-table tbody th {
+    background: #f8f9fa;
+    font-weight: 600;
+    width: 30%;
+    color: var(--color-text);
+  }
+
+  .med-table tbody th {
+    width: 28%;
+  }
+
+  /* ── Callouts ────────────────────────────────────────────────── */
+  .callout {
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .callout p { margin-bottom: 0.5rem; }
+  .callout p:last-child { margin-bottom: 0; }
+
+  .callout-info {
+    background: #e8f0fe;
+    border-left: 4px solid var(--color-primary);
+  }
+
+  .callout-warning {
+    background: #fff8e1;
+    border-left: 4px solid #f59e0b;
+  }
+
+  .callout-danger {
+    background: #fff0f0;
+    border-left: 4px solid #dc2626;
+  }
+
+  /* ── Badges ──────────────────────────────────────────────────── */
+  .badge-danger {
+    display: inline-block;
+    background: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fca5a5;
+    border-radius: 4px;
+    padding: 0.1rem 0.45rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .badge-warning {
+    display: inline-block;
+    background: #fffbeb;
+    color: #92400e;
+    border: 1px solid #fde68a;
+    border-radius: 4px;
+    padding: 0.1rem 0.45rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  /* ── Scene box ───────────────────────────────────────────────── */
+  .scene-box {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .scene-box h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* ── Med list ────────────────────────────────────────────────── */
+  .med-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .med-list li {
+    padding: 0.35rem 0;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 0.9rem;
+  }
+
+  .med-list li:last-child { border-bottom: none; }
+
+  /* ── Chain flow ──────────────────────────────────────────────── */
+  .chain-flow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin: 1.25rem 0;
+  }
+
+  .chain-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 520px;
+    gap: 0.2rem;
+  }
+
+  .chain-step small {
+    font-size: 0.8rem;
+    opacity: 0.8;
+  }
+
+  .chain-step-drug {
+    background: #e8f0fe;
+    color: var(--color-primary-dark);
+    border: 1px solid #bfdbfe;
+  }
+
+  .chain-step-problem {
+    background: #fff8e1;
+    color: #78350f;
+    border: 1px solid #fde68a;
+  }
+
+  .chain-step-consequence {
+    background: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+  }
+
+  .chain-arrow {
+    font-size: 1.5rem;
+    color: var(--color-text-muted);
+    line-height: 1.2;
+  }
+
+  .chain-icon {
+    font-size: 1.4rem;
+  }
+
+  /* ── Stat highlight ──────────────────────────────────────────── */
+  .stat-highlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fef2f2;
+    border: 2px solid #fca5a5;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #b91c1c;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+    color: #7f1d1d;
+    margin-top: 0.25rem;
+  }
+
+  /* ── Reveal (details/summary) ────────────────────────────────── */
+  .reveal-block {
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    margin-top: 1rem;
+    overflow: hidden;
+  }
+
+  .reveal-block > summary {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--color-primary);
+    background: #f0f4ff;
+    list-style: none;
+    user-select: none;
+  }
+
+  .reveal-block > summary::-webkit-details-marker { display: none; }
+
+  .reveal-block[open] > summary {
+    background: #dbeafe;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .reveal-block > summary:hover {
+    background: #dbeafe;
+  }
+
+  .reveal-content {
+    padding: 1rem 1.25rem;
+  }
+
+  .reveal-content ul,
+  .reveal-content ol {
+    margin-bottom: 0.75rem;
+  }
+
+  /* ── SBAR block ──────────────────────────────────────────────── */
+  .sbar-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    margin-bottom: 1.5rem;
+  }
+
+  .sbar-item {
+    padding: 1rem 1.25rem;
+  }
+
+  .sbar-item p { margin: 0; font-style: italic; }
+
+  .sbar-label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.4rem;
+  }
+
+  .sbar-s { background: #eff6ff; border-left: 5px solid #3b82f6; }
+  .sbar-b { background: #f0fdf4; border-left: 5px solid #22c55e; }
+  .sbar-a { background: #fffbeb; border-left: 5px solid #f59e0b; }
+  .sbar-r { background: #fef2f2; border-left: 5px solid #ef4444; }
+
+  /* ── Priority diagnoses ──────────────────────────────────────── */
+  .dx-rank-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .dx-rank-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: #f8f9fa;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+  }
+
+  .dx-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .dx-aeb {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-top: 0.2rem;
+  }
+
+  /* ── Compare grid ────────────────────────────────────────────── */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .compare-grid h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  /* ── Concept map ─────────────────────────────────────────────── */
+  .concept-map {
+    margin-bottom: 1.25rem;
+  }
+
+  /* ── References ──────────────────────────────────────────────── */
+  .ref-list {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .ref-note {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin: 0;
+  }
+
+  /* ── Utility ─────────────────────────────────────────────────── */
+  .text-success { color: #15803d; }
+  .text-danger  { color: #b91c1c; }
+
+  .btn-back {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    background: var(--color-primary);
+    color: #fff;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .btn-back:hover {
+    background: var(--color-primary-dark);
+    text-decoration: none;
+  }
+</style>
